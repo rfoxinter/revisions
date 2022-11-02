@@ -29,12 +29,11 @@ async function display_files(sitemap,i){
     }
 
     const c = document.getElementsByTagName('main')[0];
-    for (var i=0; i<files.length; ++i) {
-        await display_file_number(files[i],c,path);
-    }
+    display_file_number(files,0,c,path);
 }
 
-async function display_file_number(f,c,path) {
+function display_file_number(files,i,c,path) {
+    var f = files[i];
     var file = new XMLHttpRequest();
     file.open('GET', 'https://rfoxinter.github.io/revisions/input/' + f.substring(f.search('/')+1,f.length).replace(/[0-9]/g, '') + '.txt');
     file.send();
@@ -74,8 +73,10 @@ async function display_file_number(f,c,path) {
                 a.innerHTML = filename;
                 p.appendChild(a);
                 document.getElementsByClassName(groupname)[0].appendChild(p);
+                if (i!=files.length-1) {
+                    display_file_number(files,i+1,c,path)
+                }
             }
         }
     }
-    return;
 }
