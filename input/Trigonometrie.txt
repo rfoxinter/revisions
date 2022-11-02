@@ -1,4 +1,4 @@
-Trigonometrie
+Trigonométrie
 Shuffle questions : True
 Q/R & R/Q : True
 \let\oldcos\cos\renewcommand\cos[2][]{\oldcos^{#1}\l#2\r}\let\oldsin\sin\renewcommand\sin[2][]{\oldsin^{#1}\l#2\r}\let\oldtan\tan\renewcommand\tan[2][]{\oldtan^{#1}\l#2\r}\let\oldcot\cot\renewcommand\cot[2][]{\oldcot^{#1}\l#2\r}
