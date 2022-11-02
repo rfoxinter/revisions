@@ -1,0 +1,91 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\let\oldcos\cos\renewcommand\cos[2][]{\oldcos^{#1}\left(#2\right)}\let\oldsin\sin\renewcommand\sin[2][]{\oldsin^{#1}\left(#2\right)}\let\oldtan\tan\renewcommand\tan[2][]{\oldtan^{#1}\left(#2\right)}\let\oldcot\cot\renewcommand\cot[2][]{\oldcot^{#1}\left(#2\right)}\renewcommand{\bar}{\overline}\DeclareMathOperator{\olde}{e}\newcommand{\e}{{\olde}}\DeclareMathOperator{\oldi}{i}\renewcommand{\i}{{\oldi}}
+\hypersetup{pdftitle=Fondements -- Nombres complexes}
+\title{Fondements\\\emph{Nombres complexes}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\tan{x-y}$}{1/39}
+\slider{$\frac{\tan{x}-\tan{y}}{1+\tan{x}\tan{y}}$}{1/39}
+\slideq{$2\cos{\frac{x+y}{2}}\sin{\frac{x-y}{2}}$}{2/39}
+\slider{$\sin{x}-\sin{y}$}{2/39}
+\slideq{$\sin{x}\cos{y}-\sin{y}\cos{x}$}{3/39}
+\slider{$\sin{x-y}$}{3/39}
+\slideq{$\tan{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$}{4/39}
+\slider{$\frac{2t}{1-t^2}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$}{4/39}
+\slideq{$\sin{x}$}{5/39}
+\slider{$\sin{\pi-x}$}{5/39}
+\slideq{$\frac{2\tan{x}}{1-\tan[2]{x}}$}{6/39}
+\slider{$\tan{2x}$}{6/39}
+\slideq{$\cos{x}\cos{y}-\sin{x}\sin{y}$}{7/39}
+\slider{$\cos{x+y}$}{7/39}
+\slideq{Translation d'un vecteur $\vec{u}$ d'affixe $z_u$}{8/39}
+\slider{$z\mapsto z+z_u$}{8/39}
+\slideq{$\cos{\pi-x}$}{9/39}
+\slider{$-\cos{x}$}{9/39}
+\slideq{$\cos[2]{x}$}{10/39}
+\slider{$\frac{1+\cos{2x}}{2}$}{10/39}
+\slideq{$\frac{2t}{1+t^2}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$}{11/39}
+\slider{$\sin{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$}{11/39}
+\slideq{$\cos{x}\sin{y}$}{12/39}
+\slider{$\frac{1}{2}\left(\sin{x+y}-\sin{x-y}\right)$}{12/39}
+\slideq{$\cos[2]{x}-\sin[2]{x}=2\cos[2]{x}-1=1-2\sin[2]{x}$}{13/39}
+\slider{$\cos{2x}$}{13/39}
+\slideq{$\cot{x-y}$}{14/39}
+\slider{$\frac{-\cot{x}\cot{y}-1}{\cot{x}-\cot{y}}=\frac{\cot{x}\cot{y}+1}{\cot{y}-\cot{x}}$}{14/39}
+\slideq{$\cos{x}+\cos{y}$}{15/39}
+\slider{$2\cos{\frac{x+y}{2}}\cos{\frac{x-y}{2}}$}{15/39}
+\slideq{$\tan{x+y}$}{16/39}
+\slider{$\frac{\tan{x}+\tan{y}}{1-\tan{x}\tan{y}}$}{16/39}
+\slideq{$\sin{\frac{\pi}{2}-x}$}{17/39}
+\slider{$\cos{x}$}{17/39}
+\slideq{Rotation de centre $A$ d'affixe $z_A$ et d'angle $\theta$}{18/39}
+\slider{$z\mapsto \e^{{\i}\theta}\left(z-z_A\right)+z_A$}{18/39}
+\slideq{$\frac{1}{2}\left(\cos{x+y}+\cos{x-y}\right)$}{19/39}
+\slider{$\cos{x}\cos{y}$}{19/39}
+\slideq{$-\cos{x}$}{20/39}
+\slider{$\cos{x+\pi}$}{20/39}
+\slideq{$\frac{1-\cos{2x}}{2}$}{21/39}
+\slider{$\sin[2]{x}$}{21/39}
+\slideq{$2\sin{x}\cos{x}$}{22/39}
+\slider{$\sin{2x}$}{22/39}
+\slideq{$\cos{\frac{\pi}{2}-x}$}{23/39}
+\slider{$\sin{x}$}{23/39}
+\slideq{Symétrie orthogonale d'axe $D$, une droite passant par $A$ d'affixe $z_A$ et dirigée par $\vec{u}$}{24/39}
+\slider{$z\mapsto z_u^2\left(\bar{z}-\bar{z_A}\right)+z_A$}{24/39}
+\slideq{$\sin{x+\pi}$}{25/39}
+\slider{$-\sin{x}$}{25/39}
+\slideq{$\cot{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$}{26/39}
+\slider{$\frac{1-t^2}{2t}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$}{26/39}
+\slideq{$\sin{x+y}$}{27/39}
+\slider{$\sin{x}\cos{y}+\sin{y}\cos{x}$}{27/39}
+\slideq{$\frac{1}{2}\left(\sin{x+y}+\sin{x-y}\right)$}{28/39}
+\slider{$\sin{x}\cos{y}$}{28/39}
+\slideq{$\frac{1-t^2}{1+t^2}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$}{29/39}
+\slider{$\cos{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$}{29/39}
+\slideq{$\sin{x}+\sin{y}$}{30/39}
+\slider{$2\sin{\frac{x+y}{2}}\cos{\frac{x-y}{2}}$}{30/39}
+\slideq{$-\sin{x}$}{31/39}
+\slider{$\cos{x+\frac{\pi}{2}}$}{31/39}
+\slideq{$\sin{x}\sin{y}$}{32/39}
+\slider{$\frac{1}{2}\left(\cos{x-y}-\cos{x+y}\right)$}{32/39}
+\slideq{$\frac{\cot[2]{x}-1}{2\cot{x}}$}{33/39}
+\slider{$\cot{2x}$}{33/39}
+\slideq{$-2\sin{\frac{x+y}{2}}\sin{\frac{x-y}{2}}$}{34/39}
+\slider{$\cos{x}-\cos{y}$}{34/39}
+\slideq{$\cos{x-y}$}{35/39}
+\slider{$\cos{x}\cos{y}+\sin{x}\sin{y}$}{35/39}
+\slideq{Homothétie de centre $A$ et de rapport $\lambda$}{36/39}
+\slider{$z\mapsto \lambda\left(z-z_A\right)+z_A$}{36/39}
+\slideq{$\sin{x+\frac{\pi}{2}}$}{37/39}
+\slider{$\cos{x}$}{37/39}
+\slideq{$\left(\overrightarrow{AC},\overrightarrow{AB}\right)$}{38/39}
+\slider{$\arg\left(\frac{z_B-z_A}{z_C-z_A}\right)$}{38/39}
+\slideq{$\cot{x+y}$}{39/39}
+\slider{$\frac{\cot{x}\cot{y}-1}{\cot{x}+\cot{y}}$}{39/39}
+\end{document}

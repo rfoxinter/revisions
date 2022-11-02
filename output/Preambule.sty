@@ -1,0 +1,22 @@
+\ProvidesPackage{preambule}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{xcolor}
+\setbeamertemplate{navigation symbols}{}
+\usefonttheme{serif}
+\setbeamerfont{title}{series=\bfseries,family=\sffamily,size=\Huge,parent=structure}
+\renewcommand\l{\left(}
+\renewcommand\r{\right)}
+\newcommand\llb{\left[\!\left[}
+\newcommand\rrb{\right]\!\right]}
+\let\oldleft\left
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
+\let\oldright\right
+\renewcommand{\right}{\aftergroup\egroup\oldright}
+\newcommand{\slideq}[2]{\begin{frame}[c]{\textcolor{blue}{\Large\sffamily\bfseries Question #2}}\begin{center}\Large#1\end{center}\end{frame}}
+\newcommand{\slider}[2]{\begin{frame}[c]{\textcolor{cyan}{\Large\sffamily\bfseries Réponse #2}}\begin{center}\Large#1\end{center}\end{frame}}
+\let\oldfrac\frac
+\let\frac\dfrac

@@ -1,0 +1,21 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\let\oldsum\sum\renewcommand\sum[3]{\oldsum\limits_{#1}^{#2}\l#3\r}\let\oldprod\prod\renewcommand\prod[3]{\oldprod\limits_{#1}^{#2}\l#3\r}
+\hypersetup{pdftitle=Fondements -- Sommes et produits}
+\title{Fondements\\\emph{Sommes et produits}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Pour $n$ impair\linebreak$a^n+b^n$}{1/4}
+\slider{Pour $n$ impair\linebreak$\l a+b\r\sum{k=0}{n-1}{\l-1\r^ka^{n-k-1}b^k}$}{1/4}
+\slideq{$\prod{k=1}{n}{\sum{i=1}{m_k}{a_{k,i}}}$}{2/4}
+\slider{$\sum{\l i_1,\cdots,i_n\r\in\llb1,m_1\rrb\times\cdots\times\llb1,m_n\rrb}{}{a_{1,i_1}\times\cdots\times a_{n,i_n}}$}{2/4}
+\slideq{$a^n-b^n$}{3/4}
+\slider{$\l a-b\r\sum{k=0}{n-1}{a^{n-k-1}b^k}$}{3/4}
+\slideq{$\sum{\l i,j\r\in K}{}{a_{i,j}}$}{4/4}
+\slider{$\sum{i\in I}{}{\sum{j\in K_{i,\bullet}}{}{a_{i,j}}}=\sum{i\in I}{}{\sum{\l i,j\r\in K^\prime_{i,\bullet}}{}{a_{i,j}}}\linebreak=\sum{j\in J}{}{\sum{i\in K_{\bullet,j}}{}{a_{i,j}}}=\sum{j\in J}{}{\sum{\l i,j\r\in K^\prime_{\bullet,j}}{}{a_{i,j}}}$}{4/4}
+\end{document}

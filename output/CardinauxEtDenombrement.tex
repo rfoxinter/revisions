@@ -1,0 +1,27 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\let\oldsum\sum\renewcommand\sum[3]{\oldsum\limits_{#1}^{#2}\l#3\r}\let\oldcap\bigcap\renewcommand\cap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\cup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}
+\hypersetup{pdftitle=Fondements -- Cardinaux et dénombrement}
+\title{Fondements\\\emph{Cardinaux et dénombrement}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\sum{k=0}{n}{\binom{N}{k}\binom{M}{n-k}}$}{1/7}
+\slider{$\binom{M+N}{n}$}{1/7}
+\slideq{$\binom{n+p+1}{n+1  }$}{2/7}
+\slider{$\sum{k=0}{p}{\binom{n+k}{n}}$}{2/7}
+\slideq{$k\binom{n}{k}$}{3/7}
+\slider{$n\binom{n-1}{k-1}$}{3/7}
+\slideq{$\sum{k=0}{n}{\binom{n}{k}}$}{4/7}
+\slider{$2^n$}{4/7}
+\slideq{Formule de  Pascal\linebreak\linebreak$\binom{n}{k}$}{5/7}
+\slider{$\binom{n-1}{k-1}+\binom{n-1}{k}$}{5/7}
+\slideq{$\sum{k=0}{n}{\binom{n}{k}a^kb^{n-k}}$}{6/7}
+\slider{$\l a+b\r^n$}{6/7}
+\slideq{$\left|\cup{i=1}{n}{A_i}\right|$}{7/7}
+\slider{$\sum{\substack{I\subset\llb1,n\rrb\\I\neq\varnothing}}{}{\l-1\r^{\left|I\right|-1}\left|\cap{i\in I}{}{A_i}\right|}$}{7/7}
+\end{document}
