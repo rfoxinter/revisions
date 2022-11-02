@@ -3,7 +3,7 @@ plugins:
 defaults:
     -
     scope:
-        path: ""
+        path: "/"
     values:
         sitemap: true
       
