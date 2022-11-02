@@ -1,2 +1,9 @@
 plugins:
-  - jekyll-sitemap
+    - jekyll-sitemap
+defaults:
+    -
+    scope:
+        path: ""
+    values:
+        sitemap: true
+      
