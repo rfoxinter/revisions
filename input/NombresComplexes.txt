@@ -1,0 +1,43 @@
+Fondements -- Nombres complexes
+Shuffle questions : True
+Q/R & R/Q : True
+\let\oldcos\cos\renewcommand\cos[2][]{\oldcos^{#1}\l#2\r}\let\oldsin\sin\renewcommand\sin[2][]{\oldsin^{#1}\l#2\r}\let\oldtan\tan\renewcommand\tan[2][]{\oldtan^{#1}\l#2\r}\let\oldcot\cot\renewcommand\cot[2][]{\oldcot^{#1}\l#2\r}\renewcommand{\bar}{\overline}\DeclareMathOperator{\olde}{e}\newcommand{\e}{{\olde}}\DeclareMathOperator{\oldi}{i}\renewcommand{\i}{{\oldi}}
+$\sin{x+y}$;;$\sin{x}\cos{y}+\sin{y}\cos{x}$
+$\sin{x-y}$;;$\sin{x}\cos{y}-\sin{y}\cos{x}$
+$\cos{x+y}$;;$\cos{x}\cos{y}-\sin{x}\sin{y}$
+$\cos{x-y}$;;$\cos{x}\cos{y}+\sin{x}\sin{y}$
+$\tan{x+y}$;;$\frac{\tan{x}+\tan{y}}{1-\tan{x}\tan{y}}$
+$\tan{x-y}$;;$\frac{\tan{x}-\tan{y}}{1+\tan{x}\tan{y}}$
+$\cot{x+y}$;;$\frac{\cot{x}\cot{y}-1}{\cot{x}+\cot{y}}$
+$\cot{x-y}$;;$\frac{-\cot{x}\cot{y}-1}{\cot{x}-\cot{y}}=\frac{\cot{x}\cot{y}+1}{\cot{y}-\cot{x}}$
+$\sin{2x}$;;$2\sin{x}\cos{x}$
+$\cos{2x}$;;$\cos[2]{x}-\sin[2]{x}=2\cos[2]{x}-1=1-2\sin[2]{x}$
+$\tan{2x}$;;$\frac{2\tan{x}}{1-\tan[2]{x}}$
+$\cot{2x}$;;$\frac{\cot[2]{x}-1}{2\cot{x}}$
+$\sin[2]{x}$;;$\frac{1-\cos{2x}}{2}$
+$\cos[2]{x}$;;$\frac{1+\cos{2x}}{2}$
+$\sin{x}\sin{y}$;;$\frac{1}{2}\l\cos{x-y}-\cos{x+y}\r$
+$\sin{x}\cos{y}$;;$\frac{1}{2}\l\sin{x+y}+\sin{x-y}\r$
+$\cos{x}\sin{y}$;;$\frac{1}{2}\l\sin{x+y}-\sin{x-y}\r$
+$\cos{x}\cos{y}$;;$\frac{1}{2}\l\cos{x+y}+\cos{x-y}\r$
+$\sin{x}+\sin{y}$;;$2\sin{\frac{x+y}{2}}\cos{\frac{x-y}{2}}$
+$\sin{x}-\sin{y}$;;$2\cos{\frac{x+y}{2}}\sin{\frac{x-y}{2}}$
+$\cos{x}+\cos{y}$;;$2\cos{\frac{x+y}{2}}\cos{\frac{x-y}{2}}$
+$\cos{x}-\cos{y}$;;$-2\sin{\frac{x+y}{2}}\sin{\frac{x-y}{2}}$
+$\sin{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$;;$\frac{2t}{1+t^2}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$
+$\cos{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$;;$\frac{1-t^2}{1+t^2}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$
+$\tan{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$;;$\frac{2t}{1-t^2}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$
+$\cot{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$;;$\frac{1-t^2}{2t}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$
+$\cos{x+\pi}$;;$-\cos{x}$
+$\sin{x+\pi}$;;$-\sin{x}$
+$\cos{\pi-x}$;;$-\cos{x}$
+$\sin{\pi-x}$;;$\sin{x}$
+$\cos{x+\frac{\pi}{2}}$;;$-\sin{x}$
+$\sin{x+\frac{\pi}{2}}$;;$\cos{x}$
+$\cos{\frac{\pi}{2}-x}$;;$\sin{x}$
+$\sin{\frac{\pi}{2}-x}$;;$\cos{x}$
+$\l\overrightarrow{AC},\overrightarrow{AB}\r$;;$\arg\l\frac{z_B-z_A}{z_C-z_A}\r$
+Translation d'un vecteur $\vec{u}$ d'affixe $z_u$;;$z\mapsto z+z_u$
+Rotation de centre $A$ d'affixe $z_A$ et d'angle $\theta$;;$z\mapsto \e^{\i\theta}\lz-z_A\r+z_A$
+Homothétie de centre $A$ et de rapport $\lambda$;;$z\mapsto \lambda\lz-z_A\r+z_A$
+Symétrie orthogonale d'axe $D$, une droite passant par $A$ d'affixe $z_A$ et dirigée par $\vec{u}$;;$z\mapsto z_u^2\l\bar{z}-\bar{z_A}\r+z_A$

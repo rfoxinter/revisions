@@ -1,0 +1,11 @@
+Fondements -- Cardinaux et dénombrement
+Shuffle questions : True
+Q/R & R/Q : True
+\let\oldsum\sum\renewcommand\sum[3]{\oldsum\limits_{#1}^{#2}\l#3\r}\let\oldcap\bigcap\renewcommand\cap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\cup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}
+$\left|\cup{i=1}{n}{A_i}\right|$;;$\sum{\substack{I\subset\llb1,n\rrb\\I\neq\varnothing}}{}{\l-1\r^{\left|I\right|-1}\left|\cap{i\in I}{}{A_i}\right|}$
+$k\binom{n}{k}$;;$n\binom{n-1}{k-1}$
+Formule de  Pascal\linebreak\linebreak$\binom{n}{k}$;;$\binom{n-1}{k-1}+\binom{n-1}{k}$
+$\l a+b\r^n$;;$\sum{k=0}{n}{\binom{n}{k}a^kb^{n-k}}$
+$\sum{k=0}{n}{\binom{n}{k}}$;;$2^n$
+$\sum{k=0}{n}{\binom{N}{k}\binom{M}{n-k}}$;;$\binom{M+N}{n}$
+$\sum{k=0}{p}{\binom{n+k}{n}}$;;$\binom{n+p+1}{n+1  }$
