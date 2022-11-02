@@ -1,9 +1,9 @@
 plugins:
     - jekyll-sitemap
 defaults:
-    -
+  -
     scope:
-        path: "/"
+      path: "" # an empty string here means all files in the project
     values:
-        sitemap: true
+      sitemap: false
       
