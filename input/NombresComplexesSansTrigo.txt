@@ -1,0 +1,9 @@
+Fondements -- Nombres complexes sans trigonométrie
+Shuffle questions : True
+Q/R & R/Q : False
+\renewcommand{\bar}{\overline}\DeclareMathOperator{\olde}{e}\newcommand{\e}{{\olde}}\DeclareMathOperator{\oldi}{i}\renewcommand{\i}{{\oldi}}
+$\l\overrightarrow{AC},\overrightarrow{AB}\r$;;$\arg\l\frac{z_B-z_A}{z_C-z_A}\r$
+Translation d'un vecteur $\vec{u}$ d'affixe $z_u$;;$z\mapsto z+z_u$
+Rotation de centre $A$ d'affixe $z_A$ et d'angle $\theta$;;$z\mapsto \e^{\i\theta}\l z-z_A\r+z_A$
+Homothétie de centre $A$ et de rapport $\lambda$;;$z\mapsto \lambda\l z-z_A\r+z_A$
+Symétrie orthogonale d'axe $D$, une droite passant par $A$ d'affixe $z_A$ et dirigée par $\vec{u}$;;$z\mapsto z_u^2\l\bar{z}-\bar{z_A}\r+z_A$
