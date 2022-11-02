@@ -2,7 +2,7 @@ function is_numeric(str){
     return /^\d+$/.test(str);
 }
 
-function display() {
+async function display() {
     var file = new XMLHttpRequest();
     file.open('GET', 'https://rfoxinter.github.io/revisions/sitemap.xml');
     file.send();
@@ -15,7 +15,7 @@ function display() {
     }
 }
 
-function display_files(sitemap,i){
+async function display_files(sitemap,i){
     const path = 'https://rfoxinter.github.io/revisions/pdf/';
     const extension = '\\.pdf';
 
@@ -29,12 +29,30 @@ function display_files(sitemap,i){
     }
 
     const c = document.getElementsByTagName('main')[0];
+    await load_files(files);
     for (var i=0; i<files.length; ++i) {
         display_file_number(files,i,c,path);
     }
 }
 
-function display_file_number(files,i,c,path) {
+async function load_files(files){
+    for (var i=0; i<files.length; ++i) {
+        var f = files[i];
+        var file = new XMLHttpRequest();
+        file.open('GET', 'https://rfoxinter.github.io/revisions/input/' + f.substring(f.search('/')+1,f.length).replace(/[0-9]/g, '') + '.txt');
+        file.send();
+        file.onreadystatechange = function() {
+            if (file.readyState === 4) {
+                if (file.status === 200) {
+                    file.responseText;
+                }
+            }
+        }
+    }
+    return;
+}
+
+async function display_file_number(files,i,c,path) {
     var f = files[i];
     var file = new XMLHttpRequest();
     file.open('GET', 'https://rfoxinter.github.io/revisions/input/' + f.substring(f.search('/')+1,f.length).replace(/[0-9]/g, '') + '.txt');
