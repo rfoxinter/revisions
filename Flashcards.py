@@ -102,7 +102,6 @@ def main(file_path:str,file:str,n:int,dest:str,_open:bool) -> None:
             dest='pdf/'
         else:
             dest='pdf/'+remove_special_chars(dest[0].title())+'/'
-    print(n)
     if n==1:
         gen_latex(r,t,ttle,dest)
     else:
@@ -115,5 +114,4 @@ def main(file_path:str,file:str,n:int,dest:str,_open:bool) -> None:
             s('open ' + dest)
 
 if __name__=='__main__':
-    print(args.file)
     main(__file__,args.file,args.n,args.dest,args.open)
