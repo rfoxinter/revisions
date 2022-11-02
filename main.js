@@ -29,7 +29,9 @@ function display_files(sitemap,i){
     }
 
     const c = document.getElementsByTagName('main')[0];
-    display_file_number(files,0,c,path);
+    for (var i=0; i<files.length; ++i) {
+        display_file_number(files,i,c,path);
+    }
 }
 
 function display_file_number(files,i,c,path) {
@@ -60,21 +62,19 @@ function display_file_number(files,i,c,path) {
                     d = document.createElement('div');
                     d.setAttribute('class',groupname);
                     h1 = document.createElement('h1');
+                    h1.setAttribute('style','margin-bottom:0;')
                     h1.innerHTML = groupname;
                     d.appendChild(h1);
                     hr = document.createElement('hr');
                     c.appendChild(hr)
                     c.appendChild(d);
                 }
-                var p = document.createElement('p');
-                p.innerHTML = filename;
+                p = document.createElement('p');
                 var a = document.createElement('a');
                 a.setAttribute('href',path + files[i] + '.pdf');
-                a.appendChild(p);
-                document.getElementsByClassName(groupname)[0].appendChild(a);
-                if (i != files.length -1) {
-                    display_file_number(files,i+1,c,path);
-                }
+                a.innerHTML = filename;
+                p.appendChild(a);
+                document.getElementsByClassName(groupname)[0].appendChild(p);
             }
         }
     }
