@@ -15,7 +15,7 @@ function display() {
     }
 }
 
-function display_files(sitemap,i){
+function display_files(sitemap){
     const path = 'https://rfoxinter.github.io/revisions/pdf/';
     const extension = '\\.pdf';
 
