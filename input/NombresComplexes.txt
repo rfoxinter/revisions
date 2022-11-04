@@ -1,7 +1,7 @@
 Fondements -- Nombres complexes
 Shuffle questions : True
-Q/R & R/Q : True
-\let\oldcos\cos\renewcommand\cos[2][]{\oldcos^{#1}\l#2\r}\let\oldsin\sin\renewcommand\sin[2][]{\oldsin^{#1}\l#2\r}\let\oldtan\tan\renewcommand\tan[2][]{\oldtan^{#1}\l#2\r}\let\oldcot\cot\renewcommand\cot[2][]{\oldcot^{#1}\l#2\r}\renewcommand{\bar}{\overline}\DeclareMathOperator{\olde}{e}\newcommand{\e}{{\olde}}\DeclareMathOperator{\oldi}{i}\renewcommand{\i}{{\oldi}}
+Q/R & R/Q : False
+\usepackage{tables}\let\oldcos\cos\renewcommand\cos[2][]{\oldcos^{#1}\l#2\r}\let\oldsin\sin\renewcommand\sin[2][]{\oldsin^{#1}\l#2\r}\let\oldtan\tan\renewcommand\tan[2][]{\oldtan^{#1}\l#2\r}\let\oldcot\cot\renewcommand\cot[2][]{\oldcot^{#1}\l#2\r}\renewcommand{\bar}{\overline}\DeclareMathOperator{\olde}{e}\newcommand{\e}{{\olde}}\DeclareMathOperator{\oldi}{i}\renewcommand{\i}{{\oldi}}
 $\sin{x+y}$;;$\sin{x}\cos{y}+\sin{y}\cos{x}$
 $\sin{x-y}$;;$\sin{x}\cos{y}-\sin{y}\cos{x}$
 $\cos{x+y}$;;$\cos{x}\cos{y}-\sin{x}\sin{y}$
@@ -41,3 +41,6 @@ Translation d'un vecteur $\vec{u}$ d'affixe $z_u$;;$z\mapsto z+z_u$
 Rotation de centre $A$ d'affixe $z_A$ et d'angle $\theta$;;$z\mapsto \e^{\i\theta}\l z-z_A\r+z_A$
 Homothétie de centre $A$ et de rapport $\lambda$;;$z\mapsto \lambda\l z-z_A\r+z_A$
 Symétrie orthogonale d'axe $D$, une droite passant par $A$ d'affixe $z_A$ et dirigée par $\vec{u}$;;$z\mapsto z_u^2\l\bar{z}-\bar{z_A}\r+z_A$
+$\e^{\i x}+\e^{-\i x}$;;$2\cos{x}$
+$\e^{\i x}-\e^{-\i x}$;;$2\i\sin{x}$
+Valeurs remarquables;;\setcolrow{6}{5}\begin{tikzpicture}[ampersand replacement=\&] \matrix (mat) [table] { \&$0$\&$\oldfrac{\pi}{6}$\&$\oldfrac{\pi}{4}$\&$\oldfrac{\pi}{3}$\&$\oldfrac{\pi}{2}$ \\ $\oldsin$\&$0$\&$\oldfrac{1}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{\sqrt{3}}{2}$\&$1$\\ $\oldcos$\&$1$\&$\oldfrac{\sqrt{3}}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{1}{2}$\&$1$\\ $\oldtan$\&$0$\&$\oldfrac{1}{\sqrt{3}}$\&$1$\&$\sqrt{3}$\&--\\ $\oldcot$\&--\&$\sqrt{3}$\&$1$\&$\oldfrac{1}{\sqrt{3}}$\&$0$\\ }; \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2); \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10);\end{tikzpicture}
