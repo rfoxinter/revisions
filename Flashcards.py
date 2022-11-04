@@ -106,7 +106,7 @@ def main(file_path:str,file:str,n:int,dest:str,_open:bool) -> None:
         gen_latex(r,t,ttle,dest)
     else:
         for j in range(n):
-            gen_latex(r,t,ttle+str(j+1),dest)
+            gen_latex(r,t,ttle+'_'+str(j+1),dest)
     if _open:
         if system()=='Windows':
             s('start' + dest)
