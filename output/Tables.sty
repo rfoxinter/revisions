@@ -1,0 +1,23 @@
+\ProvidesPackage{tables}
+
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\newcommand{\setcolrow}[2]{ %\setcolrow{n°col}{n°row}
+    \tikzset{
+        table/.style={
+            matrix of nodes,
+            row sep=-\pgflinewidth,
+            column sep=-\pgflinewidth,
+            nodes={
+                rectangle,
+                draw=black,
+                align=center,
+                text width = 10cm/#1,
+                inner sep=0,
+                minimum height=6.5cm/#2,
+                anchor=south,
+            },
+            nodes in empty cells,
+        }
+    }
+}
