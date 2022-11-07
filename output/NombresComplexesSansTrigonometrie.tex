@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\renewcommand{\bar}{\overline}\DeclareMathOperator{\olde}{e}\newcommand{\e}{{\olde}}\DeclareMathOperator{\oldi}{i}\renewcommand{\i}{{\oldi}}
+\usepackage{trigo}\usepackage{complexes}
 \hypersetup{pdftitle=Fondements -- Nombres complexes sans trigonométrie}
 \title{Fondements\\\emph{Nombres complexes sans trigonométrie}}
 \author{}
@@ -10,14 +10,18 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Homothétie de centre $A$ et de rapport $\lambda$}{1/5}
-\slider{$z\mapsto \lambda\l z-z_A\r+z_A$}{1/5}
-\slideq{Translation d'un vecteur $\vec{u}$ d'affixe $z_u$}{2/5}
-\slider{$z\mapsto z+z_u$}{2/5}
-\slideq{Symétrie orthogonale d'axe $D$, une droite passant par $A$ d'affixe $z_A$ et dirigée par $\vec{u}$}{3/5}
-\slider{$z\mapsto z_u^2\l\bar{z}-\bar{z_A}\r+z_A$}{3/5}
-\slideq{Rotation de centre $A$ d'affixe $z_A$ et d'angle $\theta$}{4/5}
-\slider{$z\mapsto \e^{\i\theta}\l z-z_A\r+z_A$}{4/5}
-\slideq{$\l\overrightarrow{AC},\overrightarrow{AB}\r$}{5/5}
-\slider{$\arg\l\frac{z_B-z_A}{z_C-z_A}\r$}{5/5}
+\slideq{$\e^{\i x}-\e^{-\i x}$}{1/7}
+\slider{$2\i\sin{x}$}{1/7}
+\slideq{$\l\overrightarrow{AC},\overrightarrow{AB}\r$}{2/7}
+\slider{$\arg\l\frac{z_B-z_A}{z_C-z_A}\r$}{2/7}
+\slideq{Symétrie orthogonale d'axe $D$, une droite passant par $A$ d'affixe $z_A$ et dirigée par $\vec{u}$ d'affixe $z_u$}{3/7}
+\slider{$z\mapsto z_u^2\l\bar{z}-\bar{z_A}\r+z_A$}{3/7}
+\slideq{Rotation de centre $A$ d'affixe $z_A$ et d'angle $\theta$}{4/7}
+\slider{$z\mapsto \e^{\i\theta}\l z-z_A\r+z_A$}{4/7}
+\slideq{Translation d'un vecteur $\vec{u}$ d'affixe $z_u$}{5/7}
+\slider{$z\mapsto z+z_u$}{5/7}
+\slideq{Homothétie de centre $A$ et de rapport $\lambda$}{6/7}
+\slider{$z\mapsto \lambda\l z-z_A\r+z_A$}{6/7}
+\slideq{$\e^{\i x}+\e^{-\i x}$}{7/7}
+\slider{$2\cos{x}$}{7/7}
 \end{document}

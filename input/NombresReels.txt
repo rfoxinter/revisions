@@ -1,0 +1,10 @@
+Fondements -- Nombres réels
+Shuffle questions : True
+Q/R & R/Q : False
+\let\oldsum\sum\renewcommand\sum[3]{\oldsum\limits_{#1}^{#2}\l#3\r}\let\oldprod\prod\renewcommand\prod[3]{\oldprod\limits_{#1}^{#2}\l#3\r}\newcommand\lva{\left|}\renewcommand\rva{\right|}
+Inégalité triangulaire 1;;$\lva a+b\rva\leqslant\lva a\rva+\lva b\rva$
+Inégalité triangulaire 2;;$\lva\lva a\rva-\lva b\rva\rva\leqslant\lva a+b\rva$
+Inégalité de Cauchy-Schwarz numérique;;$\l\sum{i=1}{n}{x_iy_i}\r^2\leqslant\l\sum{i=1}{n}{x_i^2}\r\l\sum{i=1}{n}{y_i^2}\r$
+Cas d'égalité de l'inégalité de Cauchy-Schwarz;;$k\in\mathbb{R}$ fixé\linebreak$\forall i\in\llb1,n\rrb,\;x_i=k\times y_i$
+Inégalité arithmético-géométrique;;$\sqrt[n]{\prod{i=1}{n}{x_i}}\leqslant\frac{1}{n}\l\sum{i=1}{n}{x_i}\r$
+Cas d'égalité de l'inégalité arithmético-géométrique;;$\forall i\in\llb1,n\rrb,\;\forall j\in\llb1,n\rrb,\;x_i=x_j$
