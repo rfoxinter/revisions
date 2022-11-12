@@ -1,0 +1,21 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\let\oldcap\bigcap\renewcommand\cap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\cup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}
+\hypersetup{pdftitle=Fondements -- Applications}
+\title{Fondements\\\emph{Applications}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Images réciproques d'intersections}{1/4}
+\slider{$f^{-1}\l\cap{i\in I}{}{F_i}\r=\cap{i\in I}{}{f^{-1}\l F_i\r}$}{1/4}
+\slideq{Images directes d'unions}{2/4}
+\slider{$f\l\cup{i\in I}{}{E_i}\r=\cup{i\in I}{}{f\l E_i\r}$}{2/4}
+\slideq{Images directes d'intersections}{3/4}
+\slider{$f\l\cap{i\in I}{}{E_i}\r\subset\cap{i\in I}{}{f\l E_i\r}$}{3/4}
+\slideq{Images réciproques d'unions}{4/4}
+\slider{$f^{-1}\l\cup{i\in I}{}{F_i}\r=\cup{i\in I}{}{f^{-1}\l F_i\r}$}{4/4}
+\end{document}
