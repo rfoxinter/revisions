@@ -1,0 +1,17 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\let\oldcap\bigcap\renewcommand\bigcap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\bigcup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}\renewcommand\v[1]{\mathcal{V}\l #1\r}\newcommand\lva{\left|}\newcommand\rva{\right|}\let\epsilon\varepsilon
+\hypersetup{pdftitle=Analyse -- Dérivation de fonctions}
+\title{Analyse\\\emph{Dérivation de fonctions}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Description métrique / métrique des limites\linebreak Soit $a\in\overline{X}$, $b\in\overline{\mathbb{R}}$\linebreak$f$ admet une limite $b$ lorsque $x$ tend vers $a$}{1/2}
+\slider{$\forall\epsilon>0,\;\exists\eta>0,\;\lva x-a\rva<\eta\Rightarrow\lva f\l x\r-b\rva<\epsilon$}{1/2}
+\slideq{Description topologique / topologique des limites\linebreak Soit $a\in\overline{X}$, $b\in\overline{\mathbb{R}}$\linebreak$f$ admet une limite $b$ lorsque $x$ tend vers $a$}{2/2}
+\slider{$\forall V\in\v{b},\;\exists U\in\v{a},\;f\l U\cap X\r\subset V$}{2/2}
+\end{document}
