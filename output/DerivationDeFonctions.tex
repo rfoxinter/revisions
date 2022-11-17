@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\let\oldcap\bigcap\renewcommand\bigcap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\bigcup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}\renewcommand\v[1]{\mathcal{V}\l #1\r}\newcommand\lva{\left|}\newcommand\rva{\right|}\let\epsilon\varepsilon
+\let\oldcap\bigcap\renewcommand\bigcap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\bigcup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}\let\oldlim\lim\renewcommand\lim[3]{\oldlim\limits_{#1}\l#2\r=#3}\renewcommand\v[1]{\mathcal{V}\l #1\r}\newcommand\lva{\left|}\newcommand\rva{\right|}\let\epsilon\varepsilon
 \hypersetup{pdftitle=Analyse -- Dérivation de fonctions}
 \title{Analyse\\\emph{Dérivation de fonctions}}
 \author{}
@@ -10,8 +10,18 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Description métrique / métrique des limites\linebreak Soit $a\in\overline{X}$, $b\in\overline{\mathbb{R}}$\linebreak$f$ admet une limite $b$ lorsque $x$ tend vers $a$}{1/2}
-\slider{$\forall\epsilon>0,\;\exists\eta>0,\;\lva x-a\rva<\eta\Rightarrow\lva f\l x\r-b\rva<\epsilon$}{1/2}
-\slideq{Description topologique / topologique des limites\linebreak Soit $a\in\overline{X}$, $b\in\overline{\mathbb{R}}$\linebreak$f$ admet une limite $b$ lorsque $x$ tend vers $a$}{2/2}
-\slider{$\forall V\in\v{b},\;\exists U\in\v{a},\;f\l U\cap X\r\subset V$}{2/2}
+\slideq{Inégalité des acroissements finis\linebreak$f$ est une application continue sur $\left[a,b\right]$ et dérivable sur $\left]a,b\right[$\linebreak$\forall x\in\left]a,b\right[,\;\lva f^\prime\l x\r\rva\leqslant M$}{1/7}
+\slider{$\lva f\l b\r-f\l a\r\rva\leqslant M\lva b-a\rva$}{1/7}
+\slideq{Description topologique--topologique des limites\linebreak Soit $a\in\overline{X}$, $b\in\overline{\mathbb{R}}$\linebreak$f$ admet une limite $b$ lorsque $x$ tend vers $a$}{2/7}
+\slider{$\forall V\in\v{b},\;\exists U\in\v{a},\;f\l U\cap X\r\subset V$}{2/7}
+\slideq{Description métrique--métrique des limites\linebreak Soit $a\in\overline{X}$, $b\in\overline{\mathbb{R}}$\linebreak$f$ admet une limite $b$ lorsque $x$ tend vers $a$}{3/7}
+\slider{$\forall\epsilon>0,\;\exists\eta>0,\;\lva x-a\rva<\eta\Rightarrow\lva f\l x\r-b\rva<\epsilon$}{3/7}
+\slideq{Théorème des acroissements finis\linebreak$f$ est une application continue sur $\left[a,b\right]$ et dérivable sur $\left]a,b\right[$}{4/7}
+\slider{$\exists c\in\left]a,b\right[,\;\frac{f\l b\r-f\l a\r}{b-a}=f^\prime\l c\r$}{4/7}
+\slideq{DL\textsubscript{1}\linebreak$f$ est dérivable de dérivée $p$ en $x_0$}{5/7}
+\slider{$\exists\epsilon\!:\!\v{x_0}\to\mathbb{R}$ et $\lim{x\to x_0}{\epsilon\l x\r}{0}$\linebreak$f\l x\r=f\l x_0\r+\l x-x_0\r p+\l x-x_0\r\epsilon\l x\r$}{5/7}
+\slideq{Fonction lipschitzienne\linebreak$f\!:\!I\to\mathbb{R}$}{6/7}
+\slider{$\forall\l x,y\r\in I^2,\;\lva f\l x\r-f\l y\r\rva\leqslant L\lva x-y\rva$}{6/7}
+\slideq{Inégalité des acroissements finis\linebreak$f$ est une application continue sur $\left[a,b\right]$ et dérivable sur $\left]a,b\right[$\linebreak$\forall x\in\left]a,b\right[,\;m\leqslant f^\prime\l x\r\leqslant M$}{7/7}
+\slider{$m\leqslant\frac{f\l b\r-f\l a\r}{b-a}\leqslant M$}{7/7}
 \end{document}
