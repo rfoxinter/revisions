@@ -50,7 +50,7 @@ function display_files(sitemap){
             h1 = document.createElement('h1');
             h1.setAttribute('style','margin-bottom:0;margin-left: -2rem;')
             span = document.createElement('span');
-            span.setAttribute('class',"material-symbols-rounded");
+            span.setAttribute('class','material-symbols-rounded');
             span.innerHTML = 'folder_open';
             h1.appendChild(span);
             h1.innerHTML += ' ' + groupname;
@@ -60,10 +60,23 @@ function display_files(sitemap){
             c.appendChild(d);
         }
         p = document.createElement('p');
+        p.innerHTML = filename + '.pdf ';
         var a = document.createElement('a');
         a.setAttribute('href', 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + path + f + '.pdf');
-        a.innerHTML = filename + '.pdf';
+        span = document.createElement('span');
+        span.setAttribute('class','material-symbols-rounded');
+        span.innerHTML = 'open_in_new';
+        a.appendChild(span);
         p.appendChild(a);
+        p.innerHTML += ' ';
+        var a2 = document.createElement('a');
+        a2.setAttribute('href', path + f + '.pdf');
+        span2 = document.createElement('span');
+        span2.setAttribute('class','material-symbols-rounded');
+        span2.innerHTML = 'download';
+        a2.appendChild(span2);
+        a2.setAttribute('download', filename + '.pdf');
+        p.appendChild(a2);
         document.getElementsByClassName(groupname)[0].appendChild(p);
     }
 }
