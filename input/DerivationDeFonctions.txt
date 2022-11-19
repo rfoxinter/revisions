@@ -1,11 +1,19 @@
 Analyse -- Dérivation de fonctions
 Shuffle questions : True
 Q/R & R/Q : False
-\let\oldcap\bigcap\renewcommand\bigcap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\bigcup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}\let\oldlim\lim\renewcommand\lim[3]{\oldlim\limits_{#1}\l#2\r=#3}\renewcommand\v[1]{\mathcal{V}\l #1\r}\newcommand\lva{\left|}\newcommand\rva{\right|}\let\epsilon\varepsilon
+\let\oldcap\bigcap\renewcommand\bigcap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\bigcup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}\let\oldsum\sum\renewcommand\sum[3]{\oldsum\limits_{#1}^{#2}\l#3\r}\let\oldprod\prod\renewcommand\prod[3]{\oldprod\limits_{#1}^{#2}\l#3\r}\let\oldlim\lim\renewcommand\lim[3]{\oldlim\limits_{#1}\l#2\r=#3}\renewcommand\v[1]{\mathcal{V}\l #1\r}\newcommand\lva{\left|}\newcommand\rva{\right|}\let\epsilon\varepsilon
 Description métrique--métrique des limites\linebreak Soit $a\in\overline{X}$, $b\in\overline{\mathbb{R}}$\linebreak$f$ admet une limite $b$ lorsque $x$ tend vers $a$;;$\forall\epsilon>0,\;\exists\eta>0,\;\lva x-a\rva<\eta\Rightarrow\lva f\l x\r-b\rva<\epsilon$
 Description topologique--topologique des limites\linebreak Soit $a\in\overline{X}$, $b\in\overline{\mathbb{R}}$\linebreak$f$ admet une limite $b$ lorsque $x$ tend vers $a$;;$\forall V\in\v{b},\;\exists U\in\v{a},\;f\l U\cap X\r\subset V$
 DL\textsubscript{1}\linebreak$f$ est dérivable de dérivée $p$ en $x_0$;;$\exists\epsilon\!:\!\v{x_0}\to\mathbb{R}$ et $\lim{x\to x_0}{\epsilon\l x\r}{0}$\linebreak$f\l x\r=f\l x_0\r+\l x-x_0\r p+\l x-x_0\r\epsilon\l x\r$
 Théorème des acroissements finis\linebreak$f$ est une application continue sur $\left[a,b\right]$ et dérivable sur $\left]a,b\right[$;;$\exists c\in\left]a,b\right[,\;\frac{f\l b\r-f\l a\r}{b-a}=f^\prime\l c\r$
 Inégalité des acroissements finis\linebreak$f$ est une application continue sur $\left[a,b\right]$ et dérivable sur $\left]a,b\right[$\linebreak$\forall x\in\left]a,b\right[,\;m\leqslant f^\prime\l x\r\leqslant M$;;$m\leqslant\frac{f\l b\r-f\l a\r}{b-a}\leqslant M$
 Inégalité des acroissements finis\linebreak$f$ est une application continue sur $\left[a,b\right]$ et dérivable sur $\left]a,b\right[$\linebreak$\forall x\in\left]a,b\right[,\;\lva f^\prime\l x\r\rva\leqslant M$;;$\lva f\l b\r-f\l a\r\rva\leqslant M\lva b-a\rva$
-Fonction lipschitzienne\linebreak$f\!:\!I\to\mathbb{R}$;;$\forall\l x,y\r\in I^2,\;\lva f\l x\r-f\l y\r\rva\leqslant L\lva x-y\rva$
+Fonction L-lipschitzienne\linebreak$f\!:\!I\to\mathbb{R}$;;$\forall\l x,y\r\in I^2,\;\lva f\l x\r-f\l y\r\rva\leqslant L\lva x-y\rva$
+$\l f_1\circ\cdots\circ f_n\r^\prime\l x\r$;;$\prod{k=1}{n}{\l f^\prime_k\circ f_{k-1}\circ\cdots f_1\r\l x\r}$
+$\l\prod{k=1}{n}{f_k}\r^\prime\l x\r$;;$\sum{k=1}{n}{f_k^\prime\l x\r\prod{i\in\llb1,n\rrb\setminus\left\{k\right\}}{}{f_i\l x\r}}$
+Si $\forall i\in\llb1,n\rrb,f\l x\r\neq0$\linebreak$\l\prod{k=1}{n}{f_k}\r^\prime\l x\r$;;$\l\prod{i\in\llb1,n\rrb}{}{f_i\l x\r}\r\sum{k=1}{n}{\frac{f_i^\prime\l x\r}{f_i\l x\r}}$
+Si $\exists i\in\llb1,n\rrb,f\l x\r=0$\linebreak$\l\prod{k=1}{n}{f_k}\r^\prime\l x\r$;;$f_i^\prime\l x\r\times\prod{i\in\llb1,n\rrb\setminus\left\{i\right\}}{}{f_i\l x\r}$
+Si $f$ est bijective\linebreak$\l f^{-1}\r^\prime\l x\r$;;$\frac{1}{\l f^\prime\circ f^{-1}\r\l x\r}$
+$f\!:\!I\to\mathbb{R}$ est convexe sur $I$;;$\forall\l x,y\r\in I,\;\forall\lambda\in\left[0,1\right]$\linebreak$f\l\lambda x+\l1-\lambda\r y\r\leqslant\lambda f\l x\r+\l1-\lambda\r f\l y\r$
+$f\!:\!I\to\mathbb{R}$ est concave sur $I$;;$\forall\l x,y\r\in I,\;\forall\lambda\in\left[0,1\right]$\linebreak$f\l\lambda x+\l1-\lambda\r y\r\geqslant\lambda f\l x\r+\l1-\lambda\r f\l y\r$
+Inegalité de Jensen\linebreak$f$ est convexe sur $I$;;$\forall\l\lambda_1,\lambda_n\r\mathbb{R}_+^n,\;\sum{k=1}{n}{\lambda_k}=1$\linebreak$f\l\sum{k=1}{n}{\lambda_kx_k}\r\leqslant\sum{k=1}{n}{\lambda_kf\l x_k\r}$
