@@ -14,6 +14,6 @@ $\l\prod{k=1}{n}{f_k}\r^\prime\l x\r$;;$\sum{k=1}{n}{f_k^\prime\l x\r\prod{i\in\
 Si $\forall i\in\llb1,n\rrb,f\l x\r\neq0$\linebreak$\l\prod{k=1}{n}{f_k}\r^\prime\l x\r$;;$\l\prod{i\in\llb1,n\rrb}{}{f_i\l x\r}\r\sum{k=1}{n}{\frac{f_i^\prime\l x\r}{f_i\l x\r}}$
 Si $\exists i\in\llb1,n\rrb,f\l x\r=0$\linebreak$\l\prod{k=1}{n}{f_k}\r^\prime\l x\r$;;$f_i^\prime\l x\r\times\prod{i\in\llb1,n\rrb\setminus\left\{i\right\}}{}{f_i\l x\r}$
 Si $f$ est bijective\linebreak$\l f^{-1}\r^\prime\l x\r$;;$\frac{1}{\l f^\prime\circ f^{-1}\r\l x\r}$
-$f\!:\!I\to\mathbb{R}$ est convexe sur $I$;;$\forall\l x,y\r\in I,\;\forall\lambda\in\left[0,1\right]$\linebreak$f\l\lambda x+\l1-\lambda\r y\r\leqslant\lambda f\l x\r+\l1-\lambda\r f\l y\r$
-$f\!:\!I\to\mathbb{R}$ est concave sur $I$;;$\forall\l x,y\r\in I,\;\forall\lambda\in\left[0,1\right]$\linebreak$f\l\lambda x+\l1-\lambda\r y\r\geqslant\lambda f\l x\r+\l1-\lambda\r f\l y\r$
-Inegalité de Jensen\linebreak$f$ est convexe sur $I$;;$\forall\l\lambda_1,\lambda_n\r\mathbb{R}_+^n,\;\sum{k=1}{n}{\lambda_k}=1$\linebreak$f\l\sum{k=1}{n}{\lambda_kx_k}\r\leqslant\sum{k=1}{n}{\lambda_kf\l x_k\r}$
+$f\!:\!I\to\mathbb{R}$ est convexe sur $I$;;$\forall\l x,y\r\in I^2,\;\forall\lambda\in\left[0,1\right]$\linebreak$f\l\lambda x+\l1-\lambda\r y\r\leqslant\lambda f\l x\r+\l1-\lambda\r f\l y\r$
+$f\!:\!I\to\mathbb{R}$ est concave sur $I$;;$\forall\l x,y\r\in I^2,\;\forall\lambda\in\left[0,1\right]$\linebreak$f\l\lambda x+\l1-\lambda\r y\r\geqslant\lambda f\l x\r+\l1-\lambda\r f\l y\r$
+Inegalité de Jensen\linebreak$f$ est convexe sur $I$;;$\forall\l\lambda_1,\cdots,\lambda_n\r\mathbb{R}_+^n,\;\sum{k=1}{n}{\lambda_k}=1$\linebreak$f\l\sum{k=1}{n}{\lambda_kx_k}\r\leqslant\sum{k=1}{n}{\lambda_kf\l x_k\r}$
