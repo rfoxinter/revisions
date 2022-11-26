@@ -11,8 +11,8 @@ Inégalité des acroissements finis\linebreak$f$ est une application continue su
 Fonction L-lipschitzienne\linebreak$f\!:\!I\to\mathbb{R}$;;$\forall\l x,y\r\in I^2,\;\lva f\l x\r-f\l y\r\rva\leqslant L\lva x-y\rva$
 $\l f_1\circ\cdots\circ f_n\r^\prime\l x\r$;;$\prod{k=1}{n}{\l f^\prime_k\circ f_{k-1}\circ\cdots f_1\r\l x\r}$
 $\l\prod{k=1}{n}{f_k}\r^\prime\l x\r$;;$\sum{k=1}{n}{f_k^\prime\l x\r\prod{i\in\llb1,n\rrb\setminus\left\{k\right\}}{}{f_i\l x\r}}$
-Si $\forall i\in\llb1,n\rrb,f\l x\r\neq0$\linebreak$\l\prod{k=1}{n}{f_k}\r^\prime\l x\r$;;$\l\prod{i\in\llb1,n\rrb}{}{f_i\l x\r}\r\sum{k=1}{n}{\frac{f_i^\prime\l x\r}{f_i\l x\r}}$
-Si $\exists i\in\llb1,n\rrb,f\l x\r=0$\linebreak$\l\prod{k=1}{n}{f_k}\r^\prime\l x\r$;;$f_i^\prime\l x\r\times\prod{i\in\llb1,n\rrb\setminus\left\{i\right\}}{}{f_i\l x\r}$
+Si $\forall i\in\llb1,n\rrb,f_i\l x\r\neq0$\linebreak$\l\prod{i=1}{n}{f_i}\r^\prime\l x\r$;;$\l\prod{i\in\llb1,n\rrb}{}{f_i\l x\r}\r\sum{k=1}{n}{\frac{f_i^\prime\l x\r}{f_i\l x\r}}$
+Si $\exists i\in\llb1,n\rrb,f_i\l x\r=0$\linebreak$\l\prod{i=1}{n}{f_i}\r^\prime\l x\r$;;$f_i^\prime\l x\r\times\prod{i\in\llb1,n\rrb\setminus\left\{i\right\}}{}{f_i\l x\r}$
 Si $f$ est bijective\linebreak$\l f^{-1}\r^\prime\l x\r$;;$\frac{1}{\l f^\prime\circ f^{-1}\r\l x\r}$
 $f\!:\!I\to\mathbb{R}$ est convexe sur $I$;;$\forall\l x,y\r\in I^2,\;\forall\lambda\in\left[0,1\right]$\linebreak$f\l\lambda x+\l1-\lambda\r y\r\leqslant\lambda f\l x\r+\l1-\lambda\r f\l y\r$
 $f\!:\!I\to\mathbb{R}$ est concave sur $I$;;$\forall\l x,y\r\in I^2,\;\forall\lambda\in\left[0,1\right]$\linebreak$f\l\lambda x+\l1-\lambda\r y\r\geqslant\lambda f\l x\r+\l1-\lambda\r f\l y\r$
