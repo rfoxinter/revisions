@@ -4,7 +4,13 @@
 \newcommand{\der}[1][]{\def\argI{#1}\tmpder}
 \newcommand{\tmpder}[2][x]{\frac{\oldd^{\argI}}{{\oldd}#1^{\argI}}\l#2\r}
 \let\oldint\int
-\renewcommand{\int}[1][]{\def\argI{#1}\tmpint}
-\newcommand{\tmpint}[3][]{\oldint_{\argI}^{#1}\l#2\r{{}\oldd}#3}
+\renewcommand{\int}[1][]{
+    \ifx&#1&
+        \def\argI{}
+    \else
+        \def\argI{{{}\oldd}#1}
+    \fi\tmpint}
+\newcommand{\tmpint}[1][]{\def\argII{#1}\tmptmpint}
+\newcommand{\tmptmpint}[2][]{\displaystyle{\oldint_{\argII}^{#1}}\l#2\r\argI}
 \newcommand{\eval}[1][]{\def\argI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\argI}^{#1}}

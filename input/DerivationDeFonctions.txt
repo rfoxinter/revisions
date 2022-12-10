@@ -1,7 +1,7 @@
 Analyse -- Dérivation de fonctions
 Shuffle questions : True
 Q/R & R/Q : False
-\let\oldcap\bigcap\renewcommand\bigcap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\bigcup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}\let\oldsum\sum\renewcommand\sum[3]{\oldsum\limits_{#1}^{#2}\l#3\r}\let\oldprod\prod\renewcommand\prod[3]{\oldprod\limits_{#1}^{#2}\l#3\r}\let\oldlim\lim\renewcommand\lim[3]{\oldlim\limits_{#1}\l#2\r=#3}\renewcommand\v[1]{\mathcal{V}\l #1\r}\newcommand\lva{\left|}\newcommand\rva{\right|}\let\epsilon\varepsilon
+\usepackage{bigoperators}\let\oldlim\lim\renewcommand\lim[3]{\oldlim\limits_{#1}\l#2\r=#3}\renewcommand\v[1]{\mathcal{V}\l #1\r}\newcommand\lva{\left|}\newcommand\rva{\right|}\let\epsilon\varepsilon
 Description métrique--métrique des limites\linebreak Soit $a\in\overline{X}$, $b\in\overline{\mathbb{R}}$\linebreak$f$ admet une limite $b$ lorsque $x$ tend vers $a$;;$\forall\epsilon>0,\;\exists\eta>0,\;\lva x-a\rva<\eta\Rightarrow\lva f\l x\r-b\rva<\epsilon$
 Description topologique--topologique des limites\linebreak Soit $a\in\overline{X}$, $b\in\overline{\mathbb{R}}$\linebreak$f$ admet une limite $b$ lorsque $x$ tend vers $a$;;$\forall V\in\v{b},\;\exists U\in\v{a},\;f\l U\cap X\r\subset V$
 DL\textsubscript{1}\linebreak$f$ est dérivable de dérivée $p$ en $x_0$;;$\exists\epsilon\!:\!\v{x_0}\to\mathbb{R}$ et $\lim{x\to x_0}{\epsilon\l x\r}{0}$\linebreak$f\l x\r=f\l x_0\r+\l x-x_0\r p+\l x-x_0\r\epsilon\l x\r$

@@ -1,7 +1,7 @@
 Fondements -- Sommes et produits
 Shuffle questions : True
 Q/R & R/Q : False
-\let\oldsum\sum\renewcommand\sum[3]{\oldsum\limits_{#1}^{#2}\l#3\r}\let\oldprod\prod\renewcommand\prod[3]{\oldprod\limits_{#1}^{#2}\l#3\r}
+\usepackage{bigoperators}
 $\sum{\l i,j\r\in K}{}{a_{i,j}}$;;$\sum{i\in I}{}{\sum{j\in K_{i,\bullet}}{}{a_{i,j}}}=\sum{i\in I}{}{\sum{\l i,j\r\in K^\prime_{i,\bullet}}{}{a_{i,j}}}\linebreak=\sum{j\in J}{}{\sum{i\in K_{\bullet,j}}{}{a_{i,j}}}=\sum{j\in J}{}{\sum{\l i,j\r\in K^\prime_{\bullet,j}}{}{a_{i,j}}}$
 $\prod{k=1}{n}{\sum{i=1}{m_k}{a_{k,i}}}$;;$\sum{\l i_1,\cdots,i_n\r\in\llb1,m_1\rrb\times\cdots\times\llb1,m_n\rrb}{}{a_{1,i_1}\times\cdots\times a_{n,i_n}}$
 $a^n-b^n$;;$\l a-b\r\sum{k=0}{n-1}{a^{n-k-1}b^k}$

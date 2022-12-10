@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\let\oldsum\sum\renewcommand\sum[3]{\oldsum\limits_{#1}^{#2}\l#3\r}\let\oldcap\bigcap\renewcommand\cap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\cup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}
+\usepackage{bigoperators}
 \hypersetup{pdftitle=Fondements -- Cardinaux et dénombrement}
 \title{Fondements\\\emph{Cardinaux et dénombrement}}
 \author{}
@@ -22,6 +22,6 @@
 \slider{$2^n$}{5/7}
 \slideq{Formule de Pascal\linebreak\linebreak$\binom{n}{k}$}{6/7}
 \slider{$\binom{n-1}{k-1}+\binom{n-1}{k}$}{6/7}
-\slideq{$\left|\cup{i=1}{n}{A_i}\right|$}{7/7}
-\slider{$\sum{\substack{I\subset\llb1,n\rrb\\I\neq\varnothing}}{}{\l-1\r^{\left|I\right|-1}\left|\cap{i\in I}{}{A_i}\right|}$}{7/7}
+\slideq{$\left|\bigcup{i=1}{n}{A_i}\right|$}{7/7}
+\slider{$\sum{\substack{I\subset\llb1,n\rrb\\I\neq\varnothing}}{}{\l-1\r^{\left|I\right|-1}\left|\bigcap{i\in I}{}{A_i}\right|}$}{7/7}
 \end{document}

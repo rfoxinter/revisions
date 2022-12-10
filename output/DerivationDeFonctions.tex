@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\let\oldcap\bigcap\renewcommand\bigcap[3]{\oldcap\limits_{#1}^{#2}\l#3\r}\let\oldcup\bigcup\renewcommand\bigcup[3]{\oldcup\limits_{#1}^{#2}\l#3\r}\let\oldsum\sum\renewcommand\sum[3]{\oldsum\limits_{#1}^{#2}\l#3\r}\let\oldprod\prod\renewcommand\prod[3]{\oldprod\limits_{#1}^{#2}\l#3\r}\let\oldlim\lim\renewcommand\lim[3]{\oldlim\limits_{#1}\l#2\r=#3}\renewcommand\v[1]{\mathcal{V}\l #1\r}\newcommand\lva{\left|}\newcommand\rva{\right|}\let\epsilon\varepsilon
+\usepackage{bigoperators}\let\oldlim\lim\renewcommand\lim[3]{\oldlim\limits_{#1}\l#2\r=#3}\renewcommand\v[1]{\mathcal{V}\l #1\r}\newcommand\lva{\left|}\newcommand\rva{\right|}\let\epsilon\varepsilon
 \hypersetup{pdftitle=Analyse -- Dérivation de fonctions}
 \title{Analyse\\\emph{Dérivation de fonctions}}
 \author{}

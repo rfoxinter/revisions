@@ -1,0 +1,25 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{analyse}\usepackage{bigoperators}
+\hypersetup{pdftitle=Analyse -- Calcul intégral}
+\title{Analyse\\\emph{Calcul intégral}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Inégalité de Taylor-Lagrange\linebreak$m\leqslant f^{\l n+1\r}\leqslant M$}{1/6}
+\slider{$\frac{m\l b-a\r^{n+1}}{\l n+1\r!}$\linebreak$\leqslant f\l b\r-\sum{k=0}{n}{f^{\l k\r}\l a\r\frac{\l b-a\r^k}{k!}}\leqslant$\linebreak$\frac{M\l b-a\r^{n+1}}{\l n+1\r!}$}{1/6}
+\slideq{$\int[x][u\l a\r][u\l b\r]{f\l x\r}$}{2/6}
+\slider{$\int[t][a][b]{f\l u\l t\r\r u^\prime\l t\r}$}{2/6}
+\slideq{Formule de Taylor avec reste intégral}{3/6}
+\slider{$f\l b\r=\sum{k=0}{n}{f^{\l k\r}\l a\r\frac{\l b-a\r^k}{k!}}+\int[x][a][b]{f^{\l n+1\r}\l x\r\frac{\l b-t\r^{n+1}}{\l n+1\r!}}$}{3/6}
+\slideq{$\int[x][a][b]{f^{\l n\r}\l x\r g\l x\r}$}{4/6}
+\slider{$\eval[a][b]{\sum{k=0}{n-1}{\l-1\r^kf^{\l n-k-1\r}\l x\r g^{\l k\r}\l x\r}}+\l-1\r^n\int[x][a][b]{f\l x\r g^{\l n\r}\l x\r}$}{4/6}
+\slideq{$\l\int{f}\r u$}{5/6}
+\slider{$\int{f\l u\r u^\prime}$}{5/6}
+\slideq{$\int[x][a][b]{f^\prime\l x\r g\l x\r}$}{6/6}
+\slider{$\eval[a][b]{f\l x\r g\l x\r}-\int[x][a][b]{f\l x\r g^\prime\l x\r}$}{6/6}
+\end{document}
