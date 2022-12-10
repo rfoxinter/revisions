@@ -1,6 +1,6 @@
 Fondements -- Relations
 Shuffle questions : True
-Q/R & R/Q : True
+Q/R & R/Q : False
 \newcommand\R{\mathcal{R}}
 Réflexivité;;$x\R x$
 Irréflixivité ou antiréfléxivité;;$\neg\l x\R x\r$

@@ -1,0 +1,10 @@
+\ProvidesPackage{dsfont}
+
+\def\ds@whichfont{dsrom}
+\ProcessOptions\relax
+
+\DeclareMathAlphabet{\mathds}{U}{\ds@whichfont}{m}{n}
+
+\newcommand\1[1]{\mathds{1}_{#1}}
+
+\endinput

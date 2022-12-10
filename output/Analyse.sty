@@ -1,0 +1,10 @@
+\ProvidesPackage{analyse}
+
+\DeclareMathOperator{\oldd}{d}
+\newcommand{\der}[1][]{\def\argI{#1}\tmpder}
+\newcommand{\tmpder}[2][x]{\frac{\oldd^{\argI}}{{\oldd}#1^{\argI}}\l#2\r}
+\let\oldint\int
+\renewcommand{\int}[1][]{\def\argI{#1}\tmpint}
+\newcommand{\tmpint}[3][]{\oldint_{\argI}^{#1}\l#2\r{{}\oldd}#3}
+\newcommand{\eval}[1][]{\def\argI{#1}\tmpeval}
+\newcommand{\tmpeval}[2][]{\left[#2\right]_{\argI}^{#1}}
