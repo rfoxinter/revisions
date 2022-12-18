@@ -65,6 +65,10 @@ def gen_latex(r:list,t:str,ttle:str,dest:str) -> None:
 '''
     del defs,t2
     for i in range(len(r)):
+        if r[i][0][0:5]=='!!fst':
+            r[i][0] = r[i][0].replace('!!fst','')
+        elif r[i][1][0:5]=='!!fst':
+            r[i][0],r[i][1] = r[i][1].replace('!!fst',''),r[i][0]
         file += '\\slideq{' + r[i][0] + '}{' + str(i+1) + '/' + str(len(r)) + '}\n'
         file += '\\slider{' + r[i][1] + '}{' + str(i+1) + '/' + str(len(r)) + '}\n'
     file += '\end{document}'
