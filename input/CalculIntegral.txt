@@ -4,7 +4,7 @@ Q/R & R/Q : False
 \usepackage{analyse}\usepackage{bigoperators}
 $\l\int{f}\r u$;;$\int{f\l u\r u^\prime}$
 $\int[x][a][b]{f^\prime\l x\r g\l x\r}$;;$\eval[a][b]{f\l x\r g\l x\r}-\int[x][a][b]{f\l x\r g^\prime\l x\r}$
-$\int[x][a][b]{f^{\l n\r}\l x\r g\l x\r}$;;$\eval[a][b]{\sum{k=0}{n-1}{\l-1\r^kf^{\l n-k-1\r}\l x\r g^{\l k\r}\l x\r}}+\l-1\r^n\int[x][a][b]{f\l x\r g^{\l n\r}\l x\r}$
-Formule de Taylor avec reste intégral;;$f\l b\r=\sum{k=0}{n}{f^{\l k\r}\l a\r\frac{\l b-a\r^k}{k!}}+\int[x][a][b]{f^{\l n+1\r}\l x\r\frac{\l b-t\r^{n+1}}{\l n+1\r!}}$
+$\int[x][a][b]{f^{\l n\r}\l x\r g\l x\r}$;;$\eval[a][b]{\sum{k=0}{n-1}{\l-1\r^kf^{\l n-k-1\r}\l x\r g^{\l k\r}\l x\r}}$\linebreak$+\l-1\r^n\int[x][a][b]{f\l x\r g^{\l n\r}\l x\r}$
+Formule de Taylor avec reste intégral;;$f\l b\r=\sum{k=0}{n}{f^{\l k\r}\l a\r\frac{\l b-a\r^k}{k!}}$\linebreak$+\int[x][a][b]{f^{\l n+1\r}\l x\r\frac{\l b-t\r^n}{n!}}$
 Inégalité de Taylor-Lagrange\linebreak$m\leqslant f^{\l n+1\r}\leqslant M$;;$\frac{m\l b-a\r^{n+1}}{\l n+1\r!}$\linebreak$\leqslant f\l b\r-\sum{k=0}{n}{f^{\l k\r}\l a\r\frac{\l b-a\r^k}{k!}}\leqslant$\linebreak$\frac{M\l b-a\r^{n+1}}{\l n+1\r!}$
 $\int[x][u\l a\r][u\l b\r]{f\l x\r}$;;$\int[t][a][b]{f\l u\l t\r\r u^\prime\l t\r}$
