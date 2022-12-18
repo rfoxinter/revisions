@@ -28,12 +28,12 @@ $\sin{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$;;$\frac{2t}{1+t^2}$\linebreak
 $\cos{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$;;$\frac{1-t^2}{1+t^2}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$
 $\tan{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$;;$\frac{2t}{1-t^2}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$
 $\cot{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$;;$\frac{1-t^2}{2t}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$
-$\cos{x+\pi}$;;$-\cos{x}$
-$\sin{x+\pi}$;;$-\sin{x}$
-$\cos{\pi-x}$;;$-\cos{x}$
-$\sin{\pi-x}$;;$\sin{x}$
-$\cos{x+\frac{\pi}{2}}$;;$-\sin{x}$
-$\sin{x+\frac{\pi}{2}}$;;$\cos{x}$
-$\cos{\frac{\pi}{2}-x}$;;$\sin{x}$
-$\sin{\frac{\pi}{2}-x}$;;$\cos{x}$
-Valeurs remarquables;;\setcolrow{6}{5}\begin{tikzpicture}[ampersand replacement=\&] \matrix (mat) [table] { \&$0$\&$\oldfrac{\pi}{6}$\&$\oldfrac{\pi}{4}$\&$\oldfrac{\pi}{3}$\&$\oldfrac{\pi}{2}$ \\ $\oldsin$\&$0$\&$\oldfrac{1}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{\sqrt{3}}{2}$\&$1$\\ $\oldcos$\&$1$\&$\oldfrac{\sqrt{3}}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{1}{2}$\&$0$\\ $\oldtan$\&$0$\&$\oldfrac{1}{\sqrt{3}}$\&$1$\&$\sqrt{3}$\&--\\ $\oldcot$\&--\&$\sqrt{3}$\&$1$\&$\oldfrac{1}{\sqrt{3}}$\&$0$\\ }; \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2); \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10); \draw [line width=0.5mm] (-5cm,-3.25cm) rectangle (5cm,3.25cm);\end{tikzpicture}
+!!fst$\cos{x+\pi}$;;$-\cos{x}$
+!!fst$\sin{x+\pi}$;;$-\sin{x}$
+!!fst$\cos{\pi-x}$;;$-\cos{x}$
+!!fst$\sin{\pi-x}$;;$\sin{x}$
+!!fst$\cos{x+\frac{\pi}{2}}$;;$-\sin{x}$
+!!fst$\sin{x+\frac{\pi}{2}}$;;$\cos{x}$
+!!fst$\cos{\frac{\pi}{2}-x}$;;$\sin{x}$
+!!fst$\sin{\frac{\pi}{2}-x}$;;$\cos{x}$
+!!fstValeurs remarquables;;\setcolrow{6}{5}\begin{tikzpicture}[ampersand replacement=\&] \matrix (mat) [table] { \&$0$\&$\oldfrac{\pi}{6}$\&$\oldfrac{\pi}{4}$\&$\oldfrac{\pi}{3}$\&$\oldfrac{\pi}{2}$ \\ $\oldsin$\&$0$\&$\oldfrac{1}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{\sqrt{3}}{2}$\&$1$\\ $\oldcos$\&$1$\&$\oldfrac{\sqrt{3}}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{1}{2}$\&$0$\\ $\oldtan$\&$0$\&$\oldfrac{1}{\sqrt{3}}$\&$1$\&$\sqrt{3}$\&--\\ $\oldcot$\&--\&$\sqrt{3}$\&$1$\&$\oldfrac{1}{\sqrt{3}}$\&$0$\\ }; \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2); \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10); \draw [line width=0.5mm] (-5cm,-3.25cm) rectangle (5cm,3.25cm);\end{tikzpicture}
