@@ -26,13 +26,20 @@ parser.add_argument('--open',type=b,help='Open destination folder after generati
 args=parser.parse_args()
 
 def remove_special_chars(string:str) -> str:
-    string=sub(u"[ ]",'',string)
-    string=sub(u"[àáâä]",'a',string)
-    string=sub(u"[èéêë]",'e',string)
-    string=sub(u"[îï]",'i',string)
-    string=sub(u"[ôö]",'o',string)
-    string=sub(u"[ùúûü]",'u',string)
-    string=sub(u"[ç]",'c',string)
+    string=sub(u'[ ]','',string)
+    string=sub(u'[àáâä]','a',string)
+    string=sub(u'[èéêë]','e',string)
+    string=sub(u'[îï]','i',string)
+    string=sub(u'[ôö]','o',string)
+    string=sub(u'[ùúûü]','u',string)
+    string=sub(u'[ç]','c',string)
+    string=sub(u'[ ]','',string)
+    string=sub(u'[ÀÁÂÄ]','A',string)
+    string=sub(u'[ÈÉÊË]','E',string)
+    string=sub(u'[ÎÏ]','I',string)
+    string=sub(u'[ÔÖ]','O',string)
+    string=sub(u'[ÙÚÛÜ]','U',string)
+    string=sub(u'[Ç]','C',string)
     return string
 
 def gen_latex(r:list,t:str,ttle:str,dest:str) -> None:
