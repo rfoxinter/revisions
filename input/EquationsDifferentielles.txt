@@ -2,10 +2,11 @@ Analyse -- Équations différentielles
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{analyse}\usepackage{complexes}\usepackage{trigo}
-Solutions de l'équation $y^\prime=a\l x\r y$;;$x\mapsto C\e^{\l\oldint{\l a\r}\r\l x\r}$
+Solutions de l'équation $y^\prime=a\l x\r y$ où $A=\int{a}$;;$x\mapsto C\e^{A\l x\r}$
 Théorème de Cauchy-Lipschitz pour les équations différentielles linéaires d'ordre 1;;Il existe une unique solution $y$ de l'équation différentielle $y^\prime=a\l x\r y+b\l x\r$ telle que $y\l x_0\r=y_0$
 Solutions de l'équation $y^\prime=ay+b$;;$\mathcal{S}=\left\{y\!:\!x\mapsto C\e^{ax}-\frac{b}{a}\right\}$
 Solution de l'équation $y^\prime=ay+b$ telle que $y\l x_0\r=y_0$;;$y\!:\!x\mapsto\l\frac{b}{a}+y_0\r\e^{a\l x-x_0\r}-\frac{b}{a}$
+Fonction $C\l x\r$ de la méthode de variation de la constante où $A=\int{a}$;;$C\l x\r=\int[x]{b\l x\r\e^{-A\l x\r}}$
 Solutions de l'équation différentielle $y^\prime{}^\prime+ay^\prime+by=0$ si $\varDelta\neq0$ où $\varDelta$ est le discriminant dy polynôme caractéristique et $r$ et $s$ sont ses racines;;$\mathcal{S}=\left\{y\!:\!x\mapsto c\e^{rx}+d\e^{sx}\right\},\;\l c,d\r\in\mathbb{C}^2$
 Solutions de l'équation différentielle $y^\prime{}^\prime+ay^\prime+by=0$ si $\varDelta=0$ où $\varDelta$ est le discriminant dy polynôme caractéristique et $r$ sa racine double;;$\mathcal{S}=\left\{y\!:\!x\mapsto\l c+dx\r\e^{rx}\right\},\;\l c,d\r\in\mathbb{C}^2$
 $\mathcal{S}_\mathbb{R}$;;$\left\{\Re\l y\r,\;y\in\mathcal{S}_\mathbb{C}\right\}$
