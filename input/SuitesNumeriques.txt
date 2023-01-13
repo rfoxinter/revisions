@@ -1,0 +1,18 @@
+Analyse -- Suites numériques
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}\newcommand\N{\mathbb{N}}\newcommand\R{\mathbb{R}}\let\olddeg\deg\renewcommand\deg[1]{\olddeg\l#1\r}%\usepackage{analyse}
+Si $\l u_n\r$ et $\l v_n\r$ sont adjacentes et de limite $l$;;$\forall n\in\N$, $\left|v_n-l\right|\leqslant\left|v_n-u_n\right|$
+Critère spécial de convergence des séries alternée;;$\l\sum{n=0}{N}{\l-1\r^na_n}\r_{n\in\N}$ admet une limite finie quand $N$ tend vers $+\infty$\linebreak\linebreak$\left|\sum{n=N+1}{+\infty}{\l-1\r^na_n}\right|\leqslant a_{N+1}$
+L'ensemble $X$ est dense dans $\R$;;$\forall x\in\R$, il existe une suite $\l u_n\r$ d'éléments de $X$ tel que $\l u_n\r$ converge vers $x$
+Un sous-ensemble $F$ est fermé;;Toute suite convergente d'éléments de $F$ converge vers une limite $l\in F$
+Théorème de Bolzano-Weierstrass;;De toute suite réelle bornée on peut extraire une suite convergente
+Sous-ensemble compact;;Soit $E$ un espace métrique et $K\subset E$\linebreak$K$ est compact si de toute suite $\l u_n\r$ d'éléments de $K$, on peut extraire une suite convergeant vers un élément de $K$
+Explicitation des suites arithmético-géométriques;;Soit $l$ un point fixe de la suite $\l u_n\r$, $\l v_n\r$ la solution de l'équation homogène (géométrique)\linebreak$u_n=v_n+l$
+Explicitation de $u_{n+1}=au_n+\lambda^nP\l n\r$ où $\lambda\neq a$;;$u_n=\lambda^nQ\l n\r$ avec $\deg{P}=\deg{Q}$
+Explicitation de $u_{n+1}=au_n+\lambda^nP\l n\r$ où $\lambda=a$;;$u_n=n\lambda^nQ\l n\r$ avec $\deg{P}=\deg{Q}$
+Polynôme caractéristique d'une récurrence linéaire\linebreak$u_{n+k}-a_{k-1}u_{n+k-1}-\cdots-a_1u_{n+1}-a_0u_n=0$;;$P=X^k-a_{k-1}X^{k-1}-\cdots-a_1X-a_0$
+Explicitation des suites récurrentes linéaires d'ordre 2 où $P$ le polynôme caractéristique admet 2 racines $r$ et $s$\linebreak Soit $\mathbb K=\R$ ou $\mathbb K=\mathbb C$;;$\exists\l\lambda,\mu\r\in\mathbb K^2,\;\forall n\in\N,\;u_n=\lambda r^n+\mu s^n$
+Explicitation des suites récurrentes linéaires d'ordre 2 où $P$ le polynôme caractéristique admet 1 racines double $r$\linebreak Soit $\mathbb K=\R$ ou $\mathbb K=\mathbb C$;;$\exists\l\lambda,\mu\r\in\mathbb K^2,\;\forall n\in\N,\;u_n=\l\lambda+\mu n\r r^n$
+Trouver une solution particulière $\l v_n\r$ à la suite $u_{n+k}=a_{k-1}u_{n+k-1}+\cdots+a_0u_n+b_n$ pour un second membre $b_n=\lambda^nQ\l n\r$ avec $Q\in\mathbb C\left[X\right]$;;$v_n=n^m\lambda^nR\l n\r$ où $m$ est la multiplicité de $\lambda$ comme racine de $P$ le polynôme caractéristique de la suite et $\deg{R}=\deg{Q}$
+Soit $f$ une application contractante sur un intervalle $I$, de facteur de Lipschitz $k<1$, et $\l u_n\r$ une suite récurrente à valeurs dans $I$, définie par $f$\linebreak Soit $l$ un point fixe de $f$ sur $I$;;$\left|u_n-l\right|\leqslant k^n\left|u_0-l\right|$
