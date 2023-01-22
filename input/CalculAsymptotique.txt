@@ -1,0 +1,29 @@
+Analyse -- Calcul asymptotique
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{equivalents}\let\oldlim\lim\renewcommand\lim[2]{\oldlim\limits_{#1}\l#2\r}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{complexes,trigo}
+$u_n=\O{v_n}$\linebreak Définition avec un majorant;;$\exists M\in\mathbb{R}_+,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;\left|u_n\right|\leqslant M\left|v_n\right|$
+$u_n=\O{v_n}$\linebreak Définition avec les suites;;$\exists\l\mu_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\mu_nv_n$\linebreak Avec $\l\mu_n\r$ majorée
+$u_n=\o{v_n}$\linebreak Définition avec un epsilon;;$\forall\varepsilon\in\mathbb{R}_+,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;\left|u_n\right|\leqslant\varepsilon\left|v_n\right|$
+$u_n=\o{v_n}$\linebreak Définition avec les suites;;$\exists\l\varepsilon_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\varepsilon_nv_n$\linebreak Avec $\lim{n\to\infty}{\varepsilon_n}=0$
+Implication entre $o$ et $O$;;$u_n=\o{v_n}\Rightarrow  u_n=\O{v_n}$
+$u_n=\O{1}$;;$\l u_n\r$ est borné
+$u_n=\o{1}$;;$\l u_n\r$ tend vers $0$
+$u_n=l+\o{1}$;;$\lim{n\to\infty}{u_n}=l$
+Transitivité de $o$ et $O$;;$u_n=\O{v_n}\wedge v_n=\O{w_n}\Rightarrow  u_n=\O{w_n}$\linebreak $u_n=\o{v_n}\wedge v_n=\o{w_n}\Rightarrow  u_n=\o{w_n}$\linebreak $u_n=\o{v_n}\wedge v_n=\O{w_n}\Rightarrow  u_n=\o{w_n}$\linebreak $u_n=\O{v_n}\wedge v_n=\o{w_n}\Rightarrow  u_n=\o{w_n}$
+Sommes de $o$ et $O$;;$u_n=\o{w_n}\wedge v_n=\o{w_n}\Rightarrow u_n+v_n=\o{w_n}$\linebreak $u_n=\O{w_n}\wedge v_n=\O{w_n}\Rightarrow u_n+v_n=\O{w_n}$\linebreak $u_n=\o{w_n}\wedge v_n=\O{w_n}\Rightarrow u_n+v_n=\O{w_n}$\linebreak $u_n=\O{w_n}\wedge v_n=\o{w_n}\Rightarrow u_n+v_n=\O{w_n}$
+Produits de $o$ et $O$;;$u_n=\o{w_n}\wedge v_n=\o{x_n}\Rightarrow u_nv_n=\o{w_nx_n}$\linebreak$u_n=\O{w_n}\wedge v_n=\o{x_n}\Rightarrow u_nv_n=\o{w_nx_n}$\linebreak$u_n=\o{w_n}\wedge v_n=\O{x_n}\Rightarrow u_nv_n=\o{w_nx_n}$\linebreak$u_n=\O{w_n}\wedge v_n=\O{x_n}\Rightarrow u_nv_n=\O{w_nx_n}$\linebreak$w_n\o{x_n}=\o{w_nx_n}$\linebreak$w_n\O{x_n}=\O{w_nx_n}$
+$u_n=\Om{v_n}$\linebreak Définition avec un majorant;;$\exists M\in\mathbb{R}_+,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;\left|u_n\right|\geqslant M\left|v_n\right|$
+$u_n=\Om{v_n}$\linebreak Définition avec les suites;;$\exists\l\mu_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\mu_nv_n$\linebreak Avec $\l\mu_n\r$ minorée
+$u_n=\Th{v_n}$\linebreak Définition avec un majorant;;$\exists \l M,M'\r\in\l\mathbb{R}_+\r^2,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0$\linebreak$M\left|v_n\right|\leqslant\left|u_n\right|\leqslant M'\left|v_n\right|$
+$u_n=\Th{v_n}$\linebreak Définition avec les suites;;$\exists\l\mu_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\mu_nv_n$\linebreak Avec $\l\mu_n\r$ bornée
+$u_n=\Th{v_n}$\linebreak Définition avec $O$ et $\varOmega$;;$u_n=\O{v_n}\wedge u_n=\Th{v_n}$
+$\eq{u_n}{v_n}$;;$u_n=v_n+\o{v_n}$
+Équivalent d'un polynôme $P$ de degré $d=\deg\l P\r$ et de monôme dominant $a_dX^d$;;$\eq{P\l n\r}{a_dn^d}$
+$\eq{u_n}{v_n}$;;$\lim{n\to\infty}{\frac{u_n}{v_n}}=1$
+$\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$;;$\eq{u_nv_n}{u_n'v_n'}$
+$\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$\linebreak Avec $\l v_n\r$ qui ne s'annule pas à partir d'un certain rang;;$\eq{\frac{u_n}{v_n}}{\frac{u_n'}{v_n'}}$
+$\eq{u_n}{u_n'}$\linebreak$a\in\mathbb R$;;$\eq{u_n^a}{v_n^a}$
+$\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$\linebreak$u_n=\o{v_n}$;;$u_n'=\o{v_n'}$
+Équivalents classiques;;\begin{columns}\column{0.5\textwidth}$\eq[0]{\ln{1+x}}{x}$\linebreak$\eq[0]{\e^x-1}{x}$\linebreak Pour $a\neq0$ $\eq[0]{\l1+x\r^a}{1+ax}$\linebreak$\eq[0]{\sin{x}}{x}$\linebreak$\eq[0]{\cos{x}}{1+\frac{x^2}{2}}$\column{0.5\textwidth}$\eq[0]{\tan{x}}{x}$\linebreak$\eq[0]{\sh{x}}{x}$\linebreak$\eq[0]{\ch{x}}{1-\frac{x^2}{2}}$\linebreak$\eq[0]{\th{x}}{x}$\linebreak$\eq[0]{\asin{x}}{x}$\linebreak$\eq[0]{\atan{x}}{x}$\end{columns}
+Formule de Stirling;;$\eq[+\infty]{n!}{\sqrt{2\pi n}\l\frac{n}{\e}\r^n}$
