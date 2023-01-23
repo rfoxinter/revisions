@@ -195,10 +195,10 @@ def main(file_path:str,file:str,n:int,dest:str,_open:bool) -> bool:
             fail = gen_latex(r,t,ttle+'.'+str(j+1),dest) and fail
     if _open:
         if system() == 'Windows':
-            if s('start ' + dest, shell = True) != 0:
+            if s('start ' + dest, shell = True, stdout = PIPE, stderr = PIPE, text=True).stdout != '':
                 print('Impossible d\u2019ouvrir le dossier\n')
         else:
-            if s('open ' + dest, shell = True) != 0:
+            if s('open ' + dest, shell = True, stdout = PIPE, stderr = PIPE, text=True).stdout != '':
                 print('Impossible d\u2019ouvrir le dossier\n')
     return fail
 
