@@ -26,5 +26,5 @@ $\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$;;$\eq{u_nv_n}{u_n'v_n'}$
 $\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$\linebreak Avec $\l v_n\r$ qui ne s'annule pas à partir d'un certain rang;;$\eq{\frac{u_n}{v_n}}{\frac{u_n'}{v_n'}}$
 $\eq{u_n}{u_n'}$\linebreak$a\in\mathbb R$;;$\eq{u_n^a}{v_n^a}$
 $\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$\linebreak$u_n=\o{v_n}$;;$u_n'=\o{v_n'}$
-Équivalents classiques;;\begin{columns}\column{0.5\textwidth}$\eq[0]{\ln{1+x}}{x}$\linebreak$\eq[0]{\e^x-1}{x}$\linebreak Pour $a\neq0$ $\eq[0]{\l1+x\r^a-1}{ax}$\linebreak$\eq[0]{\sin{x}}{x}$\linebreak$\eq[0]{\cos{x}}{1+\frac{x^2}{2}}$\column{0.5\textwidth}$\eq[0]{\tan{x}}{x}$\linebreak$\eq[0]{\sh{x}}{x}$\linebreak$\eq[0]{\ch{x}}{1-\frac{x^2}{2}}$\linebreak$\eq[0]{\th{x}}{x}$\linebreak$\eq[0]{\asin{x}}{x}$\linebreak$\eq[0]{\atan{x}}{x}$\end{columns}
+Équivalents classiques;;\begin{columns}\column{0.5\textwidth}$\eq[0]{\ln{1+x}}{x}$\linebreak$\eq[0]{\e^x-1}{x}$\linebreak Pour $a\neq0$ $\eq[0]{\l1+x\r^a-1}{ax}$\linebreak$\eq[0]{\sin{x}}{x}$\linebreak$\eq[0]{\cos{x}-1}{-\frac{x^2}{2}}$\column{0.5\textwidth}$\eq[0]{\tan{x}}{x}$\linebreak$\eq[0]{\sh{x}}{x}$\linebreak$\eq[0]{\ch{x}-1}{\frac{x^2}{2}}$\linebreak$\eq[0]{\th{x}}{x}$\linebreak$\eq[0]{\asin{x}}{x}$\linebreak$\eq[0]{\atan{x}}{x}$\end{columns}
 Formule de Stirling;;$\eq[+\infty]{n!}{\sqrt{2\pi n}\l\frac{n}{\e}\r^n}$
