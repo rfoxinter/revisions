@@ -1,0 +1,43 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{equivalents}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{complexes,trigo,bigoperators}
+\hypersetup{pdftitle=Analyse -- Développements limités}
+\title{Analyse\\\emph{Développements limités}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Développement limité de $\frac{1}{1-x}$}{1/15}
+\slider{$\eg[x\to0]{\frac{1}{1-x}}{1+\sum{k=0}{n}{x^k}+\o{x^n}}$}{1/15}
+\slideq{Développement limité de $\sh{x}$}{2/15}
+\slider{$\eg[x\to0]{\sh{x}}{\sum{k=0}{n}{\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$}{2/15}
+\slideq{Reste de Taylor à l'ordre $n$}{3/15}
+\slider{$R_n\l x\r=f\l x\r-\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}$}{3/15}
+\slideq{Développement limité au sens fort (définition)\linebreak$P_n\in\mathbb R\left[X\right]$}{4/15}
+\slider{$\eg[x\to x_0]{f\l x\r}{P_n\l x\r+\O{\l x-x_0\r^{n+1}}}$}{4/15}
+\slideq{Développement de Taylor de $f$}{5/15}
+\slider{$P\l x\r=\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}$}{5/15}
+\slideq{Développement limité de $\ln{1+x}$}{6/15}
+\slider{$\eg[x\to0]{\ln{1+x}}{\sum{k=0}{n}{\l-1\r^{k-1}\frac{x^k}{k}}+\o{x^n}}$}{6/15}
+\slideq{Restriction d'un développement limité\linebreak$T_{m,x_0}\l P\r$ est la troncature à l'ordre $m$ au voisinage de $x_0$ du polynôme $P$}{7/15}
+\slider{$\eg[x\to x_0]{f\l x\r}{P\l x\r+\o{\l x-x_0\r^n}}$\linebreak$\Rightarrow\eg[x\to x_0]{f\l x\r}{\l T_{m,x_0}\l P\r\r\l x\r+\o{\l x-x_0\r^m}}$}{7/15}
+\slideq{Développement limité de $\frac{1}{1+x}$}{8/15}
+\slider{$\eg[x\to0]{\frac{1}{1+x}}{1+\sum{k=0}{n}{\l-1\r^kx^k}+\o{x^n}}$}{8/15}
+\slideq{Développement limité de $\ch{x}$}{9/15}
+\slider{$\eg[x\to0]{\ch{x}}{\sum{k=0}{n}{\frac{x^{2k}}{\l2k\r!}}+\o{x^n}}$}{9/15}
+\slideq{Développement limité de $\exp{x}$}{10/15}
+\slider{$\eg[x\to0]{\e^x}{\sum{k=0}{n}{\frac{x^k}{k!}}+\o{x^n}}$}{10/15}
+\slideq{Développement limité de $\l1+x\r^\alpha$}{11/15}
+\slider{$\eg[x\to0]{\l1+x\r^\alpha}{1+\sum{k=0}{n}{\frac{\oldprod\limits_{j=0}^{k-1}{\alpha-j}}{k!}x^k}+\o{x^n}}$}{11/15}
+\slideq{Développement limité de $\cos{x}$}{12/15}
+\slider{$\eg[x\to0]{\cos{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k}}{\l2k\r!}}+\o{x^{2n+1}}}$}{12/15}
+\slideq{Développement limité (définition)\linebreak$P_n\in\mathbb R\left[X\right]$}{13/15}
+\slider{$\eg[x\to x_0]{f\l x\r}{P_n\l x\r+\o{\l x-x_0\r^n}}$}{13/15}
+\slideq{Formule de Taylor-Young à l'ordre $n$ au point $x_0$}{14/15}
+\slider{$\eg[x\to x_0]{f\l x\r}{\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}}$\linebreak${}+\o{\l x-x_0\r^n}$}{14/15}
+\slideq{Développement limité de $\sin{x}$}{15/15}
+\slider{$\eg[x\to0]{\sin{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$}{15/15}
+\end{document}
