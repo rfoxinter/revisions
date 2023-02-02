@@ -175,13 +175,17 @@ def main(file_path:str,file:str,n:int,dest:str,_open:bool) -> bool:
         r = open('input/'+file+'.txt', 'r').read().split('\n')
     except OSError:
         raise RuntimeError('Fichier introuvable')
-    t = r[0]
-    ttle = t.split('--')
-    if len(ttle) == 1:
-        ttle = ttle[0].title()
+    t, ttle = '', ''
+    if '!ttle' in r[0]:
+        ttle, t = r[0].split('!!ttle')
     else:
-        ttle = ttle[1].title()
-    ttle = remove_special_chars(ttle)
+        t = r[0]
+        ttle = t.split('--')
+        if len(ttle) == 1:
+            ttle = ttle[0].title()
+        else:
+            ttle = ttle[1].title()
+        ttle = remove_special_chars(ttle)
     if dest == 'default':
         dest = t.split('--')
         if len(dest) == 1:

@@ -1,4 +1,4 @@
-DL
+DL!!ttleDéveloppements limités et équivalents classiques
 Shuffle questions : True
 Q/R & R/Q : True
 \usepackage{equivalents}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{complexes,trigo,bigoperators}

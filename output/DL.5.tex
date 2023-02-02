@@ -1,0 +1,63 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{equivalents}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{complexes,trigo,bigoperators}
+\hypersetup{pdftitle=Développements limités et équivalents classiques}
+\title{Développements limités et équivalents classiques}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\eg[x\to0]{\frac{1}{\sqrt{1+x}}}{1-\frac{x}{2}+\frac{x^2}{8}-\frac{x^3}{16}+\o{x^3}}$}{1/25}
+\slider{Développement limité de $\frac{1}{\sqrt{1+x}}$}{1/25}
+\slideq{Développement limité de $\frac{1}{1-x}$}{2/25}
+\slider{$\eg[x\to0]{\frac{1}{1-x}}{1+\sum{k=0}{n}{x^k}+\o{x^n}}$}{2/25}
+\slideq{$\eg[x\to0]{\sh{x}}{\sum{k=0}{n}{\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$}{3/25}
+\slider{Développement limité de $\sh{x}$}{3/25}
+\slideq{$\eq[0]{\th{x}}{x}$}{4/25}
+\slider{Équivalent classique de $\th x$}{4/25}
+\slideq{$\eq[0]{\asin{x}}{x}$}{5/25}
+\slider{Équivalent classique de $\asin x$}{5/25}
+\slideq{Développement limité de $\frac{1}{1+x}$}{6/25}
+\slider{$\eg[x\to0]{\frac{1}{1+x}}{1+\sum{k=0}{n}{\l-1\r^kx^k}+\o{x^n}}$}{6/25}
+\slideq{Équivalent classique de $\ch x$}{7/25}
+\slider{$\eq[0]{\ch{x}-1}{\frac{x^2}{2}}$}{7/25}
+\slideq{$\eg[x\to0]{\cos{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k}}{\l2k\r!}}+\o{x^{2n+1}}}$}{8/25}
+\slider{Développement limité de $\cos{x}$}{8/25}
+\slideq{Équivalent classique de $\sh x$}{9/25}
+\slider{$\eq[0]{\sh{x}}{x}$}{9/25}
+\slideq{Équivalent classique de $\tan x$}{10/25}
+\slider{$\eq[0]{\tan{x}}{x}$}{10/25}
+\slideq{Développement limité de $\l1+x\r^\alpha$}{11/25}
+\slider{$\eg[x\to0]{\l1+x\r^\alpha}{1+\sum{k=0}{n}{\frac{\oldprod\limits_{j=0}^{k-1}{\alpha-j}}{k!}x^k}+\o{x^n}}$}{11/25}
+\slideq{$\eg[x\to0]{\tan{x}}{x+\frac{x^3}{3}+\frac{2x^5}{15}+\o{x^6}}$}{12/25}
+\slider{Développement limité de $\tan{x}$}{12/25}
+\slideq{Équivalent classique de $\ln{1+x}$}{13/25}
+\slider{$\eq[0]{\ln{1+x}}{x}$}{13/25}
+\slideq{Développement limité de $\sin{x}$}{14/25}
+\slider{$\eg[x\to0]{\sin{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$}{14/25}
+\slideq{$\eq[0]{\e^x-1}{x}$}{15/25}
+\slider{Équivalent classique de $\e^x-1$}{15/25}
+\slideq{$\eq[0]{\sin{x}}{x}$}{16/25}
+\slider{Équivalent classique de $\sin x$}{16/25}
+\slideq{Développement limité de $\sqrt{1+x}$}{17/25}
+\slider{$\eg[x\to0]{\sqrt{1+x}}{1+\frac{x}{2}-\frac{x^2}{8}+\frac{x^3}{16}+\o{x^3}}$}{17/25}
+\slideq{Développement limité de $\ch{x}$}{18/25}
+\slider{$\eg[x\to0]{\ch{x}}{\sum{k=0}{n}{\frac{x^{2k}}{\l2k\r!}}+\o{x^n}}$}{18/25}
+\slideq{Développement limité de $\atan{x}$}{19/25}
+\slider{$\eg[x\to0]{\atan{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}{2k+1}}+\o{x^{2n+2}}}}$}{19/25}
+\slideq{$\eg[x\to0]{\ln{1+x}}{\sum{k=0}{n}{\l-1\r^{k-1}\frac{x^k}{k}}+\o{x^n}}$}{20/25}
+\slider{Développement limité de $\ln{1+x}$}{20/25}
+\slideq{Équivalent classique de $\l1+x\r^a-1$\linebreak Pour $a\neq0$}{21/25}
+\slider{$\eq[0]{\l1+x\r^a-1}{ax}$}{21/25}
+\slideq{$\eq[0]{\cos{x}-1}{-\frac{x^2}{2}}$}{22/25}
+\slider{Équivalent classique de $\cos x$}{22/25}
+\slideq{Développement limité de $\exp{x}$}{23/25}
+\slider{$\eg[x\to0]{\e^x}{\sum{k=0}{n}{\frac{x^k}{k!}}+\o{x^n}}$}{23/25}
+\slideq{$\eq[0]{\atan{x}}{x}$}{24/25}
+\slider{Équivalent classique de $\atan x$}{24/25}
+\slideq{$\eg[x\to0]{\th{x}}{x-\frac{x^3}{3}+\frac{2x^5}{15}+\o{x^6}}$}{25/25}
+\slider{Développement limité de $\th{x}$}{25/25}
+\end{document}
