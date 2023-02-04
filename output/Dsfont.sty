@@ -2,9 +2,14 @@
 
 \def\ds@whichfont{dsrom}
 \ProcessOptions\relax
+\let\star\relax
+\let\square\relax
 
+\DeclareSymbolFont{mathds}{U}{\ds@whichfont}{m}{n}
 \DeclareMathAlphabet{\mathds}{U}{\ds@whichfont}{m}{n}
 
 \newcommand\1[1]{\mathds{1}_{#1}}
+\DeclareMathSymbol{\square}{\mathbin}{mathds}{"41}
+\DeclareMathSymbol{\star}{\mathbin}{mathds}{"42}
 
 \endinput
