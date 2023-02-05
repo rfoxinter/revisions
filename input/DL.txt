@@ -1,13 +1,13 @@
 DL!!ttleDéveloppements limités et équivalents classiques
 Shuffle questions : True
-Q/R & R/Q : True
+Q/R & R/Q : False
 \usepackage{equivalents}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{complexes,trigo,bigoperators}
 Développement limité de $\exp{x}$;;$\eg[x\to0]{\e^x}{\sum{k=0}{n}{\frac{x^k}{k!}}+\o{x^n}}$
 Développement limité de $\ln{1+x}$;;$\eg[x\to0]{\ln{1+x}}{\sum{k=0}{n}{\l-1\r^{k-1}\frac{x^k}{k}}+\o{x^n}}$
 Développement limité de $\sin{x}$;;$\eg[x\to0]{\sin{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$
 Développement limité de $\cos{x}$;;$\eg[x\to0]{\cos{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k}}{\l2k\r!}}+\o{x^{2n+1}}}$
 Développement limité de $\tan{x}$;;$\eg[x\to0]{\tan{x}}{x+\frac{x^3}{3}+\frac{2x^5}{15}+\o{x^6}}$
-Développement limité de $\atan{x}$;;$\eg[x\to0]{\atan{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}{2k+1}}+\o{x^{2n+2}}}}$
+Développement limité de $\atan{x}$;;$\eg[x\to0]{\atan{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}}{2k+1}+\o{x^{2n+2}}}}$
 Développement limité de $\sh{x}$;;$\eg[x\to0]{\sh{x}}{\sum{k=0}{n}{\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$
 Développement limité de $\ch{x}$;;$\eg[x\to0]{\ch{x}}{\sum{k=0}{n}{\frac{x^{2k}}{\l2k\r!}}+\o{x^n}}$
 Développement limité de $\th{x}$;;$\eg[x\to0]{\th{x}}{x-\frac{x^3}{3}+\frac{2x^5}{15}+\o{x^6}}$
