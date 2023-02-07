@@ -79,7 +79,7 @@ def recompile(dest:str) -> bool:
             fail = True
         if e('../' + ttle + '.pdf'):
             rem('../' + ttle + '.pdf')
-        ext = ['.aux','.fdb_latexmk','.fdb_latexmk','.fls','.log','.nav','.out','.snm','.synctex.gz','.toc']
+        ext = ['.aux','.fdb_latexmk','.fls','.log','.nav','.out','.snm','.synctex.gz','.toc']
         for i in ext:
             try:
                 rem(ttle + i)
@@ -146,7 +146,7 @@ def gen_latex(r:list,t:str,ttle:str,dest:str) -> bool:
         fail = True
     if e('../' + ttle + '.pdf'):
         rem('../' + ttle + '.pdf')
-    ext = ['.aux','.fdb_latexmk','.fdb_latexmk','.fls','.log','.nav','.out','.snm','.synctex.gz','.toc']
+    ext = ['.aux','.fdb_latexmk','.fls','.log','.nav','.out','.snm','.synctex.gz','.toc']
     for i in ext:
         try:
             rem(ttle + i)
