@@ -1,6 +1,6 @@
 from random import shuffle as sh
 from subprocess import run as s
-from subprocess import PIPE
+from subprocess import PIPE,CalledProcessError
 from os import chdir as c
 from os import remove as rem
 from os import rename as ren
@@ -19,10 +19,10 @@ def b(a:str) -> bool:
         return True
     if 'False' in a:
         return False
-    raise ValueError('La valuer n\u2019est pas un bouléen')
+    raise ValueError('The value is not a Boolean')
 
 parser=argparse.ArgumentParser()
-parser.add_argument('file',type=str)
+parser.add_argument('--file',type=str,help='File to compile',default='')
 parser.add_argument('--n',type=int,help='Number of flascards',default=1)
 parser.add_argument('--dest',type=str,help='Destination folder',default='default')
 parser.add_argument('--open',type=b,help='Open destination folder after generating pdfs',default='False')
@@ -72,8 +72,11 @@ def recompile(dest:str) -> bool:
         c(d('output/'))
         ttle = files[i].replace('.tex','')
         dest = output[i]
-        print('Compilation en cours [' + str(i+1) + '/' + str(len(files)) + ']\nCompilation de [' + files[i] + ']\n')
-        out = s('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True).stdout
+        print('Compilation in progress [' + str(i+1) + '/' + str(len(files)) + ']\nCompilation of [' + files[i] + ']\n')
+        try:
+            out = s('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True, check=True).stdout
+        except CalledProcessError:
+            out = s('pdflatex -interaction=nonstopmode -file-line-error '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True, check=True).stdout
         if 'Command for \'pdflatex\' gave return code 1' in out:
             print(out + '\n')
             fail = True
@@ -97,7 +100,7 @@ def recompile(dest:str) -> bool:
             fail = True
     return fail
 
-def gen_latex(r:list,t:str,ttle:str,dest:str) -> bool:
+def gen_latex(r:list,t:str,ttle:str,dest:str,num:str='') -> bool:
     c(d(__file__))
     sh_quest,sh_qr,defs=b(r[1]),b(r[2]),r[3]
     r = [r[i].split(';;') for i in range(4,len(r))]
@@ -139,8 +142,11 @@ def gen_latex(r:list,t:str,ttle:str,dest:str) -> bool:
     f.close()
     c('output/')
     fail = False
-    print('Compilation en cours\n')
-    output = s('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True).stdout
+    print('Compilation in progress' + num + '\n')
+    try:
+        output = s('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True, check=True).stdout
+    except CalledProcessError:
+        output = s('pdflatex -interaction=nonstopmode -file-line-error '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True, check=True).stdout
     if 'Command for \'pdflatex\' gave return code 1' in output:
         print(output + '\n')
         fail = True
@@ -165,16 +171,17 @@ def gen_latex(r:list,t:str,ttle:str,dest:str) -> bool:
     return fail
 
 def main(file_path:str,file:str,n:int,dest:str,_open:bool) -> bool:
+    c(d(__file__))
     fail = False
     if file == '__recompile__':
         return recompile(dest)
     c(dirname(realpath(file_path)))
     if file == '':
-        file = input('Chapitre : ').split(';;')
+        file = input('File to compile : ')
     try:
         r = open('input/'+file+'.txt', 'r').read().split('\n')
     except OSError:
-        raise RuntimeError('Fichier introuvable')
+        raise RuntimeError('File not found')
     t, ttle = '', ''
     if '!ttle' in r[0]:
         ttle, t = r[0].split('!!ttle')
@@ -196,17 +203,17 @@ def main(file_path:str,file:str,n:int,dest:str,_open:bool) -> bool:
         fail = gen_latex(r,t,ttle,dest)
     else:
         for j in range(n):
-            fail = gen_latex(r,t,ttle+'.'+str(j+1),dest) and fail
+            fail = gen_latex(r,t,ttle+'.'+str(j+1),dest,' [' + str (j+1) + '/' + str(n) + ']') and fail
     if _open:
         if system() == 'Windows':
             if s('start ' + dest, shell = True, stdout = PIPE, stderr = PIPE, text=True).stdout != '':
-                print('Impossible d\u2019ouvrir le dossier\n')
+                print('Unable to open the folder\n')
         else:
             if s('open ' + dest, shell = True, stdout = PIPE, stderr = PIPE, text=True).stdout != '':
-                print('Impossible d\u2019ouvrir le dossier\n')
+                print('Unable to open the folder\n')
     return fail
 
 if __name__=='__main__':
     if main(__file__,args.file,args.n,args.dest,args.open):
-        raise RuntimeError('Une erreur est survenue')
-    print('Compilation terminée')
+        raise RuntimeError('An error has occurred')
+    print('Compilation complete')
