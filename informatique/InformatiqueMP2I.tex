@@ -28,14 +28,17 @@
 \renewcommand{\O}[1]{O\left(#1\right)}
 \newcommand{\Th}[1]{\varTheta\left(#1\right)}
 
+\definecolor{kywd}{RGB}{17,96,132}
+\newcommand{\kywd}[1]{\textbf{\texttt{\color{kywd}#1}}}
+
 \setlength{\parindent}{0pt}
 \newtcbtheorem{fun}{Fonction disponible }{breakable,colback=green!5,colframe=green!75!black,fonttitle=\bfseries}{func}
 \newtcbtheorem{imp}{Implémentation }{breakable,colback=orange!5,colframe=orange!50!red,fonttitle=\bfseries}{impl}
 \newtcbtheorem{tp}{Définition d'un type }{breakable,colback=violet!5,colframe=violet!75!black,fonttitle=\bfseries}{type}
 \newtcbtheorem{fnc}{Fonction à implémenter }{breakable,colback=blue!5,colframe=blue!75!white,fonttitle=\bfseries}{func}
 
-\newcommand{\info}[3][]{\begin{tabularx}{\textwidth}{AB}Description&#2\\Complexité&{\ensuremath{#3}}#1\end{tabularx}}
-\newcommand{\fn}[4]{\begin{fun*}{}\info[\\Signature&\mintinline{#1}|#2|]{#3}{#4}\end{fun*}}
+\newcommand{\info}[3][]{\def\argI{}\ifx&#2&\else\def\argI{Description&#2\\}\fi\begin{tabularx}{\textwidth}{AB}\argI Complexité&{\ensuremath{#3}}#1\end{tabularx}}
+\newcommand{\fn}[5]{\begin{fun*}{\mintinline{#1}|#2|}\info[\\Signature&\mintinline{#1}|#3|]{#4}{#5}\end{fun*}}
 
 \hypersetup{hidelinks,linktoc=all}
 \setcounter{secnumdepth}{5}
@@ -74,20 +77,20 @@ int length(int_list* lst) {
     return 1 + length(int_list->next);
 }
 \end{minted}
-\info{Renvoie la longueur d'une liste}{\Th{n}}
+\info{}{\Th{n}}
 \end{fnc*}
 \ocaml
-\subsubsection{\mintinline{ocaml}|List.length|}
-\fn{ocaml}{'a list -> int}{Renvoie la longueur de la liste}{\Th{n}}
+\subsubsection{Le module \kywd{List}}
+\fn{ocaml}{List.length}{'a list -> int}{Renvoie la longueur de la liste}{\Th{n}}
 \begin{imp*}{}
 \begin{minted}{ocaml}
 let rec length = function
     | [] -> 0
     | h::t -> 1 + length t;;
 \end{minted}
+\info{}{\Th{n}}
 \end{imp*}
-\subsubsection{\mintinline{ocaml}|List.iter|}
-\fn{ocaml}{('a -> unit) -> 'a list -> unit}{Applique une fonction à tous les éléments de la liste}{\Th{n}}
+\fn{ocaml}{List.iter}{('a -> unit) -> 'a list -> unit}{Applique une fonction à tous les éléments de la liste}{\Th{n}}
 \begin{imp*}{}
 \begin{minted}{ocaml}
 let rec iter f = function
@@ -95,8 +98,7 @@ let rec iter f = function
     | h::t -> f h; iter f t;;
 \end{minted}
 \end{imp*}
-\subsubsection{\mintinline{ocaml}|List.fold_left|}
-\fn{ocaml}{('a -> 'b -> 'a) -> 'a -> 'b list -> 'a}{Applique une fonction successivement à un élément de la liste et au résultat de l'itération précédente en partant de la fin de la liste}{\Th{n}}
+\fn{ocaml}{List.fold_left}{('a -> 'b -> 'a) -> 'a -> 'b list -> 'a}{Applique une fonction successivement à un élément de la liste et au résultat de l'itération précédente en partant de la fin de la liste}{\Th{n}}
 \begin{imp*}{}
 \begin{minted}{ocaml}
 let rec fold_left f acc = function
