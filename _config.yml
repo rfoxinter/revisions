@@ -6,3 +6,8 @@ defaults:
       path: "*.html"
     values:
       sitemap: false
+  -
+    scope:
+      path: informatique/**
+    values:
+      sitemap: false
