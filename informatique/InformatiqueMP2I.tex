@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt,titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{minted}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{graphics}
+\usemintedstyle{perso}
+\setminted{breaklines,breaksymbolleft=\qquad,breaksymbolright=}
+\renewcommand{\tabularxcolumn}[1]{>{\arraybackslash}m{#1}}
+
+\renewcommand{\c}{\subsection[C]{C\hfill\protect\includegraphics[height=11pt]{C}}}
+\newcommand{\ocaml}{\subsection[OCaml]{OCaml\hfill\protect\includegraphics[height=11pt]{Ocaml}}}
+
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+\newcolumntype{A}{@{}>{\raggedright\arraybackslash\hspace{0pt}}p{.2\hsize}@{}}
+\newcolumntype{B}{@{}>{\raggedright\arraybackslash\hspace{0pt}}p{.8\hsize}X@{}}
+\let\oldleft\left
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
+\let\oldright\right
+\renewcommand{\right}{\aftergroup\egroup\oldright}
+\renewcommand{\O}[1]{O\left(#1\right)}
+\newcommand{\Th}[1]{\varTheta\left(#1\right)}
+
+\setlength{\parindent}{0pt}
+\newtcbtheorem{fun}{Fonction disponible }{breakable,colback=green!5,colframe=green!75!black,fonttitle=\bfseries}{func}
+\newtcbtheorem{imp}{Implémentation }{breakable,colback=orange!5,colframe=orange!50!red,fonttitle=\bfseries}{impl}
+\newtcbtheorem{tp}{Définition d'un type }{breakable,colback=violet!5,colframe=violet!75!black,fonttitle=\bfseries}{type}
+\newtcbtheorem{fnc}{Fonction à implémenter }{breakable,colback=blue!5,colframe=blue!75!white,fonttitle=\bfseries}{func}
+
+\newcommand{\info}[3][]{\begin{tabularx}{\textwidth}{AB}Description&#2\\Complexité&{\ensuremath{#3}}#1\end{tabularx}}
+\newcommand{\fn}[4]{\begin{fun*}{}\info[\\Signature&\mintinline{#1}|#2|]{#3}{#4}\end{fun*}}
+
+\hypersetup{hidelinks,linktoc=all}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\hypersetup{pdftitle=Informatique MP2I}
+\title{Informatique MP2I}
+\author{}
+\date{}
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+\null\newpage
+\tableofcontents
+\null\newpage
+\pagenumbering{arabic}
+\section{Listes chaînées}
+\c
+\subsubsection{Type complexe}
+\begin{tp*}{}
+\begin{minted}{c}
+struct int_list {
+    int value;
+    struct int_list* next;
+};
+typedef struct int_list int_list;
+// Cette définition de listes chaînées s'adapte également pour les autres types
+\end{minted}
+\end{tp*}
+\begin{fnc*}{Longueur d'une liste}
+\begin{minted}{c}
+int length(int_list* lst) {
+    if (lst == NULL) {
+        return 0;
+    }
+    return 1 + length(int_list->next);
+}
+\end{minted}
+\info{Renvoie la longueur d'une liste}{\Th{n}}
+\end{fnc*}
+\ocaml
+\subsubsection{\mintinline{ocaml}|List.length|}
+\fn{ocaml}{'a list -> int}{Renvoie la longueur de la liste}{\Th{n}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let rec length = function
+    | [] -> 0
+    | h::t -> 1 + length t;;
+\end{minted}
+\end{imp*}
+\subsubsection{\mintinline{ocaml}|List.iter|}
+\fn{ocaml}{('a -> unit) -> 'a list -> unit}{Applique une fonction à tous les éléments de la liste}{\Th{n}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let rec iter f = function
+    | [] -> ()
+    | h::t -> f h; iter f t;;
+\end{minted}
+\end{imp*}
+\subsubsection{\mintinline{ocaml}|List.fold_left|}
+\fn{ocaml}{('a -> 'b -> 'a) -> 'a -> 'b list -> 'a}{Applique une fonction successivement à un élément de la liste et au résultat de l'itération précédente en partant de la fin de la liste}{\Th{n}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let rec fold_left f acc = function
+    | [] -> acc
+    | h::t -> fold_left f (f acc h) t;;
+\end{minted}
+\end{imp*}
+
+\end{document}
