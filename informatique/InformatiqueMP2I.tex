@@ -25,10 +25,11 @@
 \renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
 \let\oldright\right
 \renewcommand{\right}{\aftergroup\egroup\oldright}
-\renewcommand{\O}[1]{O\left(#1\right)}
-\newcommand{\Th}[1]{\varTheta\left(#1\right)}
+\renewcommand{\O}[1]{\ensuremath{O\left(#1\right)}}
+\newcommand{\Th}[1]{\ensuremath{\varTheta\left(#1\right)}}
 
 \definecolor{kywd}{RGB}{17,96,132}
+\definecolor{fnc}{RGB}{160,160,0}
 \newcommand{\kywd}[1]{\textbf{\texttt{\color{kywd}#1}}}
 
 \setlength{\parindent}{0pt}
@@ -36,9 +37,10 @@
 \newtcbtheorem{imp}{Implémentation }{breakable,colback=orange!5,colframe=orange!50!red,fonttitle=\bfseries}{impl}
 \newtcbtheorem{tp}{Définition d'un type }{breakable,colback=violet!5,colframe=violet!75!black,fonttitle=\bfseries}{type}
 \newtcbtheorem{fnc}{Fonction à implémenter }{breakable,colback=blue!5,colframe=blue!75!white,fonttitle=\bfseries}{func}
+\newtcbtheorem{df}{Définition }{breakable,colback=teal!5,colframe=teal!75!white,fonttitle=\bfseries}{defi}
 
-\newcommand{\info}[3][]{\def\argI{}\ifx&#2&\else\def\argI{Description&#2\\}\fi\begin{tabularx}{\textwidth}{AB}\argI Complexité&{\ensuremath{#3}}#1\end{tabularx}}
-\newcommand{\fn}[5]{\begin{fun*}{\mintinline{#1}|#2|}\info[\\Signature&\mintinline{#1}|#3|]{#4}{#5}\end{fun*}}
+\newcommand{\info}[4][]{\def\argI{}\ifx&#2&\else\def\argI{Signature&\mintinline{ocaml}|#2|\\}\fi\def\argII{}\ifx&#3&\else\def\argII{Description&#3\\}\fi\begin{tabularx}{\textwidth}{AB}\argI\argII Complexité&#4#1\end{tabularx}}
+\newcommand{\fn}[5]{\begin{fun*}{\mintinline{#1}|#2|}\info{#3}{#4}{#5}\end{fun*}}
 
 \hypersetup{hidelinks,linktoc=all}
 \setcounter{secnumdepth}{5}
@@ -54,21 +56,21 @@
 \null\newpage
 \tableofcontents
 \null\newpage
+\null\newpage
 \pagenumbering{arabic}
 \section{Listes chaînées}
 \c
-\subsubsection{Type complexe}
 \begin{tp*}{}
 \begin{minted}{c}
-struct int_list {
+struct cell {
     int value;
-    struct int_list* next;
+    struct cell* next;
 };
-typedef struct int_list int_list;
-// Cette définition de listes chaînées s'adapte également pour les autres types
+typedef struct cell int_list;
+// Cette définition de listes chaînées ainsi que la majorité des fonctions à suivre s'adapte également pour les autres types
 \end{minted}
 \end{tp*}
-\begin{fnc*}{Longueur d'une liste}
+\begin{fnc*}{longueur d'une liste}
 \begin{minted}{c}
 int length(int_list* lst) {
     if (lst == NULL) {
@@ -77,9 +79,21 @@ int length(int_list* lst) {
     return 1 + length(int_list->next);
 }
 \end{minted}
-\info{}{\Th{n}}
+\info{}{Renvoie la longueur de la liste}{\Th{n}}
+\end{fnc*}
+\begin{fnc*}{ajoute un élément à gauche d'une liste}
+\begin{minted}{c}
+void add_l(int elem, int_list* lst) {
+    list_int* new_p = (list_int*)malloc(n*sizeof(list_int));
+    new_p->next = lst;
+    new_p->value = elem;
+    return new_p
+}
+\end{minted}
+\info{}{Ajoute un élément à gauche de la liste}{\Th{1}}
 \end{fnc*}
 \ocaml
+\subsubsection{Type complexe}
 \subsubsection{Le module \kywd{List}}
 \fn{ocaml}{List.length}{'a list -> int}{Renvoie la longueur de la liste}{\Th{n}}
 \begin{imp*}{}
@@ -88,7 +102,7 @@ let rec length = function
     | [] -> 0
     | h::t -> 1 + length t;;
 \end{minted}
-\info{}{\Th{n}}
+\info{'a list -> int}{Renvoie la longueur de la liste}{\Th{n}}
 \end{imp*}
 \fn{ocaml}{List.iter}{('a -> unit) -> 'a list -> unit}{Applique une fonction à tous les éléments de la liste}{\Th{n}}
 \begin{imp*}{}
@@ -97,6 +111,7 @@ let rec iter f = function
     | [] -> ()
     | h::t -> f h; iter f t;;
 \end{minted}
+\info{('a -> unit) -> 'a list -> unit}{Applique une fonction à tous les éléments de la liste}{\Th{n}}
 \end{imp*}
 \fn{ocaml}{List.fold_left}{('a -> 'b -> 'a) -> 'a -> 'b list -> 'a}{Applique une fonction successivement à un élément de la liste et au résultat de l'itération précédente en partant de la fin de la liste}{\Th{n}}
 \begin{imp*}{}
@@ -105,6 +120,79 @@ let rec fold_left f acc = function
     | [] -> acc
     | h::t -> fold_left f (f acc h) t;;
 \end{minted}
+\info{('a -> 'b -> 'a) -> 'a -> 'b list -> 'a}{Applique une fonction successivement à un élément de la liste et au résultat de l'itération précédente en partant de la fin de la liste}{\Th{n}}
 \end{imp*}
+\section{\emph{Tablistes}}
+\begin{df*}{\emph{Tabliste}}
+Structure de données qui permet de stocker un sous-ensemble $\mathcal{S}$ fini de $\mathbb{N}$, et d'effectuer des opérations sur celle-ci en \Th{1}.
+\end{df*}
+\c
+\begin{tp*}{}
+\begin{minted}{c}
+typedef struct {int* pos; int* values; int size;} Tablist;
+\end{minted}
+La champ \mintinline{c}|values| correspond à une liste des entiers de $\mathcal{S}$ sous la forme d'un tableau de taille $n$ dont les \mintinline{c}|size| premières cases contiennent les éléments présents dans $\mathcal{S}$.\\Le champ \mintinline{c}|pos| est un tableau de taille $n$ tel que: si $\mathtt{\mintinline{c}|k|}\in\mathcal{S}$, \mintinline{c}|pos[k]| contient la position de \mintinline{c}|k| dans la liste \mintinline{c}|values| et une valeur quelconque sinon.
+\end{tp*}
+\begin{fnc*}{création d'une \emph{tabliste}}
+\begin{minted}{c}
+Tablist init(int n) {
+    Tablist t = {
+        .pos = malloc(n*sizeof(int)),
+        .values = malloc(n*sizeof(int)),
+        .size = 0
+    };
+    for (int i = 0; i < n; ++i) {
+        t.pos[i] = 0; // nécessaire à cause des nouvelles normes
+        t.values[i] = 0; // facultatif
+    }
+    return t;
+}
+\end{minted}
+\info{}{Créé une \emph{tabliste} vide}{\Th{n}}
+\end{fnc*}
+\begin{fnc*}{appartenance à une \emph{tabliste}}
+\begin{minted}{c}
+bool mem(Tablist t, int k) { // Θ(1)
+    int p = t.pos[k];
+    return (p > 0 && p <= t.size && t.values[p]==k);
+}
+\end{minted}
+\info{}{Vérifie si un élement \mintinline{c}|k| appartient à une \emph{tabliste}}{\Th{1}}
+\end{fnc*}
+\begin{fnc*}{ajout d'un élément à une \emph{tabliste}}
+\begin{minted}{c}
+void add(Tablist* ptr_t, int k) { // Θ(1)
+    if (!mem(*ptr_t, k)) {
+        ptr_t->values[ptr_t->size] = k;
+        ptr_t->pos[k] = ptr_t->size;
+        ++ptr_t->size;
+    };
+}
+\end{minted}
+\end{fnc*}
+\begin{fnc*}{}
+\begin{minted}{c}[escapeinside=||]
+void t_remove(Tablist* ptr_t, int k) { // Θ(1)
+    if (mem(*ptr_t,k)) {
+        int i = ptr_t->values[ptr_t->size-1];
+        int p = ptr_t->pos[k];
+        ptr_t->values[p] = i;
+        ptr_t->pos[i] = p;
+        --ptr_t->size;
+    }
+}
+\end{minted}
+\end{fnc*}
+\begin{minted}{c}
+void print(Tablist t) { // Θ(p)
+    for (int i = 0; i < t.size-1; ++i) {
+        printf("%d, ",t.values[i]);
+    }
+    printf("%d\n",t.values[t.size-1]);
+}
 
+void vider(Tablist* ptr_t) { // Θ(1)
+    ptr_t->size = 0;
+}
+\end{minted}
 \end{document}
