@@ -1,7 +1,8 @@
 \section{\emph{Tablistes}}
 \begin{df*}{\emph{Tabliste}}
-Structure de données qui permet de stocker un sous-ensemble $\mathcal{N}$ fini de $\mathbb{N}^*$ (de la forme $\left[\!\left[1,n\right]\!\right]$), et d'effectuer des opérations sur celle-ci en \Th{1}.
+Structure de données qui permet de stocker un sous-ensemble $\mathcal{N}$ fini de $\mathbb{N}$ (de la forme $\left[\!\left[1,n-1\right]\!\right]$), et d'effectuer des opérations sur celle-ci en \Th{1}.
 \end{df*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \c
 \begin{tp*}{}
 \begin{minted}{c}
@@ -74,13 +75,13 @@ void print(Tablist t) {
 \end{fnc*}
 \begin{fnc*}{vidage d'une \emph{tabliste}}
 \begin{minted}{c}
-void vider(Tablist* ptr_t) {
+void empty(Tablist* ptr_t) {
     ptr_t->size = 0;
 }
 \end{minted}
 \info{}{Supprime les éléments de la \emph{tabliste} pointée par \mintinline{c}|ptr_t| ($\mathcal{N}=\varnothing$)}{\Th{1}}
 \end{fnc*}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ocaml
 \begin{tp*}{}
 \begin{minted}{ocaml}
@@ -94,65 +95,65 @@ La champ \mintinline{c}|values| correspond à une liste des entiers de $\mathcal
 \end{tp*}
 \begin{fnc*}{création d'une \emph{tabliste}}
 \begin{minted}{ocaml}
-let t = {
+let init n = {
     pos = Array.make n 0;
     values = Array.make n 0;
     size = 0
 };;
 \end{minted}
-\info{}{Créé une \emph{tabliste} vide}{\Th{n}}
+\info{int -> tablist}{Créé une \emph{tabliste} vide}{\Th{n}}
 \end{fnc*}
-% \begin{fnc*}{appartenance à une \emph{tabliste}}
-% \begin{minted}{c}
-% bool mem(Tablist t, int k) {
-%     int p = t.pos[k];
-%     return (p > 0 && p <= t.size && t.values[p]==k);
-% }
-% \end{minted}
-% \info{}{Vérifie si un élement \mintinline{c}|k| appartient à la \emph{tabliste} \mintinline{c}|t|}{\Th{1}}
-% \end{fnc*}
-% \begin{fnc*}{ajout à une \emph{tabliste}}
-% \begin{minted}{c}
-% void add(Tablist* ptr_t, int k) {
-%     if (!mem(*ptr_t, k)) {
-%         ptr_t->values[ptr_t->size] = k;
-%         ptr_t->pos[k] = ptr_t->size;
-%         ++ptr_t->size;
-%     };
-% }
-% \end{minted}
-% \info{}{Ajoute un élément \mintinline{c}|k| à la \emph{tabliste} pointée par \mintinline{c}|ptr_t|}{\Th{1}}
-% \end{fnc*}
-% \begin{fnc*}{supression d'une \emph{tabliste}}
-% \begin{minted}{c}
-% void t_remove(Tablist* ptr_t, int k) {
-%     if (mem(*ptr_t,k)) {
-%         int i = ptr_t->values[ptr_t->size-1];
-%         int p = ptr_t->pos[k];
-%         ptr_t->values[p] = i;
-%         ptr_t->pos[i] = p;
-%         --ptr_t->size;
-%     }
-% }
-% \end{minted}
-% \info{}{Supprime l'élément \mintinline{c}|k| de la \emph{tabliste} pointée par \mintinline{c}|ptr_t|}{\Th{1}}
-% \end{fnc*}
-% \begin{fnc*}{affichage d'une \emph{tabliste}}
-% \begin{minted}{c}
-% void print(Tablist t) {
-%     for (int i = 0; i < t.size-1; ++i) {
-%         printf("%d, ",t.values[i]);
-%     }
-%     printf("%d\n",t.values[t.size-1]);
-% }
-% \end{minted}
-% \info{}{Affiche les éléments de la \emph{tabliste} \mintinline{c}|t| dans laquelle ils ont été ajoutés à celle-ci}{\Th{\left|\mathcal{N}\right|}}
-% \end{fnc*}
-% \begin{fnc*}{vidage d'une \emph{tabliste}}
-% \begin{minted}{c}
-% void vider(Tablist* ptr_t) {
-%     ptr_t->size = 0;
-% }
-% \end{minted}
-% \info{}{Supprime les éléments de la \emph{tabliste} pointée par \mintinline{c}|ptr_t| ($\mathcal{N}=\varnothing$)}{\Th{1}}
-% \end{fnc*}
+\begin{fnc*}{appartenance à une \emph{tabliste}}
+\begin{minted}{ocaml}
+let mem t k =
+    let p = t.pos.(k) in
+    p > 0 && p < t.size && t.values.(p) = k;;
+\end{minted}
+\info{tablist -> int -> bool}{Vérifie si un élement \mintinline{c}|k| appartient à la \emph{tabliste} \mintinline{c}|t|}{\Th{1}}
+\end{fnc*}
+\begin{fnc*}{ajout à une \emph{tabliste}}
+\begin{minted}{ocaml}
+let add t k =
+    if not (mem t k) then
+        begin
+            t.values.(t.size) <- k;
+            t.pos.(k) <- t.size;
+            t.size <- t.size + 1;
+        end;
+    ;;
+\end{minted}
+\info{tablist -> int -> unit}{Ajoute un élément \mintinline{c}|k| à la \emph{tabliste} pointée par \mintinline{c}|ptr_t|}{\Th{1}}
+\end{fnc*}
+\begin{fnc*}{supression d'une \emph{tabliste}}
+\begin{minted}{ocaml}
+let remove t k =
+    if mem t k then
+        begin
+            let i = t.values.(t.size - 1)
+            and p = t.pos.(k) in
+            t.values.(p) <- i;
+            t.pos.(i) <- p;
+            t.size <- t.size - 1;
+        end;
+    ;;
+\end{minted}
+\info{tablist -> int -> unit}{Supprime l'élément \mintinline{c}|k| de la \emph{tabliste} pointée par \mintinline{c}|ptr_t|}{\Th{1}}
+\end{fnc*}
+\begin{fnc*}{affichage d'une \emph{tabliste}}
+\begin{minted}{ocaml}
+let print t =
+    for i = 0 to t.size - 2 do
+        print_int t.values.(i);
+        print_string ", ";
+    done;
+    print_int t.values.(t.size - 1);
+    print_newline ();;
+\end{minted}
+\info{tablist -> unit}{Affiche les éléments de la \emph{tabliste} \mintinline{c}|t| dans laquelle ils ont été ajoutés à celle-ci}{\Th{\left|\mathcal{N}\right|}}
+\end{fnc*}
+\begin{fnc*}{vidage d'une \emph{tabliste}}
+\begin{minted}{ocaml}
+let empty t = t.size <- 0;;
+\end{minted}
+\info{tablist -> unit}{Supprime les éléments de la \emph{tabliste} pointée par \mintinline{c}|ptr_t| ($\mathcal{N}=\varnothing$)}{\Th{1}}
+\end{fnc*}
