@@ -17,7 +17,7 @@ int length(int_list* lst) {
     if (lst == NULL) {
         return 0;
     }
-    return 1 + length(int_list->next);
+    return 1 + length(lst->next);
 }
 \end{minted}
 \info{}{Renvoie la longueur de la liste}{\Th{n}}
