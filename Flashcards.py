@@ -12,6 +12,7 @@ from os.path import exists as e
 from os.path import splitext as sp
 from platform import system
 from re import sub
+from time import sleep as sl
 import argparse
 
 def b(a:str) -> bool:
@@ -205,6 +206,7 @@ def main(file_path:str,file:str,n:int,dest:str,_open:bool) -> bool:
         for j in range(n):
             fail = gen_latex(r,t,ttle+'.'+str(j+1),dest,' [' + str (j+1) + '/' + str(n) + ']') and fail
     if _open:
+        sl(.5)
         if system() == 'Windows':
             if s('start ' + dest, shell = True, stdout = PIPE, stderr = PIPE, text=True).stdout != '':
                 print('Unable to open the folder\n')
@@ -214,6 +216,6 @@ def main(file_path:str,file:str,n:int,dest:str,_open:bool) -> bool:
     return fail
 
 if __name__=='__main__':
-    if main(__file__,args.file,args.n,args.dest,args.open):
+    if main(__file__,sp(args.file)[0],args.n,args.dest,args.open):
         raise RuntimeError('An error has occurred')
     print('Compilation complete')
