@@ -11,11 +11,11 @@ Développement limité de $\atan{x}$;;$\eg[x\to0]{\atan{x}}{\sum{k=0}{n}{\l-1\r^
 Développement limité de $\sh{x}$;;$\eg[x\to0]{\sh{x}}{\sum{k=0}{n}{\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$
 Développement limité de $\ch{x}$;;$\eg[x\to0]{\ch{x}}{\sum{k=0}{n}{\frac{x^{2k}}{\l2k\r!}}+\o{x^n}}$
 Développement limité de $\th{x}$;;$\eg[x\to0]{\th{x}}{x-\frac{x^3}{3}+\frac{2x^5}{15}+\o{x^6}}$
-Développement limité de $\l1+x\r^\alpha$;;$\eg[x\to0]{\l1+x\r^\alpha}{1+\sum{k=0}{n}{\frac{\oldprod\limits_{j=0}^{k-1}{\alpha-j}}{k!}x^k}+\o{x^n}}$
+Développement limité de $\l1+x\r^\alpha$;;$\eg[x\to0]{\l1+x\r^\alpha}{\sum{k=0}{n}{\frac{\oldprod\limits_{j=0}^{k-1}\l\alpha-j\r}{k!}x^k}+\o{x^n}}$
 Développement limité de $\frac{1}{1+x}$;;$\eg[x\to0]{\frac{1}{1+x}}{1+\sum{k=0}{n}{\l-1\r^kx^k}+\o{x^n}}$
 Développement limité de $\frac{1}{1-x}$;;$\eg[x\to0]{\frac{1}{1-x}}{1+\sum{k=0}{n}{x^k}+\o{x^n}}$
 Développement limité de $\sqrt{1+x}$;;$\eg[x\to0]{\sqrt{1+x}}{1+\frac{x}{2}-\frac{x^2}{8}+\frac{x^3}{16}+\o{x^3}}$
-Développement limité de $\frac{1}{\sqrt{1+x}}$;;$\eg[x\to0]{\frac{1}{\sqrt{1+x}}}{1-\frac{x}{2}+\frac{x^2}{8}-\frac{x^3}{16}+\o{x^3}}$
+Développement limité de $\frac{1}{\sqrt{1+x}}$;;$\eg[x\to0]{\frac{1}{\sqrt{1+x}}}{1-\frac{x}{2}+\frac{3x^2}{8}-\frac{5x^3}{16}+\o{x^3}}$
 Équivalent classique de $\ln{1+x}$;;$\eq[0]{\ln{1+x}}{x}$
 Équivalent classique de $\e^x-1$;;$\eq[0]{\e^x-1}{x}$
 Équivalent classique de $\l1+x\r^a-1$\linebreak Pour $a\neq0$;;$\eq[0]{\l1+x\r^a-1}{ax}$
