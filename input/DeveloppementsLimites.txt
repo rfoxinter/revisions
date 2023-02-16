@@ -1,7 +1,7 @@
 Analyse -- Développements limités
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{equivalents}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{complexes,trigo,bigoperators}
+\usepackage{equivalents}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\let\oldexp\exp\renewcommand\exp[2][]{\oldexp^{#1}\l#2\r}\usepackage{complexes,trigo,bigoperators}
 Développement de Taylor de $f$;;$P\l x\r=\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}$
 Reste de Taylor à l'ordre $n$;;$R_n\l x\r=f\l x\r-\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}$
 Formule de Taylor-Young à l'ordre $n$ au point $x_0$;;$\eg[x\to x_0]{f\l x\r}{\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}}$\linebreak${}+\o{\l x-x_0\r^n}$

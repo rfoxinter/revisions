@@ -1,7 +1,7 @@
 Algèbre 1 -- Structures algébriques
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{dsfont}\usepackage{bigoperators}\newcommand{\ssi}{si et seulement si }
+\usepackage{dsfont}\usepackage{bigoperators}\newcommand{\ssi}{si et seulement si }\DeclareMathOperator{\aut}{aut}
 Associativité;;$\star$ est associative \ssi$\forall\l x,y,z\r\in E^3,\;\l x\star y\r\star z=x\star\l y\star z\r$
 Commutativité;;$\star$ est commutative \ssi$\forall\l x,y\r\in E^2,\;x\star y=y\star x$
 Si $\star$ est une loi associative sur $E$ et $\l x_1,\cdots,x_n\r\in E^n$;;$x_1\star\cdots\star x_n$ ne dépend pas du parenthésage admissible
@@ -23,3 +23,8 @@ Soit $E$ et $F$ deux ensembles munis d'une structure de X, munis respectivement 
 Isomorphisme de X;;Homomorphisme de X bijectif
 Endomorphisme de X;;Homomorphisme de X de $E$ dans lui-même (muni des mêmes lois)
 Automorphisme de X;;Endomorphisme et isomorphisme de X
+Réciproque d'isomorphisme;;Si $f\!:\!F\to F$ est un isomorphisme, alors $f^{-1}$ est un isomorphisme
+{};;{}
+Propriétés d'un groupe $\l G,\star\r$;;$G$ admet un uique élément neutre pour $\star$\linebreak$\forall x\in G,\;\exists!x^s\in G$
+Groupe abélien;;La loi $\star$ de $G$ est commutative
+Soient $\l G,\star\r$ et $\l H,\diamond\r$ deux groupes\linebreak$f\!:\!G\to H$ est un homomorphisme de groupe;;$\forall\l x,y\r\in G^2,\;f\l x\star y\r=f\l x\r\diamond f\l y\r$\linebreak Si $\l G,\star\r=\l H,\diamond\r$, f est un endomorphisme\linebreak Un homomorphisme 

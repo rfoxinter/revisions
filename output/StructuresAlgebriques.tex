@@ -10,46 +10,50 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Associativité}{1/21}
-\slider{$\star$ est associative \ssi$\forall\l x,y,z\r\in E^3,\;\l x\star y\r\star z=x\star\l y\star z\r$}{1/21}
-\slideq{Commutativité généralisée}{2/21}
-\slider{Si $\star$ est une loi commutative et associative sur $E$, $\l x_1,\cdots,x_n\r\in E^n$ et $\sigma\in\mathfrak{S}_n$\linebreak$x_1\star\cdots\star x_n=x_{\sigma\l1\r}\star\cdots\star x_{\sigma\l n\r}$}{2/21}
-\slideq{Soit $x\in E$\linebreak$x$ est un élement absorbant pour $\star$}{3/21}
-\slider{$\forall y\in E,\;x\star y=x=y\star x$}{3/21}
-\slideq{Distributivité généralisée\linebreak$\prod{i=1}{n}{\sum{j\in J_i}{}{x_{i,j}}}$}{4/21}
-\slider{$\sum{\l j_1,\cdots,j_n\r\in J_1\times\cdots\times J_n}{}{\prod{i=1}{n}{x_{i,j_i}}}$}{4/21}
-\slideq{Soient $E$ muni d'une structure de X et $F\subset E$\linebreak$F$ est un sous-X de $E$}{5/21}
-\slider{$F$ est stable par les lois de $E$\linebreak$F$ contient les neutres imposés par $E$\linebreak Les lois induites sur $F$ par les lois de $E$ vérifient les axiomes de la structure de X}{5/21}
-\slideq{Groupe}{6/21}
-\slider{Muni d'une loi d'une composition interne, de l'associativité, d'un élément neutre et de symétriques\linebreak Un groupe est un monoïde}{6/21}
-\slideq{Commutativité}{7/21}
-\slider{$\star$ est commutative \ssi$\forall\l x,y\r\in E^2,\;x\star y=y\star x$}{7/21}
-\slideq{Automorphisme de X}{8/21}
-\slider{Endomorphisme et isomorphisme de X}{8/21}
-\slideq{Soit $e\in E$\linebreak$e$ est un élément neutre pour la loi $\star$}{9/21}
-\slider{$\forall x\in E,\;e\star x=x=x\star e$}{9/21}
-\slideq{Magma}{10/21}
-\slider{Muni d'une loi de composition interne}{10/21}
-\slideq{Endomorphisme de X}{11/21}
-\slider{Homomorphisme de X de $E$ dans lui-même (muni des mêmes lois)}{11/21}
-\slideq{Soient $e\in E$ un élément neutre pour la loi $\star$ et $x\in E$\linebreak$y$ est un symétrique de $x$ pour la loi $\star$}{12/21}
-\slider{$x\star y=e=y\star x$}{12/21}
-\slideq{Soient $E$ muni d'une loi $\star$, $F\subset E$\linebreak$F$ est stable par $\star$}{13/21}
-\slider{$\forall\l x,y\r\in F^2,\;x\star y\in F$\linebreak La loi de $E$ se restreint en une loi $\star_F$ appelée loi induite sur $F$ par $\star$}{13/21}
-\slideq{Symétrique de $x\star y$}{14/21}
-\slider{$y^s\star x^s$}{14/21}
-\slideq{Si $\star$ est une loi associative sur $E$ et $\l x_1,\cdots,x_n\r\in E^n$}{15/21}
-\slider{$x_1\star\cdots\star x_n$ ne dépend pas du parenthésage admissible}{15/21}
-\slideq{Associativité externe\linebreak$E$ est muni d'une loi decomposition externe $\diamond$ sur $\mathbb{K}$, muni d'une loi de composition interne $\star$}{16/21}
-\slider{$\forall\l\lambda,\mu,x\r\in\mathbb{K}^2\times E,\;\l\lambda\star\mu\r\diamond x=\lambda\diamond\l\mu\diamond x\r$}{16/21}
-\slideq{Distributivité}{17/21}
-\slider{La loi $\star$ est distributive à gauche sur $\diamond$ \ssi$\forall\l x,y,z\r\in E^3,\;x\star\l y\diamond z\r=\l x\star y\r\diamond\l x\star z\r$\linebreak La loi $\star$ est distributive à droite sur $\diamond$ \ssi$\forall\l x,y,z\r\in E^3,\;\l y\diamond z\r\star x=\l y\star x\r\diamond\l z\star x\r$\linebreak La loi $\star$ est distributive sur $\diamond$ \ssi elle est distributive à gauche et à droite}{17/21}
-\slideq{Élément régulier ou simplifiable}{18/21}
-\slider{$x$ est régulier à gauche \ssi$\forall\l y,z\r\in E^2,\;x\star y=x\star z\Rightarrow y=z$\linebreak$x$ est régulier à droite \ssi$\forall\l y,z\r\in E^2,\;y\star x=z\star x\Rightarrow y=z$\linebreak$x$ est régulier si et seulement s'il est régulier à gauche et à droite\linebreak Si $x$ admet un symétrique, alors il est régulier}{18/21}
-\slideq{Soit $E$ et $F$ deux ensembles munis d'une structure de X, munis respectivement des lois de composition internes $\l\underset{\scriptscriptstyle1}{\star},\cdots,\underset{\scriptscriptstyle n}{\star}\r$ et $\l\underset{\scriptscriptstyle1}{\diamond},\cdots,\underset{\scriptscriptstyle n}{\diamond}\r$, et externes $\l\underset{\scriptscriptstyle1}{\square},\cdots,\underset{\scriptscriptstyle m}{\square}\r$ et $\l\underset{\scriptscriptstyle1}{\triangle},\cdots,\underset{\scriptscriptstyle m}{\triangle}\r$ sur $K_1,\cdots,K_m$\linebreak$f\!:\!E\to F$ est un homomorphisme}{19/21}
-\slider{$f$ respecte les lois interne : soit $k\in\llb1,n\rrb$\linebreak$\forall \l x,y\r\in E^2,\;f\l x\underset{\scriptscriptstyle k}{\star}y\r=f\l x\r\underset{\scriptscriptstyle k}{\diamond}f\l y\r$\linebreak$f$ respecte les lois extenres : soit $k\in\llb1,m\rrb$\linebreak$\forall \l\lambda,x\r\in K_k\times E,\;f\l \lambda\underset{\scriptscriptstyle k}{\square}y\r=\lambda\underset{\scriptscriptstyle k}{\triangle}f\l x\r$\linebreak$f$ est compatible avec le neutre (si le neutre $e_i$ pour la loi $\underset{\scriptscriptstyle i}{\star}$ est imposé dans les axiomes, donc le neutre $e_i'$ existe pour la loi $\underset{\scriptscriptstyle i}{\diamond}$) : $f\l e_i\r=e_i'$}{19/21}
-\slideq{Monoïde}{20/21}
-\slider{Muni d'une loi d'une composition interne, de l'associativité et d'un élément neutre\linebreak Un monoïde est un magma}{20/21}
-\slideq{Isomorphisme de X}{21/21}
-\slider{Homomorphisme de X bijectif}{21/21}
+\slideq{Endomorphisme de X}{1/23}
+\slider{Homomorphisme de X de $E$ dans lui-même (muni des mêmes lois)}{1/23}
+\slideq{Associativité externe\linebreak$E$ est muni d'une loi decomposition externe $\diamond$ sur $\mathbb{K}$, muni d'une loi de composition interne $\star$}{2/23}
+\slider{$\forall\l\lambda,\mu,x\r\in\mathbb{K}^2\times E,\;\l\lambda\star\mu\r\diamond x=\lambda\diamond\l\mu\diamond x\r$}{2/23}
+\slideq{Soient $e\in E$ un élément neutre pour la loi $\star$ et $x\in E$\linebreak$y$ est un symétrique de $x$ pour la loi $\star$}{3/23}
+\slider{$x\star y=e=y\star x$}{3/23}
+\slideq{Élément régulier ou simplifiable}{4/23}
+\slider{$x$ est régulier à gauche \ssi$\forall\l y,z\r\in E^2,\;x\star y=x\star z\Rightarrow y=z$\linebreak$x$ est régulier à droite \ssi$\forall\l y,z\r\in E^2,\;y\star x=z\star x\Rightarrow y=z$\linebreak$x$ est régulier si et seulement s'il est régulier à gauche et à droite\linebreak Si $x$ admet un symétrique, alors il est régulier}{4/23}
+\slideq{Magma}{5/23}
+\slider{Muni d'une loi de composition interne}{5/23}
+\slideq{Associativité}{6/23}
+\slider{$\star$ est associative \ssi$\forall\l x,y,z\r\in E^3,\;\l x\star y\r\star z=x\star\l y\star z\r$}{6/23}
+\slideq{Commutativité}{7/23}
+\slider{$\star$ est commutative \ssi$\forall\l x,y\r\in E^2,\;x\star y=y\star x$}{7/23}
+\slideq{Soient $E$ muni d'une structure de X et $F\subset E$\linebreak$F$ est un sous-X de $E$}{8/23}
+\slider{$F$ est stable par les lois de $E$\linebreak$F$ contient les neutres imposés par $E$\linebreak Les lois induites sur $F$ par les lois de $E$ vérifient les axiomes de la structure de X}{8/23}
+\slideq{Soient $E$ muni d'une loi $\star$, $F\subset E$\linebreak$F$ est stable par $\star$}{9/23}
+\slider{$\forall\l x,y\r\in F^2,\;x\star y\in F$\linebreak La loi de $E$ se restreint en une loi $\star_F$ appelée loi induite sur $F$ par $\star$}{9/23}
+\slideq{Monoïde}{10/23}
+\slider{Muni d'une loi d'une composition interne, de l'associativité et d'un élément neutre\linebreak Un monoïde est un magma}{10/23}
+\slideq{Soit $e\in E$\linebreak$e$ est un élément neutre pour la loi $\star$}{11/23}
+\slider{$\forall x\in E,\;e\star x=x=x\star e$}{11/23}
+\slideq{Distributivité généralisée\linebreak$\prod{i=1}{n}{\sum{j\in J_i}{}{x_{i,j}}}$}{12/23}
+\slider{$\sum{\l j_1,\cdots,j_n\r\in J_1\times\cdots\times J_n}{}{\prod{i=1}{n}{x_{i,j_i}}}$}{12/23}
+\slideq{Isomorphisme de X}{13/23}
+\slider{Homomorphisme de X bijectif}{13/23}
+\slideq{Soit $E$ et $F$ deux ensembles munis d'une structure de X, munis respectivement des lois de composition internes $\l\underset{\scriptscriptstyle1}{\star},\cdots,\underset{\scriptscriptstyle n}{\star}\r$ et $\l\underset{\scriptscriptstyle1}{\diamond},\cdots,\underset{\scriptscriptstyle n}{\diamond}\r$, et externes $\l\underset{\scriptscriptstyle1}{\square},\cdots,\underset{\scriptscriptstyle m}{\square}\r$ et $\l\underset{\scriptscriptstyle1}{\triangle},\cdots,\underset{\scriptscriptstyle m}{\triangle}\r$ sur $K_1,\cdots,K_m$\linebreak$f\!:\!E\to F$ est un homomorphisme}{14/23}
+\slider{$f$ respecte les lois interne : soit $k\in\llb1,n\rrb$\linebreak$\forall \l x,y\r\in E^2,\;f\l x\underset{\scriptscriptstyle k}{\star}y\r=f\l x\r\underset{\scriptscriptstyle k}{\diamond}f\l y\r$\linebreak$f$ respecte les lois extenres : soit $k\in\llb1,m\rrb$\linebreak$\forall \l\lambda,x\r\in K_k\times E,\;f\l \lambda\underset{\scriptscriptstyle k}{\square}y\r=\lambda\underset{\scriptscriptstyle k}{\triangle}f\l x\r$\linebreak$f$ est compatible avec le neutre (si le neutre $e_i$ pour la loi $\underset{\scriptscriptstyle i}{\star}$ est imposé dans les axiomes, donc le neutre $e_i'$ existe pour la loi $\underset{\scriptscriptstyle i}{\diamond}$) : $f\l e_i\r=e_i'$}{14/23}
+\slideq{Symétrique de $x\star y$}{15/23}
+\slider{$y^s\star x^s$}{15/23}
+\slideq{Si $\star$ est une loi associative sur $E$ et $\l x_1,\cdots,x_n\r\in E^n$}{16/23}
+\slider{$x_1\star\cdots\star x_n$ ne dépend pas du parenthésage admissible}{16/23}
+\slideq{Distributivité}{17/23}
+\slider{La loi $\star$ est distributive à gauche sur $\diamond$ \ssi$\forall\l x,y,z\r\in E^3,\;x\star\l y\diamond z\r=\l x\star y\r\diamond\l x\star z\r$\linebreak La loi $\star$ est distributive à droite sur $\diamond$ \ssi$\forall\l x,y,z\r\in E^3,\;\l y\diamond z\r\star x=\l y\star x\r\diamond\l z\star x\r$\linebreak La loi $\star$ est distributive sur $\diamond$ \ssi elle est distributive à gauche et à droite}{17/23}
+\slideq{Automorphisme de X}{18/23}
+\slider{Endomorphisme et isomorphisme de X}{18/23}
+\slideq{Commutativité généralisée}{19/23}
+\slider{Si $\star$ est une loi commutative et associative sur $E$, $\l x_1,\cdots,x_n\r\in E^n$ et $\sigma\in\mathfrak{S}_n$\linebreak$x_1\star\cdots\star x_n=x_{\sigma\l1\r}\star\cdots\star x_{\sigma\l n\r}$}{19/23}
+\slideq{Réciproque d'isomorphisme}{20/23}
+\slider{Si $f\!:\!F\to F$ est un isomorphisme, alors $f^{-1}$ est un isomorphisme}{20/23}
+\slideq{{}}{21/23}
+\slider{{}}{21/23}
+\slideq{Soit $x\in E$\linebreak$x$ est un élement absorbant pour $\star$}{22/23}
+\slider{$\forall y\in E,\;x\star y=x=y\star x$}{22/23}
+\slideq{Groupe}{23/23}
+\slider{Muni d'une loi d'une composition interne, de l'associativité, d'un élément neutre et de symétriques\linebreak Un groupe est un monoïde}{23/23}
 \end{document}
