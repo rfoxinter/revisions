@@ -74,13 +74,15 @@ def recompile(dest:str) -> bool:
         ttle = files[i].replace('.tex','')
         dest = output[i]
         print('Compilation in progress [' + str(i+1) + '/' + str(len(files)) + ']\nCompilation of [' + files[i] + ']\n')
-        try:
-            out = s('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True, check=True).stdout
-        except CalledProcessError:
-            out = s('pdflatex -interaction=nonstopmode -file-line-error '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True, check=True).stdout
+        out = s('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True).stdout
         if 'Command for \'pdflatex\' gave return code 1' in out:
             print(out + '\n')
             fail = True
+        elif not 'Output written on' in out:
+            out = s('pdflatex -interaction=nonstopmode -file-line-error '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True, check=True).stdout
+            if 'Command for \'pdflatex\' gave return code 1' in out:
+                print(out + '\n')
+                fail = True
         if e('../' + ttle + '.pdf'):
             rem('../' + ttle + '.pdf')
         ext = ['.aux','.fdb_latexmk','.fls','.log','.nav','.out','.snm','.synctex.gz','.toc']
@@ -144,13 +146,15 @@ def gen_latex(r:list,t:str,ttle:str,dest:str,num:str='') -> bool:
     c('output/')
     fail = False
     print('Compilation in progress' + num + '\n')
-    try:
-        output = s('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True, check=True).stdout
-    except CalledProcessError:
-        output = s('pdflatex -interaction=nonstopmode -file-line-error '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True, check=True).stdout
+    output = s('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True).stdout
     if 'Command for \'pdflatex\' gave return code 1' in output:
         print(output + '\n')
         fail = True
+    elif not 'Output written on' in output:
+        output = s('pdflatex -interaction=nonstopmode -file-line-error '+ ttle, shell = True, stdout = PIPE, stderr = PIPE, text=True, check=True).stdout
+        if 'Command for \'pdflatex\' gave return code 1' in output:
+            print(output + '\n')
+            fail = True
     if e('../' + ttle + '.pdf'):
         rem('../' + ttle + '.pdf')
     ext = ['.aux','.fdb_latexmk','.fls','.log','.nav','.out','.snm','.synctex.gz','.toc']
