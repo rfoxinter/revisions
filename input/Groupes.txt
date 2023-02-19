@@ -1,0 +1,47 @@
+Algèbre 1 -- Groupes
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{dsfont}\usepackage{bigoperators}\usepackage{structures,arithmetique}
+Groupe;;Muni d'une loi d'une composition interne, de l'associativité, d'un élément neutre et de symétriques
+Isomorphisme de X;;Homomorphisme de X bijectif
+Endomorphisme de X;;Homomorphisme de X de $E$ dans lui-même (muni des mêmes lois)
+Automorphisme de X;;Endomorphisme et isomorphisme de X
+Réciproque d'isomorphisme;;Si $f\!:\!F\to F$ est un isomorphisme, alors $f^{-1}$ est un isomorphisme
+Propriétés d'un groupe $\l G,\star\r$;;$G$ admet un uique élément neutre pour $\star$\linebreak$\forall x\in G,\;\exists!x^s\in G$
+Groupe abélien;;La loi $\star$ de $G$ est commutative
+Soient $\l G,\star\r$ et $\l H,\diamond\r$ deux groupes\linebreak$f\!:\!G\to H$ est un homomorphisme de groupe;;$\forall\l x,y\r\in G^2,\;f\l x\star y\r=f\l x\r\diamond f\l y\r$\linebreak L'ensemble des homomorphisme de $G$ dans $H$ est noté $\hom{G,H}$\linebreak Si $\l G,\star\r=\l H,\diamond\r$, f est un endomorphisme\linebreak L'ensemble des automorphismes de $G$ est noté $\aut{G}$
+Si $G$ et $H$ sont deux groupes et $f\in\hom{G,H}$\linebreak$f\l e_G\r$;;$f\l e_H\r$
+Si $G$ et $H$ sont deux groupes et $f\in\hom{G,H}$\linebreak$f\l x^{-1}\r$;;$f\l x\r^{-1}$
+Si $G$ est un gruope\linebreak Structure de $\l\aut G,\circ\r$;;$\l\aut G,\circ\r$ est un groupe
+Si $\l G,\star\r$ est un groupe\linebreak Un sous-ensemble $H$ de $G$ est appelé sous-groupe de $G$;;$H$ est stable pour la loi de $G$ et la loi induite définit sur $H$ une structure de groupe
+Si $\l G,\star\r$ est un groupe et $H\subset G$\linebreak Caractérisation(s) des sous-groupes;;$H\neq\varnothing$\quad$\forall\l x,y\r\in H,\;x\star y\in H$\quad$\forall x\in H,\;x^s\in H$\linebreak$H\neq\varnothing$\quad$\forall\l x,y\r\in H^2,\;x\star y^s\in H$\linebreak$e_G\in H$\quad$\forall\l x,y\r\in H^2,\;x\star y^s\in H$
+Sous-groupe propre de $G$;;Sous-groupe de $G$ distinct de $G$ et $\left\{e_G\right\}$
+Intersection de sous-groupes\linebreak Si $G$ est un groupe, et $\l H_i\r_{i\in I}$ une famille de sous-groupes de $G$;;$\bigcap{i\in I}{}{H_i}$ est un sous-groupe de $G$
+Image directe et réciproque de sous-groupes par un homomorphisme;;Si $G$ et $H$ sont deux groupes, et $f\in\hom{G,H}$ un morphisme de groupes, $G'$ et $H'$ deux sous-groupes respectivement de $G$ et $H$\linebreak $f\l G'\r$ est un sous-groupe de $H$\linebreak $f^{-1}\l H'\r$ est un sous-groupe de $G$
+Si $G$ et $H$ sont deux groupes et $f\in\hom{g,h}$ un morphisme de groupes\linebreak$\ker{f}$;;$f^{-1}\l e_H\r=\left\{y\in G\;|\;f\l y\r=e_H\right\}$
+Si $\ker{f}=\left\{e_G\right\}$;;$f$ est injectif (la réciproque est vraie)
+Fibres de $f$\linebreak Soit $x\in f^{-1}\l\left\{y\right\}\r$;;$f^{-1}\l\left\{y\right\}\r=x\times\ker{f}$\linebreak${}=\left\{x\times z,\;z\in\ker{f}\right\}=\ker{f}\times x$
+Sous-groupe engendrée par une partie $X$;;$\la X\ra$\linebreak C'est le plus petit sous-groupe contenant $X$
+Description par le haut du sous-groupe engendré par une partie;;Soient $\mathcal{G}$ l'ensemble des sous-groupes de $G$ et $\mathcal{H}=\left\{H\in\mathcal{H}\;|\;X\subset H\right\}$\linebreak$\la X\ra=\bigcap{x\in\mathcal{H}}{}{H}$
+Description par le bas du sous-groupe engendré par une partie;;$\la X\ra=\left\{x_1\cdots x_n,\;\l x_1,\cdots,x_n\r\in X^n\right\}$\linebreak${}\cup\left\{x^{-1},\;x\in X\right\}$\linebreak $e$ correspond au produit vide
+Sous-groupe monogène;;$\la x\ra=\left\{x^n,\;n\in\mathbb{N}\right\}$
+Groupe cyclique;;Groupe monogène fini
+Propriété des groupes monogènes;;Un groupe monogène est abélien
+Les classes à droite modulo $H$;;$\left\{Ha,\;a\in G\right\}$
+Les classes à gauche modulo $H$;;$\left\{aH,\;a\in G\right\}$
+$x$ et $y$ sont dans la même classe à droite modulo $H$;;$x\equiv_dy\,\left[H\right]\Leftrightarrow xy^{-1}\in H$
+$x$ et $y$ sont dans la même classe à gauche modulo $H$;;$x\equiv_gy\,\left[H\right]\Leftrightarrow x^{-1}y\in H$
+Ensemble formé par les classes à gauche et à droite;;$\left\{Ha,\;a\in G\right\}$ est une partition de $G$\linebreak$\left\{aH,\;a\in G\right\}$ est une partition de $G$
+Cardinal des classes de congruence;;$\left|Ha,\;a\in G\right|=\left|Ha,\;a\in G\right|=\left|H\right|$
+Ordre d'un groupe\linebreak Si $G$ est un groupe;;$\ord{G}=\left|G\right|$
+Théorème de Lagrange pour l'ordre des groupes;;Si $G$ est un groupe fini et $H$ un sous-groupe de $G$\linebreak$\left|H\right|\div\left|G\right|$
+Passage au quotient de la loi dans le cas abélien\linebreak Si $G$ est un groupe abélien et $H$ un sous-groupe de $G$;;${\equiv_g}={\equiv_d}$ et on note la relation $\equiv$\linebreak La loi induite corrrespond au produit des classes élément par élément : $\l ab\r H=\l aH\r\cdot\l bH\r=\left\{x\cdot y,\;x\in aH,\;y\in bH\right\}$\linebreak La loi induite sur l'ensemble quotient munit celui-ci d'une structure de groupe abélien
+Si $H$ est un sous-groupe distingué de $G$;;$\forall a\in G,\;aH=Ha\Leftrightarrow\forall a\in G,\;\forall h\in H,\;aha^{-1}\in H$
+Passage au quotient de la loi dans le cas d'un sous-groupe distingué\linebreak Si $G$ est un groupe et $H$ un sous-groupe distingué de $G$;;${\equiv_g}={\equiv_d}$ et on note la relation $\equiv$\linebreak La loi induite corrrespond au produit des classes élément par élément : $\l ab\r H=\l aH\r\cdot\l bH\r=\left\{x\cdot y,\;x\in aH,\;y\in bH\right\}$\linebreak La loi induite sur l'ensemble quotient munit celui-ci d'une structure de groupe
+Si $f\in\hom{G,K}$ et $H$ est un sous-groupe distingué;;$f$ passe au quotient avec $\tilde{f}\!:\!G/H\to K$
+Si $f\in\hom{G,K}$ et $H$ est un sous-groupe distingué et $H\subset\ker{f}$;;$f=\tilde{f}\circ\pi$\linebreak La réciproque est vraie
+Premier théorème d'isomorphisme;;Si $f\in\hom{G,H}$\linebreak$\ker{f}$ est un sous-groupe distingué de $G$, et $f$ passe au quotient, définissant un morphisme de groupes $\tilde{f}\!:\!G/\ker{f}\to H$\linebreak $\tilde{f}$ est injectif et sa corestriction à son image est un isomorphisme
+Ordre d'un élément d'un groupe;;$\ord{x}=\min\left(\left\{n\in\mathbb{N}^*\;|\;x^n=e\right\}\right)$
+Résolution de $x^n=1$;;$\left\{n\in\mathbb{N}^*\;|\;x^n=e\right\}$ est de la forme $a\mathbb{Z}$\linebreak$\ord{x}\in\mathbb{N}\Leftrightarrow a\neq0$ et $\ord{x}=a$
+Description des groupes monogènes\linebreak Si $G=\la x\ra$;;Si $\ord{x}=+\infty$, $G$ est isomorphe à $\mathbb{Z}$\linebreak Si $\ord{x}=n\in\mathbb{N}^*$, $G$ est isomorphe à $\mathbb{Z}/n\mathbb{Z}$
+Théorème de Lagrange pour l'ordre des éléments d'un groupe;;Si $G$ est un groupe fini et $x\in G$\linebreak$\ord{x}\div\left|G\right|$
