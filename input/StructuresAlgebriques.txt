@@ -1,17 +1,17 @@
 Algèbre 1 -- Structures algébriques
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{dsfont}\usepackage{bigoperators}\newcommand{\ssi}{si et seulement si }\DeclareMathOperator{\aut}{aut}
-Associativité;;$\star$ est associative \ssi$\forall\l x,y,z\r\in E^3,\;\l x\star y\r\star z=x\star\l y\star z\r$
-Commutativité;;$\star$ est commutative \ssi$\forall\l x,y\r\in E^2,\;x\star y=y\star x$
+\usepackage{dsfont}\usepackage{bigoperators}\usepackage{structures,arithmetique}
+Associativité;;$\star$ est associative si et seulement si$\forall\l x,y,z\r\in E^3,\;\l x\star y\r\star z=x\star\l y\star z\r$
+Commutativité;;$\star$ est commutative si et seulement si$\forall\l x,y\r\in E^2,\;x\star y=y\star x$
 Si $\star$ est une loi associative sur $E$ et $\l x_1,\cdots,x_n\r\in E^n$;;$x_1\star\cdots\star x_n$ ne dépend pas du parenthésage admissible
 Commutativité généralisée;;Si $\star$ est une loi commutative et associative sur $E$, $\l x_1,\cdots,x_n\r\in E^n$ et $\sigma\in\mathfrak{S}_n$\linebreak$x_1\star\cdots\star x_n=x_{\sigma\l1\r}\star\cdots\star x_{\sigma\l n\r}$
 Soit $e\in E$\linebreak$e$ est un élément neutre pour la loi $\star$;;$\forall x\in E,\;e\star x=x=x\star e$
 Soient $e\in E$ un élément neutre pour la loi $\star$ et $x\in E$\linebreak$y$ est un symétrique de $x$ pour la loi $\star$;;$x\star y=e=y\star x$
 Symétrique de $x\star y$;;$y^s\star x^s$
 Soit $x\in E$\linebreak$x$ est un élement absorbant pour $\star$;;$\forall y\in E,\;x\star y=x=y\star x$
-Élément régulier ou simplifiable;;$x$ est régulier à gauche \ssi$\forall\l y,z\r\in E^2,\;x\star y=x\star z\Rightarrow y=z$\linebreak$x$ est régulier à droite \ssi$\forall\l y,z\r\in E^2,\;y\star x=z\star x\Rightarrow y=z$\linebreak$x$ est régulier si et seulement s'il est régulier à gauche et à droite\linebreak Si $x$ admet un symétrique, alors il est régulier
-Distributivité;;La loi $\star$ est distributive à gauche sur $\diamond$ \ssi$\forall\l x,y,z\r\in E^3,\;x\star\l y\diamond z\r=\l x\star y\r\diamond\l x\star z\r$\linebreak La loi $\star$ est distributive à droite sur $\diamond$ \ssi$\forall\l x,y,z\r\in E^3,\;\l y\diamond z\r\star x=\l y\star x\r\diamond\l z\star x\r$\linebreak La loi $\star$ est distributive sur $\diamond$ \ssi elle est distributive à gauche et à droite
+Élément régulier ou simplifiable;;$x$ est régulier à gauche si et seulement si$\forall\l y,z\r\in E^2,\;x\star y=x\star z\Rightarrow y=z$\linebreak$x$ est régulier à droite si et seulement si$\forall\l y,z\r\in E^2,\;y\star x=z\star x\Rightarrow y=z$\linebreak$x$ est régulier si et seulement s'il est régulier à gauche et à droite\linebreak Si $x$ admet un symétrique, alors il est régulier
+Distributivité;;La loi $\star$ est distributive à gauche sur $\diamond$ si et seulement si$\forall\l x,y,z\r\in E^3,\;x\star\l y\diamond z\r=\l x\star y\r\diamond\l x\star z\r$\linebreak La loi $\star$ est distributive à droite sur $\diamond$ si et seulement si$\forall\l x,y,z\r\in E^3,\;\l y\diamond z\r\star x=\l y\star x\r\diamond\l z\star x\r$\linebreak La loi $\star$ est distributive sur $\diamond$ si et seulement si elle est distributive à gauche et à droite
 Distributivité généralisée\linebreak$\prod{i=1}{n}{\sum{j\in J_i}{}{x_{i,j}}}$;;$\sum{\l j_1,\cdots,j_n\r\in J_1\times\cdots\times J_n}{}{\prod{i=1}{n}{x_{i,j_i}}}$
 Associativité externe\linebreak$E$ est muni d'une loi decomposition externe $\diamond$ sur $\mathbb{K}$, muni d'une loi de composition interne $\star$;;$\forall\l\lambda,\mu,x\r\in\mathbb{K}^2\times E,\;\l\lambda\star\mu\r\diamond x=\lambda\diamond\l\mu\diamond x\r$
 Soient $E$ muni d'une loi $\star$, $F\subset E$\linebreak$F$ est stable par $\star$;;$\forall\l x,y\r\in F^2,\;x\star y\in F$\linebreak La loi de $E$ se restreint en une loi $\star_F$ appelée loi induite sur $F$ par $\star$
@@ -24,7 +24,41 @@ Isomorphisme de X;;Homomorphisme de X bijectif
 Endomorphisme de X;;Homomorphisme de X de $E$ dans lui-même (muni des mêmes lois)
 Automorphisme de X;;Endomorphisme et isomorphisme de X
 Réciproque d'isomorphisme;;Si $f\!:\!F\to F$ est un isomorphisme, alors $f^{-1}$ est un isomorphisme
-{};;{}
 Propriétés d'un groupe $\l G,\star\r$;;$G$ admet un uique élément neutre pour $\star$\linebreak$\forall x\in G,\;\exists!x^s\in G$
 Groupe abélien;;La loi $\star$ de $G$ est commutative
-Soient $\l G,\star\r$ et $\l H,\diamond\r$ deux groupes\linebreak$f\!:\!G\to H$ est un homomorphisme de groupe;;$\forall\l x,y\r\in G^2,\;f\l x\star y\r=f\l x\r\diamond f\l y\r$\linebreak Si $\l G,\star\r=\l H,\diamond\r$, f est un endomorphisme\linebreak Un homomorphisme 
+Soient $\l G,\star\r$ et $\l H,\diamond\r$ deux groupes\linebreak$f\!:\!G\to H$ est un homomorphisme de groupe;;$\forall\l x,y\r\in G^2,\;f\l x\star y\r=f\l x\r\diamond f\l y\r$\linebreak L'ensemble des homomorphisme de $G$ dans $H$ est noté $\hom{G,H}$\linebreak Si $\l G,\star\r=\l H,\diamond\r$, f est un endomorphisme\linebreak L'ensemble des automorphismes de $G$ est noté $\aut{G}$
+Si $G$ et $H$ sont deux groupes et $f\in\hom{G,H}$\linebreak$f\l e_G\r$;;$f\l e_H\r$
+Si $G$ et $H$ sont deux groupes et $f\in\hom{G,H}$\linebreak$f\l x^{-1}\r$;;$f\l x\r^{-1}$
+Si $G$ est un gruope\linebreak Structure de $\l\aut G,\circ\r$;;$\l\aut G,\circ\r$ est un groupe
+Si $\l G,\star\r$ est un groupe\linebreak Un sous-ensemble $H$ de $G$ est appelé sous-groupe de $G$;;$H$ est stable pour la loi de $G$ et la loi induite définit sur $H$ une structure de groupe
+Si $\l G,\star\r$ est un groupe et $H\subset G$\linebreak Caractérisation(s) des sous-groupes;;$H\neq\varnothing$\quad$\forall\l x,y\r\in H,\;x\star y\in H$\quad$\forall x\in H,\;x^s\in H$\linebreak$H\neq\varnothing$\quad$\forall\l x,y\r\in H^2,\;x\star y^s\in H$\linebreak$e_G\in H$\quad$\forall\l x,y\r\in H^2,\;x\star y^s\in H$
+Sous-groupe propre de $G$;;Sous-groupe de $G$ distinct de $G$ et $\left\{e_G\right\}$
+Intersection de sous-groupes\linebreak Si $G$ est un groupe, et $\l H_i\r_{i\in I}$ une famille de sous-groupes de $G$;;$\bigcap{i\in I}{}{H_i}$ est un sous-groupe de $G$
+Image directe et réciproque de sous-groupes par un homomorphisme;;Si $G$ et $H$ sont deux groupes, et $f\in\hom{G,H}$ un morphisme de groupes, $G'$ et $H'$ deux sous-groupes respectivement de $G$ et $H$\linebreak $f\l G'\r$ est un sous-groupe de $H$\linebreak $f^{-1}\l H'\r$ est un sous-groupe de $G$
+Si $G$ et $H$ sont deux groupes et $f\in\hom{g,h}$ un morphisme de groupes\linebreak$\ker{f}$;;$f^{-1}\l e_H\r=\left\{y\in G\;|\;f\l y\r=e_H\right\}$
+Si $\ker{f}=\left\{e_G\right\}$;;$f$ est injectif (la réciproque est vraie)
+Fibres de $f$\linebreak Soit $x\in f^{-1}\l\left\{y\right\}\r$;;$f^{-1}\l\left\{y\right\}\r=x\times\ker{f}$\linebreak${}=\left\{x\times z,\;z\in\ker{f}\right\}=\ker{f}\times x$
+Sous-groupe engendrée par une partie $X$;;$\la X\ra$\linebreak C'est le plus petit sous-groupe contenant $X$
+Description par le haut du sous-groupe engendré par une partie;;Soient $\mathcal{G}$ l'ensemble des sous-groupes de $G$ et $\mathcal{H}=\left\{H\in\mathcal{H}\;|\;X\subset H\right\}$\linebreak$\la X\ra=\bigcap{x\in\mathcal{H}}{}{H}$
+Description par le bas du sous-groupe engendré par une partie;;$\la X\ra=\left\{x_1\cdots x_n,\;\l x_1,\cdots,x_n\r\in X^n\right\}$\linebreak${}\cup\left\{x^{-1},\;x\in X\right\}$\linebreak $e$ correspond au produit vide
+Sous-groupe monogène;;$\la x\ra=\left\{x^n,\;n\in\mathbb{N}\right\}$
+Groupe cyclique;;Groupe monogène fini
+Propriété des groupes monogènes;;Un groupe monogène est abélien
+Les classes à droite modulo $H$;;$\left\{Ha,\;a\in G\right\}$
+Les classes à gauche modulo $H$;;$\left\{aH,\;a\in G\right\}$
+$x$ et $y$ sont dans la même classe à droite modulo $H$;;$x\equiv_dy\,\left[H\right]\Leftrightarrow xy^{-1}\in H$
+$x$ et $y$ sont dans la même classe à gauche modulo $H$;;$x\equiv_gy\,\left[H\right]\Leftrightarrow x^{-1}y\in H$
+Ensemble formé par les classes à gauche et à droite;;$\left\{Ha,\;a\in G\right\}$ est une partition de $G$\linebreak$\left\{aH,\;a\in G\right\}$ est une partition de $G$
+Cardinal des classes de congruence;;$\left|Ha,\;a\in G\right|=\left|Ha,\;a\in G\right|=\left|H\right|$
+Ordre d'un groupe\linebreak Si $G$ est un groupe;;$\ord{G}=\left|G\right|$
+Théorème de Lagrange pour l'ordre des groupes;;Si $G$ est un groupe fini et $H$ un sous-groupe de $G$\linebreak$\left|H\right|\div\left|G\right|$
+Passage au quotient de la loi dans le cas abélien\linebreak Si $G$ est un groupe abélien et $H$ un sous-groupe de $G$;;${\equiv_g}={\equiv_d}$ et on note la relation $\equiv$\linebreak La loi induite corrrespond au produit des classes élément par élément : $\l ab\r H=\l aH\r\cdot\l bH\r=\left\{x\cdot y,\;x\in aH,\;y\in bH\right\}$\linebreak La loi induite sur l'ensemble quotient munit celui-ci d'une structure de groupe abélien
+Si $H$ est un sous-groupe distingué de $G$;;$\forall a\in G,\;aH=Ha\Leftrightarrow\forall a\in G,\;\forall h\in H,\;aha^{-1}\in H$
+Passage au quotient de la loi dans le cas d'un sous-groupe distingué\linebreak Si $G$ est un groupe et $H$ un sous-groupe distingué de $G$;;${\equiv_g}={\equiv_d}$ et on note la relation $\equiv$\linebreak La loi induite corrrespond au produit des classes élément par élément : $\l ab\r H=\l aH\r\cdot\l bH\r=\left\{x\cdot y,\;x\in aH,\;y\in bH\right\}$\linebreak La loi induite sur l'ensemble quotient munit celui-ci d'une structure de groupe
+Si $f\in\hom{G,K}$ et $H$ est un sous-groupe distingué;;$f$ passe au quotient avec $\tilde{f}\!:\!G/H\to K$
+Si $f\in\hom{G,K}$ et $H$ est un sous-groupe distingué et $H\subset\ker{f}$;;$f=\tilde{f}\circ\pi$\linebreak La réciproque est vraie
+Premier théorème d'isomorphisme;;Si $f\in\hom{G,H}$\linebreak$\ker{f}$ est un sous-groupe distingué de $G$, et $f$ passe au quotient, définissant un morphisme de groupes $\tilde{f}\!:\!G/\ker{f}\to H$\linebreak $\tilde{f}$ est injectif et sa corestriction à son image est un isomorphisme
+Ordre d'un élément d'un groupe;;$\ord{x}=\min\left(\left\{n\in\mathbb{N}^*\;|\;x^n=e\right\}\right)$
+Résolution de $x^n=1$;;$\left\{n\in\mathbb{N}^*\;|\;x^n=e\right\}$ est de la forme $a\mathbb{Z}$\linebreak$\ord{x}\in\mathbb{N}\Leftrightarrow a\neq0$ et $\ord{x}=a$
+Description des groupes monogènes\linebreak Si $G=\la x\ra$;;Si $\ord{x}=+\infty$, $G$ est isomorphe à $\mathbb{Z}$\linebreak Si $\ord{x}=n\in\mathbb{N}^*$, $G$ est isomorphe à $\mathbb{Z}/n\mathbb{Z}$
+Théorème de Lagrange pour l'ordre des éléments d'un groupe;;Si $G$ est un groupe fini et $x\in G$\linebreak$\ord{x}\div\left|G\right|$
