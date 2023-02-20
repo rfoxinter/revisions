@@ -1,8 +1,8 @@
 \ProvidesPackage{structures}
 
-\let\oldhom\hom
+\DeclareMathOperator{\oldhom}{Hom}
 \renewcommand{\hom}[1]{\oldhom\l#1\r}
-\DeclareMathOperator{\oldaut}{aut}
+\DeclareMathOperator{\oldaut}{Aut}
 \newcommand{\aut}[1]{\oldaut\l#1\r}
 \let\oldker\ker
 \renewcommand{\ker}[1]{\oldker\l#1\r}
