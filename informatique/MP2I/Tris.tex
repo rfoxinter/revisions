@@ -1,0 +1,41 @@
+\section{Tris}
+\begin{df*}{Tri en place}
+Tri qui déplace les éléments à l'intérieur du tableau au lieu d'en créer un nouveau.
+\end{df*}
+\begin{df*}{Tri stable}
+Tri qui préserve l'ordre des éléments (si \mintinline{c}|a| apparaît avant \mintinline{c}|b| dans le tableau initial, alors \mintinline{c}|a| apparaît avant \mintinline{c}|b| dans le tableau trié).
+\end{df*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Différents algorithmes de tris}
+\begin{df*}{Tri par sélection}
+Tri qui sélectionne le plus petit élement du tableau non trié et l'insère au début de ce dernier.
+\end{df*}
+\c
+\begin{imp*}{échange de deux élements dans un tableau}
+\begin{minted}{c}
+void array_swap(int* tab, int i, int j){
+    int tmp = tab[i];
+    tab[i] = tab[j];
+    tab[j] = tmp;
+}
+\end{minted}
+\info{}{Échange les éléments \mintinline{c}|i| et \mintinline{c}|j| du tableau \mintinline{c}|tab|}{\Th{1}}
+\end{imp*}
+\begin{imp*}{tri sélection}
+\begin{minted}{c}
+void tri_selection(int* tab, int n) {
+    for (int i = 0; i < n-1; ++i) {
+        int min = tab[i];
+        int idx_min = i;
+        for(int j = i+1; j < n; ++j) {
+            if(tab[j] < min) {
+                min = tab[j];
+                idx_min = j;
+            }
+        }
+        array_swap(tab, i, idx_min);
+    }
+}
+\end{minted}
+\info{}{Tri le tableau \mintinline{c}|tab| avec un tri sélection}{\Th{n^2}}
+\end{imp*}

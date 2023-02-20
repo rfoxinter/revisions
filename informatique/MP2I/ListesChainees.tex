@@ -1,4 +1,5 @@
 \section{Listes chaînées}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \c
 \begin{tp*}{}
 \begin{minted}{c}
@@ -11,6 +12,23 @@ typedef struct cell int_list;
     fonctions à suivre s'adapte également pour les autres types */
 \end{minted}
 \end{tp*}
+\begin{fnc*}{premier élément d'une liste}
+\begin{minted}{c}
+int fst(int_list* lst) {
+    return int_list->value;
+}
+\end{minted}
+\info{}{Retourne le premier élément d'une liste pointée par \mintinline{c}|lst|}{\Th{1}}
+\end{fnc*}
+\begin{fnc*}{dernier élément d'une liste}
+\begin{minted}{c}
+int last(int_list* lst) {
+    while (lst->nest != NULL) {lst = lst->next;}
+    return int_list->value;
+}
+\end{minted}
+\info{}{Retourne le dernier élément d'une liste pointée par \mintinline{c}|lst|}{\Th{n}}
+\end{fnc*}
 \begin{fnc*}{longueur d'une liste}
 \begin{minted}{c}
 int length(int_list* lst) {
@@ -22,17 +40,67 @@ int length(int_list* lst) {
 \end{minted}
 \info{}{Renvoie la longueur de la liste}{\Th{n}}
 \end{fnc*}
-\begin{fnc*}{ajoute un élément à gauche d'une liste}
+\begin{fnc*}{ajout d'un élément à gauche d'une liste}
 \begin{minted}{c}
 void add_l(int elem, int_list* lst) {
-    list_int* new_p = (list_int*)malloc(n*sizeof(list_int));
+    int_list* new_p = (int_list*)malloc(sizeof(int_list));
     new_p->next = lst;
     new_p->value = elem;
-    return new_p
 }
 \end{minted}
-\info{}{Ajoute un élément à gauche de la liste}{\Th{1}}
+\info{}{Ajoute un élément \mintinline{c}|elem| à gauche de la liste pointée par \mintinline{c}|lst|}{\Th{1}}
 \end{fnc*}
+\begin{fnc*}{ajout d'un élément à droite d'une liste}
+\begin{minted}{c}
+void add_r(int elem, int_list* lst) {
+    while (lst->next != NULL) {lst = lst->next;}
+    int_list* new_p = (int_list*)malloc(sizeof(int_list));
+    new_p->next = NULL;
+    new_p->value = elem;
+    lst->next = new_p;
+}
+\end{minted}
+\info{}{Ajoute un élément \mintinline{c}|elem| à droite de la liste pointée par \mintinline{c}|lst|}{\Th{n}}
+\end{fnc*}
+\begin{fnc*}{appartenance à une liste}
+\begin{minted}{c}
+bool mem(int elem, int_list* lst) {
+    if (lst->value == elem) {return true;}
+    if (lst->next != NULL) {
+        return mem(elem, lst->next);
+    }
+}
+\end{minted}
+\info{}{Vérifie si un élément \mintinline{c}|elem| est dans la liste pointée par \mintinline{c}|lst|}{\O{n}}
+\end{fnc*}
+\begin{fnc*}{retournement d'une liste}
+\begin{minted}{c}
+voir rev(int_list* lst) {
+    int_list* rev_p = NULL;
+    for (int_list* ptr = p_liste; ptr != NULL; ptr = ptr->next) {
+        liste_int* tmp = (int_list*)malloc(sizeof(int_list));
+        tmp->value = ptr->valeur;
+        tmp->next = rev_p;
+        rev_p = tmp;
+    }
+    return rev_p;
+}
+\end{minted}
+\info{}{Retourne les éléments de la liste pointée par \mintinline{c}|lst|}{\Th{n}}
+\end{fnc*}
+\begin{fnc*}{suppression d'une liste}
+\begin{minted}{c}
+void del(int_list* lst){
+    while (lst->next != NULL) {
+        list_int* tmp = lst;
+        lst = tmp->next;
+        free(tmp);
+    }
+}
+\end{minted}
+\info{}{Supprime une liste pointée par \mintinline{c}|lst|}{\Th{n}}
+\end{fnc*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ocaml
 \subsubsection{Type complexe}
 \subsubsection{Le module \kywd{List}}
