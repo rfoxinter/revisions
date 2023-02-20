@@ -20,3 +20,10 @@
 \newcommand{\slider}[2]{\begin{frame}[c]{\textcolor{cyan}{\Large\sffamily\bfseries Réponse #2}}\begin{center}\Large#1\end{center}\end{frame}}
 \let\oldfrac\frac
 \let\frac\dfrac
+\mathcode`l="8000
+\begingroup
+\makeatletter
+\lccode`\~=`\l
+\DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
+\lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
+\endgroup
