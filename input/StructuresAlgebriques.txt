@@ -39,7 +39,7 @@ Si $G$ et $H$ sont deux groupes et $f\in\hom{g,h}$ un morphisme de groupes\lineb
 Si $\ker{f}=\left\{e_G\right\}$;;$f$ est injectif (la réciproque est vraie)
 Fibres de $f$\linebreak Soit $x\in f^{-1}\l\left\{y\right\}\r$;;$f^{-1}\l\left\{y\right\}\r=x\times\ker{f}$\linebreak${}=\left\{x\times z,\;z\in\ker{f}\right\}=\ker{f}\times x$
 Sous-groupe engendrée par une partie $X$;;$\la X\ra$\linebreak C'est le plus petit sous-groupe contenant $X$
-Description par le haut du sous-groupe engendré par une partie;;Soient $\mathcal{G}$ l'ensemble des sous-groupes de $G$ et $\mathcal{H}=\left\{H\in\mathcal{H}\;|\;X\subset H\right\}$\linebreak$\la X\ra=\bigcap{x\in\mathcal{H}}{}{H}$
+Description par le haut du sous-groupe engendré par une partie;;Soient $\mathcal{G}$ l'ensemble des sous-groupes de $G$ et $\mathcal{H}=\left\{H\in\mathcal{G}\;|\;X\subset H\right\}$\linebreak$\la X\ra=\bigcap{H\in\mathcal{H}}{}{H}$
 Description par le bas du sous-groupe engendré par une partie;;$\la X\ra=\left\{x_1\cdots x_n,\;\l x_1,\cdots,x_n\r\in X^n\right\}$\linebreak${}\cup\left\{x^{-1},\;x\in X\right\}$\linebreak $e$ correspond au produit vide
 Sous-groupe monogène;;$\la x\ra=\left\{x^n,\;n\in\mathbb{N}\right\}$
 Groupe cyclique;;Groupe monogène fini
@@ -52,13 +52,13 @@ Ensemble formé par les classes à gauche et à droite;;$\left\{Ha,\;a\in G\righ
 Cardinal des classes de congruence;;$\left|Ha,\;a\in G\right|=\left|Ha,\;a\in G\right|=\left|H\right|$
 Ordre d'un groupe\linebreak Si $G$ est un groupe;;$\ord{G}=\left|G\right|$
 Théorème de Lagrange pour l'ordre des groupes;;Si $G$ est un groupe fini et $H$ un sous-groupe de $G$\linebreak$\left|H\right|\div\left|G\right|$
-Passage au quotient de la loi dans le cas abélien\linebreak Si $G$ est un groupe abélien et $H$ un sous-groupe de $G$;;${\equiv_g}={\equiv_d}$ et on note la relation $\equiv$\linebreak La loi induite corrrespond au produit des classes élément par élément : $\l ab\r H=\l aH\r\cdot\l bH\r=\left\{x\cdot y,\;x\in aH,\;y\in bH\right\}$\linebreak La loi induite sur l'ensemble quotient munit celui-ci d'une structure de groupe abélien
-Si $H$ est un sous-groupe distingué de $G$;;$\forall a\in G,\;aH=Ha\Leftrightarrow\forall a\in G,\;\forall h\in H,\;aha^{-1}\in H$
-Passage au quotient de la loi dans le cas d'un sous-groupe distingué\linebreak Si $G$ est un groupe et $H$ un sous-groupe distingué de $G$;;${\equiv_g}={\equiv_d}$ et on note la relation $\equiv$\linebreak La loi induite corrrespond au produit des classes élément par élément : $\l ab\r H=\l aH\r\cdot\l bH\r=\left\{x\cdot y,\;x\in aH,\;y\in bH\right\}$\linebreak La loi induite sur l'ensemble quotient munit celui-ci d'une structure de groupe
+Passage au quotient de la loi dans le cas abélien\linebreak Si $G$ est un groupe abélien et $H$ un sous-groupe de $G$;;${\equiv_g}={\equiv_d}$ et on note la relation $\equiv$\linebreak La loi induite corrrespond au produit des classes élément par élément\linebreak$\l ab\r H=\l aH\r\cdot\l bH\r$\linebreak${}=\left\{x\cdot y,\;x\in aH,\;y\in bH\right\}$\linebreak La loi induite sur l'ensemble quotient munit celui-ci d'une structure de groupe abélien
+Si $H$ est un sous-groupe distingué de $G$;;$\forall a\in G,\;aH=Ha$\linebreak${}\Leftrightarrow\forall a\in G,\;\forall h\in H,\;aha^{-1}\in H$
+Passage au quotient de la loi dans le cas d'un sous-groupe distingué\linebreak Si $G$ est un groupe et $H$ un sous-groupe distingué de $G$;;${\equiv_g}={\equiv_d}$ et on note la relation $\equiv$\linebreak La loi induite corrrespond au produit des classes élément par élément\linebreak$\l ab\r H=\l aH\r\cdot\l bH\r$\linebreak${}=\left\{x\cdot y,\;x\in aH,\;y\in bH\right\}$\linebreak La loi induite sur l'ensemble quotient munit celui-ci d'une structure de groupe
 Si $f\in\hom{G,K}$ et $H$ est un sous-groupe distingué;;$f$ passe au quotient avec $\tilde{f}\!:\!G/H\to K$
 Si $f\in\hom{G,K}$ et $H$ est un sous-groupe distingué et $H\subset\ker{f}$;;$f=\tilde{f}\circ\pi$\linebreak La réciproque est vraie
 Premier théorème d'isomorphisme;;Si $f\in\hom{G,H}$\linebreak$\ker{f}$ est un sous-groupe distingué de $G$, et $f$ passe au quotient, définissant un morphisme de groupes $\tilde{f}\!:\!G/\ker{f}\to H$\linebreak $\tilde{f}$ est injectif et sa corestriction à son image est un isomorphisme
 Ordre d'un élément d'un groupe;;$\ord{x}=\min\left(\left\{n\in\mathbb{N}^*\;|\;x^n=e\right\}\right)$
-Résolution de $x^n=1$;;$\left\{n\in\mathbb{N}^*\;|\;x^n=e\right\}$ est de la forme $a\mathbb{Z}$\linebreak$\ord{x}\in\mathbb{N}\Leftrightarrow a\neq0$ et $\ord{x}=a$
+Résolution de $x^n=e$;;$\left\{n\in\mathbb{N}^*\;|\;x^n=e\right\}$ est de la forme $a\mathbb{Z}$\linebreak$x$ est d'ordre fini si et seulement si $a\neq0$ (on a donc $\ord{x}=a$)
 Description des groupes monogènes\linebreak Si $G=\la x\ra$;;Si $\ord{x}=+\infty$, $G$ est isomorphe à $\mathbb{Z}$\linebreak Si $\ord{x}=n\in\mathbb{N}^*$, $G$ est isomorphe à $\mathbb{Z}/n\mathbb{Z}$
 Théorème de Lagrange pour l'ordre des éléments d'un groupe;;Si $G$ est un groupe fini et $x\in G$\linebreak$\ord{x}\div\left|G\right|$
