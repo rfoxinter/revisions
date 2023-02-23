@@ -2,18 +2,18 @@ Algèbre 1 -- Groupes
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{dsfont}\usepackage{bigoperators}\usepackage{structures,arithmetique}
-Groupe;;Muni d'une loi d'une composition interne, de l'associativité, d'un élément neutre et de symétriques
-Isomorphisme de X;;Homomorphisme de X bijectif
-Endomorphisme de X;;Homomorphisme de X de $E$ dans lui-même (muni des mêmes lois)
-Automorphisme de X;;Endomorphisme et isomorphisme de X
+Groupe;;Muni d'une loi de composition interne, de l'associativité, d'un élément neutre et de symétriques
+Isomorphisme de groupes;;Homomorphisme de groupes bijectif
+Endomorphisme de groupes;;Homomorphisme de groupes de $E$ dans lui-même (muni des mêmes lois)
+Automorphisme de groupes;;Endomorphisme et isomorphisme de groupes
 Réciproque d'isomorphisme;;Si $f\!:\!F\to F$ est un isomorphisme, alors $f^{-1}$ est un isomorphisme
 Propriétés d'un groupe $\l G,\star\r$;;$G$ admet un uique élément neutre pour $\star$\linebreak$\forall x\in G,\;\exists!x^s\in G$
 Groupe abélien;;La loi $\star$ de $G$ est commutative
-Soient $\l G,\star\r$ et $\l H,\diamond\r$ deux groupes\linebreak$f\!:\!G\to H$ est un homomorphisme de groupe;;$\forall\l x,y\r\in G^2,\;f\l x\star y\r=f\l x\r\diamond f\l y\r$\linebreak L'ensemble des homomorphisme de $G$ dans $H$ est noté $\hom{G,H}$\linebreak Si $\l G,\star\r=\l H,\diamond\r$, f est un endomorphisme\linebreak L'ensemble des automorphismes de $G$ est noté $\aut{G}$
+Soient $\l G,\star\r$ et $\l H,\diamond\r$ deux groupes\linebreak$f\!:\!G\to H$ est un homomorphisme de groupes;;$\forall\l x,y\r\in G^2,\;f\l x\star y\r=f\l x\r\diamond f\l y\r$\linebreak L'ensemble des homomorphisme de $G$ dans $H$ est noté $\hom{G,H}$\linebreak Si $\l G,\star\r=\l H,\diamond\r$, f est un endomorphisme\linebreak L'ensemble des automorphismes de $G$ est noté $\aut{G}$
 Si $G$ et $H$ sont deux groupes et $f\in\hom{G,H}$\linebreak$f\l e_G\r$;;$f\l e_H\r$
 Si $G$ et $H$ sont deux groupes et $f\in\hom{G,H}$\linebreak$f\l x^{-1}\r$;;$f\l x\r^{-1}$
 Si $G$ est un gruope\linebreak Structure de $\l\aut G,\circ\r$;;$\l\aut G,\circ\r$ est un groupe
-Si $\l G,\star\r$ est un groupe\linebreak Un sous-ensemble $H$ de $G$ est appelé sous-groupe de $G$;;$H$ est stable pour la loi de $G$ et la loi induite définit sur $H$ une structure de groupe
+Si $\l G,\star\r$ est un groupe\linebreak Un sous-ensemble $H$ de $G$ est un sous-groupe de $G$;;$H$ est stable pour la loi de $G$ et la loi induite définit sur $H$ une structure de groupe
 Si $\l G,\star\r$ est un groupe et $H\subset G$\linebreak Caractérisation(s) des sous-groupes;;$H\neq\varnothing$\quad$\forall\l x,y\r\in H,\;x\star y\in H$\quad$\forall x\in H,\;x^s\in H$\linebreak$H\neq\varnothing$\quad$\forall\l x,y\r\in H^2,\;x\star y^s\in H$\linebreak$e_G\in H$\quad$\forall\l x,y\r\in H^2,\;x\star y^s\in H$
 Sous-groupe propre de $G$;;Sous-groupe de $G$ distinct de $G$ et $\left\{e_G\right\}$
 Intersection de sous-groupes\linebreak Si $G$ est un groupe, et $\l H_i\r_{i\in I}$ une famille de sous-groupes de $G$;;$\bigcap{i\in I}{}{H_i}$ est un sous-groupe de $G$

@@ -16,8 +16,8 @@ Distributivité généralisée\linebreak$\prod{i=1}{n}{\sum{j\in J_i}{}{x_{i,j}}
 Associativité externe\linebreak$E$ est muni d'une loi decomposition externe $\diamond$ sur $\mathbb{K}$, muni d'une loi de composition interne $\star$;;$\forall\l\lambda,\mu,x\r\in\mathbb{K}^2\times E,\;\l\lambda\star\mu\r\diamond x=\lambda\diamond\l\mu\diamond x\r$
 Soient $E$ muni d'une loi $\star$, $F\subset E$\linebreak$F$ est stable par $\star$;;$\forall\l x,y\r\in F^2,\;x\star y\in F$\linebreak La loi de $E$ se restreint en une loi $\star_F$ appelée loi induite sur $F$ par $\star$
 Magma;;Muni d'une loi de composition interne
-Monoïde;;Muni d'une loi d'une composition interne, de l'associativité et d'un élément neutre\linebreak Un monoïde est un magma
-Groupe;;Muni d'une loi d'une composition interne, de l'associativité, d'un élément neutre et de symétriques\linebreak Un groupe est un monoïde
+Monoïde;;Muni d'une loi de composition interne, de l'associativité et d'un élément neutre\linebreak Un monoïde est un magma
+Groupe;;Muni d'une loi de composition interne, de l'associativité, d'un élément neutre et de symétriques\linebreak Un groupe est un monoïde
 Soient $E$ muni d'une structure de X et $F\subset E$\linebreak$F$ est un sous-X de $E$;;$F$ est stable par les lois de $E$\linebreak$F$ contient les neutres imposés par $E$\linebreak Les lois induites sur $F$ par les lois de $E$ vérifient les axiomes de la structure de X
 Soit $E$ et $F$ deux ensembles munis d'une structure de X, munis respectivement des lois de composition internes $\l\underset{\scriptscriptstyle1}{\star},\cdots,\underset{\scriptscriptstyle n}{\star}\r$ et $\l\underset{\scriptscriptstyle1}{\diamond},\cdots,\underset{\scriptscriptstyle n}{\diamond}\r$, et externes $\l\underset{\scriptscriptstyle1}{\square},\cdots,\underset{\scriptscriptstyle m}{\square}\r$ et $\l\underset{\scriptscriptstyle1}{\triangle},\cdots,\underset{\scriptscriptstyle m}{\triangle}\r$ sur $K_1,\cdots,K_m$\linebreak$f\!:\!E\to F$ est un homomorphisme;;$f$ respecte les lois interne : soit $k\in\llb1,n\rrb$\linebreak$\forall \l x,y\r\in E^2,\;f\l x\underset{\scriptscriptstyle k}{\star}y\r=f\l x\r\underset{\scriptscriptstyle k}{\diamond}f\l y\r$\linebreak$f$ respecte les lois externes : soit $k\in\llb1,m\rrb$\linebreak$\forall \l\lambda,x\r\in K_k\times E,\;f\l \lambda\underset{\scriptscriptstyle k}{\square}y\r=\lambda\underset{\scriptscriptstyle k}{\triangle}f\l x\r$\linebreak$f$ est compatible avec le neutre (si le neutre $e_i$ pour la loi $\underset{\scriptscriptstyle i}{\star}$ est imposé dans les axiomes, donc le neutre $e_i'$ existe pour la loi $\underset{\scriptscriptstyle i}{\diamond}$) : $f\l e_i\r=e_i'$
 Isomorphisme de X;;Homomorphisme de X bijectif
@@ -26,11 +26,11 @@ Automorphisme de X;;Endomorphisme et isomorphisme de X
 Réciproque d'isomorphisme;;Si $f\!:\!F\to F$ est un isomorphisme, alors $f^{-1}$ est un isomorphisme
 Propriétés d'un groupe $\l G,\star\r$;;$G$ admet un uique élément neutre pour $\star$\linebreak$\forall x\in G,\;\exists!x^s\in G$
 Groupe abélien;;La loi $\star$ de $G$ est commutative
-Soient $\l G,\star\r$ et $\l H,\diamond\r$ deux groupes\linebreak$f\!:\!G\to H$ est un homomorphisme de groupe;;$\forall\l x,y\r\in G^2,\;f\l x\star y\r=f\l x\r\diamond f\l y\r$\linebreak L'ensemble des homomorphisme de $G$ dans $H$ est noté $\hom{G,H}$\linebreak Si $\l G,\star\r=\l H,\diamond\r$, f est un endomorphisme\linebreak L'ensemble des automorphismes de $G$ est noté $\aut{G}$
+Soient $\l G,\star\r$ et $\l H,\diamond\r$ deux groupes\linebreak$f\!:\!G\to H$ est un homomorphisme de groupes;;$\forall\l x,y\r\in G^2,\;f\l x\star y\r=f\l x\r\diamond f\l y\r$\linebreak L'ensemble des homomorphisme de $G$ dans $H$ est noté $\hom{G,H}$\linebreak Si $\l G,\star\r=\l H,\diamond\r$, f est un endomorphisme\linebreak L'ensemble des automorphismes de $G$ est noté $\aut{G}$
 Si $G$ et $H$ sont deux groupes et $f\in\hom{G,H}$\linebreak$f\l e_G\r$;;$f\l e_H\r$
 Si $G$ et $H$ sont deux groupes et $f\in\hom{G,H}$\linebreak$f\l x^{-1}\r$;;$f\l x\r^{-1}$
 Si $G$ est un gruope\linebreak Structure de $\l\aut G,\circ\r$;;$\l\aut G,\circ\r$ est un groupe
-Si $\l G,\star\r$ est un groupe\linebreak Un sous-ensemble $H$ de $G$ est appelé sous-groupe de $G$;;$H$ est stable pour la loi de $G$ et la loi induite définit sur $H$ une structure de groupe
+Si $\l G,\star\r$ est un groupe\linebreak Un sous-ensemble $H$ de $G$ est un sous-groupe de $G$;;$H$ est stable pour la loi de $G$ et la loi induite définit sur $H$ une structure de groupe
 Si $\l G,\star\r$ est un groupe et $H\subset G$\linebreak Caractérisation(s) des sous-groupes;;$H\neq\varnothing$\quad$\forall\l x,y\r\in H,\;x\star y\in H$\quad$\forall x\in H,\;x^s\in H$\linebreak$H\neq\varnothing$\quad$\forall\l x,y\r\in H^2,\;x\star y^s\in H$\linebreak$e_G\in H$\quad$\forall\l x,y\r\in H^2,\;x\star y^s\in H$
 Sous-groupe propre de $G$;;Sous-groupe de $G$ distinct de $G$ et $\left\{e_G\right\}$
 Intersection de sous-groupes\linebreak Si $G$ est un groupe, et $\l H_i\r_{i\in I}$ une famille de sous-groupes de $G$;;$\bigcap{i\in I}{}{H_i}$ est un sous-groupe de $G$
@@ -62,3 +62,22 @@ Ordre d'un élément d'un groupe;;$\ord{x}=\min\left(\left\{n\in\mathbb{N}^*\;|\
 Résolution de $x^n=e$;;$\left\{n\in\mathbb{N}^*\;|\;x^n=e\right\}$ est de la forme $a\mathbb{Z}$\linebreak$x$ est d'ordre fini si et seulement si $a\neq0$ (on a donc $\ord{x}=a$)
 Description des groupes monogènes\linebreak Si $G=\la x\ra$;;Si $\ord{x}=+\infty$, $G$ est isomorphe à $\mathbb{Z}$\linebreak Si $\ord{x}=n\in\mathbb{N}^*$, $G$ est isomorphe à $\mathbb{Z}/n\mathbb{Z}$
 Théorème de Lagrange pour l'ordre des éléments d'un groupe;;Si $G$ est un groupe fini et $x\in G$\linebreak$\ord{x}\div\left|G\right|$
+Anneau;;Muni de deux lois de composition internes (généralement notées $+$ et $\times$)\linebreak$\l A,+\r$ est un groupe abélien\linebreak$\l A,\times\r$ est un monoïde\linebreak$\times$ est distributive sur $+$
+Élément absorbant dans un anneau $\l A,+,\times\r$;;$0$
+Propriété sur $1$ et $0$ si l'anneau $A$ a plus d'un élément;;$1\neq0$
+Anneau commutatif;;Anneau dont la loi $\times$ est commutative
+Soient $\l A,\underset{\scriptscriptstyle A}{+},\underset{\scriptscriptstyle A}{\times}\r$ et $\l B,\underset{\scriptscriptstyle B}{+},\underset{\scriptscriptstyle B}{\times}\r$ deux anneaux\linebreak$f\!:\!A\to B$ est un homomorphisme d'anneaux;;$\forall\l x,y\r\in A^2,\;f\l x\underset{\scriptscriptstyle A}{+}y\r=f\l x\r\underset{\scriptscriptstyle B}{+}f\l y\r$\linebreak$\forall\l x,y\r\in A^2,\;f\l x\underset{\scriptscriptstyle A}{\times}y\r=f\l x\r\underset{\scriptscriptstyle B}{\times}f\l y\r$\linebreak$f\l 1_A\r=1_B$
+Si $\l A,+,\times\r$ est un anneau\linebreak Un sous-ensemble $B$ de $A$ est un sous-anneau de $A$;;$B$ est stable pour les lois $+$ et $\times$\linebreak$1_A\in B$\linebreak Les lois induites sur $B$ définissent sur $B$ une structure d'anneau
+Si $\l A,+,\times\r$ est un groupe et $B\subset A$\linebreak Caractérisation(s) des sous-anneaux;;$1_A\in B$\quad$\forall\l x,y\r\in B,\;x-y\in B$\quad$\forall\l x,y\r\in B,\;xy\in B$
+Intersection de sous-anneaux\linebreak Si $A$ est un groupe, et $\l B_i\r_{i\in I}$ une famille de sous-anneaux de $A$;;$\bigcap{i\in I}{}{B_i}$ est un sous-anneau de $A$
+Image directe et réciproque de sous-anneaux par un homomorphisme;;Si $A$ et $B$ sont deux anneaux, et $f\!:\!A\to B$ un morphisme d'anneaux, $A'$ et $B'$ deux sous-anneaux respectivement de $A$ et $B$\linebreak $f\l A'\r$ est un sous-anneau de $B$\linebreak $f^{-1}\l B'\r$ est un sous-anneau de $A$
+Factorisation de $a^n-b^n$ dans un anneau $A$;;$\l a,b\r\in A^2$ tel que $ab=ba$\linebreak$\l a-b\r\sum{k=0}{n-1}{a^{n-k-1}b^k}$
+Factorisation de $\l a+b\r^n$ dans un anneau $A$;;$\l a,b\r\in A^2$ tel que $ab=ba$\linebreak$\sum{k=0}{n}{\binom{n}{k}a^kb^{n-k}}$
+Groupe des inversibles d'un anneau;;$A^\times$\linebreak$A^\times$ est un groupe multiplicatif
+Diviseurs de zéro dans un anneau $A$;;$a\in A$ est un diviseur de $0$ à gauche si et seulement s'il existe $b\in A$ tel que $ab=0$\linebreak$a\in A$ est un diviseur de $0$ à droite si et seulement s'il existe $b\in A$ tel que $ba=0$\linebreak$a\in A$ est un diciseur de$0$ si et seulement si $a$ est diviseur de $0$ à gauche et à droite
+Élément réguulier d'un anneau;;L'élément n'est pas diviseur de $0$\linebreak La réciproque est vraie\linebreak S'adapte à gauche et à droite
+Anneau intègre;;Anneau commutatif non réduit à $\left\{0\right\}$ et sans diviseurs de $0$
+Si $\l A,+,\times\r$ est un anneau commutatif\linebreak Un sous-ensemble $I$ de $A$ est un sous-anneau idéal de $A$;;$I$ est un sous-groupe de $\l A,+\r$\linebreak$\forall i\in I,\;\forall a\in A,\;ia\in I$
+Idéal principal;;Idéal engendré par un unique élément $a$ de la forme $I=aA=\left\{ay,\;y\in A\right\}$\linebreak$I$ est souvent noté $\l a\r$
+Anneau principal;;Un anneau intègre dont tous les idéaux sont principaux
+Si $A$ est un anneau commutatif et $I$ un idéal de $A$\linebreak Anneau quotient;;$A/I$ peut être muni d'une multiplication avec pour tout $\l a,b\r\in A$, $\overline{ab}=\overline{a}\overline{b}$\linebreak$A/I$ est muni d'une structure d'anneau
