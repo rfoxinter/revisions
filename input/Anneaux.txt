@@ -13,7 +13,7 @@ Isomorphisme d'anneaux;;Homomorphisme d'anneaux bijectif
 Endomorphisme d'anneaux;;Homomorphisme d'anneaux de $E$ dans lui-même (muni des mêmes lois)
 Automorphisme d'anneaux;;Endomorphisme et isomorphisme d'anneaux
 Si $\l A,+,\times\r$ est un anneau\linebreak Un sous-ensemble $B$ de $A$ est un sous-anneau de $A$;;$B$ est stable pour les lois $+$ et $\times$\linebreak$1_A\in B$\linebreak Les lois induites sur $B$ définissent sur $B$ une structure d'anneau
-Si $\l A,+,\times\r$ est un groupe et $B\subset A$\linebreak Caractérisation(s) des sous-anneaux;;$1_A\in B$\quad$\forall\l x,y\r\in B,\;x-y\in B$\quad$\forall\l x,y\r\in B,\;xy\in B$
+Si $\l A,+,\times\r$ est un groupe et $B\subset A$\linebreak Caractérisation des sous-anneaux;;$1_A\in B$\quad$\forall\l x,y\r\in B,\;x-y\in B$\quad$\forall\l x,y\r\in B,\;xy\in B$
 Intersection de sous-anneaux\linebreak Si $A$ est un groupe, et $\l B_i\r_{i\in I}$ une famille de sous-anneaux de $A$;;$\bigcap{i\in I}{}{B_i}$ est un sous-anneau de $A$
 Image directe et réciproque de sous-anneaux par un homomorphisme;;Si $A$ et $B$ sont deux anneaux, et $f\!:\!A\to B$ un morphisme d'anneaux, $A'$ et $B'$ deux sous-anneaux respectivement de $A$ et $B$\linebreak $f\l A'\r$ est un sous-anneau de $B$\linebreak $f^{-1}\l B'\r$ est un sous-anneau de $A$
 Factorisation de $a^n-b^n$ dans un anneau $A$;;$\l a,b\r\in A^2$ tel que $ab=ba$\linebreak$\l a-b\r\sum{k=0}{n-1}{a^{n-k-1}b^k}$
