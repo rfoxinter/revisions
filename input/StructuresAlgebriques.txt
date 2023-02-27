@@ -91,4 +91,4 @@ Propriété des homomorphismes de corps;;Un homomorphisme de corps est injectif
 Si $K$ est un corps, d'élément neutre $1_K\neq0_K$, $H=\left\{n\times1_K,\;n\in\mathbb{Z}\right\}$ le sous-groupe monogène de $\l K,+\r$ engendré par $1_K$\linebreak Caractéristique d'un corps;;Si $H$ est infini, $K$ est de caractéristique nulle\linebreak Si $H$ est fini de cardinal $p$, $K$ est de caractéristique $p$
 Si $K$ est un corps de caractéristique finie $p$\linebreak Propriété pour les éléments de $K$;;$\forall x\in K,\;px=0_K$
 Propriété de la caractéristique d'un corps;;Si $K$ est un corps de caractéristique $p$ non nulle, $p$ est premier
-Si $K$ est un corps de caractéristique nulle\linebreak Propriété pour les éléments de $K$;;$\forall \l n,x\r\in\mathbb{Z}\times K,\;n\times x=0_K\Leftrightarrow\l x=0_K\wedge n=0\r$
+Si $K$ est un corps de caractéristique nulle\linebreak Propriété pour les éléments de $K$;;$\forall \l n,x\r\in\mathbb{Z}\times K$\linebreak$n\times x=0_K\Leftrightarrow\l x=0_K\vee n=0\r$
