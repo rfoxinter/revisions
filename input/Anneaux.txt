@@ -1,7 +1,7 @@
 Algèbre 1 -- Anneaux
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{bigoperators}\usepackage{structures}
+\usepackage{bigoperators}
 Groupe;;Muni d'une loi de composition interne, de l'associativité, d'un élément neutre et de symétriques
 Monoïde;;Muni d'une loi de composition interne, de l'associativité et d'un élément neutre
 Anneau;;Muni de deux lois de composition internes (généralement notées $+$ et $\times$)\linebreak$\l A,+\r$ est un groupe abélien\linebreak$\l A,\times\r$ est un monoïde\linebreak$\times$ est distributive sur $+$
