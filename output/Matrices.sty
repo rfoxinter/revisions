@@ -1,0 +1,8 @@
+\ProvidesPackage{matrices}
+
+\newcommand{\mat}[3]{\def\argII{,#2}\ifx&#2&\def\argII{}\fi\mathcal{M}_{#1\argII}\l#3\r}
+\usepackage{rotating}
+\usepackage{nicematrix}
+\renewcommand{\ddots}{\begin{turn}{135}$\ \cdots$\end{turn}}
+\renewcommand{\vdots}{\begin{turn}{90}$\cdots$\end{turn}}
+\newcommand{\mxh}{\rule[-12pt]{0pt}{24pt}}
