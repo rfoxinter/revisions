@@ -1,0 +1,14 @@
+Algèbre 1 -- Matrices
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{matrices}\usepackage{bigoperators}
+Matrice élémentaite $E_{i,j}$ de $\mat{n}{p}{\mathbb{K}}$;;$\forall\l k,l\r\in\llb1,n\rrb\times\llb1,p\rrb,\;e_{i,j}=\delta_{\l i,j\r,\l k,l\r}=\delta_{i,k}\delta_{j,l}$
+Propriété des matrices $E_{i,j}$ dans $\mat{n}{p}{\mathbb{K}}$;;La famille $\l E_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,p\rrb}$ est une base canonique de $\mat{n}{p}{\mathbb{K}}$\linebreak Toute matrice $A$ de $\mat{n}{p}{\mathbb{K}}$ peut s'exprimer de la forme $\sum{\l i,j\r\in\llb1,n\rrb\times\llb1,p\rrb}{}{\lambda_{i,j}E_{i,j}}$
+Définition du produit matriciel;;$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall\l i,k\r\in\llb1,n\rrb\times\llb1,q\rrb,\;c_{i,k}=\sum{j=1}{p}{a_{i,j}b_{j,k}}$
+Description du produit matriciel par colonne\linebreak$\mathrm{C}_i\l M\r$ représente la $i$-ième colonne de $M$;;$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall k\in\llb1,q\rrb,\;\mathrm{C}_k\l{C}\r=\sum{j=1}{p}{b_{j,k}\mathrm{C}_j\l A\r}$
+Description du produit matriciel par ligne\linebreak$\mathrm{L}_i\l M\r$ représente la $i$-ième ligne de $M$;;$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall i\in\llb1,n\rrb,\;\mathrm{L}_i\l{C}\r=\sum{j=1}{p}{a_{i,j}\mathrm{L}_j\l B\r}$
+Matrice identité;;$I_n=\begin{pNiceMatrix}[columns-width=24pt, margin]\mxh1&0&\cdots&0\\\mxh0&\ddots&\ddots&\vdots\\\mxh\vdots&\ddots&\ddots&0\\\mxh0&\cdots&0&1\\\end{pNiceMatrix}$
+Transposée de la matrice $A=\begin{pNiceMatrix}[columns-width=24pt, margin]\mxh a_{1,1}&\cdots&a_{1,p}\\\mxh\vdots&\ddots&\vdots\\\mxh a_{n,1}&\cdots&a_{n,p}\end{pNiceMatrix}$;;$A^\top=\begin{pNiceMatrix}[columns-width=24pt, margin]\mxh a_{1,1}&\cdots&a_{n,1}\\\mxh\vdots&\ddots&\vdots\\\mxh a_{1,p}&\cdots&a_{n,p}\end{pNiceMatrix}$
+Structure de $\mat{n}{}{\mathbb{K}}$;;$\mat{n}{}{\mathbb{K}}$ est un anneau non commutatif
+Factorisation de $A^n-B^n$;;$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\l A-B\r\sum{k=0}{n-1}{A^{n-k-1}B^k}$
+Factorisation de $\l A+B\r^n$;;$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\sum{k=0}{n}{\binom{n}{k}A^kB^{n-k}}$
