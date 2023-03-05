@@ -1,4 +1,4 @@
-Trigonométrie
+Trigo!!ttleTrigonométrie
 Shuffle questions : True
 Q/R & R/Q : True
 \usepackage{tables}\usepackage{trigo}
