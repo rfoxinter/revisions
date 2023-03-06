@@ -30,6 +30,8 @@
 \renewcommand{\right}{\aftergroup\egroup\oldright}
 \renewcommand{\O}[1]{\ensuremath{O\left(#1\right)}}
 \newcommand{\Th}[1]{\ensuremath{\varTheta\left(#1\right)}}
+\let\oldlog\log
+\renewcommand{\log}[1]{\oldlog\left(#1\right)}
 
 \definecolor{kywd}{RGB}{17,96,132}
 \definecolor{fnc}{RGB}{160,160,0}

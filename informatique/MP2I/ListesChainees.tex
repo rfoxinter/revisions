@@ -131,3 +131,32 @@ let rec fold_left f acc = function
 \end{minted}
 \info{('a -> 'b -> 'a) -> 'a -> 'b list -> 'a}{Applique une fonction successivement à un élément de la liste et au résultat de l'itération précédente en partant de la fin de la liste}{\Th{n}}
 \end{imp*}
+\fn{ocaml}{List.map}{('a -> 'b) -> 'a list -> 'b list}{Applique une fonction à tous les éléments de la liste et renvoie une nouvelle liste avec les résultats}{\Th{n}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let rec map f = function
+    | [] -> []
+    | h::t -> (f h)::(map f t);;
+\end{minted}
+\info{('a -> 'b) -> 'a list -> 'b list}{Applique une fonction à tous les éléments de la liste et renvoie une nouvelle liste avec les résultats}{\Th{n}}
+\end{imp*}
+\fn{ocaml}{List.rev}{'a list -> 'a list}{Inverse l'ordre des éléments d'une liste}{\Th{n}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let rec rev l =
+    let rec aux acc = function
+        | [] -> acc
+        | h::t -> aux (h::acc) t
+    in aux [] l;;
+\end{minted}
+\info{'a list -> 'a list}{Inverse l'ordre des éléments d'une liste}{\Th{n}}
+\end{imp*}
+\fn{ocaml}{List.mem}{'a -> 'a list -> bool}{Vérifie si un élément appartient à une liste}{\O{n}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let rec mem elem = function
+    | [] -> false
+    | h::t -> elem = h || mem elem t;;
+\end{minted}
+\info{'a -> 'a list -> bool}{Vérifie si un élément appartient à une liste}{\O{n}}
+\end{imp*}
