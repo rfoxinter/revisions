@@ -17,7 +17,13 @@
 \renewcommand{\tabularxcolumn}[1]{>{\justifying\arraybackslash}m{#1}}
 
 \renewcommand{\c}{\subsection[C]{C\hfill\protect\includegraphics[height=11pt]{C}}}
-\newcommand{\ocaml}{\subsection[OCaml]{OCaml\hfill\protect\includegraphics[height=11pt]{Ocaml}}}
+% \newcommand{\ocaml}{\subsection[OCaml]{OCaml\hfill\protect\includegraphics[height=11pt]{Ocaml}}}
+\newcommand{\ocaml}[1][]{\def\argI{}
+    \ifx&#1&%
+    \def\argI{\subsection[OCaml]{OCaml\hfill\protect\includegraphics[height=11pt]{Ocaml}}}
+    \else\def\argI{\subsection[OCaml -- #1]{OCaml -- #1\hfill\protect\includegraphics[height=11pt]{Ocaml}}}
+    \fi\argI
+}
 
 \let\oldsection\section
 \renewcommand\section{\clearpage\oldsection}
@@ -68,7 +74,8 @@
 \null\newpage
 \pagenumbering{arabic}
 \include{MP2I/ListesChainees}
-\include{MP2I/Tableaux.tex}
+\include{MP2I/Tableaux}
+\include{MP2I/Piles}
 \include{MP2I/Tris}
 \include{MP2I/Tablistes}
 \pagenumbering{gobble}
