@@ -7,7 +7,9 @@ struct cell {
     int value;
     struct cell* next;
 };
+
 typedef struct cell int_list;
+
 /*
     Cette définition de listes chaînées ainsi que la majorité des
     fonctions à suivre s'adaptent également pour les autres types
@@ -103,9 +105,7 @@ void del(int_list* lst){
 \info{}{Supprime une liste pointée par \mintinline{c}|lst|}{\Th{n}}
 \end{fnc*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ocaml
-\subsubsection{Type complexe}
-\subsubsection{Le module \kywd{List}}
+\ocaml[Le module \kywd{List}]
 \fn{ocaml}{List.length}{'a list -> int}{Renvoie la longueur de la liste}{\Th{n}}
 \begin{imp*}{}
 \begin{minted}{ocaml}
