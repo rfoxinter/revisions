@@ -1,0 +1,68 @@
+\section{Tableaux}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\c
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ocaml
+\subsubsection{Type complexe}
+\subsubsection{Le module \kywd{Array}}
+\fn{ocaml}{Array.length}{'a array -> int}{Renvoie la longueur du tableau}{\Th{1}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let length arr =
+    let l = ref 0 and count = ref true in
+    while !count do
+        try
+            let _ = arr.(!l) in incr l
+        with
+            | Invalid_argument _ -> count := false
+    done;
+    !l;;
+\end{minted}
+\info{'a array -> int}{Renvoie la longueur du tableau}{\Th{n}}
+\end{imp*}
+\fn{ocaml}{Array.iter}{('a -> unit) -> 'a array -> unit}{Applique une fonction à tous les éléments du tableau}{\Th{n}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let iter f arr =
+    for i = 0 to length arr-1 do
+        arr.(i) <- (f arr.(i))
+    done;;
+\end{minted}
+\info{('a -> unit) -> 'a array -> unit}{Applique une fonction à tous les éléments du tableau}{\Th{n}}
+\end{imp*}
+\fn{ocaml}{Array.fold_left}{('a -> 'b -> 'a) -> 'a -> 'b array -> 'a}{Applique une fonction successivement à un élément du tableau et au résultat de l'itération précédente en partant du début du tableau}{\Th{n}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let fold_left f def arr =
+    let acc = ref def in
+    for i = 0 to length arr-1 do
+        acc := f !acc arr.(i)
+    done;
+    !acc;;
+\end{minted}
+\info{('a -> 'b -> 'a) -> 'a -> 'b array -> 'a}{Applique une fonction successivement à un élément du tableau et au résultat de l'itération précédente en partant du début du tableau}{\Th{n}}
+\end{imp*}
+\fn{ocaml}{Array.fold_right}{('a -> 'b -> 'b) -> 'a array -> 'b -> 'b}{Applique une fonction binaire de pliage à tous les éléments du tableau, en partant de la droite, et renvoie un résultat plié}{\Th{n}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let fold_right f arr def =
+    let acc = ref def in
+    for i = length arr-1 downto 0 do
+        acc := f arr.(i) !acc
+    done;
+    !acc;;
+\end{minted}
+\info{('a -> 'b -> 'b) -> 'a array -> 'b -> 'b}{Applique une fonction binaire de pliage à tous les éléments du tableau, en partant de la droite, et renvoie un résultat plié}{\Th{n}}
+\end{imp*}
+\fn{ocaml}{Array.map}{('a -> 'b) -> 'a array -> 'b array}{Applique une fonction à tous les éléments du tableau et renvoie un nouveau tableau avec les résultats}{\Th{n}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let map f arr =
+    let new_arr = Array.make (Array.length arr) (f arr.(0)) in
+    for i = 1 to length arr-1 do
+        new_arr.(i) <- f arr.(i)
+    done;
+    new_arr;;
+\end{minted}
+\info{('a -> 'b) -> 'a array -> 'b array}{Applique une fonction à tous les éléments du tableau et renvoie un nouveau tableau avec les résultats}{\Th{n}}
+\end{imp*}

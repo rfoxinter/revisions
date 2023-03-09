@@ -16,11 +16,14 @@ Tri qui parcourt le tableau de gauche à droite, insérant chaque élément à s
 \begin{df*}{Tri à bulles}
 Tri qui parcourt le tableau de gauche à droite en comparant chaque élément avec son voisin, et échange les deux éléments si le voisin est plus petit.
 \end{df*}
+\begin{pt*}{Tri à bulles}
+Le tri à bulles est stable.
+\end{pt*}
 \begin{df*}{Tri rapide}
 Tri qui sélectionne un pivot et partitionne le tableau en deux sous-tableaux: les éléments plus petits que le pivot et ceux plus grands. Cette opération est répétée récursivement sur chaque sous-tableau.
 \end{df*}
-\begin{df*}{Tri fusion}
-Tri qui divise récursivement le tableau en deux sous-tableaux, les trie et les fusionne pour obtenir le tableau trié.
+\begin{df*}{Tri mixte}
+Tri qui utilise plusieurs algorithmes de tri pour avoir une meilleure complexité.
 \end{df*}
 \c
 \begin{imp*}{échange de deux élements dans un tableau}
@@ -93,7 +96,7 @@ int partition(int* tab, int n) {
 \end{minted}
 \info{int* tab, int n}{Partitionne le tableau \mintinline{c}|tab| de taille \mintinline{c}|n| pour le tri rapide}{\Th{n}}
 \end{imp*}
-\begin{imp*}{Tri rapide}
+\begin{imp*}{tri rapide}
 \begin{minted}{c}
 void tri_rapide(int* tab, int n) {
     int p = partition(tab, n);
@@ -101,24 +104,24 @@ void tri_rapide(int* tab, int n) {
     if(n-p > 1) {tri_rapide(&tab[p], n-p);}
 }
 \end{minted}
-\info{}{Tri le tableau \mintinline{c}|tab| avec un tri rapide}{\Th{n \log n} (en moyenne), \Th{n^2} (dans le pire des cas)}
+\info{}{Trie le tableau \mintinline{c}|tab| avec un tri rapide}{\Th{n \log n} (en moyenne), \Th{n^2} (dans le pire des cas)}
 \end{imp*}
-\begin{imp*}{Tri fusion}
+\begin{imp*}{tri rapide}
 \begin{minted}{c}
-void tri_fusion(int* tab, int n) {
-    if(n < 11) {
+void tri_mixte(int* tab, int n) {
+    if(n < 10) {
         tri_bulle(tab,n);
     } else {
         int p = partition(tab, n);
-        if(p > 1) {tri_fusion(tab, p);}
-        if(n-p > 1) {tri_fusion(&tab[p], n-p);}
+        if(p > 1) {tri_mixte(tab, p);}
+        if(n-p > 1) {tri_mixte(&tab[p], n-p);}
     }
 }
 \end{minted}
-\info{}{Tri le tableau \mintinline{c}|tab| avec un tri fusion}{\Th{n \log n}}
+\info{}{Trie le tableau \mintinline{c}|tab| avec un tri rapide ou un tri à bulles si la liste est petite}{\Th{n \log n} (en moyenne), \Th{n^2} (dans le pire des cas)}
 \end{imp*}
 \ocaml
-\begin{imp*}{Minimum d'une liste}
+\begin{imp*}{minimum d'une liste}
 \begin{minted}{ocaml}
 let min = function
     | [] -> failwith "Liste vide"
@@ -131,7 +134,7 @@ let min = function
 \end{minted}
 \info{'a list -> 'a}{Renvoie le minimum de la liste fournie en paramètre}{\Th{n}}
 \end{imp*}
-\begin{imp*}{Retire un élément d'une liste}
+\begin{imp*}{retire un élément d'une liste}
 \begin{minted}{ocaml}
 let rec retire elem = function
     | [] -> failwith "Liste vide"
@@ -140,13 +143,13 @@ let rec retire elem = function
 \end{minted}
 \info{'a list -> 'a list}{Retire l'élément \mintinline{ocaml}|elem| de la liste fournie en paramètre}{\Th{n}}
 \end{imp*}
-\begin{imp*}{Tri sélection}
+\begin{imp*}{tri sélection}
 \begin{minted}{ocaml}
 let rec tri_selection = function
     | [] -> []
     | lst -> let m = min lst in m::tri_selection (retire m lst);;
 \end{minted}
-\info{'a list -> 'a list}{Tri le tableau avec un tri sélection}{\Th{n^2}}
+\info{'a list -> 'a list}{Trie le tableau avec un tri sélection}{\Th{n^2}}
 \end{imp*}
 \begin{imp*}{Tri insertion}
 \begin{minted}{ocaml}
@@ -159,9 +162,9 @@ let rec tri_insertion = function
             | lst -> elem::lst
         in insere t (tri_insertion q);;
 \end{minted}
-\info{'a list -> 'a list}{Tri le tableau avec un tri insertion}{\Th{n^2}}
+\info{'a list -> 'a list}{Trie le tableau avec un tri insertion}{\Th{n^2}}
 \end{imp*}
-\begin{imp*}{Tri bulle}
+\begin{imp*}{tri bulle}
 \begin{minted}{ocaml}
 let rec tri_bulle = function
     | [] -> []
@@ -171,13 +174,15 @@ let rec tri_bulle = function
             | t::[] -> [t]
             | t::q ->
                 let b = bulle q in
-                    if List.hd b < t then List.hd b::t::(List.tl b)
+                    if List.hd b < t
+                    then List.hd b::t::(List.tl b)
                     else t::b
-        in let b = bulle lst in List.hd b::tri_bulle (List.tl b);;
+        in let b = bulle lst
+        in List.hd b::tri_bulle (List.tl b);;
 \end{minted}
-\info{'a list -> 'a list}{Tri le tableau avec un tri bulle}{\Th{n^2}}
+\info{'a list -> 'a list}{Trie le tableau avec un tri bulle}{\Th{n^2}}
 \end{imp*}
-\begin{imp*}{Joint deux listes}
+\begin{imp*}{joint deux listes}
 \begin{minted}{ocaml}
 let rec join lst = function
     | [] -> lst
@@ -185,16 +190,16 @@ let rec join lst = function
 \end{minted}
 \info{'a list -> 'a list -> 'a list}{Joint une liste devant la liste \mintinline{ocaml}|lst|}{\Th{n} ($n$ est la longueur de la deuxième liste)}
 \end{imp*}
-\begin{imp*}{Partitionnement d'une liste}
+\begin{imp*}{partitionnement d'une liste}
 \begin{minted}{ocaml}
 let rec partition p left right = function
     | [] -> (left,right)
     | t::q when t < p -> partition p (t::left) right q
     | t::q -> partition p left (t::right) q;;
 \end{minted}
-\info{'a -> 'a list -> 'a list -> 'a list|\mintinline{ocaml}|-> 'a list * 'a list}{Partitionne les éléments de la liste donnée en paramètre\newline\mintinline{ocaml}|left| et \mintinline{ocaml}|right| servent d'accumulateurs pour les éléments plus petits et plus grand que le pivot \mintinline{ocaml}|p|}{\Th{n}}
+\info{'a -> 'a list -> 'a list -> 'a list|\newline\mintinline{ocaml}|    -> 'a list * 'a list}{Partitionne les éléments de la liste donnée en paramètre\newline\mintinline{ocaml}|left| et \mintinline{ocaml}|right| servent d'accumulateurs pour les éléments plus petits et plus grand que le pivot \mintinline{ocaml}|p|}{\Th{n}}
 \end{imp*}
-\begin{imp*}{Tri rapide}
+\begin{imp*}{tri rapide}
 \begin{minted}{ocaml}
 let rec tri_rapide = function
     | [] -> []
@@ -202,5 +207,5 @@ let rec tri_rapide = function
         let (l,r) = partition t [] [] q in
         join (t::tri_rapide r) (tri_rapide l);;
 \end{minted}
-\info{'a list -> 'a list}{Tri le tableau avec un tri rapide}{\Th{n \log n} (en moyenne), \Th{n^2} (dans le pire des cas)}
+\info{'a list -> 'a list}{Trie le tableau avec un tri rapide}{\Th{n \log n} (en moyenne), \Th{n^2} (dans le pire des cas)}
 \end{imp*}

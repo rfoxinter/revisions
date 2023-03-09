@@ -9,11 +9,12 @@
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
 \usepackage[finalizecache=true]{minted}
+\usepackage{ragged2e}
 \usepackage{tabularx}
 \usepackage{hyperref}
 \usepackage{graphics}
 \usemintedstyle{perso}
-\renewcommand{\tabularxcolumn}[1]{>{\arraybackslash}m{#1}}
+\renewcommand{\tabularxcolumn}[1]{>{\justifying\arraybackslash}m{#1}}
 
 \renewcommand{\c}{\subsection[C]{C\hfill\protect\includegraphics[height=11pt]{C}}}
 \newcommand{\ocaml}{\subsection[OCaml]{OCaml\hfill\protect\includegraphics[height=11pt]{Ocaml}}}
@@ -40,11 +41,12 @@
 \newcommand{\vr}[1]{\mathtt{\color{var}#1}}
 
 \setlength{\parindent}{0pt}
-\newtcbtheorem{fun}{Fonction disponible}{breakable,colback=green!5,colframe=green!75!black,fonttitle=\bfseries,separator sign={~:}}{func}
-\newtcbtheorem{imp}{Implémentation}{breakable,colback=orange!5,colframe=orange!50!red,fonttitle=\bfseries,separator sign={~:}}{impl}
-\newtcbtheorem{tp}{Définition d'un type}{breakable,colback=violet!5,colframe=violet!75!black,fonttitle=\bfseries,separator sign={~:}}{type}
-\newtcbtheorem{fnc}{Fonction à implémenter}{breakable,colback=blue!5,colframe=blue!75!white,fonttitle=\bfseries,separator sign={~:}}{func}
-\newtcbtheorem{df}{Définition}{breakable,colback=teal!5,colframe=teal!75!white,fonttitle=\bfseries,separator sign={~:}}{defi}
+\newtcbtheorem{fun}{Fonction disponible}{colback=green!5,colframe=green!75!black,fonttitle=\bfseries,separator sign={~:}}{func}
+\newtcbtheorem{imp}{Implémentation}{colback=orange!5,colframe=orange!50!red,fonttitle=\bfseries,separator sign={~:}}{impl}
+\newtcbtheorem{tp}{Définition d'un type}{colback=violet!5,colframe=violet!75!black,fonttitle=\bfseries,separator sign={~:}}{type}
+\newtcbtheorem{fnc}{Fonction à implémenter}{colback=blue!5,colframe=blue!75!white,fonttitle=\bfseries,separator sign={~:}}{func}
+\newtcbtheorem{df}{Définition}{colback=teal!5,colframe=teal!75!white,fonttitle=\bfseries,separator sign={~:}}{defi}
+\newtcbtheorem{pt}{Propriété/Théorème}{colback=lime!5,colframe=lime!75!black,fonttitle=\bfseries,separator sign={~:}}{prop}
 
 \newcommand{\info}[4][]{\def\argI{}\ifx&#2&\else\def\argI{Signature&\mintinline{ocaml}|#2|\\}\fi\def\argII{}\ifx&#3&\else\def\argII{Description&#3\\}\fi\begin{tabularx}{\textwidth}{AB}\argI\argII Complexité&#4#1\end{tabularx}}
 \newcommand{\fn}[5]{\begin{fun*}{\mintinline{#1}|#2|}\info{#3}{#4}{#5}\end{fun*}}
@@ -66,6 +68,7 @@
 \null\newpage
 \pagenumbering{arabic}
 \include{MP2I/ListesChainees}
+\include{MP2I/Tableaux.tex}
 \include{MP2I/Tris}
 \include{MP2I/Tablistes}
 \pagenumbering{gobble}
