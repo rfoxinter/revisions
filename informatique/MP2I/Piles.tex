@@ -1,0 +1,57 @@
+\section{Piles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\c
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ocaml[Le module \kywd{Stack}]
+\begin{tp*}{}
+\begin{minted}{ocaml}
+type 'a t = {len: int ref; mutable contents: 'a list};;
+
+exception Empty;;
+\end{minted}
+\end{tp*}
+\fn{ocaml}{Stack.create}{unit -> 'a t}{Crée une nouvelle pile vide}{\Th{1}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let create () = {len = ref 0; contents = []};;
+\end{minted}
+\info{unit -> 'a t}{Crée une nouvelle pile vide}{\Th{1}}
+\end{imp*}
+\fn{ocaml}{Stack.push}{'a -> 'a t -> unit}{Ajoute un élément au sommet de la pile}{\Th{1}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let push elem t = t.contents <- elem::t.contents; incr t.len;;
+\end{minted}
+\info{'a -> 'a t -> unit}{Ajoute un élément au sommet de la pile}{\Th{1}}
+\end{imp*}
+\fn{ocaml}{Stack.pop}{'a t -> 'a}{Retire et renvoie l'élément au sommet de la pile}{\Th{1}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let pop t = match t.contents with
+    | [] -> raise Empty
+    | hd::tl -> t.contents <- tl; decr t.len; hd;;
+\end{minted}
+\info{'a t -> 'a}{Retire et renvoie l'élément au sommet de la pile}{\Th{1}}
+\end{imp*}
+\fn{ocaml}{Stack.top}{'a t -> 'a}{Renvoie l'élément au sommet de la pile sans le retirer}{\Th{1}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let top t = let elem = pop t in push elem t; elem;;
+\end{minted}
+\info{'a t -> 'a}{Renvoie l'élément au sommet de la pile sans le retirer}{\Th{1}}
+\end{imp*}
+\fn{ocaml}{Stack.is_empty}{'a t -> bool}{Renvoie vrai si la pile est vide, faux sinon}{\Th{1}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let is_empty t =
+if !(t.len) = 0 then true else false;;
+\end{minted}
+\info{'a t -> bool}{Renvoie vrai si la pile est vide, faux sinon}{\Th{1}}
+\end{imp*}
+\fn{ocaml}{Stack.length}{'a t -> int}{Renvoie la longueur de la pile}{\Th{1}}
+\begin{imp*}{}
+\begin{minted}{ocaml}
+let length t = !(t.len);;
+\end{minted}
+\info{'a t -> int}{Renvoie la longueur de la pile}{\Th{1}}
+\end{imp*}
