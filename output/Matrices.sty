@@ -1,8 +1,19 @@
 \ProvidesPackage{matrices}
 
 \newcommand{\mat}[3]{\def\argII{,#2}\ifx&#2&\def\argII{}\fi\mathcal{M}_{#1\argII}\l#3\r}
-\usepackage{rotating}
+\newcommand{\sym}[2]{\mathcal{S}_{#1}\l#2\r}
+\newcommand{\ant}[2]{\mathcal{A}_{#1}\l#2\r}
+\newcommand{\diag}[2]{\mathcal{D}_{#1}\l#2\r}
+\newcommand{\ts}[2]{\mathcal{T}_{#1}^+\l#2\r}
+\newcommand{\ti}[2]{\mathcal{T}_{#1}^-\l#2\r}
+\DeclareMathOperator{\oldgl}{GL}
+\newcommand{\gl}[2]{\oldgl_{#1}\l#2\r}
 \usepackage{nicematrix}
-\renewcommand{\ddots}{\begin{turn}{135}$\ \cdots$\end{turn}}
-\renewcommand{\vdots}{\begin{turn}{90}$\cdots$\end{turn}}
+\DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
+\def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
+\def\oldddots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\raise5.5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
+\def\oldvdots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise5.5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+\newcommand{\mdots}{\raise1.5pt\hbox{$\oldmdots$}}
+\renewcommand{\ddots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldddots$}$}}}
+\renewcommand{\vdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldvdots$}$}}}
 \newcommand{\mxh}{\rule[-12pt]{0pt}{24pt}}
