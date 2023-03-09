@@ -7,6 +7,8 @@ from pygments.style import Style
 from pygments.token import Keyword, Name, Comment, String, Error, Token, \
      Number, Operator, Generic, Whitespace, Punctuation, Other, Literal
 
+from pygments.token import Keyword
+
 class PersonalStyle(Style):
     """
     Personal color scheme.
@@ -22,13 +24,13 @@ class PersonalStyle(Style):
         Error:                     "italic #d8902a", # class: 'err'
         Other:                     "",        # class 'x'
 
-        Comment:                   "#7d7d7d", # class: 'c'
+        Comment:                   "italic #7d7d7d", # class: 'c'
         Comment.Multiline:         "",        # class: 'cm'
         Comment.Preproc:           "",        # class: 'cp'
         Comment.Single:            "",        # class: 'c1'
         Comment.Special:           "",        # class: 'cs'
 
-        Keyword:                   "bold #0095a0", # class: 'k'
+        Keyword:                   "#0095a0", # class: 'k'
         Keyword.Constant:          "",        # class: 'kc'
         Keyword.Declaration:       "",        # class: 'kd'
         Keyword.Namespace:         "", # class: 'kn'
@@ -45,36 +47,36 @@ class PersonalStyle(Style):
         Name.Attribute:            "", # class: 'na' - to be revised
         Name.Builtin:              "",        # class: 'nb'
         Name.Builtin.Pseudo:       "",        # class: 'bp'
-        Name.Class:                "", # class: 'nc' - to be revised
+        Name.Class:                "#0095a0", # class: 'nc' - to be revised
         Name.Constant:             "", # class: 'no' - to be revised
         Name.Decorator:            "", # class: 'nd' - to be revised
         Name.Entity:               "",        # class: 'ni'
-        Name.Exception:            "", # class: 'ne'
-        Name.Function:             "", # class: 'nf'
+        Name.Exception:            "#d05050", # class: 'ne'
+        Name.Function:             "#a0a000", # class: 'nf'
         Name.Property:             "",        # class: 'py'
         Name.Label:                "",        # class: 'nl'
         Name.Namespace:            "#116084", # class: 'nn' - to be revised
         Name.Other:                "", # class: 'nx'
         Name.Tag:                  "", # class: 'nt' - like a keyword
-        Name.Variable:             "",        # class: 'nv' - to be revised
+        Name.Variable:             "#aa50aa",        # class: 'nv' - to be revised
         Name.Variable.Class:       "",        # class: 'vc' - to be revised
         Name.Variable.Global:      "",        # class: 'vg' - to be revised
         Name.Variable.Instance:    "",        # class: 'vi' - to be revised
 
         Number:                    "#2060ff", # class: 'm'
-        Number.Float:              "",        # class: 'mf'
+        Number.Float:              "#3075ff",        # class: 'mf'
         Number.Hex:                "",        # class: 'mh'
         Number.Integer:            "",        # class: 'mi'
         Number.Integer.Long:       "",        # class: 'il'
         Number.Oct:                "",        # class: 'mo'
 
-        Literal:                   "#ae81ff", # class: 'l'
-        Literal.Date:              "#e6db74", # class: 'ld'
+        Literal:                   "", # class: 'l'
+        Literal.Date:              "", # class: 'ld'
 
         String:                    "#06bc0d", # class: 's'
         String.Backtick:           "",        # class: 'sb'
         String.Char:               "",        # class: 'sc'
-        String.Doc:                "",        # class: 'sd' - like a comment
+        String.Doc:                "#06900d",        # class: 'sd' - like a comment
         String.Double:             "",        # class: 's2'
         String.Escape:             "", # class: 'se'
         String.Heredoc:            "",        # class: 'sh'
@@ -90,10 +92,10 @@ class PersonalStyle(Style):
         Generic.Emph:              "italic",  # class: 'ge'
         Generic.Error:             "",        # class: 'gr'
         Generic.Heading:           "",        # class: 'gh'
-        Generic.Inserted:          "#a6e22e", # class: 'gi'
+        Generic.Inserted:          "", # class: 'gi'
         Generic.Output:            "#66d9ef", # class: 'go'
-        Generic.Prompt:            "bold #f92672", # class: 'gp'
-        Generic.Strong:            "bold",    # class: 'gs'
+        Generic.Prompt:            "#f92672", # class: 'gp'
+        Generic.Strong:            "",    # class: 'gs'
         Generic.Subheading:        "#75715e", # class: 'gu'
         Generic.Traceback:         "",        # class: 'gt'
     }
