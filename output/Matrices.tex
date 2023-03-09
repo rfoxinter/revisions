@@ -10,24 +10,40 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Matrice élémentaite $E_{i,j}$ de $\mat{n}{p}{\mathbb{K}}$}{1/10}
-\slider{$\forall\l k,l\r\in\llb1,n\rrb\times\llb1,p\rrb,\;e_{i,j}=\delta_{\l i,j\r,\l k,l\r}=\delta_{i,k}\delta_{j,l}$}{1/10}
-\slideq{Propriété des matrices $E_{i,j}$ dans $\mat{n}{p}{\mathbb{K}}$}{2/10}
-\slider{La famille $\l E_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,p\rrb}$ est une base canonique de $\mat{n}{p}{\mathbb{K}}$\linebreak Toute matrice $A$ de $\mat{n}{p}{\mathbb{K}}$ peut s'exprimer de la forme $\sum{\l i,j\r\in\llb1,n\rrb\times\llb1,p\rrb}{}{\lambda_{i,j}E_{i,j}}$}{2/10}
-\slideq{Description du produit matriciel par colonne\linebreak$\mathrm{C}_i\l M\r$ représente la $i$-ième colonne de $M$}{3/10}
-\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall k\in\llb1,q\rrb,\;\mathrm{C}_k\l{C}\r=\sum{j=1}{p}{b_{j,k}\mathrm{C}_j\l A\r}$}{3/10}
-\slideq{Description du produit matriciel par ligne\linebreak$\mathrm{L}_i\l M\r$ représente la $i$-ième ligne de $M$}{4/10}
-\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall i\in\llb1,n\rrb,\;\mathrm{L}_i\l{C}\r=\sum{j=1}{p}{a_{i,j}\mathrm{L}_j\l B\r}$}{4/10}
-\slideq{Matrice identité}{5/10}
-\slider{$I_n=\begin{pNiceMatrix}[columns-width=24pt, margin]\mxh1&0&\cdots&0\\\mxh0&\ddots&\ddots&\vdots\\\mxh\vdots&\ddots&\ddots&0\\\mxh0&\cdots&0&1\\\end{pNiceMatrix}$}{5/10}
-\slideq{Factorisation de $A^n-B^n$}{6/10}
-\slider{$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\l A-B\r\sum{k=0}{n-1}{A^{n-k-1}B^k}$}{6/10}
-\slideq{Factorisation de $\l A+B\r^n$}{7/10}
-\slider{$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\sum{k=0}{n}{\binom{n}{k}A^kB^{n-k}}$}{7/10}
-\slideq{Transposée de la matrice $A=\begin{pNiceMatrix}[columns-width=24pt, margin]\mxh a_{1,1}&\cdots&a_{1,p}\\\mxh\vdots&\ddots&\vdots\\\mxh a_{n,1}&\cdots&a_{n,p}\end{pNiceMatrix}$}{8/10}
-\slider{$A^\top=\begin{pNiceMatrix}[columns-width=24pt, margin]\mxh a_{1,1}&\cdots&a_{n,1}\\\mxh\vdots&\ddots&\vdots\\\mxh a_{1,p}&\cdots&a_{n,p}\end{pNiceMatrix}$}{8/10}
-\slideq{Structure de $\mat{n}{}{\mathbb{K}}$}{9/10}
-\slider{$\mat{n}{}{\mathbb{K}}$ est un anneau non commutatif}{9/10}
-\slideq{Définition du produit matriciel}{10/10}
-\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall\l i,k\r\in\llb1,n\rrb\times\llb1,q\rrb,\;c_{i,k}=\sum{j=1}{p}{a_{i,j}b_{j,k}}$}{10/10}
+\slideq{$T=\begin{pNiceMatrix}[columns-width=24pt]\mxh t_{1,1}&\bullet&\mdots&\bullet\\\mxh0&\ddots&\ddots&\vdots\\\mxh\vdots&\ddots&\ddots&\bullet\\\mxh0&\mdots&0&t_{n,n}\end{pNiceMatrix}\in\ts{n}{\mathbb K}$\linebreak$T^m$}{1/18}
+\slider{$T^m=\begin{pNiceMatrix}[columns-width=24pt]\mxh t_{1,1}^m&\bullet&\mdots&\bullet\\\mxh0&\ddots&\ddots&\vdots\\\mxh\vdots&\ddots&\ddots&\bullet\\\mxh0&\mdots&0&t_{n,n}^m\end{pNiceMatrix}$}{1/18}
+\slideq{Définition du produit matriciel}{2/18}
+\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall\l i,k\r\in\llb1,n\rrb\times\llb1,q\rrb,\;c_{i,k}=\sum{j=1}{p}{a_{i,j}b_{j,k}}$}{2/18}
+\slideq{$\gl{n}{\mathbb K}$}{3/18}
+\slider{$\left\{M\in\mat{n}{}{\mathbb{K}}\;|\;\exists N\in\mat{n}{}{\mathbb{K}}\;|\;MN=I_n\right\}$}{3/18}
+\slideq{Factorisation de $A^n-B^n$}{4/18}
+\slider{$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\l A-B\r\sum{k=0}{n-1}{A^{n-k-1}B^k}$}{4/18}
+\slideq{Transposée de la matrice $A=\begin{pNiceMatrix}[columns-width=24pt]\mxh a_{1,1}&\mdots&a_{1,p}\\\mxh\vdots&\ddots&\vdots\\\mxh a_{n,1}&\mdots&a_{n,p}\end{pNiceMatrix}$}{5/18}
+\slider{$A^\top=\begin{pNiceMatrix}[columns-width=24pt]\mxh a_{1,1}&\mdots&a_{n,1}\\\mxh\vdots&\ddots&\vdots\\\mxh a_{1,p}&\mdots&a_{n,p}\end{pNiceMatrix}$}{5/18}
+\slideq{Factorisation de $\l A+B\r^n$}{6/18}
+\slider{$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\sum{k=0}{n}{\binom{n}{k}A^kB^{n-k}}$}{6/18}
+\slideq{Description du produit matriciel par ligne\linebreak$\mathrm{L}_i\l M\r$ représente la $i$-ième ligne de $M$}{7/18}
+\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall i\in\llb1,n\rrb,\;\mathrm{L}_i\l{C}\r=\sum{j=1}{p}{a_{i,j}\mathrm{L}_j\l B\r}$}{7/18}
+\slideq{Description du produit matriciel par colonne\linebreak$\mathrm{C}_i\l M\r$ représente la $i$-ième colonne de $M$}{8/18}
+\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall k\in\llb1,q\rrb,\;\mathrm{C}_k\l{C}\r=\sum{j=1}{p}{b_{j,k}\mathrm{C}_j\l A\r}$}{8/18}
+\slideq{Structure de $\mat{n}{}{\mathbb{K}}$}{9/18}
+\slider{$\mat{n}{}{\mathbb{K}}$ est un anneau non commutatif}{9/18}
+\slideq{$M=\begin{pNiceMatrix}[columns-width=24pt]a&b\\c&d\end{pNiceMatrix}\in\mat{2}{}{\mathbb{K}}$\linebreak$\det M=\begin{vNiceMatrix}[columns-width=24pt]a&b\\c&d\end{vNiceMatrix}$}{10/18}
+\slider{$ad-bc$}{10/18}
+\slideq{$T=\begin{pNiceMatrix}[columns-width=24pt]\mxh t_{1,1}&0&\mdots&0\\\mxh\bullet&\ddots&\ddots&\vdots\\\mxh\vdots&\ddots&\ddots&0\\\mxh\bullet&\mdots&\bullet&t_{n,n}\end{pNiceMatrix}\in\ti{n}{\mathbb K}$\linebreak$T^m$}{11/18}
+\slider{$T^m=\begin{pNiceMatrix}[columns-width=24pt]\mxh t_{1,1}^m&0&\mdots&0\\\mxh\bullet&\ddots&\ddots&\vdots\\\mxh\vdots&\ddots&\ddots&0\\\mxh\bullet&\mdots&\bullet&t_{n,n}^m\end{pNiceMatrix}$}{11/18}
+\slideq{Matrice identité}{12/18}
+\slider{$I_n=\begin{pNiceMatrix}[columns-width=24pt]\mxh1&0&\mdots&0\\\mxh0&\ddots&\ddots&\vdots\\\mxh\vdots&\ddots&\ddots&0\\\mxh0&\mdots&0&1\\\end{pNiceMatrix}$}{12/18}
+\slideq{$M=\begin{pNiceMatrix}[columns-width=24pt]a&b\\c&d\end{pNiceMatrix}\in\mat{2}{}{\mathbb{K}}$\linebreak$M^{-1}$}{13/18}
+\slider{$M^{-1}=\begin{pNiceMatrix}[columns-width=24pt]d&-b\\-c&a\end{pNiceMatrix}$}{13/18}
+\slideq{Propriété des matrices $E_{i,j}$ dans $\mat{n}{p}{\mathbb{K}}$}{14/18}
+\slider{La famille $\l E_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,p\rrb}$ est une base canonique de $\mat{n}{p}{\mathbb{K}}$\linebreak Toute matrice $A$ de $\mat{n}{p}{\mathbb{K}}$ peut s'exprimer de la forme $\sum{\l i,j\r\in\llb1,n\rrb\times\llb1,p\rrb}{}{\lambda_{i,j}E_{i,j}}$}{14/18}
+\slideq{$\ant{n}{\mathbb K}$}{15/18}
+\slider{$\left\{M\in\mat{n}{}{\mathbb{K}}\;|\;M=-M^\top\right\}$}{15/18}
+\slideq{$D=\begin{pNiceMatrix}[columns-width=24pt]\mxh d_{1,1}&0&\mdots&0\\\mxh0&\ddots&\ddots&\vdots\\\mxh\vdots&\ddots&\ddots&0\\\mxh0&\mdots&0&d_{n,n}\end{pNiceMatrix}\in\diag{n}{\mathbb K}$\linebreak$D^m$}{16/18}
+\slider{$D^m=\begin{pNiceMatrix}[columns-width=24pt]\mxh d_{1,1}^m&0&\mdots&0\\\mxh0&\ddots&\ddots&\vdots\\\mxh\vdots&\ddots&\ddots&0\\\mxh0&\mdots&0&d_{n,n}^m\end{pNiceMatrix}$}{16/18}
+\slideq{Matrice élémentaite $E_{i,j}$ de $\mat{n}{p}{\mathbb{K}}$}{17/18}
+\slider{$\forall\l k,l\r\in\llb1,n\rrb\times\llb1,p\rrb,\;e_{i,j}=\delta_{\l i,j\r,\l k,l\r}=\delta_{i,k}\delta_{j,l}$}{17/18}
+\slideq{$\sym{n}{\mathbb K}$}{18/18}
+\slider{$\left\{M\in\mat{n}{}{\mathbb{K}}\;|\;M=M^\top\right\}$}{18/18}
 \end{document}
