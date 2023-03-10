@@ -43,8 +43,7 @@ let top t = let elem = pop t in push elem t; elem;;
 \fn{ocaml}{Stack.is_empty}{'a t -> bool}{Renvoie vrai si la pile est vide, faux sinon}{\Th{1}}
 \begin{imp*}{}
 \begin{minted}{ocaml}
-let is_empty t =
-if !(t.len) = 0 then true else false;;
+let is_empty t = if !(t.len) = 0 then true else false;;
 \end{minted}
 \info{'a t -> bool}{Renvoie vrai si la pile est vide, faux sinon}{\Th{1}}
 \end{imp*}
