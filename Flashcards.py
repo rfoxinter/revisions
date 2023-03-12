@@ -1,12 +1,12 @@
 from random import shuffle as sh
-from subprocess import run as r
+from subprocess import run as rn
 from subprocess import PIPE
 from os import chdir as c
 from os import remove as rem
 from os import rename as ren
 from os import makedirs as m
 from os import listdir as l
-from os.path import realpath as r
+from os.path import realpath as rp
 from os.path import dirname as d
 from os.path import exists as e
 from os.path import splitext as sp
@@ -74,12 +74,12 @@ def recompile(dest:str) -> bool:
         ttle = files[i].replace('.tex', '')
         dest = output[i]
         print('Compilation in progress [' + str(i + 1) + '/' + str(len(files)) + ']\nCompilation of [' + files[i] + ']\n')
-        out = r('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout
+        out = rn('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout
         if 'Command for \'pdflatex\' gave return code 1' in out:
             print(out + '\n')
             fail = True
         elif not 'Output written on' in out:
-            out = r('pdflatex -interaction=nonstopmode -file-line-error ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True, check = True).stdout
+            out = rn('pdflatex -interaction=nonstopmode -file-line-error ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True, check = True).stdout
             if 'Command for \'pdflatex\' gave return code 1' in out:
                 print(out + '\n')
                 fail = True
@@ -146,12 +146,12 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
     c('output/')
     fail = False
     print('Compilation in progress' + num + '\n')
-    output = r('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout
+    output = rn('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout
     if 'Command for \'pdflatex\' gave return code 1' in output:
         print(output + '\n')
         fail = True
     elif not 'Output written on' in output:
-        output = r('pdflatex -interaction=nonstopmode -file-line-error ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True, check = True).stdout
+        output = rn('pdflatex -interaction=nonstopmode -file-line-error ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True, check = True).stdout
         if 'Command for \'pdflatex\' gave return code 1' in output:
             print(output + '\n')
             fail = True
@@ -180,7 +180,7 @@ def main(file_path:str, file:str, n:int, dest:str, _open:bool) -> bool:
     fail = False
     if file == '__recompile__':
         return recompile(dest)
-    c(d(r(file_path)))
+    c(d(rp(file_path)))
     if file == '':
         file = input('File to compile : ')
     try:
@@ -212,10 +212,10 @@ def main(file_path:str, file:str, n:int, dest:str, _open:bool) -> bool:
     if _open:
         sl(.5)
         if system() == 'Windows':
-            if r('start ' + dest, shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout != '':
+            if rn('start ' + dest, shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout != '':
                 print('Unable to open the folder\n')
         else:
-            if r('open ' + dest, shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout != '':
+            if rn('open ' + dest, shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout != '':
                 print('Unable to open the folder\n')
     return fail
 
