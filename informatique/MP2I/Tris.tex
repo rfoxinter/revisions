@@ -42,8 +42,8 @@ void tri_selection(int* tab, int n) {
     for (int i = 0; i < n-1; ++i) {
         int min = tab[i];
         int idx_min = i;
-        for(int j = i+1; j < n; ++j) {
-            if(tab[j] < min) {
+        for (int j = i+1; j < n; ++j) {
+            if (tab[j] < min) {
                 min = tab[j];
                 idx_min = j;
             }
@@ -57,8 +57,8 @@ void tri_selection(int* tab, int n) {
 \begin{imp*}{tri insertion}
 \begin{minted}{c}
 void tri_insertion(int* tab, int n) {
-    for(int i = 1; i < n; ++i) {
-        for(int j = i; j > 0 && tab[j] < tab[j-1]; --j) {
+    for (int i = 1; i < n; ++i) {
+        for (int j = i; j > 0 && tab[j] < tab[j-1]; --j) {
             array_swap(tab, j, j-1);
         }
     }
@@ -69,9 +69,9 @@ void tri_insertion(int* tab, int n) {
 \begin{imp*}{tri à bulles}
 \begin{minted}{c}
 void tri_bulle(int* tab, int n) {
-    for(int i = 0; i < n; ++i) {
-        for(int j = n-1; j > i; --j) {
-            if(tab[j] < tab[j-1]) {
+    for (int i = 0; i < n; ++i) {
+        for (int j = n-1; j > i; --j) {
+            if (tab[j] < tab[j-1]) {
                 array_swap(tab, j, j-1);
             }
         }
@@ -86,8 +86,8 @@ int partition(int* tab, int n) {
     int pivot = tab[0];
     int d = n-1;
     int g = 1;
-    while(d > g-1) {
-        if(tab[g] < pivot) {++g;}
+    while (d > g-1) {
+        if (tab[g] < pivot) {++g;}
         else {array_swap(tab, g, d); --d;}
     }
     array_swap(tab, 0, g-1);
@@ -100,8 +100,8 @@ int partition(int* tab, int n) {
 \begin{minted}{c}
 void tri_rapide(int* tab, int n) {
     int p = partition(tab, n);
-    if(p > 1) {tri_rapide(tab, p);}
-    if(n-p > 1) {tri_rapide(&tab[p], n-p);}
+    if (p > 1) {tri_rapide(tab, p);}
+    if (n-p > 1) {tri_rapide(&tab[p], n-p);}
 }
 \end{minted}
 \info{}{Trie le tableau \mintinline{c}|tab| avec un tri rapide}{\Th{n \log n} (en moyenne), \Th{n^2} (dans le pire des cas)}
@@ -109,12 +109,12 @@ void tri_rapide(int* tab, int n) {
 \begin{imp*}{tri rapide}
 \begin{minted}{c}
 void tri_mixte(int* tab, int n) {
-    if(n < 10) {
+    if (n < 10) {
         tri_bulle(tab,n);
     } else {
         int p = partition(tab, n);
-        if(p > 1) {tri_mixte(tab, p);}
-        if(n-p > 1) {tri_mixte(&tab[p], n-p);}
+        if (p > 1) {tri_mixte(tab, p);}
+        if (n-p > 1) {tri_mixte(&tab[p], n-p);}
     }
 }
 \end{minted}
