@@ -10,12 +10,27 @@
 \renewcommand{\det}[1]{\olddet\l#1\r}
 \DeclareMathOperator{\oldgl}{GL}
 \newcommand{\gl}[2]{\oldgl_{#1}\l#2\r}
-\usepackage{nicematrix}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
 \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
 \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
-\def\oldddots{\mathinner{\raise10pt\vbox{\hbox{$\mcdot$}}\raise5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
-\def\oldvdots{\mathinner{\raise10pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+\def\oldddots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\raise5.5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
+\def\oldvdots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise5.5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
 \newcommand{\mdots}{\raise1.5pt\hbox{$\oldmdots$}}
 \renewcommand{\ddots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldddots$}$}}}
 \renewcommand{\vdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldvdots$}$}}}
-\newcommand{\mxh}{\rule[-12pt]{0pt}{24pt}}
+\newcommand{\tmatrix}[3]{
+\begin{tikzpicture}[baseline]
+\matrix (m) [
+        ampersand replacement=\&,
+        matrix of math nodes,
+        left delimiter=#1,
+        right delimiter=#3,
+        anchor=center,
+        minimum width=25pt,
+        minimum height=25pt,
+        row sep=0pt,
+        column sep = 0pt,
+        inner sep=0pt
+    ] {#2};
+\end{tikzpicture}}
