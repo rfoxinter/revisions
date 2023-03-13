@@ -8,7 +8,7 @@ Définition du produit matriciel;;$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{
 Description du produit matriciel par colonne\linebreak$\mathrm{C}_i\l M\r$ représente la $i$-ième colonne de $M$;;$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall k\in\llb1,q\rrb,\;\mathrm{C}_k\l{C}\r=\sum{j=1}{p}{b_{j,k}\mathrm{C}_j\l A\r}$
 Description du produit matriciel par ligne\linebreak$\mathrm{L}_i\l M\r$ représente la $i$-ième ligne de $M$;;$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall i\in\llb1,n\rrb,\;\mathrm{L}_i\l{C}\r=\sum{j=1}{p}{a_{i,j}\mathrm{L}_j\l B\r}$
 Matrice identité;;$I_n=\tmatrix({1 \& 0 \& \mdots \& 0 \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ 0 \& \mdots \& 0 \& 1\\})$
-Transposée de la matrice $A=\tmatrix({a_{1,1} \& \mdots \& a_{1,p} \\ \vdots \& \ddots \& \vdots \\ a_{n,1} \& \mdots \& a_{n,p}\\})$;;$A^\top=\tmatrix({a_{1,1} \& \mdots \& a_{n,1} \\ \vdots \& \ddots \& \vdots \\ a_{1,p} \& \mdots \& a_{n,p}\\})$
+Transposée de la matrice $A=\tmatrix({a_{1,1} \& \cdots \& a_{1,p} \\ \vdots \& \xdots \& \vdots \\ a_{n,1} \& \mdots \& a_{n,p}\\})$;;$A^\top=\tmatrix({a_{1,1} \& \mdots \& a_{n,1} \\ \vdots \& \xdots \& \vdots \\ a_{1,p} \& \mdots \& a_{n,p}\\})$
 Structure de $\mat{n}{}{\mathbb{K}}$;;$\mat{n}{}{\mathbb{K}}$ est un anneau non commutatif
 Factorisation de $A^n-B^n$;;$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\l A-B\r\sum{k=0}{n-1}{A^{n-k-1}B^k}$
 Factorisation de $\l A+B\r^n$;;$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\sum{k=0}{n}{\binom{n}{k}A^kB^{n-k}}$
@@ -18,5 +18,5 @@ $T=\tmatrix({t_{1,1} \& 0 \& \mdots \& 0 \\ \bullet \& \ddots \& \ddots \& \vdot
 $\sym{n}{\mathbb K}$;;$\left\{M\in\mat{n}{}{\mathbb{K}}\;|\;M=M^\top\right\}$
 $\ant{n}{\mathbb K}$;;$\left\{M\in\mat{n}{}{\mathbb{K}}\;|\;M=-M^\top\right\}$
 $\gl{n}{\mathbb K}$;;$\left\{M\in\mat{n}{}{\mathbb{K}}\;|\;\exists N\in\mat{n}{}{\mathbb{K}}\;|\;MN=I_n\right\}$
-$M=\tmatrix({a \& b \\ c \& d\\})\in\mat{2}{}{\mathbb{K}}$\linebreak$M^{-1}$;;$M^{-1}=\tmatrix({d \& -b \\ -c \& a\\})$
+$M=\tmatrix({a \& b \\ c \& d\\})\in\mat{2}{}{\mathbb{K}}$\linebreak$M^{-1}$;;$M^{-1}=\frac{1}{ad-bc}\tmatrix({d \& -b \\ -c \& a\\})$\linebreak${}=\frac{1}{\det M}\tmatrix({d \& -b \\ -c \& a\\})$
 $M=\tmatrix({a \& b \\ c \& d\\})\in\mat{2}{}{\mathbb{K}}$\linebreak$\det M=\tmatrix|{a \& b \\ c \& d \\}|$;;$ad-bc$
