@@ -47,12 +47,12 @@
 \newcommand{\vr}[1]{\mathtt{\color{var}#1}}
 
 \setlength{\parindent}{0pt}
-\newtcbtheorem{fun}{Fonction disponible}{colback=green!5,colframe=green!75!black,fonttitle=\bfseries,separator sign={~:}}{func}
-\newtcbtheorem{imp}{Implémentation}{colback=orange!5,colframe=orange!50!red,fonttitle=\bfseries,separator sign={~:}}{impl}
-\newtcbtheorem{tp}{Définition d'un type}{colback=violet!5,colframe=violet!75!black,fonttitle=\bfseries,separator sign={~:}}{type}
-\newtcbtheorem{fnc}{Fonction à implémenter}{colback=blue!5,colframe=blue!75!white,fonttitle=\bfseries,separator sign={~:}}{func}
-\newtcbtheorem{df}{Définition}{colback=teal!5,colframe=teal!75!white,fonttitle=\bfseries,separator sign={~:}}{defi}
-\newtcbtheorem{pt}{Propriété/Théorème}{colback=lime!5,colframe=lime!75!black,fonttitle=\bfseries,separator sign={~:}}{prop}
+\newtcbtheorem{fun}{Fonction disponible}{colback=green!5,colframe=green!75!black,fonttitle=\bfseries\sffamily,separator sign={~:}}{func}
+\newtcbtheorem{imp}{Implémentation}{colback=orange!5,colframe=orange!50!red,fonttitle=\bfseries\sffamily,separator sign={~:}}{impl}
+\newtcbtheorem{tp}{Définition d'un type}{colback=violet!5,colframe=violet!75!black,fonttitle=\bfseries\sffamily,separator sign={~:}}{type}
+\newtcbtheorem{fnc}{Fonction à implémenter}{colback=blue!5,colframe=blue!75!white,fonttitle=\bfseries\sffamily,separator sign={~:}}{func}
+\newtcbtheorem{df}{Définition}{colback=teal!5,colframe=teal!75!white,fonttitle=\bfseries\sffamily,separator sign={~:}}{defi}
+\newtcbtheorem{pt}{Propriété/Théorème}{colback=lime!5,colframe=lime!75!black,fonttitle=\bfseries\sffamily,separator sign={~:}}{prop}
 
 \newcommand{\info}[4][]{\def\argI{}\ifx&#2&\else\def\argI{Signature&\mintinline{ocaml}|#2|\\}\fi\def\argII{}\ifx&#3&\else\def\argII{Description&#3\\}\fi\begin{tabularx}{\textwidth}{AB}\argI\argII Complexité&#4#1\end{tabularx}}
 \newcommand{\fn}[5]{\begin{fun*}{\mintinline{#1}|#2|}\info{#3}{#4}{#5}\end{fun*}}
