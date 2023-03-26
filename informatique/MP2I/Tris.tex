@@ -26,7 +26,7 @@ Tri qui sélectionne un pivot et partitionne le tableau en deux sous-tableaux: l
 Tri qui utilise plusieurs algorithmes de tri pour avoir une meilleure complexité.
 \end{df*}
 \c
-\begin{imp*}{échange de deux élements dans un tableau}
+\begin{fnc*}{échange de deux élements dans un tableau}
 \begin{minted}{c}
 void array_swap(int* tab, int i, int j){
     int tmp = tab[i];
@@ -35,8 +35,8 @@ void array_swap(int* tab, int i, int j){
 }
 \end{minted}
 \info{}{Échange les éléments \mintinline{c}|i| et \mintinline{c}|j| du tableau \mintinline{c}|tab|}{\Th{1}}
-\end{imp*}
-\begin{imp*}{tri sélection}
+\end{fnc*}
+\begin{fnc*}{tri sélection}
 \begin{minted}{c}
 void tri_selection(int* tab, int n) {
     for (int i = 0; i < n-1; ++i) {
@@ -53,8 +53,8 @@ void tri_selection(int* tab, int n) {
 }
 \end{minted}
 \info{}{Tri le tableau \mintinline{c}|tab| avec un tri sélection}{\Th{n^2}}
-\end{imp*}
-\begin{imp*}{tri insertion}
+\end{fnc*}
+\begin{fnc*}{tri insertion}
 \begin{minted}{c}
 void tri_insertion(int* tab, int n) {
     for (int i = 1; i < n; ++i) {
@@ -65,8 +65,8 @@ void tri_insertion(int* tab, int n) {
 }
 \end{minted}
 \info{}{Tri le tableau \mintinline{c}|tab| avec un tri insertion}{\Th{n^2}}
-\end{imp*}
-\begin{imp*}{tri à bulles}
+\end{fnc*}
+\begin{fnc*}{tri à bulles}
 \begin{minted}{c}
 void tri_bulle(int* tab, int n) {
     for (int i = 0; i < n; ++i) {
@@ -79,8 +79,8 @@ void tri_bulle(int* tab, int n) {
 }
 \end{minted}
 \info{}{Tri le tableau \mintinline{c}|tab| avec un tri à bulles}{\Th{n^2}}
-\end{imp*}
-\begin{imp*}{partitionnement d'un tableau pour le tri rapide}
+\end{fnc*}
+\begin{fnc*}{partitionnement d'un tableau pour le tri rapide}
 \begin{minted}{c}
 int partition(int* tab, int n) {
     int pivot = tab[0];
@@ -95,8 +95,8 @@ int partition(int* tab, int n) {
 }
 \end{minted}
 \info{int* tab, int n}{Partitionne le tableau \mintinline{c}|tab| de taille \mintinline{c}|n| pour le tri rapide}{\Th{n}}
-\end{imp*}
-\begin{imp*}{tri rapide}
+\end{fnc*}
+\begin{fnc*}{tri rapide}
 \begin{minted}{c}
 void tri_rapide(int* tab, int n) {
     int p = partition(tab, n);
@@ -105,8 +105,8 @@ void tri_rapide(int* tab, int n) {
 }
 \end{minted}
 \info{}{Trie le tableau \mintinline{c}|tab| avec un tri rapide}{\Th{n \log n} (en moyenne), \Th{n^2} (dans le pire des cas)}
-\end{imp*}
-\begin{imp*}{tri rapide}
+\end{fnc*}
+\begin{fnc*}{tri rapide}
 \begin{minted}{c}
 void tri_mixte(int* tab, int n) {
     if (n < 10) {
@@ -119,9 +119,9 @@ void tri_mixte(int* tab, int n) {
 }
 \end{minted}
 \info{}{Trie le tableau \mintinline{c}|tab| avec un tri rapide ou un tri à bulles si la liste est petite}{\Th{n \log n} (en moyenne), \Th{n^2} (dans le pire des cas)}
-\end{imp*}
+\end{fnc*}
 \ocaml
-\begin{imp*}{minimum d'une liste}
+\begin{fnc*}{minimum d'une liste}
 \begin{minted}{ocaml}
 let min = function
     | [] -> failwith "Liste vide"
@@ -133,8 +133,8 @@ let min = function
         in lst_min t q;;
 \end{minted}
 \info{'a list -> 'a}{Renvoie le minimum de la liste fournie en paramètre}{\Th{n}}
-\end{imp*}
-\begin{imp*}{retire un élément d'une liste}
+\end{fnc*}
+\begin{fnc*}{retire un élément d'une liste}
 \begin{minted}{ocaml}
 let rec retire elem = function
     | [] -> failwith "Liste vide"
@@ -142,16 +142,16 @@ let rec retire elem = function
     | t::q -> t::retire elem q;;
 \end{minted}
 \info{'a list -> 'a list}{Retire l'élément \mintinline{ocaml}|elem| de la liste fournie en paramètre}{\Th{n}}
-\end{imp*}
-\begin{imp*}{tri sélection}
+\end{fnc*}
+\begin{fnc*}{tri sélection}
 \begin{minted}{ocaml}
 let rec tri_selection = function
     | [] -> []
     | lst -> let m = min lst in m::tri_selection (retire m lst);;
 \end{minted}
 \info{'a list -> 'a list}{Trie le tableau avec un tri sélection}{\Th{n^2}}
-\end{imp*}
-\begin{imp*}{Tri insertion}
+\end{fnc*}
+\begin{fnc*}{Tri insertion}
 \begin{minted}{ocaml}
 let rec tri_insertion = function
     | [] -> []
@@ -163,8 +163,8 @@ let rec tri_insertion = function
         in insere t (tri_insertion q);;
 \end{minted}
 \info{'a list -> 'a list}{Trie le tableau avec un tri insertion}{\Th{n^2}}
-\end{imp*}
-\begin{imp*}{tri bulle}
+\end{fnc*}
+\begin{fnc*}{tri bulle}
 \begin{minted}{ocaml}
 let rec tri_bulle = function
     | [] -> []
@@ -181,16 +181,16 @@ let rec tri_bulle = function
         in List.hd b::tri_bulle (List.tl b);;
 \end{minted}
 \info{'a list -> 'a list}{Trie le tableau avec un tri bulle}{\Th{n^2}}
-\end{imp*}
-\begin{imp*}{joint deux listes}
+\end{fnc*}
+\begin{fnc*}{joint deux listes}
 \begin{minted}{ocaml}
 let rec join lst = function
     | [] -> lst
     | t::q -> t::join lst q
 \end{minted}
 \info{'a list -> 'a list -> 'a list}{Joint une liste devant la liste \mintinline{ocaml}|lst|}{\Th{n} ($n$ est la longueur de la deuxième liste)}
-\end{imp*}
-\begin{imp*}{partitionnement d'une liste}
+\end{fnc*}
+\begin{fnc*}{partitionnement d'une liste}
 \begin{minted}{ocaml}
 let rec partition p left right = function
     | [] -> (left,right)
@@ -198,8 +198,8 @@ let rec partition p left right = function
     | t::q -> partition p left (t::right) q;;
 \end{minted}
 \info{'a -> 'a list -> 'a list -> 'a list|\newline\mintinline{ocaml}|    -> 'a list * 'a list}{Partitionne les éléments de la liste donnée en paramètre\newline\mintinline{ocaml}|left| et \mintinline{ocaml}|right| servent d'accumulateurs pour les éléments plus petits et plus grand que le pivot \mintinline{ocaml}|p|}{\Th{n}}
-\end{imp*}
-\begin{imp*}{tri rapide}
+\end{fnc*}
+\begin{fnc*}{tri rapide}
 \begin{minted}{ocaml}
 let rec tri_rapide = function
     | [] -> []
@@ -208,4 +208,4 @@ let rec tri_rapide = function
         join (t::tri_rapide r) (tri_rapide l);;
 \end{minted}
 \info{'a list -> 'a list}{Trie le tableau avec un tri rapide}{\Th{n \log n} (en moyenne), \Th{n^2} (dans le pire des cas)}
-\end{imp*}
+\end{fnc*}
