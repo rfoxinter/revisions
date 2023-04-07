@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/bac/English/main.css">
     <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/bac/English/normalize.css">
     <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/bac/English/style.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
     <script type="text/javascript" src="../main.js"></script>
     <style>
         * {
@@ -25,9 +26,18 @@
         }
     </style>
 </head>
-<body onload="display()">
+<body>
+    <div id="overlay"></div>
     <header class="page-header">
         <h1>Révisions</h1>
+        <span class="menu-icon material-symbols-rounded"><ptr id="menu-button">menu</ptr></span>
+        <div class="menu" id="menu">
+            <span class="close-icon material-symbols-rounded"><ptr id="close-button">close</ptr></span>
+            <ul style="border-top: 2px solid #eff0f1;;border-bottom: 2px solid #eff0f1;;">
+                <li><a href="..">Mathématiques MP2I</a></li>
+                <li><b style="color: #606c71;">Informatique MP2I</b></li>
+            </ul>
+          </div>   
     </header>
     <main class="main-content">
         <p id="Informatique">InformatiqueMP2I.pdf <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://rfoxinter.github.io/revisions/informatique/InformatiqueMP2I.pdf" target="_blank"><span class="material-symbols-rounded">open_in_new</span></a> <a href="https://rfoxinter.github.io/revisions/informatique/InformatiqueMP2I.pdf" download="Informatique.pdf"><span class="material-symbols-rounded">download</span></a></p>
