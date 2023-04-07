@@ -4,6 +4,7 @@
 
 ptr {
     cursor: pointer;
+    font-size: 2.5em !important;
 }
 
 .menu-icon {
@@ -11,7 +12,6 @@ ptr {
     top: 0;
     right: 0;
     margin: 20px;
-    font-size: 2em !important;
 }
 
 .menu {
@@ -35,7 +35,6 @@ body.open .menu {
     color: #606c71;
     display: block;
     margin: 20px;
-    font-size: 2em !important;
 }
   
 ul {
