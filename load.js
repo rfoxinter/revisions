@@ -53,7 +53,7 @@ function display_files(sitemap){
             span = document.createElement('span');
             span.setAttribute('onclick', 'folder_click(\''+groupname+'\')');
             span.setAttribute('id', groupname+'_icon');
-            span.setAttribute('class','material-symbols-rounded');
+            span.setAttribute('class','material-symbols-rounded folder');
             span.innerHTML = 'folder_open';
             h1.appendChild(span);
             h1.innerHTML += ' ' + groupname;
