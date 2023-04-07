@@ -19,7 +19,7 @@ ptr {
     position: fixed;
     top: 0;
     right: 0;
-    width: 25vw;
+    width: calc(min(100vw,300px));
     height: 100%;
     background-color: #fff;
     transform: translateX(100%);
