@@ -11,3 +11,45 @@ function folder_click(groupname) {
         elem[i].style.display = disp;
     }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#menu-button').addEventListener('click', function() {
+        document.body.classList.toggle('open');
+    });
+
+    document.querySelector('#close-button').addEventListener('click', function() {
+        document.body.classList.remove('open');
+    });
+
+    document.querySelector('#overlay').addEventListener('click', function() {
+        document.body.classList.remove('open');
+    });
+
+    const menuButton = document.querySelector('#menu-button');
+    const menu = document.querySelector('#close-button');
+    const overlay = document.querySelector('#overlay');
+    
+    menuButton.addEventListener('click', function() {
+        menu.classList.toggle('open');
+        overlay.style.display = 'block'; /* show the overlay */
+        setTimeout(function() {
+            overlay.style.opacity = '1'; /* fade in the overlay */
+        }, 10);
+    });
+    
+    menu.addEventListener('click', function() {
+        menu.classList.remove('open');
+        overlay.style.opacity = '0'; /* fade out the overlay */
+        setTimeout(function() {
+            overlay.style.display = 'none'; /* hide the overlay */
+        }, 300);
+    });
+    
+    overlay.addEventListener('click', function() {
+        menu.classList.remove('open');
+        overlay.style.opacity = '0'; /* fade out the overlay */
+        setTimeout(function() {
+            overlay.style.display = 'none'; /* hide the overlay */
+        }, 300);
+    });
+});
