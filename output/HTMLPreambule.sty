@@ -1,0 +1,25 @@
+\ProvidesPackage{htmlpreambule}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{adjustbox}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{xcolor}
+\renewcommand\l{\left(}
+\renewcommand\r{\right)}
+\newcommand\llb{\left[\!\left[}
+\newcommand\rrb{\right]\!\right]}
+\let\oldleft\left
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
+\let\oldright\right
+\renewcommand{\right}{\aftergroup\egroup\oldright}
+\let\oldfrac\frac
+\let\frac\dfrac
+\mathcode`l="8000
+\begingroup
+\makeatletter
+\lccode`\~=`\l
+\DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
+\lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
+\endgroup
