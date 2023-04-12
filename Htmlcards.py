@@ -139,7 +139,7 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
             f.close()
             c('output/')
             fail = False
-            output = rn('latex flcrd', shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout
+            output = rn('latex -interaction=nonstopmode -file-line-error flcrd', shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout
             if 'Command for \'latex\' gave return code 1' in output:
                 print(output + '\n')
                 fail = True
