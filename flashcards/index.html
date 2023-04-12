@@ -69,15 +69,15 @@ document.getElementById('title').innerHTML = title;
             await loadModule(file);
             arr = new Array(2*n.length);
             await get_code(file, ques[0], 'Q');
-            arr[0] = svgcode;
+            arr[2*ques[0]-2] = svgcode;
             document.getElementById('flashcard').innerHTML = arr[0];
             await get_code(file, ques[0], 'R');
-            arr[1] = svgcode;
+            arr[2*ques[0]-1] = svgcode;
             for (let i = 1; i < n.length; i++) {
                 await get_code(file, ques[i], 'Q');
-                arr[2*i] = svgcode;
+                arr[2*ques[i]-2] = svgcode;
                 await get_code(file, ques[i], 'R');
-                arr[2*i+1] = svgcode;
+                arr[2*ques[i]-1] = svgcode;
             
                 
             }
