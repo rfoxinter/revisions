@@ -24,7 +24,6 @@ def b(a:str) -> bool:
 
 p = ArgumentParser()
 p.add_argument('--file', type = str, help = 'File to compile', default = '')
-p.add_argument('--n', type = int, help = 'Number of flascards', default = 1)
 p.add_argument('--dest', type = str, help = 'Destination folder', default = 'default')
 p.add_argument('--open', type = b, help = 'Open destination folder after generating pdfs', default = 'False')
 args = p.parse_args()
@@ -169,11 +168,44 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
     c('../../')
     return fail
 
-def main(file_path:str, file:str, n:int, dest:str, _open:bool) -> bool:
+def recompile(dest:str) -> bool:
+    fail = False
+    files = sorted(l('input/'))
+    olddest = dest
+    print(files)
+    for f in files:
+        f = f.replace('.txt','')
+        c(d(__file__))
+        try:
+            r = open('input/' + f + '.txt', 'r').read().split('\n')
+        except OSError:
+            raise RuntimeError('File not found')
+        t, ttle = '', ''
+        if '!ttle' in r[0]:
+            ttle, t = r[0].split('!!ttle')
+        else:
+            t = r[0]
+            ttle = t.split('--')
+            if len(ttle) == 1:
+                ttle = ttle[0].title()
+            else:
+                ttle = ttle[1].title()
+            ttle = remove_special_chars(ttle)
+        if dest == 'default':
+            dest = t.split('--')
+            if len(dest) == 1:
+                dest = 'flashcards/'
+            else:
+                dest = 'flashcards/' + remove_special_chars(dest[0].title()) + '/'
+        fail &= gen_latex(r, t, ttle, dest)
+        dest = olddest
+
+
+def main(file_path:str, file:str, dest:str, _open:bool) -> bool:
     c(d(__file__))
     fail = False
-    # if file == '__recompile__':
-    #     return recompile(dest)
+    if file == '__recompile__':
+        return recompile(dest)
     c(d(rp(file_path)))
     if file == '':
         file = input('File to compile : ')
@@ -198,11 +230,7 @@ def main(file_path:str, file:str, n:int, dest:str, _open:bool) -> bool:
             dest = 'flashcards/'
         else:
             dest = 'flashcards/' + remove_special_chars(dest[0].title()) + '/'
-    if n == 1:
-        fail = gen_latex(r, t, ttle, dest)
-    else:
-        for j in range(n):
-            fail = gen_latex(r, t, ttle + '.' + str(j + 1), dest, ' [' + str (j + 1) + '/' + str(n) + ']') and fail
+    fail = gen_latex(r, t, ttle, dest)
     if _open:
         sl(.5)
         if system() == 'Windows':
@@ -214,6 +242,6 @@ def main(file_path:str, file:str, n:int, dest:str, _open:bool) -> bool:
     return fail
 
 if __name__ == '__main__':
-    if main(__file__, sp(args.file)[0], args.n, args.dest, args.open):
+    if main(__file__, sp(args.file)[0], args.dest, args.open):
         raise RuntimeError('An error has occurred')
     print('Compilation complete')

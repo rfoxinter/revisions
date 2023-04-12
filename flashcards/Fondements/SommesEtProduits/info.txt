@@ -1,0 +1,5 @@
+"Fondements &ndash; <i>Sommes et produits</i>"
+1
+0
+[1, 2, 3, 4]
+[0, 0, 0, 0]
