@@ -23,8 +23,8 @@
     <script type="text/javascript" defer>
 
           function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
+        for (let i = 0; i < array.length-1; ++i) {
+            const j = Math.floor(Math.random() * (array.length+1));
             [array[i], array[j]] = [array[j], array[i]];
         }
         return array;
@@ -49,13 +49,6 @@ ques = shuffleArray(n);
 
         
 document.getElementById('title').innerHTML = title;
-        function shuffleArray(array) {
-            for (let i = 0; i < array.length-1; ++i) {
-                const j = Math.floor(Math.random() * (array.length()+1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
         if (sh_quest) {ques = shuffleArray(n);} else {ques = n;}
         document.getElementById('flashcard').setAttribute('src', './' + file + '/Q'+ques[0]+'.svg');   
     }
