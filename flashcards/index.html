@@ -16,7 +16,7 @@
         svg {max-width: 100%;}
         button {
             display: inline-block;
-            width: 15vw;
+            width: 25vw;
         }
     </style>
 <!-- <script type="text/javascript" src="main.js"></script> -->
@@ -50,13 +50,13 @@ ques = shuffleArray(n);
         
 document.getElementById('title').innerHTML = title;
         function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
+            for (let i = 0; i < array.length-1; ++i) {
+                const j = Math.floor(Math.random() * (array.length()+1));
                 [array[i], array[j]] = [array[j], array[i]];
             }
             return array;
         }
-        if (sh_quest) {ques = shuffleArray(n);} else {ques = n; /*Implement a copy function*/}
+        if (sh_quest) {ques = shuffleArray(n);} else {ques = n;}
         document.getElementById('flashcard').setAttribute('src', './' + file + '/Q'+ques[0]+'.svg');   
     }
         async function get_code(file, ques, type) {
@@ -159,7 +159,7 @@ load(file);
             </span>
         </p>
         <p>
-            <button id="flip" onclick="reverse_card()" style="position: relative; left: 25vw;">Voir la réponse</button><button id="next" onclick="new_card()" style="position: relative; left: calc(100% - 55vw);" disabled>Question suivante</button>
+            <button id="flip" onclick="reverse_card()" style="position: relative; left: 15vw;">Voir la réponse</button><button id="next" onclick="new_card()" style="position: relative; left: calc(100% - 65vw);" disabled>Question suivante</button>
         </p>
           
         
