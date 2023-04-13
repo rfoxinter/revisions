@@ -22,102 +22,61 @@
             width: 25vw;
         }
     </style>
-<!-- <script type="text/javascript" src="main.js"></script> -->
     <script type="text/javascript" defer>
-
-          function shuffleArray(array) {
-        for (let i = 0; i < array.length-1; ++i) {
-            const j = Math.floor(Math.random() * (array.length));
-            [array[i], array[j]] = [array[j], array[i]];
+        function shuffleArray(array) {
+            for (let i = 0; i < array.length-1; ++i) {
+                const j = Math.floor(Math.random() * (array.length));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
         }
-        return array;
-        }
-        var title; var sh_quest; var sh_qr; var n; var fst; var q; var viewed; var nth; var ques; var svgcode; var arr = [];
-        let file = atob(new URLSearchParams(document.location.search.substring(1)).get("file"));
+        var title; var sh_quest; var sh_qr; var n; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = [];
+        var file = atob(new URLSearchParams(document.location.search.substring(1)).get("file"));
         async function loadModule(file) {
-  const response = await fetch('./' + file + '/info.txt');
-  const jsCode = await response.text();
-  const lst = jsCode.split("\n");
-  // You can now use the variables defined in js
-  title = eval(lst[0]);
-  sh_quest = eval(lst[1]);
-  sh_qr = eval(lst[2]);
-  n = eval(lst[3]);
-  fst = eval(lst[4]);
+            const response = await fetch('./' + file + '/info.txt');
+            const jsCode = await response.text();
+            const lst = jsCode.split("\n");
+            title = eval(lst[0]);
+            sh_quest = eval(lst[1]);
+            sh_qr = eval(lst[2]);
+            n = eval(lst[3]);
+            fst = eval(lst[4]);
 
-        q = true;
-        viewed = false;
-        nth = 0;
-ques = shuffleArray(n);
+            q = true;
+            viewed = false;
+            nth = 0;
 
-        
-document.getElementById('title').innerHTML = title;
-        if (sh_quest) {ques = shuffleArray(n);} else {ques = n;}
-        document.getElementById('flashcard').setAttribute('src', './' + file + '/Q'+ques[0]+'.svg');   
-    }
-        async function get_code(file, ques, type) {
-
-            var response = await fetch('./' + file + '/'+type+ques+'.svg');
-                svgcode = await response.text();
+            document.getElementById('title').innerHTML = title;
+            if (sh_quest) {shuffleArray(n);} 
         }
-
+        async function get_code(file, ques, type) {
+            var response = await fetch('./' + file + '/' + type + ques + '.svg');
+            svgcode = await response.text();
+        }
         async function fill_svg(file) {
             await loadModule(file);
             arr = new Array(2*n.length);
-            await get_code(file, ques[0], 'Q');
-            arr[2*ques[0]-2] = svgcode;
-            document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
-            await get_code(file, ques[0], 'R');
-            arr[2*ques[0]-1] = svgcode;
+            await get_code(file, n[0], 'Q');
+            arr[2*n[0]-2] = svgcode;
+            document.getElementById('flashcard').innerHTML = arr[2*n[0]-2];
+            await get_code(file, n[0], 'R');
+            arr[2*n[0]-1] = svgcode;
             for (let i = 1; i < n.length; i++) {
-                await get_code(file, ques[i], 'Q');
-                arr[2*ques[i]-2] = svgcode;
-                await get_code(file, ques[i], 'R');
-                arr[2*ques[i]-1] = svgcode;
-            
-                
+                await get_code(file, n[i], 'Q');
+                arr[2*n[i]-2] = svgcode;
+                await get_code(file, n[i], 'R');
+                arr[2*n[i]-1] = svgcode;
             }
         }
-
-        async function load(file) {
-            await fill_svg(file);
-            
-        }
-load(file);
-  
-
-
-  // Do something with the variables here
-// }
-//         fetch('./' + file + '/js')
-//   .then(response => response.text())
-//   .then(jsCode => {
-//     lst = jsCode.split("\n")
-//     // You can now use the variables defined in js
-//     title = eval(lst[0]);
-//     sh_quest = lst[1];
-//     sh_qr = lst[2];
-//     n = lst[3];
-//     fst = lst[4];
-// });
-
-        // System.import("./${file}/js").then(function(m) {
-        //     console.log(m.title);
-        //     console.log(m.n);
-        //     // access other variables as needed
-        // })
-        // // import {info} from "./${file}/js";
-
-        
-        
+        fill_svg(file);
         function reverse_card() {
             if (q) {
-                document.getElementById('flashcard').innerHTML = arr[2*ques[nth]-1];
+                document.getElementById('flashcard').innerHTML = arr[2*n[nth]-1];
                 document.getElementById('flip').innerHTML = 'Voir la question';
                 q = false;
                 viewed = true;
             } else {
-                document.getElementById('flashcard').innerHTML = arr[2*ques[nth]-2];
+                document.getElementById('flashcard').innerHTML = arr[2*n[nth]-2];
                 document.getElementById('flip').innerHTML = 'Voir la réponse';
                 q = true;
             }
@@ -140,7 +99,6 @@ load(file);
                 }
             }
         }
-
     </script>
 </head>
 <body>
