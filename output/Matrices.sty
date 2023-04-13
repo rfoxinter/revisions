@@ -44,10 +44,10 @@
     \def\oldddots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\raise3.5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
     \def\oldvdots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise3.5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
     \def\oldxdots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise3.5pt\hbox{$\mcdot$}\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
-    \newcommand{\mdots}{\raise1.5pt\hbox{$\oldmdots$}}
-    \renewcommand{\ddots}{\vcenter{\hbox{$\lower0.5pt\hbox{$\oldddots$}$}}}
-    \renewcommand{\vdots}{\vcenter{\hbox{$\lower0.5pt\hbox{$\oldvdots$}$}}}
-    \newcommand{\xdots}{\vcenter{\hbox{$\lower0.5pt\hbox{$\oldxdots$}$}}}
+    \newcommand{\mdots}{\raise0.5pt\hbox{$\oldmdots$}}
+    \renewcommand{\ddots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldddots$}$}}}
+    \renewcommand{\vdots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldvdots$}$}}}
+    \newcommand{\xdots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldxdots$}$}}}
     \newcommand{\tmatrix}[3]{
     \begin{tikzpicture}[baseline]
     \matrix (m) [
