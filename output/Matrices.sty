@@ -12,27 +12,56 @@
 \newcommand{\gl}[2]{\oldgl_{#1}\l#2\r}
 \usepackage{tikz}
 \usetikzlibrary{matrix}
-\DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
-\def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
-\def\oldddots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\raise5.5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
-\def\oldvdots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise5.5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
-\def\oldxdots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise5.5pt\hbox{$\mcdot$}\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
-\newcommand{\mdots}{\raise1.5pt\hbox{$\oldmdots$}}
-\renewcommand{\ddots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldddots$}$}}}
-\renewcommand{\vdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldvdots$}$}}}
-\newcommand{\xdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldxdots$}$}}}
-\newcommand{\tmatrix}[3]{
-\begin{tikzpicture}[baseline]
-\matrix (m) [
-        ampersand replacement=\&,
-        matrix of math nodes,
-        left delimiter=#1,
-        right delimiter=#3,
-        anchor=center,
-        minimum width=25pt,
-        minimum height=25pt,
-        row sep=5pt,
-        column sep=5pt,
-        inner sep=0pt
-    ] {#2};
-\end{tikzpicture}}
+\makeatletter
+\@ifclassloaded{beamer}{
+    \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
+    \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
+    \def\oldddots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\raise5.5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
+    \def\oldvdots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise5.5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \def\oldxdots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise5.5pt\hbox{$\mcdot$}\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \newcommand{\mdots}{\raise1.5pt\hbox{$\oldmdots$}}
+    \renewcommand{\ddots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldddots$}$}}}
+    \renewcommand{\vdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldvdots$}$}}}
+    \newcommand{\xdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldxdots$}$}}}
+    \newcommand{\tmatrix}[3]{
+    \begin{tikzpicture}[baseline]
+    \matrix (m) [
+            ampersand replacement=\&,
+            matrix of math nodes,
+            left delimiter=#1,
+            right delimiter=#3,
+            anchor=center,
+            minimum width=25pt,
+            minimum height=25pt,
+            row sep=5pt,
+            column sep=5pt,
+            inner sep=0pt
+        ] {#2};
+    \end{tikzpicture}}
+}{
+    \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
+    \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
+    \def\oldddots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\raise3.5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
+    \def\oldvdots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise3.5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \def\oldxdots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise3.5pt\hbox{$\mcdot$}\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \newcommand{\mdots}{\raise1.5pt\hbox{$\oldmdots$}}
+    \renewcommand{\ddots}{\vcenter{\hbox{$\lower0.5pt\hbox{$\oldddots$}$}}}
+    \renewcommand{\vdots}{\vcenter{\hbox{$\lower0.5pt\hbox{$\oldvdots$}$}}}
+    \newcommand{\xdots}{\vcenter{\hbox{$\lower0.5pt\hbox{$\oldxdots$}$}}}
+    \newcommand{\tmatrix}[3]{
+    \begin{tikzpicture}[baseline]
+    \matrix (m) [
+            ampersand replacement=\&,
+            matrix of math nodes,
+            left delimiter=#1,
+            right delimiter=#3,
+            anchor=center,
+            minimum width=15pt,
+            minimum height=15pt,
+            row sep=3.5pt,
+            column sep=3.5pt,
+            inner sep=0pt
+        ] {#2};
+    \end{tikzpicture}}
+}
+\makeatother
