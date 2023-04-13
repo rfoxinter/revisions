@@ -9,5 +9,6 @@ defaults:
   -
     scope:
       path: informatique/**
+      path: flashcards/**
     values:
       sitemap: false
