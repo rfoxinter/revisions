@@ -100,8 +100,8 @@
         }
         function new_card(corr) {
             if (nth + 1 == ques.length) {
+                if (!corr) {wrong.push(ques[nth]);}
                 nth += 1;
-                if (!corr) {wrong.push(nth);}
                 document.getElementById('flashcard').innerHTML = "Terminé";
                 document.getElementById('flip').disabled = true;
                 if (wrong.length > 0) {document.getElementById('incor').disabled = false;} else {document.getElementById('incor').disabled = true;}
@@ -134,8 +134,8 @@
                     reverse_card()
                 }
             } else {
+                if (!corr) {wrong.push(ques[nth]);}
                 nth += 1;
-                if (!corr) {wrong.push(nth);}
                 q = false;
                 viewed = false;
                 qr = [0, 1];
