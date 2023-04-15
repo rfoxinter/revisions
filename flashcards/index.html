@@ -29,9 +29,15 @@
                 const j = Math.floor(Math.random() * (array.length));
                 [array[i], array[j]] = [array[j], array[i]];
             }
-            return array;
         }
-        var title; var sh_quest; var sh_qr; var n; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = [];
+        function copyArray(array) {
+            var cparr = new Array(array.length)
+            for (let i = 0; i < array.length; ++i) {
+                cparr[i] = array[i];
+            }
+            return cparr;
+        }
+        var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = []; var qr = [0, 1];
         var file = atob(new URLSearchParams(document.location.search.substring(1)).get("file"));
         async function loadModule(file) {
             const response = await fetch('./' + file + '/info.txt');
@@ -47,8 +53,11 @@
             viewed = false;
             nth = 0;
 
+            document.title = title.replace('&ndash', '-').replace('<i>', '').replace('</i>', '');
+            ques = copyArray(n);
+
             document.getElementById('title').innerHTML = title;
-            if (sh_quest) {shuffleArray(n);} 
+            if (sh_quest) {shuffleArray(ques);} 
         }
         async function get_code(file, ques, type) {
             var response = await fetch('./' + file + '/' + type + ques + '.svg');
@@ -57,47 +66,81 @@
         async function fill_svg(file) {
             await loadModule(file);
             arr = new Array(2*n.length);
-            await get_code(file, n[0], 'Q');
-            arr[2*n[0]-2] = svgcode;
-            document.getElementById('flashcard').innerHTML = arr[2*n[0]-2];
-            await get_code(file, n[0], 'R');
-            arr[2*n[0]-1] = svgcode;
+            await get_code(file, ques[0], 'Q');
+            arr[2*ques[0]-2] = svgcode;
+            document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
+            await get_code(file, ques[0], 'R');
+            arr[2*ques[0]-1] = svgcode;
             for (let i = 1; i < n.length; i++) {
-                await get_code(file, n[i], 'Q');
-                arr[2*n[i]-2] = svgcode;
-                await get_code(file, n[i], 'R');
-                arr[2*n[i]-1] = svgcode;
+                await get_code(file, ques[i], 'Q');
+                arr[2*ques[i]-2] = svgcode;
+                await get_code(file, ques[i], 'R');
+                arr[2*ques[i]-1] = svgcode;
             }
         }
         fill_svg(file);
         function reverse_card() {
             if (q) {
-                document.getElementById('flashcard').innerHTML = arr[2*n[nth]-1];
+                document.getElementById('flashcard').innerHTML = arr[2*ques[nth]-2+qr[Number(q)]];
                 document.getElementById('flip').innerHTML = 'Voir la question';
                 q = false;
                 viewed = true;
             } else {
-                document.getElementById('flashcard').innerHTML = arr[2*n[nth]-2];
+                document.getElementById('flashcard').innerHTML = arr[2*ques[nth]-2+qr[Number(q)]];
                 document.getElementById('flip').innerHTML = 'Voir la réponse';
                 q = true;
             }
             if (viewed) {
-                document.getElementById('next').disabled = false;
+                document.getElementById('incor').disabled = false;
+                document.getElementById('corr').disabled = false;
             } else {
-                document.getElementById('next').disabled = true;
+                document.getElementById('incor').disabled = true;
+                document.getElementById('corr').disabled = true;
             }
         }
-        function new_card() {
-            if (viewed) {
+        function new_card(corr) {
+            if (nth + 1 == ques.length) {
                 nth += 1;
+                if (!corr) {wrong.push(nth);}
+                document.getElementById('flashcard').innerHTML = "Terminé";
+                document.getElementById('flip').disabled = true;
+                if (wrong.length > 0) {document.getElementById('incor').disabled = false;} else {document.getElementById('incor').disabled = true;}
+                document.getElementById('corr').disabled = false;
+                document.getElementById('incor').innerText = "Revoir";
+                document.getElementById('corr').innerText = "Recommencer";
+            } else if (nth + 1 > ques.length) {
+                document.getElementById('flip').disabled = false;
+                document.getElementById('incor').innerText = "Réponse incorrecte";
+                document.getElementById('corr').innerText = "Réponse correcte";
+                if (!corr) {
+                    ques = copyArray(wrong);
+                    shuffleArray(ques);
+                    wrong = [];
+                    nth = 0;
+                    q = false;
+                    viewed = false;
+                    qr = [0, 1];
+                    if (sh_qr && !fst[ques[nth]-1]) {shuffleArray(qr);}
+                    reverse_card()
+                } else {
+                    ques = copyArray(n);
+                    shuffleArray(ques);
+                    wrong = [];
+                    nth = 0;
+                    q = false;
+                    viewed = false;
+                    qr = [0, 1];
+                    if (sh_qr && !fst[ques[nth]-1]) {shuffleArray(qr);}
+                    reverse_card()
+                }
+            } else {
+                nth += 1;
+                if (!corr) {wrong.push(nth);}
                 q = false;
                 viewed = false;
+                qr = [0, 1];
+                if (sh_qr && !fst[ques[nth]-1]) {shuffleArray(qr);}
                 reverse_card();
-                if (nth >= n.length) {
-                    document.getElementById('flashcard').innerHTML = "Terminé";
-                document.getElementById('next').disabled = true;
-                document.getElementById('flip').disabled = true;
-                }
             }
         }
     </script>
@@ -113,11 +156,12 @@
                 <span id="flashcard" style="scale: 2.5; max-width: 40%;"></span>
             </span>
         </p>
-        <p>
-            <button id="flip" onclick="reverse_card()" style="position: relative; left: 15vw;">Voir la réponse</button><button id="next" onclick="new_card()" style="position: relative; left: calc(100% - 65vw);" disabled>Question suivante</button>
+        <p style="text-align: center;">
+            <button id="flip" onclick="reverse_card()">Voir la réponse</button>
         </p>
-          
-        
+        <p>
+            <button id="incor" onclick="new_card(false)" style="position: relative; left: 15vw; color: #EC7063;" disabled>Réponse incorrecte</button><button id="corr" onclick="new_card(true)" style="position: relative; left: calc(100% - 65vw); color: #159957;" disabled>Réponse correcte</button>
+        </p>
     </main>
     <footer class="site-footer">
         <a href="./MP2I/"><img src="https://rfoxinter.github.io/bac/English/home.svg" class="home" alt="home"></a>
