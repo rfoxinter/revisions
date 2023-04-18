@@ -6,7 +6,7 @@ Développement de Taylor de $f$;;$P\l x\r=\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^
 Reste de Taylor à l'ordre $n$;;$R_n\l x\r=f\l x\r-\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}$
 Formule de Taylor-Young à l'ordre $n$ au point $x_0$;;$\eg[x\to x_0]{f\l x\r}{\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}}$\linebreak${}+\o{\l x-x_0\r^n}$
 Développement limité de $\exp{x}$;;$\eg[x\to0]{\e^x}{\sum{k=0}{n}{\frac{x^k}{k!}}+\o{x^n}}$
-Développement limité de $\ln{1+x}$;;$\eg[x\to0]{\ln{1+x}}{\sum{k=0}{n}{\l-1\r^{k-1}\frac{x^k}{k}}+\o{x^n}}$
+Développement limité de $\ln{1+x}$;;$\eg[x\to0]{\ln{1+x}}{\sum{k=1}{n}{\l-1\r^{k-1}\frac{x^k}{k}}+\o{x^n}}$
 Développement limité de $\sin{x}$;;$\eg[x\to0]{\sin{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$
 Développement limité de $\cos{x}$;;$\eg[x\to0]{\cos{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k}}{\l2k\r!}}+\o{x^{2n+1}}}$
 Développement limité de $\tan{x}$;;$\eg[x\to0]{\tan{x}}{x+\frac{x^3}{3}+\frac{2x^5}{15}+\o{x^6}}$
@@ -15,8 +15,8 @@ Développement limité de $\sh{x}$;;$\eg[x\to0]{\sh{x}}{\sum{k=0}{n}{\frac{x^{2k
 Développement limité de $\ch{x}$;;$\eg[x\to0]{\ch{x}}{\sum{k=0}{n}{\frac{x^{2k}}{\l2k\r!}}+\o{x^n}}$
 Développement limité de $\th{x}$;;$\eg[x\to0]{\th{x}}{x-\frac{x^3}{3}+\frac{2x^5}{15}+\o{x^6}}$
 Développement limité de $\l1+x\r^\alpha$;;$\eg[x\to0]{\l1+x\r^\alpha}{\sum{k=0}{n}{\frac{\oldprod\limits_{j=0}^{k-1}\l\alpha-j\r}{k!}x^k}+\o{x^n}}$
-Développement limité de $\frac{1}{1+x}$;;$\eg[x\to0]{\frac{1}{1+x}}{1+\sum{k=0}{n}{\l-1\r^kx^k}+\o{x^n}}$
-Développement limité de $\frac{1}{1-x}$;;$\eg[x\to0]{\frac{1}{1-x}}{1+\sum{k=0}{n}{x^k}+\o{x^n}}$
+Développement limité de $\frac{1}{1+x}$;;$\eg[x\to0]{\frac{1}{1+x}}{\sum{k=0}{n}{\l-1\r^kx^k}+\o{x^n}}$
+Développement limité de $\frac{1}{1-x}$;;$\eg[x\to0]{\frac{1}{1-x}}{\sum{k=0}{n}{x^k}+\o{x^n}}$
 Développement limité de $\sqrt{1+x}$;;$\eg[x\to0]{\sqrt{1+x}}{1+\frac{x}{2}-\frac{x^2}{8}+\frac{x^3}{16}+\o{x^3}}$
 Développement limité de $\frac{1}{\sqrt{1+x}}$;;$\eg[x\to0]{\frac{1}{\sqrt{1+x}}}{1-\frac{x}{2}+\frac{3x^2}{8}-\frac{5x^3}{16}+\o{x^3}}$
 Développement limité (définition)\linebreak$P_n\in\mathbb R\left[X\right]$;;$\eg[x\to x_0]{f\l x\r}{P_n\l x\r+\o{\l x-x_0\r^n}}$
