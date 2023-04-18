@@ -4,14 +4,15 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath, amsfonts, amssymb}
+\usepackage{stmaryrd}
 \usepackage{xcolor}
 \setbeamertemplate{navigation symbols}{}
 \usefonttheme{serif}
 \setbeamerfont{title}{series=\bfseries,family=\sffamily,size=\Huge,parent=structure}
 \renewcommand\l{\left(}
 \renewcommand\r{\right)}
-\newcommand\llb{\left[\!\left[}
-\newcommand\rrb{\right]\!\right]}
+\newcommand{\llb}{\left\llbracket}
+\newcommand{\rrb}{\right\rrbracket}
 \let\oldleft\left
 \renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
 \let\oldright\right

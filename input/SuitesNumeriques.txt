@@ -2,7 +2,7 @@ Analyse -- Suites numériques
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{bigoperators}\newcommand\N{\mathbb{N}}\newcommand\R{\mathbb{R}}\let\olddeg\deg\renewcommand\deg[1]{\olddeg\l#1\r}%\usepackage{analyse}
-Si $\l u_n\r$ et $\l v_n\r$ sont adjacentes et de limite $l$;;$\forall n\in\N$, $\left|v_n-l\right|\leqslant\left|v_n-u_n\right|$
+Si $\l u_n\r$ et $\l v_n\r$ sont adjacentes et de limite $l$\linebreak Inégalité entre la différences des termes des suites et la limite;;$\forall n\in\N$, $\left|v_n-l\right|\leqslant\left|v_n-u_n\right|$
 Critère spécial de convergence des séries alternée;;$\l\sum{n=0}{N}{\l-1\r^na_n}\r_{n\in\N}$ admet une limite finie quand $N$ tend vers $+\infty$\linebreak\linebreak$\left|\sum{n=N+1}{+\infty}{\l-1\r^na_n}\right|\leqslant a_{N+1}$
 L'ensemble $X$ est dense dans $\R$;;$\forall x\in\R$, il existe une suite $\l u_n\r$ d'éléments de $X$ tel que $\l u_n\r$ converge vers $x$
 Un sous-ensemble $F$ est fermé;;Toute suite convergente d'éléments de $F$ converge vers une limite $l\in F$
