@@ -61,47 +61,6 @@ def output_f(files:list) -> list:
         ret.append(dest)
     return ret
 
-# def recompile(dest:str) -> bool:
-#     fail = False
-#     c(d(__file__))
-#     c(d('output/'))
-#     files = [i for i in sorted(l('.')) if sp(i)[1]=='.tex']
-#     output = [dest for i in files] if dest != 'default' else output_f(files)
-#     for i in range(len(files)):
-#         c(d(__file__))
-#         c(d('output/'))
-#         ttle = files[i].replace('.tex', '')
-#         dest = output[i]
-#         print('Compilation in progress [' + str(i + 1) + '/' + str(len(files)) + ']\nCompilation of [' + files[i] + ']\n')
-#         out = rn('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout
-#         if 'Command for \'pdflatex\' gave return code 1' in out:
-#             print(out + '\n')
-#             fail = True
-#         elif not 'Output written on' in out:
-#             out = rn('pdflatex -interaction=nonstopmode -file-line-error ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True, check = True).stdout
-#             if 'Command for \'pdflatex\' gave return code 1' in out:
-#                 print(out + '\n')
-#                 fail = True
-#         if e('../flcrd.pdf'):
-#             rem('../flcrd.pdf')
-#         ext = ['.aux', '.fdb_latexmk', '.fls', '.log', '.nav', '.out', '.snm', '.synctex.gz', '.toc']
-#         for i in ext:
-#             try:
-#                 rem(ttle + i)
-#             except OSError:
-#                 pass
-#         c('../')
-#         if not e(dest):
-#             try:
-#                 m(dest)
-#             except OSError:
-#                 fail = True
-#         try:
-#             ren('output/flcrd.pdf', dest + ttle + '.pdf')
-#         except:
-#             fail = True
-#     return fail
-
 def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
     c(d(__file__))
     qr = ['Q', 'R']
@@ -172,7 +131,6 @@ def recompile(dest:str) -> bool:
     fail = False
     files = sorted(l('input/'))
     olddest = dest
-    print(files)
     for f in files:
         f = f.replace('.txt','')
         c(d(__file__))
