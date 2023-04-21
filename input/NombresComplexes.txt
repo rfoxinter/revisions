@@ -39,8 +39,9 @@ $\sin{\frac{\pi}{2}-x}$;;$\cos{x}$
 $\l\overrightarrow{AC},\overrightarrow{AB}\r$;;$\arg\l\frac{z_B-z_A}{z_C-z_A}\r$
 Translation d'un vecteur $\vec{u}$ d'affixe $z_u$;;$z\mapsto z+z_u$
 Rotation de centre $A$ d'affixe $z_A$ et d'angle $\theta$;;$z\mapsto \e^{\i\theta}\l z-z_A\r+z_A$
-Homothétie de centre $A$ et de rapport $\lambda$;;$z\mapsto \lambda\l z-z_A\r+z_A$
+Homothétie de centre $A$ d'affixe $z_A$ et de rapport $\lambda$;;$z\mapsto \lambda\l z-z_A\r+z_A$
 Symétrie orthogonale d'axe $D$, une droite passant par $A$ d'affixe $z_A$ et dirigée par $\vec{u}$ d'affixe $z_u$;;$z\mapsto z_u^2\l\bar{z}-\bar{z_A}\r+z_A$
 $\e^{\i x}+\e^{-\i x}$;;$2\cos{x}$
 $\e^{\i x}-\e^{-\i x}$;;$2\i\sin{x}$
 Valeurs remarquables;;\setcolrow{6}{5}\begin{tikzpicture}[ampersand replacement=\&] \matrix (mat) [table] { \&$0$\&$\oldfrac{\pi}{6}$\&$\oldfrac{\pi}{4}$\&$\oldfrac{\pi}{3}$\&$\oldfrac{\pi}{2}$ \\ $\oldsin$\&$0$\&$\oldfrac{1}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{\sqrt{3}}{2}$\&$1$\\ $\oldcos$\&$1$\&$\oldfrac{\sqrt{3}}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{1}{2}$\&$0$\\ $\oldtan$\&$0$\&$\oldfrac{1}{\sqrt{3}}$\&$1$\&$\sqrt{3}$\&--\\ $\oldcot$\&--\&$\sqrt{3}$\&$1$\&$\oldfrac{1}{\sqrt{3}}$\&$0$\\ }; \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2); \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10); \draw [line width=0.5mm] (-5cm,-3.25cm) rectangle (5cm,3.25cm);\end{tikzpicture}
+Équation de cercle;;$z\bar{z}+\alpha z+\bar{\alpha}\bar{z}+\beta=0$, $\l\alpha,\beta\r\in\mathbb{C}\times\mathbb{R}$\linebreak Le cercle est vide si et seulement si $\beta>\alpha\bar\alpha$\linebreak$c=-\bar{\alpha}$, $r=\sqrt{\alpha\bar\alpha+\beta}$
