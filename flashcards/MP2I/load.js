@@ -70,7 +70,6 @@ function display_files(sitemap){
                 p.setAttribute('id', name_tmp);
                 var a = document.createElement('a');
                 a.setAttribute('href', '../?file=' + btoa(name_tmp));
-                a.setAttribute('target', '_blank');
                 span = document.createElement('span');
                 span.setAttribute('class','material-symbols-rounded');
                 span.innerHTML = 'open_in_new';
@@ -84,7 +83,6 @@ function display_files(sitemap){
             p.innerHTML = filename + ' ';
             var a = document.createElement('a');
             a.setAttribute('href', '../?file=' + btoa(f));
-            a.setAttribute('target', '_blank');
             span = document.createElement('span');
             span.setAttribute('class','material-symbols-rounded');
             span.innerHTML = 'open_in_new';
