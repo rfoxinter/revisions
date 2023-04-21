@@ -63,6 +63,7 @@ def output_f(files:list) -> list:
 
 def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
     c(d(__file__))
+    fail = False
     qr = ['Q', 'R']
     fst = []
     sh_quest, sh_qr, defs = b(r[1]), b(r[2]), r[3]
@@ -75,7 +76,8 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
     print('Compilation in progress' + num + '\n')
     for i in range(len(r)):
         for j in range(2):
-            file = '''\\documentclass[12pt]{standalone}
+            noborder = 'tikzpicture' in r[i][j]
+            file = '''\\documentclass[12pt''' + (',border=0.5pt' if not noborder else '') + ''']{standalone}
 \\usepackage{htmlpreambule}
 ''' + defs + '''
 \\begin{document}
@@ -96,7 +98,6 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
             f.write(file)
             f.close()
             c('output/')
-            fail = False
             output = rn('latex -interaction=nonstopmode -file-line-error flcrd', shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout
             if 'Command for \'latex\' gave return code 1' in output:
                 print(output + '\n')
@@ -107,7 +108,7 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
                     rem('flcrd' + k)
                 except OSError:
                     pass
-            _ = rn('dvisvgm --font-format=woff2 flcrd.dvi -o ' + ttle + qr[j] + str(i + 1) + '.svg', shell = True, stdout = PIPE, stderr = PIPE, text = True, check = True).stdout
+            _ = rn('dvisvgm --font-format=woff2 flcrd.dvi ' + ('--bbox=papersize' if not noborder else '') + ' -o ' + ttle + qr[j] + str(i + 1) + '.svg', shell = True, stdout = PIPE, stderr = PIPE, text = True, check = True).stdout
             rem('flcrd.dvi')
             rem('flcrd.tex')
             c('../')
