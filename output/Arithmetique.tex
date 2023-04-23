@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\let\oldmax\max\renewcommand\max[2][]{\oldmax_{#1}\l#2\r}\let\oldmin\min\renewcommand\min[2][]{\oldmin_{#1}\l#2\r}\let\oldsup\sup\renewcommand\sup[2][]{\oldsup_{#1}\l#2\r}\let\oldinf\inf\renewcommand\inf[2][]{\oldinf_{#1}\l#2\r}\newcommand{\cgr}[3]{#1\equiv#2\ \left[#3\right]}\usepackage{bigoperators}\usepackage{matrices}\renewcommand\phi\varphi
+\let\oldmax\max\renewcommand\max[2][]{\oldmax_{#1}\l#2\r}\let\oldmin\min\renewcommand\min[2][]{\oldmin_{#1}\l#2\r}\let\oldsup\sup\renewcommand\sup[2][]{\oldsup_{#1}\l#2\r}\let\oldinf\inf\renewcommand\inf[2][]{\oldinf_{#1}\l#2\r}\usepackage{arithmetique}\usepackage{bigoperators}\usepackage{matrices}
 \hypersetup{pdftitle=Algèbre 1 -- Arithmétique}
 \title{Algèbre 1\\\emph{Arithmétique}}
 \author{}
@@ -10,28 +10,30 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Théorème de Fermat}{1/12}
-\slider{$p\in\mathbb P,\;a\in\mathbb N,\;\cgr{a^p}{a}{p}$\linebreak Si $p$ ne divise pas $a$, $\cgr{a^{p-1}}{1}{p}$}{1/12}
-\slideq{Lemme d'Euclide}{2/12}
-\slider{Si $a\mid bc$ et $a\in\mathbb P$, alors $a\mid b\vee a\mid c$\linebreak Si $a\wedge b=1$ et $a\wedge c=1$, alors $a\wedge bc=1$}{2/12}
-\slideq{Formule de Legendre}{3/12}
-\slider{$v_p\l n!\r=\sum{k=1}{+\infty}{\left\lfloor\frac n{p^k}\right\rfloor}$}{3/12}
-\slideq{$a\wedge b$}{4/12}
-\slider{$\max{\left\{n\in\mathbb N\;\vert\;n\mid a\wedge n\mid b\right\}}$\linebreak$\max[\l\mathbb N^*,\vert\r]{\left\{n\in\mathbb N\;\vert\;n\mid a\wedge n\mid b\right\}}$\linebreak$\inf[\l\mathbb N^*,\vert\r]{a,b}$\linebreak$a\mathbb Z+b\mathbb Z$\linebreak$\l a\r+\l b\r$ pour un anneau principal}{4/12}
-\slideq{Théorème des restes chinois\linebreak\linebreak\tmatrix\{{\cgr{x}{b_1}{a_1} \\ \vdots \\ \cgr{x}{b_n}{a_n} \\}.\linebreak\line$\forall i\in\llb1,n\rrb,\;\forall j\in\llb1,n\rrb\setminus\left\{i\right\},\;a_i\wedge a_j=1$}{5/12}
-\slider{$\widehat{a_i}=\prod{j\in\llb1,n\rrb\setminus\left\{i\right\}}{}{a_j}$\linebreak\linebreak$a_iu_i+\widehat{a_i}v_i=1$\linebreak\linebreak$\cgr{x}{\sum{i=1}{n}{b_iv_i\widehat{a_i}}}{\prod{i=1}{n}{a_i}}$}{5/12}
-\slideq{Lemme de Gauss}{6/12}
-\slider{Si $a\mid bc$ et $a\wedge b=1$, alors $a\mid c$}{6/12}
-\slideq{Théorème d'Euler}{7/12}
-\slider{$n\in\mathbb N,\;x\in\mathbb N^*,\;\cgr{x^{\phi\l n\r}}{1}{n}$}{7/12}
-\slideq{$a\vee b$}{8/12}
-\slider{$\min{\left\{n\in\mathbb N\;\vert\;a\mid n\wedge b\mid n\right\}}$\linebreak$\max[\l\mathbb N^*,\vert\r]{\left\{n\in\mathbb N\;\vert\;a\mid n\wedge b\mid n\right\}}$\linebreak$\sup[\l\mathbb N^*,\vert\r]{a,b}$\linebreak$a\mathbb Z\cap b\mathbb Z$\linebreak$\l a\r\cap\l b\r$ pour un anneau principal}{8/12}
-\slideq{Relation entre $\wedge$ et $\vee$}{9/12}
-\slider{$\l a\wedge b\r\l a\vee b\r=ab$}{9/12}
-\slideq{$\phi(n)$}{10/12}
-\slider{$\left|\l\mathbb Z/n\mathbb Z\r^\times\right|$}{10/12}
-\slideq{Divisibilité avec le produit}{11/12}
-\slider{Si $a\wedge b=1$, $a\mid c\wedge b\mid c$, alors $ab\mid c$}{11/12}
-\slideq{Anneau euclidien}{12/12}
-\slider{Si $\mathbb A$ est un anneau intègre, avec un stathme ($v\!:\!\mathbb A\setminus\left\{0\right\}\to\mathbb N$)\linebreak$A$ est euclidien si $\forall a\in\mathbb A,\;\forall b\in\mathbb A\setminus\left\{0\right\}\;\exists\l q,r\r\in\mathbb A^2,\;a=bq+r$\linebreak$r=0\vee v\l r\r<v\l b\r$}{12/12}
+\slideq{Distributivité de $\times$ sur $\wedge$ et $\vee$}{1/13}
+\slider{Si $a\neq0$ et $b\neq0$\linebreak$\l a\wedge b\r\times c=\l ac\r\wedge\l bc\r$\linebreak$\l a\vee b\r\times c=\l ac\r\vee\l bc\r$}{1/13}
+\slideq{Formule de Legendre}{2/13}
+\slider{$v_p\l n!\r=\sum{k=1}{+\infty}{\left\lfloor\frac n{p^k}\right\rfloor}$}{2/13}
+\slideq{Théorème d'Euler}{3/13}
+\slider{$n\in\mathbb N,\;x\in\mathbb N^*,\;\cgr{x^{\phi\l n\r}}{1}{n}$}{3/13}
+\slideq{Lemme de Gauss}{4/13}
+\slider{Si $a\div bc$ et $a\wedge b=1$, alors $a\div c$}{4/13}
+\slideq{Anneau euclidien}{5/13}
+\slider{Si $\mathbb A$ est un anneau intègre, avec un stathme ($v\!:\!\mathbb A\setminus\left\{0\right\}\to\mathbb N$)\linebreak$A$ est euclidien si $\forall a\in\mathbb A,\;\forall b\in\mathbb A\setminus\left\{0\right\}\;\exists\l q,r\r\in\mathbb A^2,\;a=bq+r$\linebreak$r=0\vee v\l r\r<v\l b\r$}{5/13}
+\slideq{$a\wedge b$}{6/13}
+\slider{$\max{\left\{n\in\mathbb N\;\vert\;n\div a\wedge n\div b\right\}}$\linebreak$\max[\l\mathbb N^*,\div\r]{\left\{n\in\mathbb N\;\vert\;n\div a\wedge n\div b\right\}}$\linebreak$\inf[\l\mathbb N^*,\div\r]{a,b}$\linebreak$a\mathbb Z+b\mathbb Z$\linebreak$\l a\r+\l b\r$ pour un anneau principal}{6/13}
+\slideq{Divisibilité avec le produit}{7/13}
+\slider{Si $a\wedge b=1$, $a\div c\wedge b\div c$, alors $ab\div c$}{7/13}
+\slideq{Théorème des restes chinois\linebreak\linebreak\tmatrix\{{\cgr{x}{b_1}{a_1} \\ \vdots \\ \cgr{x}{b_n}{a_n} \\}.\linebreak\linebreak$\forall i\in\llb1,n\rrb,\;\forall j\in\llb1,n\rrb\setminus\left\{i\right\},\;a_i\wedge a_j=1$}{8/13}
+\slider{$\widehat{a_i}=\prod{j\in\llb1,n\rrb\setminus\left\{i\right\}}{}{a_j}$\linebreak\linebreak$a_iu_i+\widehat{a_i}v_i=1$\linebreak\linebreak$\cgr{x}{\sum{i=1}{n}{b_iv_i\widehat{a_i}}}{\prod{i=1}{n}{a_i}}$}{8/13}
+\slideq{$a\vee b$}{9/13}
+\slider{$\min{\left\{n\in\mathbb N\;\vert\;a\div n\wedge b\div n\right\}}$\linebreak$\max[\l\mathbb N^*,\div\r]{\left\{n\in\mathbb N\;\vert\;a\div n\wedge b\div n\right\}}$\linebreak$\sup[\l\mathbb N^*,\div\r]{a,b}$\linebreak$a\mathbb Z\cap b\mathbb Z$\linebreak$\l a\r\cap\l b\r$ pour un anneau principal}{9/13}
+\slideq{Lemme d'Euclide}{10/13}
+\slider{Si $a\div bc$ et $a\in\mathbb P$, alors $a\div b\vee a\div c$\linebreak Si $a\wedge b=1$ et $a\wedge c=1$, alors $a\wedge bc=1$}{10/13}
+\slideq{Théorème de Fermat}{11/13}
+\slider{$p\in\mathbb P,\;a\in\mathbb N,\;\cgr{a^p}{a}{p}$\linebreak Si $p$ ne divise pas $a$, $\cgr{a^{p-1}}{1}{p}$}{11/13}
+\slideq{$\phi(n)$}{12/13}
+\slider{$\left|\l\mathbb Z/n\mathbb Z\r^\times\right|$}{12/13}
+\slideq{Relation entre $\wedge$ et $\vee$}{13/13}
+\slider{$\l a\wedge b\r\l a\vee b\r=ab$}{13/13}
 \end{document}
