@@ -1,5 +1,17 @@
 Algèbre 2 -- Algèbre linéaire
 Shuffle questions : True
 Q/R & R/Q : False
-%packages
+\usepackage{al}\usepackage{bigoperators}
 Un ensemble $E$ est un espace vectoriel sur $\mathbb K$\linebreak$E$ est un $\mathbb K$-ev;;$\l E,+\r$ est un groupe abélien\linebreak$E$ est muni d'une loi de composition externe $\cdot$ avec $\forall\l\lambda,\mu,x,y\r\in\mathbb K^2\times E^2$\linebreak$\l \lambda\mu\r x=\lambda\l\mu x\r$ (associativité externe ou pseudo-associativité)\linebreak$1_{\mathbb K} x=x$ (compatibilité du neutre de $\l \mathbb K,\times\r$)\linebreak$\lambda\l x+y\r=\lambda x+\lambda y$ (distributivité de $\cdot$ sur $+_{\scriptscriptstyle E}$)\linebreak$\l \lambda+\mu\r x=\lambda x+\mu x$ (distributivité de $\cdot$ sur $+_{\scriptscriptstyle\mathbb K}$)
+Si $E$ est un $\mathbb K$-ev\linebreak Un sous-ensemble $F$ de $E$ est un sous-espace vectoriel de $E$;;$F$ est stable par les lois $+$ et $\cdot$ et les lois induites définissent sur $F$ une structure d'espace-vectoriel
+Si $E$ est un espace vectoriel et $F\subset E$\linebreak Caractérisation(s) des sous-espaces vectoriels;;$0\in F$\linebreak$\forall\l x,y,\lambda\r\in F^2\times\mathbb K, \lambda x+y\in F$
+Si $E$ est un $\mathbb K$-ev et $X\subset E$\linebreak$\vect X$;;Plus petit sous-espace vectoriel de $E$ contenant $X$
+$\vect X+\vect Y$;;$\vect{X\cup Y}$
+Somme directe;;$E\oplus F$ est directe si et seulement si $E\cap F=\left\{0\right\}$
+Famille libre de $E$;;$\forall\l\lambda_i\r_{i\in I},\;\sum{i\in I}{}{\lambda_ix_i}=0\Rightarrow\forall i\in I,\;\lambda_i=0$\linebreak$\forall x\in E\;\exists!\l \lambda_i\r_{i\in I},\;x=\sum{i\in I}{}{\lambda_ix_i}$
+Famille génératrice de $E$;;$\forall x\in E\;\exists\l \lambda_i\r_{i\in I},\;x=\sum{i\in I}{}{\lambda_ix_i}$\linebreak$\vect{\l x_i\r_{i\in I}}=E$
+Base de $E$;;Famille libre maximale de $E$\linebreak Famille génératrice minimale de $E$
+Soit $E$ et $F$ deux $\mathbb K$-ev\linebreak$f\!:\!E\to F$ est une application linéaire;;$\forall\l\lambda,x\r\in\mathbb K\times E,\;f\l\lambda x\r=\lambda f\l x\r$\linebreak$\forall\l x,y\r\in E^2,\; f\l x+y\r=f\l x\r+f\l y\r$
+Soit $E$ et $F$ deux $\mathbb K$-ev\linebreak Caractérisation des applications linéaires;;$\forall\l\lambda,x,y\r\in\mathbb K\times E^2,\;f\l\lambda x+y\r=\lambda f\l x\r+f\l y\r$
+Structure de $\al EF$;;$\mathbb{K}$-ev
+$\varphi\!:\!E\times F\to G$ est bilinéaire;;$\forall\l x,x',y,y',\lambda\r\in E^2\times F^2\times\mathbb K$\linebreak$\varphi\l\lambda x+x',y\r=\lambda\varphi\l x\r+\varphi\l y\r$\linebreak$\varphi\l x,\lambda y+y'\r=\lambda\varphi\l x,y\r+\varphi\l x,y'\r$
