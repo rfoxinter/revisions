@@ -7,5 +7,13 @@
 \newcommand{\al}[2]{\def\argII{,#2}\ifx&#2&\def\argII{}\fi\mathcal{L}\l#1\argII\r}
 \let\oplus\relax
 \let\oplus\varoplus
-\let\gl\relax
-\newcommand{\gl}[1]{\oldgl\l#1\r}
+\let\matgl\gl
+\renewcommand{\gl}[1]{\oldgl\l#1\r}
+\let\olddim\dim
+\renewcommand{\dim}[1]{\olddim\l#1\r}
+\DeclareMathOperator{\oldrg}{rg}
+\newcommand{\rg}[1]{\oldrg\l#1\r}
+\DeclareMathOperator{\oldmat}{Mat}
+\newcommand{\almat}[3]{\def\argIII{,#3}\ifx&#3&\def\argIII{}\fi\oldmat_{#2\argIII}\l#1\r}
+\newcommand\lc{\left[}
+\newcommand\rc{\right]}
