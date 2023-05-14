@@ -19,4 +19,4 @@ $\almat u\b{}$ est inversible;;$u\in\gl E$\linebreak La réciproque est vraie
 Conservation de l'image et du noyau pour les matrices;;$M\in\mat npK$, $P\in\matgl nK$, $Q\in\matgl nK$\linebreak$\ker{PM}=\ker M$\linebreak$\im{MQ}=\im M$
 Conservation du rang pour les matrices;;$M\in\mat npK$, $P\in\matgl nK$, $Q\in\matgl nK$\linebreak$\rg{PMQ}=\rg M$
 Matrice de passage;;$P_{\b_1}^{\b_2}=\almat \id{\b_2}{\b_1}=\lc\b_2\rc_{\b_1}$
-Formule de changement de base;;$\b_1$, $\b_2$ des bases de $E$, $\c_1$, $\c_2$ des bases de $F$\linebreak$\almat f{\b_2}{\c_2}=P_{\c_2}^{\c_1}\almat f{\c_1}{\b_1}P_{\b_1}^{\b_2}$\linebreak${}=\l P_{\c_1}^{\c_2}\r^{-1}\almat f{\c_1}{\b_1}P_{\b_1}^{\b_2}$
+Formule de changement de base;;$\b_1$, $\b_2$ des bases de $E$, $\c_1$, $\c_2$ des bases de $F$\linebreak$\almat f{\b_2}{\c_2}=P_{\c_2}^{\c_1}\almat f{\b_1}{\c_1}P_{\b_1}^{\b_2}$\linebreak${}=\l P_{\c_1}^{\c_2}\r^{-1}\almat f{\b_1}{\c_1}P_{\b_1}^{\b_2}$
