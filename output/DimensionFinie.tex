@@ -1,0 +1,49 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{al}\usepackage{bigoperators}\DeclareMathOperator{\oldim}{Im}\newcommand{\im}[1]{\oldim\l#1\r}\let\oldmin\min\renewcommand{\min}[1]{\oldmin\l#1\r}\let\oldker\ker\renewcommand{\ker}[1]{\oldker\l#1\r}\renewcommand\b{\mathcal{B}}\renewcommand\c{\mathcal{C}}\renewcommand\d{\mathcal{D}}\DeclareMathOperator{\id}{id}
+\hypersetup{pdftitle=Algèbre 2 -- Dimension finie}
+\title{Algèbre 2\\\emph{Dimension finie}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Matrice de passage}{1/18}
+\slider{$P_{\b_1}^{\b_2}=\almat \id{\b_2}{\b_1}=\lc\b_2\rc_{\b_1}$}{1/18}
+\slideq{Matrice associée à une composition}{2/18}
+\slider{$\almat{g\circ f}\b\d=\almat g\c\d\times\almat f\b\c$}{2/18}
+\slideq{Dimension d'une somme directe}{3/18}
+\slider{$\dim{\bigop{i=1}n{E_i}}=\sum{i=1}n{\dim{E_i}}$}{3/18}
+\slideq{$\almat u\b{}$ est inversible}{4/18}
+\slider{$u\in\gl E$\linebreak La réciproque est vraie}{4/18}
+\slideq{Rang d'une famille}{5/18}
+\slider{$\rg{x_1,\cdots,x_n}=\dim{\vect{x_1,\cdots,x_n}}$}{5/18}
+\slideq{Produit matriciel avec l'évaluation}{6/18}
+\slider{$\lc f\l X\r\rc_\c=\almat f\b\c\lc X\rc_\b$}{6/18}
+\slideq{Formule de Grassmann}{7/18}
+\slider{$\dim{E+F}=\dim E+\dim F-\dim{E\cap F}$}{7/18}
+\slideq{Dimension d'un supplémentaire $S$ de $F$ dans $E$}{8/18}
+\slider{$\dim S=\dim E-\dim F$}{8/18}
+\slideq{Formule de changement de base}{9/18}
+\slider{$\b_1$, $\b_2$ des bases de $E$, $\c_1$, $\c_2$ des bases de $F$\linebreak$\almat f{\b_2}{\c_2}=P_{\c_2}^{\c_1}\almat f{\c_1}{\b_1}P_{\b_1}^{\b_2}$\linebreak${}=\l P_{\c_1}^{\c_2}\r^{-1}\almat f{\c_1}{\b_1}P_{\b_1}^{\b_2}$}{9/18}
+\slideq{Théorème du rang}{10/18}
+\slider{$\dim{\ker f}+\rg f=\dim E$}{10/18}
+\slideq{Majoration du rang d'une application linéaire $u\in\al EF$}{11/18}
+\slider{$\rg u\leqslant\min{\dim E,\dim F}$}{11/18}
+\slideq{Effet d'une composition sur le rang}{12/18}
+\slider{$\rg{v\circ u}\leqslant\min{\rg u,\rg v}$\linebreak Si $v$ est injective, $\rg{v\circ u}=\rg u$\linebreak Si $u$ est surjective, $\rg{v\circ u}=\rg v$}{12/18}
+\slideq{Rang d'une application linéaire}{13/18}
+\slider{$\rg u=\dim{\im u}$}{13/18}
+\slideq{Dimension de $\al EF$}{14/18}
+\slider{$\dim{\al EF}=\dim E\times\dim F$}{14/18}
+\slideq{Conservation de l'image et du noyau pour les matrices}{15/18}
+\slider{$M\in\mat npK$, $P\in\matgl nK$, $Q\in\matgl nK$\linebreak$\ker{PM}=\ker M$\linebreak$\im{MQ}=\im M$}{15/18}
+\slideq{Dimension d'un produit cartésien}{16/18}
+\slider{$\dim{E\times F}=\dim E+\dim F$}{16/18}
+\slideq{Conservation du rang pour les matrices}{17/18}
+\slider{$M\in\mat npK$, $P\in\matgl nK$, $Q\in\matgl nK$\linebreak$\rg{PMQ}=\rg M$}{17/18}
+\slideq{Image d'une matrice}{18/18}
+\slider{$\im M=\vect{\mathrm C_1\l M\r,\cdots,\mathrm C_n\l M\r}$}{18/18}
+\end{document}

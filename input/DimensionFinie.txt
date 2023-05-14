@@ -1,0 +1,22 @@
+Algèbre 2 -- Dimension finie
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al}\usepackage{bigoperators}\DeclareMathOperator{\oldim}{Im}\newcommand{\im}[1]{\oldim\l#1\r}\let\oldmin\min\renewcommand{\min}[1]{\oldmin\l#1\r}\let\oldker\ker\renewcommand{\ker}[1]{\oldker\l#1\r}\renewcommand\b{\mathcal{B}}\renewcommand\c{\mathcal{C}}\renewcommand\d{\mathcal{D}}\DeclareMathOperator{\id}{id}
+Dimension d'un produit cartésien;;$\dim{E\times F}=\dim E+\dim F$
+Dimension de $\al EF$;;$\dim{\al EF}=\dim E\times\dim F$
+Rang d'une famille;;$\rg{x_1,\cdots,x_n}=\dim{\vect{x_1,\cdots,x_n}}$
+Dimension d'une somme directe;;$\dim{\bigop{i=1}n{E_i}}=\sum{i=1}n{\dim{E_i}}$
+Dimension d'un supplémentaire $S$ de $F$ dans $E$;;$\dim S=\dim E-\dim F$
+Formule de Grassmann;;$\dim{E+F}=\dim E+\dim F-\dim{E\cap F}$
+Rang d'une application linéaire;;$\rg u=\dim{\im u}$
+Majoration du rang d'une application linéaire $u\in\al EF$;;$\rg u\leqslant\min{\dim E,\dim F}$
+Théorème du rang;;$\dim{\ker f}+\rg f=\dim E$
+Effet d'une composition sur le rang;;$\rg{v\circ u}\leqslant\min{\rg u,\rg v}$\linebreak Si $v$ est injective, $\rg{v\circ u}=\rg u$\linebreak Si $u$ est surjective, $\rg{v\circ u}=\rg v$
+Produit matriciel avec l'évaluation;;$\lc f\l X\r\rc_\c=\almat f\b\c\lc X\rc_\b$
+Matrice associée à une composition;;$\almat{g\circ f}\b\d=\almat g\c\d\times\almat f\b\c$
+Image d'une matrice;;$\im M=\vect{\mathrm C_1\l M\r,\cdots,\mathrm C_n\l M\r}$
+$\almat u\b{}$ est inversible;;$u\in\gl E$\linebreak La réciproque est vraie
+Conservation de l'image et du noyau pour les matrices;;$M\in\mat npK$, $P\in\matgl nK$, $Q\in\matgl nK$\linebreak$\ker{PM}=\ker M$\linebreak$\im{MQ}=\im M$
+Conservation du rang pour les matrices;;$M\in\mat npK$, $P\in\matgl nK$, $Q\in\matgl nK$\linebreak$\rg{PMQ}=\rg M$
+Matrice de passage;;$P_{\b_1}^{\b_2}=\almat \id{\b_2}{\b_1}=\lc\b_2\rc_{\b_1}$
+Formule de changement de base;;$\b_1$, $\b_2$ des bases de $E$, $\c_1$, $\c_2$ des bases de $F$\linebreak$\almat f{\b_2}{\c_2}=P_{\c_2}^{\c_1}\almat f{\c_1}{\b_1}P_{\b_1}^{\b_2}$\linebreak${}=\l P_{\c_1}^{\c_2}\r^{-1}\almat f{\c_1}{\b_1}P_{\b_1}^{\b_2}$
