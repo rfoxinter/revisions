@@ -20,3 +20,14 @@ Conservation de l'image et du noyau pour les matrices;;$M\in\mat npK$, $P\in\mat
 Conservation du rang pour les matrices;;$M\in\mat npK$, $P\in\matgl nK$, $Q\in\matgl nK$\linebreak$\rg{PMQ}=\rg M$
 Matrice de passage;;$P_{\b_1}^{\b_2}=\almat \id{\b_2}{\b_1}=\lc\b_2\rc_{\b_1}$
 Formule de changement de base;;$\b_1$, $\b_2$ des bases de $E$, $\c_1$, $\c_2$ des bases de $F$\linebreak$\almat f{\b_2}{\c_2}=P_{\c_2}^{\c_1}\almat f{\b_1}{\c_1}P_{\b_1}^{\b_2}$\linebreak${}=\l P_{\c_1}^{\c_2}\r^{-1}\almat f{\b_1}{\c_1}P_{\b_1}^{\b_2}$
+Matrices équivalentes;;$N\in\mat n{}K$, $M\in\mat n{}K$\linebreak$\exists\l P,Q\r\in\matgl nK^2,\;N=PMQ$
+Classification des matrices équivalentes par le rang;;$N$ est équivalent à $M$ si et seulement si $\rg M=\rg N$
+Matrices semblables;;$A\in\mat n{}K$, $B\in\mat n{}K$\linebreak$\exists\l P\r\in\matgl nK,\;B=P^{-1}AP$
+Trace d'une matrice;;$A\in\mat n{}K$\linebreak$\tr A=\sum{i=1}n{\lc A\rc_{i,i}}$
+Propriétés de la trace;;C'est une forme linéaire\linebreak$\tr A=\tr{A^\top}$\linebreak$\tr{AB}=\tr{BA}$\linebreak Si $M$ et $N$ sont semblables, $\tr N=\tr M$
+Trace d'un projecteur et d'une symétrie;;$\tr p=\rg p$\linebreak$\tr s=n-2\rg{s-\id}$
+Endomorphisme diagonalisable;;Il existe une base dans laquelle sa matrice est diagonale
+Matrice diagonalisable;;Elle est semblable à une matrice diagonale
+Forme linéaire;;Application linéaire (sur un $\mathbb K$-espace vectoriel $E$) de $E$ vers $\mathbb K$\linebreak Un élément de $\al E{\mathbb K}$
+Dual;;$E^*$\linebreak$\al E{\mathbb K}$ constitué des formes linéaires
+Hyperplan;;$\exists\in E^*\setminus\left\{0\right\},\;H=\ker\varphi$\linebreak$\varphi$ est l'équation caractéristique de $H$
