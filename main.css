@@ -34,7 +34,9 @@ body.open .menu {
     text-align: right;
     color: #606c71;
     display: block;
-    margin: 20px;
+    margin-right: calc(min(20px,20vw));
+    margin-top: calc(min(20px,2vh));
+    margin-bottom: calc(min(20px,2vh));
 }
   
 ul {
