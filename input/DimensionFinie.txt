@@ -26,8 +26,8 @@ Matrices semblables;;$A\in\mat n{}K$, $B\in\mat n{}K$\linebreak$\exists\l P\r\in
 Trace d'une matrice;;$A\in\mat n{}K$\linebreak$\tr A=\sum{i=1}n{\lc A\rc_{i,i}}$
 Propriétés de la trace;;C'est une forme linéaire\linebreak$\tr A=\tr{A^\top}$\linebreak$\tr{AB}=\tr{BA}$\linebreak Si $M$ et $N$ sont semblables, $\tr N=\tr M$
 Trace d'un projecteur et d'une symétrie;;$\tr p=\rg p$\linebreak$\tr s=n-2\rg{s-\id}$
-Endomorphisme diagonalisable;;Il existe une base dans laquelle sa matrice est diagonale
-Matrice diagonalisable;;Elle est semblable à une matrice diagonale
+Endomorphisme diagonalisable;;Il existe une base $\b$ dans laquelle $\almat u\b{}$ est diagonale
+Matrice diagonalisable;;Matrice semblable à une matrice diagonale
 Forme linéaire;;Application linéaire (sur un $\mathbb K$-espace vectoriel $E$) de $E$ vers $\mathbb K$\linebreak Un élément de $\al E{\mathbb K}$
 Dual;;$E^*$\linebreak$\al E{\mathbb K}$ constitué des formes linéaires
 Hyperplan;;$\exists\in E^*\setminus\left\{0\right\},\;H=\ker\varphi$\linebreak$\varphi$ est l'équation caractéristique de $H$
