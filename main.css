@@ -44,7 +44,7 @@ ul {
 }
   
 li {
-    padding: 10px;
+    padding: calc(min(10px,1vh));;
     border-bottom: 2px solid #eff0f1;;
 }
   
@@ -78,4 +78,3 @@ li:last-child {
 #overlay.hide {
     opacity: 0;
 }
-  
