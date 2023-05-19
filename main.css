@@ -11,7 +11,9 @@ ptr {
     position: fixed;
     top: 0;
     right: 0;
-    margin: 20px;
+    margin-right: calc(min(20px,20vw));
+    margin-top: calc(min(20px,2vh));
+    margin-bottom: calc(min(20px,2vh));
 }
 
 .menu {
