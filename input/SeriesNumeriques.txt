@@ -1,0 +1,10 @@
+Analyse -- Séries Numériques
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}\renewcommand{\leq}{\leqslant}\renewcommand{\geq}{\geqslant}\usepackage{equivalents}\usepackage{analyse}
+$\serie{u_n}$ diverge grossièrement;;$u_n$ ne tend pas vers $0$
+Théorème de comparaison des séries à termes positifs;;$\exists N\in\mathbb N,\;\forall n\geq N,\; 0\leq u_n\leq v_n$\linebreak Si $\serie{v_n}$ converge alors $\serie{u_n}$ converge\linebreak Si $\serie{u_n}$ diverge alors $\serie{v_n}$ diverge
+Convergence absolue;;$\serie{u_n}$ converge absolument si $\serie{\left|u_n\right|}$ converge\linebreak Si $\serie{\left|u_n\right|}$ converge alors $\serie{u_n}$ converge
+Semi-convergence;;Convergence sanc convergence absolue
+Comparaison par dominance;;$u_n=\O[]{v_n}$\linebreak Si $\serie{v_n}$ converge alors $\serie{u_n}$ converge\linebreak Si $\serie{u_n}$ ou $\serie{\left|u_n\right|}$ diverge alors $\serie{v_n}$ diverge
+Encadrement des sommes par les intégrales\linebreak$f$ est continue et décroissante sur $\left[n_0,+\infty\right[$ avec $n_0\in\mathbb Z$;;$\int[t][n_0+1][n+1]{f\l t\r}$\linebreak${}\leq\sum{k=n_0+1}{n}{f\l k\r}\leq{}$\linebreak$\int[t][n_0][n]{f\l t\r}$

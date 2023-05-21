@@ -1,0 +1,25 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{bigoperators}\renewcommand{\leq}{\leqslant}\renewcommand{\geq}{\geqslant}\usepackage{equivalents}\usepackage{analyse}
+\hypersetup{pdftitle=Analyse -- Séries Numériques}
+\title{Analyse\\\emph{Séries Numériques}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Comparaison par dominance}{1/6}
+\slider{$u_n=\O[]{v_n}$\linebreak Si $\serie{v_n}$ converge alors $\serie{u_n}$ converge\linebreak Si $\serie{u_n}$ ou $\serie{\left|u_n\right|}$ diverge alors $\serie{v_n}$ diverge}{1/6}
+\slideq{Théorème de comparaison des séries à termes positifs}{2/6}
+\slider{$\exists N\in\mathbb N,\;\forall n\geq N,\; 0\leq u_n\leq v_n$\linebreak Si $\serie{v_n}$ converge alors $\serie{u_n}$ converge\linebreak Si $\serie{u_n}$ diverge alors $\serie{v_n}$ diverge}{2/6}
+\slideq{Encadrement des sommes par les intégrales\linebreak$f$ est continue et décroissante sur $\left[n_0,+\infty\right[$ avec $n_0\in\mathbb Z$}{3/6}
+\slider{$\int[t][n_0+1][n+1]{f\l t\r}$\linebreak${}\leq\sum{k=n_0+1}{n}{f\l k\r}\leq{}$\linebreak$\int[t][n_0][n]{f\l t\r}$}{3/6}
+\slideq{Semi-convergence}{4/6}
+\slider{Convergence sanc convergence absolue}{4/6}
+\slideq{Convergence absolue}{5/6}
+\slider{$\serie{u_n}$ converge absolument si $\serie{\left|u_n\right|}$ converge\linebreak Si $\serie{\left|u_n\right|}$ converge alors $\serie{u_n}$ converge}{5/6}
+\slideq{$\serie{u_n}$ diverge grossièrement}{6/6}
+\slider{$u_n$ ne tend pas vers $0$}{6/6}
+\end{document}
