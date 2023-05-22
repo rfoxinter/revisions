@@ -1,7 +1,7 @@
 Analyse -- Séries Numériques
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{bigoperators}\renewcommand{\leq}{\leqslant}\renewcommand{\geq}{\geqslant}\usepackage{equivalents}\usepackage{analyse,complexes,trigo}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}
+\usepackage{bigoperators}\renewcommand{\leq}{\leqslant}\renewcommand{\geq}{\geqslant}\usepackage{equivalents}\usepackage{analyse,complexes,trigo}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\let\oldsup\sup\renewcommand\sup[1]{\oldsup\l#1\r}\usepackage{tikz}\usetikzlibrary{animations}
 $\serie{u_n}$ diverge grossièrement;;$\l u_n\r$ ne tend pas vers $0$
 Théorème de comparaison des séries à termes positifs;;$\exists N\in\mathbb N,\;\forall n\geq N,\; 0\leq u_n\leq v_n$\linebreak Si $\serie{v_n}$ converge alors $\serie{u_n}$ converge\linebreak Si $\serie{u_n}$ diverge alors $\serie{v_n}$ diverge
 Convergence absolue;;$\serie{u_n}$ converge absolument si $\serie{\left|u_n\right|}$ converge\linebreak Si $\serie{\left|u_n\right|}$ converge alors $\serie{u_n}$ converge
@@ -15,3 +15,7 @@ Règle de d'Alembert;;Si $\left|\frac{u_{n+1}}{u_n}\right|\to l$ où $0\leq l<1$
 Série alternée;;$\serie{u_n}$ est alternée s'il existe une suite $\l a_n\r$ positive décroissante de limite nulle telle que $u_n=\l-1\r^na_n$
 Théorème spécial de convergence des séries alternées;;Une série alternée est convergente\linebreak Les sommes partielles sont du signe du premier terme\linebreak Les restes sont du signe de leur premier terme et de valeur absolue plus petite que celle de ce dernier
 Critère d'Abel;;Si $\l a_n\r$ est une suite réelle positive décroissante de limite nulle, et la somme partielle de $\serie{b_n}$ est bornée, alors $\serie{a_nb_n}$ converge\linebreak Les suites $\e^{\i n\alpha}$, $\cos{n\alpha}$ et $\sin{n\alpha}$ vérifient les conditions pour $\l b_n\r$ lorsque $\alpha\not\equiv0\ \left[2\pi\right]$
+$\sum{i\in I}{}{a_i}$;;$\sup{\left\{\sum{i\in J}{}{a_i},\;J\in\mathcal{P}_f\l I\r\right\}}$
+Sommabilité;;$\l a_i\r$ est sommable si $\sum{i\in I}{}{\left|a_i\right|}<+\infty$
+Produit de Cauchy;;Si $\serie{a_n}$ et $\serie{b_n}$ sont absolument convergentes et $c_n=\sum{k=0}{n}{a_kb_{n-k}}$, alors $\serie{c_n}$ est absolument convergente\linebreak$\l\sum{n=0}{+\infty}{a_n}\r\l\sum{n=0}{+\infty}{b_n}\r=\sum{n=0}{+\infty}{\sum{k=0}{n}{a_kb_{n-k}}}$
+Formule du binôme négatif;;$\sum{n=0}{+\infty}{\frac{n!}{\l n-p\r!}z^{n-p}}=\frac{p!}{\l1-z\r^{p+1}}$\linebreak$\frac{1}{\l1-z\r^{p+1}}=\sum{n=0}{+\infty}{\binom{n+p}{p}z^n}$

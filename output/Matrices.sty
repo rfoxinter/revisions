@@ -24,7 +24,7 @@
     \renewcommand{\vdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldvdots$}$}}}
     \newcommand{\xdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldxdots$}$}}}
     \newcommand{\tmatrix}[3]{
-    \begin{tikzpicture}[baseline]
+    \begin{tikzpicture}[baseline={([yshift=-0.5ex]m.center)}]
     \matrix (m) [
             ampersand replacement=\&,
             matrix of math nodes,
@@ -49,7 +49,7 @@
     \renewcommand{\vdots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldvdots$}$}}}
     \newcommand{\xdots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldxdots$}$}}}
     \newcommand{\tmatrix}[3]{
-    \begin{tikzpicture}[baseline]
+    \begin{tikzpicture}[baseline={([yshift=-0.5ex]m.center)}]
     \matrix (m) [
             ampersand replacement=\&,
             matrix of math nodes,
