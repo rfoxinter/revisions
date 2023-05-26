@@ -14,7 +14,7 @@ Base de $E$;;Famille libre maximale de $E$\linebreak Famille génératrice minim
 Soit $E$ et $F$ deux $\mathbb K$-ev\linebreak$f\!:\!E\to F$ est une application linéaire;;$\forall\l\lambda,x\r\in\mathbb K\times E,\;f\l\lambda x\r=\lambda f\l x\r$\linebreak$\forall\l x,y\r\in E^2,\; f\l x+y\r=f\l x\r+f\l y\r$
 Soit $E$ et $F$ deux $\mathbb K$-ev\linebreak Caractérisation des applications linéaires;;$\forall\l\lambda,x,y\r\in\mathbb K\times E^2,\;f\l\lambda x+y\r=\lambda f\l x\r+f\l y\r$
 Structure de $\al EF$;;$\mathbb{K}$-ev
-$\varphi\!:\!E\times F\to G$ est bilinéaire;;$\forall\l x,x',y,y',\lambda\r\in E^2\times F^2\times\mathbb K$\linebreak$\varphi\l\lambda x+x',y\r=\lambda\varphi\l x\r+\varphi\l y\r$\linebreak$\varphi\l x,\lambda y+y'\r=\lambda\varphi\l x,y\r+\varphi\l x,y'\r$
+$\varphi\!:\!E\times F\to G$ est bilinéaire;;$\forall\l x,x',y,y',\lambda\r\in E^2\times F^2\times\mathbb K$\linebreak$\varphi\l\lambda x+x',y\r=\lambda\varphi\l x,y\r+\varphi\l x',y\r$\linebreak$\varphi\l x,\lambda y+y'\r=\lambda\varphi\l x,y\r+\varphi\l x,y'\r$
 Image directe et réciproque de sous-espaces vectoriels par un homomorphisme;;Si $E$ et $F$ sont deux groupes, et $f\in\al EF$ une application linéaire, $E'$ et $F'$ deux sous-espaces vectoriels de $E$ et $F$\linebreak $f\l E'\r$ est un sous-espace vectoriel de $F$\linebreak $f^{-1}\l F'\r$ est un sous-espace vectoriel de $F$
 Structure de $\ker{f}$\linebreak$f\!:\!E\to F$;;Sous-espace vectoriel de $E$
 Isomorphisme d'espaces vectoriels;;Application linéaire bijective

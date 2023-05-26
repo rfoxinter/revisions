@@ -7,10 +7,10 @@ Structure de $\pol AX$ si $\mathbb A$ est intègre;;Anneau intègre commutatif
 $\deg P$;;$\max{\left\{n\in\mathbb N\;\vert\;a_n\neq0\right\}}$
 $\val P$;;$\min{\left\{n\in\mathbb N\;\vert\;a_n\neq0\right\}}$
 Propriétés de $\varphi\!:\!\pol KX\to\pol Kx$;;Homomorphisme d'anneaux surjectif
-Propriétés de $\varphi\!:\!\pol KX\to\pol Kx$ si $\car K=0$;;Isomorphisme d'anneaux
+Propriétés de $\varphi\!:\!\pol KX\to\pol Kx$ si $\car{\mathbb K}=0$;;Isomorphisme d'anneaux
 Un anneau commutatif $\mathbb B$ est une algèbre sur un anneau commutatif $\mathbb A$\linebreak$\mathbb A$-algèbre $\mathbb B$;;$\forall\l \lambda,\mu,x,y\r\in\mathbb A^2\times\mathbb B^2$\linebreak$\l \lambda\mu\r y=\lambda\l\mu y\r$\linebreak$\lambda\l xy\r=\l\lambda x\r y=x\l\lambda y\r$\linebreak$\l\lambda+\mu\r x=\lambda x+\mu x$\linebreak$\lambda\l x+y\r=\lambda x+\lambda y$\linebreak$1_{\mathbb A}x=x$
 $i$-ième polynôme interpolateur de Lagrange;;$L_i=\prod{\substack{j=0\\j\neq i}}{n}{\frac{X-x_j}{x_i-x_j}}$
-Interpolation de la fonction $f$ aux points $\l x_1,\cdots,x_n\r$;;$P=\sum{i=0}{n}{f\l x_i\r L_i}$
+Interpolation de la fonction $f$ aux points $\l x_1,\cdots,x_n\r$;;$P=\sum{i=1}{n}{f\l x_i\r L_i}$
 Relations de Viète\linebreak$P=\sum{k=0}{n}{a_kX^k}$ est scindé à racines $\l r_1,\cdots,r_n\r$;;$\sum{K\in\mathcal P_k\l\llb1,n\rrb\r}{}{\prod{j\in K}{}{r_j}}=\l-1\r^k\frac{a_{n-k}}{a_n}$
 Structure de $\fr KX$;;Corps
 Décomposition en éléments simples dans $\fr CX$\linebreak$F$ a des pôles $\l r_1,\cdots,r_k\r$ de multiplicité $\l\alpha_1,\cdots,\alpha_k\r$;;$F=E+\sum{i=0}{k}{\sum{j=0}{\alpha_i}{\frac{\lambda_{i,j}}{\l X-r_i\r^j}}}$
