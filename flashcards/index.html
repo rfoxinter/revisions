@@ -46,7 +46,7 @@
         var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = []; var qr = [0, 1];
         var file = atob(new URLSearchParams(document.location.search.substring(1)).get("file"));
         async function loadModule(file) {
-            const response = await fetch('./' + file + '/info.txt');
+            const response = await fetch(file + '/info.txt');
             const jsCode = await response.text();
             const lst = jsCode.split("\n");
             title = eval(lst[0]);
@@ -66,7 +66,7 @@
             if (sh_quest) {shuffleArray(ques);} 
         }
         async function get_code(file, ques, type) {
-            var response = await fetch('./' + file + '/' + type + ques + '.svg');
+            var response = await fetch(file + '/' + type + ques + '.svg');
             svgcode = await response.text();
         }
         async function fill_svg(file) {
