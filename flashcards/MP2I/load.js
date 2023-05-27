@@ -69,7 +69,7 @@ function display_files(sitemap){
                 p.innerHTML = name_tmp + ' ';
                 p.setAttribute('id', name_tmp);
                 var a = document.createElement('a');
-                a.setAttribute('href', '../?file=' + btoa(name_tmp));
+                a.setAttribute('href', '../?file=' + btoa('./' + name_tmp));
                 span = document.createElement('span');
                 span.setAttribute('class','material-symbols-rounded');
                 span.innerHTML = 'open_in_new';
@@ -82,7 +82,7 @@ function display_files(sitemap){
             name = '';
             p.innerHTML = filename + ' ';
             var a = document.createElement('a');
-            a.setAttribute('href', '../?file=' + btoa(f));
+            a.setAttribute('href', '../?file=' + btoa('./' + f));
             span = document.createElement('span');
             span.setAttribute('class','material-symbols-rounded');
             span.innerHTML = 'open_in_new';
