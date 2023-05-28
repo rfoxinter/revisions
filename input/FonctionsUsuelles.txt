@@ -2,7 +2,7 @@ Analyse -- Fonctions usuelles
 Shuffle questions : True
 Q/R & R/Q : False
 \newcommand\N{\mathbb{N}}\newcommand\R{\mathbb{R}}\let\oldlim\lim\renewcommand\lim[2]{\oldlim\limits_{#1}\l#2\r}\let\oldexp\exp\renewcommand\exp[2][]{\oldexp^{#1}\l#2\r}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{graphs}\usepackage{trigo}\usepackage{mathtools}\usepackage{tables}\usepackage{rotating}\usepackage{analyse}
-$n\in\N^*$, $x\in\R_+^*$\linebreak$\der[n]{\ln{x}}$;;$\frac{\l-1\r^{\l n-1\r}\l n-1\r!}{x^n}$
+$n\in\N^*$, $x\in\R_+^*$\linebreak$\der[n]{\ln{x}}$;;$\frac{\l-1\r^{n-1}\l n-1\r!}{x^n}$
 $\lim{x\to0}{\frac{\ln{1-x}}{x}}$;;1
 Courbe représentative de $\ln{x}$;;\begin{tikzpicture}\draw[color=gray,opacity=0.2] (-0.2,-3.2) grid(7.2,2.2); \draw[->] (0, -3.2) -- (0, 2.2) node[below right]{$y$}; \draw[->] (-0.2, 0) -- (7.2, 0) node[above left]{$x$}; \foreach \x in {1,...,7} \draw(\x,0) node[below]{\footnotesize$\x$}; \foreach \y in {-3,...,2} \draw(0,\y) node[left]{\footnotesize$\y$}; \draw[domain=0.0405:7.2, samples=1400, scale=1, smooth, variable=\x, black] plot (\x,{ln(\x)}); \node[above] at (current bounding box.north) {$y=\ln{x}$}; \end{tikzpicture}
 $n\in\N^*$, $x\in\R$\linebreak$\der[n]{\exp{x}}$;;$\exp{x}$
