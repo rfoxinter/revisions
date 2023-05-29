@@ -9,7 +9,7 @@
 \DeclareMathOperator{\oldgl}{GL}
 \newcommand{\gl}[2]{\oldgl_{#1}\l#2\r}
 \usepackage{tikz}
-\usetikzlibrary{matrix}
+\usetikzlibrary{matrix,calc,fit}
 \makeatletter
 \@ifclassloaded{beamer}{
     \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
@@ -69,3 +69,33 @@
     \end{tikzpicture}}
 }
 \makeatother
+\newcommand\mtxvline[2]{
+\pgfmathparse{int(#2+1)}
+\coordinate (temp-l) at (m-1-#2);
+\foreach \x in {2,...,\the\pgfmatrixcurrentrow} {
+    \coordinate (temp-l) at ($(temp-l) +(m-\x-#2)$);
+}
+\node [fit=(temp-l)] (fit-l) {};
+\coordinate (temp-r) at (m-1-\pgfmathresult);
+\foreach \x in {2,...,\the\pgfmatrixcurrentrow} {
+    \coordinate (temp-r) at ($(temp-r) +(m-\x-\pgfmathresult)$);
+}
+\node [fit=(temp-r)] (fit-r) {};
+\path (fit-l.east) -- (fit-r.west) coordinate[midway] (X);
+\draw[#1] (X |- m.north) --  (X |- m.south);
+}
+\newcommand\mtxhline[2]{
+\pgfmathparse{int(#2+1)}
+\coordinate (temp-t) at (m-#2-1);
+\foreach \x in {2,...,\the\pgfmatrixcurrentcolumn} {
+    \coordinate (temp-t) at ($(temp-t) +(m-#2-\x)$);
+}
+\node [fit=(temp-t)] (fit-t) {};
+\coordinate (temp-s) at (m-\pgfmathresult-1);
+\foreach \x in {2,...,\the\pgfmatrixcurrentcolumn} {
+    \coordinate (temp-s) at ($(temp-s) +(m-\pgfmathresult-\x)$);
+}
+\node [fit=(temp-s)] (fit-s) {};
+\path (fit-t.east) -- (fit-s.west) coordinate[midway] (X);
+\draw[#1] (X -| m.west) --  (X -| m.east);
+}

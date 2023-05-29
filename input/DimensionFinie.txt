@@ -1,7 +1,7 @@
 Algèbre 2 -- Dimension finie
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al}\usepackage{bigoperators}\DeclareMathOperator{\oldim}{Im}\newcommand{\im}[1]{\oldim\l#1\r}\let\oldmin\min\renewcommand{\min}[1]{\oldmin\l#1\r}\let\oldker\ker\renewcommand{\ker}[1]{\oldker\l#1\r}\renewcommand\b{\mathcal{B}}\renewcommand\c{\mathcal{C}}\renewcommand\d{\mathcal{D}}\DeclareMathOperator{\id}{id}
+\usepackage{al}\usepackage{bigoperators}\DeclareMathOperator{\oldim}{im}\newcommand{\im}[1]{\oldim\l#1\r}\let\oldmin\min\renewcommand{\min}[1]{\oldmin\l#1\r}\let\oldker\ker\renewcommand{\ker}[1]{\oldker\l#1\r}\renewcommand\b{\mathcal{B}}\renewcommand\c{\mathcal{C}}\renewcommand\d{\mathcal{D}}\DeclareMathOperator{\id}{id}
 Dimension d'un produit cartésien;;$\dim{E\times F}=\dim E+\dim F$
 Dimension de $\al EF$;;$\dim{\al EF}=\dim E\times\dim F$
 Rang d'une famille;;$\rg{x_1,\cdots,x_n}=\dim{\vect{x_1,\cdots,x_n}}$
@@ -21,6 +21,7 @@ Conservation du rang pour les matrices;;$M\in\mat npK$, $P\in\matgl nK$, $Q\in\m
 Matrice de passage;;$P_{\b_1}^{\b_2}=\almat \id{\b_2}{\b_1}=\lc\b_2\rc_{\b_1}$
 Formule de changement de base;;$\b_1$, $\b_2$ des bases de $E$, $\c_1$, $\c_2$ des bases de $F$\linebreak$\almat f{\b_2}{\c_2}=P_{\c_2}^{\c_1}\almat f{\b_1}{\c_1}P_{\b_1}^{\b_2}$\linebreak${}=\l P_{\c_1}^{\c_2}\r^{-1}\almat f{\b_1}{\c_1}P_{\b_1}^{\b_2}$
 Matrices équivalentes;;$N\in\mat n{}K$, $M\in\mat n{}K$\linebreak$\exists\l P,Q\r\in\matgl nK^2,\;N=PMQ$
+$I_{n,p,r}$;;\tmatrix[\mtxvline{line width = 0.05em}{1}\mtxhline{line width = 0.05em}{1}][minimum height = 5ex, row sep = 1ex,minimum width = 5ex, column sep = 1ex,]({I_r\&0_{r,p-r}\\0_{n-r,r}\&0_{n-r,p-r}\\})
 Classification des matrices équivalentes par le rang;;$N$ est équivalent à $M$ si et seulement si $\rg M=\rg N$
 Matrices semblables;;$A\in\mat n{}K$, $B\in\mat n{}K$\linebreak$\exists\l P\r\in\matgl nK,\;B=P^{-1}AP$
 Trace d'une matrice;;$A\in\mat n{}K$\linebreak$\tr A=\sum{i=1}n{\lc A\rc_{i,i}}$
