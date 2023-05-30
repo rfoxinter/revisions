@@ -69,33 +69,161 @@
     \end{tikzpicture}}
 }
 \makeatother
+\makeatletter
+\def\comparestring#1#2{%
+    \edef\tempa{#1}%
+    \edef\tempb{#2}%
+    \ifx\tempa\tempb%
+        \expandafter\@firstoftwo
+    \else
+        \expandafter\@secondoftwo
+    \fi
+}
+\makeatother
+\makeatletter
+\def\tikz@lib@fit@scan{%
+  \pgfutil@ifnextchar\pgf@stop{\pgfutil@gobble}{%
+    \pgfutil@ifnextchar\foreach{\tikz@lib@fit@scan@handle@foreach}{%
+      \tikz@scan@one@point\tikz@lib@fit@scan@handle}}}
+\def\tikz@lib@fit@scan@handle@foreach\foreach#1in#2#3{%
+  \foreach #1 in {#2}
+  {\tikz@scan@one@point\tikz@lib@fit@scan@handle@foreach@#3}
+  \tikz@lib@fit@scan}
+\def\tikz@lib@fit@scan@handle@foreach@#1{%
+  \iftikz@shapeborder
+    \tikz@lib@fit@adjust{%
+      \pgfpointanchor{\tikz@shapeborder@name}{west}}%
+    \tikz@lib@fit@adjust{%
+      \pgfpointanchor{\tikz@shapeborder@name}{east}}%
+    \tikz@lib@fit@adjust{%
+      \pgfpointanchor{\tikz@shapeborder@name}{north}}%
+    \tikz@lib@fit@adjust{%
+      \pgfpointanchor{\tikz@shapeborder@name}{south}}%
+  \else
+    \tikz@lib@fit@adjust{#1}%
+  \fi
+  \global\pgf@xa=\pgf@xa
+  \global\pgf@ya=\pgf@ya
+  \global\pgf@xb=\pgf@xb
+  \global\pgf@yb=\pgf@yb}
+\makeatletter
 \newcommand\mtxvline[2]{
-\pgfmathparse{int(#2+1)}
-\coordinate (temp-l) at (m-1-#2);
-\foreach \x in {2,...,\the\pgfmatrixcurrentrow} {
-    \coordinate (temp-l) at ($(temp-l) +(m-\x-#2)$);
-}
-\node [fit=(temp-l)] (fit-l) {};
-\coordinate (temp-r) at (m-1-\pgfmathresult);
-\foreach \x in {2,...,\the\pgfmatrixcurrentrow} {
-    \coordinate (temp-r) at ($(temp-r) +(m-\x-\pgfmathresult)$);
-}
-\node [fit=(temp-r)] (fit-r) {};
-\path (fit-l.east) -- (fit-r.west) coordinate[midway] (X);
-\draw[#1] (X |- m.north) --  (X |- m.south);
+    \comparestring{#2}{left}{
+        \path (m.west) coordinate (X);
+    }{
+        \comparestring{#2}{right}{
+            \path (m.east) coordinate (X);
+        }{
+            \pgfmathparse{int(#2+1)}
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-#2)}] (fit-l) {};
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-\pgfmathresult)}] (fit-r) {};
+            \path (fit-l.east) -- (fit-r.west) coordinate[midway] (X);
+        }
+    }
+    \draw[#1] (X |- m.north) --  (X |- m.south);
 }
 \newcommand\mtxhline[2]{
-\pgfmathparse{int(#2+1)}
-\coordinate (temp-t) at (m-#2-1);
-\foreach \x in {2,...,\the\pgfmatrixcurrentcolumn} {
-    \coordinate (temp-t) at ($(temp-t) +(m-#2-\x)$);
+    \comparestring{#2}{top}{
+        \path (m.north) coordinate (X);
+    }{
+        \comparestring{#2}{bottom}{
+            \path (m.south) coordinate (X);
+        }{
+            \pgfmathparse{int(#2+1)}
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-#2-\x)}] (fit-t) {};
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-\pgfmathresult-\x)}] (fit-b) {};
+            \path (fit-t.south) -- (fit-b.north) coordinate[midway] (X);
+        }
+    }
+    \draw[#1] (X -| m.west) --  (X -| m.east);
 }
-\node [fit=(temp-t)] (fit-t) {};
-\coordinate (temp-s) at (m-\pgfmathresult-1);
-\foreach \x in {2,...,\the\pgfmatrixcurrentcolumn} {
-    \coordinate (temp-s) at ($(temp-s) +(m-\pgfmathresult-\x)$);
+\newcommand\mtxvpartial[4]{
+    \comparestring{#2}{left}{
+        \path (m.west) coordinate (Xv);
+    }{
+        \comparestring{#2}{right}{
+            \path (m.east) coordinate (Xv);
+        }{
+            \pgfmathparse{int(#2+1)}
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-#2)}] (fit-l) {};
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-\pgfmathresult)}] (fit-r) {};
+            \path (fit-l.east) -- (fit-r.west) coordinate[midway] (Xv);
+        }
+    }
+    \comparestring{#3}{top}{
+        \path (m.north) coordinate (Xt);
+    } {
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-#3-\x)}] (fit-t1) {};
+        \pgfmathparse{int(#3+1)}
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-\pgfmathresult-\x)}] (fit-t2) {};
+        \path (fit-t1.south) -- (fit-t2.north) coordinate[midway] (Xt);
+    }
+    \comparestring{#4}{bottom}{
+        \path (m.south) coordinate (Xb);
+    } {
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-#4-\x)}] (fit-b1) {};
+        \pgfmathparse{int(#4+1)}
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-\pgfmathresult-\x)}] (fit-b2) {};
+        \path (fit-b1.south) -- (fit-b2.north) coordinate[midway] (Xb);
+    }
+    \draw[#1] (Xv |- Xt) --  (Xv |- Xb);
 }
-\node [fit=(temp-s)] (fit-s) {};
-\path (fit-t.east) -- (fit-s.west) coordinate[midway] (X);
-\draw[#1] (X -| m.west) --  (X -| m.east);
+\newcommand\mtxhpartial[4]{
+    \comparestring{#2}{top}{
+        \path (m.north) coordinate (Xh);
+    }{
+        \comparestring{#2}{bottom}{
+            \path (m.south) coordinate (Xh);
+        }{
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-#2-\x)}] (fit-t) {};
+            \pgfmathparse{int(#2+1)}
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-\pgfmathresult-\x)}] (fit-b) {};
+            \path (fit-b.north) -- (fit-t.south) coordinate[midway] (Xh);
+        }
+    }
+    \comparestring{#3}{left}{
+        \path (m.west) coordinate (Xl);
+    } {
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-#3)}] (fit-l1) {};
+        \pgfmathparse{int(#3+1)}
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-\pgfmathresult)}] (fit-l2) {};
+        \path (fit-l1.east) -- (fit-l2.west) coordinate[midway] (Xl);
+    }
+    \comparestring{#4}{right}{
+        \path (m.east) coordinate (Xr);
+    } {
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-#4)}] (fit-r1) {};
+        \pgfmathparse{int(#4+1)}
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-\pgfmathresult)}] (fit-r2) {};
+        \path (fit-r1.east) -- (fit-r2.west) coordinate[midway] (Xr);
+    }
+    \draw[#1] (Xh -| Xl) --  (Xh -| Xr);
+}
+\newcommand\mtxbox[3]{
+  \ifnum#2=1
+    \def\leftcoord{left}
+  \else
+    \pgfmathparse{#2-1}
+    \def\leftcoord{\pgfmathresult}
+  \fi
+  \ifnum#3=1
+    \def\topcoord{top}
+  \else
+    \pgfmathparse{#3-1}
+    \def\topcoord{\pgfmathresult}
+  \fi
+  \ifnum#2=\the\pgfmatrixcurrentcolumn
+    \def\rightcoord{right}
+  \else
+    \def\rightcoord{#2}
+  \fi
+  \ifnum#3=\the\pgfmatrixcurrentrow
+    \def\bottomcoord{bottom}
+  \else
+    \def\bottomcoord{#3}
+  \fi
+  \mtxhpartial{#1}{\topcoord}{\leftcoord}{\rightcoord}
+  \mtxhpartial{#1}{\bottomcoord}{\leftcoord}{\rightcoord}
+  \mtxvpartial{#1}{\leftcoord}{\topcoord}{\bottomcoord}
+  \mtxvpartial{#1}{\rightcoord}{\topcoord}{\bottomcoord}
 }
