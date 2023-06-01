@@ -1,18 +1,17 @@
-Analyse -- Fonctions continues ou dérivables sur un intervalle
+FonctionsC0OuD1!!ttleAnalyse -- Fonctions continues ou dérivables sur un intervalle
 Shuffle questions : True
 Q/R & R/Q : False
-\let\oldsup\sup\renewcommand\sup[2][]{\oldsup\limits_{#1}\l#2\r}\let\oldinf\inf\renewcommand\inf[2][]{\oldinf\limits_{#1}\l#2\r}
+\let\oldsup\sup\renewcommand\sup[2][]{\oldsup\limits_{#1}\l#2\r}\let\oldinf\inf\renewcommand\inf[2][]{\oldinf\limits_{#1}\l#2\r}\let\oldlim\lim\renewcommand\lim[2]{\oldlim\limits_{#1}\l#2\r}
 Théorème des valeurs intermédiaires\linebreak Si $f\in\mathcal C^0\l I\r$, avec $I$ un intervalle d'extrémités $\l a,b\r\in\overline{\mathbb R}$;;Si $f\l a\r f\l b\r<0$, il existe $c\in\left]a,b\right[$ tel que $f\l c\r=0$\linebreak Pour tout $x\in\left]\inf[x\in I]{f\l x\r},\sup[x\in I]{f\l x\r}\right[$, il existe $c\in\left]a,b\right[$ tel que $f\l c\r=x$\linebreak L'image d'un intervalle par $f$ est un intervalle
 Continuité uniforme;;Si $X\subset\mathbb R$\linebreak$\forall \varepsilon>0,\;\exists\eta>0,\;\forall\l x,y\r\in X^2$\linebreak$\left|x-y\right|<\eta\Rightarrow\left|f\l x\r-f\l y\r\right|<\varepsilon$
-Théorème de Heine;;Si $f\in\mathcal{C}^0\l \left[a,b\right]\r$, alors $f$ est uniformément continue sur $\left[a,b\right]$
+Théorème de Heine\linebreak Dans $\mathbb R$ ou $\mathbb C$;;Si $f\in\mathcal{C}^0\l \left[a,b\right]\r$, alors $f$ est uniformément continue sur $\left[a,b\right]$
 Compact;;$K\subset\mathbb R$ est un compact si de toute suite $\l k_n\r$ de $K$, on peut extraire une suite convergente vers un élément de $K$
 Théorème de compacité;;Soit $f\in\mathcal{C}^0\l \left[a,b\right]\r$ à valeurs dans $\mathbb R$, alors $f$ est bornée et atteint ses bornes
-Homéomorphisme;;Si $A\subset\mathbb R$, $B\subset\mathbb R$, alors $f\!:\!A\to B$ est un homéomorphisme si c'est une application continue, bijective et dont la réciproque est continues
-Théorème de Rolle;;Si $f\in\mathcal C^0\l\left[a,b\right]\r$ et $f\in\mathcal D^1\l\left]a,b\right[\r$, et $f\l a\r=f\l b\r$, alors il existe $c\in\left]a,b\right[$ tel que $f\l c\r=0$
-Théorème de Rolle pour un intervalle infini d'un côté;;À faire
-Théorème de Rolle sur $\mathbb R$;;À faire
-Théorème de Rolle itéré;;À faire
-Théorème des acroissements finis;;À faire
-Inégalité des acroissements finis;;À faire
-Théorème de Heine dans $\mathbb C$;;À faire
-Inégalité des acroissements finis dans $\mathbb C$;;À faire
+Homéomorphisme;;Si $A\subset\mathbb R$, $B\subset\mathbb R$, alors $f\!:\!A\to B$ est un homéomorphisme si c'est une application continue, bijective et dont la réciproque est continue
+Théorème de Rolle;;Si $f\in\mathcal C^0\l\left[a,b\right]\r$ et $f\in\mathcal D^1\l\left]a,b\right[\r$, et $f\l a\r=f\l b\r$, alors il existe $c\in\left]a,b\right[$ tel que $f'\l c\r=0$
+Théorème de Rolle pour un intervalle infini d'un côté;;Si $f\in\mathcal C^0\l\left[a,+\infty\right[\r$ et $f\in\mathcal D^1\l\left]a,+\infty\right[\r$, et $f\l a\r=\lim{x\to+\infty}{f\l x\r}$, alors il existe $c\in\left]a,+\infty\right[$ tel que $f'\l c\r=0$
+Théorème de Rolle sur $\mathbb R$;;Si $f\in\mathcal D^1\l\mathbb R\r$, et $\lim{x\to-\infty}{f\l x\r}=\lim{x\to+\infty}{f\l x\r}$, alors il existe $c\in\mathbb R$ tel que $f'\l c\r=0$
+Théorème de Rolle itéré;;Si $n\in\mathbb N^*$, $f\in\mathcal C^0\l\left[a,b\right]\r$ et $f\in\mathcal D^n\l\left]a,b\right[\r$, et il existe $a\leqslant a_0<\cdots<a_n\leqslant b$ tel que $f\l a_0\r=\cdots=f\l a_n\r$, alors il existe $c\in\left]a,b\right[$ tel que $f^{\l n\r}\l c\r=0$
+Théorème des acroissements finis;;Si $f\in\mathcal C^0\l\left[a,b\right]\r$ et $f\in\mathcal D^1\l\left]a,b\right[\r$, il existe $c\in\left]a,b\right[$ tel que $f\l b\r-f\l a\r=\l b-a\r f'\l c\r$
+Inégalité des acroissements finis;;Si $f\in\mathcal C^0\l\left[a,b\right]\r$ et $f\in\mathcal D^1\l\left]a,b\right[\r$, $M$ un majorant de $f'$ sur $\left]a,b\right[$, $m$ un minorant de $f'$ sur $\left]a,b\right[$, alors $m\l b-a\r\leqslant f\l b\r-f\l a\r\leqslant M\l b-a\r$
+Inégalité des acroissements finis dans $\mathbb C$;;Si $f\in\mathcal C^0\l\left[a,b\right]\r$ et $f\in\mathcal D^1\l\left]a,b\right[\r$, $M$ un majorant de $\left|f'\right|$ sur $\left]a,b\right[$, alors $\left|f\l b\r-f\l a\r\right|\leqslant M\left|b-a\right|$
