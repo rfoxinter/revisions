@@ -1,4 +1,11 @@
 Probabilités -- Espaces probabilisés
 Shuffle questions : True
 Q/R & R/Q : False
-\newcommand\p{\mathbb P}
+\newcommand\p{\mathbb P}\let\oldOmega\Omega\let\Omega\varOmega\usepackage{bigoperators}
+Système complet d'événements;;Famille $\left\{A_i,\;i\in I\right\}$ formant une partition de $\Omega$
+$\sigma$-algèbre\linebreak Tribu;;Une $\sigma$-algèbre $\mathcal T$ est un sous-ensemble de $\mathcal P\l \Omega\r$ vérifiant\linebreak $\Omega\in\mathcal{T}$\linebreak$A\in\mathcal T\Rightarrow\overline A\in\mathcal T$\linebreak Si $I$ est dénombrable et $\l A_i\r_{i\in I}$ une famille d'éléments de $\mathcal T$, $\bigcup{i\in I}{}{A_i}\in\mathcal T$
+Espace probabilisable;;$\l \mathcal T,\Omega\r$\linebreak$\mathcal T$ est une $\sigma$-algèbre sur $\Omega$
+Intersection de tribus;;Si $\l\mathcal T_i\r_{i\in I}$ est une famille de $\sigma$-algèbres sur $\Omega$, alors $\bigcap{i\in I}{}{\mathcal T_i}$ est une $\sigma$-algèbre sur $\Omega$
+Tribu engendrée par une famille;;$\sigma\l\l A_i\r_{i\in I}\r$ avec $A_i$ des éléments de $\mathcal{P}\l\Omega\r$\linebreak Plus petite $\sigma$-algèbre de $\Omega$ contenant $\l A_i\r_{i\in I}$
+Tribu des boréliens;;$\mathcal B^1$ ou $\mathcal B$\linebreak$\sigma\l\l\left]-\infty,a\right[\r_{a\in\mathbb R}\r$\linebreak\linebreak$\mathcal B^1$ est aussi engendrée par n'importe quel type d'intervalle de $\mathbb R$
+Tribu des boréliens sur $\mathbb R^n$;;$\mathcal B^n$\linebreak Tribu engendrée par les $I_1\times\cdots\times I_n$ où les $I_k$ sont des intervalles
