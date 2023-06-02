@@ -1,0 +1,253 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath, amsfonts, amssymb, stmaryrd, tikz}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+
+\setlength{\parindent}{0cm}
+\everymath{\displaystyle}
+\mathcode`l="8000
+\begingroup
+\makeatletter
+\lccode`\~=`\l
+\DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
+\lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
+\endgroup
+
+\renewcommand\l{\left(}
+\renewcommand\r{\right)}
+\let\oldleft\left
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
+\let\oldright\right
+\renewcommand{\right}{\aftergroup\egroup\oldright}
+\newcommand{\s}{\mathfrak{S}}
+\let\phi\varphi
+\let\Phi\varPhi
+\let\Psi\varPsi
+\DeclareMathOperator{\id}{id}
+\let\oldker\ker
+\renewcommand{\ker}[1]{\oldker\l#1\r}
+\DeclareMathOperator{\oldim}{im}
+\newcommand{\im}[1]{\oldim\l#1\r}
+\DeclareMathOperator{\oldord}{ord}
+\newcommand{\ord}[1]{\oldord\l#1\r}
+\newcommand{\la}{\left\langle}
+\newcommand{\ra}{\right\rangle}
+
+\pagenumbering{gobble}
+\title{\vspace{-1.5cm}Structures algébriques}
+\author{}
+\date{}
+
+\newtcbtheorem{thm}{Théorème}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style={black,double},colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black,double},separator sign={~:}}{theorem}
+\newtcbtheorem{lm}{Lemme}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style={black,double,dotted},colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black,double,dotted},separator sign={~:}}{lemma}
+\newtcbtheorem{prp}{Propriété}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style={black,double,dashed},colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black,double,dashed},separator sign={~:}}{property}
+\newtcbtheorem{prv}{Preuve}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style=black,colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black},separator sign={~:}}{proof}
+
+\begin{document}
+\maketitle
+\vspace{-2cm}
+\begin{lm*}{}
+S'il existe $\psi\!:\!X\overset{\scriptstyle\cong}{\to} Y$, alors il existe $\Psi\!:\!\s X\overset{\scriptstyle\cong}{\to}\s Y$.
+\end{lm*}
+
+\begin{prv*}{}
+Soient $\psi\!:\!X\overset{\scriptstyle\cong}{\to} Y$, $\sigma\in\s X$ et $\tau\in\s Y$.
+
+\begin{center}
+    \begin{tikzpicture}
+        \node (X1) at (0,0) {$X$};
+        \node (X2) at (2,0) {$X$};
+        \node (Y1) at (0,-2) {$Y$};
+        \node (Y2) at (2,-2) {$Y$};
+        \draw [->] (X1) -- (X2) node (S) [midway,above] {$\sigma$};
+        \draw [->] (Y1) -- (Y2) node (T) [midway,below] {$\tau$};
+        \draw [->] (X1) -- (Y1) node [midway,left] {$\psi$};
+        \draw [->, out=180, in=-180] (Y1) to node [pos=0.5,left] {$\psi^{-1}$} (X1);
+        \draw [->] (X2) -- (Y2) node [midway,right] {$\psi$};
+        \draw [->, out=0, in=0] (Y2) to node [pos=0.5,right] {$\psi^{-1}$} (X2);
+        \draw [double,double equal sign distance,-implies] ($(S) + (0.25,-0.3)$) -- ($(T) + (0.25,0.3)$) node [midway,right] {$\Psi$};
+        \draw [double,double equal sign distance,-implies] ($(T) + (-0.25,0.3)$) -- ($(S) + (-0.25,-0.3)$) node [midway,left] {$\Phi$};
+    \end{tikzpicture}
+\end{center}
+Soit $\begin{array}{@{}r@{}c@{}l@{}}\Psi\!:\!\s X&{}\to{}&\s Y\\\sigma&{}\mapsto{}&\psi\circ\sigma\circ\psi^{-1}\\\end{array}$.
+
+$\Psi\l\sigma\r\in\s Y$ comme composition de bijections.
+\begin{flalign*}
+    \Psi\l\sigma_1\circ\sigma_2\r&=\psi\circ\l\sigma_1\circ\sigma_2\r\psi^{-1}&\\
+    &=\psi\circ\sigma_1\circ\psi^{-1}\circ\psi\circ\sigma_2\psi^{-1}&\\
+    &=\Psi\l\sigma_1\r\circ\Psi\l\sigma_2\r&
+\end{flalign*}
+Donc, $\Psi$ est un morphisme de groupes.
+
+On pose $\begin{array}{@{}r@{}c@{}l@{}}\Phi\!:\!\s Y&{}\to{}&\s X\\\tau&{}\mapsto{}&\psi^{-1}\circ\tau\circ\psi\\\end{array}$.
+
+$\l\Psi\circ\Phi\r\l\tau\r=\psi\circ\psi^{-1}\circ\tau\circ\psi\circ\psi^{-1}=\tau$.
+
+Donc, $\Psi\circ\Phi=\id$. De même, $\Phi\circ\Psi=\id$.
+
+Donc, $\Psi$ est un isomorphisme.
+\end{prv*}
+
+
+\begin{thm*}{Théorème de Cayley}
+Tout groupe fini est isomorphe à un sous-groupe d'un groupe symétrique.
+\end{thm*}
+
+\begin{prv*}{Théorème de Cayley}
+Soient $g\in G$ et $\phi_g\!:\!x\mapsto gx$.
+
+$\phi_g$ est injective par régularité des éléments de $G$ et bijective car les deux ensembles sont de même cardinal (fini).
+
+Soit $n=\left|G\right|$.
+
+On définit $\begin{array}{@{}r@{}c@{}l@{}}f\!:\!\l G,\times\r&{}\to{}&\l\s G,\circ\r\\g&{}\mapsto{}&\phi_g\\\end{array}$
+
+$f\l e\r=\phi_e=\id$
+
+Soit $\l x,y,z\r\in G^3$.
+\begin{flalign*}
+\l f\l x\cdot y\r\r\l z\r&=\l x\cdot y\r\cdot z&\\
+&=x\cdot\l y\cdot z\r&\\
+&=\l f\l x\r\r\l y\cdot z\r&\\
+&=\l\l f\l x\r\r\circ\l f\l y\r\r\r\l z\r&
+\end{flalign*}
+On a donc bien un morphisme de groupes.
+
+Soit $g\in\ker f$. $f\l g\r=\id$. Donc, pour tout $x\in G$, $g\cdot x=x$. Donc, $g=e$ par régularité des éléments de $G$.
+
+Donc, $\ker f=\left\{e\right\}$. Donc, $f$ est injective.
+
+Donc, $f^{|\im f}$ est bijective. Donc, $\im f=f\l G\r$ est un sous-groupe de $\s G$.
+
+De plus, $G\cong\left\llbracket1,n\right\rrbracket$ car $\left|G\right|=n$.
+
+Donc, d'après le lemme précédent, $\l\s G,\circ\r\cong\l\s_n,\circ\r$.
+
+Donc, $\Psi\l f^{|f\l G\r}\l G\r\r=\l\Psi\circ f^{|f\l G\r}\r\l G\r$ est un sous-groupe de $\s_n$.
+
+De plus, $\Psi\circ f^{|f\l G\r}$ est un isomorphisme comme composition d'isomorphismes.
+
+Donc, $G$ est isomorphe à un sous-groupe de $\s_n$.
+\end{prv*}
+
+
+\begin{lm*}{}
+Si $H$ et $K$ sont deux sous-groupes de $G$ d'ordres finis respectifs $a$ et $b$ tels que $a\wedge b=1$, alors $H\cap K=\left\{e\right\}$.
+\end{lm*}
+
+\begin{prv*}{}
+Soit $H$ et $K$ deux sous-groupes de $G$ d'ordres finis $a$ et $b$.
+
+$H\cap K$ est un sous-groupe de $H$ et de $K$. Donc, d'après le théorème de Lagrange, $\left|H\cap K\right|\mid a$ et $\left|H\cap K\right|\mid b$.
+
+Donc, $\left|H\cap K\right|\mid 1$. Donc, $\left|H\cap K\right|=1$.
+
+Donc, $H\cap K=\left\{e\right\}$.
+\end{prv*}
+
+
+\begin{prp*}{Ordre d'un produit}
+Soient $G$ un groupe abélien fini et $x$ et $y$ deux éléments de $G$ d'ordres respectifs $a$ et $b$.
+
+Si $a\wedge b=1$, alors $xy$ est d'ordre $ab$.
+\end{prp*}
+
+\begin{prv*}{Ordre d'un produit}
+Soit $\l x,y\r\in G^2$.
+
+$\l xy\r^{ab}=x^{ab}y^{ab}=\l x^a\r^b\l y^b\r^a=e$.
+
+Donc, $\ord{xy}\mid ab$.
+
+Pour tout $n\in\mathbb N$, $\l xy\r^n=e=x^ny^n\Leftrightarrow x^n=y^{-n}\in\la x\ra\cap\la y\ra$.
+
+Or, $\ord{\la x\ra}\wedge\ord{\la y\ra}=1$. Donc, d'après le lemme précédent, $\la x\ra\cap\la y\ra=\left\{e\right\}$.
+
+D'où, $x^n=y^{-n}=e$. Donc, $a\mid n$ et $b\mid n$. Or, $a\wedge b=1$. Donc, $ab\mid n$.
+
+D'où la minimalité de $ab$.
+
+Donc, $\ord{xy}=ab$
+\end{prv*}
+
+
+\begin{lm*}{}
+Soit $G$ un groupe fini.
+
+S'il existe un élément $x$ d'ordre $a$ danse $G$, alors in existe dans $G$ un élément $z$ d'ordre $d$ avec $d\mid a$.
+\end{lm*}
+
+\begin{prv*}{}
+Soit $x$ un élément de $G$ d'ordre $a$. Soit $d$ un diviseur de $a$.
+
+On pose $z=x^\frac ad$.
+
+$z^d=x^a=e$. Donc, $\ord{z}\leqslant d$.
+
+Soit $m\in\left\llbracket1,d-1\right\rrbracket$. $z^m=x^{\frac adm}\neq e$ car $\frac adm\leqslant a$ et $\ord{x}=a$.
+
+Donc, $\ord{z}=d$.
+\end{prv*}
+
+
+\begin{lm*}{Lemme de Cauchy}
+Soit $G$ un groupe fini.
+
+Si un nombre premier $p$ divise l'ordre de $G$, alors il existe dans $G$ un élément d'ordre $p$.
+\end{lm*}
+\begin{prv*}{Lemme de Cauchy}
+Soit $G$ un groupe fini.
+
+Soit $p$ un nombre premier tel que $p\mid\left|G\right|$.
+
+Soit $E=\left\{\l x_1,\cdots,x_p\r\in G^p\;\vert\;x_1\cdots x_p=e\right\}$.
+
+On définit sur $E$ la relation $\sim$ : $\l x_1,\cdots,x_p\r\sim\l y_1,\cdots,y_p\r$ si et seulement si $\l y_1,\cdots,y_p\r$ est obtenu de $\l x_1,\cdots,x_p\r$ par permutation circulaire.
+\\\hfill\linebreak
+Montrons que $\sim$ est une relation d'équivalence.
+
+\textsl{Réflexivité :} $\l x_1,\cdots,x_p\r\sim\l x_1,\cdots,x_p\r$.
+
+\textsl{Symétrie :} Soit $\l\l x_1,\cdots,x_p\r,\l x_1,\cdots,x_p\r\r\in E^2$ tel que $\l x_1,\cdots,x_p\r\sim\l y_1,\cdots,y_p\r$.
+
+Ainsi, il existe $T\in\mathbb{Z}$ tel que pour tout $k\in\left\llbracket1,p\right\rrbracket$, $x_k=y_{k+T}$ (indices considérés modulo $k$).
+
+Ainsi, pour tout $k\in\left\llbracket1,p\right\rrbracket$, $y_k=x_{k-T}$.
+
+Donc, $\l y_1,\cdots,y_p\r\sim\l x_1,\cdots,x_p\r$.
+
+\textsl{Transitivité :} Soit $\l\l x_1,\cdots,x_p\r,\l y_1,\cdots,y_p\r,\l z_1,\cdots,z_p\r\r\in E^3$ tel que $\l x_1,\cdots,x_p\r\sim\l y_1,\cdots,y_p\r$ et $\l y_1,\cdots,y_p\r\sim\l z_1,\cdots,z_p\r$.
+
+Ainsi, il existe $\l T_1,T_2\r\in\mathbb{Z}^2$ tel que pour tout $k\in\left\llbracket1,p\right\rrbracket$, $x_k=y_{k+T_1}$ et $y_k=z_{k+T_2}$ (indices considérés modulo $k$).
+
+Ainsi, pour tout $k\in\left\llbracket1,p\right\rrbracket$, $x_k=z_{k+T_1+T_2}$.
+
+Donc, $\l x_1,\cdots,x_p\r\sim\l z_1,\cdots,z_p\r$.
+
+Donc, $\sim$ est une relation d'équivalence.
+\\\hfill\linebreak
+Soit $\l x_1,\cdots,x_p\r\in E$.
+
+On prolonge les $x_i$ en une suite $\l u_n\r_{n\in\mathbb{Z}}$ avec $u_n=x_{n\bmod p}$.
+
+$\l u_n\r$ est de période $p$. Donc la période minimale de $\l u_n\r$ divise $p$. C'est donc $1$ ou $p$.
+
+Ainsi, les classes d'équivalence de $\sim$ sont soit de cardinal $1$ (période minimale égale à $1$), soit de cardinal $p$ (période minimale égale à $p$).
+
+Pour $x_1,\cdots,x_{p-1}$ fixés, on a une unique valeur possible pour $x_p=\l x_1\cdots x_{p-1}\r^{-1}$.
+
+Donc, $\left|E\right|=\left|G\right|^{p-1}$. Donc, $p\mid\left|E\right|$.
+
+Ainsi, le nombre de classes de cardinal $1$ est divisible par $p$. Cela correspond à l'ensemble de $x\in G$ tel que $x^p=e$. Donc, ces $x$ sont d'ordre $1$ ou $p$ et le seul élément d'ordre $1$ est $e$.
+
+Donc, le nombre d'éléments d'ordre $p$ est congru à $p-1$ modulo $p$.
+
+Donc, il existe $x\in G$ tel que $\ord{x}=p$.
+\end{prv*}
+\end{document}

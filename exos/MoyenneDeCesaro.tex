@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+
+\setlength{\parindent}{0cm}
+\everymath{\displaystyle}
+\mathcode`l="8000
+\begingroup
+\makeatletter
+\lccode`\~=`\l
+\DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
+\lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
+\endgroup
+
+\renewcommand\l{\left(}
+\renewcommand\r{\right)}
+\let\oldleft\left
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
+\let\oldright\right
+\renewcommand{\right}{\aftergroup\egroup\oldright}
+\let\oldsum\sum\renewcommand\sum[3]{\oldsum_{#1}^{#2}\l#3\r}
+\let\le\leqslant
+\let\ge\geqslant
+\let\epsilon\varepsilon
+\newcommand\va[1]{\left|#1\right|}
+
+\pagenumbering{gobble}
+\title{\vspace{-1.5cm}Moyenne de Césàro}
+\author{}
+\date{}
+
+\newtcbtheorem{thm}{Théorème}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style={black,double},colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black,double},separator sign={~:}}{theorem}
+\newtcbtheorem{prv}{Preuve}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style=black,colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black},separator sign={~:}}{proof}
+
+\begin{document}
+\maketitle
+\vspace{-2cm}
+\begin{thm*}{Moyenne de Césàro}
+Soit $\l u_n\r_{n\in\mathbb N}$ une suite de nombres réels ou complexes.
+
+Si $\l u_n\r$ converge vers $l$, alors ${\frac1{n+1}}\sum{k=0}{n}{u_k}$ converge également, et sa limite est $l$. 
+\end{thm*}
+
+\begin{prv*}{Moyenne de Césàro}
+Soit $\l u_n\r$ une suite tel que $u_n\to l$.
+
+Montrons que $\frac1n\sum{k=0}{n}{u_k}\to l$.
+
+Soit $\epsilon\in\mathbb{R}_+^*$.
+
+Soit $n_0\in\mathbb N$ tel que pour tour $n\ge n_0$, $\va{u_n-l}\le\frac\epsilon2$.
+\begin{flalign*}
+    \va{\frac1{n+1}\sum{k=0}{n}{u_k}-l}&=\va{\frac1{n+1}\sum{k=0}{n}{u_k}-\frac1{n+1}\sum{k=0}{n}{l}}&\\
+    &=\va{\frac1{n+1}\sum{k=0}{n}{u_k-l}}&\\
+    &\le\frac{1}{n+1}\sum{k=0}{n}{\va{u_k-l}}&\\
+    &=\frac{1}{n+1}\sum{k=0}{n_0-1}{\va{u_k-l}}+\frac{1}{n+1}\sum{k=n_0}{n}{\va{u_k-l}}&\\
+    &\le\frac{1}{n+1}\sum{k=0}{n_0-1}{\va{u_k-l}}+\frac{1}{n+1}\sum{k=n_0}{n}{\frac\epsilon2}&\\
+    &=\frac{1}{n+1}\sum{k=0}{n_0-1}{\va{u_k-l}}+\frac{n-n_0+1}{n+1}\times\frac\epsilon2&\\
+    &\le\frac{1}{n+1}\sum{k=0}{n_0-1}{\va{u_k-l}}+\frac\epsilon2&
+\end{flalign*}
+De plus, il existe $n_1\ge n_0$ tel que $\frac{1}{n_1+1}\sum{k=0}{n_0-1}{u_k}\le\frac\epsilon2$.
+
+Donc, pour tout $n\ge n_1$, $\va{\frac1{n+1}\sum{k=0}{n}{u_k}-l}\le\epsilon$.
+
+Donc, $\va{\frac1{n+1}\sum{k=0}{n}{u_k}-l}\to0$.
+
+Donc, $\frac1{n+1}\sum{k=0}{n}{u_k}\to l$.
+\end{prv*}
+\end{document}

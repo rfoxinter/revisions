@@ -1,0 +1,179 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath, amsfonts, amssymb, stmaryrd}
+\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+
+\newcommand{\mat}[3]{\def\argII{,#2}\ifx&#2&\def\argII{}\fi\mathcal{M}_{#1\argII}\l#3\r}
+\DeclareMathOperator{\oldgl}{GL}
+\newcommand{\gl}[2]{\oldgl_{#1}\l#2\r}
+
+\setlength{\parindent}{0cm}
+\everymath{\displaystyle}
+\mathcode`l="8000
+\begingroup
+\makeatletter
+\lccode`\~=`\l
+\DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
+\lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
+\endgroup
+\def\fakebold#1{\setbox0=\hbox{$#1$}#1\kern-\wd0\kern.18pt#1\kern-\wd0\kern.18pt#1}
+
+\renewcommand\l{\left(}
+\renewcommand\r{\right)}
+\let\oldleft\left
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
+\let\oldright\right
+\renewcommand{\right}{\aftergroup\egroup\oldright}
+\newcommand{\llb}{\left\llbracket}
+\newcommand{\rrb}{\right\rrbracket}
+\let\phi\varphi
+\let\Phi\varPhi
+\let\oldker\ker
+\renewcommand{\ker}[1]{\oldker\l#1\r}
+\let\olddim\dim
+\renewcommand{\dim}[1]{\olddim\l#1\r}
+\DeclareMathOperator{\oldim}{im}
+\newcommand{\im}[1]{\oldim\l#1\r}
+\DeclareMathOperator{\oldrg}{rg}
+\newcommand{\rg}[1]{\oldrg\l#1\r}
+\DeclareMathOperator{\oldtr}{tr}
+\newcommand{\tr}[1]{\oldtr\l#1\r}
+\renewcommand{\k}{\mathbb K}
+\let\oplus\varoplus
+
+\pagenumbering{gobble}
+\title{\vspace{-1.5cm}Algèbre linéaire \& dimension finie}
+\author{}
+\date{}
+
+\newtcbtheorem{thm}{Théorème}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style={black,double},colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black,double},separator sign={~:}}{theorem}
+\newtcbtheorem{lm}{Lemme}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style={black,double,dotted},colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black,double,dotted},separator sign={~:}}{lemma}
+\newtcbtheorem{prp}{Propriété}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style={black,double,dashed},colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black,double,dashed},separator sign={~:}}{property}
+\newtcbtheorem{prv}{Preuve}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style=black,colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black},separator sign={~:}}{proof}
+\let\rq\relax
+\newtcbtheorem{rq}{Remarque}{enhanced,breakable,sharp corners,titlerule=0.5pt,titlerule style={black, dash dot},colback=white,coltitle=black,colframe=white,fonttitle=\boldmath\bfseries,borderline={0.5pt}{0.5pt}{black, dash dot},separator sign={~:}}{rmq}
+
+\begin{document}
+\maketitle
+\vspace{-2cm}
+\begin{lm*}{Lemme de décomposition des noyaux}
+Si $E$ est un $\k$ espace vectoriel, $u\in\mathcal L\l E\r$ et $\l P,Q\r\in\k\left[X\right]^2$ tel que $P\wedge Q=1$, alors $\ker{PQ\l u\r}=\ker{P\l u\r}\oplus\ker{Q\l u\r}$.
+\end{lm*}
+\begin{prv*}{Lemme de décomposition des noyaux}
+$P\wedge Q=1$. Donc, il existe $\l U,V\r\in\k\left[X\right]^2$ tel que $PU+QV=1$.
+\\\hfill\linebreak
+\textsl{Montrons l'égalité :}
+
+Soit $x\in\ker{PQ\l u\r}$.
+
+$x=\l PU+QV\r\l u\r\l x\r$.
+
+$\l Q\l u\r\circ\l PU\r\l u\r\r\l x\r=\l U\l u\r\circ\l PQ\r\l u\r\r\l x\r=0$. Donc, $\l PU\r\l u\r\l x\r\in\ker{Q\l u\r}$.
+
+De même, $\l QV\r\l u\r\l x\r\in\ker{P\l u\r}$.
+
+Donc, $\ker{\l PQ\r\l u\r}\subset\ker{P\l u\r}+\ker{Q\l u\r}$.
+
+Réciproquement, $\ker{P\l u\r}\subset\ker{\l PQ\r\l u\r}$ et $\ker{Q\l u\r}\subset\ker{\l PQ\r\l u\r}$.
+
+Donc, $\ker{P\l u\r}+\ker{Q\l u\r}\subset\ker{\l PQ\r\l u\r}$.
+\\\hfill\linebreak
+\textsl{Montrons que la somme est directe :}
+
+Soit $x\in\ker{P\l u\r}\cap\ker{Q\l u\r}$.
+
+$x=\l P\l u\r\circ U\l u\r+Q\l x\r\circ V\l u\r\r\l x\r=U\l u\r\l 0\r+V\l u\r\l 0\r=0$.
+\\\hfill\linebreak
+Donc, $\ker{\l PQ\r\l u\r}=\ker{P\l u\r}\oplus\ker{Q\l u\r}$.
+\end{prv*}
+
+
+\begin{thm*}{Théorème des noyaux itérés}
+Si $E$ est un $\k$ espace vectoriel et $u\in\mathcal L\l E\r$, alors $\l \dim{\ker{u^{k+1}}}-\dim{\ker{u^k}}\r$ est décroissante.
+\end{thm*}
+\begin{prv*}{Théorème des noyaux itérés}
+\textsl{Montrons que $\rg{u^k}-\rg{u^{k+1}}=\dim{\ker u\cap\im{u^k}}$ :}
+
+Soit $v=u_{\vert\im{u^k}}$. $\im v=\im{u^{k+1}}$.
+
+Ainsi, $\ker v=\left\{x\in\im{u^k}\;\vert\;v\l x\r=u\l x\r=0\right\}=\im{u^k}\cap\ker u$.
+
+Donc,
+{\setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{0pt}%
+\begin{flalign*}
+    \rg{u^k}-\rg{u^{k+1}}&=\rg{u^k}-\dim{u\l\im{u^k}\r}&\\
+    &=\dim{\ker v}&\\
+    &=\dim{\im{u^k}\cap\ker u}&
+\end{flalign*}}
+\\\hfill\linebreak
+Soit $d_k=\dim{\ker{u^{k+1}}}-\dim{\ker{u^k}}$.
+
+On a donc, $d_k=\rg{u^k}-\rg{u^{k+1}}=\dim{\im{u^k}\cap\ker u}$.
+
+Comme $\im{u^{k+1}}\subset\im{u^k}$, on a donc que $\im{u^{k+1}}\cap\ker u\subset\im{u^k}\cap\ker u$.
+
+Donc, $\dim{\ker{u^{k+2}}}-\dim{\ker{u^{k+1}}}\leqslant\dim{\ker{u^{k+1}}}-\dim{\ker{u^k}}$.
+\end{prv*}
+
+\begin{prp*}{Caratérisation de la trace}
+Si $\phi$ est une forme linéaire non nulle définie sur $\mat{n}{}{\k}$, vérifiant pour tout $A$ et $B$ de $\mat n{}\k$ l'équation $\phi\l AB\r=\phi\l BA\r$, alors il existe $\lambda\in\k^*$ tel que $\phi=\lambda\cdot\oldtr$.
+\end{prp*}
+
+\begin{prv*}{Caratérisation de la trace}
+$\l E_{i,j}\r_{\l i,j\r\in\llb1,n\rrb^2}$ est une base de $\mat n{}\k$ et $\tr{E_{i,j}}=\delta_{i,j}$.
+
+Soit $\l i,j\r\in\llb1,n\rrb^2$ tel que $i\neq j$. $\phi\l E_{i,j}\r=\phi\l E_{i,1}E_{1,j}\r=\phi\l E_{1,j}E_{i,1}\r=\phi\l0\r=0$.
+
+De plus, $\phi\l E_{i,i}\r=\phi\l E_{i,k}E_{k,i}\r=\phi\l E_{k,i}E_{i,k}\r=\phi\l E_{k,k}\r$.
+
+Donc, les $\phi\l E_{i,i}\r$ sont tous égaux de valeur $\lambda\neq0$.
+
+Donc, $\phi$ et $\lambda\cdot\oldtr$ coïncident sur une base.
+
+Donc, ils sont égaux.
+\end{prv*}
+
+\begin{prp*}{Hyperplans de $\mat {n}{}{\fakebold{\k}}$}
+Si $A\in\mat n{}\k$ et $\begin{array}{@{}r@{}c@{}l@{}}f_A\!:\!\mathcal M_n\l\k\r&{}\to{}&\mathcal M_n\l\k\r\\X&{}\mapsto{}&\tr{AX}\\\end{array}$, alors $\begin{array}{@{}r@{}c@{}l@{}}\Phi\!:\!\mathcal M_n\l\k\r&{}\overset{\scriptstyle\cong}{\to}{}&\mathcal M_n\l\k\r^*\\A&{}\mapsto{}&f_A\\\end{array}$ est un isomorphisme, $\mat n{}\k^*$ étant le dual de $\mat n{}\k$.
+\end{prp*}
+
+\begin{prv*}{Hyperplans de $\mat {n}{}{\fakebold{\k}}$}
+Si $\l A,B,\lambda\r\in\mat n{}\k^2\times\k$, alors
+{\setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{0pt}%
+\begin{flalign*}
+    \Phi\l A+\lambda B\r\l X\r&=f_{A+\lambda B}\l X\r&\\
+    &=\tr{\l A+\lambda B\r X}&\\
+    &=\tr{AX}+\lambda\tr{BX}&\\
+    &=f_A\l X\r+\lambda f_B\l X\r&\\
+    &=\l\Phi\l A\r+\lambda\Phi\l B\r\r\l X\r&
+\end{flalign*}}%
+Donc, $\Phi\l A+\lambda B\r=\Phi\l A\r+\lambda\Phi\l B\r$.
+
+De plus, $\dim{\mat{n}{}{\mathbb{K}}}=\dim{\mat{n}{}{\mathbb{K}}^*}$. Il suffit donc d'étudier l'injectivité de $\Phi$.
+
+Soit $A\in\ker{\Phi}$.
+
+$f_A=0$ donc, pour tout $X$ de $\mat{n}{}{\mathbb{K}}$, $\tr{AX}=0$.
+
+Or, $A$ est équivalent à $I_{n,n,r}$ où $r=\rg{A}$.
+
+Donc, il existe $\l P,Q\r\in\gl{n}{\k}$ tel que $A=PI_{n,n,r}Q$.
+
+Raisonnons par l'absurde et supposons que $r\neq0$. En posant $X=Q^{-1}P^{-1}$, on a $\tr{PI_{n,n,r}QX}=\tr{I_{n,n,r}\l QXP\r}=\tr{I_{n,n,r}}=r\neq0$, ce qui contredit $f_A=0$.
+
+Donc, $\rg A=0$.
+
+Donc, $\Phi$ est injective, donc bijective.
+\end{prv*}
+
+\begin{rq*}{Hyperplans de $\mat {n}{}{\fakebold{\k}}$}
+On a donc que tout $\phi\in\mat{n}{}{\mathbb{K}}^*$ est donc de la forme $X\mapsto\tr{AX}=f_A$.
+
+Ainsi, pour tout hyperplan $H$ de $\mat{n}{}{\mathbb{K}}$, il existe $A\in\mat{n}{}{\mathbb{K}}$ tel que $H=\ker{f_A}$.
+\end{rq*}
+\end{document}
