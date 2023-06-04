@@ -51,7 +51,7 @@
             const lst = jsCode.split("\n");
             title = lst[0].substring(lst[0].indexOf("\"") + 1, lst[0].lastIndexOf("\""));
             sh_quest = parseInt(lst[1]);
-            sh_qr = parseInt(lst[2]));
+            sh_qr = parseInt(lst[2]);
             n = lst[3].replace("]", "").replace("[", "").split(", ").map(x => parseInt(x));
             fst = lst[4].replace("]", "").replace("[", "").split(", ").map(x => parseInt(x));
 
