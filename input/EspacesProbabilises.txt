@@ -1,7 +1,7 @@
 Probabilités -- Espaces probabilisés
 Shuffle questions : True
 Q/R & R/Q : False
-\newcommand\p{\mathbb P}\let\oldOmega\Omega\let\Omega\varOmega\usepackage{bigoperators}
+\newcommand\p{\mathbb P}\let\oldOmega\Omega\let\Omega\varOmega\usepackage{bigoperators}\let\oldlim\lim\renewcommand\lim[2]{\oldlim\limits_{#1}\l#2\r}\let\oldlims\limsup\newcommand\lims[1]{\oldlims\l#1\r}\let\oldlimi\liminf\newcommand\limi[1]{\oldlimi\l#1\r}
 Système complet d'événements;;Famille $\left\{A_i,\;i\in I\right\}$ formant une partition de $\Omega$
 $\sigma$-algèbre\linebreak Tribu;;Une $\sigma$-algèbre $\mathcal T$ est un sous-ensemble de $\mathcal P\l \Omega\r$ vérifiant\linebreak $\Omega\in\mathcal{T}$\linebreak$A\in\mathcal T\Rightarrow\overline A\in\mathcal T$\linebreak Si $I$ est dénombrable et $\l A_i\r_{i\in I}$ une famille d'éléments de $\mathcal T$, $\bigcup{i\in I}{}{A_i}\in\mathcal T$
 Espace probabilisable;;$\l \mathcal T,\Omega\r$\linebreak$\mathcal T$ est une $\sigma$-algèbre sur $\Omega$
@@ -9,3 +9,9 @@ Intersection de tribus;;Si $\l\mathcal T_i\r_{i\in I}$ est une famille de $\sigm
 Tribu engendrée par une famille;;$\sigma\l\l A_i\r_{i\in I}\r$ avec $A_i$ des éléments de $\mathcal{P}\l\Omega\r$\linebreak Plus petite $\sigma$-algèbre de $\Omega$ contenant $\l A_i\r_{i\in I}$
 Tribu des boréliens;;$\mathcal B^1$ ou $\mathcal B$\linebreak$\sigma\l\l\left]-\infty,a\right[\r_{a\in\mathbb R}\r$\linebreak\linebreak$\mathcal B^1$ est aussi engendrée par n'importe quel type d'intervalle de $\mathbb R$
 Tribu des boréliens sur $\mathbb R^n$;;$\mathcal B^n$\linebreak Tribu engendrée par les $I_1\times\cdots\times I_n$ où les $I_k$ sont des intervalles
+Mesure de probabilités;;Application $\p\!:\:\mathcal T\to\mathbb R$ vérifiant\linebreak$0\leqslant\p\l A\r\leqslant 1$\linebreak$\p\l\varOmega\r=1$\linebreak$\p\l\biguplus{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\p\l A_n\r}$
+$\p\l\bigcup{i=1}{n}{A_i}\r$;;$\sum{\substack{I\subset\llb1,n\rrb\\I\neq\varnothing}}{}{\l-1\r^{\left|I\right|-1}\p\l\bigcap{i\in I}{}{A_i}\r}$
+$\p\l\bigcup{n\in\mathbb N}{}{A_n}\r$;;$\lim{N\to+\infty}{\p\l\bigcup{n=0}{N}{A_n}\r}$
+$\p\l\bigcap{n\in\mathbb N}{}{A_n}\r$;;$\lim{N\to+\infty}{\p\l\bigcap{n=0}{N}{A_n}\r}$
+$\lims{A_n}$;;$\bigcap{n\in\mathbb N}{}{\bigcup{k=n}{+\infty}{A_k}}$
+$\limi{A_n}$;;$\bigcup{n\in\mathbb N}{}{\bigcap{k=n}{+\infty}{A_k}}$
