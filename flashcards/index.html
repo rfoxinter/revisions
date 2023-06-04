@@ -49,11 +49,11 @@
             const response = await fetch(file + '/info.txt');
             const jsCode = await response.text();
             const lst = jsCode.split("\n");
-            title = eval(lst[0]);
-            sh_quest = eval(lst[1]);
-            sh_qr = eval(lst[2]);
-            n = eval(lst[3]);
-            fst = eval(lst[4]);
+            title = lst[0].substring(lst[0].indexOf("\"") + 1, lst[0].lastIndexOf("\""));
+            sh_quest = parseInt(lst[1]);
+            sh_qr = parseInt(lst[2]));
+            n = lst[3].replace("]", "").replace("[", "").split(", ").map(x => parseInt(x));
+            fst = lst[4].replace("]", "").replace("[", "").split(", ").map(x => parseInt(x));
 
             q = true;
             viewed = false;
