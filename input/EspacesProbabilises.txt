@@ -15,3 +15,16 @@ $\p\l\bigcup{n\in\mathbb N}{}{A_n}\r$;;$\lim{N\to+\infty}{\p\l\bigcup{n=0}{N}{A_
 $\p\l\bigcap{n\in\mathbb N}{}{A_n}\r$;;$\lim{N\to+\infty}{\p\l\bigcap{n=0}{N}{A_n}\r}$
 $\lims{A_n}$;;$\bigcap{n\in\mathbb N}{}{\bigcup{k=n}{+\infty}{A_k}}$
 $\limi{A_n}$;;$\bigcup{n\in\mathbb N}{}{\bigcap{k=n}{+\infty}{A_k}}$
+Espace probabilisé\linebreak Modèle probabiliste de Kolmogorov;;$\l\Omega,\mathcal T,\p\r$ où $\l\Omega,\mathcal T\r$ est un espace probabilisable et $\p$ une mesure de probabilités
+Distribution de probabilités;;Famille $\l p_i\r_{i\in I}$ tel que $\sum{i\in I}{}{p_i}=1$
+$\p\l\left\{\omega\right\}\r$;;$\frac1{\left|\Omega\right|}$
+$\p_b\l A\r=\p\l A\mid B\r$;;$\frac{\p\l A\cap B\r}{\p\l B\r}$
+$A$ et $B$ sont indépendants;;$\p\l A\cap B\r=\p\l A\r\p\l B\r$
+Les $A_i$, $i\in I$ sont mutuellement indépendants;;$\forall J\in\mathcal P_f\l I\r,\;\p\l\bigcap{j\in J}{}{A_j}\r=\prod{j\in J}{}{\p\l A_j\r}$
+Système quasi-complet d'événements;;$\mathcal{C}$ est quasi-complet si\linebreak Les événements de $\mathcal C$ ne sont pas impossibles\linebreak Les événements de $\mathcal C$ sont deux à deux disjoints\linebreak$\sum{A\in\mathcal C}{}{\p\l A\r}=1$
+Formule des probabilités totales;;Si $\l A_i\r_{i\in I}$ est un système quasi-complet au plus dénombrable\linebreak$\p\l B\r=\sum{i\in I}{}{\p\l A_i\r\p\l B\mid A_i\r}$
+Formule des probabilités totales pour le système complet $\l A,\overline A\r$;;$\p\l B\r=\p\l A\r\p\l B\mid A\r+\p\l\overline A\r\p\l B\mid\overline A\r$
+Formule des probabilités totales associée à une variable aléatoire réelle discrète;;$\p\l B\r=\sum{x\in X\l\Omega\r}{}{\p\l X=x\r\p\l B\mid X=x\r}$
+Formule des probabilités composées;;Si $\p\l \bigcap{i=1}{n-1}{A_i}\r\neq0$\linebreak$\p\l \bigcap{i=1}{n}{A_i}\r=\p\l A_1\r\prod{i=2}{n}{\p\l A_i\mid\vert\bigcap{j=1}{i-1}{A_i}\r}$
+Formule de Bayes simple;;Si $\p\l A\r\neq0$ et $\p\l B\r\neq0$\linebreak$\p\l A\mid B\r=\frac{\p\l B\mid A\r\p\l A\r}{\p\l B\r}$
+Formule de Bayes sur un système complet;;Si $\l A_i\r_{i\in I}$ est un système quasi-complet au plus dénombrable tel que pour tout $i\in I$, $\p\l A_i\r\neq0$ et $\p\l B\r\neq0$\linebreak$\p\l A_j\mid B\r=\frac{\p\l B\mid A_j\r\p\l A_j\r}{\oldsum\limits_{i\in I}\l\p\l B\mid A_i\r\p\l A_i\r\r}$
