@@ -4,8 +4,8 @@ Q/R & R/Q : False
 \usepackage{polynomes}\usepackage{bigoperators}\let\oldmax\max\renewcommand\max[2][]{\oldmax_{#1}\l#2\r}\let\oldmin\min\renewcommand\min[2][]{\oldmin_{#1}\l#2\r}
 Structure de $\pol AX$;;Anneau commutatif
 Structure de $\pol AX$ si $\mathbb A$ est intègre;;Anneau intègre commutatif
-$\deg P$;;$\max{\left\{n\in\mathbb N\;\vert\;a_n\neq0\right\}}$
-$\val P$;;$\min{\left\{n\in\mathbb N\;\vert\;a_n\neq0\right\}}$
+$\deg P$;;$\max{\left\{n\in\mathbb N\;\middle|\;a_n\neq0\right\}}$
+$\val P$;;$\min{\left\{n\in\mathbb N\;\middle|\;a_n\neq0\right\}}$
 Propriétés de $\varphi\!:\!\pol KX\to\pol Kx$;;Homomorphisme d'anneaux surjectif
 Propriétés de $\varphi\!:\!\pol KX\to\pol Kx$ si $\car{\mathbb K}=0$;;Isomorphisme d'anneaux
 Un anneau commutatif $\mathbb B$ est une algèbre sur un anneau commutatif $\mathbb A$\linebreak$\mathbb A$-algèbre $\mathbb B$;;$\forall\l \lambda,\mu,x,y\r\in\mathbb A^2\times\mathbb B^2$\linebreak$\l \lambda\mu\r y=\lambda\l\mu y\r$\linebreak$\lambda\l xy\r=\l\lambda x\r y=x\l\lambda y\r$\linebreak$\l\lambda+\mu\r x=\lambda x+\mu x$\linebreak$\lambda\l x+y\r=\lambda x+\lambda y$\linebreak$1_{\mathbb A}x=x$
