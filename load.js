@@ -79,7 +79,7 @@ function display_files(sitemap){
                 p.appendChild(a);
                 p.innerHTML += ' ';
                 var a2 = document.createElement('a');
-                a2.setAttribute('href', path + f + '.pdf');
+                a2.setAttribute('href', f + '.pdf');
                 span2 = document.createElement('span');
                 span2.setAttribute('class','material-symbols-rounded');
                 span2.innerHTML = 'download';
@@ -99,7 +99,7 @@ function display_files(sitemap){
                 p.appendChild(a);
                 p.innerHTML += ' ';
                 var a2 = document.createElement('a');
-                a2.setAttribute('href', path + f + '.pdf');
+                a2.setAttribute('href', 'pdf/' + f + '.pdf');
                 span2 = document.createElement('span');
                 span2.setAttribute('class','material-symbols-rounded');
                 span2.innerHTML = 'download';
@@ -124,7 +124,7 @@ function display_files(sitemap){
             p.appendChild(a);
             p.innerHTML += ' ';
             var a2 = document.createElement('a');
-            a2.setAttribute('href', path + f + '.pdf');
+            a2.setAttribute('href', 'pdf/' + f + '.pdf');
             span2 = document.createElement('span');
             span2.setAttribute('class','material-symbols-rounded');
             span2.innerHTML = 'download';
