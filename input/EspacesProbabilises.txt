@@ -17,7 +17,7 @@ $\lims{A_n}$;;$\bigcap{n\in\mathbb N}{}{\bigcup{k=n}{+\infty}{A_k}}$
 $\limi{A_n}$;;$\bigcup{n\in\mathbb N}{}{\bigcap{k=n}{+\infty}{A_k}}$
 Espace probabilisé\linebreak Modèle probabiliste de Kolmogorov;;$\l\Omega,\mathcal T,\p\r$ où $\l\Omega,\mathcal T\r$ est un espace probabilisable et $\p$ une mesure de probabilités
 Distribution de probabilités;;Famille $\l p_i\r_{i\in I}$ tel que $\sum{i\in I}{}{p_i}=1$
-$\p\l\left\{\omega\right\}\r$;;$\frac1{\left|\Omega\right|}$
+$\p\l\left\{\omega\right\}\r$ pour une distribution de probabilités uniforme;;$\frac1{\left|\Omega\right|}$
 $\p_B\l A\r=\p\l A\sq B\r$;;$\frac{\p\l A\cap B\r}{\p\l B\r}$
 $A$ et $B$ sont indépendants;;$\p\l A\cap B\r=\p\l A\r\p\l B\r$
 Les $A_i$, $i\in I$ sont mutuellement indépendants;;$\forall J\in\mathcal P_f\l I\r,\;\p\l\bigcap{j\in J}{}{A_j}\r=\prod{j\in J}{}{\p\l A_j\r}$
