@@ -1,0 +1,17 @@
+Probabilités -- Variables aléatoires
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{probas}\usepackage{bigoperators}
+Application mesurable;;Si $\l E,\mathcal S\r$ et $\l F,\mathcal T\r$ sont deux espaces mesurables et $f\!:\! E\to F$\linebreak$\forall B\in\mathcal T,\;f^{-1}\l B\r\in\mathcal S$
+Variable aléatoire;;Application mesurable $X\!:\!\l\Omega,\mathcal T\r\to\l E;\mathcal T'\r$\linebreak Si $\Omega'\in\mathcal T$ tel que $\p{\Omega'}=1$, on peut définir $X$ sur $\Omega'$
+Variable aléatoire réelle;;Variable aléatoire à valeurs dans $\l\mathbb R,\bor^1\r$
+Vecteur aléatoire réel;;Variable aléatoire à valeurs dans $\l\mathbb R^n,\bor^n\r$
+Si $X\!:\!\l\Omega,\mathcal T\r\to\l E;\mathcal T'\r$\linebreak$\mathcal T_X$;;$\left\{X^{-1}\l A\r,\;A\in\mathcal T'\right\}$
+Loi d'une variable aléatoire;;$\p[X]A=\p{x^{-1}\l A\r}$
+Fonction de répartition de $X\!:\!\Omega\to\mathbb R$;;$F_X\l x\r=\p{X\leqslant x}$
+Variable aléatoire discrète;;$X\l\Omega\r$ est fini
+Structure des variables aléatoires de $\mathbb R^\Omega$;;Sous-algèbre de $\mathbb R^\Omega$
+$\p[f\l X\r]{}$;;$\p[X]{}\circ\widehat{f^{-1}}$
+$\p{f\l X\r=x}$;;$\sum{y\in f^{-1}\l x\r\cap X\l\Omega\r}{}{\p{X=y}}$
+Loi conjointe de $\l X_1,\cdots,X_n\r$;;$\p{X_1,\cdots,X_n}$ définie sur $\l\mathbb R^n,\bor^n\r$
+$k$-ième loi marginale de $\l X_1,\cdots,X_n\r$;;Loi de $X_k$
