@@ -48,7 +48,7 @@ def remove_special_chars(s:str) -> str:
 def output_f(files:list) -> list:
     ret = []
     for i in files:
-        r = open(i, 'r').read()
+        r = open(i, 'r', encoding='utf-8').read()
         st = r.find('{pdftitle=')
         k = st + 11
         while r[k] != '}':
@@ -140,7 +140,7 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
         file += '\\slideq{' + r[i][0] + '}{' + str(i + 1) + '/' + str(len(r)) + '}\n'
         file += '\\slider{' + r[i][1] + '}{' + str(i + 1) + '/' + str(len(r)) + '}\n'
     file += '\end{document}'
-    f = open('output/' + ttle + '.tex', 'w')
+    f = open('output/' + ttle + '.tex', 'w', encoding='utf-8')
     f.write(file)
     f.close()
     c('output/')
@@ -184,7 +184,7 @@ def main(file_path:str, file:str, n:int, dest:str, _open:bool) -> bool:
     if file == '':
         file = input('File to compile : ')
     try:
-        r = open('input/' + file + '.txt', 'r').read().split('\n')
+        r = open('input/' + file + '.txt', 'r', encoding='utf-8').read().split('\n')
     except OSError:
         raise RuntimeError('File not found')
     t, ttle = '', ''

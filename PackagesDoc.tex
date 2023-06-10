@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{stmaryrd}
+\usepackage{output/matrices,output/al}
+\newcolumntype{Y}{>{\centering\arraybackslash\hsize=0.25\hsize}X}
+\newcolumntype{Z}{>{\centering\arraybackslash\hsize=0.75\hsize}X}
+\renewcommand{\line}[1]{\verb|#1|&$#1$\\\hline}
+\newcommand{\lline}[2]{\verb|#1|&#2\\\hline}
+\setlength{\parindent}{0pt}
+\hypersetup{hidelinks,linktoc=all}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+\title{Packages documentation}
+\author{}
+\date{}
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+\tableofcontents
+\null\newpage
+\pagenumbering{arabic}
+\section{AL.sty}
+Nécessite d'importer \textbf{avant} le package \texttt{Matrices.sty}.
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{|Y|Z|}
+    \hline
+    \textbf{Commande} & \textbf{Résultat}\\
+    \hline
+    \line{\oldvect}
+    \line{\vect{X}}
+
+\end{tabularx}
+\end{document}

@@ -1,4 +1,3 @@
-# from random import shuffle as sh
 from subprocess import run as rn
 from subprocess import PIPE
 from os import chdir as c
@@ -47,7 +46,7 @@ def remove_special_chars(s:str) -> str:
 def output_f(files:list) -> list:
     ret = []
     for i in files:
-        r = open(i, 'r').read()
+        r = open(i, 'r', encoding='utf-8').read()
         st = r.find('{pdftitle=')
         k = st + 11
         while r[k] != '}':
@@ -94,7 +93,7 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
 \end{center}
 \end{adjustbox}
 \end{document}'''
-            f = open('output/flcrd.tex', 'w')
+            f = open('output/flcrd.tex', 'w', encoding='utf-8')
             f.write(file)
             f.close()
             c('output/')
@@ -122,7 +121,7 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
             except:
                 fail = True
     c(dest + '/' + ttle)
-    f = open('info.txt', 'w')
+    f = open('info.txt', 'w', encoding='utf-8')
     f.write('"' + htmlttle + '"\n' + ('1' if sh_quest else '0') + '\n' + ('1' if sh_qr else '0') + '\n' + str([i for i in range(1, len(r) + 1)]) + '\n' + str(fst))
     f.close()
     c('../../')
@@ -136,7 +135,7 @@ def recompile(dest:str) -> bool:
         f = f.replace('.txt','')
         c(d(__file__))
         try:
-            r = open('input/' + f + '.txt', 'r').read().split('\n')
+            r = open('input/' + f + '.txt', 'r', encoding='utf-8').read().split('\n')
         except OSError:
             raise RuntimeError('File not found')
         t, ttle = '', ''
@@ -169,7 +168,7 @@ def main(file_path:str, file:str, dest:str, _open:bool) -> bool:
     if file == '':
         file = input('File to compile : ')
     try:
-        r = open('input/' + file + '.txt', 'r').read().split('\n')
+        r = open('input/' + file + '.txt', 'r', encoding='utf-8').read().split('\n')
     except OSError:
         raise RuntimeError('File not found')
     t, ttle = '', ''

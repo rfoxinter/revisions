@@ -1,7 +1,7 @@
 Algèbre 2 -- Dimension finie
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al}\usepackage{bigoperators}\DeclareMathOperator{\oldim}{im}\newcommand{\im}[1]{\oldim\l#1\r}\let\oldmin\min\renewcommand{\min}[1]{\oldmin\l#1\r}\let\oldker\ker\renewcommand{\ker}[1]{\oldker\l#1\r}\renewcommand\b{\mathcal{B}}\renewcommand\c{\mathcal{C}}\renewcommand\d{\mathcal{D}}\DeclareMathOperator{\id}{id}
+\usepackage{matrices,al}\usepackage{bigoperators}\DeclareMathOperator{\oldim}{im}\newcommand{\im}[1]{\oldim\l#1\r}\let\oldmin\min\renewcommand{\min}[1]{\oldmin\l#1\r}\let\oldker\ker\renewcommand{\ker}[1]{\oldker\l#1\r}\renewcommand\b{\mathcal{B}}\renewcommand\c{\mathcal{C}}\renewcommand\d{\mathcal{D}}\DeclareMathOperator{\id}{id}
 Dimension d'un produit cartésien;;$\dim{E\times F}=\dim E+\dim F$
 Dimension de $\al EF$;;$\dim{\al EF}=\dim E\times\dim F$
 Rang d'une famille;;$\rg{x_1,\cdots,x_n}=\dim{\vect{x_1,\cdots,x_n}}$
