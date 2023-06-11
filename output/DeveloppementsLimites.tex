@@ -10,52 +10,52 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Développement limité au sens fort (définition)\linebreak$P_n\in\mathbb R\left[X\right]$}{1/24}
-\slider{$\eg[x\to x_0]{f\l x\r}{P_n\l x\r+\O{\l x-x_0\r^{n+1}}}$}{1/24}
-\slideq{Développement limité de $\ch{x}$}{2/24}
-\slider{$\eg[x\to0]{\ch{x}}{\sum{k=0}{n}{\frac{x^{2k}}{\l2k\r!}}+\o{x^n}}$}{2/24}
-\slideq{Développement limité de $\atan{x}$}{3/24}
-\slider{$\eg[x\to0]{\atan{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}}{2k+1}+\o{x^{2n+2}}}}$}{3/24}
-\slideq{Développement limité de $\frac{1}{1+x}$}{4/24}
-\slider{$\eg[x\to0]{\frac{1}{1+x}}{\sum{k=0}{n}{\l-1\r^kx^k}+\o{x^n}}$}{4/24}
-\slideq{Développement limité de $\tan{x}$}{5/24}
-\slider{$\eg[x\to0]{\tan{x}}{x+\frac{x^3}{3}+\frac{2x^5}{15}+\o{x^6}}$}{5/24}
-\slideq{Développement limité de $\cos{x}$}{6/24}
-\slider{$\eg[x\to0]{\cos{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k}}{\l2k\r!}}+\o{x^{2n+1}}}$}{6/24}
-\slideq{Développement limité (définition)\linebreak$P_n\in\mathbb R\left[X\right]$}{7/24}
-\slider{$\eg[x\to x_0]{f\l x\r}{P_n\l x\r+\o{\l x-x_0\r^n}}$}{7/24}
-\slideq{Reste de Taylor à l'ordre $n$}{8/24}
-\slider{$R_n\l x\r=f\l x\r-\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}$}{8/24}
-\slideq{Formule de Taylor-Young à l'ordre $n$ au point $x_0$}{9/24}
-\slider{$\eg[x\to x_0]{f\l x\r}{\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}}$\linebreak${}+\o{\l x-x_0\r^n}$}{9/24}
-\slideq{Développement limité de $\sin{x}$}{10/24}
-\slider{$\eg[x\to0]{\sin{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$}{10/24}
-\slideq{Restriction d'un développement limité\linebreak$T_{m,x_0}\l P\r$ est la troncature à l'ordre $m$ au voisinage de $x_0$ du polynôme $P$}{11/24}
-\slider{$\eg[x\to x_0]{f\l x\r}{P\l x\r+\o{\l x-x_0\r^n}}$\linebreak$\Rightarrow\eg[x\to x_0]{f\l x\r}{\l T_{m,x_0}\l P\r\r\l x\r+\o{\l x-x_0\r^m}}$}{11/24}
-\slideq{Développement limité de $\frac{1}{1-x}$}{12/24}
-\slider{$\eg[x\to0]{\frac{1}{1-x}}{\sum{k=0}{n}{x^k}+\o{x^n}}$}{12/24}
-\slideq{Développement limité de $\frac{1}{\sqrt{1+x}}$}{13/24}
-\slider{$\eg[x\to0]{\frac{1}{\sqrt{1+x}}}{1-\frac{x}{2}+\frac{3x^2}{8}-\frac{5x^3}{16}+\o{x^3}}$}{13/24}
-\slideq{Développement limité de $\exp{x}$}{14/24}
-\slider{$\eg[x\to0]{\e^x}{\sum{k=0}{n}{\frac{x^k}{k!}}+\o{x^n}}$}{14/24}
+\slideq{Développement limité de $\cos{x}$}{1/24}
+\slider{$\eg[x\to0]{\cos{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k}}{\l2k\r!}}+\o{x^{2n+1}}}$}{1/24}
+\slideq{Développement limité de $\sh{x}$}{2/24}
+\slider{$\eg[x\to0]{\sh{x}}{\sum{k=0}{n}{\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$}{2/24}
+\slideq{Développement limité (définition)\linebreak$P_n\in\mathbb R\left[X\right]$}{3/24}
+\slider{$\eg[x\to x_0]{f\l x\r}{P_n\l x\r+\o{\l x-x_0\r^n}}$}{3/24}
+\slideq{Développement asymptotique de $f$ sur une échelle de comparaison $\mathcal E$ au voisinage de $x_0$ à la précision $\varphi\in\mathcal E$}{4/24}
+\slider{$\eg[x\to x_0]{f\l x\r}{\sum{\substack{\psi\in\mathcal E\\\varphi=o\l\psi\r\vee\varphi=\psi}}{}{a_\psi\psi\l x\r+\o{\varphi\l x\r}}}$}{4/24}
+\slideq{Développement limité de $\frac{1}{1-x}$}{5/24}
+\slider{$\eg[x\to0]{\frac{1}{1-x}}{\sum{k=0}{n}{x^k}+\o{x^n}}$}{5/24}
+\slideq{Développement limités d'un inverse}{6/24}
+\slider{Identifier les coefficients avec $x=\l f^{-1}\circ f\r\l x\r+\o{x^n}$ avec le développement limité de $f$}{6/24}
+\slideq{Développement limité de $\atan{x}$}{7/24}
+\slider{$\eg[x\to0]{\atan{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}}{2k+1}+\o{x^{2n+2}}}}$}{7/24}
+\slideq{Restriction d'un développement limité\linebreak$T_{m,x_0}\l P\r$ est la troncature à l'ordre $m$ au voisinage de $x_0$ du polynôme $P$}{8/24}
+\slider{$\eg[x\to x_0]{f\l x\r}{P\l x\r+\o{\l x-x_0\r^n}}$\linebreak$\Rightarrow\eg[x\to x_0]{f\l x\r}{\l T_{m,x_0}\l P\r\r\l x\r+\o{\l x-x_0\r^m}}$}{8/24}
+\slideq{Développement limité de $\ln{1+x}$}{9/24}
+\slider{$\eg[x\to0]{\ln{1+x}}{\sum{k=1}{n}{\l-1\r^{k-1}\frac{x^k}{k}}+\o{x^n}}$}{9/24}
+\slideq{Développement limité de $\sqrt{1+x}$}{10/24}
+\slider{$\eg[x\to0]{\sqrt{1+x}}{1+\frac{x}{2}-\frac{x^2}{8}+\frac{x^3}{16}+\o{x^3}}$}{10/24}
+\slideq{Développement de Taylor de $f$}{11/24}
+\slider{$P\l x\r=\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}$}{11/24}
+\slideq{Formule de Taylor-Young à l'ordre $n$ au point $x_0$}{12/24}
+\slider{$\eg[x\to x_0]{f\l x\r}{\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}}$\linebreak${}+\o{\l x-x_0\r^n}$}{12/24}
+\slideq{Développement limité de $\sin{x}$}{13/24}
+\slider{$\eg[x\to0]{\sin{x}}{\sum{k=0}{n}{\l-1\r^k\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$}{13/24}
+\slideq{Développement limité de $\frac{1}{1+x}$}{14/24}
+\slider{$\eg[x\to0]{\frac{1}{1+x}}{\sum{k=0}{n}{\l-1\r^kx^k}+\o{x^n}}$}{14/24}
 \slideq{Si $f$ est une fonction dérivable au voisinage de $0$ avec $\eg[x\to0]{f'\l x\r}{a_0+\cdots+a_{n-1}x^{n-1}+\o{x^{n-1}}}$}{15/24}
 \slider{$\eg[x\to0]{f\l x\r}{f\l0\r+a_0x+\cdots+\frac{a{n-1}}nx^n+\o{x^n}}$}{15/24}
-\slideq{Développement de Taylor de $f$}{16/24}
-\slider{$P\l x\r=\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}$}{16/24}
+\slideq{Si $f$ est une fonction de classe $\mathcal C^n$ au voisinage de $0$ avec $\eg[x\to0]{f\l x\r}{f\l0\r+a_0x+\cdots+a{n-1}x^n+\o{x^n}}$}{16/24}
+\slider{$\eg[x\to0]{f'\l x\r}{a_1+\cdots+na_nx^{n-1}+\o{x^{n-1}}}$}{16/24}
 \slideq{Développement limité de $\l1+x\r^\alpha$}{17/24}
 \slider{$\eg[x\to0]{\l1+x\r^\alpha}{\sum{k=0}{n}{\frac{\oldprod\limits_{j=0}^{k-1}\l\alpha-j\r}{k!}x^k}+\o{x^n}}$}{17/24}
-\slideq{Développement asymptotique de $f$ sur une échelle de comparaison $\mathcal E$ au voisinage de $x_0$ à la précision $\varphi\in\mathcal E$}{18/24}
-\slider{$\eg[x\to x_0]{f\l x\r}{\sum{\substack{\psi\in\mathcal E\\\varphi=\o{\psi}\vee\varphi=\psi}}{}{a_\psi\psi\l x\r+\o{\varphi\l x\r}}}$}{18/24}
-\slideq{Développement limité de $\sh{x}$}{19/24}
-\slider{$\eg[x\to0]{\sh{x}}{\sum{k=0}{n}{\frac{x^{2k+1}}{\l2k+1\r!}}+\o{x^{2n+2}}}$}{19/24}
-\slideq{Développement limité de $\sqrt{1+x}$}{20/24}
-\slider{$\eg[x\to0]{\sqrt{1+x}}{1+\frac{x}{2}-\frac{x^2}{8}+\frac{x^3}{16}+\o{x^3}}$}{20/24}
+\slideq{Reste de Taylor à l'ordre $n$}{18/24}
+\slider{$R_n\l x\r=f\l x\r-\sum{k=0}{n}{\frac{\l x-x_0\r^k}{k!}f^{\l k\r}\l x_0\r}$}{18/24}
+\slideq{Développement limité de $\ch{x}$}{19/24}
+\slider{$\eg[x\to0]{\ch{x}}{\sum{k=0}{n}{\frac{x^{2k}}{\l2k\r!}}+\o{x^n}}$}{19/24}
+\slideq{Développement limité de $\exp{x}$}{20/24}
+\slider{$\eg[x\to0]{\e^x}{\sum{k=0}{n}{\frac{x^k}{k!}}+\o{x^n}}$}{20/24}
 \slideq{Développement limité de $\th{x}$}{21/24}
 \slider{$\eg[x\to0]{\th{x}}{x-\frac{x^3}{3}+\frac{2x^5}{15}+\o{x^6}}$}{21/24}
-\slideq{Développement limité de $\ln{1+x}$}{22/24}
-\slider{$\eg[x\to0]{\ln{1+x}}{\sum{k=1}{n}{\l-1\r^{k-1}\frac{x^k}{k}}+\o{x^n}}$}{22/24}
-\slideq{Développement limités d'un inverse}{23/24}
-\slider{Identifier les coefficients avec $x=\l f^{-1}\circ f\r\l x\r+\o{x^n}$ avec le développement limité de $f$}{23/24}
-\slideq{Si $f$ est une fonction de classe $\mathcal C^n$ au voisinage de $0$ avec $\eg[x\to0]{f\l x\r}{f\l0\r+a_0x+\cdots+a{n-1}x^n+\o{x^n}}$}{24/24}
-\slider{$\eg[x\to0]{f'\l x\r}{a_1+\cdots+na_nx^{n-1}+\o{x^{n-1}}}$}{24/24}
+\slideq{Développement limité de $\tan{x}$}{22/24}
+\slider{$\eg[x\to0]{\tan{x}}{x+\frac{x^3}{3}+\frac{2x^5}{15}+\o{x^6}}$}{22/24}
+\slideq{Développement limité au sens fort (définition)\linebreak$P_n\in\mathbb R\left[X\right]$}{23/24}
+\slider{$\eg[x\to x_0]{f\l x\r}{P_n\l x\r+\O{\l x-x_0\r^{n+1}}}$}{23/24}
+\slideq{Développement limité de $\frac{1}{\sqrt{1+x}}$}{24/24}
+\slider{$\eg[x\to0]{\frac{1}{\sqrt{1+x}}}{1-\frac{x}{2}+\frac{3x^2}{8}-\frac{5x^3}{16}+\o{x^3}}$}{24/24}
 \end{document}

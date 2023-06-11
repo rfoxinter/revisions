@@ -10,56 +10,56 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$u_n=l+\o{1}$}{1/26}
-\slider{$\lim{n\to\infty}{u_n}=l$}{1/26}
+\slideq{$\eq{u_n}{v_n}$}{1/26}
+\slider{$\lim{n\to\infty}{\frac{u_n}{v_n}}=1$}{1/26}
 \slideq{$u_n=\o{v_n}$\linebreak Définition avec un epsilon}{2/26}
 \slider{$\forall\varepsilon\in\mathbb{R}_+,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;\left|u_n\right|\leqslant\varepsilon\left|v_n\right|$}{2/26}
-\slideq{Implication entre $o$ et $O$}{3/26}
-\slider{$u_n=\o{v_n}\Rightarrow  u_n=\O{v_n}$}{3/26}
-\slideq{Transitivité de $o$ et $O$}{4/26}
-\slider{$u_n=\O{v_n}\wedge v_n=\O{w_n}\Rightarrow  u_n=\O{w_n}$\linebreak $u_n=\o{v_n}\wedge v_n=\o{w_n}\Rightarrow  u_n=\o{w_n}$\linebreak $u_n=\o{v_n}\wedge v_n=\O{w_n}\Rightarrow  u_n=\o{w_n}$\linebreak $u_n=\O{v_n}\wedge v_n=\o{w_n}\Rightarrow  u_n=\o{w_n}$}{4/26}
-\slideq{$u_n=\Om{v_n}$\linebreak Définition avec un minorant}{5/26}
-\slider{$\exists M\in\mathbb{R}_+,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;\left|u_n\right|\geqslant M\left|v_n\right|$}{5/26}
-\slideq{$\eq{u_n}{v_n}$}{6/26}
-\slider{$u_n=v_n+\o{v_n}$}{6/26}
-\slideq{$\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$}{7/26}
-\slider{$\eq{u_nv_n}{u_n'v_n'}$}{7/26}
-\slideq{$\eq{u_n}{u_n'}$\linebreak$a\in\mathbb R$}{8/26}
-\slider{$\eq{u_n^a}{v_n^a}$}{8/26}
-\slideq{$u_n=\O{v_n}$\linebreak Définition avec les suites}{9/26}
-\slider{$\exists\l\mu_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\mu_nv_n$\linebreak Avec $\l\mu_n\r$ bornée}{9/26}
-\slideq{$u_n=\o{v_n}$\linebreak Définition avec les suites}{10/26}
-\slider{$\exists\l\varepsilon_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\varepsilon_nv_n$\linebreak Avec $\lim{n\to\infty}{\varepsilon_n}=0$}{10/26}
-\slideq{$u_n=\Om{v_n}$\linebreak Définition avec les suites si $\l v_n\r$ ne s'annule pas}{11/26}
-\slider{$\exists\l\mu_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\mu_nv_n$\linebreak Avec $\l\mu_n\r$ minorée}{11/26}
-\slideq{$u_n=\Th{v_n}$\linebreak Définition avec les suites}{12/26}
-\slider{$\exists\l\mu_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\mu_nv_n$\linebreak Avec $\forall n\in\mathbb N,\;0<\varepsilon\leqslant\mu_n\leqslant M$}{12/26}
-\slideq{Formule de Stirling}{13/26}
-\slider{$\eq[+\infty]{n!}{\sqrt{2\pi n}\l\frac{n}{\e}\r^n}$}{13/26}
-\slideq{$\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$\linebreak Avec $\l v_n\r$ qui ne s'annule pas à partir d'un certain rang}{14/26}
-\slider{$\eq{\frac{u_n}{v_n}}{\frac{u_n'}{v_n'}}$}{14/26}
-\slideq{$u_n=\O{1}$}{15/26}
-\slider{$\l u_n\r$ est borné}{15/26}
-\slideq{$u_n=\O{v_n}$\linebreak Définition avec un majorant}{16/26}
-\slider{$\exists M\in\mathbb{R}_+,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;\left|u_n\right|\leqslant M\left|v_n\right|$}{16/26}
-\slideq{$\eq{u_n}{v_n}$}{17/26}
-\slider{$\lim{n\to\infty}{\frac{u_n}{v_n}}=1$}{17/26}
-\slideq{$u_n=\Th{v_n}$\linebreak Définition avec $O$ et $\varOmega$}{18/26}
-\slider{$u_n=\O{v_n}\wedge u_n=\Om{v_n}$}{18/26}
-\slideq{Équivalents classiques}{19/26}
-\slider{\begin{minipage}{0.5\textwidth}$\eq[0]{\ln{1+x}}{x}$\\$\eq[0]{\e^x-1}{x}$\\ Pour $a\neq0$\hfill\break$\eq[0]{\l1+x\r^a-1}{ax}$\\$\eq[0]{\sin{x}}{x}$\\$\eq[0]{\cos{x}-1}{-\frac{x^2}{2}}$\end{minipage}\begin{minipage}{0.5\textwidth}$\eq[0]{\tan{x}}{x}$\\$\eq[0]{\sh{x}}{x}$\\$\eq[0]{\ch{x}-1}{\frac{x^2}{2}}$\\$\eq[0]{\th{x}}{x}$\\$\eq[0]{\asin{x}}{x}$\\$\eq[0]{\atan{x}}{x}$\end{minipage}}{19/26}
-\slideq{Produits de $o$ et $O$}{20/26}
-\slider{$u_n=\o{w_n}\wedge v_n=\o{x_n}\Rightarrow u_nv_n=\o{w_nx_n}$\linebreak$u_n=\O{w_n}\wedge v_n=\o{x_n}\Rightarrow u_nv_n=\o{w_nx_n}$\linebreak$u_n=\o{w_n}\wedge v_n=\O{x_n}\Rightarrow u_nv_n=\o{w_nx_n}$\linebreak$u_n=\O{w_n}\wedge v_n=\O{x_n}\Rightarrow u_nv_n=\O{w_nx_n}$\linebreak$w_n\o{x_n}=\o{w_nx_n}$\linebreak$w_n\O{x_n}=\O{w_nx_n}$}{20/26}
-\slideq{$\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$\linebreak$u_n=\o{v_n}$}{21/26}
-\slider{$u_n'=\o{v_n'}$}{21/26}
-\slideq{$u_n=\o{1}$}{22/26}
-\slider{$\l u_n\r$ tend vers $0$}{22/26}
-\slideq{Équivalent d'un polynôme $P$ de degré $d=\deg\l P\r$ et de monôme dominant $a_dX^d$}{23/26}
-\slider{$\eq{P\l n\r}{a_dn^d}$}{23/26}
-\slideq{Sommes de $o$ et $O$}{24/26}
-\slider{$u_n=\o{w_n}\wedge v_n=\o{w_n}\Rightarrow u_n+v_n=\o{w_n}$\linebreak $u_n=\O{w_n}\wedge v_n=\O{w_n}\Rightarrow u_n+v_n=\O{w_n}$\linebreak $u_n=\o{w_n}\wedge v_n=\O{w_n}\Rightarrow u_n+v_n=\O{w_n}$\linebreak $u_n=\O{w_n}\wedge v_n=\o{w_n}\Rightarrow u_n+v_n=\O{w_n}$}{24/26}
-\slideq{$u_n=\Om{v_n}$\linebreak Définition avec $O$}{25/26}
-\slider{$v_n=\O{u_n}$}{25/26}
-\slideq{$u_n=\Th{v_n}$\linebreak Définition avec un encadrement}{26/26}
-\slider{$\exists \l M,M'\r\in\l\mathbb{R}_+\r^2,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0$\linebreak$M\left|v_n\right|\leqslant\left|u_n\right|\leqslant M'\left|v_n\right|$}{26/26}
+\slideq{$u_n=\Th{v_n}$\linebreak Définition avec $O$ et $\varOmega$}{3/26}
+\slider{$u_n=\O{v_n}\wedge u_n=\Om{v_n}$}{3/26}
+\slideq{$\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$\linebreak Avec $\l v_n\r$ qui ne s'annule pas à partir d'un certain rang}{4/26}
+\slider{$\eq{\frac{u_n}{v_n}}{\frac{u_n'}{v_n'}}$}{4/26}
+\slideq{$\eq{u_n}{u_n'}$\linebreak$a\in\mathbb R$}{5/26}
+\slider{$\eq{u_n^a}{v_n^a}$}{5/26}
+\slideq{$u_n=\o{1}$}{6/26}
+\slider{$\l u_n\r$ tend vers $0$}{6/26}
+\slideq{Sommes de $o$ et $O$}{7/26}
+\slider{$u_n=\o{w_n}\wedge v_n=\o{w_n}\Rightarrow u_n+v_n=\o{w_n}$\linebreak $u_n=\O{w_n}\wedge v_n=\O{w_n}\Rightarrow u_n+v_n=\O{w_n}$\linebreak $u_n=\o{w_n}\wedge v_n=\O{w_n}\Rightarrow u_n+v_n=\O{w_n}$\linebreak $u_n=\O{w_n}\wedge v_n=\o{w_n}\Rightarrow u_n+v_n=\O{w_n}$}{7/26}
+\slideq{$u_n=\o{v_n}$\linebreak Définition avec les suites}{8/26}
+\slider{$\exists\l\varepsilon_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\varepsilon_nv_n$\linebreak Avec $\lim{n\to\infty}{\varepsilon_n}=0$}{8/26}
+\slideq{$u_n=l+\o{1}$}{9/26}
+\slider{$\lim{n\to\infty}{u_n}=l$}{9/26}
+\slideq{$u_n=\O{1}$}{10/26}
+\slider{$\l u_n\r$ est borné}{10/26}
+\slideq{Implication entre $o$ et $O$}{11/26}
+\slider{$u_n=\o{v_n}\Rightarrow  u_n=\O{v_n}$}{11/26}
+\slideq{Produits de $o$ et $O$}{12/26}
+\slider{$u_n=\o{w_n}\wedge v_n=\o{x_n}\Rightarrow u_nv_n=\o{w_nx_n}$\linebreak$u_n=\O{w_n}\wedge v_n=\o{x_n}\Rightarrow u_nv_n=\o{w_nx_n}$\linebreak$u_n=\o{w_n}\wedge v_n=\O{x_n}\Rightarrow u_nv_n=\o{w_nx_n}$\linebreak$u_n=\O{w_n}\wedge v_n=\O{x_n}\Rightarrow u_nv_n=\O{w_nx_n}$\linebreak$w_n\o{x_n}=\o{w_nx_n}$\linebreak$w_n\O{x_n}=\O{w_nx_n}$}{12/26}
+\slideq{$u_n=\Th{v_n}$\linebreak Définition avec les suites}{13/26}
+\slider{$\exists\l\mu_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\mu_nv_n$\linebreak Avec $\forall n\in\mathbb N,\;0<\varepsilon\leqslant\mu_n\leqslant M$}{13/26}
+\slideq{$\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$\linebreak$u_n=\o{v_n}$}{14/26}
+\slider{$u_n'=\o{v_n'}$}{14/26}
+\slideq{$u_n=\Th{v_n}$\linebreak Définition avec un encadrement}{15/26}
+\slider{$\exists \l M,M'\r\in\l\mathbb{R}_+\r^2,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0$\linebreak$M\left|v_n\right|\leqslant\left|u_n\right|\leqslant M'\left|v_n\right|$}{15/26}
+\slideq{$\eq{u_n}{u_n'}\wedge\eq{v_n}{v_n'}$}{16/26}
+\slider{$\eq{u_nv_n}{u_n'v_n'}$}{16/26}
+\slideq{Transitivité de $o$ et $O$}{17/26}
+\slider{$u_n=\O{v_n}\wedge v_n=\O{w_n}\Rightarrow  u_n=\O{w_n}$\linebreak $u_n=\o{v_n}\wedge v_n=\o{w_n}\Rightarrow  u_n=\o{w_n}$\linebreak $u_n=\o{v_n}\wedge v_n=\O{w_n}\Rightarrow  u_n=\o{w_n}$\linebreak $u_n=\O{v_n}\wedge v_n=\o{w_n}\Rightarrow  u_n=\o{w_n}$}{17/26}
+\slideq{$\eq{u_n}{v_n}$}{18/26}
+\slider{$u_n=v_n+\o{v_n}$}{18/26}
+\slideq{Équivalent d'un polynôme $P$ de degré $d=\deg\l P\r$ et de monôme dominant $a_dX^d$}{19/26}
+\slider{$\eq{P\l n\r}{a_dn^d}$}{19/26}
+\slideq{$u_n=\O{v_n}$\linebreak Définition avec les suites}{20/26}
+\slider{$\exists\l\mu_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\mu_nv_n$\linebreak Avec $\l\mu_n\r$ bornée}{20/26}
+\slideq{$u_n=\Om{v_n}$\linebreak Définition avec les suites si $\l v_n\r$ ne s'annule pas}{21/26}
+\slider{$\exists\l\mu_n\r,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;u_n=\mu_nv_n$\linebreak Avec $\l\mu_n\r$ minorée}{21/26}
+\slideq{$u_n=\Om{v_n}$\linebreak Définition avec $O$}{22/26}
+\slider{$v_n=\O{u_n}$}{22/26}
+\slideq{Formule de Stirling}{23/26}
+\slider{$\eq[+\infty]{n!}{\sqrt{2\pi n}\l\frac{n}{\e}\r^n}$}{23/26}
+\slideq{Équivalents classiques}{24/26}
+\slider{\begin{minipage}{0.5\textwidth}$\eq[0]{\ln{1+x}}{x}$\\$\eq[0]{\e^x-1}{x}$\\ Pour $a\neq0$\hfill\break$\eq[0]{\l1+x\r^a-1}{ax}$\\$\eq[0]{\sin{x}}{x}$\\$\eq[0]{\cos{x}-1}{-\frac{x^2}{2}}$\end{minipage}\begin{minipage}{0.5\textwidth}$\eq[0]{\tan{x}}{x}$\\$\eq[0]{\sh{x}}{x}$\\$\eq[0]{\ch{x}-1}{\frac{x^2}{2}}$\\$\eq[0]{\th{x}}{x}$\\$\eq[0]{\asin{x}}{x}$\\$\eq[0]{\atan{x}}{x}$\end{minipage}}{24/26}
+\slideq{$u_n=\O{v_n}$\linebreak Définition avec un majorant}{25/26}
+\slider{$\exists M\in\mathbb{R}_+,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;\left|u_n\right|\leqslant M\left|v_n\right|$}{25/26}
+\slideq{$u_n=\Om{v_n}$\linebreak Définition avec un minorant}{26/26}
+\slider{$\exists M\in\mathbb{R}_+,\;\exists n_0\in\mathbb N,\;\forall n\geqslant n_0,\;\left|u_n\right|\geqslant M\left|v_n\right|$}{26/26}
 \end{document}

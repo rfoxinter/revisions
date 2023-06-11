@@ -25,4 +25,4 @@ Restriction d'un développement limité\linebreak$T_{m,x_0}\l P\r$ est la tronca
 Développement limités d'un inverse;;Identifier les coefficients avec $x=\l f^{-1}\circ f\r\l x\r+\o{x^n}$ avec le développement limité de $f$
 Si $f$ est une fonction dérivable au voisinage de $0$ avec $\eg[x\to0]{f'\l x\r}{a_0+\cdots+a_{n-1}x^{n-1}+\o{x^{n-1}}}$;;$\eg[x\to0]{f\l x\r}{f\l0\r+a_0x+\cdots+\frac{a{n-1}}nx^n+\o{x^n}}$
 Si $f$ est une fonction de classe $\mathcal C^n$ au voisinage de $0$ avec $\eg[x\to0]{f\l x\r}{f\l0\r+a_0x+\cdots+a{n-1}x^n+\o{x^n}}$;;$\eg[x\to0]{f'\l x\r}{a_1+\cdots+na_nx^{n-1}+\o{x^{n-1}}}$
-Développement asymptotique de $f$ sur une échelle de comparaison $\mathcal E$ au voisinage de $x_0$ à la précision $\varphi\in\mathcal E$;;$\eg[x\to x_0]{f\l x\r}{\sum{\substack{\psi\in\mathcal E\\\varphi=\o{\psi}\vee\varphi=\psi}}{}{a_\psi\psi\l x\r+\o{\varphi\l x\r}}}$
+Développement asymptotique de $f$ sur une échelle de comparaison $\mathcal E$ au voisinage de $x_0$ à la précision $\varphi\in\mathcal E$;;$\eg[x\to x_0]{f\l x\r}{\sum{\substack{\psi\in\mathcal E\\\varphi=o\l\psi\r\vee\varphi=\psi}}{}{a_\psi\psi\l x\r+\o{\varphi\l x\r}}}$
