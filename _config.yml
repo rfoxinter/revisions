@@ -13,6 +13,11 @@ defaults:
       sitemap: false
   -
     scope:
+      path: Documentation.pdf
+    values:
+      sitemap: false
+  -
+    scope:
       path: exos/**
     values:
       sitemap: false
