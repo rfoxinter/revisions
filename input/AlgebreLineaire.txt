@@ -1,7 +1,7 @@
 Algèbre 2 -- Algèbre linéaire
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{matrices,al}\usepackage{polynomes,structures}\usepackage{bigoperators}\DeclareMathOperator{\oldid}{id}\newcommand{\id}{{\oldid}}\DeclareMathOperator{\oldim}{im}\newcommand{\im}[1]{\oldim\l#1\r}
+\usepackage{matrices,al}\usepackage{polynomes,structures}\usepackage{bigoperators}\DeclareMathOperator{\oldid}{id}\newcommand{\id}{{\oldid}}
 Un ensemble $E$ est un espace vectoriel sur $\mathbb K$\linebreak$E$ est un $\mathbb K$-ev;;$\l E,+\r$ est un groupe abélien\linebreak$E$ est muni d'une loi de composition externe $\cdot$ avec $\forall\l\lambda,\mu,x,y\r\in\mathbb K^2\times E^2$\linebreak$\l \lambda\mu\r x=\lambda\l\mu x\r$ (associativité externe ou pseudo-associativité)\linebreak$1_{\mathbb K} x=x$ (compatibilité du neutre de $\l \mathbb K,\times\r$)\linebreak$\lambda\l x+y\r=\lambda x+\lambda y$ (distributivité de $\cdot$ sur $+_{\scriptscriptstyle E}$)\linebreak$\l \lambda+\mu\r x=\lambda x+\mu x$ (distributivité de $\cdot$ sur $+_{\scriptscriptstyle\mathbb K}$)
 Si $E$ est un $\mathbb K$-ev\linebreak Un sous-ensemble $F$ de $E$ est un sous-espace vectoriel de $E$;;$F$ est stable par les lois $+$ et $\cdot$ et les lois induites définissent sur $F$ une structure d'espace-vectoriel
 Si $E$ est un espace vectoriel et $F\subset E$\linebreak Caractérisation(s) des sous-espaces vectoriels;;$0\in F$\linebreak$\forall\l x,y,\lambda\r\in F^2\times\mathbb K, \lambda x+y\in F$

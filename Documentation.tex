@@ -128,6 +128,15 @@ Il est possible de redéfinir le $l$ à sa version d'origine avec:
 \endgroup
 \makeatother
 \end{Verbatim}
+
+\vspace{0.5cm}
+
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\sup$), il est possible de faire :
+\begin{Verbatim}
+\let\oldsup\sup
+\renewcommand{\sup}[1]{\oldsup\l#1\r}
+\end{Verbatim}
+\Verb?\l? et \Verb?\r? sont définis dans \hyperlink{section.i}{Preambule.sty et HTMLPreambule.sty}.
 \tableofcontents
 \null\newpage
 \pagenumbering{arabic}
@@ -386,6 +395,8 @@ $
 \mcmd[\footnotemark]{\oldker}
 \footnotetext{Correspond à la commande usuelle \Verb?\ker?}
 \mcmd{\ker{f}}
+\mcmd{\oldim}
+\mcmd{\im{f}}
 \mmcmd[\footnotemark]{\la}{$\la\right.$}
 \footnotetext{Correspond à la commande usuelle \Verb?\left\langle?}
 \mmcmd[\footnotemark]{\ra}{$\left.\ra$}
