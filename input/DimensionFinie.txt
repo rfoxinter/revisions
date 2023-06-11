@@ -24,7 +24,7 @@ Matrices équivalentes;;$N\in\mat n{}K$, $M\in\mat n{}K$\linebreak$\exists\l P,Q
 $I_{n,p,r}$;;\tmatrix[\mtxvline{line width = 0.05em}{1}\mtxhline{line width = 0.05em}{1}][minimum height = 5ex, row sep = 1ex,minimum width = 5ex, column sep = 1ex,]({I_r\&0_{r,p-r}\\0_{n-r,r}\&0_{n-r,p-r}\\})
 Classification des matrices équivalentes par le rang;;$N$ est équivalent à $M$ si et seulement si $\rg M=\rg N$
 Matrices semblables;;$A\in\mat n{}K$, $B\in\mat n{}K$\linebreak$\exists\l P\r\in\matgl nK,\;B=P^{-1}AP$
-Trace d'une matrice;;$A\in\mat n{}K$\linebreak$\tr A=\sum{i=1}n{\lc A\rc_{i,i}}$
+Trace d'une matrice;;$A\in\mat n{}K$\linebreak$\tr A=\sum{i=1}n{a_{i,i}}$
 Propriétés de la trace;;C'est une forme linéaire\linebreak$\tr A=\tr{A^\top}$\linebreak$\tr{AB}=\tr{BA}$\linebreak Si $M$ et $N$ sont semblables, $\tr N=\tr M$
 Trace d'un projecteur et d'une symétrie;;$\tr p=\rg p$\linebreak$\tr s=n-2\rg{s-\id}$
 Endomorphisme diagonalisable;;Il existe une base $\b$ dans laquelle $\almat u\b{}$ est diagonale

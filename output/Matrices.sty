@@ -15,10 +15,12 @@
     \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
     \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
     \def\oldddots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\raise5.5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
+    \def\oldidots{\mathinner{\raise0pt\vbox{\hbox{$\mcdot$}}\raise5.5pt\hbox{$\mcdot$}\raise11pt\hbox{$\mcdot$}}}
     \def\oldvdots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise5.5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
     \def\oldxdots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise5.5pt\hbox{$\mcdot$}\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
     \newcommand{\mdots}{\raise1.5pt\hbox{$\oldmdots$}}
     \renewcommand{\ddots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldddots$}$}}}
+    \newcommand{\idots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldidots$}$}}}
     \renewcommand{\vdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldvdots$}$}}}
     \newcommand{\xdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldxdots$}$}}}
     \newcommand{\tmatrix}[1][]{\def\argI{#1}\tmptmatrix}
@@ -43,10 +45,12 @@
     \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
     \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
     \def\oldddots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\raise3.5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
+    \def\oldidots{\mathinner{\raise0pt\vbox{\hbox{$\mcdot$}}\raise3.5pt\hbox{$\mcdot$}\raise7pt\hbox{$\mcdot$}}}
     \def\oldvdots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise3.5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
     \def\oldxdots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise3.5pt\hbox{$\mcdot$}\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
     \newcommand{\mdots}{\raise0.5pt\hbox{$\oldmdots$}}
     \renewcommand{\ddots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldddots$}$}}}
+    \newcommand{\idots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldidots$}$}}}
     \renewcommand{\vdots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldvdots$}$}}}
     \newcommand{\xdots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldxdots$}$}}}
     \newcommand{\tmatrix}[1][]{\def\argI{#1}\tmptmatrix}
