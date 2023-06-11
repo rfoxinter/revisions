@@ -8,3 +8,11 @@
 \newcommand\jj\j
 \DeclareMathOperator{\oldj}{j}
 \renewcommand{\j}{{\oldj}}
+\let\oldIm\Im
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\newcommand{\pIm}[1]{\Im\l#1\r}
+\let\oldRe\Re
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\newcommand{\pRe}[1]{\Re\l#1\r}

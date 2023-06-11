@@ -6,7 +6,7 @@
 \usepackage{hyperref}
 \hypersetup{pdftitle=Documentation}
 \let\oldoplus\oplus
-\usepackage{output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsfont,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables}
+\usepackage{output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables}
 \usepackage{fvextra}
 \setlength{\parindent}{0pt}
 \hypersetup{hidelinks,colorlinks=true,linkcolor=black,linktoc=all,urlcolor=blue}
@@ -107,6 +107,23 @@ En utilisant \texttt{Preambule.sty} ou \texttt{HTMLPreambule.sty}, les packages 
 
 \vspace{0.5cm}
 Il est nécessaire que \texttt{cm-super} soit installé (disponible sur \href{https://ctan.org/pkg/cm-super}{CTAN}) pour pouvoir utiliser \texttt{Preambule.sty}. Pour ne pas avoir à installer \texttt{cm-super}, il est possible de commenter les lignes \Verb?\usepackage{sffont}? et \Verb?\renewcommand{\sfdefault}{cmssp}? du fichier \texttt{Preambule.sty} en mettant \Verb?%? au début de chacune de ces lignes (numéro 10 et 11).
+
+Lors de l'utilisation de \texttt{beamer} (avec une police sans-sérif), il est possible d'utiliser les commandes avec les polices sans-serif, sauf pour les lettres grecques ($\Omega$, $\oldphi$, $\phi$, \dots), la redéfinition du $l$ en mathématiques, les alphabets \Verb?\mathcal? et \Verb?\mathbb? ainsi que les symboles.
+
+Il est possibles de changer les polices de caractères/symboles en important des packages après \Verb?\usepackage{preambule}?. Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
+
+Il n'est pas possible d'utiliser en simultané le package \Verb?Dsfonts.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.7}{\Verb?Dsfonts.sty? } décrit ci-dessous. La commande \Verb?\1? ne sera pas modifiée si un package définissant \Verb?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \Verb?\newcommand\1[1]{\mathbb{1}_{#1}}? ou \Verb?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
+
+Il est possible de redéfinir le $l$ à sa version d'origine avec:\begin{Verbatim}
+\mathcode`l="8000
+\begingroup
+\makeatletter
+\lccode`\~=`\l
+\DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
+\lowercase{\gdef~{\lsb@l}}%
+\endgroup
+\makeatother
+\end{Verbatim}
 \tableofcontents
 \null\newpage
 \pagenumbering{arabic}
@@ -118,6 +135,8 @@ Il est nécessaire que \texttt{cm-super} soit installé (disponible sur \href{ht
 \footnotetext{Correspond à la commande usuelle \Verb?\right)?}
 \mmcmd[\footnotemark]{\llb}{$\llb\right.$}
 \footnotetext{Correspond à la commande usuelle \Verb?\left\llbracket?}
+\mmcmd[\footnotemark]{\rrb}{$\left.\rrb$}
+\footnotetext{Correspond à la commande usuelle \Verb?\right\rrbracket?}
 \mcmd[\footnotemark]{\oldfrac{a}{b}}
 \footnotetext{Correspond à la commande usuelle \Verb?\frac?}
 \mcmd[\footnotemark]{\frac{a}{b}}
@@ -213,7 +232,15 @@ Le package \hyperlink{section.4}{\Verb?BigOperators.sty?} sera importé automati
 \footnotetext{$\i$ complexe\\L'ancienne commande \Verb?\i? s'obtient avec \Verb?\ii?}
 \mcmd[\footnotemark]{\j}
 \footnotetext{$\j=\e^{\oldfrac{2\i\pi}{3}}$\\L'ancienne commande \Verb?\j? s'obtient avec \Verb?\jj?}
-\section{Dsfont.sty}
+\mcmd[\footnotemark]{\oldIm}
+\footnotetext{Correspond à la commande usuelle \Verb?\Im?}
+\mcmd{\Im}
+\mcmd{\pIm{x}}
+\mcmd[\footnotemark]{\oldRe}
+\footnotetext{Correspond à la commande usuelle \Verb?\Re?}
+\mcmd{\Re}
+\mcmd{\pRe{x}}
+\section{Dsft.sty}
 Ce package remplace le $\mathds 1$ du package \Verb?Dsfonts.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN}.
 
 Pour l'utiliser, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12.tfm? dans les dossiers où ils sont actuellement avec \Verb?dsfonts? (et éventuellement créer une copie des anciens fichiers).
@@ -332,7 +359,7 @@ $
 \mcmd[\footnotemark]{\Omega}
 \footnotetext{Correspond à la commande usuelle \Verb?\varOmega?}
 \mmcmd[\footnotemark]{\sq}{$\left.\sq\right.$}
-\footnotetext{Doit être utilisé entre \Verb?\left? et \Verb?\right?, ou dans la commande \Verb?\p?: $\p{A\sq B}$}
+\footnotetext{Doit être utilisé entre \Verb?\left? et \Verb?\right?, ou dans la commande \Verb?\p?: $\p{A\sq\bigcap{k=1}{n}{B_i}}$}
 \mcmd[\footnotemark]{\bor}
 \footnotetext{Correspond à la commande usuelle \Verb?\mathcal{B}?}
 \section{Structures.sty}
@@ -353,26 +380,28 @@ $
 \section{Tables.sty}
 Ce package sert à mettre en forme des tables an latex grâce à tikz.
 
-Pour insérer une table, il faut appeler \Verb?\setrowcol{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis de rentrer la table tikz.
+Pour insérer une table, il faut appeler \Verb?\setrowcol{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis rentrer la table tikz.
 
 Une table a une largeur de 10cm et une hauteur de 6,5cm.
+
+Il est possible d'utiliser \Verb?[ampersand replacement=\&]? puis \Verb?\&? pour la matrice lorsqu'elle est dans un environnement où \Verb?&? est déjà défini.
 
 \vspace{0.5cm}
 
 Par exemple, la table
 \begin{center}
-\setcolrow{6}{5}\begin{tikzpicture}[ampersand replacement=\&] \matrix[table] { \&$0$\&$\oldfrac{\pi}{6}$\&$\oldfrac{\pi}{4}$\&$\oldfrac{\pi}{3}$\&$\oldfrac{\pi}{2}$ \\ $\oldsin$\&$0$\&$\oldfrac{1}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{\sqrt{3}}{2}$\&$1$\\ $\oldcos$\&$1$\&$\oldfrac{\sqrt{3}}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{1}{2}$\&$0$\\ $\oldtan$\&$0$\&$\oldfrac{1}{\sqrt{3}}$\&$1$\&$\sqrt{3}$\&--\\ $\oldcot$\&--\&$\sqrt{3}$\&$1$\&$\oldfrac{1}{\sqrt{3}}$\&$0$\\ }; \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2); \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10); \draw [line width=0.5mm] (-5cm,-3.25cm) rectangle (5cm,3.25cm);\end{tikzpicture}
+\setcolrow{6}{5}\begin{tikzpicture}\matrix[table] { &$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$ \\ $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\ $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\ $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\ $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\ }; \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2); \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10); \draw [line width=0.5mm] (-5cm,-3.25cm) rectangle (5cm,3.25cm);\end{tikzpicture}
 \end{center}
 est produite avec le code suivant
-\begin{Verbatim}[breaklines,breakafter=\&,breakaftersymbolpre=,breaksymbol=~~~~]
+\begin{Verbatim}[breaklines,breakafter=&,breakaftersymbolpre=,breaksymbol=~~~~]
 \setcolrow{6}{5}
-\begin{tikzpicture}[ampersand replacement=\&]
+\begin{tikzpicture}
     \matrix[table] {
-        \&$0$\&$\oldfrac{\pi}{6}$\&$\oldfrac{\pi}{4}$\&$\oldfrac{\pi}{3}$\&$\oldfrac{\pi}{2}$\\
-        $\oldsin$\&$0$\&$\oldfrac{1}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{\sqrt{3}}{2}$\&$1$\\
-        $\oldcos$\&$1$\&$\oldfrac{\sqrt{3}}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{1}{2}$\&$0$\\
-        $\oldtan$\&$0$\&$\oldfrac{1}{\sqrt{3}}$\&$1$\&$\sqrt{3}$\&--\\
-        $\oldcot$\&--\&$\sqrt{3}$\&$1$\&$\oldfrac{1}{\sqrt{3}}$\&$0$\\
+        &$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$\\
+        $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\
+        $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\
+        $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\
+        $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\
     };
     \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2);
     \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10);
@@ -421,14 +450,4 @@ est produite avec le code suivant
 \mcmd{\oldath}
 \mcmd{\ath{x}}
 \mcmd{\ath[n]{x}}
-\mcmd[\footnotemark]{\oldIm}
-\footnotetext{Correspond à la commande usuelle \Verb?\Im?}
-\pagebreak
-\hrule
-\mcmd{\Im}
-\mcmd{\pIm{x}}
-\mcmd[\footnotemark]{\oldRe}
-\footnotetext{Correspond à la commande usuelle \Verb?\Re?}
-\mcmd{\Re}
-\mcmd{\pRe{x}}
 \end{document}

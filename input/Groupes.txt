@@ -1,7 +1,7 @@
 Algèbre 1 -- Groupes
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{dsfont}\usepackage{bigoperators}\usepackage{structures,arithmetique}
+\usepackage{dsft}\usepackage{bigoperators}\usepackage{structures,arithmetique}
 Groupe;;Muni d'une loi de composition interne, de l'associativité, d'un élément neutre et de symétriques
 Isomorphisme de groupes;;Homomorphisme de groupes bijectif
 Endomorphisme de groupes;;Homomorphisme de groupes de $E$ dans lui-même (muni des mêmes lois)

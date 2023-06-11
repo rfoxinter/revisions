@@ -1,7 +1,7 @@
 Algèbre 1 -- Structures algébriques
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{dsfont}\usepackage{bigoperators}\usepackage{structures,arithmetique}
+\usepackage{dsft}\usepackage{bigoperators}\usepackage{structures,arithmetique}
 Associativité;;$\star$ est associative si et seulement si$\forall\l x,y,z\r\in E^3,\;\l x\star y\r\star z=x\star\l y\star z\r$
 Commutativité;;$\star$ est commutative si et seulement si$\forall\l x,y\r\in E^2,\;x\star y=y\star x$
 Si $\star$ est une loi associative sur $E$ et $\l x_1,\cdots,x_n\r\in E^n$;;$x_1\star\cdots\star x_n$ ne dépend pas du parenthésage admissible
