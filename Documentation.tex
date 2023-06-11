@@ -7,6 +7,7 @@
 \hypersetup{pdftitle=Documentation}
 \let\oldoplus\oplus
 \usepackage{output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables}
+\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
 \usepackage{fvextra}
 \setlength{\parindent}{0pt}
 \hypersetup{hidelinks,colorlinks=true,linkcolor=black,linktoc=all,urlcolor=blue}
@@ -112,9 +113,12 @@ Lors de l'utilisation de \texttt{beamer} (avec une police sans-sérif), il est p
 
 Il est possibles de changer les polices de caractères/symboles en important des packages après \Verb?\usepackage{preambule}?. Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
 
-Il n'est pas possible d'utiliser en simultané le package \Verb?Dsfonts.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.7}{\Verb?Dsfonts.sty? } décrit ci-dessous. La commande \Verb?\1? ne sera pas modifiée si un package définissant \Verb?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \Verb?\newcommand\1[1]{\mathbb{1}_{#1}}? ou \Verb?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
+Il n'est pas possible d'utiliser en simultané le package \Verb?Dsfont.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.7}{\Verb?Dsft.sty? } décrit ci-dessous. De plus, la commande \Verb?\1? ne sera pas modifiée si un package définissant \Verb?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \Verb?\newcommand\1[1]{\mathbb{1}_{#1}}? (si \texttt{Dsft.sty} n'est pas importé) ou \Verb?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
 
-Il est possible de redéfinir le $l$ à sa version d'origine avec:\begin{Verbatim}
+\vspace{0.5cm}
+
+Il est possible de redéfinir le $l$ à sa version d'origine avec:
+\begin{Verbatim}
 \mathcode`l="8000
 \begingroup
 \makeatletter
@@ -281,12 +285,21 @@ Pour l'utiliser, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12
 \mcmd{\det{M}}
 \mmcmd[\footnotemark]{\gl{n}{\mathbb{K}}}{$\matgl{n}{\mathbb{K}}$}
 \footnotetext{Si \Verb?AL.sty? est chargé, cette commande est remplacée et il faut utiliser \Verb?\matgl{n}{\mathbb{K}}? pour obtenir ce résultat}
-\mcmd{\mdots}
-\mcmd{\ddots}
-\mcmd{\idots}
-\mcmd{\vdots}
-\mcmd{\xdots}
-\mcmd{\tmatrix({1\&0\\0\&1\\})}
+\mmcmd{\mdots}{$\oldmdots$}
+\mmcmd{\ddots}{$\oldddots$}
+\mmcmd{\idots}{$\oldidots$}
+\mmcmd{\vdots}{$\oldvdots$}
+\mmcmd{\xdots}{$\oldxdots$}
+\mcmd[\footnotemark]{\tmatrix({1\&0\\0\&1\\})}
+\footnotetext{Les caractères \Verb?\&? sont utilisés au lieu du \Verb?&? utilisé habituellement avec tikz pour des raisons de compatibilité avec \texttt{Beamer}}
+
+\vspace{0.5cm}
+
+\textbf{\boldmath\Large Les commandes avec $\mcdot$}
+
+Les commandes avec des points tel que $\xdots$ ont des définitions qui dépendent de la taille de la police (celle pour \LaTeX est adaptée pour 12pt, et celle de \texttt{Beamer} pour 17pt). Pour avoir des points alignés correctement, il est possible de modifier la valeur de \Verb?\dotsep? en utilisant \Verb?\setlength{\dotsep}{taille_en_pt}?.
+
+Par exemple, avec 2pt, on obtient : \setlength{\dotsep}{2pt} $\xdots$.\setlength{\dotsep}{5.5pt}
 
 \vspace{0.5cm}
 
@@ -301,9 +314,9 @@ Les commandes sont:
 \mhd
 \mmcmd{\mtxvline{params}{n}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités) avec les paramètres tikz \texttt{params}}
 \mmcmd{\mtxhline{params}{n}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités) avec les paramètres tikz \texttt{params}}
-\mmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou top/bottom) avec les paramètres tikz \texttt{params}}
 \pagebreak
 \hrule
+\mmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou top/bottom) avec les paramètres tikz \texttt{params}}
 \mmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou left/right) avec les paramètres tikz \texttt{params}}
 \mmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres tikz \texttt{params}}
 \vspace{0.5cm}
@@ -327,16 +340,18 @@ $
 
 \vspace{0.25cm}
 
-$\tmatrix[\mtxbox{red, dashed}{1}{1}\mtxbox{teal, dotted, ultra thick}{2}{2}\mtxbox{}{4}{4}][minimum height = 5ex, minimum width = 5ex, row sep = 10pt,inner sep = 5pt, column sep = 10pt,]{{[}}{A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\0\&0\&0\&A_n\\}{{]}}$ est produit par
-\begin{Verbatim}[breaklines,breakafter=\&,breakaftersymbolpre=,breaksymbol=~~~~]
+$\tmatrix[\mtxbox{red, dashed}{1}{1}\mtxbox{teal, dotted, ultra thick}{2}{2}\mtxbox{}{4}{4}][minimum height = 5ex, minimum width = 5ex, row sep = 10pt,inner sep = 5pt, column sep = 10pt,]{{[}}{A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\0\&0\&0\&A_n\\}{\}}$ est produit par
+\begin{Verbatim}[breaklines,breakafter=\&,breakaftersymbolpre=,breaksymbol=~~~~,curlyquotes]
 $
 \tmatrix
     [\mtxbox{red, dashed}{1}{1}\mtxbox{teal, dotted,
         ultra thick}{2}{2}\mtxbox{}{4}{4}]
     [minimum height = 5ex, minimum width = 5ex, row sep = 10pt,
         inner sep = 5pt, column sep = 10pt,]
-    {{[}}{A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\
-        0\&0\&0\&A_n\\}{{]}}
+    {{[}} % Le crochet est entouré de deux paires d'accolades
+    {A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\
+        0\&0\&0\&A_n\\}
+    {\}}
 $
 \end{Verbatim}
 \section{Polynomes.sty}

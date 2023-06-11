@@ -10,14 +10,16 @@
 \newcommand{\gl}[2]{\oldgl_{#1}\l#2\r}
 \usepackage{tikz}
 \usetikzlibrary{matrix,calc,fit}
+\newlength{\dotsep}
 \makeatletter
 \@ifclassloaded{beamer}{
+    \setlength{\dotsep}{5.5pt}
     \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
     \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
-    \def\oldddots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\raise5.5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
-    \def\oldidots{\mathinner{\raise0pt\vbox{\hbox{$\mcdot$}}\raise5.5pt\hbox{$\mcdot$}\raise11pt\hbox{$\mcdot$}}}
-    \def\oldvdots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise5.5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
-    \def\oldxdots{\mathinner{\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise5.5pt\hbox{$\mcdot$}\raise11pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \def\oldddots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
+    \def\oldidots{\mathinner{\raise0pt\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\hbox{$\mcdot$}}}
+    \def\oldvdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise\dotsep\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \def\oldxdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
     \newcommand{\mdots}{\raise1.5pt\hbox{$\oldmdots$}}
     \renewcommand{\ddots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldddots$}$}}}
     \newcommand{\idots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldidots$}$}}}
@@ -42,12 +44,13 @@
         \argI
     \end{tikzpicture}}
 }{
+    \setlength{\dotsep}{3.5pt}
     \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
     \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
-    \def\oldddots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\raise3.5pt\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
-    \def\oldidots{\mathinner{\raise0pt\vbox{\hbox{$\mcdot$}}\raise3.5pt\hbox{$\mcdot$}\raise7pt\hbox{$\mcdot$}}}
-    \def\oldvdots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise3.5pt\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
-    \def\oldxdots{\mathinner{\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise3.5pt\hbox{$\mcdot$}\raise7pt\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \def\oldddots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
+    \def\oldidots{\mathinner{\raise0pt\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\hbox{$\mcdot$}}}
+    \def\oldvdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise\dotsep\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \def\oldxdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
     \newcommand{\mdots}{\raise0.5pt\hbox{$\oldmdots$}}
     \renewcommand{\ddots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldddots$}$}}}
     \newcommand{\idots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldidots$}$}}}
