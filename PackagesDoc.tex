@@ -4,39 +4,393 @@
 \usepackage[T1]{fontenc}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{hyperref}
-\usepackage{tabularx}
-\usepackage{amsmath, amsfonts, amssymb}
-\usepackage{stmaryrd}
-\usepackage{output/matrices,output/al}
-\newcolumntype{Y}{>{\centering\arraybackslash\hsize=0.25\hsize}X}
-\newcolumntype{Z}{>{\centering\arraybackslash\hsize=0.75\hsize}X}
-\renewcommand{\line}[1]{\verb|#1|&$#1$\\\hline}
-\newcommand{\lline}[2]{\verb|#1|&#2\\\hline}
+\hypersetup{pdftitle=Documentation}
+\let\oldoplus\oplus
+\usepackage{output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsfont,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables}
+\usepackage{fvextra}
 \setlength{\parindent}{0pt}
-\hypersetup{hidelinks,linktoc=all}
+\hypersetup{hidelinks,colorlinks=true,linkcolor=black,linktoc=all,urlcolor=blue}
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
 \let\oldsection\section
 \renewcommand\section{\clearpage\oldsection}
-\title{Packages documentation}
+\title{Documentation}
 \author{}
 \date{}
+
+\newcommand{\mhd}{
+    \hrule\vline\hfill
+    \begin{minipage}{0.475\linewidth}
+        \begin{center}
+            \vspace{2pt}
+            \textbf{Commande}
+
+            \vspace{2pt}
+        \end{center}
+    \end{minipage}
+    \hfill\vline\hfill
+    \begin{minipage}{0.475\linewidth}
+        \begin{center}
+            \vspace{2pt}
+            \textbf{Résultat}
+            
+            \vspace{2pt}
+        \end{center}
+    \end{minipage}
+    \hfill\vline\hrule
+}
+\newcommand{\mcmd}[2][]{
+    \vline\hfill
+    \begin{minipage}{0.475\linewidth}
+        \begin{center}
+            \vspace{2pt}
+            \Verb?#2?#1
+
+            \vspace{2pt}
+        \end{center}
+    \end{minipage}
+    \hfill\vline\hfill
+    \begin{minipage}{0.475\linewidth}
+        \begin{center}
+            \vspace{2pt}
+            $#2$
+            
+            \vspace{2pt}
+        \end{center}
+    \end{minipage}
+    \hfill\vline\hrule
+}
+\newcommand{\mmcmd}[3][]{
+    \vline\hfill
+    \begin{minipage}{0.475\linewidth}
+        \begin{center}
+            \vspace{2pt}
+            \Verb?#2?#1
+
+            \vspace{2pt}
+        \end{center}
+    \end{minipage}
+    \hfill\vline\hfill
+    \begin{minipage}{0.475\linewidth}
+        \begin{center}
+            \vspace{2pt}
+            #3
+            
+            \vspace{2pt}
+        \end{center}
+    \end{minipage}
+    \hfill\vline\hrule
+}
+
 \begin{document}
 \pagenumbering{gobble}
 \maketitle
+Le package \texttt{Preambule.sty}\footnote{Pour utiliser avec \Verb?Beamer?} ou \texttt{HTMLPreambule.sty}\footnote{Pour les documents autres que \Verb?Beamer?} doit être chargé pour pouvoir utiliser les autres qui sont donnés ci-dessous.
+
+Les fichiers \Verb?.sty? doivent être placés dans le même répertoire que le fichier \Verb?.tex? qui est utilisé.
+
+Pour charger un package (par exemple \Verb?NomDuPackage.sty?), il faut utiliser la commande \Verb?\usepackage{nomdupackage}? avant \Verb?\begin{document}?.
+
+\vspace{0.5cm}
+
+En utilisant \texttt{Preambule.sty} ou \texttt{HTMLPreambule.sty}, les packages suivant seront chargés:
+\begin{itemize}
+    \renewcommand{\labelitemi}{$\to$}
+    \item \Verb?\usepackage[utf8]{inputenc}?
+    \item \Verb?\usepackage[french]{babel}?
+    \item \Verb?\usepackage[T1]{fontenc}?
+    \item \Verb?\usepackage{amsmath, amsfonts, amssymb}?
+    \item \Verb?\usepackage{stmaryrd}?
+    \item \Verb?\usepackage{adjustbox}? (pour \texttt{HTMLPreambule.sty})
+    \item \Verb?\usepackage{xcolor}? (pour \texttt{Preambule.sty})
+\end{itemize}
+
+\vspace{0.5cm}
+Il est nécessaire que \texttt{cm-super} soit installé (disponible sur \href{https://ctan.org/pkg/cm-super}{CTAN}) pour pouvoir utiliser \texttt{Preambule.sty}. Pour ne pas avoir à installer \texttt{cm-super}, il est possible de commenter les lignes \Verb?\usepackage{sffont}? et \Verb?\renewcommand{\sfdefault}{cmssp}? en mettant \Verb?%? au début de chaque ligne.
 \tableofcontents
 \null\newpage
 \pagenumbering{arabic}
+\section{Preambule.sty et HTMLPreambule.sty}
+\mhd
+\mmcmd[\footnotemark]{\l}{$\l\right.$}
+\footnotetext{Correspond à la commande usuelle \Verb?\left(?}
+\mmcmd[\footnotemark]{\r}{$\left.\r$}
+\footnotetext{Correspond à la commande usuelle \Verb?\right)?}
+\mmcmd[\footnotemark]{\llb}{$\llb\right.$}
+\footnotetext{Correspond à la commande usuelle \Verb?\left\llbracket?}
+\mcmd[\footnotemark]{\oldfrac{a}{b}}
+\footnotetext{Correspond à la commande usuelle \Verb?\frac?}
+\mcmd[\footnotemark]{\frac{a}{b}}
+\footnotetext{Correspond à la commande usuelle \Verb?\dfrac?}
+\mcmd[\footnotemark]{l}
+\footnotetext{Correspond à la commande usuelle \Verb?\ell?}
 \section{AL.sty}
-Nécessite d'importer \textbf{avant} le package \texttt{Matrices.sty}.
+Le package \Verb?Matrices.sty? sera importé automatiquement avec \Verb?AL.sty?.
 
 \vspace{0.5cm}
-\begin{tabularx}{\linewidth}{|Y|Z|}
-    \hline
-    \textbf{Commande} & \textbf{Résultat}\\
-    \hline
-    \line{\oldvect}
-    \line{\vect{X}}
 
-\end{tabularx}
+\mhd
+\mcmd{\oldvect}
+\mcmd{\vect{E}}
+\mcmd{\al{E}{}}
+\mcmd{\al{E}{F}}
+\mcmd[\footnotemark]{\oplus}
+\footnotetext{Le \Verb?\oplus? utilisé est celui de \Verb?stmaryrd?\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \Verb?\let\oldoplus\oplus? avant \Verb?\usepackage{al}? puis de faire \Verb?\let\oplus\oldoplus? après importation\\Comparaison \LaTeX~- \Verb?stmaryrd? avec le plus normal $\oldoplus\oplus+$}
+\mcmd[\footnotemark]{\matgl{n}{\mathbb{K}}}
+\footnotetext{Le \Verb?\matgl? de \Verb?AL.sty? correspond à celui de \Verb?Matrices.sty? qui a été renommé}
+\mcmd{\gl{E}}
+\mcmd[\footnotemark]{\olddim}
+\footnotetext{Correspond à la commande usuelle \Verb?\dim?}
+\mcmd{\dim{E}}
+\mcmd{\oldrg}
+\mcmd{\rg{u}}
+\mcmd{\oldtr}
+\mcmd{\tr{u}}
+\mcmd{\oldmat}
+\mcmd{\mat{\mathcal{B}}{}{u}}
+\mcmd{\mat{\mathcal{B}}{\mathcal{C}}{u}}
+\mmcmd{\lc}{$\lc\right.$}
+\mmcmd{\rc}{$\left.\rc$}
+\section{Analyse.sty}
+Le package \hyperlink{section.4}{\Verb?BigOperators.sty?} sera importé automatiquement avec \Verb?Analyse.sty?.
+
+\vspace{0.5cm}
+
+\mhd
+\mcmd[\footnotemark]{\oldd}
+\footnotetext{$\oldd$ de dérivation}
+\mcmd{\der{f(x)}}
+\mcmd{\der[n]{f(x)}}
+\mcmd{\der[][t]{f(t)}}
+\mcmd[\footnotemark]{\oldint}
+\footnotetext{Correspond à la commande usuelle \Verb?\int?}
+\mcmd{\int{f}}
+\mcmd{\int[t]{f(t)}}
+\mcmd[\footnotemark]{\int[t][{[a,b]}]{f(t)}}
+\footnotetext{L'argument \Verb?[a,b]? doit être mis entre accolades pour être traîté correctement par \LaTeX}
+\mcmd{\int[t][a][b]{f(t)}}
+\mcmd{\eval[{[a,b]}]{f(t)}}
+\mcmd{\eval[a][b]{f(t)}}
+\mcmd{\serie{a_n}}
+\section{Arithmetique.sty}
+\mhd
+\mcmd[\footnotemark]{\olddiv}
+\footnotetext{Correspond à la commande usuelle \Verb?\div?}
+\mcmd[\footnotemark]{\div}
+\footnotetext{Correspond à la commande usuelle \Verb?\mid?}
+\mcmd{\cgr{a}{b}{n}}
+\mcmd[\footnotemark]{\oldphi}
+\footnotetext{Correspond à la commande usuelle \Verb?\phi?}
+\mcmd[\footnotemark]{\phi}
+\footnotetext{Correspond à la commande usuelle \Verb?\varphi?}
+\section{BigOperators.sty}
+\mhd
+\mcmd[\footnotemark]{\oldsum}
+\footnotetext{Correspond à la commande usuelle \Verb?\sum?}
+\mcmd{\sum{n=0}{+\infty}{u_n}}
+\mcmd[\footnotemark]{\oldprod}
+\footnotetext{Correspond à la commande usuelle \Verb?\prod?}
+\mcmd{\prod{n=0}{+\infty}{u_n}}
+\mcmd[\footnotemark]{\oldcap}
+\footnotetext{Correspond à la commande usuelle \Verb?\bigcap?}
+\mcmd{\bigcap{n=0}{+\infty}{A_n}}
+\mcmd[\footnotemark]{\oldcup}
+\footnotetext{Correspond à la commande usuelle \Verb?\bigcup?}
+\mcmd{\bigcup{n=0}{+\infty}{A_n}}
+\mcmd[\footnotemark]{\olduplus}
+\footnotetext{Correspond à la commande usuelle \Verb?\biguplus?}
+\mcmd{\biguplus{n=0}{+\infty}{A_n}}
+\mcmd{\bigop{n=0}{+\infty}{E_n}}
+\section{Complexes.sty}
+\mhd
+\mcmd[\footnotemark]{\oldbar{z}}
+\footnotetext{Correspond à la commande usuelle \Verb?\bar?}
+\mcmd[\footnotemark]{\bar{z}}
+\footnotetext{Se comporte comme \Verb?\overline?}
+\mcmd[\footnotemark]{\e}
+\footnotetext{$\e$ de la fonction exponentielle}
+\mcmd[\footnotemark]{\i}
+\footnotetext{$\i$ complexe\\L'ancienne commande \Verb?\i? s'obtient avec \Verb?\ii?}
+\mcmd[\footnotemark]{\j}
+\footnotetext{$\j=\e^{\oldfrac{2\i\pi}{3}}$\\L'ancienne commande \Verb?\j? s'obtient avec \Verb?\jj?}
+\section{Dsfont.sty}
+Ce package remplace le $\mathds 1$ du package \Verb?Dsfonts.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN}.
+
+Pour l'utiliser, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12.tfm? dans les dossiers où ils sont actuellement avec \Verb?dsfonts? (et éventuellement créer une copie des anciens fichiers).
+
+\vspace{0.5cm}
+
+\mhd
+\mcmd{\mathds{1}}
+\mcmd{\1{E}(x)}
+\mcmd{\square}
+\mcmd{\star}
+\mcmd{\triangle}
+\section{Equivalents.sty}
+\mhd
+\mcmd{\o{x}}
+\mcmd{\o[x\to0]{x}}
+\mcmd{\O{x}}
+\mcmd{\O[x\to0]{x}}
+\mcmd{\Th{x}}
+\mcmd{\Th[x\to0]{x}}
+\mcmd{\Om{x}}
+\mcmd{\Om[x\to0]{x}}
+\mcmd{\eq{u_n}{v_n}}
+\mcmd{\eq[n\to+\infty]{u_n}{v_n}}
+\mcmd{\eg{u_n}{v_n+\o{v_n}}}
+\mcmd{\eg[n\to+\infty]{u_n}{v_n+\o{v_n}}}
+\section{Matrices.sty}
+\mhd
+\mcmd{\mat{n}{p}{\mathbb{K}}}
+\mcmd{\mat{n}{}{\mathbb{K}}}
+\mcmd{\sym{n}{\mathbb{K}}}
+\mcmd{\ant{n}{\mathbb{K}}}
+\mcmd{\diag{n}{\mathbb{K}}}
+\mcmd{\ts{n}{\mathbb{K}}}
+\mcmd{\ti{n}{\mathbb{K}}}
+\mcmd[\footnotemark]{\olddet}
+\footnotetext{Correspond à la commande usuelle \Verb?\det?}
+\mcmd{\det{M}}
+\mcmd{\gl{n}{\mathbb{K}}}
+\mcmd{\mdots}
+\mcmd{\ddots}
+\mcmd{\idots}
+\mcmd{\vdots}
+\mcmd{\xdots}
+\mcmd{\tmatrix({1\&0\\0\&1\\})}
+\subsection{\textbackslash tmatrix}
+\Verb?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice tikz et les éléments de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
+
+Les commandes sont:
+
+\vspace{0.5cm}
+
+\mhd
+\mmcmd{\mtxvline{params}{n}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités) avec les paramètres tikz \texttt{params}}
+\mmcmd{\mtxhline{params}{n}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités) avec les paramètres tikz \texttt{params}}
+\mmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou top/bottom) avec les paramètres tikz \texttt{params}}
+\pagebreak
+\hrule
+\mmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou left/right) avec les paramètres tikz \texttt{params}}
+\mmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres tikz \texttt{params}}
+\section{Polynomes.sty}
+\mhd
+\mcmd{\pol{K}{X}}
+\mcmd{\fr{K}{X}}
+\mcmd[\footnotemark]{\olddeg}
+\footnotetext{Correspond à la commande usuelle \Verb?\deg?}
+\mcmd{\deg{P}}
+\mcmd{\oldval}
+\mcmd{\val{P}}
+\mcmd{\oldcar}
+\mcmd{\car{\mathbb{K}}}
+\section{Probas.sty}
+\mhd
+\mcmd{\p{A}}
+\mcmd{\p[B]{A}}
+\mcmd[\footnotemark]{\oldOmega}
+\footnotetext{Correspond à la commande usuelle \Verb?\Omega?}
+\mcmd[\footnotemark]{\Omega}
+\footnotetext{Correspond à la commande usuelle \Verb?\varOmega?}
+\mmcmd[\footnotemark]{\sq}{$\left.\sq\right.$}
+\footnotetext{Doit être utilisé entre \Verb?\left? et \Verb?\right?, ou dans la commande \Verb?\p?: $\p{A\sq B}$}
+\mcmd[\footnotemark]{\bor}
+\footnotetext{Correspond à la commande usuelle \Verb?\mathcal{B}?}
+\section{Structures.sty}
+\mhd
+\mcmd{\oldhom}
+\mcmd{\hom{E}}
+\mcmd{\oldaut}
+\mcmd{\aut{E}}
+\mcmd[\footnotemark]{\oldker}
+\footnotetext{Correspond à la commande usuelle \Verb?\ker?}
+\mcmd{\ker{f}}
+\mmcmd[\footnotemark]{\la}{$\la\right.$}
+\footnotetext{Correspond à la commande usuelle \Verb?\left\langle?}
+\mmcmd[\footnotemark]{\ra}{$\left.\ra$}
+\footnotetext{Correspond à la commande usuelle \Verb?\right\rangle?}
+\mcmd{\oldord}
+\mcmd{\ord{x}}
+\section{Tables.sty}
+Ce package sert à mettre en forme des tables an latex grâce à tikz.
+
+Pour insérer une table, il faut appeler \Verb?\setrowcol{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis de rentrer la table tikz.
+
+Une table a une largeur de 10cm et une hauteur de 6,5cm.
+
+\vspace{0.5cm}
+
+Par exemple, la table
+\begin{center}
+\setcolrow{6}{5}\begin{tikzpicture}[ampersand replacement=\&] \matrix[table] { \&$0$\&$\oldfrac{\pi}{6}$\&$\oldfrac{\pi}{4}$\&$\oldfrac{\pi}{3}$\&$\oldfrac{\pi}{2}$ \\ $\oldsin$\&$0$\&$\oldfrac{1}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{\sqrt{3}}{2}$\&$1$\\ $\oldcos$\&$1$\&$\oldfrac{\sqrt{3}}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{1}{2}$\&$0$\\ $\oldtan$\&$0$\&$\oldfrac{1}{\sqrt{3}}$\&$1$\&$\sqrt{3}$\&--\\ $\oldcot$\&--\&$\sqrt{3}$\&$1$\&$\oldfrac{1}{\sqrt{3}}$\&$0$\\ }; \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2); \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10); \draw [line width=0.5mm] (-5cm,-3.25cm) rectangle (5cm,3.25cm);\end{tikzpicture}
+\end{center}
+est produite avec le code suivant
+\begin{Verbatim}[breaklines,breakafter=\&,breakaftersymbolpre=,breaksymbol=~~~~]
+\setcolrow{6}{5}
+\begin{tikzpicture}[ampersand replacement=\&]
+    \matrix[table] {
+        \&$0$\&$\oldfrac{\pi}{6}$\&$\oldfrac{\pi}{4}$\&$\oldfrac{\pi}{3}$\&$\oldfrac{\pi}{2}$\\
+        $\oldsin$\&$0$\&$\oldfrac{1}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{\sqrt{3}}{2}$\&$1$\\
+        $\oldcos$\&$1$\&$\oldfrac{\sqrt{3}}{2}$\&$\oldfrac{\sqrt{2}}{2}$\&$\oldfrac{1}{2}$\&$0$\\
+        $\oldtan$\&$0$\&$\oldfrac{1}{\sqrt{3}}$\&$1$\&$\sqrt{3}$\&--\\
+        $\oldcot$\&--\&$\sqrt{3}$\&$1$\&$\oldfrac{1}{\sqrt{3}}$\&$0$\\
+    };
+    \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2);
+    \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10);
+    \draw [line width=0.5mm] (-5cm,-3.25cm) rectangle (5cm,3.25cm);
+\end{tikzpicture}
+\end{Verbatim}
+\section{Trigo.sty}
+\mhd
+\mcmd[\footnotemark]{\oldcos}
+\footnotetext{Correspond à la commande usuelle \Verb?\cos?}
+\mcmd{\cos{x}}
+\mcmd{\cos[n]{x}}
+\mcmd[\footnotemark]{\oldsin}
+\footnotetext{Correspond à la commande usuelle \Verb?\sin?}
+\mcmd{\sin{x}}
+\mcmd{\sin[n]{x}}
+\mcmd[\footnotemark]{\oldtan}
+\footnotetext{Correspond à la commande usuelle \Verb?\tan?}
+\mcmd{\tan{x}}
+\mcmd{\tan[n]{x}}
+\mcmd[\footnotemark]{\oldcot}
+\footnotetext{Correspond à la commande usuelle \Verb?\cot?}
+\mcmd{\cot{x}}
+\mcmd{\cot[n]{x}}
+\mcmd{\acos{x}}
+\mcmd{\acos[n]{x}}
+\mcmd{\asin{x}}
+\mcmd{\asin[n]{x}}
+\mcmd{\atan{x}}
+\mcmd{\atan[n]{x}}
+\mcmd{\oldch}
+\mcmd{\ch{x}}
+\mcmd{\ch[n]{x}}
+\mcmd{\oldsh}
+\mcmd{\sh{x}}
+\mcmd{\sh[n]{x}}
+\mcmd{\oldth}
+\mcmd{\th{x}}
+\mcmd{\th[n]{x}}
+\mcmd{\oldach}
+\mcmd{\ach{x}}
+\mcmd{\ach[n]{x}}
+\mcmd{\oldash}
+\mcmd{\ash{x}}
+\mcmd{\ash[n]{x}}
+\mcmd{\oldath}
+\mcmd{\ath{x}}
+\mcmd{\ath[n]{x}}
+\mcmd[\footnotemark]{\oldIm}
+\footnotetext{Correspond à la commande usuelle \Verb?\Im?}
+\pagebreak
+\hrule
+\mcmd{\Im}
+\mcmd{\pIm{x}}
+\mcmd[\footnotemark]{\oldRe}
+\footnotetext{Correspond à la commande usuelle \Verb?\Re?}
+\mcmd{\Re}
+\mcmd{\pRe{x}}
 \end{document}

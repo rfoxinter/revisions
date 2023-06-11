@@ -1,7 +1,7 @@
 Trigo2!!ttleTrigonométrie 2
 Shuffle questions : True
 Q/R & R/Q : True
-\usepackage{tables}\usepackage{trigo}\newcommand\N{\mathbb{N}}\newcommand\R{\mathbb{R}}\let\oldlim\lim\renewcommand\lim[2]{\oldlim\limits_{#1}\l#2\r}\let\oldexp\exp\renewcommand\exp[2][]{\oldexp^{#1}\l#2\r}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{graphs}\usepackage{mathtools}\usepackage{rotating}\usepackage{analyse}
+\usepackage{tables}\usepackage{trigo}\newcommand\N{\mathbb{N}}\newcommand\R{\mathbb{R}}\let\oldlim\lim\renewcommand\lim[2]{\oldlim\limits_{#1}\l#2\r}\let\oldexp\exp\renewcommand\exp[2][]{\oldexp^{#1}\l#2\r}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{mathtools}\usepackage{rotating}\usepackage{analyse}
 $\sin{x+y}$;;$\sin{x}\cos{y}+\sin{y}\cos{x}$
 $\sin{x-y}$;;$\sin{x}\cos{y}-\sin{y}\cos{x}$
 $\cos{x+y}$;;$\cos{x}\cos{y}-\sin{x}\sin{y}$
