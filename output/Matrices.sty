@@ -204,30 +204,30 @@
     \draw[#1] (Xh -| Xl) --  (Xh -| Xr);
 }
 \newcommand\mtxbox[3]{
-  \ifnum#2=1
-    \def\leftcoord{left}
-  \else
-    \pgfmathparse{#2-1}
-    \def\leftcoord{\pgfmathresult}
-  \fi
-  \ifnum#3=1
-    \def\topcoord{top}
-  \else
-    \pgfmathparse{#3-1}
-    \def\topcoord{\pgfmathresult}
-  \fi
-  \ifnum#2=\the\pgfmatrixcurrentcolumn
-    \def\rightcoord{right}
-  \else
-    \def\rightcoord{#2}
-  \fi
-  \ifnum#3=\the\pgfmatrixcurrentrow
-    \def\bottomcoord{bottom}
-  \else
-    \def\bottomcoord{#3}
-  \fi
-  \mtxhpartial{#1}{\topcoord}{\leftcoord}{\rightcoord}
-  \mtxhpartial{#1}{\bottomcoord}{\leftcoord}{\rightcoord}
-  \mtxvpartial{#1}{\leftcoord}{\topcoord}{\bottomcoord}
-  \mtxvpartial{#1}{\rightcoord}{\topcoord}{\bottomcoord}
+    \ifnum#2=1
+        \edef\leftcoord{left}
+    \else
+        \pgfmathparse{int(#2-1)}
+        \edef\leftcoord{\pgfmathresult}
+    \fi
+    \ifnum#3=1
+        \edef\topcoord{top}
+    \else
+        \pgfmathparse{int(#3-1)}
+        \edef\topcoord{\pgfmathresult}
+    \fi
+    \ifnum#2=\the\pgfmatrixcurrentcolumn
+        \edef\rightcoord{right}
+    \else
+        \edef\rightcoord{#2}
+    \fi
+    \ifnum#3=\the\pgfmatrixcurrentrow
+        \edef\bottomcoord{bottom}
+    \else
+        \edef\bottomcoord{#3}
+    \fi
+    \mtxhpartial{#1}{\topcoord}{\leftcoord}{\rightcoord}
+    \mtxhpartial{#1}{\bottomcoord}{\leftcoord}{\rightcoord}
+    \mtxvpartial{#1}{\leftcoord}{\topcoord}{\bottomcoord}
+    \mtxvpartial{#1}{\rightcoord}{\topcoord}{\bottomcoord}
 }

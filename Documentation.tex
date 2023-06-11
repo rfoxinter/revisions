@@ -265,7 +265,6 @@ Pour l'utiliser, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12
 
 \textbf{\Large La commande \Verb?\tmatrix?}
 
-
 \Verb?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice tikz et les éléments de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
 
 Les commandes sont:
@@ -280,6 +279,39 @@ Les commandes sont:
 \hrule
 \mmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou left/right) avec les paramètres tikz \texttt{params}}
 \mmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres tikz \texttt{params}}
+\vspace{0.5cm}
+
+\textbf{\Large Exemples avec \Verb?\tmatrix?}
+
+$\det M=\tmatrix|{a\&b\\c\&d\\}|$ est produit par \Verb?$\det{M}=\tmatrix|{a\&b\\c\&d\\}|$?.
+
+\vspace{0.25cm}
+
+$I_{n,p,r}=\tmatrix[\mtxvline{line width = 0.05em}{1}\mtxhline{line width = 0.05em}{1}][minimum height = 5ex, row sep = 1ex,minimum width = 5ex, column sep = 1ex,]({I_r\&0_{r,p-r}\\0_{n-r,r}\&0_{n-r,p-r}\\})$ est produit par
+\begin{Verbatim}
+$
+I_{n,p,r}=\tmatrix
+    [\mtxvline{line width = 0.05em}{1}\mtxhline{line width = 0.05em}{1}]
+    [minimum height = 5ex, row sep = 1ex, minimum width = 5ex,
+        column sep = 1ex,]
+    ({I_r\&0_{r,p-r}\\0_{n-r,r}\&0_{n-r,p-r}\\})
+$
+\end{Verbatim}
+
+\vspace{0.25cm}
+
+$\tmatrix[\mtxbox{red, dashed}{1}{1}\mtxbox{teal, dotted, ultra thick}{2}{2}\mtxbox{}{4}{4}][minimum height = 5ex, minimum width = 5ex, row sep = 10pt,inner sep = 5pt, column sep = 10pt,]{{[}}{A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\0\&0\&0\&A_n\\}{{]}}$ est produit par
+\begin{Verbatim}[breaklines,breakafter=\&,breakaftersymbolpre=,breaksymbol=~~~~]
+$
+\tmatrix
+    [\mtxbox{red, dashed}{1}{1}\mtxbox{teal, dotted,
+        ultra thick}{2}{2}\mtxbox{}{4}{4}]
+    [minimum height = 5ex, minimum width = 5ex, row sep = 10pt,
+        inner sep = 5pt, column sep = 10pt,]
+    {{[}}{A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\
+        0\&0\&0\&A_n\\}{{]}}
+$
+\end{Verbatim}
 \section{Polynomes.sty}
 \mhd
 \mcmd{\pol{K}{X}}
