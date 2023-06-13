@@ -1,7 +1,7 @@
 Probabilités -- Variables aléatoires
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{probas}\usepackage{bigoperators}
+\usepackage{probas}\usepackage{bigoperators}\usepackage{matrices}
 Application mesurable;;Si $\l E,\mathcal S\r$ et $\l F,\mathcal T\r$ sont deux espaces mesurables et $f\!:\! E\to F$\linebreak$\forall B\in\mathcal T,\;f^{-1}\l B\r\in\mathcal S$
 Variable aléatoire;;Application mesurable $X\!:\!\l\Omega,\mathcal T\r\to\l E;\mathcal T'\r$\linebreak Si $\Omega'\in\mathcal T$ tel que $\p{\Omega'}=1$, on peut définir $X$ sur $\Omega'$
 Variable aléatoire réelle;;Variable aléatoire à valeurs dans $\l\mathbb R,\bor^1\r$
@@ -15,3 +15,28 @@ $\p[f\l X\r]{}$;;$\p[X]{}\circ\widehat{f^{-1}}$
 $\p{f\l X\r=x}$;;$\sum{y\in f^{-1}\l x\r\cap X\l\Omega\r}{}{\p{X=y}}$
 Loi conjointe de $\l X_1,\cdots,X_n\r$;;$\p{X_1,\cdots,X_n}$ définie sur $\l\mathbb R^n,\bor^n\r$
 $k$-ième loi marginale de $\l X_1,\cdots,X_n\r$;;Loi de $X_k$
+$\esp X$;;$\sum{x\in X\l\Omega\r}{}{x\p{X=x}}=\sum{\omega\in\Omega}{}{\p{\left\{\omega\right\}}X\l\omega\r}$
+$\esp{\lambda X+Y}$;;$\lambda\esp X+\esp Y$
+Espérance conditionnelle;;$\esp{X\sq A}=\sum{x\in X\l\Omega\r}{}{x\p{X=x\sq A}}$
+Formule de l'espérance totale;;Si $\l A_i\r$ est un système quasi-complet d'événements au plus dénombrale\linebreak$\esp{X}=\sum{i\in I}{}{\esp{X\sq A_i}\p{A_i}}$
+Moment d'ordre $k$\linebreak Moment centré d'ordre $k$;;$\esp{X^k}$\linebreak$\esp{\l X-\esp X\r^k}$
+$\var X$;;$\esp{\l X-\esp X\r^2}$
+$\ect X$;;$\sqrt{\var X}$
+Formule de Koenig-Huyghens;;$\var X=\esp{X^2}-\esp X^2$
+$\var{\lambda X+\mu}$;;$\lambda^2\var X$
+Variable centrée;;$\esp X=0$
+Variable réduite;;$\var X=1$
+Variable centrée réduite associée à $X$;;$X^*=\frac{X-\esp X}{\ect X}$
+Variables indépendantes;;$X\indep Y$\linebreak$\forall\l A_1,A_2\r\in\mathcal T_1\times\mathcal T_2$\linebreak$\p{X\in A,Y\in B}=\p{X\in A}\p{Y\in B}$
+Lemme des coalitions;;Si $\l X_1,\cdots,X_n\r$ sont mutuellement indépendantes, alors $f\l X_1,\cdots,X_m\r$ et $g\l X_{m+1},\cdots,X_n\r$
+$\esp{XY}$;;$\esp X\esp Y$ si $X\indep Y$
+Variables décorrélées;;$\cov XY=0$
+$\cov XY$;;$\esp{\l X-\esp X\r\l Y-\esp Y\r}=\esp{XY}-\esp X\esp Y$
+Inégalité de Cauchy-Schwarz pour $\oldcov$;;$\left|\cov XY\right|\leqslant\ect X\ect Y$
+Cas d'égalité de l'inégalité de Cauchy-Schwarz pour $\oldcov$;;Il existe $\l a,b\r\neq\l0,0\r$ tel que $aX+bY=c$ presque sûrement
+Coefficient de corrélation;;$\rho\l X,Y\r=\frac{\cov XY}{\cov X\cov Y}$
+Inégalité de Cauchy-Schwarz pour $\mathbb E$;;$\left|\esp {XY}\right|\leqslant\sqrt{\esp X\esp Y}$
+Formule de polarisation;;$\cov XY=\frac12\l\var{X+Y}-\var X-\var Y\r$
+$\var{X+Y}$;;$\var X+\var Y-2\cov XY$
+$\var{X_1+\cdots+X_n}$;;$\sum{k=1}{n}{\var X_i}-2\sum{1\leqslant i<j\leqslant n}{}{\cov{X_i}{X_j}}$\linebreak${}=\tmatrix[][minimum width=0pt,minimum height=20pt,]({1\&\mdots\&1\\})\underline{\mathbb V}\l X_1,\cdots,X_n\r\tmatrix[][minimum width=0pt,minimum height=20pt,]({1\\\oldvdots\\1\\})$
+Matrice des variances-covariances;;$\underline{\mathbb V}\l X_1,\cdots,X_n\r=\l\cov{X_i}{X_j}\r_{\l i,j\r\in\llb1,n\rrb^2}$
