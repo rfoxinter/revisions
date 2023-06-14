@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Révisions</title>
     <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%A9%C3%A8%C3%A0%C3%B9%C3%890123456789.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%A9%C3%A8%C3%A0%C3%B9%C3%89%E2%80%98%E2%80%990123456789.">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&display=swap">
     <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/bac/English/main.css">
     <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/bac/English/normalize.css">
@@ -46,7 +46,10 @@
         var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = []; var qr = [0, 1];
         var file = new URLSearchParams(document.location.search.substring(1)).get("file");
         async function loadModule(file) {
-            const response = await fetch(file + '/info.txt');
+            try {
+                const response = await fetch(file + '/info.txt');
+            } catch(error) {return 'Error'}
+            console.log(response)
             if (response.status == 200) {
                 const jsCode = await response.text();
                 const lst = jsCode.split("\n");
@@ -88,7 +91,11 @@
                     await get_code(file, ques[i], 'R');
                     arr[2*ques[i]-1] = svgcode;
                 }
-            } else {
+            } else if (res == 'Error') {
+                document.getElementById('title').innerHTML = 'Erreur';
+                document.getElementById('flashcard').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
+            }
+            else {
                 document.getElementById('title').innerHTML = 'Erreur ' + res;
                 document.getElementById('flashcard').innerHTML = 'Fichier introuvable';
             }
