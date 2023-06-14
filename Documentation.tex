@@ -14,7 +14,7 @@
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
 \let\oldsection\section
-\renewcommand\section{\clearpage\oldsection}
+\renewcommand{\section}{\clearpage\oldsection}
 \title{Documentation}
 \author{}
 \date{}
@@ -113,7 +113,7 @@ Lors de l'utilisation de \texttt{beamer} (avec une police sans-sérif), il est p
 
 Il est possibles de changer les polices de caractères/symboles en important des packages après \Verb?\usepackage{preambule}?. Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
 
-Il n'est pas possible d'utiliser en simultané le package \Verb?Dsfont.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.7}{\Verb?Dsft.sty? } décrit ci-dessous. De plus, la commande \Verb?\1? ne sera pas modifiée si un package définissant \Verb?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \Verb?\newcommand\1[1]{\mathbb{1}_{#1}}? (si \texttt{Dsft.sty} n'est pas importé) ou \Verb?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
+Il n'est pas possible d'utiliser en simultané le package \Verb?Dsfont.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\Verb?Dsft.sty? } décrit ci-dessous. De plus, la commande \Verb?\1? ne sera pas modifiée si un package définissant \Verb?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \Verb?\newcommand\1[1]{\mathbb{1}_{#1}}? (si \texttt{Dsft.sty} n'est pas importé) ou \Verb?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
 
 \vspace{0.5cm}
 
@@ -136,10 +136,53 @@ Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\sup
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
 \end{Verbatim}
-\Verb?\l? et \Verb?\r? sont définis dans \hyperlink{section.i}{Preambule.sty et HTMLPreambule.sty}.
+\Verb?\l? et \Verb?\r? sont définis dans \hyperlink{section.2}{Preambule.sty et HTMLPreambule.sty}.
 \tableofcontents
 \null\newpage
 \pagenumbering{arabic}
+\section{Flashcards.py et Htmlcards.py}
+Les fichiers \texttt{Flashcards.py} et \texttt{Htmlcards.py} permettent d'exporter facilement des flashcards en \texttt{.pdf} et \texttt{.svg} (pour affichage dans le navigateur).
+
+Pour pouvoir créer des fiches de révision, il faut mettre un fichier \texttt{.txt} (décrit plus bas) dans un dossier \texttt{input} et mettre les fichiers \texttt{.sty} nécessaires dans un dossier \texttt{output}.
+\subsection{Flashcards.py}
+Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \Verb?python Flashcards.py --file=fiche? (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \Verb?--n=nombre? (avec le nombre d'exemplaires), \Verb?--dest=dossier? (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \Verb?--open=True/False? (pour ouvrir le dossize où le \texttt{.pdf} est produit).
+\subsection{Htmlcards.py}
+Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \Verb?python Flashcards.py --file=fiche? (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \Verb?--dest=dossier? (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \Verb?--open=True/False? (pour ouvrir le dossize où le \texttt{.pdf} est produit).
+\subsection{Les fiches .txt}
+Pour faire des fiches, il faut créer un fichier \texttt{.txt} de la forme
+\begin{Verbatim}
+TITRE
+Shuffle questions : True/False
+Q/R & R/Q : True/False
+PACKAGES & COMMANDES SUPPLÉMENTAIRES
+QUESTION;;RÉPONSE
+...
+QUESTION;;RÉPONSE
+\end{Verbatim}
+
+Le titre doit être de la forme \Verb?Thème -- Chapitre? ou \Verb?Chapitre?.
+On peut aussi spécifier un titre racourci pour le nom du fichier avec \verb?Titre_raccourci!!ttleTitre classique? où le titre raccourci ne peut pas contenir d'espaces ou de caractères spéciaux, et titre classique étant de la forme des seux premiers.
+
+La ligne 2 indique si on peut ou non mettre un ordre aléatoire pour les questions.
+
+La ligne 3 indique si on peut échanger l'ordre des questions et des réponses pour les fiches. Avec cette option à \texttt{True}, il est possible de forcer une question à être avant la réponse en mettant \Verb?!!fst? devant la/les ligne(s) concernée(s).
+
+Les packages et commandes supplémentaires doivent être placées sur une seule ligne (voir \href{https://www.overleaf.com/learn/latex/Commands}{CTAN}).
+
+Il faut s'assurer qu'il n'y ait pas de ligne vide à la fin du fichier.
+
+S'il y a une erreur lors de la compilation latex, le programme python affichera le message d'erreur affiché par latex.
+
+\subsection{Visionner les flashcards en svg}
+Pour pouvoir visionner les flashcards exportées en svg, il faut disposer d'un serveur web (comme \href{https://github.com/}{github} avec \href{https://pages.github.com/}{github pages}) sur lequel on met le dossier généré par \texttt{Htmlcards.py} (on suppose que l'url est \texttt{https://example.fr/dossier}).
+
+Il faut alors convertir l'url du dossier en base 64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}} ou avec la fonction \texttt{btoa} de JavaScript). Dans l'exemple, on obtient \Verb?aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI=?.
+
+Il faut alors aller sur le site \href{https://rfoxinter.github.io/revisions/flashcards/?file=}{\texttt{https://rfoxinter.github.io/revisions/flashcards/}} en rajoutant à la fin de l'url \texttt{?file=nom\_du\_dossier} où le nom du dossier correspond à celui en base 64.
+
+Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/revisions/flashcards/}
+
+\texttt{~~~~?file=aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI=}
 \section{Preambule.sty et HTMLPreambule.sty}
 \mhd
 \mmcmd[\footnotemark]{\l}{$\l\right.$}
@@ -157,7 +200,7 @@ Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\sup
 \mcmd[\footnotemark]{l}
 \footnotetext{Correspond à la commande usuelle \Verb?\ell?}
 \section{AL.sty}
-Le package \hyperlink{section.9}{\Verb?Matrices.sty?} sera importé automatiquement avec \Verb?AL.sty?.
+Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatiquement avec \Verb?AL.sty?.
 
 \vspace{0.5cm}
 
@@ -184,7 +227,7 @@ Le package \hyperlink{section.9}{\Verb?Matrices.sty?} sera importé automatiquem
 \mmcmd{\lc}{$\lc\right.$}
 \mmcmd{\rc}{$\left.\rc$}
 \section{Analyse.sty}
-Le package \hyperlink{section.4}{\Verb?BigOperators.sty?} sera importé automatiquement avec \Verb?Analyse.sty?.
+Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automatiquement avec \Verb?Analyse.sty?.
 
 \vspace{0.5cm}
 
@@ -413,17 +456,19 @@ $
 \section{Tables.sty}
 Ce package sert à mettre en forme des tables an latex grâce à tikz.
 
-Pour insérer une table, il faut appeler \Verb?\setrowcol{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis rentrer la table tikz.
+Pour insérer une table, il faut appeler \Verb?\setrowcol[width][height]{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis rentrer la table tikz, les arguments optionnels étant la largeur de la table et sa hauteur.
 
-Une table a une largeur de 10cm et une hauteur de 6,5cm.
+Une table a une largeur par défaut de 10cm et une hauteur de 6,5cm (est est réinitialisée à chaque appel de \Verb?\setrowcol?).
 
-Il est possible d'utiliser \Verb?[ampersand replacement=\&]? puis \Verb?\&? pour la matrice lorsqu'elle est dans un environnement où \Verb?&? est déjà défini.
+Il est possible d'utiliser \Verb?[ampersand replacement=\&]? puis \Verb?\&? pour la matrice lorsque \Verb?&? est déjà défini par \LaTeX.
+
+Il est possible de récupérer la valeur de la largeur et de la hauteur avec \Verb?\tblw? et \Verb?\tblh?.
 
 \vspace{0.5cm}
 
 Par exemple, la table
 \begin{center}
-\setcolrow{6}{5}\begin{tikzpicture}\matrix[table] { &$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$ \\ $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\ $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\ $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\ $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\ }; \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2); \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10); \draw [line width=0.5mm] (-5cm,-3.25cm) rectangle (5cm,3.25cm);\end{tikzpicture}
+\setcolrow[\linewidth]{6}{5}\begin{tikzpicture}\matrix[table] { &$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$ \\ $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\ $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\ $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\ $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\ }; \draw [line width=0.5mm] (-\tblw/3,-\tblh/2) -- (-\tblw/3,\tblh/2); \draw [line width=0.5mm] (-\tblw/2,3*\tblh/10) -- (\tblw/2,3*\tblh/10); \draw [line width=0.5mm] (-\tblw/2,-\tblh/2) rectangle (\tblw/2,\tblh/2);\end{tikzpicture}
 \end{center}
 est produite avec le code suivant
 \begin{Verbatim}[breaklines,breakafter=&,breakaftersymbolpre=,breaksymbol=~~~~]
@@ -436,9 +481,9 @@ est produite avec le code suivant
         $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\
         $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\
     };
-    \draw [line width=0.5mm] (-10cm/3,-6.5cm/2) -- (-10cm/3,6.5cm/2);
-    \draw [line width=0.5mm] (-10cm/2,3*6.5cm/10) -- (10cm/2,3*6.5cm/10);
-    \draw [line width=0.5mm] (-5cm,-3.25cm) rectangle (5cm,3.25cm);
+    \draw [line width=0.5mm] (-\tblw/3,-\tblh/2) -- (-\tblw/3,\tblh/2);
+    \draw [line width=0.5mm] (-\tblw/2,3*\tblh/10) -- (\tblw/2,3*\tblh/10);
+    \draw [line width=0.5mm] (-\tblw/2,-\tblh/2) rectangle (\tblw/2,\tblh/2);
 \end{tikzpicture}
 \end{Verbatim}
 \section{Trigo.sty}
