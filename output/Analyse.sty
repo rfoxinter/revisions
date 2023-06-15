@@ -4,6 +4,8 @@
 \newcommand{\oldd}{{\tmpd}}
 \newcommand{\der}[1][]{\def\argI{#1}\tmpder}
 \newcommand{\tmpder}[2][x]{\frac{\oldd^{\argI}}{\oldd#1^{\argI}}\l#2\r}
+\newcommand{\pder}[1][]{\def\argI{#1}\tmppder}
+\newcommand{\tmppder}[2][x]{\frac{\partial^{\argI}}{\partial#1^{\argI}}\l#2\r}
 \let\oldint\int
 \renewcommand{\int}[1][]{
     \ifx&#1&
