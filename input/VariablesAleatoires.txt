@@ -3,7 +3,7 @@ Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{probas}\usepackage{bigoperators}\usepackage{matrices}
 Application mesurable;;Si $\l E,\mathcal S\r$ et $\l F,\mathcal T\r$ sont deux espaces mesurables et $f\!:\! E\to F$\linebreak$\forall B\in\mathcal T,\;f^{-1}\l B\r\in\mathcal S$
-Variable aléatoire;;Application mesurable $X\!:\!\l\Omega,\mathcal T\r\to\l E;\mathcal T'\r$\linebreak Si $\Omega'\in\mathcal T$ tel que $\p{\Omega'}=1$, on peut définir $X$ sur $\Omega'$
+Variable aléatoire;;Application mesurable $X\!:\!\l\Omega,\mathcal T\r\to\l E,\mathcal T'\r$\linebreak Si $\Omega'\in\mathcal T$ tel que $\p{\Omega'}=1$, on peut définir $X$ sur $\Omega'$
 Variable aléatoire réelle;;Variable aléatoire à valeurs dans $\l\mathbb R,\bor^1\r$
 Vecteur aléatoire réel;;Vecteur aléatoire à valeurs dans $\l\mathbb R^n,\bor^n\r$
 Si $X\!:\!\l\Omega,\mathcal T\r\to\l E;\mathcal T'\r$\linebreak$\mathcal T_X$;;$\left\{X^{-1}\l A\r,\;A\in\mathcal T'\right\}$
