@@ -486,10 +486,11 @@ Il est possible de récupérer la valeur de la largeur et de la hauteur avec \Ve
 
 Par exemple, la table
 
-\setcolrow[\linewidth]{6}{5}\begin{tikzpicture}\matrix[table] { &$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$ \\ $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\ $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\ $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\ $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\ }; \draw [line width=0.5mm] (-\tblw/3,-\tblh/2) -- (-\tblw/3,\tblh/2); \draw [line width=0.5mm] (-\tblw/2,3*\tblh/10) -- (\tblw/2,3*\tblh/10); \draw [line width=0.5mm] (-\tblw/2,-\tblh/2) rectangle (\tblw/2,\tblh/2);\end{tikzpicture}
+{\LARGE\setcolrow[\linewidth]{6}{5}\begin{tikzpicture}\matrix[table] { &$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$ \\ $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\ $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\ $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\ $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\ }; \draw [line width=0.5mm] (-\tblw/3,-\tblh/2) -- (-\tblw/3,\tblh/2); \draw [line width=0.5mm] (-\tblw/2,3*\tblh/10) -- (\tblw/2,3*\tblh/10); \draw [line width=0.5mm] (-\tblw/2,-\tblh/2) rectangle (\tblw/2,\tblh/2);\end{tikzpicture}}
 
 est produite avec le code suivant
 \begin{Verbatim}[breaklines,breakafter=&,breakaftersymbolpre=,breaksymbol=~~~~,vspace=0pt]
+\LARGE
 \setcolrow{6}{5}
 \begin{tikzpicture}
     \matrix[table] {
