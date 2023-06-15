@@ -5,6 +5,7 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{hyperref}
 \hypersetup{pdftitle=Documentation}
+\newcommand{\tikzlg}{Ti\textit{k}Z}
 \let\oldoplus\oplus
 \usepackage{output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables}
 \SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
@@ -171,7 +172,9 @@ Les packages et commandes supplémentaires doivent être placées sur une seule 
 
 Il faut s'assurer qu'il n'y ait pas de ligne vide à la fin du fichier.
 
-S'il y a une erreur lors de la compilation latex, le programme python affichera le message d'erreur affiché par latex.
+S'il y a une erreur lors de la compilation \LaTeX, le programme python affichera le message d'erreur affiché par \LaTeX.
+
+Exemple de fiches : \href{https://github.com/rfoxinter/revisions/tree/main/input}{\texttt{https://github.com/rfoxinter/revisions/tree/main/input}}.
 
 \subsection{Visionner les flashcards en svg}
 Pour pouvoir visionner les flashcards exportées en svg, il faut disposer d'un serveur web (comme \href{https://github.com/}{github} avec \href{https://pages.github.com/}{github pages}) sur lequel on met le dossier généré par \texttt{Htmlcards.py} (on suppose que l'url est \texttt{https://example.fr/dossier}).
@@ -199,6 +202,11 @@ Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/
 \footnotetext{Correspond à la commande usuelle \Verb?\dfrac?}
 \mcmd[\footnotemark]{l}
 \footnotetext{Correspond à la commande usuelle \Verb?\ell?}
+\mcmd[\footnotemark]{\oldvec{x}}
+\footnotetext{Correspond à la commande usuelle \Verb?\vec?}
+\mcmd{\vec{AB}}
+\mcmd[\footnotemark]{\overrightarrow{AB}}
+\footnotetext{Le résultat est le même qu'avec \Verb?\vec?}
 \section{AL.sty}
 Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatiquement avec \Verb?AL.sty?.
 
@@ -343,7 +351,7 @@ Pour l'utiliser, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12
 \mmcmd{\vdots}{$\oldvdots$}
 \mmcmd{\xdots}{$\oldxdots$}
 \mcmd[\footnotemark]{\tmatrix({1\&0\\0\&1\\})}
-\footnotetext{Les caractères \Verb?\&? sont utilisés au lieu du \Verb?&? utilisé habituellement avec tikz pour des raisons de compatibilité avec \texttt{Beamer}}
+\footnotetext{Les caractères \Verb?\&? sont utilisés au lieu du \Verb?&? utilisé habituellement avec \tikzlg{} pour des raisons de compatibilité avec \texttt{Beamer}}
 
 \vspace{0.5cm}
 
@@ -357,20 +365,20 @@ Par exemple, avec 2pt, on obtient : \setlength{\dotsep}{2pt} $\xdots$.\setlength
 
 \textbf{\Large La commande \Verb?\tmatrix?}
 
-\Verb?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice tikz et les éléments de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
+\Verb?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice \tikzlg{} et les éléments de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
 
 Les commandes sont:
 
 \vspace{0.5cm}
 
 \mhd
-\mmcmd{\mtxvline{params}{n}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités) avec les paramètres tikz \texttt{params}}
-\mmcmd{\mtxhline{params}{n}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités) avec les paramètres tikz \texttt{params}}
+\mmcmd{\mtxvline{params}{n}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
+\mmcmd{\mtxhline{params}{n}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
 \pagebreak
 \hrule
-\mmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou top/bottom) avec les paramètres tikz \texttt{params}}
-\mmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou left/right) avec les paramètres tikz \texttt{params}}
-\mmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres tikz \texttt{params}}
+\mmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou top/bottom) avec les paramètres \tikzlg{} \texttt{params}}
+\mmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou left/right) avec les paramètres \tikzlg{} \texttt{params}}
+\mmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres \tikzlg{} \texttt{params}}
 \vspace{0.5cm}
 
 \textbf{\Large Exemples avec \Verb?\tmatrix?}
@@ -436,6 +444,14 @@ $
 \mcmd{\cov{X}{Y}}
 \mcmd[\footnotemark]{\indep}
 \footnotetext{Ce symbole est obtenu avec la commande \Verb?\perp\!\!\!\perp?}
+\mcmd{\unif{n}}
+\mcmd{\bin{p}}
+\mcmd{\bin[n]{p}}
+\mcmd{\geom{p}}
+\mcmd{\pasc{r}{p}}
+\mcmd{\nbin{r}{p}}
+\mcmd{\hypg{N}{n}{q}}
+\mcmd{\poiss{\lambda}}
 \section{Structures.sty}
 \mhd
 \mcmd{\oldhom}
@@ -454,9 +470,9 @@ $
 \mcmd{\oldord}
 \mcmd{\ord{x}}
 \section{Tables.sty}
-Ce package sert à mettre en forme des tables an latex grâce à tikz.
+Ce package sert à mettre en forme des tables an latex grâce à \tikzlg{}.
 
-Pour insérer une table, il faut appeler \Verb?\setrowcol[width][height]{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis rentrer la table tikz, les arguments optionnels étant la largeur de la table et sa hauteur.
+Pour insérer une table, il faut appeler \Verb?\setrowcol[width][height]{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis rentrer la table \tikzlg{}, les arguments optionnels étant la largeur de la table et sa hauteur.
 
 Une table a une largeur par défaut de 10cm et une hauteur de 6,5cm (est est réinitialisée à chaque appel de \Verb?\setrowcol?).
 
