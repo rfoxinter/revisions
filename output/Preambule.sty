@@ -29,5 +29,6 @@
 \lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
 \endgroup
 \makeatother
+\let\oldvec\vec
 \renewcommand{\vec}{\overrightarrow}
 \renewcommand*{\overrightarrow}[1]{\vbox{\halign{##\cr\scriptsize\rightarrowfill\cr\noalign{\nointerlineskip\vskip1pt}$#1\mskip2mu$\cr}}}
