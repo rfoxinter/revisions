@@ -8,6 +8,9 @@
 \newcommand{\tikzlg}{Ti\textit{k}Z}
 \let\oldoplus\oplus
 \usepackage{output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables}
+\makeatletter
+\newcommand{\oldl}{\lsb@l}
+\makeatother
 \SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
 \usepackage{fvextra}
 \setlength{\parindent}{0pt}
@@ -118,7 +121,7 @@ Il n'est pas possible d'utiliser en simultané le package \Verb?Dsfont.sty? disp
 
 \vspace{0.5cm}
 
-Il est possible de redéfinir le $l$ à sa version d'origine avec:
+Il est possible de redéfinir le $l$ à sa version d'origine ($\oldl$) avec:
 \begin{Verbatim}[vspace=0pt]
 \mathcode`l="8000
 \begingroup
@@ -181,7 +184,13 @@ Exemple de fiches : \href{https://github.com/rfoxinter/revisions/tree/main/input
 \subsection{Visionner les flashcards en svg}
 Pour pouvoir visionner les flashcards exportées en svg, il faut disposer d'un serveur web (comme \href{https://github.com/}{github} avec \href{https://pages.github.com/}{github pages}) sur lequel on met le dossier généré par \texttt{Htmlcards.py} (on suppose que l'url est \texttt{https://example.fr/dossier}).
 
-Il faut alors convertir l'url du dossier en base 64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}} ou avec la fonction \texttt{btoa} de JavaScript). Dans l'exemple, on obtient \Verb?aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI=?.
+Il faut alors convertir l'url du dossier en base 64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}}, avec la fonction \texttt{btoa} de JavaScript ou avec la  fonction Python \texttt{base64.b64encode}). Dans l'exemple, en exécutant le code Python suivant
+\begin{Verbatim}[vspace=0pt]
+import base64
+print(base64.b64encode("https://example.fr/dossier".encode()).decode())
+\end{Verbatim}
+
+on obtient \Verb?aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI=?.
 
 Il faut alors aller sur le site \href{https://rfoxinter.github.io/revisions/flashcards/?file=}{\texttt{https://rfoxinter.github.io/revisions/flashcards/}} en rajoutant à la fin de l'url \texttt{?file=nom\_du\_dossier} où le nom du dossier correspond à celui en base 64.
 
