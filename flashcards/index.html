@@ -66,9 +66,6 @@
                 document.title = title.replace('&ndash;', '-').replace('<i>', '').replace('</i>', '');
                 ques = copyArray(n);
 
-                document.addEventListener('readystatechange', (event) => {
-                    document.getElementById('title').innerHTML = title;
-                })
                 if (sh_quest) {shuffleArray(ques);}
 
                 return 200;
@@ -84,7 +81,12 @@
                 arr = new Array(2*n.length);
                 await get_code(file, ques[0], 'Q');
                 arr[2*ques[0]-2] = svgcode;
-                document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
+                if (document.readyState !== "loading") {
+                    document.getElementById('title').innerHTML = title;
+                    document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
+                } else {
+                    document.addEventListener("DOMContentLoaded", onReady);
+                }
                 await get_code(file, ques[0], 'R');
                 arr[2*ques[0]-1] = svgcode;
                 for (let i = 1; i < n.length; i++) {
@@ -94,16 +96,20 @@
                     arr[2*ques[i]-1] = svgcode;
                 }
             } else if (res == 'Error') {
-                document.addEventListener('readystatechange', function () {
+                if (document.readyState !== "loading") {
                     document.getElementById('title').innerHTML = 'Erreur';
                     document.getElementById('flashcard').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
-                })
+                } else {
+                    document.addEventListener("DOMContentLoaded", onReady);
+                }
             }
             else {
-                document.addEventListener('readystatechange', function () {
+                if (document.readyState !== "loading") {
                     document.getElementById('title').innerHTML = 'Erreur ' + res;
                     document.getElementById('flashcard').innerHTML = 'Fichier introuvable';
-                })
+                } else {
+                    document.addEventListener("DOMContentLoaded", onReady);
+                }
             }
         }
         if (file != null) {
