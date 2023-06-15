@@ -256,6 +256,9 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \mcmd{\der{f(x)}}
 \mcmd{\der[n]{f(x)}}
 \mcmd{\der[][t]{f(t)}}
+\mcmd{\der[n][t]{f(t)}}
+\mcmd[\footnotemark]{\pder{f(x)}}
+\footnotetext{On peut appliquer les mêmes arguments optionnels que pour \Verb?\der?}
 \mcmd[\footnotemark]{\oldint}
 \footnotetext{Correspond à la commande usuelle \Verb?\int?}
 \mcmd{\int{f}}
@@ -263,6 +266,7 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \mcmd[\footnotemark]{\int[t][{[a,b]}]{f(t)}}
 \footnotetext{L'argument \Verb?[a,b]? doit être mis entre accolades pour être traîté correctement par \LaTeX}
 \mcmd{\int[t][a][b]{f(t)}}
+\mcmd{\int[][a][b]{f'}}
 \mcmd{\eval[{[a,b]}]{f(t)}}
 \mcmd{\eval[a][b]{f(t)}}
 \mcmd{\serie{a_n}}
