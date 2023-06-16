@@ -16,6 +16,7 @@ $\p{f\l X\r=x}$;;$\sum{y\in f^{-1}\l x\r\cap X\l\Omega\r}{}{\p{X=y}}$
 Loi conjointe de $\l X_1,\cdots,X_n\r$;;$\p{X_1,\cdots,X_n}$ définie sur $\l\mathbb R^n,\bor^n\r$
 $k$-ième loi marginale de $\l X_1,\cdots,X_n\r$;;Loi de $X_k$
 $\esp X$;;$\sum{x\in X\l\Omega\r}{}{x\p{X=x}}=\sum{\omega\in\Omega}{}{\p{\left\{\omega\right\}}X\l\omega\r}$
+$L^1$;;Variables aléatoires réelles discrètes admettant une espérance finie
 $\esp{\lambda X+Y}$;;$\lambda\esp X+\esp Y$
 Espérance conditionnelle;;$\esp{X\sq A}=\sum{x\in X\l\Omega\r}{}{x\p{X=x\sq A}}$
 Formule de l'espérance totale;;Si $\l A_i\r$ est un système quasi-complet d'événements au plus dénombrale\linebreak$\esp{X}=\sum{i\in I}{}{\esp{X\sq A_i}\p{A_i}}$

@@ -10,38 +10,42 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Formule du binôme négatif}{1/17}
-\slider{$\sum{n=0}{+\infty}{\frac{n!}{\l n-p\r!}z^{n-p}}=\frac{p!}{\l1-z\r^{p+1}}$\linebreak$\frac{1}{\l1-z\r^{p+1}}=\sum{n=0}{+\infty}{\binom{n+p}{p}z^n}$}{1/17}
-\slideq{Produit de Cauchy}{2/17}
-\slider{Si $\serie{a_n}$ et $\serie{b_n}$ sont absolument convergentes et $c_n=\sum{k=0}{n}{a_kb_{n-k}}$, alors $\serie{c_n}$ est absolument convergente\linebreak$\l\sum{n=0}{+\infty}{a_n}\r\l\sum{n=0}{+\infty}{b_n}\r=\sum{n=0}{+\infty}{\sum{k=0}{n}{a_kb_{n-k}}}$}{2/17}
-\slideq{Théorème de comparaison des séries à termes positifs}{3/17}
-\slider{$\exists N\in\mathbb N,\;\forall n\geq N,\; 0\leq u_n\leq v_n$\linebreak Si $\serie{v_n}$ converge alors $\serie{u_n}$ converge\linebreak Si $\serie{u_n}$ diverge alors $\serie{v_n}$ diverge}{3/17}
-\slideq{Règle de Riemann}{4/17}
-\slider{S'il existe $\alpha>1$ tel que $\l n^\alpha u_n\r$ est bornée, alors $\serie{u_n}$ converge\linebreak Si $\l nu_n\r$ est minorée par $m>0$ à partir de $n\in\mathbb N$, alors $\serie{u_n}$ diverge}{4/17}
-\slideq{Théorème spécial de convergence des séries alternées}{5/17}
-\slider{Une série alternée est convergente\linebreak Les sommes partielles sont du signe du premier terme\linebreak Les restes sont du signe de leur premier terme et de valeur absolue plus petite que celle de ce dernier}{5/17}
-\slideq{Convergence absolue}{6/17}
-\slider{$\serie{u_n}$ converge absolument si $\serie{\left|u_n\right|}$ converge\linebreak Si $\serie{\left|u_n\right|}$ converge alors $\serie{u_n}$ converge}{6/17}
-\slideq{Série alternée}{7/17}
-\slider{$\serie{u_n}$ est alternée s'il existe une suite $\l a_n\r$ positive décroissante de limite nulle telle que $u_n=\l-1\r^na_n$}{7/17}
-\slideq{Critère d'Abel}{8/17}
-\slider{Si $\l a_n\r$ est une suite réelle positive décroissante de limite nulle, et la somme partielle de $\serie{b_n}$ est bornée, alors $\serie{a_nb_n}$ converge\linebreak Les suites $\e^{\i n\alpha}$, $\cos{n\alpha}$ et $\sin{n\alpha}$ vérifient les conditions pour $\l b_n\r$ lorsque $\alpha\not\equiv0\ \left[2\pi\right]$}{8/17}
-\slideq{Encadrement des sommes par les intégrales\linebreak$f$ est continue et décroissante sur $\left[n_0,+\infty\right[$ avec $n_0\in\mathbb Z$}{9/17}
-\slider{$\int[t][n_0+1][n+1]{f\l t\r}$\linebreak${}\leq\sum{k=n_0+1}{n}{f\l k\r}\leq{}$\linebreak$\int[t][n_0][n]{f\l t\r}$}{9/17}
-\slideq{Comparaison par dominance}{10/17}
-\slider{$u_n=\O[]{v_n}$\linebreak Si $\serie{v_n}$ converge alors $\serie{u_n}$ converge\linebreak Si $\serie{u_n}$ ou $\serie{\left|u_n\right|}$ diverge alors $\serie{v_n}$ diverge}{10/17}
-\slideq{Série de Bertrand}{11/17}
-\slider{$\sum{n=2}{+\infty}{\frac1{n^\alpha\ln[\beta]n}}$\linebreak Une série de Bertrand converge si et seulement si $\l\alpha,\beta\r>\l1,1\r$ pour l'ordre lexicographique}{11/17}
-\slideq{Semi-convergence}{12/17}
-\slider{Convergence sans convergence absolue}{12/17}
-\slideq{Sommabilité}{13/17}
-\slider{$\l a_i\r$ est sommable si $\sum{i\in I}{}{\left|a_i\right|}<+\infty$}{13/17}
-\slideq{Règle de d'Alembert}{14/17}
-\slider{Si $\left|\frac{u_{n+1}}{u_n}\right|\to l$ où $0\leq l<1$, alors $\serie{u_n}$ converge absolument\linebreak Si $\left|\frac{u_{n+1}}{u_n}\right|\to l$ où $l>1$, alors $\serie{u_n}$ diverge grossièrement}{14/17}
-\slideq{$\sum{i\in I}{}{a_i}$}{15/17}
-\slider{$\sup{\left\{\sum{i\in J}{}{a_i},\;J\in\mathcal{P}_f\l I\r\right\}}$}{15/17}
-\slideq{$\serie{u_n}$ diverge grossièrement}{16/17}
-\slider{$\l u_n\r$ ne tend pas vers $0$}{16/17}
-\slideq{Série de Riemann}{17/17}
-\slider{$\sum{n=1}{+\infty}{\frac1{n^\alpha}}$\linebreak Une série de Riemann converge si et seulement si $\alpha>1$}{17/17}
+\slideq{$l^1\l I,X\r$}{1/19}
+\slider{Ensemble des familles sommables indexées sur $I$ à valeurs dans $X\subset\mathbb C$}{1/19}
+\slideq{Série de Bertrand}{2/19}
+\slider{$\sum{n=2}{+\infty}{\frac1{n^\alpha\ln[\beta]n}}$\linebreak Une série de Bertrand converge si et seulement si $\l\alpha,\beta\r>\l1,1\r$ pour l'ordre lexicographique}{2/19}
+\slideq{Caractérisation par $\varepsilon$ de la somme}{3/19}
+\slider{$\forall\varepsilon>0,\;\exists J_\varepsilon\in\mathcal P_f\l I\r,\;\forall K\in\mathcal P_f\l I\r$\linebreak$J_\varepsilon\subset K\Rightarrow\left|S-\sum{i\in K}{}{a_i}\right|\leqslant\varepsilon$}{3/19}
+\slideq{$\sum{i\in I}{}{a_i}$}{4/19}
+\slider{$\sup{\left\{\sum{i\in J}{}{a_i},\;J\in\mathcal{P}_f\l I\r\right\}}$}{4/19}
+\slideq{Produit de Cauchy}{5/19}
+\slider{Si $\serie{a_n}$ et $\serie{b_n}$ sont absolument convergentes et $c_n=\sum{k=0}{n}{a_kb_{n-k}}$, alors $\serie{c_n}$ est absolument convergente\linebreak$\l\sum{n=0}{+\infty}{a_n}\r\l\sum{n=0}{+\infty}{b_n}\r=\sum{n=0}{+\infty}{\sum{k=0}{n}{a_kb_{n-k}}}$}{5/19}
+\slideq{Semi-convergence}{6/19}
+\slider{Convergence sans convergence absolue}{6/19}
+\slideq{Théorème spécial de convergence des séries alternées}{7/19}
+\slider{Une série alternée est convergente\linebreak Les sommes partielles sont du signe du premier terme\linebreak Les restes sont du signe de leur premier terme et de valeur absolue plus petite que celle de ce dernier}{7/19}
+\slideq{Convergence absolue}{8/19}
+\slider{$\serie{u_n}$ converge absolument si $\serie{\left|u_n\right|}$ converge\linebreak Si $\serie{\left|u_n\right|}$ converge alors $\serie{u_n}$ converge}{8/19}
+\slideq{Règle de d'Alembert}{9/19}
+\slider{Si $\left|\frac{u_{n+1}}{u_n}\right|\to l$ où $0\leq l<1$, alors $\serie{u_n}$ converge absolument\linebreak Si $\left|\frac{u_{n+1}}{u_n}\right|\to l$ où $l>1$, alors $\serie{u_n}$ diverge grossièrement}{9/19}
+\slideq{Théorème de comparaison des séries à termes positifs}{10/19}
+\slider{$\exists N\in\mathbb N,\;\forall n\geq N,\; 0\leq u_n\leq v_n$\linebreak Si $\serie{v_n}$ converge alors $\serie{u_n}$ converge\linebreak Si $\serie{u_n}$ diverge alors $\serie{v_n}$ diverge}{10/19}
+\slideq{Comparaison par dominance}{11/19}
+\slider{$u_n=\O[]{v_n}$\linebreak Si $\serie{v_n}$ converge alors $\serie{u_n}$ converge\linebreak Si $\serie{u_n}$ ou $\serie{\left|u_n\right|}$ diverge alors $\serie{v_n}$ diverge}{11/19}
+\slideq{Sommabilité}{12/19}
+\slider{$\l a_i\r$ est sommable si $\sum{i\in I}{}{\left|a_i\right|}<+\infty$}{12/19}
+\slideq{Formule du binôme négatif}{13/19}
+\slider{$\sum{n=0}{+\infty}{\frac{n!}{\l n-p\r!}z^{n-p}}=\frac{p!}{\l1-z\r^{p+1}}$\linebreak$\frac{1}{\l1-z\r^{p+1}}=\sum{n=0}{+\infty}{\binom{n+p}{p}z^n}$}{13/19}
+\slideq{Critère d'Abel}{14/19}
+\slider{Si $\l a_n\r$ est une suite réelle positive décroissante de limite nulle, et la somme partielle de $\serie{b_n}$ est bornée, alors $\serie{a_nb_n}$ converge\linebreak Les suites $\e^{\i n\alpha}$, $\cos{n\alpha}$ et $\sin{n\alpha}$ vérifient les conditions pour $\l b_n\r$ lorsque $\alpha\not\equiv0\ \left[2\pi\right]$}{14/19}
+\slideq{Encadrement des sommes par les intégrales\linebreak$f$ est continue et décroissante sur $\left[n_0,+\infty\right[$ avec $n_0\in\mathbb Z$}{15/19}
+\slider{$\int[t][n_0+1][n+1]{f\l t\r}$\linebreak${}\leq\sum{k=n_0+1}{n}{f\l k\r}\leq{}$\linebreak$\int[t][n_0][n]{f\l t\r}$}{15/19}
+\slideq{$\serie{u_n}$ diverge grossièrement}{16/19}
+\slider{$\l u_n\r$ ne tend pas vers $0$}{16/19}
+\slideq{Série de Riemann}{17/19}
+\slider{$\sum{n=1}{+\infty}{\frac1{n^\alpha}}$\linebreak Une série de Riemann converge si et seulement si $\alpha>1$}{17/19}
+\slideq{Règle de Riemann}{18/19}
+\slider{S'il existe $\alpha>1$ tel que $\l n^\alpha u_n\r$ est bornée, alors $\serie{u_n}$ converge\linebreak Si $\l nu_n\r$ est minorée par $m>0$ à partir de $n\in\mathbb N$, alors $\serie{u_n}$ diverge}{18/19}
+\slideq{Série alternée}{19/19}
+\slider{$\serie{u_n}$ est alternée s'il existe une suite $\l a_n\r$ positive décroissante de limite nulle telle que $u_n=\l-1\r^na_n$}{19/19}
 \end{document}
