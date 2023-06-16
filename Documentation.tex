@@ -187,7 +187,8 @@ Pour pouvoir visionner les flashcards exportées en svg, il faut disposer d'un s
 Il faut alors convertir l'url du dossier en base 64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}}, avec la fonction \texttt{btoa} de JavaScript ou avec la  fonction Python \texttt{base64.b64encode}). Dans l'exemple, en exécutant le code Python suivant
 \begin{Verbatim}[vspace=0pt]
 import base64
-print(base64.b64encode("https://example.fr/dossier".encode()).decode())
+url = "https://example.fr/dossier"
+print(base64.b64encode(url.encode()).decode())
 \end{Verbatim}
 
 on obtient \Verb?aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI=?.
