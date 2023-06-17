@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang='fr'>
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Révisions">
-    <link rel="icon" href="https://rfoxinter.github.io/bac/English/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset='utf-8'>
+    <meta name='description' content='Révisions'>
+    <link rel='icon' href='https://rfoxinter.github.io/bac/English/favicon.ico' />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Révisions</title>
-    <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%A9%C3%A8%C3%A0%C3%B9%C3%89%E2%80%98%E2%80%990123456789.">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&display=swap">
-    <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/bac/English/main.css">
-    <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/bac/English/normalize.css">
-    <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/bac/English/style.css">
+    <meta name='theme-color' content='#157878'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%A9%C3%A8%C3%A0%C3%B9%C3%89%E2%80%98%E2%80%990123456789.'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&display=swap'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/bac/English/main.css'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/bac/English/normalize.css'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/bac/English/style.css'>
     <style>
         svg {
             max-width: 100%;
@@ -29,7 +29,7 @@
             min-height: 40px;
         }
     </style>
-    <script type="text/javascript" defer>
+    <script type='text/javascript' defer>
         function shuffleArray(array) {
             for (let i = 0; i < array.length-1; ++i) {
                 const j = Math.floor(Math.random() * (array.length));
@@ -43,8 +43,8 @@
             }
             return cparr;
         }
-        var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = []; var qr = [0, 1];
-        var file = new URLSearchParams(document.location.search.substring(1)).get("file");
+        var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = []; var qr = [0, 1]; var lst; var fl;
+        var file = new URLSearchParams(document.location.search.substring(1)).get('file');
         async function loadModule(file) {
             var response;
             try {
@@ -52,12 +52,12 @@
             } catch(error) {return 'Error'}
             if (response.status == 200) {
                 const jsCode = await response.text();
-                const lst = jsCode.split("\n");
-                title = lst[0].substring(lst[0].indexOf("\"") + 1, lst[0].lastIndexOf("\""));
+                lst = jsCode.split('\n');
+                title = lst[0].substring(lst[0].indexOf('\"') + 1, lst[0].lastIndexOf('\"'));
                 sh_quest = parseInt(lst[1]);
                 sh_qr = parseInt(lst[2]);
-                n = lst[3].replace("]", "").replace("[", "").split(", ").map(x => parseInt(x));
-                fst = lst[4].replace("]", "").replace("[", "").split(", ").map(x => parseInt(x));
+                n = lst[3].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
+                fst = lst[4].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
 
                 q = true;
                 viewed = false;
@@ -67,6 +67,8 @@
                 ques = copyArray(n);
 
                 if (sh_quest) {shuffleArray(ques);}
+
+                document.getElementById('flip').disabled = false;
 
                 return 200;
             } else {return response.status;}
@@ -81,11 +83,12 @@
                 arr = new Array(2*n.length);
                 await get_code(file, ques[0], 'Q');
                 arr[2*ques[0]-2] = svgcode;
-                if (document.readyState !== "loading") {
+                if (document.readyState !== 'loading') {
+                    document.getElementById('up-button').style.display = 'none';
                     document.getElementById('title').innerHTML = title;
                     document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
                 } else {
-                    document.addEventListener("DOMContentLoaded", onReady);
+                    document.addEventListener('DOMContentLoaded', onReady);
                 }
                 await get_code(file, ques[0], 'R');
                 arr[2*ques[0]-1] = svgcode;
@@ -95,24 +98,27 @@
                     await get_code(file, ques[i], 'R');
                     arr[2*ques[i]-1] = svgcode;
                 }
+                document.getElementById('down-button').style.display = 'block';
             } else if (res == 'Error') {
-                if (document.readyState !== "loading") {
+                if (document.readyState !== 'loading') {
+                    document.getElementById('up-button').style.display = 'none';
                     document.getElementById('title').innerHTML = 'Erreur';
                     document.getElementById('flashcard').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
                 } else {
-                    document.addEventListener("DOMContentLoaded", onReady);
+                    document.addEventListener('DOMContentLoaded', onReady);
                 }
             }
             else {
-                if (document.readyState !== "loading") {
+                if (document.readyState !== 'loading') {
+                    document.getElementById('up-button').style.display = 'none';
                     document.getElementById('title').innerHTML = 'Erreur ' + res;
                     document.getElementById('flashcard').innerHTML = 'Fichier introuvable';
                 } else {
-                    document.addEventListener("DOMContentLoaded", onReady);
+                    document.addEventListener('DOMContentLoaded', onReady);
                 }
             }
         }
-        if (file != null) {
+        if (file != null && file != '') {
             fill_svg(atob(file));
         }
         function reverse_card() {
@@ -138,16 +144,16 @@
             if (nth + 1 == ques.length) {
                 if (!corr) {wrong.push(ques[nth]);}
                 nth += 1;
-                document.getElementById('flashcard').innerHTML = "Terminé";
+                document.getElementById('flashcard').innerHTML = 'Terminé';
                 document.getElementById('flip').disabled = true;
                 if (wrong.length > 0) {document.getElementById('incor').disabled = false;} else {document.getElementById('incor').disabled = true;}
                 document.getElementById('corr').disabled = false;
-                document.getElementById('incor').innerText = "Revoir";
-                document.getElementById('corr').innerText = "Recommencer";
+                document.getElementById('incor').innerText = 'Revoir';
+                document.getElementById('corr').innerText = 'Recommencer';
             } else if (nth + 1 > ques.length) {
                 document.getElementById('flip').disabled = false;
-                document.getElementById('incor').innerText = "Réponse incorrecte";
-                document.getElementById('corr').innerText = "Réponse correcte";
+                document.getElementById('incor').innerText = 'Réponse incorrecte';
+                document.getElementById('corr').innerText = 'Réponse correcte';
                 if (!corr) {
                     ques = copyArray(wrong);
                     shuffleArray(ques);
@@ -179,28 +185,105 @@
                 reverse_card();
             }
         }
+        function toTitle(str) {
+            return str.replace(
+                /\w\S*/g,
+                function(txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                }
+            );
+        }
+        function repall(value, index, array) {
+            return value.replaceAll('\n', '');
+        }
+        function download() {
+            var a = document.createElement('a');
+            var text = lst.join('\n') + '\n' + arr.map(repall).join(';;;;;') + '\n' + btoa(title);
+            a.href = window.URL.createObjectURL(new Blob([text], {type: 'text/plain'}));
+            a.download = toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '')).replaceAll(' ', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')  + '.txt';
+            a.click();
+
+        }
     </script>
+    <style>
+        ptr {
+            cursor: pointer;
+        }
+        #down-button {
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 20px;
+        }
+        #up-button {
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 20px;
+        }
+    </style>
 </head>
-<body>
-    <div id="overlay"></div>
-    <header class="page-header">
-        <h1 id="title"></h1>       
+<body onload="document.getElementById('incor').disabled = true;document.getElementById('corr').disabled = true;document.getElementById('flip').disabled = true;">
+    <div id='overlay'></div>
+    <header class='page-header'>
+        <h1 id='title'></h1>
+        <input type='file' id='open' accept='.txt' hidden>
+        <span class='menu-icon material-symbols-rounded'><ptr id='up-button' style='display: block;' onclick='document.getElementById("open").click();'>upload</ptr></span>
+        <span class='menu-icon material-symbols-rounded'><ptr id='down-button' style='display: none;' onclick='download()'>download</ptr></span>
     </header>
-    <main class="main-content">
-        <p style="text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem;">
-            <span style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                <span id="flashcard" style="scale: 2.5; max-width: 40%;"></span>
+    <main class='main-content'>
+        <p style='text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem;'>
+            <span style='display: flex; align-items: center; justify-content: center; height: 100%;'>
+                <span id='flashcard' style='scale: 2.5; max-width: 40%;'></span>
             </span>
         </p>
-        <p style="text-align: center;">
-            <button id="flip" onclick="reverse_card()">Voir la réponse</button>
+        <p style='text-align: center;'>
+            <button id='flip' onclick='reverse_card()' disabled>Voir la réponse</button>
         </p>
         <p>
-            <button id="incor" onclick="new_card(false)" style="position: relative; left: 15vw; color: #EC7063;" disabled>Réponse incorrecte</button><button id="corr" onclick="new_card(true)" style="position: relative; left: calc(100% - 65vw); color: #159957;" disabled>Réponse correcte</button>
+            <button id='incor' onclick='new_card(false)' style='position: relative; left: 15vw; color: #EC7063;' disabled>Réponse incorrecte</button><button id='corr' onclick='new_card(true)' style='position: relative; left: calc(100% - 65vw); color: #159957;' disabled>Réponse correcte</button>
         </p>
     </main>
-    <footer class="site-footer">
-        <a href="./MP2I/"><img src="https://rfoxinter.github.io/bac/English/home.svg" class="home" alt="home"></a>
+    <footer class='site-footer'>
+        <a href='./MP2I/'><img src='https://rfoxinter.github.io/bac/English/home.svg' class='home' alt='home'></a>
     </footer>
+    <script>
+        document.getElementById('open').addEventListener('change', function() {
+            fl = new FileReader();
+            fl.onload = function(){
+                try {
+                    fl = fl.result.split('\n');
+                    title = fl[0].substring(fl[0].indexOf('\"') + 1, fl[0].lastIndexOf('\"'));
+                    sh_quest = parseInt(fl[1]);
+                    sh_qr = parseInt(fl[2]);
+                    n = fl[3].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
+                    fst = fl[4].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
+                    arr = fl[5].split(';;;;;');
+                    
+                    if (fl[6] != btoa(title)) {
+                        throw new Error('Fichier corrompu')
+                    }
+                    document.getElementById('up-button').style.display = 'none';
+
+                    q = true;
+                    viewed = false;
+                    nth = 0;
+
+                    document.title = title.replace('&ndash;', '-').replace('<i>', '').replace('</i>', '');
+                    ques = copyArray(n);
+
+                    if (sh_quest) {shuffleArray(ques);}
+
+                    document.getElementById('flip').disabled = false;
+                    document.getElementById('title').innerHTML = title;
+                    document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
+                } catch(error) {
+                    document.getElementById('title').innerHTML = 'Erreur';
+                    document.getElementById('flashcard').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
+                }
+            }
+            fl.readAsText(this.files[0]);
+        })
+    </script>
 </body>
 </html>
