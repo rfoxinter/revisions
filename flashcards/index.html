@@ -204,6 +204,16 @@
             a.click();
 
         }
+        function _close() {
+            document.title = 'Révisions';
+            document.getElementById('title').innerHTML = '';
+            document.getElementById('flashcard').innerHTML = '';
+            document.getElementById('incor').disabled = true;
+            document.getElementById('corr').disabled = true;
+            document.getElementById('flip').disabled = true;
+            document.getElementById('up-button').innerHTML = 'upload';
+            document.getElementById('up-button').setAttribute('onclick', 'document.getElementById("open").click()');
+        }
     </script>
     <style>
         ptr {
@@ -228,7 +238,7 @@
     <header class='page-header'>
         <h1 id='title'></h1>
         <input type='file' id='open' accept='.txt' hidden>
-        <span class='menu-icon material-symbols-rounded'><ptr id='up-button' style='display: block;' onclick='document.getElementById("open").click();'>upload</ptr></span>
+        <span class='menu-icon material-symbols-rounded'><ptr id='up-button' style='display: block;' onclick='document.getElementById("open").click()'>upload</ptr></span>
         <span class='menu-icon material-symbols-rounded'><ptr id='down-button' style='display: none;' onclick='download()'>download</ptr></span>
     </header>
     <main class='main-content'>
@@ -263,7 +273,8 @@
                     if (fl[6] != btoa(title)) {
                         throw new Error('Fichier corrompu')
                     }
-                    document.getElementById('up-button').style.display = 'none';
+                    document.getElementById('up-button').innerHTML = 'close';
+                    document.getElementById('up-button').setAttribute('onclick', '_close()');
 
                     q = true;
                     viewed = false;
@@ -279,7 +290,7 @@
                     document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
                 } catch(error) {
                     document.getElementById('title').innerHTML = 'Erreur';
-                    document.getElementById('flashcard').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
+                    document.getElementById('flashcard').innerHTML = 'Le fichier n&CloseCurlyQuote;est pas compatible';
                 }
             }
             fl.readAsText(this.files[0]);
