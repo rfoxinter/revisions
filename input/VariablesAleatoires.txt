@@ -41,3 +41,17 @@ Formule de polarisation;;$\cov XY=\frac12\l\var{X+Y}-\var X-\var Y\r$
 $\var{X+Y}$;;$\var X+\var Y+2\cov XY$
 $\var{X_1+\cdots+X_n}$;;$\sum{k=1}{n}{\var X_i}+2\sum{1\leqslant i<j\leqslant n}{}{\cov{X_i}{X_j}}$\linebreak${}=\tmatrix[][minimum width=0pt,minimum height=20pt,]({1\&\mdots\&1\\})\underline{\mathbb V}\l X_1,\cdots,X_n\r\tmatrix[][minimum width=0pt,minimum height=20pt,]({1\\\oldvdots\\1\\})$
 Matrice des variances-covariances;;$\underline{\mathbb V}\l X_1,\cdots,X_n\r=\l\cov{X_i}{X_j}\r_{\l i,j\r\in\llb1,n\rrb^2}$
+Loi quasi-certaine;;$X=c$ presque sûrement\linebreak$\p{X=c}=1$, $\p{X\neq c}=0$\linebreak$\esp X=c$\linebreak$\var X=0$
+Loi uniforme;;$X\l\Omega\r=\llb1,n\rrb$\linebreak$X\sim\unif{n}$\linebreak$\forall k\in\llb1,n\rrb,\;\p{X=k}=\frac1n$\linebreak$\esp X=\frac{n+1}{2}$\linebreak$\var X=\frac{n^2-1}{12}$
+Loi de Bernoulli;;$X\l\Omega\r=\left\{0,1\right\}$\linebreak$X\sim\bin{p}$\linebreak$\p{X=1}=p$, $\p{X=0}=1-p$\linebreak$\esp X=p$\linebreak$\var X=p\l1-p\r$
+Loi binomiale;;$X\l\Omega\r=\llb0,n\rrb$\linebreak$X\sim\bin[n]p$\linebreak$\forall k\in\llb0,n\rrb,\;\p{X=k}=\binom{n}{k}p^k\l1-p\r^{n-k}$\linebreak$\esp X=np$\linebreak$\var X=np\l1-p\r$
+Loi géométrique;;$X\l\Omega\r=\mathbb N^*$\linebreak$X\sim\geom{n}$\linebreak$\forall k\in\mathbb N^*,\;\p{X=k}=p\l1-p\r^{k-1}$\linebreak$\esp X=\frac1p$\linebreak$\var X=\frac{q}{p^2}$
+Loi de Poisson;;À faire
+Loi de Pascal;;À faire
+Loi binomiale négative;;À faire
+Loi hypergéométrique;;À faire
+Convergence en probabilités;;À faire
+Inégalités de Markov;;À faire
+Inégalité de Bienaymé-Tchebychev;;À 
+Loi faible des grands nombres;;À faire
+Théorème d'or de Bernoulli;;À faire
