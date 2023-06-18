@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Révisions</title>
     <meta name='theme-color' content='#157878'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%A9%C3%A8%C3%A0%C3%B9%C3%89%E2%80%98%E2%80%990123456789.'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&display=swap'>
     <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/bac/English/main.css'>
     <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/bac/English/normalize.css'>
@@ -198,7 +198,7 @@
         }
         function download() {
             var a = document.createElement('a');
-            var text = lst.join('\n') + '\n' + arr.map(repall).join(';;;;;') + '\n' + btoa(title);
+            var text = lst.join('\n') + '\n' + arr.map(repall).map(x => btoa(unescape(encodeURIComponent(x)))).join(';') + '\n' + btoa(title);
             a.href = window.URL.createObjectURL(new Blob([text], {type: 'text/plain'}));
             a.download = toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '')).replaceAll(' ', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')  + '.txt';
             a.click();
@@ -268,7 +268,7 @@
                     sh_qr = parseInt(fl[2]);
                     n = fl[3].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
                     fst = fl[4].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
-                    arr = fl[5].split(';;;;;');
+                    arr = fl[5].split(';').map(x => decodeURIComponent(escape(atob(x))));
                     
                     if (fl[6] != btoa(title)) {
                         throw new Error('Fichier corrompu')
