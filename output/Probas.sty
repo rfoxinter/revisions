@@ -17,10 +17,10 @@
 \newcommand{\unif}[1]{\mathcal U\l#1\r}
 \newcommand{\bin}[2][]{
     \ifx&#1&
-        \def\argI{1}
+        \def\argI{}
     \else
-        \def\argI{#1}
-    \fi\mathcal B\l\argI,#2\r
+        \def\argI{#1,}
+    \fi\mathcal B\l\argI#2\r
 }
 \newcommand{\geom}[1]{\mathcal G\l#1\r}
 \newcommand{\pasc}[2]{\mathcal P\l#1,#2\r}
