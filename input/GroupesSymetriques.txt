@@ -1,0 +1,12 @@
+Algèbre 2 -- Groupes symétriques
+Shuffle questions : True
+Q/R & R/Q : False
+\let\eps\varepsilon\let\le\leqslant\newcommand\sig[1]{\sigma\l#1\r}\DeclareMathOperator{\inv}{Inv}\usepackage{structures}\usepackage{bigoperators}\usepackage{matrices}\newcommand\permut[1]{\tmatrix[][minimum height = 2ex, minimum width = 2ex, column sep = 1ex,]({#1})}
+$\eps\l\sigma\r$;;$\frac{\prod{1\le i<j\le n}{}{\sig j-\sig i}}{\prod{1\le i<j\le n}{}{j-i}}$
+Inversion;;$\left\{\l i,j\r,\;i<j\wedge\sig i>\sig j\right\}$
+$\eps\l\sigma\r$\linebreak Expression avec les inversions;;$\l-1\r^{\left|\inv\l\sigma\r\right|}$
+$\mathfrak S_n$;;Permutations de $\llb1,n\rrb$
+$\mathfrak A_n$;;$\ker{\eps}$
+$\permut{i_1\&\mdots\&i_k\\}$;;$\permut{i_1\&i_k\\}\circ\cdots\circ\permut{i_1\&i_2\\}$
+$\eps\l C\r$;;$\l-1\r^{\left|C\right|-1}$
+$\eps\l\sigma\r$\linebreak Expression avec les supports des cycles;;$\l-1\r^{n-c(\sigma)}$\linebreak$c\l\sigma\r$ correspond au nombre de parts dans le support cyclique de $\sigma$

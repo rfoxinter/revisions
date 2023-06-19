@@ -1,0 +1,29 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\let\eps\varepsilon\let\le\leqslant\newcommand\sig[1]{\sigma\l#1\r}\DeclareMathOperator{\inv}{Inv}\usepackage{structures}\usepackage{bigoperators}\usepackage{matrices}\newcommand\permut[1]{\tmatrix[][minimum height = 2ex, minimum width = 2ex, column sep = 1ex,]({#1})}
+\hypersetup{pdftitle=Algèbre 2 -- Groupes symétriques}
+\title{Algèbre 2\\\emph{Groupes symétriques}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\eps\l\sigma\r$\linebreak Expression avec les supports des cycles}{1/8}
+\slider{$\l-1\r^{n-c(\sigma)}$\linebreak$c\l\sigma\r$ correspond au nombre de parts dans le support cyclique de $\sigma$}{1/8}
+\slideq{$\mathfrak A_n$}{2/8}
+\slider{$\ker{\eps}$}{2/8}
+\slideq{Inversion}{3/8}
+\slider{$\left\{\l i,j\r,\;i<j\wedge\sig i>\sig j\right\}$}{3/8}
+\slideq{$\eps\l\sigma\r$\linebreak Expression avec les inversions}{4/8}
+\slider{$\l-1\r^{\left|\inv\l\sigma\r\right|}$}{4/8}
+\slideq{$\mathfrak S_n$}{5/8}
+\slider{Permutations de $\llb1,n\rrb$}{5/8}
+\slideq{$\permut{i_1\&\mdots\&i_k\\}$}{6/8}
+\slider{$\permut{i_1\&i_k\\}\circ\cdots\circ\permut{i_1\&i_2\\}$}{6/8}
+\slideq{$\eps\l\sigma\r$}{7/8}
+\slider{$\frac{\prod{1\le i<j\le n}{}{\sig j-\sig i}}{\prod{1\le i<j\le n}{}{j-i}}$}{7/8}
+\slideq{$\eps\l C\r$}{8/8}
+\slider{$\l-1\r^{\left|C\right|-1}$}{8/8}
+\end{document}
