@@ -7,7 +7,7 @@
 \hypersetup{pdftitle=Documentation}
 \newcommand{\tikzlg}{Ti\textit{k}Z}
 \let\oldoplus\oplus
-\usepackage{output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables}
+\usepackage{output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
 \makeatother
@@ -135,14 +135,14 @@ Il est possible de redéfinir le $l$ à sa version d'origine ($\oldl$) avec:
 
 \vspace{0.5cm}
 
-Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\sup$), il est possible de faire :
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est définie dans \hyperlink{section.16}{\Verb?Usuelles.sty?}} :
 \begin{Verbatim}[vspace=0pt]
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
 \end{Verbatim}
 \Verb?\l? et \Verb?\r? sont définis dans \hyperlink{section.2}{Preambule.sty et HTMLPreambule.sty}.
 
-La commande \Verb?$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$? donne donc\linebreak$\sup\l\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}\r$.
+La commande \Verb?$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$? donne donc\linebreak$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$.
 \tableofcontents
 \null\newpage
 \pagenumbering{arabic}
@@ -556,4 +556,38 @@ est produite avec le code suivant
 \mcmd{\oldath}
 \mcmd{\ath{x}}
 \mcmd{\ath[n]{x}}
+\section{Usuelles.sty}
+\mhd
+\mcmd[\footnotemark]{\oldmin}
+\footnotetext{Correspond à la commande usuelle \Verb?\min?}
+\mcmd{\min{\llb0,n\rrb}}
+\mcmd{\min[\mathbb{N}^*]{\llb0,n\rrb}}
+\mcmd[\footnotemark]{\oldmax}
+\footnotetext{Correspond à la commande usuelle \Verb?\max?}
+\mcmd{\max{\llb0,n\rrb}}
+\mcmd{\max[\mathbb{Z}_-]{\llb0,n\rrb}}
+\mcmd[\footnotemark]{\oldlim}
+\footnotetext{Correspond à la commande usuelle \Verb?\lim?}
+\mcmd{\lim{u_n}}
+\mcmd{\lim[x\to+\infty]{f(x)}}
+\mcmd{\limi{u_n}}
+\mcmd{\limi[x\to+\infty]{f(x)}}
+\mcmd{\lims{u_n}}
+\mcmd{\lims[x\to+\infty]{f(x)}}
+\mcmd[\footnotemark]{\oldexp}
+\footnotetext{Correspond à la commande usuelle \Verb?\exp?}
+\mcmd{\exp{x}}
+\mcmd{\exp[n]{x}}
+\mcmd[\footnotemark]{\oldln}
+\footnotetext{Correspond à la commande usuelle \Verb?\ln?}
+\mcmd{\ln{x}}
+\mcmd{\ln[n]{x}}
+\mcmd[\footnotemark]{\oldinf}
+\footnotetext{Correspond à la commande usuelle \Verb?\inf?}
+\mcmd{\inf{\varnothing}}
+\mcmd{\inf[\bar{\mathbb{R}}]{\{u_n\}}}
+\mcmd[\footnotemark]{\oldsup}
+\footnotetext{Correspond à la commande usuelle \Verb?\sup?}
+\mcmd{\sup{\varnothing}}
+\mcmd{\sup[\bar{\mathbb{R}}]{\{u_n\}}}
 \end{document}
