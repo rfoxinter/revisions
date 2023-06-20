@@ -5,7 +5,7 @@
 \newcommand{\ts}[2]{\mathcal{T}_{#1}^+\l#2\r}
 \newcommand{\ti}[2]{\mathcal{T}_{#1}^-\l#2\r}
 \let\olddet\det
-\renewcommand{\det}[1]{\olddet\l#1\r}
+\renewcommand{\det}[2][]{\olddet_{#1}\l#2\r}
 \DeclareMathOperator{\oldgl}{GL}
 \newcommand{\gl}[2]{\oldgl_{#1}\l#2\r}
 \usepackage{tikz}
