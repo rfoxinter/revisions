@@ -242,8 +242,9 @@ Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatique
 \mcmd{\oldtr}
 \mcmd{\tr{u}}
 \mcmd{\oldmat}
-\mcmd{\mat{\mathcal{B}}{}{u}}
-\mcmd{\mat{\mathcal{B}}{\mathcal{C}}{u}}
+\mcmd[\footnotemark]{\almat{u}{\mathcal{B}}{}}
+\footnotetext{Ne pas confondre cette commande avec \Verb?\mat? de \hyperlink{section.10}{\Verb?Matrices.sty?}}
+\mcmd{\almat{u}{\mathcal{B}}{\mathcal{C}}}
 \mmcmd{\lc}{$\lc\right.$}
 \mmcmd{\rc}{$\left.\rc$}
 \section{Analyse.sty}
@@ -359,6 +360,7 @@ Pour l'utiliser, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12
 \mcmd[\footnotemark]{\olddet}
 \footnotetext{Correspond à la commande usuelle \Verb?\det?}
 \mcmd{\det{M}}
+\mcmd{\det[\mathcal{B}]{\mathcal{B}'}}
 \mmcmd[\footnotemark]{\gl{n}{\mathbb{K}}}{$\matgl{n}{\mathbb{K}}$}
 \footnotetext{Si \Verb?AL.sty? est chargé, cette commande est remplacée et il faut utiliser \Verb?\matgl{n}{\mathbb{K}}? pour obtenir ce résultat}
 \mmcmd{\mdots}{$\oldmdots$}
@@ -389,9 +391,9 @@ Les commandes sont:
 
 \mhd
 \mmcmd{\mtxvline{params}{n}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
-\mmcmd{\mtxhline{params}{n}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
 \pagebreak
 \hrule
+\mmcmd{\mtxhline{params}{n}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
 \mmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou top/bottom) avec les paramètres \tikzlg{} \texttt{params}}
 \mmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou left/right) avec les paramètres \tikzlg{} \texttt{params}}
 \mmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres \tikzlg{} \texttt{params}}
