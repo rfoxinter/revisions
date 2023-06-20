@@ -200,7 +200,7 @@
             var a = document.createElement('a');
             var text = lst.join('\n') + '\n' + arr.map(repall).map(x => btoa(unescape(encodeURIComponent(x)))).join(';') + '\n' + btoa(title);
             a.href = window.URL.createObjectURL(new Blob([text], {type: 'text/plain'}));
-            a.download = toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '')).replaceAll(' ', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')  + '.txt';
+            a.download = toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')).replaceAll(' ', '') + '.txt';
             a.click();
 
         }
