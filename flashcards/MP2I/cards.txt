@@ -21,10 +21,12 @@ Algebre1/StructuresAlgebriques
 2023-06-06 13:34:32
 Algebre2/AlgebreLineaire
 2023-06-10 21:44:51
+Algebre2/Determinants
+2023-06-20 13:49:03
 Algebre2/DimensionFinie
 2023-06-11 11:00:45
 Algebre2/GroupesSymetriques
-2023-06-19 20:57:04
+2023-06-19 21:35:11
 Analyse/CalculAsymptotique
 2023-06-11 14:33:02
 Analyse/CalculIntegral
