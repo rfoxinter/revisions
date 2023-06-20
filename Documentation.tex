@@ -5,9 +5,9 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{hyperref}
 \hypersetup{pdftitle=Documentation}
-\newcommand{\tikzlg}{Ti\textit{k}Z}
+\newcommand{\tikzlg}{\href{https://ctan.org/pkg/tikz}{\color{black}Ti\textit{k}Z}}
 \let\oldoplus\oplus
-\usepackage{output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
+\usepackage{output/sffont,output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
 \makeatother
@@ -16,9 +16,10 @@
 \setlength{\parindent}{0pt}
 \hypersetup{hidelinks,colorlinks=true,linkcolor=black,linktoc=all,urlcolor=blue}
 \setcounter{secnumdepth}{5}
-\setcounter{tocdepth}{5}
+\setcounter{tocdepth}{1}
 \let\oldsection\section
-\renewcommand{\section}{\clearpage\oldsection}
+\newcommand{\hsection}[1]{\clearpage\oldsection[#1]{\href{https://rfoxinter.github.io/revisions/output/#1}{\color{black}#1}}}
+\newcommand{\ssection}[2][]{\clearpage\oldsection[#1]{#2}}
 \title{Documentation}
 \author{}
 \date{}
@@ -90,7 +91,7 @@
 \begin{document}
 \pagenumbering{gobble}
 \maketitle
-Le package \texttt{Preambule.sty}\footnote{Pour utiliser avec \Verb?Beamer?} ou \texttt{HTMLPreambule.sty}\footnote{Pour les documents autres que \Verb?Beamer?} doit être chargé pour pouvoir utiliser les autres qui sont donnés ci-dessous.
+Le package \texttt{Preambule.sty}\footnote{Pour utiliser avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}} ou \texttt{HTMLPreambule.sty}\footnote{Pour les documents autres que \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}} doit être chargé pour pouvoir utiliser les autres qui sont donnés ci-dessous.
 
 Les fichiers \Verb?.sty? doivent être placés dans le même répertoire que le fichier \Verb?.tex? qui est utilisé.
 
@@ -113,7 +114,7 @@ En utilisant \texttt{Preambule.sty} ou \texttt{HTMLPreambule.sty}, les packages 
 \vspace{0.5cm}
 Il est nécessaire que \texttt{cm-super} soit installé (disponible sur \href{https://ctan.org/pkg/cm-super}{CTAN}) pour pouvoir utiliser \texttt{Preambule.sty}. Pour ne pas avoir à installer \texttt{cm-super}, il est possible de commenter les lignes \Verb?\usepackage{sffont}? et \Verb?\renewcommand{\sfdefault}{cmssp}? du fichier \texttt{Preambule.sty} en mettant \Verb?%? au début de chacune de ces lignes (numéro 10 et 11).
 
-Lors de l'utilisation de \texttt{beamer} (avec une police sans-sérif), il est possible d'utiliser les commandes avec les polices sans-serif, sauf pour les lettres grecques ($\Omega$, $\oldphi$, $\phi$, \dots), la redéfinition du $l$ en mathématiques, les alphabets \Verb?\mathcal? et \Verb?\mathbb? ainsi que les symboles.
+Lors de l'utilisation de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} (avec une police sans-sérif), il est possible d'utiliser les commandes avec les polices sans-serif, sauf pour les lettres grecques ($\Omega$, $\oldphi$, $\phi$, \dots), la redéfinition du $l$ en mathématiques, les alphabets \Verb?\mathcal? et \Verb?\mathbb? ainsi que les symboles.
 
 Il est possibles de changer les polices de caractères/symboles en important des packages après \Verb?\usepackage{preambule}?. Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
 
@@ -135,7 +136,7 @@ Il est possible de redéfinir le $l$ à sa version d'origine ($\oldl$) avec:
 
 \vspace{0.5cm}
 
-Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est définie dans \hyperlink{section.16}{\Verb?Usuelles.sty?}} :
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.17}{\Verb?Usuelles.sty?}} :
 \begin{Verbatim}[vspace=0pt]
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
@@ -143,10 +144,15 @@ Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\old
 \Verb?\l? et \Verb?\r? sont définis dans \hyperlink{section.2}{Preambule.sty et HTMLPreambule.sty}.
 
 La commande \Verb?$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$? donne donc\linebreak$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$.
+
+\vspace{0.5cm}
+
+L'ensembles des titres des sections (et sous-sections si le fichier n'est pas déjà dans une section) sont des liens qui pointent vers les fichiers en ligne pour un téléchargement direct.
+\newpage
 \tableofcontents
 \null\newpage
 \pagenumbering{arabic}
-\section{Flashcards.py et Htmlcards.py}
+\ssection[Flashcards.py et Htmlcards.py]{\href{https://rfoxinter.github.io/revisions/Flashcards.py}{\color{black}Flashcards.py} et \href{https://rfoxinter.github.io/revisions/Htmlcards.py}{\color{black}Htmlcards.py}}
 Les fichiers \texttt{Flashcards.py} et \texttt{Htmlcards.py} permettent d'exporter facilement des flashcards en \texttt{.pdf} et \texttt{.svg} (pour affichage dans le navigateur).
 
 Pour pouvoir créer des fiches de révision, il faut mettre un fichier \texttt{.txt} (décrit plus bas) dans un dossier \texttt{input} et mettre les fichiers \texttt{.sty} nécessaires dans un dossier \texttt{output}.
@@ -173,7 +179,7 @@ La ligne 2 indique si on peut ou non mettre un ordre aléatoire pour les questio
 
 La ligne 3 indique si on peut échanger l'ordre des questions et des réponses pour les fiches. Avec cette option à \texttt{True}, il est possible de forcer une question à être avant la réponse en mettant \Verb?!!fst? devant la/les ligne(s) concernée(s).
 
-Les packages et commandes supplémentaires doivent être placées sur une seule ligne (voir \href{https://www.overleaf.com/learn/latex/Commands}{CTAN}).
+Les packages et commandes supplémentaires (voir \href{https://www.overleaf.com/learn/latex/Commands}{CTAN}) doivent être placées sur une seule ligne.
 
 Il faut s'assurer qu'il n'y ait pas de ligne vide à la fin du fichier.
 
@@ -198,7 +204,7 @@ Il faut alors aller sur le site \href{https://rfoxinter.github.io/revisions/flas
 Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/revisions/flashcards/}
 
 \texttt{~~~~?file=aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI=}
-\section{Preambule.sty et HTMLPreambule.sty}
+\ssection[Preambule.sty et HTMLPreambule.sty]{\href{https://rfoxinter.github.io/revisions/output/Preambule.sty}{\color{black}Preambule.sty} et \href{https://rfoxinter.github.io/revisions/output/HTMLPreambule.sty}{\color{black}HTMLPreambule.sty}}
 \mhd
 \mmcmd[\footnotemark]{\l}{$\l\right.$}
 \footnotetext{Correspond à la commande usuelle \Verb?\left(?}
@@ -219,7 +225,7 @@ Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/
 \mcmd{\vec{AB}}
 \mcmd[\footnotemark]{\overrightarrow{AB}}
 \footnotetext{Le résultat est le même qu'avec \Verb?\vec?}
-\section{AL.sty}
+\hsection{AL.sty}
 Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatiquement avec \Verb?AL.sty?.
 
 \vspace{0.5cm}
@@ -230,9 +236,9 @@ Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatique
 \mcmd{\al{E}{}}
 \mcmd{\al{E}{F}}
 \mcmd[\footnotemark]{\oplus}
-\footnotetext{Le \Verb?\oplus? utilisé est celui de \Verb?stmaryrd?\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \Verb?\let\oldoplus\oplus? avant \Verb?\usepackage{al}? puis de faire \Verb?\let\oplus\oldoplus? après importation\\Comparaison \LaTeX~- \Verb?stmaryrd? avec le plus normal $\oldoplus\oplus+$}
+\footnotetext{Le \Verb?\oplus? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\Verb?stmaryrd?}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \Verb?\let\oldoplus\oplus? avant \Verb?\usepackage{al}? puis de faire \Verb?\let\oplus\oldoplus? après importation\\Comparaison \LaTeX~- \href{https://ctan.org/pkg/stmaryrd}{\color{black}\Verb?stmaryrd?} avec le plus normal $\oldoplus\oplus+$}
 \mcmd[\footnotemark]{\matgl{n}{\mathbb{K}}}
-\footnotetext{Le \Verb?\matgl? de \Verb?AL.sty? correspond à la commande \Verb?\gl? de \Verb?Matrices.sty? qui a été renommé}
+\footnotetext{Le \Verb?\matgl? de \Verb?AL.sty? correspond à la commande \Verb?\gl? de \hyperlink{section.10}{\Verb?Matrices.sty?} qui a été renommé}
 \mcmd{\gl{E}}
 \mcmd[\footnotemark]{\olddim}
 \footnotetext{Correspond à la commande usuelle \Verb?\dim?}
@@ -247,7 +253,7 @@ Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatique
 \mcmd{\almat{u}{\mathcal{B}}{\mathcal{C}}}
 \mmcmd{\lc}{$\lc\right.$}
 \mmcmd{\rc}{$\left.\rc$}
-\section{Analyse.sty}
+\hsection{Analyse.sty}
 Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automatiquement avec \Verb?Analyse.sty?.
 
 \vspace{0.5cm}
@@ -272,7 +278,7 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \mcmd{\eval[{[a,b]}]{f(t)}}
 \mcmd{\eval[a][b]{f(t)}}
 \mcmd{\serie{a_n}}
-\section{Arithmetique.sty}
+\hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
 \footnotetext{Correspond à la commande usuelle \Verb?\div?}
@@ -283,7 +289,7 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \footnotetext{Correspond à la commande usuelle \Verb?\phi?}
 \mcmd[\footnotemark]{\phi}
 \footnotetext{Correspond à la commande usuelle \Verb?\varphi?}
-\section{BigOperators.sty}
+\hsection{BigOperators.sty}
 \mhd
 \mcmd[\footnotemark]{\oldsum}
 \footnotetext{Correspond à la commande usuelle \Verb?\sum?}
@@ -301,7 +307,7 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \footnotetext{Correspond à la commande usuelle \Verb?\biguplus?}
 \mcmd{\biguplus{n=0}{+\infty}{A_n}}
 \mcmd{\bigop{n=0}{+\infty}{E_n}}
-\section{Complexes.sty}
+\hsection{Complexes.sty}
 \mhd
 \mcmd[\footnotemark]{\oldbar{z}}
 \footnotetext{Correspond à la commande usuelle \Verb?\bar?}
@@ -321,10 +327,8 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \footnotetext{Correspond à la commande usuelle \Verb?\Re?}
 \mcmd{\Re}
 \mcmd{\pRe{x}}
-\section{Dsft.sty}
-Ce package remplace le $\mathds 1$ du package \Verb?Dsfonts.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN}.
-
-Pour l'utiliser, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12.tfm? dans les dossiers où ils sont actuellement avec \Verb?dsfonts? (et éventuellement créer une copie des anciens fichiers).
+\hsection{Dsft.sty}
+Ce package remplace le $\mathds 1$ du package \Verb?Dsfonts.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et introduit quelques symboles.
 
 \vspace{0.5cm}
 
@@ -334,7 +338,10 @@ Pour l'utiliser, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12
 \mcmd{\square}
 \mcmd{\star}
 \mcmd{\triangle}
-\section{Equivalents.sty}
+\subsection{\href{https://rfoxinter.github.io/revisions/output/dsrom12.pfb}{\color{black}\texttt{dsrom12.pfb}} et \href{https://rfoxinter.github.io/revisions/output/dsrom12.tfm}{\color{black}\texttt{dsrom12.tfm}}}
+
+Pour utiliser ce package, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12.tfm? dans les dossiers où ils sont actuellement avec \Verb?dsfonts? (et éventuellement créer une copie des anciens fichiers).
+\hsection{Equivalents.sty}
 \mhd
 \mcmd{\o{x}}
 \mcmd{\o[x\to0]{x}}
@@ -348,7 +355,7 @@ Pour l'utiliser, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12
 \mcmd{\eq[n\to+\infty]{u_n}{v_n}}
 \mcmd{\eg{u_n}{v_n+\o{v_n}}}
 \mcmd{\eg[n\to+\infty]{u_n}{v_n+\o{v_n}}}
-\section{Matrices.sty}
+\hsection{Matrices.sty}
 \mhd
 \mcmd{\mat{n}{p}{\mathbb{K}}}
 \mcmd{\mat{n}{}{\mathbb{K}}}
@@ -369,19 +376,12 @@ Pour l'utiliser, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12
 \mmcmd{\vdots}{$\oldvdots$}
 \mmcmd{\xdots}{$\oldxdots$}
 \mcmd[\footnotemark]{\tmatrix({1\&0\\0\&1\\})}
-\footnotetext{Les caractères \Verb?\&? sont utilisés au lieu du \Verb?&? utilisé habituellement avec \tikzlg{} pour des raisons de compatibilité avec \texttt{Beamer}}
-
-\vspace{0.5cm}
-
-\textbf{\boldmath\Large Les commandes avec $\mcdot$}
-
-Les commandes avec des points tel que $\xdots$ ont des définitions qui dépendent de la taille de la police (celle pour \LaTeX est adaptée pour 12pt, et celle de \texttt{Beamer} pour 17pt). Pour avoir des points alignés correctement, il est possible de modifier la valeur de \Verb?\dotsep? en utilisant \Verb?\setlength{\dotsep}{taille_en_pt}?.
+\footnotetext{Les caractères \Verb?\&? sont utilisés au lieu du \Verb?&? utilisé habituellement avec \tikzlg{} pour des raisons de compatibilité avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}}
+\subsection{\boldmath Les commandes avec $\mcdot$}
+Les commandes avec des points tel que $\xdots$ ont des définitions qui dépendent de la taille de la police (celle pour \LaTeX est adaptée pour 12pt, et celle de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} pour 17pt). Pour avoir des points alignés correctement, il est possible de modifier la valeur de \Verb?\dotsep? en utilisant \Verb?\setlength{\dotsep}{taille_en_pt}?.
 
 Par exemple, avec 2pt, on obtient : \setlength{\dotsep}{2pt} $\xdots$.\setlength{\dotsep}{3.5pt}
-
-\vspace{0.5cm}
-
-\textbf{\Large La commande \Verb?\tmatrix?}
+\subsection{La commande \texttt{\textbackslash tmatrix}}
 
 \Verb?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice \tikzlg{} et les éléments de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
 
@@ -397,9 +397,7 @@ Les commandes sont:
 \mmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou top/bottom) avec les paramètres \tikzlg{} \texttt{params}}
 \mmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou left/right) avec les paramètres \tikzlg{} \texttt{params}}
 \mmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres \tikzlg{} \texttt{params}}
-\vspace{0.5cm}
-
-\textbf{\Large Exemples avec \Verb?\tmatrix?}
+\subsection{Exemples avec \texttt{\textbackslash tmatrix}}
 
 $\det M=\tmatrix|{a\&b\\c\&d\\}|$ est produit par \Verb?$\det{M}=\tmatrix|{a\&b\\c\&d\\}|$?.
 
@@ -427,7 +425,7 @@ $\tmatrix
     {A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\
         0\&0\&0\&A_n\\}{\}}$
 \end{Verbatim}
-\section{Polynomes.sty}
+\hsection{Polynomes.sty}
 \mhd
 \mcmd{\pol{K}{X}}
 \mcmd{\fr{K}{X}}
@@ -438,7 +436,7 @@ $\tmatrix
 \mcmd{\val{P}}
 \mcmd{\oldcar}
 \mcmd{\car{\mathbb{K}}}
-\section{Probas.sty}
+\hsection{Probas.sty}
 \mhd
 \mcmd{\p{A}}
 \mcmd{\p[B]{A}}
@@ -465,7 +463,9 @@ $\tmatrix
 \mcmd{\nbin{r}{p}}
 \mcmd{\hypg{N}{n}{q}}
 \mcmd{\poiss{\lambda}}
-\section{Structures.sty}
+\hsection{Sffont.sty}
+% {\Huge\bfseries\fontfamily{cmssp}\selectfont Texte}
+\hsection{Structures.sty}
 \mhd
 \mcmd{\oldhom}
 \mcmd{\hom{E}}
@@ -482,7 +482,7 @@ $\tmatrix
 \footnotetext{Correspond à la commande usuelle \Verb?\right\rangle?}
 \mcmd{\oldord}
 \mcmd{\ord{x}}
-\section{Tables.sty}
+\hsection{Tables.sty}
 Ce package sert à mettre en forme des tables an latex grâce à \tikzlg{}.
 
 Pour insérer une table, il faut appeler \Verb?\setrowcol[width][height]{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis rentrer la table \tikzlg{}, les arguments optionnels étant la largeur de la table et sa hauteur.
@@ -516,7 +516,7 @@ est produite avec le code suivant
     \draw [line width=0.5mm] (-\tblw/2,-\tblh/2) rectangle (\tblw/2,\tblh/2);
 \end{tikzpicture}
 \end{Verbatim}
-\section{Trigo.sty}
+\hsection{Trigo.sty}
 \mhd
 \mcmd[\footnotemark]{\oldcos}
 \footnotetext{Correspond à la commande usuelle \Verb?\cos?}
@@ -558,7 +558,7 @@ est produite avec le code suivant
 \mcmd{\oldath}
 \mcmd{\ath{x}}
 \mcmd{\ath[n]{x}}
-\section{Usuelles.sty}
+\hsection{Usuelles.sty}
 \mhd
 \mcmd[\footnotemark]{\oldmin}
 \footnotetext{Correspond à la commande usuelle \Verb?\min?}
