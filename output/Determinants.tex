@@ -1,0 +1,31 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\let\phi\varphi\newcommand\eps[1]{\varepsilon\l#1\r}\usepackage{al}\usepackage{bigoperators}\usepackage{polynomes}
+\hypersetup{pdftitle=Algèbre 2 -- Déterminants}
+\title{Algèbre 2\\\emph{Déterminants}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\phi$ est antisymétrique}{1/9}
+\slider{$\phi\l x_1,\cdots,x_n\r=\eps\sigma\phi\l x_{\sigma\l1\r},\cdots,x_{\sigma\l n\r}\r$}{1/9}
+\slideq{Ensemble des formes $n$-linéaires alternées}{2/9}
+\slider{$\vect{\olddet_{\mathcal B}}$}{2/9}
+\slideq{Application multilinéaire}{3/9}
+\slider{$\phi\l x_1,\cdots,x_{i-1},\lambda x_i+x_i',x_{i+1},\cdots,x_n\r$\linebreak${}=\lambda\phi\l x_1,\cdots,x_{i-1},x_i,x_{i+1},\cdots,x_n\r$\linebreak${}+\phi\l x_1,\cdots,x_{i-1},x_i',x_{i+1},\cdots,x_n\r$}{3/9}
+\slideq{Forme $n$-linéaire}{4/9}
+\slider{Application linéaire à valeurs dans $\mathbb K$}{4/9}
+\slideq{Déterminant d'une famille de vecteurs $\l x_1,\cdots,x_n\r$ par rapport à $\mathcal B$}{5/9}
+\slider{Si $\olddet_{\mathcal B}$ est l'unique forme $n$-linéaire alternée telle que $\det[\mathcal B]{\mathcal B}=1$\linebreak$\det[\mathcal B]{x_1,\cdots,x_n}$}{5/9}
+\slideq{Lien forme antisymétrique -- forme alternée}{6/9}
+\slider{Toute forme $n$-linéaire alternée est antisymétrique\linebreak Si $\car{\mathbb K}\neq2$, toute forme antisymétrique est alternée}{6/9}
+\slideq{$\phi$ est alternée}{7/9}
+\slider{$\phi\l x_1,\cdots,x_n\r=0$ s'il existe $i\neq j$ tel que $x_i=x_j$}{7/9}
+\slideq{$\olddet_{\mathcal B}$\linebreak Expression avec $\mathcal B'$}{8/9}
+\slider{$\det[\mathcal B]{\mathcal B'}\olddet_{\mathcal B'}$}{8/9}
+\slideq{Description du déterminant par les coordonnées\linebreak$\lc x_j\rc_{\mathcal B}=\tmatrix({a_{1,j}\\\vdots\\a_{n,j}\\})$}{9/9}
+\slider{$\det[\mathcal B]{x_1,\cdots,x_n}=\sum{\sigma\in\mathfrak S_n}{}{\eps\sigma a_{\sigma\l1\r,1}\cdots a_{\sigma\l n\r,n}}$\linebreak${}=\sum{\tau\in\mathfrak S_n}{}{\eps\tau a_{1,\tau\l1\r}\cdots a_{n,\tau\l n\r}}$}{9/9}
+\end{document}

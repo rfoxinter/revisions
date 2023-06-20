@@ -1,0 +1,13 @@
+Algèbre 2 -- Déterminants
+Shuffle questions : True
+Q/R & R/Q : False
+\let\phi\varphi\newcommand\eps[1]{\varepsilon\l#1\r}\usepackage{al}\usepackage{bigoperators}\usepackage{polynomes}
+Application multilinéaire;;$\phi\l x_1,\cdots,x_{i-1},\lambda x_i+x_i',x_{i+1},\cdots,x_n\r$\linebreak${}=\lambda\phi\l x_1,\cdots,x_{i-1},x_i,x_{i+1},\cdots,x_n\r$\linebreak${}+\phi\l x_1,\cdots,x_{i-1},x_i',x_{i+1},\cdots,x_n\r$
+Forme $n$-linéaire;;Application linéaire à valeurs dans $\mathbb K$
+$\phi$ est antisymétrique;;$\phi\l x_1,\cdots,x_n\r=\eps\sigma\phi\l x_{\sigma\l1\r},\cdots,x_{\sigma\l n\r}\r$
+$\phi$ est alternée;;$\phi\l x_1,\cdots,x_n\r=0$ s'il existe $i\neq j$ tel que $x_i=x_j$
+Déterminant d'une famille de vecteurs $\l x_1,\cdots,x_n\r$ par rapport à $\mathcal B$;;Si $\olddet_{\mathcal B}$ est l'unique forme $n$-linéaire alternée telle que $\det[\mathcal B]{\mathcal B}=1$\linebreak$\det[\mathcal B]{x_1,\cdots,x_n}$
+Description du déterminant par les coordonnées\linebreak$\lc x_j\rc_{\mathcal B}=\tmatrix({a_{1,j}\\\vdots\\a_{n,j}\\})$;;$\det[\mathcal B]{x_1,\cdots,x_n}=\sum{\sigma\in\mathfrak S_n}{}{\eps\sigma a_{\sigma\l1\r,1}\cdots a_{\sigma\l n\r,n}}$\linebreak${}=\sum{\tau\in\mathfrak S_n}{}{\eps\tau a_{1,\tau\l1\r}\cdots a_{n,\tau\l n\r}}$
+Ensemble des formes $n$-linéaires alternées;;$\vect{\olddet_{\mathcal B}}$
+$\olddet_{\mathcal B}$\linebreak Expression avec $\mathcal B'$;;$\det[\mathcal B]{\mathcal B'}\olddet_{\mathcal B'}$
+Lien forme antisymétrique -- forme alternée;;Toute forme $n$-linéaire alternée est antisymétrique\linebreak Si $\car{\mathbb K}\neq2$, toute forme antisymétrique est alternée
