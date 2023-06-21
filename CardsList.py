@@ -26,6 +26,6 @@ def list_f(folder):
     cards = sorted(curr_cards) + cards
 list_f(fld)
 for i in range(len(cards)):
-    content += '\n' + cards[i] + '\n' + dt.fromtimestamp(g(cards[i])).strftime('%Y-%m-%d %H:%M:%S')
+    content += '\n' + cards[i] + '\n' + dt.fromtimestamp(g(cards[i])).strftime('%Y%m%d%H%M%S')
 f.write(content)
 f.close()
