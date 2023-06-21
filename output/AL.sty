@@ -17,3 +17,5 @@
 \newcommand{\almat}[3]{\def\argIII{,#3}\ifx&#3&\def\argIII{}\fi\oldmat_{#2\argIII}\l#1\r}
 \newcommand\lc{\left[}
 \newcommand\rc{\right]}
+\DeclareMathOperator{\oldsl}{SL}
+\renewcommand{\sl}[2][]{\oldsl_{#1}\l#2\r}

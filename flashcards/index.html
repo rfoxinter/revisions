@@ -197,8 +197,9 @@
             return value.replaceAll('\n', '');
         }
         function download() {
+            var date = new Date;
             var a = document.createElement('a');
-            var text = lst.join('\n') + '\n' + arr.map(repall).map(x => btoa(unescape(encodeURIComponent(x)))).join(';') + '\n' + btoa(title);
+            var text = lst.join('\n') + '\n' + arr.map(repall).map(x => btoa(unescape(encodeURIComponent(x)))).join(';') + '\n' + date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + date.getDate() + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0') + '\n' + btoa(title);
             a.href = window.URL.createObjectURL(new Blob([text], {type: 'text/plain'}));
             a.download = toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')).replaceAll(' ', '') + '.txt';
             a.click();

@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\let\phi\varphi\newcommand\eps[1]{\varepsilon\l#1\r}\usepackage{al}\usepackage{bigoperators}\usepackage{polynomes}
+\let\phi\varphi\newcommand\eps[1]{\varepsilon\l#1\r}\usepackage{al}\usepackage{bigoperators}\usepackage{polynomes,structures}
 \hypersetup{pdftitle=Algèbre 2 -- Déterminants}
 \title{Algèbre 2\\\emph{Déterminants}}
 \author{}
@@ -10,22 +10,40 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$\phi$ est antisymétrique}{1/9}
-\slider{$\phi\l x_1,\cdots,x_n\r=\eps\sigma\phi\l x_{\sigma\l1\r},\cdots,x_{\sigma\l n\r}\r$}{1/9}
-\slideq{Ensemble des formes $n$-linéaires alternées}{2/9}
-\slider{$\vect{\olddet_{\mathcal B}}$}{2/9}
-\slideq{Application multilinéaire}{3/9}
-\slider{$\phi\l x_1,\cdots,x_{i-1},\lambda x_i+x_i',x_{i+1},\cdots,x_n\r$\linebreak${}=\lambda\phi\l x_1,\cdots,x_{i-1},x_i,x_{i+1},\cdots,x_n\r$\linebreak${}+\phi\l x_1,\cdots,x_{i-1},x_i',x_{i+1},\cdots,x_n\r$}{3/9}
-\slideq{Forme $n$-linéaire}{4/9}
-\slider{Application linéaire à valeurs dans $\mathbb K$}{4/9}
-\slideq{Déterminant d'une famille de vecteurs $\l x_1,\cdots,x_n\r$ par rapport à $\mathcal B$}{5/9}
-\slider{Si $\olddet_{\mathcal B}$ est l'unique forme $n$-linéaire alternée telle que $\det[\mathcal B]{\mathcal B}=1$\linebreak$\det[\mathcal B]{x_1,\cdots,x_n}$}{5/9}
-\slideq{Lien forme antisymétrique -- forme alternée}{6/9}
-\slider{Toute forme $n$-linéaire alternée est antisymétrique\linebreak Si $\car{\mathbb K}\neq2$, toute forme antisymétrique est alternée}{6/9}
-\slideq{$\phi$ est alternée}{7/9}
-\slider{$\phi\l x_1,\cdots,x_n\r=0$ s'il existe $i\neq j$ tel que $x_i=x_j$}{7/9}
-\slideq{$\olddet_{\mathcal B}$\linebreak Expression avec $\mathcal B'$}{8/9}
-\slider{$\det[\mathcal B]{\mathcal B'}\olddet_{\mathcal B'}$}{8/9}
-\slideq{Description du déterminant par les coordonnées\linebreak$\lc x_j\rc_{\mathcal B}=\tmatrix({a_{1,j}\\\vdots\\a_{n,j}\\})$}{9/9}
-\slider{$\det[\mathcal B]{x_1,\cdots,x_n}=\sum{\sigma\in\mathfrak S_n}{}{\eps\sigma a_{\sigma\l1\r,1}\cdots a_{\sigma\l n\r,n}}$\linebreak${}=\sum{\tau\in\mathfrak S_n}{}{\eps\tau a_{1,\tau\l1\r}\cdots a_{n,\tau\l n\r}}$}{9/9}
+\slideq{Déterminant d'une famille de vecteurs $\l x_1,\cdots,x_n\r$ par rapport à $\mathcal B$}{1/18}
+\slider{Si $\olddet_{\mathcal B}$ est l'unique forme $n$-linéaire alternée telle que $\det[\mathcal B]{\mathcal B}=1$\linebreak$\det[\mathcal B]{x_1,\cdots,x_n}$}{1/18}
+\slideq{$\phi$ est alternée}{2/18}
+\slider{$\phi\l x_1,\cdots,x_n\r=0$ s'il existe $i\neq j$ tel que $x_i=x_j$}{2/18}
+\slideq{Description du déterminant par les coordonnées\linebreak$\lc x_j\rc_{\mathcal B}=\tmatrix({a_{1,j}\\\vdots\\a_{n,j}\\})$}{3/18}
+\slider{$\det[\mathcal B]{x_1,\cdots,x_n}=\sum{\sigma\in\mathfrak S_n}{}{\eps\sigma a_{\sigma\l1\r,1}\cdots a_{\sigma\l n\r,n}}$\linebreak${}=\sum{\tau\in\mathfrak S_n}{}{\eps\tau a_{1,\tau\l1\r}\cdots a_{n,\tau\l n\r}}$}{3/18}
+\slideq{Caractérisation du déterminant par l'image d'une base}{4/18}
+\slider{$\det u=\det[\mathcal B]{u\l\mathcal B\r}$}{4/18}
+\slideq{$\det{u\circ v}$}{5/18}
+\slider{$\det u\det v$}{5/18}
+\slideq{$\det A$}{6/18}
+\slider{$\sum{\sigma\in\mathfrak S_n}{}{\eps\sigma a_{\sigma\l1\r,1}\cdots a_{\sigma\l n\r,n}}$\linebreak${}=\sum{\tau\in\mathfrak S_n}{}{\eps\tau a_{1,\tau\l1\r}\cdots a_{n,\tau\l n\r}}$}{6/18}
+\slideq{$\phi$ est antisymétrique}{7/18}
+\slider{$\phi\l x_1,\cdots,x_n\r=\eps\sigma\phi\l x_{\sigma\l1\r},\cdots,x_{\sigma\l n\r}\r$}{7/18}
+\slideq{$\sl[n]{\mathbb K}$}{8/18}
+\slider{$\ker\olddet=\left\{A\in\matgl[n]{\mathbb K}\;\middle|\;\det A=1\right\}$}{8/18}
+\slideq{$\tmatrix|{\lambda_1\&\bullet\&\mdots\&\bullet\\0\&\ddots\&\ddots\&\vdots\\\vdots\&\ddots\&\ddots\&\bullet\\0\&\mdots\&0\&\lambda_n\\}|$}{9/18}
+\slider{$\prod{i=1}{n}{\lambda_i}$}{9/18}
+\slideq{$\tmatrix[\mtxbox{}{1}{1}\mtxbox{}{2}{2}\mtxbox{}{4}{4}][inner sep = 0.5ex, minimum width = 30pt, minimum height = 30pt, row sep = 1ex, column sep = 1ex,]|{A_1\&0\&\mdots\&0\\0\&A_2\&\ddots\&\vdots\\\vdots\&\ddots\&\ddots\&0\\0\&\mdots\&0\&A_n\\}|$}{10/18}
+\slider{$\prod{i=1}{n}{\det{A_i}}$}{10/18}
+\slideq{Forme $n$-linéaire}{11/18}
+\slider{Application linéaire à valeurs dans $\mathbb K$}{11/18}
+\slideq{Déterminant d'un endomorphisme}{12/18}
+\slider{$\phi_u=\det u\phi$}{12/18}
+\slideq{Lien forme antisymétrique -- forme alternée}{13/18}
+\slider{Toute forme $n$-linéaire alternée est antisymétrique\linebreak Si $\car{\mathbb K}\neq2$, toute forme antisymétrique est alternée}{13/18}
+\slideq{$\olddet_{\mathcal B}$\linebreak Expression avec $\mathcal B'$}{14/18}
+\slider{$\det[\mathcal B]{\mathcal B'}\olddet_{\mathcal B'}$}{14/18}
+\slideq{Ensemble des formes $n$-linéaires alternées}{15/18}
+\slider{$\vect{\olddet_{\mathcal B}}$}{15/18}
+\slideq{Application multilinéaire}{16/18}
+\slider{$\phi\l x_1,\cdots,x_{i-1},\lambda x_i+x_i',x_{i+1},\cdots,x_n\r$\linebreak${}=\lambda\phi\l x_1,\cdots,x_{i-1},x_i,x_{i+1},\cdots,x_n\r$\linebreak${}+\phi\l x_1,\cdots,x_{i-1},x_i',x_{i+1},\cdots,x_n\r$}{16/18}
+\slideq{$\sl E$}{17/18}
+\slider{$\ker\olddet=\left\{u\in\al E{}\;\middle|\;\det u=1\right\}$}{17/18}
+\slideq{$u\in\al{E}{}$\linebreak$\det{\lambda u}$}{18/18}
+\slider{$\lambda^{\dim E}\det u$}{18/18}
 \end{document}
