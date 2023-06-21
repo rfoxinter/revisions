@@ -127,7 +127,7 @@
             \path (fit-l.east) -- (fit-r.west) coordinate[midway] (X);
         }
     }
-    \draw[#1] (X |- m.north) --  (X |- m.south);
+    \draw[#1] ($(X |- m.north)-(0, \pgflinewidth/2)$) --  ($(X |- m.south)+(0, \pgflinewidth/2)$);
 }
 \newcommand\mtxhline[2]{
     \comparestring{#2}{top}{
@@ -142,7 +142,7 @@
             \path (fit-t.south) -- (fit-b.north) coordinate[midway] (X);
         }
     }
-    \draw[#1] (X -| m.west) --  (X -| m.east);
+    \draw[#1] ($(X -| m.west)-(\pgflinewidth/2, 0)$) --  ($(X -| m.east)+(\pgflinewidth/2, 0)$);
 }
 \newcommand\mtxvpartial[4]{
     \comparestring{#2}{left}{
@@ -173,7 +173,7 @@
         \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-\pgfmathresult-\x)}] (fit-b2) {};
         \path (fit-b1.south) -- (fit-b2.north) coordinate[midway] (Xb);
     }
-    \draw[#1] (Xv |- Xt) --  (Xv |- Xb);
+    \draw[#1] ($(Xv |- Xt)-(0, \pgflinewidth/2)$) --  ($(Xv |- Xb)+(0, \pgflinewidth/2)$);
 }
 \newcommand\mtxhpartial[4]{
     \comparestring{#2}{top}{
@@ -204,7 +204,7 @@
         \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-\pgfmathresult)}] (fit-r2) {};
         \path (fit-r1.east) -- (fit-r2.west) coordinate[midway] (Xr);
     }
-    \draw[#1] (Xh -| Xl) --  (Xh -| Xr);
+    \draw[#1] ($(Xh -| Xl)-(\pgflinewidth/2, 0)$) --  ($(Xh -| Xr)+(\pgflinewidth/2, 0)$);
 }
 \newcommand\mtxbox[3]{
     \ifnum#2=1
