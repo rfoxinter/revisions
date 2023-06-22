@@ -261,37 +261,41 @@
     <script>
         document.getElementById('open').addEventListener('change', function() {
             fl = new FileReader();
-            fl.onload = function(){
-                try {
-                    fl = fl.result.split('\n');
-                    title = fl[0].substring(fl[0].indexOf('\"') + 1, fl[0].lastIndexOf('\"'));
-                    sh_quest = parseInt(fl[1]);
-                    sh_qr = parseInt(fl[2]);
-                    n = fl[3].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
-                    fst = fl[4].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
-                    arr = fl[5].split(';').map(x => decodeURIComponent(escape(atob(x))));
-                    
-                    if (fl[6] != btoa(title)) {
-                        throw new Error('Fichier corrompu')
+            if (document.getElementById('open').value != '') {
+                fl.onload = function(){
+                    try {
+                        fl = fl.result.split('\n');
+                        title = fl[0].substring(fl[0].indexOf('\"') + 1, fl[0].lastIndexOf('\"'));
+                        sh_quest = parseInt(fl[1]);
+                        sh_qr = parseInt(fl[2]);
+                        n = fl[3].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
+                        fst = fl[4].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
+                        arr = fl[5].split(';').map(x => decodeURIComponent(escape(atob(x))));
+                        
+                        if (fl[6] != btoa(title)) {
+                            throw new Error('Fichier corrompu')
+                        }
+                        document.getElementById('up-button').innerHTML = 'close';
+                        document.getElementById('up-button').setAttribute('onclick', '_close()');
+
+                        q = true;
+                        viewed = false;
+                        nth = 0;
+
+                        document.title = title.replace('&ndash;', '-').replace('<i>', '').replace('</i>', '');
+                        ques = copyArray(n);
+
+                        if (sh_quest) {shuffleArray(ques);}
+
+                        document.getElementById('flip').disabled = false;
+                        document.getElementById('title').innerHTML = title;
+                        document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
+
+                        document.getElementById('open').value = '';
+                    } catch(error) {
+                        document.getElementById('title').innerHTML = 'Erreur';
+                        document.getElementById('flashcard').innerHTML = 'Le fichier n&CloseCurlyQuote;est pas compatible';
                     }
-                    document.getElementById('up-button').innerHTML = 'close';
-                    document.getElementById('up-button').setAttribute('onclick', '_close()');
-
-                    q = true;
-                    viewed = false;
-                    nth = 0;
-
-                    document.title = title.replace('&ndash;', '-').replace('<i>', '').replace('</i>', '');
-                    ques = copyArray(n);
-
-                    if (sh_quest) {shuffleArray(ques);}
-
-                    document.getElementById('flip').disabled = false;
-                    document.getElementById('title').innerHTML = title;
-                    document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
-                } catch(error) {
-                    document.getElementById('title').innerHTML = 'Erreur';
-                    document.getElementById('flashcard').innerHTML = 'Le fichier n&CloseCurlyQuote;est pas compatible';
                 }
             }
             fl.readAsText(this.files[0]);
