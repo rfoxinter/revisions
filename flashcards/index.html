@@ -43,7 +43,7 @@
             }
             return cparr;
         }
-        var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = []; var qr = [0, 1]; var lst; var fl;
+        var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = []; var qr = [0, 1]; var lst; var fl; var syncurl; var filedate; var filename;
         var file = new URLSearchParams(document.location.search.substring(1)).get('file');
         async function loadModule(file) {
             var response;
@@ -99,6 +99,9 @@
                     arr[2*ques[i]-1] = svgcode;
                 }
                 document.getElementById('down-button').style.display = 'block';
+                document.getElementById('up-button').style.display = 'block';
+                document.getElementById('up-button').innerHTML = 'close';
+                document.getElementById('up-button').setAttribute('onclick', '_close()');
             } else if (res == 'Error') {
                 if (document.readyState !== 'loading') {
                     document.getElementById('up-button').style.display = 'none';
@@ -185,6 +188,11 @@
                 reverse_card();
             }
         }
+        function absolute(rel) {
+            var link = document.createElement("a");
+            link.href = rel;
+            return (link.protocol + "//" + link.host + link.pathname);
+        }
         function toTitle(str) {
             return str.replace(
                 /\w\S*/g,
@@ -199,7 +207,7 @@
         function download() {
             var date = new Date;
             var a = document.createElement('a');
-            var text = lst.join('\n') + '\n' + arr.map(repall).map(x => btoa(unescape(encodeURIComponent(x)))).join(';') + '\n' + date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + date.getDate() + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0') + '\n' + btoa(title);
+            var text = lst.join('\n') + '\n' + arr.map(repall).map(x => btoa(unescape(encodeURIComponent(x)))).join(';') + '\n' + date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + date.getDate() + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0') + '\n' + btoa(title) + '\n' + absolute(atob(file) + '/..') + 'cards.txt' + '\n' + file;
             a.href = window.URL.createObjectURL(new Blob([text], {type: 'text/plain'}));
             a.download = toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')).replaceAll(' ', '') + '.txt';
             a.click();
@@ -214,6 +222,32 @@
             document.getElementById('flip').disabled = true;
             document.getElementById('up-button').innerHTML = 'upload';
             document.getElementById('up-button').setAttribute('onclick', 'document.getElementById("open").click()');
+            document.getElementById('down-button').style.display = 'none';
+        }
+        async function sync() {
+            try {
+                response = await fetch(syncurl);
+            } catch(error) {window.alert('Impossible de rafraîchir le fichier.')}
+            if (response.status == 200) {
+                const jsCode = await response.text();
+                let ls = jsCode.split('\n'); let found = false;
+                for (let i = 0; i < (ls.length - 1)/2; ++i) {
+                    if (ls[2*i + 1] == atob(filename)) {
+                        if (parseInt(ls[2*i + 2]) > filedate) {
+                            window.alert('Une mise à jour est disponible et va être chargée.');
+                            console.log(ls[0], ls[2*i + 1], absolute(ls[0] + ls[2*i + 1]));
+                            document.getElementById('down-button').style.display = 'none';
+                            await fill_svg(absolute(ls[0] + ls[2*i + 1]));
+                            document.getElementById('down-button').style.display = 'none';
+                            document.getElementById('up-button').style.display = 'block';
+                            download()
+                        } else {window.alert('Le fichier est à jour.')}
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) {window.alert('Le fichier n\'est pas disponible.')}
+            }
         }
     </script>
     <style>
@@ -271,6 +305,9 @@
                         n = fl[3].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
                         fst = fl[4].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
                         arr = fl[5].split(';').map(x => decodeURIComponent(escape(atob(x))));
+                        filedate = parseInt(fl[6]);
+                        filename = fl[9];
+                        syncurl = fl[8];
                         
                         if (fl[7] != btoa(title)) {
                             throw new Error('Fichier corrompu')
@@ -290,6 +327,9 @@
                         document.getElementById('flip').disabled = false;
                         document.getElementById('title').innerHTML = title;
                         document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
+                        document.getElementById('down-button').style.display = 'block';
+                        document.getElementById('down-button').innerHTML = 'sync';
+                        document.getElementById('down-button').setAttribute('onclick', 'sync()');
 
                         document.getElementById('open').value = '';
                     } catch(error) {
