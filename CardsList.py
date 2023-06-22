@@ -8,7 +8,7 @@ from datetime import datetime as dt
 
 c(d(__file__) + '/flashcards')
 fld = input('Folder: ')
-f = open('MP2I/cards.txt', 'w')
+f = open('./cards.txt', 'w')
 content = 'https://rfoxinter.github.io/revisions/flashcards/' + ((fld + '/') if fld != '.' else '')
 global cards
 cards = []
