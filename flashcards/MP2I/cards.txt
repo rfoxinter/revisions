@@ -8,13 +8,13 @@ Trigo2
 Algebre1/Anneaux
 20230421201839
 Algebre1/Arithmetique
-20230606132815
+20230621214901
 Algebre1/Corps
 20230421202202
 Algebre1/Groupes
 20230606133731
 Algebre1/Matrices
-20230606134030
+20230621215608
 Algebre1/PolynomesEtFractionsRationnelles
 20230606132706
 Algebre1/StructuresAlgebriques
@@ -22,11 +22,11 @@ Algebre1/StructuresAlgebriques
 Algebre2/AlgebreLineaire
 20230610214451
 Algebre2/Determinants
-20230621193455
+20230622113305
 Algebre2/DimensionFinie
 20230611110045
 Algebre2/GroupesSymetriques
-20230619213511
+20230621214537
 Analyse/CalculAsymptotique
 20230611143302
 Analyse/CalculIntegral
@@ -64,4 +64,4 @@ Fondements/SommesEtProduits
 Probabilites/EspacesProbabilises
 20230618230413
 Probabilites/VariablesAleatoires
-20230619155400
+20230621220035
