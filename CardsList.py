@@ -18,9 +18,9 @@ def list_f(folder):
     for sub_folder in sorted(l(folder), reverse=True):
         if e(folder + '/' + sub_folder + '/info.txt'):
             if folder == '.':
-                curr_cards.append(sub_folder)
+                curr_cards.append('./' + sub_folder)
             else:
-                curr_cards.append(folder.replace('./', '') + '/' + sub_folder)
+                curr_cards.append(folder + '/' + sub_folder)
         elif i(folder + '/' + sub_folder):
             list_f(folder + '/' + sub_folder)
     cards = sorted(curr_cards) + cards
