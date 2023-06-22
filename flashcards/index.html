@@ -272,7 +272,7 @@
                         fst = fl[4].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
                         arr = fl[5].split(';').map(x => decodeURIComponent(escape(atob(x))));
                         
-                        if (fl[6] != btoa(title)) {
+                        if (fl[7] != btoa(title)) {
                             throw new Error('Fichier corrompu')
                         }
                         document.getElementById('up-button').innerHTML = 'close';
