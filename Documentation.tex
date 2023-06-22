@@ -7,7 +7,8 @@
 \hypersetup{pdftitle=Documentation}
 \newcommand{\tikzlg}{\href{https://ctan.org/pkg/tikz}{\color{black}Ti\textit{k}Z}}
 \let\oldoplus\oplus
-\usepackage{output/sffont,output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
+\usepackage{output/sffont,output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
+\usepackage[arc]{output/complexes}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
 \makeatother
@@ -334,6 +335,10 @@ Ce package utilise le package \texttt{graphics} (disponible sur \href{https://ct
 \footnotetext{Correspond à la commande usuelle \Verb?\Re?}
 \mcmd{\Re}
 \mcmd{\pRe{x}}
+\vspace{0.5cm}
+Il est aussi possible de faire des arcs en important le package \texttt{Complexes.sty} avec l'option \texttt{arc}, en utilisant \Verb?\usepackage[arc]{complexes}?.
+\vspace{0.5cm}
+\mhd
 \mcmd{\arc{AB}}
 \mcmd{\arc{ABCDEFFGH}}
 \hsection{Dsft.sty}
