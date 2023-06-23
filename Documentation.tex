@@ -21,9 +21,10 @@
 \let\oldsection\section
 \newcommand{\hsection}[1]{\clearpage\oldsection[#1]{\href{https://rfoxinter.github.io/revisions/output/#1}{\color{black}#1}}}
 \newcommand{\ssection}[2][]{\clearpage\oldsection[#1]{#2}}
-\title{Documentation}
+\title{Documentation\phantomsection\addcontentsline{toc}{section}{\protect\numberline{0}Documentation}}
 \author{}
 \date{}
+\newcounter{pagenb}
 
 \newcommand{\mhd}{
     \hrule\vline\hfill
@@ -90,7 +91,6 @@
 }
 
 \begin{document}
-\pagenumbering{gobble}
 \maketitle
 Le package \texttt{Preambule.sty}\footnote{Pour utiliser avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}} ou \texttt{HTMLPreambule.sty}\footnote{Pour les documents autres que \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}} doit être chargé pour pouvoir utiliser les autres qui sont donnés ci-dessous.
 
@@ -149,10 +149,14 @@ La commande \Verb?$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$? donne donc\
 \vspace{0.5cm}
 
 L'ensembles des titres des sections (et sous-sections si le fichier n'est pas déjà dans une section) sont des liens qui pointent vers les fichiers en ligne pour un téléchargement direct.
+\setcounter{pagenb}{\thepage}
+\stepcounter{pagenb}
 \newpage
+\pagenumbering{gobble}
 \tableofcontents
 \null\newpage
 \pagenumbering{arabic}
+\setcounter{page}{\thepagenb}
 \ssection[Flashcards.py et Htmlcards.py]{\href{https://rfoxinter.github.io/revisions/Flashcards.py}{\color{black}Flashcards.py} et \href{https://rfoxinter.github.io/revisions/Htmlcards.py}{\color{black}Htmlcards.py}}
 Les fichiers \texttt{Flashcards.py} et \texttt{Htmlcards.py} permettent d'exporter facilement des flashcards en \texttt{.pdf} et \texttt{.svg} (pour affichage dans le navigateur).
 
@@ -312,10 +316,6 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \mcmd{\biguplus{n=0}{+\infty}{A_n}}
 \mcmd{\bigop{n=0}{+\infty}{E_n}}
 \hsection{Complexes.sty}
-Ce package utilise le package \texttt{graphics} (disponible sur \href{https://ctan.org/pkg/graphics}{CTAN}).
-
-\vspace{0.5cm}
-
 \mhd
 \mcmd[\footnotemark]{\oldbar{z}}
 \footnotetext{Correspond à la commande usuelle \Verb?\bar?}
@@ -335,8 +335,10 @@ Ce package utilise le package \texttt{graphics} (disponible sur \href{https://ct
 \footnotetext{Correspond à la commande usuelle \Verb?\Re?}
 \mcmd{\Re}
 \mcmd{\pRe{x}}
-\vspace{0.5cm}
+\subsection{Dessiner des arcs}
 Il est aussi possible de faire des arcs en important le package \texttt{Complexes.sty} avec l'option \texttt{arc}, en utilisant \Verb?\usepackage[arc]{complexes}?.
+
+Cette option importe automatiquement le package \texttt{graphics} (disponible sur \href{https://ctan.org/pkg/graphics}{CTAN}).
 \vspace{0.5cm}
 \mhd
 \mcmd{\arc{AB}}
@@ -389,24 +391,25 @@ Pour utiliser ce package, il faut copier les fichiers \Verb?dsrom12.pfb? et \Ver
 \mmcmd{\idots}{$\oldidots$}
 \mmcmd{\vdots}{$\oldvdots$}
 \mmcmd{\xdots}{$\oldxdots$}
+\mmcmd{\plusdots}{$\oldplusdots$}
 \mcmd[\footnotemark]{\tmatrix({1\&0\\0\&1\\})}
-\footnotetext{Les caractères \Verb?\&? sont utilisés au lieu du \Verb?&? utilisé habituellement avec \tikzlg{} pour des raisons de compatibilité avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}}
-\subsection{\boldmath Les commandes avec $\mcdot$}
-Les commandes avec des points tel que $\xdots$ ont des définitions qui dépendent de la taille de la police (celle pour \LaTeX est adaptée pour 12pt, et celle de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} pour 17pt). Pour avoir des points alignés correctement, il est possible de modifier la valeur de \Verb?\dotsep? en utilisant \Verb?\setlength{\dotsep}{taille_en_pt}?.
+\footnotetext{\boldmath Les caractères \Verb?\&? sont utilisés au lieu du \Verb?&? utilisé habituellement avec \tikzlg{} pour des raisons de compatibilité avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}}
+\subsection{Ne pas importer les commandes avec $\mcdot$}
+Il est possible de ne pas modifier les commandes usuelles en utilisant l'option \Verb?nodots? de ce package. Il faut alors importer le package avec \Verb?\usepackage[nodots]{matrices}?.
+\subsection{\boldmath Modifier les séparations entre les $\mcdot$}
+Les commandes avec des points tel que $\xdots$ ont des définitions qui dépendent de la taille de la police (celle pour \LaTeX~est adaptée pour 12pt, et celle de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} pour 17pt). Pour avoir des points alignés correctement, il est possible de modifier la valeur de \Verb?\dotsep? en utilisant \Verb?\setlength{\dotsep}{taille_en_pt}?.
 
 Par exemple, avec 2pt, on obtient : \setlength{\dotsep}{2pt} $\xdots$.\setlength{\dotsep}{3.5pt}
+
+Il est également possible de faire de même avec la hauteur des $\mdots$ en modifiant la longueur \Verb?\dotlift?.
 \subsection{La commande \texttt{\textbackslash tmatrix}}
 
 \Verb?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice \tikzlg{} et les éléments de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
-
-Les commandes sont:
 
 \vspace{0.5cm}
 
 \mhd
 \mmcmd{\mtxvline{params}{n}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
-\pagebreak
-\hrule
 \mmcmd{\mtxhline{params}{n}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
 \mmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou top/bottom) avec les paramètres \tikzlg{} \texttt{params}}
 \mmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou left/right) avec les paramètres \tikzlg{} \texttt{params}}
@@ -519,7 +522,7 @@ Pour insérer une table, il faut appeler \Verb?\setrowcol[width][height]{ncols}{
 
 Une table a une largeur par défaut de 10cm et une hauteur de 6,5cm (est est réinitialisée à chaque appel de \Verb?\setrowcol?).
 
-Il est possible d'utiliser \Verb?[ampersand replacement=\&]? puis \Verb?\&? pour la matrice lorsque \Verb?&? est déjà défini par \LaTeX.
+Il est possible d'utiliser \Verb?[ampersand replacement=\&]? puis \Verb?\&? pour la matrice lorsque \Verb?&? est déjà défini par .
 
 Il est possible de récupérer la valeur de la largeur et de la hauteur avec \Verb?\tblw? et \Verb?\tblh?.
 
