@@ -20,3 +20,10 @@ $\sl[n]{\mathbb K}$;;$\ker\olddet=\left\{A\in\matgl n{\mathbb K}\;\middle|\;\det
 $\det A$;;$\sum{\sigma\in\mathfrak S_n}{}{\eps\sigma a_{\sigma\l1\r,1}\cdots a_{\sigma\l n\r,n}}$\linebreak${}=\sum{\tau\in\mathfrak S_n}{}{\eps\tau a_{1,\tau\l1\r}\cdots a_{n,\tau\l n\r}}$
 $\tmatrix|{\lambda_1\&\bullet\&\mdots\&\bullet\\0\&\ddots\&\ddots\&\vdots\\\vdots\&\ddots\&\ddots\&\bullet\\0\&\mdots\&0\&\lambda_n\\}|$;;$\prod{i=1}{n}{\lambda_i}$
 $\tmatrix[\mtxbox{}{1}{1}\mtxbox{}{2}{2}\mtxbox{}{4}{4}][inner sep = 0.5ex, minimum width = 30pt, minimum height = 30pt, row sep = 1ex, column sep = 1ex,]|{A_1\&0\&\mdots\&0\\0\&A_2\&\ddots\&\vdots\\\vdots\&\ddots\&\ddots\&0\\0\&\mdots\&0\&A_n\\}|$;;$\prod{i=1}{n}{\det{A_i}}$
+Mineur de position $\l i,j\r$ de $M$;;$\Delta_{i,j}\l M\r=\det{(m_{k,l})_{\l k,l\r\in\llb1,n\rrb\setminus\left\{i\right\}\times\llb1,n\rrb\setminus\left\{j\right\}}}$
+Cofacteur de position $\l i,j\r$ de $M$;;$\l-1\r^{i+j}\Delta_{i,j}\l M\r$
+Comatrice de $M$;;$\com M$\linebreak${}=\l-1\r^{i+j}\Delta_{i,j}\l M\r_{\l k,l\r\in\llb1,n\rrb\setminus\left\{i\right\}\times\llb1,n\rrb\setminus\left\{j\right\}}$
+Développement suivant une colonne\linebreak Développement suivant une ligne;;$\det M=\sum{i=1}{n}{\l-1\r^{i+j}m_{i,j}\Delta_{i,j}\l M\r}$\linebreak$\det M=\sum{j=1}{n}{\l-1\r^{i+j}m_{i,j}\Delta_{i,j}\l M\r}$
+Expression de l'inverse par la comatrice;;$M^{-1}=\frac{\com M^\top}{\det M}$
+Valeurs des $x_k$ pour $A\tmatrix({x_1\\\vdots\\x_n\\})=B$\linebreak$A=\tmatrix[\mtxvline{thick}{1}\mtxvline{thick}{2}]({A_1\&\mdots\&A_n\\})$;;$x_k=\frac{\det{\tmatrix[\mtxvline{thick}{1}\mtxvline{thick}{2}\mtxvline{thick}{3}\mtxvline{thick}{4}\mtxvline{thick}{5}\mtxvline{thick}{6}]({A_1\&\mdots\&A_{k-1}\&B\&A_{k+1}\&\mdots\&A_n\\})}}{\det A}$
+Déterminant de Vandermonde\linebreak$V\l x_1,\cdots,x_n\r$;;$\tmatrix|{1\&1\&\mdots\&1\\x_1\&x_2\&\mdots\&x_n\\x_1^2\&x_2^2\&\mdots\&x_n^2\\\vdots\&\vdots\&\plusdots\&\vdots\\x_1^{n-1}\&x_2^{n-1}\&\mdots\&x_n^{n-1}\\}|=\prod{\l i,j\r\in\llb1,n\rrb^2}{}{x_j-x_i}$
