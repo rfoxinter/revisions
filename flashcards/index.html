@@ -207,7 +207,7 @@
         function download() {
             var date = new Date;
             var a = document.createElement('a');
-            var text = lst.join('\n') + '\n' + arr.map(repall).map(x => btoa(unescape(encodeURIComponent(x)))).join(';') + '\n' + date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + date.getDate() + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0') + '\n' + btoa(title) + '\n' + absolute(atob(file) + '/..') + 'cards.txt' + '\n' + file;
+            var text = lst.join('\n') + '\n' + arr.map(repall).map(x => btoa(unescape(encodeURIComponent(x)))).join(';') + '\n' + date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + date.getDate() + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0') + '\n' + btoa(title) + '\n' + absolute(atob(file) + (title.includes('&ndash;')?'/../..':'/..')) + 'cards.txt' + '\n' + file;
             a.href = window.URL.createObjectURL(new Blob([text], {type: 'text/plain'}));
             a.download = toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')).replaceAll(' ', '') + '.txt';
             a.click();
@@ -227,7 +227,7 @@
         async function sync() {
             try {
                 response = await fetch(syncurl);
-            } catch(error) {window.alert('Impossible de rafraîchir le fichier.')}
+            } catch(error) {window.alert('Impossible de rafraîchir le fichier.');}
             if (response.status == 200) {
                 const jsCode = await response.text();
                 let ls = jsCode.split('\n'); let found = false;
@@ -247,7 +247,7 @@
                     }
                 }
                 if (!found) {window.alert('Le fichier n\'est pas disponible.')}
-            }
+            } else {window.alert('Impossible de rafraîchir le fichier.');}
         }
     </script>
     <style>
@@ -268,7 +268,7 @@
         }
     </style>
 </head>
-<body onload="document.getElementById('incor').disabled = true;document.getElementById('corr').disabled = true;document.getElementById('flip').disabled = true;">
+<body onload="document.getElementById('incor').disabled = true;document.getElementById('corr').disabled = true;document.getElementById('flip').disabled = true;document.getElementById('down-button').setAttribute('onclick', 'download()');">
     <div id='overlay'></div>
     <header class='page-header'>
         <h1 id='title'></h1>
