@@ -1,3 +1,8 @@
+\newif\if@dots\@dotstrue
+\DeclareOption{nodots}{\@dotsfalse}
+\DeclareOption*{}
+\ProcessOptions\relax
+
 \newcommand{\mat}[3]{\def\argII{,#2}\ifx&#2&\def\argII{}\fi\mathcal{M}_{#1\argII}\l#3\r}
 \newcommand{\sym}[2]{\mathcal{S}_{#1}\l#2\r}
 \newcommand{\ant}[2]{\mathcal{A}_{#1}\l#2\r}
@@ -8,23 +13,16 @@
 \renewcommand{\det}[2][]{\olddet_{#1}\l#2\r}
 \DeclareMathOperator{\oldgl}{GL}
 \newcommand{\gl}[2]{\oldgl_{#1}\l#2\r}
+\DeclareMathOperator{\oldcom}{Com}
+\newcommand{\com}[1]{\oldcom\l#1\r}
 \usepackage{tikz}
 \usetikzlibrary{matrix,calc,fit}
 \newlength{\dotsep}
+\newlength{\dotlift}
 \makeatletter
 \@ifclassloaded{beamer}{
     \setlength{\dotsep}{5.5pt}
-    \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
-    \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
-    \def\oldddots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
-    \def\oldidots{\mathinner{\raise0pt\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\hbox{$\mcdot$}}}
-    \def\oldvdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise\dotsep\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
-    \def\oldxdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
-    \newcommand{\mdots}{\raise1.5pt\hbox{$\oldmdots$}}
-    \renewcommand{\ddots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldddots$}$}}}
-    \newcommand{\idots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldidots$}$}}}
-    \renewcommand{\vdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldvdots$}$}}}
-    \newcommand{\xdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldxdots$}$}}}
+    \setlength{\dotlift}{1.5pt}
     \newcommand{\tmatrix}[1][]{\def\argI{#1}\tmptmatrix}
     \newcommand{\tmptmatrix}[4][]{
     \begin{tikzpicture}[baseline={([yshift=-0.5ex]m.center)}]
@@ -45,17 +43,7 @@
     \end{tikzpicture}}
 }{
     \setlength{\dotsep}{3.5pt}
-    \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
-    \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
-    \def\oldddots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
-    \def\oldidots{\mathinner{\raise0pt\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\hbox{$\mcdot$}}}
-    \def\oldvdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise\dotsep\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
-    \def\oldxdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
-    \newcommand{\mdots}{\raise0.5pt\hbox{$\oldmdots$}}
-    \renewcommand{\ddots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldddots$}$}}}
-    \newcommand{\idots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldidots$}$}}}
-    \renewcommand{\vdots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldvdots$}$}}}
-    \newcommand{\xdots}{\vcenter{\hbox{$\raise1pt\hbox{$\oldxdots$}$}}}
+    \setlength{\dotlift}{0.5pt}
     \newcommand{\tmatrix}[1][]{\def\argI{#1}\tmptmatrix}
     \newcommand{\tmptmatrix}[4][]{
     \begin{tikzpicture}[baseline={([yshift=-0.5ex]m.center)}]
@@ -75,6 +63,21 @@
         \argI
     \end{tikzpicture}}
 }
+\if@dots
+    \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
+    \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
+    \def\oldddots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
+    \def\oldidots{\mathinner{\raise0pt\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\hbox{$\mcdot$}}}
+    \def\oldvdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise\dotsep\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \def\oldxdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \def\oldplusdots{\mathinner{\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise\dotsep\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise\dotsep\hbox{$\mcdot$}}}
+    \newcommand{\mdots}{\raise\dotlift\hbox{$\oldmdots$}}
+    \renewcommand{\ddots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldddots$}$}}}
+    \newcommand{\idots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldidots$}$}}}
+    \renewcommand{\vdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldvdots$}$}}}
+    \newcommand{\xdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldxdots$}$}}}
+    \newcommand{\plusdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldplusdots$}$}}}
+\fi
 \makeatother
 \makeatletter
 \def\comparestring#1#2{%
