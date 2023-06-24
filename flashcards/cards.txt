@@ -22,11 +22,13 @@ https://rfoxinter.github.io/revisions/flashcards/
 ./Algebre2/AlgebreLineaire
 20230610214451
 ./Algebre2/Determinants
-20230622113305
+20230623184650
 ./Algebre2/DimensionFinie
 20230611110045
+./Algebre2/EspacesPrehilbertiensReels
+20230624164738
 ./Algebre2/GroupesSymetriques
-20230621214537
+20230624163148
 ./Analyse/CalculAsymptotique
 20230611143302
 ./Analyse/CalculIntegral
