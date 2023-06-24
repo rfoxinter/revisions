@@ -9,4 +9,4 @@ $\mathfrak S_n$;;Permutations de $\llb1,n\rrb$
 $\mathfrak A_n$;;$\ker{\eps}$
 $\permut{i_1\&\mdots\&i_k\\}$;;$\permut{i_1\&i_k\\}\circ\cdots\circ\permut{i_1\&i_2\\}$
 $\eps\l C\r$;;$\l-1\r^{\left|C\right|-1}$
-$\eps\l\sigma\r$\linebreak Expression avec les supports des cycles;;$\l-1\r^{n-c(\sigma)}$\linebreak$c\l\sigma\r$ correspond au nombre de parts dans le support cyclique de $\sigma$
+$\eps\l\sigma\r$\linebreak Expression avec les supports des cycles;;$\l-1\r^{n-c\l\sigma\r}$\linebreak$c\l\sigma\r$ correspond au nombre de parts dans le support cyclique de $\sigma$
