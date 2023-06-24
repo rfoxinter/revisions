@@ -1,0 +1,49 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\let\phi\varphi\usepackage{al}\usepackage{structures}
+\hypersetup{pdftitle=Algèbre 2 -- Espaces préhilbertiens réels}
+\title{Algèbre 2\\\emph{Espaces préhilbertiens réels}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Formule de changement de base pour les formes bilinéaires}{1/18}
+\slider{$\almat\phi{\mathcal D}{}=\l P_{\mathcal C}^{\mathcal D}\r^\top\almat\phi{\mathcal C}{}P_{\mathcal C}^{\mathcal D}$}{1/18}
+\slideq{$\phi$ est définie}{2/18}
+\slider{$\forall x\in E,\;\phi\l x,x\r=0\Leftrightarrow x=0$}{2/18}
+\slideq{Norme}{3/18}
+\slider{$\forall x\in E,\;N\l x\r=0\Leftrightarrow x=0$ (séparation)\linebreak$\forall\l\lambda,x\r\in\mathbb R\times E,\;N\l\lambda x\r=\left|\lambda\right|N\l x\r$ (absolue homogénéité)\linebreak$\forall\l x,y\r\in E^2,\;N\l x+y\r\leqslant N\l x\r+N\l y\r$ (inégalité triangulaire)}{3/18}
+\slideq{Structure de l'ensemble des formes bilinéaires}{4/18}
+\slider{$\mathcal B\l E\r$ est un $\mathbb R$-espace vectoriel}{4/18}
+\slideq{Formule de polarisation}{5/18}
+\slider{$\phi\l x,y\r=\frac12\l q\l x+y\r-q\l x\r-q\l y\r\r$}{5/18}
+\slideq{$\phi$ est positive}{6/18}
+\slider{$\im{q_\phi}\subset\mathbb R_+$}{6/18}
+\slideq{$\phi$ est négative}{7/18}
+\slider{$\im{q_\phi}\subset\mathbb R_-$}{7/18}
+\slideq{Forme quadratique}{8/18}
+\slider{$q\!:\!E\to\mathbb R$ tel qu'il existe $\phi\in\mathcal B\l E\r$ tel que $q\l x\r=\phi\l x,x\r$\linebreak$q_\phi$ est la forme quadratique associée à $\phi$}{8/18}
+\slideq{Norme euclidienne}{9/18}
+\slider{Une norme $N$ est euclidienne si et seilement s'il existe un produit scalaire dont $N$ est la norme associée}{9/18}
+\slideq{Espace préhilbertien réel}{10/18}
+\slider{$\l E,\la\cdot,\cdot\ra\r$ où $E$ est un $\mathbb R$-espace vectoriel muni d'un produit scalaire $\la\cdot,\cdot\ra$}{10/18}
+\slideq{Produit scalaire}{11/18}
+\slider{Forme bilinéaire symétrique, définie et positive\linebreak Noté $\la x,y\ra$ ou $\l x\middle|y\r$}{11/18}
+\slideq{$\almat\phi{\mathcal B}{}$}{12/18}
+\slider{$\l\phi\l e_i,e_j\r\r_{\l i,j\r\in\llb1,n\rrb^2}$}{12/18}
+\slideq{Inégalité de Cauchy-Schwarz pour un produit scalaire\linebreak Cas d'égalité}{13/18}
+\slider{$\left|\la x,y\ra\right|\leqslant\left\|x\right\|\times\left\|y\right\|$\linebreak Égalité si et seulement si $x$ et $y$ sont colinéaires}{13/18}
+\slideq{Espace euclidien}{14/18}
+\slider{Espace préhilbertien réel de dimension finie}{14/18}
+\slideq{$\left\|x\right\|$}{15/18}
+\slider{$\sqrt{\la x,x\ra}$}{15/18}
+\slideq{$\phi$ est symétrique}{16/18}
+\slider{$\forall\l x,y\r\in E^2,\;\phi\l x,y\r=\phi\l y,x\r$}{16/18}
+\slideq{Expression matricielle de $\phi\l x,y\r$}{17/18}
+\slider{$\phi\l x,y\r=\lc x\rc_{\mathcal B}^\top\almat\phi{\mathcal B}{}\lc y\rc_{\mathcal B}$}{17/18}
+\slideq{$\dim{\mathcal B\l E\r}$}{18/18}
+\slider{$n^2$}{18/18}
+\end{document}
