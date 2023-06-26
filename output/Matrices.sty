@@ -78,8 +78,6 @@
     \newcommand{\xdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldxdots$}$}}}
     \newcommand{\plusdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldplusdots$}$}}}
 \fi
-\makeatother
-\makeatletter
 \def\comparestring#1#2{%
     \edef\tempa{#1}%
     \edef\tempb{#2}%
@@ -89,8 +87,6 @@
         \expandafter\@secondoftwo
     \fi
 }
-\makeatother
-\makeatletter
 \def\tikz@lib@fit@scan{%
   \pgfutil@ifnextchar\pgf@stop{\pgfutil@gobble}{%
     \pgfutil@ifnextchar\foreach{\tikz@lib@fit@scan@handle@foreach}{%
