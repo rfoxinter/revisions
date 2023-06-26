@@ -19,50 +19,39 @@
 \usetikzlibrary{matrix,calc,fit}
 \newlength{\dotsep}
 \newlength{\dotlift}
+\newlength{\matsep}
+\newlength{\matmin}
 \makeatletter
 \@ifclassloaded{beamer}{
     \setlength{\dotsep}{5.5pt}
     \setlength{\dotlift}{1.5pt}
-    \newcommand{\tmatrix}[1][]{\def\argI{#1}\tmptmatrix}
-    \newcommand{\tmptmatrix}[4][]{
-    \begin{tikzpicture}[baseline={([yshift=-0.5ex]m.center)}]
-    \matrix (m) [
-            ampersand replacement=\&,
-            matrix of math nodes,
-            left delimiter=#2,
-            right delimiter=#4,
-            anchor=center,
-            minimum width=25pt,
-            minimum height=25pt,
-            row sep=5pt,
-            column sep=5pt,
-            inner sep=0pt,
-            #1
-        ] {#3};
-        \argI
-    \end{tikzpicture}}
+    \setlength{\matsep}{5pt}
+    \setlength{\matmin}{25pt}
 }{
     \setlength{\dotsep}{3.5pt}
     \setlength{\dotlift}{0.5pt}
-    \newcommand{\tmatrix}[1][]{\def\argI{#1}\tmptmatrix}
-    \newcommand{\tmptmatrix}[4][]{
-    \begin{tikzpicture}[baseline={([yshift=-0.5ex]m.center)}]
-    \matrix (m) [
-            ampersand replacement=\&,
-            matrix of math nodes,
-            left delimiter=#2,
-            right delimiter=#4,
-            anchor=center,
-            minimum width=15pt,
-            minimum height=15pt,
-            row sep=3.5pt,
-            column sep=3.5pt,
-            inner sep=0pt,
-            #1
-        ] {#3};
-        \argI
-    \end{tikzpicture}}
+    \setlength{\matsep}{3.5pt}
+    \setlength{\matmin}{15pt}
 }
+\newcommand{\tmatrix}[1][]{\def\argI{#1}\tmptmatrix}
+\newcommand{\tmptmatrix}[4][]{
+\begin{tikzpicture}[baseline={([yshift=-0.5ex]m.center)}]
+\matrix (m) [
+        ampersand replacement=\&,
+        matrix of math nodes,
+        left delimiter=#2,
+        right delimiter=#4,
+        anchor=center,
+        minimum width=\matmin,
+        minimum height=\matmin,
+        row sep=\matsep,
+        column sep=\matsep,
+        inner sep=0pt,
+        nodes in empty cells,
+        #1
+    ] {#3};
+    \argI
+\end{tikzpicture}}
 \if@dots
     \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
     \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
