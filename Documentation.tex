@@ -21,7 +21,7 @@
 \let\oldsection\section
 \newcommand{\hsection}[1]{\clearpage\oldsection[#1]{\href{https://rfoxinter.github.io/revisions/output/#1}{\color{black}#1}}}
 \newcommand{\ssection}[2][]{\clearpage\oldsection[#1]{#2}}
-\title{Documentation\phantomsection\addcontentsline{toc}{section}{\protect\numberline{0}Documentation}}
+\title{\href{https://rfoxinter.github.io/revisions/Documentation.pdf}{\color{black}Documentation}\phantomsection\addcontentsline{toc}{section}{\protect\numberline{0}Documentation}}
 \author{}
 \date{}
 \newcounter{pagenb}
@@ -124,7 +124,7 @@ Il n'est pas possible d'utiliser en simultané le package \Verb?Dsfont.sty? disp
 \vspace{0.5cm}
 
 Il est possible de redéfinir le $l$ à sa version d'origine ($\oldl$) avec:
-\begin{Verbatim}[vspace=0pt]
+\phantomsection\label{ldef}\begin{Verbatim}[vspace=0pt]
 \mathcode`l="8000
 \begingroup
 \makeatletter
@@ -149,6 +149,8 @@ La commande \Verb?$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$? donne donc\
 \vspace{0.5cm}
 
 L'ensembles des titres des sections (et sous-sections si le fichier n'est pas déjà dans une section) sont des liens qui pointent vers les fichiers en ligne pour un téléchargement direct.
+
+Il est aussi possible de télécharger la version la plus récente de ce fichier en cliquant sur le titre.
 \setcounter{pagenb}{\thepage}
 \stepcounter{pagenb}
 \newpage
@@ -191,8 +193,7 @@ Il faut cependant s'assurer quele fichier ne contienne pas de lignes avec unique
 S'il y a une erreur lors de la compilation \LaTeX, le programme python affichera le message d'erreur affiché par \LaTeX.
 
 Exemple de fiches : \href{https://github.com/rfoxinter/revisions/tree/main/input}{\texttt{https://github.com/rfoxinter/revisions/tree/main/input}}.
-
-\subsection{Visionner les flashcards en svg}
+\subsection{Visionner les flashcards en svg (Htmlcards)}
 Pour pouvoir visionner les flashcards exportées en svg, il faut disposer d'un serveur web (comme \href{https://github.com/}{github} avec \href{https://pages.github.com/}{github pages}) sur lequel on met le dossier généré par \texttt{Htmlcards.py} (on suppose que l'url est \texttt{https://example.fr/dossier}).
 
 Il faut alors convertir l'url du dossier en base 64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}}, avec la fonction \texttt{btoa} de JavaScript ou avec la  fonction Python \texttt{base64.b64encode}). Dans l'exemple, en exécutant le code Python suivant
@@ -209,6 +210,12 @@ Il faut alors aller sur le site \href{https://rfoxinter.github.io/revisions/flas
 Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/revisions/flashcards/}
 
 \texttt{~~~~?file=aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI=}
+\subsection{Télécharger des Htmlcards depuis le site}
+Il est possible de faire en sorte que les cartes téléchargées puissent être mises à jour en ajoutant un fichier \texttt{cards.txt} à la racine du dossier des Htmlcards. Ce fichier doit contenir l'adresse à laquelle il est stocké en première ligne, puis plusieurs lignes contenant le chemin vers une Htmlcard à partir de l'url en première ligne, puis la date de dernière mise à jour du dossier (au format \Verb?%YYYY%MM%dd%hh%mm%ss? (année, mois, jour, heure, minutes, secondes)).
+
+Exemple : \href{https://rfoxinter.github.io/revisions/flashcards/cards.txt}{\texttt{https://rfoxinter.github.io/revisions/flashcards/cards.txt}}.
+
+Un exemple de fichier python générant un tel fichier est disponible à l'adresse suivante : \href{https://rfoxinter.github.io/revisions/CardsList.py}{\texttt{https://rfoxinter.github.io/revisions/CardsList.py}}.
 \ssection[Preambule.sty et HTMLPreambule.sty]{\href{https://rfoxinter.github.io/revisions/output/Preambule.sty}{\color{black}Preambule.sty} et \href{https://rfoxinter.github.io/revisions/output/HTMLPreambule.sty}{\color{black}HTMLPreambule.sty}}
 \mhd
 \mmcmd[\footnotemark]{\l}{$\l\right.$}
@@ -224,7 +231,7 @@ Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/
 \mcmd[\footnotemark]{\frac{a}{b}}
 \footnotetext{Correspond à la commande usuelle \Verb?\dfrac?}
 \mcmd[\footnotemark]{l}
-\footnotetext{Correspond à la commande usuelle \Verb?\ell?}
+\footnotetext{Correspond à la commande usuelle \Verb?\ell?\\Le $l$ peut être redéfini en $\oldl$ avec le code donné \hyperref[ldef]{ici}}
 \mcmd[\footnotemark]{\oldvec{x}}
 \footnotetext{Correspond à la commande usuelle \Verb?\vec?}
 \mcmd{\vec{AB}}
