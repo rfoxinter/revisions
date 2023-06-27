@@ -1,7 +1,7 @@
 Algèbre 2 -- Espaces préhilbertiens réels
 Shuffle questions : True
 Q/R & R/Q : False
-\let\phi\varphi\usepackage{al}\usepackage{structures}
+\let\phi\varphi\usepackage{al}\usepackage{structures}\usepackage{bigoperators}
 Structure de l'ensemble des formes bilinéaires;;$\mathcal B\l E\r$ est un $\mathbb R$-espace vectoriel
 Forme quadratique;;$q\!:\!E\to\mathbb R$ tel qu'il existe $\phi\in\mathcal B\l E\r$ tel que $q\l x\r=\phi\l x,x\r$\linebreak$q_\phi$ est la forme quadratique associée à $\phi$
 $\almat\phi{\mathcal B}{}$;;$\l\phi\l e_i,e_j\r\r_{\l i,j\r\in\llb1,n\rrb^2}$
@@ -17,6 +17,28 @@ Produit scalaire;;Forme bilinéaire symétrique, définie et positive\linebreak 
 $\left\|x\right\|$;;$\sqrt{\la x,x\ra}$
 Inégalité de Cauchy-Schwarz pour un produit scalaire\linebreak Cas d'égalité;;$\left|\la x,y\ra\right|\leqslant\left\|x\right\|\times\left\|y\right\|$\linebreak Égalité si et seulement si $x$ et $y$ sont colinéaires
 Norme;;$\forall x\in E,\;N\l x\r=0\Leftrightarrow x=0$ (séparation)\linebreak$\forall\l\lambda,x\r\in\mathbb R\times E,\;N\l\lambda x\r=\left|\lambda\right|N\l x\r$ (absolue homogénéité)\linebreak$\forall\l x,y\r\in E^2,\;N\l x+y\r\leqslant N\l x\r+N\l y\r$ (inégalité triangulaire)
-Norme euclidienne;;Une norme $N$ est euclidienne si et seilement s'il existe un produit scalaire dont $N$ est la norme associée
+Norme euclidienne;;Une norme $N$ est euclidienne si et seulement s'il existe un produit scalaire dont $N$ est la norme associée
 Espace préhilbertien réel;;$\l E,\la\cdot,\cdot\ra\r$ où $E$ est un $\mathbb R$-espace vectoriel muni d'un produit scalaire $\la\cdot,\cdot\ra$
 Espace euclidien;;Espace préhilbertien réel de dimension finie
+Vecteurs orthogonaux;;$x\perp y\Leftrightarrow\la x,y\ra=0$
+Théorème de Pythagore;;$x\perp y\Leftrightarrow\left\|x+y\right\|^2=\left\|x\right\|^2+\left\|y\right\|^2$
+Théorème de Pythagore généralisé;;$\left\|\sum{i=1}{n}{x_i}\right\|^2=\sum{i=1}{n}{\left\|x_i\right\|^2}$
+Famille orthogonale\linebreak Famille orthonormale;;$\l x_i\r_{i\in I}$ est orthogonale : $\forall\l i,j\r\in I^2,\;i\neq j\Rightarrow x_i\perp x_j$\linebreak$\l x_i\r_{i\in I}$ est orthonormée :\linebreak$\l x_i\r_{i\in I}$ est orthogonale et $\forall i\in I,\;\left\|x_i\right\|$
+Sous-espaces orthogonaux;;$F\perp G\Leftrightarrow\forall\l x,y\r\in F\times G,\;x\perp y$
+$X^\perp$;;$\left\{x\in E\;\middle|\;x\perp X\right\}$
+Orhtogonal d'une union\linebreak Orthogonal d'une somme\linebreak Orthogonal d'une intersection;;$\l F\cup G\r^\perp=F^\perp\cap G^\perp$\linebreak$\l F+G\r^\perp=F^\perp\cap G^\perp$\linebreak$\l F\cap G\r^\perp=F^\perp+G^\perp$ (en dimension finie)\linebreak$\l F\cap G\r^\perp\supset F^\perp+G^\perp$ (sinon)
+Structure de l'orthogonal;;$X^\perp$ est un sous-espace vectoriel de $E$
+Double orthogonal;;$X\subset\l X^\perp\r^\perp$\linebreak En dimension finie, $X=\l X^\perp\r^\perp$
+Projeté orthogonal sur un sous-espace vectoriel;;$z$ est le projeté orthogonal de $y$ sur $F$ si et seulement si $z\in F$ et $\l y-z\r\perp F$
+Projeté orthogonal sur un sous-espace vectoriel en dimension finie;;$z=\sum{i=1}{m}{\la y,b_i\ra b_i}$
+Projeté orthogonal sur $\vect x$;;$z=\la y,x\ra\frac x{\left\|x\right\|^2}$
+Procédé d'orthonormalisation de Gram-Schmidt;;$f_1=\frac{e_1}{\left\|e_1\right\|}$\linebreak$\forall k\in\llb2,n\rrb,\;f_k=\frac{u_k}{\left\|u_k\right\|}$\linebreak$u_k=e_k-\sum{i=1}{k-1}{\la e_k,f_i\ra f_i}$
+Supplémentaire orthogonal;;En dimension finie, tout sev $F$ de $E$ admet un unique supplémentaire $F^\perp$ tel que $F\perp F^\perp$ et $F\oplus F^\perp=E$
+Coordonnées de $x$ dans la base orthonormée $\mathcal{B}=\l b_1,\cdots,b_n\r$;;$\lc x\rc_{\mathcal B}\tmatrix({\la x,b_1\ra\\\vdots\\\la x,b_n\ra\\})$
+Expression de $\la x,y\ra$ dans la base orthonormée $\mathcal{B}=\l b_1,\cdots,b_n\r$;;$\la x,y\ra=\sum{i=1}{n}{\la x,b_i\ra\la y,b_i\ra}$
+Expression de $\left\|x\right\|^2$ dans la base orthonormée $\mathcal{B}=\l b_1,\cdots,b_n\r$;;$\left\|x\right\|=\sum{i=1}{n}{\la x,b_i\ra^2}$
+Si $\mathcal{B}=\l b_1,\cdots,b_n\r$ est une base orthonormée et $u\in\al E{}$\linebreak$\almat u{\mathcal B}{}$;;$\l\la b_i,u\l b_j\r\ra\r_{\left\{i,j\right\}\in\llb1,n\rrb^2}$\linebreak${}=\tmatrix({\la b_1,u\l b_1\r\ra\&\mdots\&\la b_1,u\l b_n\r\ra\\\vdots\&\plusdots\&\vdots\\\la b_n,u\l b_1\r\ra\&\mdots\&\la b_n,u\l b_n\r\ra\\})$
+Matrice orthogonale;;$P\in\mat{n}{}{\mathbb R}$ est orthogonale si et seulement si $P^\top P=I_n$
+Groupe orthogonal;;$\orth[n]{\mathbb R}=\left\{P\in\mat{n}{}{\mathbb{R}}\;\middle|\;P^\top P=I_n\right\}$
+Groupe spécial orthogonal;;$\so[n]{\mathbb R}=\left\{P\in\orth[n]{\mathbb R}\;\middle|\;\det P=1\right\}$
+$d\l x,F\r$;;$\min\limits_{y\in F}\l\left\|x-y\right\|\r=\left\|x-p_F\l x\r\right\|$
