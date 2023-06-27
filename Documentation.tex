@@ -186,7 +186,7 @@ La ligne 3 indique si on peut échanger l'ordre des questions et des réponses p
 
 Les packages et commandes supplémentaires (voir \href{https://www.overleaf.com/learn/latex/Commands}{CTAN}) doivent être placées sur une seule ligne.
 
-Il faut s'assurer qu'il n'y ait pas de ligne vide à la fin du fichier.
+Il faut cependant s'assurer quele fichier ne contienne pas de lignes avec uniquement des espaces à la fin.
 
 S'il y a une erreur lors de la compilation \LaTeX, le programme python affichera le message d'erreur affiché par \LaTeX.
 
@@ -261,6 +261,10 @@ Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatique
 \mcmd{\oldsl}
 \mcmd{\sl{E}}
 \mcmd{\sl[n]{\mathbb{K}}}
+\mcmd{\orth{n}}
+\mcmd{\orth[n]{\mathbb{R}}}
+\mcmd{\so{n}}
+\mcmd{\so[n]{\mathbb{R}}}
 \hsection{Analyse.sty}
 Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automatiquement avec \Verb?Analyse.sty?.
 
