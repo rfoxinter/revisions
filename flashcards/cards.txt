@@ -26,7 +26,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ./Algebre2/DimensionFinie
 20230611110045
 ./Algebre2/EspacesPrehilbertiensReels
-20230624164738
+20230627182449
 ./Algebre2/GroupesSymetriques
 20230624163148
 ./Analyse/CalculAsymptotique
