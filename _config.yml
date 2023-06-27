@@ -18,7 +18,7 @@ defaults:
       sitemap: false
   -
     scope:
-      path: exos/**
+      path: exercices/**
     values:
       sitemap: false
   -
