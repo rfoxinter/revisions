@@ -106,7 +106,7 @@ def recompile(dest:str) -> bool:
 def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
     c(d(__file__))
     sh_quest, sh_qr, defs = b(r[1]), b(r[2]), r[3]
-    r = [r[i].split(';;') for i in range(4, len(r))]
+    r = list(filter(lambda x: x != [''], [r[i].split(';;') for i in range(4, len(r))]))
     if sh_qr:
         for i in r:
             sh(i)
