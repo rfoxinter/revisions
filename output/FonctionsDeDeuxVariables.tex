@@ -1,0 +1,29 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{analyse,matrices,structures}\let\phi\varphi
+\hypersetup{pdftitle=Analyse -- Fonctions de deux variables}
+\title{Analyse\\\emph{Fonctions de deux variables}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\nabla f\l X\r$}{1/8}
+\slider{$\tmatrix({\pder[][x]{f\l X\r}\\\pder[][y]{f\l X\r}\\})$}{1/8}
+\slideq{$\pder[][u]{f\l\phi\l u,v\r,\psi\l u,v\r\r}$}{2/8}
+\slider{$\pder[][x]{f\l\phi\l u,v\r,\psi\l u,v\r\r}\pder[][u]{\phi\l u,v\r}$\linebreak${}+\pder[][y]{f\l\phi\l u,v\r,\psi\l u,v\r\r}\pder[][u]{\psi\l u,v\r}$}{2/8}
+\slideq{Expression de la dérivée le long d'un vecteur $u=\tmatrix[][minimum width = 0pt]({a\\b\\})$ avec $\nabla$}{3/8}
+\slider{$D_u\l f\r=\la\nabla f\l X\r,u\ra$\linebreak${}=a\der[][x]{f\l X\r}+b\der[][y]{f\l X\r}$}{3/8}
+\slideq{Dérivée directionnelle}{4/8}
+\slider{$D_u\l f\r$ avec $u$ unitaire}{4/8}
+\slideq{Ligne de niveau de $f$ de hauteur $a$}{5/8}
+\slider{$\left\{\l x,y\r\in\mathbb R^2\;\middle|\;f\l x,y\r=a\right\}$}{5/8}
+\slideq{Règle de la chaîne}{6/8}
+\slider{Si $\gamma\l t\r=\l x\l t\r,y\l t\r\r$\linebreak$\der[][t]{f\l x\l t\r,y\l t\r\r}$\linebreak${}=x'\l t\r\pder[][x]{f\l\gamma\l t\r\r}+y'\l t\r\pder[][y]{f\l\gamma\l t\r\r}$\linebreak${}=\la\gamma'\l t\r,\nabla f\l\gamma\l t\r\r\ra$}{6/8}
+\slideq{Dérivée selon un vecteur $u$}{7/8}
+\slider{$D_u\l f\r=\der[][t]{f\l X+tu\r}$}{7/8}
+\slideq{DL}{8/8}
+\slider{À faire}{8/8}
+\end{document}
