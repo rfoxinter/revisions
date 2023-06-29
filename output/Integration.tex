@@ -1,0 +1,27 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{analyse}
+\hypersetup{pdftitle=Analyse -- Intégration}
+\title{Analyse\\\emph{Intégration}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Pas d'une subdivition $\sigma$}{1/7}
+\slider{$p\l\sigma\r=\max\limits_{i\in\llb0,n-1\rrb}\l\sigma_{i+1}-\sigma_i\r$}{1/7}
+\slideq{Relation de raffinement}{2/7}
+\slider{$\sigma\leqslant\tau\Leftrightarrow\tau\subset\sigma$}{2/7}
+\slideq{Fonctions en escalier}{3/7}
+\slider{$f\!:\!\left[a,b\right]\to\mathbb R$ est en escalier s'il existe $\sigma=\l a=\sigma_0<\cdots<\sigma_n=b\r$ telle que $f$ soit constante sur les $\left]\sigma_i,\sigma_{i+1}\right[$}{3/7}
+\slideq{Subdivision d'un intervalle $\left[a,b\right]$}{4/7}
+\slider{$\sigma=\l a=\sigma_0<\cdots<\sigma_n=b\r$}{4/7}
+\slideq{Structure de $\esc{\left[a,b\right]}$}{5/7}
+\slider{Sous-espace vectoriel de $\mathbb R^{\left[a,b\right]}$}{5/7}
+\slideq{Subdivision associée à $f\!:\!\left[a,b\right]\to\mathbb R$}{6/7}
+\slider{Subdivision de $\left[a,b\right]$ telle que $f$ soit constante sur les $\left]\sigma_i,\sigma_{i+1}\right[$}{6/7}
+\slideq{Intégrale d'une fonction en escalier}{7/7}
+\slider{$\int[x][a][b]{f\l x\r}=\sum{i=0}{n-1}{\l \sigma_{i+1}-\sigma_i\r f_i}$\linebreak$f_i=f\l \frac{\sigma_{i+1}+\sigma_i}{2}\r$, la valeur constante de $f$ sur $\left]\sigma_i,\sigma_{i+1}\right[$}{7/7}
+\end{document}

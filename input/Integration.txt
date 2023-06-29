@@ -1,0 +1,11 @@
+Analyse -- Intégration
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse}
+Subdivision d'un intervalle $\left[a,b\right]$;;$\sigma=\l a=\sigma_0<\cdots<\sigma_n=b\r$
+Pas d'une subdivition $\sigma$;;$p\l\sigma\r=\max\limits_{i\in\llb0,n-1\rrb}\l\sigma_{i+1}-\sigma_i\r$
+Relation de raffinement;;$\sigma\leqslant\tau\Leftrightarrow\tau\subset\sigma$
+Fonctions en escalier;;$f\!:\!\left[a,b\right]\to\mathbb R$ est en escalier s'il existe $\sigma=\l a=\sigma_0<\cdots<\sigma_n=b\r$ telle que $f$ soit constante sur les $\left]\sigma_i,\sigma_{i+1}\right[$
+Subdivision associée à $f\!:\!\left[a,b\right]\to\mathbb R$;;Subdivision de $\left[a,b\right]$ telle que $f$ soit constante sur les $\left]\sigma_i,\sigma_{i+1}\right[$
+Structure de $\esc{\left[a,b\right]}$;;Sous-espace vectoriel de $\mathbb R^{\left[a,b\right]}$
+Intégrale d'une fonction en escalier;;$\int[x][a][b]{f\l x\r}=\sum{i=0}{n-1}{\l \sigma_{i+1}-\sigma_i\r f_i}$\linebreak$f_i=f\l \frac{\sigma_{i+1}+\sigma_i}{2}\r$, la valeur constante de $f$ sur $\left]\sigma_i,\sigma_{i+1}\right[$
