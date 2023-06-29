@@ -1,7 +1,7 @@
 \RequirePackage{bigoperators}
 
-\DeclareMathOperator{\tmpd}{d}
-\newcommand{\oldd}{{\tmpd}}
+\DeclareMathOperator{\dd}{d}
+\newcommand{\oldd}{{\dd}}
 \newcommand{\der}[1][]{\def\argI{#1}\tmpder}
 \newcommand{\tmpder}[2][x]{\frac{\oldd^{\argI}}{\oldd#1^{\argI}}\l#2\r}
 \newcommand{\pder}[1][]{\def\argI{#1}\tmppder}
@@ -11,10 +11,12 @@
     \ifx&#1&
         \def\argI{}
     \else
-        \def\argI{{{}\tmpd}#1}
+        \def\argI{{{}\dd}#1}
     \fi\tmpint}
 \newcommand{\tmpint}[1][]{\def\argII{#1}\tmptmpint}
 \newcommand{\tmptmpint}[2][]{\displaystyle{\oldint_{\argII}^{#1}}\l#2\r\argI}
 \newcommand{\eval}[1][]{\def\argI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\argI}^{#1}}
 \newcommand{\serie}[1]{\oldsum#1}
+\DeclareMathOperator{\oldesc}{Esc}
+\newcommand{\esc}[1]{\oldesc\l#1\r}
