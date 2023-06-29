@@ -84,7 +84,7 @@ function display_files(sitemap){
                 span2.setAttribute('class','material-symbols-rounded');
                 span2.innerHTML = 'download';
                 a2.appendChild(span2);
-                a2.setAttribute('download', filename + '.pdf');
+                a2.setAttribute('download', 'pdf/' + filename + '.pdf');
                 p.appendChild(a2);
             } else {
                 p = document.getElementById(name_tmp);
