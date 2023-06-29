@@ -41,8 +41,12 @@ https://rfoxinter.github.io/revisions/flashcards/
 20230421202700
 ./Analyse/FonctionsC0OuD1
 20230601234345
+./Analyse/FonctionsDeDeuxVariables
+20230629204846
 ./Analyse/FonctionsUsuelles
 20230611184548
+./Analyse/Integration
+20230629211820
 ./Analyse/SeriesNumeriques
 20230616155023
 ./Analyse/SuitesNumeriques
