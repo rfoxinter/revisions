@@ -196,20 +196,22 @@ Exemple de fiches : \href{https://github.com/rfoxinter/revisions/tree/main/input
 \subsection{Visionner les flashcards en svg (Htmlcards)}
 Pour pouvoir visionner les flashcards exportées en svg, il faut disposer d'un serveur web (comme \href{https://github.com/}{github} avec \href{https://pages.github.com/}{github pages}) sur lequel on met le dossier généré par \texttt{Htmlcards.py} (on suppose que l'url est \texttt{https://example.fr/dossier}).
 
-Il faut alors convertir l'url du dossier en base 64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}}, avec la fonction \texttt{btoa} de JavaScript ou avec la  fonction Python \texttt{base64.b64encode}). Dans l'exemple, en exécutant le code Python suivant
+Il faut alors convertir l'url du dossier en base64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}}, avec la fonction \texttt{btoa} de JavaScript ou avec la  fonction Python \texttt{base64.b64encode}) en enlevant les \Verb?=? à la fin. Dans l'exemple, en exécutant le code Python suivant
 \begin{Verbatim}[vspace=0pt]
-import base64
+from base64 import b64encode # encoder en base64
+from re import sub # remplacer tous les "=" finaux
 url = "https://example.fr/dossier"
-print(base64.b64encode(url.encode()).decode())
+base64url = sub("=", "", b64encode(url.encode()).decode())
+print(base64url)
 \end{Verbatim}
 
 on obtient \Verb?aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI=?.
 
-Il faut alors aller sur le site \href{https://rfoxinter.github.io/revisions/flashcards/?file=}{\texttt{https://rfoxinter.github.io/revisions/flashcards/}} en rajoutant à la fin de l'url \texttt{?file=nom\_du\_dossier} où le nom du dossier correspond à celui en base 64.
+Il faut alors aller sur le site \href{https://rfoxinter.github.io/revisions/flashcards/?file=}{\texttt{https://rfoxinter.github.io/revisions/flashcards/}} en rajoutant à la fin de l'url \texttt{?file=nom\_du\_dossier} où le nom du dossier correspond à celui en base64.
 
 Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/revisions/flashcards/}
 
-\texttt{~~~~?file=aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI=}
+\hfill\texttt{?file=aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI}
 \subsection{Télécharger des Htmlcards depuis le site}
 Il est possible de faire en sorte que les cartes téléchargées puissent être mises à jour en ajoutant un fichier \texttt{cards.txt} à la racine du dossier des Htmlcards. Ce fichier doit contenir l'adresse à laquelle il est stocké en première ligne, puis plusieurs lignes contenant le chemin vers une Htmlcard à partir de l'url en première ligne, puis la date de dernière mise à jour du dossier (au format \Verb?%YYYY%MM%dd%hh%mm%ss? (année, mois, jour, heure, minutes, secondes)).
 
