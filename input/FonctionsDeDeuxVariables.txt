@@ -1,7 +1,7 @@
 Analyse -- Fonctions de deux variables
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{analyse,matrices,structures}\let\phi\varphi
+\usepackage{analyse,matrices,structures,equivalents}\let\phi\varphi
 $\nabla f\l X\r$;;$\tmatrix({\pder[][x]{f\l X\r}\\\pder[][y]{f\l X\r}\\})$
 Règle de la chaîne;;Si $\gamma\l t\r=\l x\l t\r,y\l t\r\r$\linebreak$\der[][t]{f\l x\l t\r,y\l t\r\r}$\linebreak${}=x'\l t\r\pder[][x]{f\l\gamma\l t\r\r}+y'\l t\r\pder[][y]{f\l\gamma\l t\r\r}$\linebreak${}=\la\gamma'\l t\r,\nabla f\l\gamma\l t\r\r\ra$
 $\pder[][u]{f\l\phi\l u,v\r,\psi\l u,v\r\r}$;;$\pder[][x]{f\l\phi\l u,v\r,\psi\l u,v\r\r}\pder[][u]{\phi\l u,v\r}$\linebreak${}+\pder[][y]{f\l\phi\l u,v\r,\psi\l u,v\r\r}\pder[][u]{\psi\l u,v\r}$
@@ -9,4 +9,8 @@ Ligne de niveau de $f$ de hauteur $a$;;$\left\{\l x,y\r\in\mathbb R^2\;\middle|\
 Dérivée selon un vecteur $u$;;$D_u\l f\r=\der[][t]{f\l X+tu\r}$
 Expression de la dérivée le long d'un vecteur $u=\tmatrix[][minimum width = 0pt]({a\\b\\})$ avec $\nabla$;;$D_u\l f\r=\la\nabla f\l X\r,u\ra$\linebreak${}=a\der[][x]{f\l X\r}+b\der[][y]{f\l X\r}$
 Dérivée directionnelle;;$D_u\l f\r$ avec $u$ unitaire
-DL;;À faire
+DL d'une fonction de deux variables;;$f\l X_0+H\r=P\l h,k\r+\o{\left\|H\right\|^n}$
+DL\textsubscript{1} de $f\l x,y\r$ au voisinage de $X_0$;;$f\l X_0\r+\l x-x_0\r\pder{f\l X_0\r}$\linebreak${}+\l y-y_0\r\pder[][y]{f\l X_0\r}$\linebreak${}=f\l X_0\r+\la X-X_0,\nabla f\l X_0\r\ra+\o{\left\|X-X_0\right\|}$
+Extremum local\linebreak Extremum global;;Maximum local :\linebreak$\forall X\in D\subset\mathbb R^2,\;f\l X\r\leqslant f\l X_0\r$\linebreak Maximum global :\linebreak$\exists V\in\mathcal V\l X_0\r,\;\forall X\in D\cap V,\;f\l X\r\leqslant f\l X_0\r$\linebreak Extremum : maximum ou minimum
+Condition nécessaire pour un extremum local;;$\nabla f\l X_0\r=0$
+Point critique;;$\nabla f\l X_0\r=0$
