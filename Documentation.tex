@@ -280,8 +280,8 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \vspace{0.5cm}
 
 \mhd
-\mcmd[\footnotemark]{\oldd}
-\footnotetext{$\oldd$ de dérivation}
+\mcmd[\footnotemark]{\dd}
+\footnotetext{$\dd$ de dérivation}
 \mcmd{\der{f(x)}}
 \mcmd{\der[n]{f(x)}}
 \mcmd{\der[][t]{f(t)}}
@@ -298,7 +298,10 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \mcmd{\int[][a][b]{f'}}
 \mcmd{\eval[{[a,b]}]{f(t)}}
 \mcmd{\eval[a][b]{f(t)}}
-\mcmd{\serie{a_n}}
+\mcmd[\footnotemark]{\serie{a_n}}
+\footnotetext{Comme \hyperlink{section.6}{\texttt{BigOperators.sty}} est chargé, la commande \Verb?\sum? est remplacée et il est nécessaire de taper \Verb?\oldsum? pour obtenir $\oldsum$}
+\mcmd{\oldesc}
+\mcmd{\esc{\left[a,b\right]}}
 \hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
