@@ -14,6 +14,8 @@
 \makeatother
 \SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
 \usepackage{fvextra}
+\usepackage{minted}
+\usemintedstyle{perso}
 \setlength{\parindent}{0pt}
 \hypersetup{hidelinks,colorlinks=true,linkcolor=black,linktoc=all,urlcolor=blue}
 \setcounter{secnumdepth}{5}
@@ -52,7 +54,7 @@
     \begin{minipage}{0.475\linewidth}
         \begin{center}
             \vspace{2pt}
-            \Verb?#2?#1
+            \mintinline{latexmath}?#2?#1
 
             \vspace{2pt}
         \end{center}
@@ -73,7 +75,7 @@
     \begin{minipage}{0.475\linewidth}
         \begin{center}
             \vspace{2pt}
-            \Verb?#2?#1
+            \mintinline{latexmath}?#2?#1
 
             \vspace{2pt}
         \end{center}
@@ -94,37 +96,37 @@
 \maketitle
 Le package \texttt{Preambule.sty}\footnote{Pour utiliser avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}} ou \texttt{HTMLPreambule.sty}\footnote{Pour les documents autres que \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}} doit être chargé pour pouvoir utiliser les autres qui sont donnés ci-dessous.
 
-Les fichiers \Verb?.sty? doivent être placés dans le même répertoire que le fichier \Verb?.tex? qui est utilisé.
+Les fichiers \texttt{.sty} doivent être placés dans le même répertoire que le fichier \texttt{.tex} qui est utilisé.
 
-Pour charger un package (par exemple \Verb?NomDuPackage.sty?), il faut utiliser la commande \Verb?\usepackage{nomdupackage}? avant \Verb?\begin{document}?.
+Pour charger un package (par exemple \texttt{NomDuPackage.sty}), il faut utiliser la commande \mintinline{latex}?\usepackage{nomdupackage}? avant \mintinline{latex}?\begin{document}?.
 
 \vspace{0.5cm}
 
 En utilisant \texttt{Preambule.sty} ou \texttt{HTMLPreambule.sty}, les packages suivant seront chargés:
 \begin{itemize}
     \renewcommand{\labelitemi}{$\to$}
-    \item \Verb?\usepackage[utf8]{inputenc}?
-    \item \Verb?\usepackage[french]{babel}?
-    \item \Verb?\usepackage[T1]{fontenc}?
-    \item \Verb?\usepackage{amsmath, amsfonts, amssymb}?
-    \item \Verb?\usepackage{stmaryrd}?
-    \item \Verb?\usepackage{adjustbox}? (pour \texttt{HTMLPreambule.sty})
-    \item \Verb?\usepackage{xcolor}? (pour \texttt{Preambule.sty})
+    \item \mintinline{latex}?\usepackage[utf8]{inputenc}?
+    \item \mintinline{latex}?\usepackage[french]{babel}?
+    \item \mintinline{latex}?\usepackage[T1]{fontenc}?
+    \item \mintinline{latex}?\usepackage{amsmath, amsfonts, amssymb}?
+    \item \mintinline{latex}?\usepackage{stmaryrd}?
+    \item \mintinline{latex}?\usepackage{adjustbox}? (pour \texttt{HTMLPreambule.sty})
+    \item \mintinline{latex}?\usepackage{xcolor}? (pour \texttt{Preambule.sty})
 \end{itemize}
 
 \vspace{0.5cm}
-Il est nécessaire que \texttt{cm-super} soit installé (disponible sur \href{https://ctan.org/pkg/cm-super}{CTAN}) pour pouvoir utiliser \texttt{Preambule.sty}. Pour ne pas avoir à installer \texttt{cm-super}, il est possible de commenter les lignes \Verb?\usepackage{sffont}? et \Verb?\renewcommand{\sfdefault}{cmssp}? du fichier \texttt{Preambule.sty} en mettant \Verb?%? au début de chacune de ces lignes (numéro 10 et 11).
+Il est nécessaire que \texttt{cm-super} soit installé (disponible sur \href{https://ctan.org/pkg/cm-super}{CTAN}) pour pouvoir utiliser \texttt{Preambule.sty}. Pour ne pas avoir à installer \texttt{cm-super}, il est possible de commenter les lignes \mintinline{latex}?\usepackage{sffont}? et \mintinline{latex}?\renewcommand{\sfdefault}{cmssp}? du fichier \texttt{Preambule.sty} en mettant \mintinline{latex}?%? au début de chacune de ces lignes (numéro 10 et 11).
 
-Lors de l'utilisation de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} (avec une police sans-sérif), il est possible d'utiliser les commandes avec les polices sans-serif, sauf pour les lettres grecques ($\Omega$, $\oldphi$, $\phi$, \dots), la redéfinition du $l$ en mathématiques, les alphabets \Verb?\mathcal? et \Verb?\mathbb? ainsi que les symboles.
+Lors de l'utilisation de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} (avec une police sans-sérif), il est possible d'utiliser les commandes avec les polices sans-serif, sauf pour les lettres grecques ($\Omega$, $\oldphi$, $\phi$, \dots), la redéfinition du $l$ en mathématiques, les alphabets \mintinline{latexmath}?\mathcal? et \mintinline{latexmath}?\mathbb? ainsi que les symboles.
 
-Il est possibles de changer les polices de caractères/symboles en important des packages après \Verb?\usepackage{preambule}?. Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
+Il est possibles de changer les polices de caractères/symboles en important des packages après \mintinline{latex}?\usepackage{preambule}?. Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
 
-Il n'est pas possible d'utiliser en simultané le package \Verb?Dsfont.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\Verb?Dsft.sty? } décrit ci-dessous. De plus, la commande \Verb?\1? ne sera pas modifiée si un package définissant \Verb?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \Verb?\newcommand\1[1]{\mathbb{1}_{#1}}? (si \texttt{Dsft.sty} n'est pas importé) ou \Verb?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
+Il n'est pas possible d'utiliser en simultané le package \texttt{Dsfont.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\texttt{Dsft.sty}} décrit ci-dessous. De plus, la commande \mintinline{latexmath}?\1? ne sera pas modifiée si un package définissant \mintinline{latexmath}?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \mintinline{latex}?\newcommand\1[1]{\mathbb{1}_{#1}}? (si \texttt{Dsft.sty} n'est pas importé) ou \mintinline{latex}?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
 
 \vspace{0.5cm}
 
 Il est possible de redéfinir le $l$ à sa version d'origine ($\oldl$) avec:
-\phantomsection\label{ldef}\begin{Verbatim}[vspace=0pt]
+\phantomsection\label{ldef}\vspace{-\abovedisplayskip}\begin{minted}{latex}
 \mathcode`l="8000
 \begingroup
 \makeatletter
@@ -133,18 +135,20 @@ Il est possible de redéfinir le $l$ à sa version d'origine ($\oldl$) avec:
 \lowercase{\gdef~{\lsb@l}}%
 \endgroup
 \makeatother
-\end{Verbatim}
+\end{minted}
+\vspace{-\belowdisplayskip}
 
 \vspace{0.5cm}
 
-Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.17}{\Verb?Usuelles.sty?}} :
-\begin{Verbatim}[vspace=0pt]
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.17}{\texttt{Usuelles.sty}}} :
+\vspace{-\abovedisplayskip}\begin{minted}{latex}
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
-\end{Verbatim}
-\Verb?\l? et \Verb?\r? sont définis dans \hyperlink{section.2}{Preambule.sty et HTMLPreambule.sty}.
+\end{minted}
+\vspace{-\belowdisplayskip}
+\mintinline{latexmath}?\l? et \mintinline{latexmath}?\r? sont définis dans \hyperlink{section.2}{Preambule.sty et HTMLPreambule.sty}.
 
-La commande \Verb?$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$? donne donc\linebreak$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$.
+La commande \mintinline{latex}?$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$? donne donc\linebreak$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$.
 
 \vspace{0.5cm}
 
@@ -167,6 +171,12 @@ Pour pouvoir créer des fiches de révision, il faut mettre un fichier \texttt{.
 Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \Verb?python Flashcards.py --file=fiche? (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \Verb?--n=nombre? (avec le nombre d'exemplaires), \Verb?--dest=dossier? (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \Verb?--open=True/False? (pour ouvrir le dossize où le \texttt{.pdf} est produit).
 \subsection{Htmlcards.py}
 Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \Verb?python Flashcards.py --file=fiche? (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \Verb?--dest=dossier? (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \Verb?--open=True/False? (pour ouvrir le dossize où le \texttt{.pdf} est produit).
+
+Modifier la valeur de \texttt{--dest} peut rendre inutilisable certaines fonctions liées au site pour visualiser les fiches.
+\subsection{Les options spéciales}
+Il est possible de compiler l'ensemble des fichiers du fichier à compiler \texttt{input} en mettant \texttt{\_\_compile\_all\_\_} comme nom de fichier.
+
+Il est également possible de recompiler les Flashcards en utilisant \texttt{\_\_recompile\_\_} comme nom de fichier.
 \subsection{Les fiches .txt}
 Pour faire des fiches, il faut créer un fichier \texttt{.txt} de la forme
 \begin{Verbatim}[vspace=0pt]
@@ -221,24 +231,24 @@ Un exemple de fichier python générant un tel fichier est disponible à l'adres
 \ssection[Preambule.sty et HTMLPreambule.sty]{\href{https://rfoxinter.github.io/revisions/output/Preambule.sty}{\color{black}Preambule.sty} et \href{https://rfoxinter.github.io/revisions/output/HTMLPreambule.sty}{\color{black}HTMLPreambule.sty}}
 \mhd
 \mmcmd[\footnotemark]{\l}{$\l\right.$}
-\footnotetext{Correspond à la commande usuelle \Verb?\left(?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left(?}
 \mmcmd[\footnotemark]{\r}{$\left.\r$}
-\footnotetext{Correspond à la commande usuelle \Verb?\right)?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right)?}
 \mmcmd[\footnotemark]{\llb}{$\llb\right.$}
-\footnotetext{Correspond à la commande usuelle \Verb?\left\llbracket?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left\llbracket?}
 \mmcmd[\footnotemark]{\rrb}{$\left.\rrb$}
-\footnotetext{Correspond à la commande usuelle \Verb?\right\rrbracket?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right\rrbracket?}
 \mcmd[\footnotemark]{\oldfrac{a}{b}}
-\footnotetext{Correspond à la commande usuelle \Verb?\frac?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\frac?}
 \mcmd[\footnotemark]{\frac{a}{b}}
-\footnotetext{Correspond à la commande usuelle \Verb?\dfrac?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\dfrac?}
 \mcmd[\footnotemark]{l}
-\footnotetext{Correspond à la commande usuelle \Verb?\ell?\\Le $l$ peut être redéfini en $\oldl$ avec le code donné \hyperref[ldef]{ici}}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ell?\\Le $l$ peut être redéfini en $\oldl$ avec le code donné dans l'\hyperref[ldef]{introduction}}
 \mcmd[\footnotemark]{\oldvec{x}}
-\footnotetext{Correspond à la commande usuelle \Verb?\vec?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\vec?}
 \mcmd{\vec{AB}}
 \mcmd[\footnotemark]{\overrightarrow{AB}}
-\footnotetext{Le résultat est le même qu'avec \Verb?\vec?}
+\footnotetext{Le résultat est le même qu'avec \mintinline{latexmath}?\vec?}
 \hsection{AL.sty}
 Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatiquement avec \Verb?AL.sty?.
 
@@ -250,12 +260,12 @@ Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatique
 \mcmd{\al{E}{}}
 \mcmd{\al{E}{F}}
 \mcmd[\footnotemark]{\oplus}
-\footnotetext{Le \Verb?\oplus? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\Verb?stmaryrd?}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \Verb?\let\oldoplus\oplus? avant \Verb?\usepackage{al}? puis de faire \Verb?\let\oplus\oldoplus? après importation\\Comparaison \LaTeX~- \href{https://ctan.org/pkg/stmaryrd}{\color{black}\Verb?stmaryrd?} avec le plus normal $\oldoplus\oplus+$}
+\footnotetext{Le \mintinline{latexmath}?\oplus? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\Verb?stmaryrd?}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \Verb?\let\oldoplus\oplus? avant \Verb?\usepackage{al}? puis de faire \Verb?\let\oplus\oldoplus? après importation\\Comparaison \LaTeX~- \href{https://ctan.org/pkg/stmaryrd}{\color{black}\Verb?stmaryrd?} avec le plus normal $\oldoplus\oplus+$}
 \mcmd[\footnotemark]{\matgl{n}{\mathbb{K}}}
-\footnotetext{Le \Verb?\matgl? de \Verb?AL.sty? correspond à la commande \Verb?\gl? de \hyperlink{section.10}{\Verb?Matrices.sty?} qui a été renommé}
+\footnotetext{Le \mintinline{latexmath}?\matgl? de \Verb?AL.sty? correspond à la commande \mintinline{latexmath}?\gl? de \hyperlink{section.10}{\Verb?Matrices.sty?} qui a été renommé}
 \mcmd{\gl{E}}
 \mcmd[\footnotemark]{\olddim}
-\footnotetext{Correspond à la commande usuelle \Verb?\dim?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\dim?}
 \mcmd{\dim{E}}
 \mcmd{\oldrg}
 \mcmd{\rg{u}}
@@ -263,7 +273,7 @@ Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatique
 \mcmd{\tr{u}}
 \mcmd{\oldmat}
 \mcmd[\footnotemark]{\almat{u}{\mathcal{B}}{}}
-\footnotetext{Ne pas confondre cette commande avec \Verb?\mat? de \hyperlink{section.10}{\Verb?Matrices.sty?}}
+\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.10}{\Verb?Matrices.sty?}}
 \mcmd{\almat{u}{\mathcal{B}}{\mathcal{C}}}
 \mmcmd{\lc}{$\lc\right.$}
 \mmcmd{\rc}{$\left.\rc$}
@@ -287,68 +297,68 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \mcmd{\der[][t]{f(t)}}
 \mcmd{\der[n][t]{f(t)}}
 \mcmd[\footnotemark]{\pder{f(x)}}
-\footnotetext{On peut appliquer les mêmes arguments optionnels que pour \Verb?\der?}
+\footnotetext{On peut appliquer les mêmes arguments optionnels que pour \mintinline{latexmath}?\der?}
 \mcmd[\footnotemark]{\oldint}
-\footnotetext{Correspond à la commande usuelle \Verb?\int?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\int?}
 \mcmd{\int{f}}
 \mcmd{\int[t]{f(t)}}
 \mcmd[\footnotemark]{\int[t][{[a,b]}]{f(t)}}
-\footnotetext{L'argument \Verb?[a,b]? doit être mis entre accolades pour être traîté correctement par \LaTeX}
+\footnotetext{L'argument \mintinline{latexmath}?[a,b]? doit être mis entre accolades pour être traîté correctement par \LaTeX}
 \mcmd{\int[t][a][b]{f(t)}}
 \mcmd{\int[][a][b]{f'}}
 \mcmd{\eval[{[a,b]}]{f(t)}}
 \mcmd{\eval[a][b]{f(t)}}
 \mcmd[\footnotemark]{\serie{a_n}}
-\footnotetext{Comme \hyperlink{section.6}{\texttt{BigOperators.sty}} est chargé, la commande \Verb?\sum? est remplacée et il est nécessaire de taper \Verb?\oldsum? pour obtenir $\oldsum$}
+\footnotetext{Comme \hyperlink{section.6}{\texttt{BigOperators.sty}} est chargé, la commande \mintinline{latexmath}?\sum? est remplacée et il est nécessaire de taper \mintinline{latexmath}?\oldsum? pour obtenir $\oldsum$}
 \mcmd{\oldesc}
 \mcmd{\esc{\left[a,b\right]}}
 \hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
-\footnotetext{Correspond à la commande usuelle \Verb?\div?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\div?}
 \mcmd[\footnotemark]{\div}
-\footnotetext{Correspond à la commande usuelle \Verb?\mid?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\mid?}
 \mcmd{\cgr{a}{b}{n}}
 \mcmd[\footnotemark]{\oldphi}
-\footnotetext{Correspond à la commande usuelle \Verb?\phi?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\phi?}
 \mcmd[\footnotemark]{\phi}
-\footnotetext{Correspond à la commande usuelle \Verb?\varphi?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\varphi?}
 \hsection{BigOperators.sty}
 \mhd
 \mcmd[\footnotemark]{\oldsum}
-\footnotetext{Correspond à la commande usuelle \Verb?\sum?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\sum?}
 \mcmd{\sum{n=0}{+\infty}{u_n}}
 \mcmd[\footnotemark]{\oldprod}
-\footnotetext{Correspond à la commande usuelle \Verb?\prod?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\prod?}
 \mcmd{\prod{n=0}{+\infty}{u_n}}
 \mcmd[\footnotemark]{\oldcap}
-\footnotetext{Correspond à la commande usuelle \Verb?\bigcap?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\bigcap?}
 \mcmd{\bigcap{n=0}{+\infty}{A_n}}
 \mcmd[\footnotemark]{\oldcup}
-\footnotetext{Correspond à la commande usuelle \Verb?\bigcup?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\bigcup?}
 \mcmd{\bigcup{n=0}{+\infty}{A_n}}
 \mcmd[\footnotemark]{\olduplus}
-\footnotetext{Correspond à la commande usuelle \Verb?\biguplus?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\biguplus?}
 \mcmd{\biguplus{n=0}{+\infty}{A_n}}
 \mcmd{\bigop{n=0}{+\infty}{E_n}}
 \hsection{Complexes.sty}
 \mhd
 \mcmd[\footnotemark]{\oldbar{z}}
-\footnotetext{Correspond à la commande usuelle \Verb?\bar?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\bar?}
 \mcmd[\footnotemark]{\bar{z}}
-\footnotetext{Se comporte comme \Verb?\overline?}
+\footnotetext{Se comporte comme \mintinline{latexmath}?\overline?}
 \mcmd[\footnotemark]{\e}
 \footnotetext{$\e$ de la fonction exponentielle}
 \mcmd[\footnotemark]{\i}
-\footnotetext{$\i$ complexe\\L'ancienne commande \Verb?\i? s'obtient avec \Verb?\ii?}
+\footnotetext{$\i$ complexe\\L'ancienne commande \mintinline{latex}?\i? s'obtient avec \mintinline{latex}?\ii?}
 \mcmd[\footnotemark]{\j}
-\footnotetext{$\j=\e^{\oldfrac{2\i\pi}{3}}$\\L'ancienne commande \Verb?\j? s'obtient avec \Verb?\jj?}
+\footnotetext{$\j=\e^{\oldfrac{2\i\pi}{3}}$\\L'ancienne commande \mintinline{latex}?\j? s'obtient avec \mintinline{latex}?\jj?}
 \mcmd[\footnotemark]{\oldIm}
-\footnotetext{Correspond à la commande usuelle \Verb?\Im?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\Im?}
 \mcmd{\Im}
 \mcmd{\pIm{x}}
 \mcmd[\footnotemark]{\oldRe}
-\footnotetext{Correspond à la commande usuelle \Verb?\Re?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\Re?}
 \mcmd{\Re}
 \mcmd{\pRe{x}}
 \subsection{Dessiner des arcs}
@@ -440,25 +450,30 @@ $\det M=\tmatrix|{a\&b\\c\&d\\}|$ est produit par \Verb?$\det{M}=\tmatrix|{a\&b\
 
 $I_{n,p,r}=\tmatrix[\mtxvline{line width = 0.05em}{1}\mtxhline{line width = 0.05em}{1}][minimum height = 5ex, row sep = 1ex,minimum width = 5ex, column sep = 1ex,]({I_r\&0_{r,p-r}\\0_{n-r,r}\&0_{n-r,p-r}\\})$ est produit par
 \begin{Verbatim}[vspace=0pt]
-$I_{n,p,r}=\tmatrix
+$
+I_{n,p,r}=\tmatrix
     [\mtxvline{line width = 0.05em}{1}\mtxhline{line width = 0.05em}{1}]
     [minimum height = 5ex, row sep = 1ex, minimum width = 5ex,
         column sep = 1ex,]
-    ({I_r\&0_{r,p-r}\\0_{n-r,r}\&0_{n-r,p-r}\\})$
+    ({I_r\&0_{r,p-r}\\0_{n-r,r}\&0_{n-r,p-r}\\})
+$
 \end{Verbatim}
 
 \vspace{0.25cm}
 
 $\tmatrix[\mtxbox{red, dashed}{1}{1}\mtxbox{teal, dotted, ultra thick}{2}{2}\mtxbox{}{4}{4}][minimum height = 5ex, minimum width = 5ex, row sep = 10pt,inner sep = 5pt, column sep = 10pt,]{{[}}{A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\0\&0\&0\&A_n\\}{\}}$ est produit par
 \begin{Verbatim}[breaklines,breakafter=\&,breakaftersymbolpre=,breaksymbol=~~~~,curlyquotes,vspace=0pt]
-$\tmatrix
+$
+\tmatrix
     [\mtxbox{red, dashed}{1}{1}\mtxbox{teal, dotted,
         ultra thick}{2}{2}\mtxbox{}{4}{4}]
     [minimum height = 5ex, minimum width = 5ex, row sep = 10pt,
         inner sep = 5pt, column sep = 10pt,]
     {{[}} % Le crochet est entouré de deux paires d'accolades
     {A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\
-        0\&0\&0\&A_n\\}{\}}$
+        0\&0\&0\&A_n\\}
+    {\}}
+$
 \end{Verbatim}
 \hsection{Polynomes.sty}
 \mhd
