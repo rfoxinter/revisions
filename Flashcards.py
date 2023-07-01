@@ -175,11 +175,44 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
         fail = True
     return fail
 
+def compile(dest:str) -> bool:
+    fail = False
+    files = sorted(l('input/'))
+    olddest = dest
+    for f in files:
+        f = f.replace('.txt','')
+        c(d(__file__))
+        try:
+            r = open('input/' + f + '.txt', 'r', encoding='utf-8').read().split('\n')
+        except OSError:
+            raise RuntimeError('File not found')
+        t, ttle = '', ''
+        if '!ttle' in r[0]:
+            ttle, t = r[0].split('!!ttle')
+        else:
+            t = r[0]
+            ttle = t.split('--')
+            if len(ttle) == 1:
+                ttle = ttle[0].title()
+            else:
+                ttle = ttle[1].title()
+            ttle = remove_special_chars(ttle)
+        if dest == 'default':
+            dest = t.split('--')
+            if len(dest) == 1:
+                dest = 'flashcards/'
+            else:
+                dest = 'flashcards/' + remove_special_chars(dest[0].title()) + '/'
+        fail &= gen_latex(r, t, ttle, dest)
+        dest = olddest
+
 def main(file_path:str, file:str, n:int, dest:str, _open:bool) -> bool:
     c(d(__file__))
     fail = False
     if file == '__recompile__':
         return recompile(dest)
+    if file == '__compile_all__':
+        return compile(dest)
     c(d(rp(file_path)))
     if file == '':
         file = input('File to compile : ')
