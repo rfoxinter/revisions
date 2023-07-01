@@ -12,6 +12,7 @@
     <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/main.css'>
     <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/normalize.css'>
     <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/style.css'>
+    <script type="text/javascript" src="huffman.js"></script>
     <style>
         svg {
             max-width: 100%;
@@ -201,15 +202,13 @@
             );
         }
         function repall(value, index, array) {
-            return value.replaceAll('\n', '');
+            return value.replaceAll('\r', '').replaceAll('\n', '');
         }
         function download() {
             var date = new Date;
             var a = document.createElement('a');
-            var text = lst.join('\n') + '\n' + arr.map(repall).map(x => btoa(unescape(encodeURIComponent(x)))).join(';') + '\n' + date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + date.getDate() + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0') + '\n' + btoa(title) + '\n' + absolute(atob(file) + (title.includes('&ndash;')?'/../..':'/..')) + 'cards.txt' + '\n' + file;
-            a.href = window.URL.createObjectURL(new Blob([text], {type: 'text/plain'}));
-            a.download = toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')).replaceAll(' ', '') + '.txt';
-            a.click();
+            var text = lst[0].replaceAll('"', '') + '\n' + lst[1] + '\n' + lst[2] + '\n' + lst[3].replaceAll(' ', '') + '\n' + lst[4].replaceAll(' ', '') + '\n' + arr.map((x,i,a) => x.replaceAll('\r', '').replaceAll('\n', '')).map(x => unescape(encodeURIComponent(x))).join('\n') + '\n' + date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + date.getDate() + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0') + '\n' + btoa(title) + '\n' + absolute(atob(file) + (title.includes('&ndash;')?'/../..':'/..')) + 'cards.txt' + '\n' + file;
+            compress(text,toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')).replaceAll(' ', '') + '.txt');
 
         }
         function _close() {
@@ -297,18 +296,21 @@
             if (document.getElementById('open').value != '') {
                 fl.onload = function(){
                     try {
-                        fl = fl.result.split('\n');
-                        title = fl[0].substring(fl[0].indexOf('\"') + 1, fl[0].lastIndexOf('\"'));
+                        fl = deflate(fl.result).split('\n');
+                        title = fl[0];
                         sh_quest = parseInt(fl[1]);
                         sh_qr = parseInt(fl[2]);
-                        n = fl[3].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
-                        fst = fl[4].replace(']', '').replace('[', '').split(', ').map(x => parseInt(x));
-                        arr = fl[5].split(';').map(x => decodeURIComponent(escape(atob(x))));
-                        filedate = parseInt(fl[6]);
-                        filename = fl[9];
-                        syncurl = fl[8];
+                        n = fl[3].replace(']', '').replace('[', '').split(',').map(x => parseInt(x));
+                        fst = fl[4].replace(']', '').replace('[', '').split(',').map(x => parseInt(x));
+                        arr = new Array(2*n.length);
+                        for (let i = 0; i < 2*n.length; ++i) {
+                            arr[i] = decodeURIComponent(escape(fl[5+i]));
+                        }
+                        filedate = parseInt(fl[5+2*n.length]);
+                        filename = fl[8+2*n.length];
+                        syncurl = fl[7+2*n.length];
                         
-                        if (fl[7] != btoa(title)) {
+                        if (fl[6+2*n.length] != btoa(title)) {
                             throw new Error('Fichier corrompu')
                         }
                         document.getElementById('up-button').innerHTML = 'close';
