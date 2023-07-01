@@ -162,7 +162,7 @@ def recompile(dest:str) -> bool:
 def main(file_path:str, file:str, dest:str, _open:bool) -> bool:
     c(d(__file__))
     fail = False
-    if file == '__recompile__':
+    if file == '__compile_all__':
         return recompile(dest)
     c(d(rp(file_path)))
     if file == '':
