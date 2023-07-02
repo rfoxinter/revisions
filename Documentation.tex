@@ -4,6 +4,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{namecolour}{HTML}{0028BA}
 \hypersetup{pdftitle=Documentation}
 \newcommand{\tikzlg}{\href{https://ctan.org/pkg/tikz}{\color{black}Ti\textit{k}Z}}
 \let\oldoplus\oplus
@@ -13,7 +15,6 @@
 \newcommand{\oldl}{\lsb@l}
 \makeatother
 \SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
-\usepackage{fvextra}
 \usepackage{minted}
 \usemintedstyle{perso}
 \setlength{\parindent}{0pt}
@@ -91,6 +92,42 @@
     \end{minipage}
     \hfill\vline\hrule
 }
+\newcommand{\nmcmd}[3][]{
+    \vline\hfill
+    \begin{minipage}{0.475\linewidth}
+        \begin{center}
+            \vspace{2pt}
+            \mintinline{latex}?#2?#1
+
+            \vspace{2pt}
+        \end{center}
+    \end{minipage}
+    \hfill\vline\hfill
+    \begin{minipage}{0.475\linewidth}
+        \vspace{2pt}
+        #3
+        
+        \vspace{2pt}
+    \end{minipage}
+    \hfill\vline\hrule
+}
+\newcommand{\mln}[2]{
+    \vline\hfill
+    \begin{minipage}{0.475\linewidth}
+        \vspace{2pt}
+        #1
+
+        \vspace{2pt}
+    \end{minipage}
+    \hfill\vline\hfill
+    \begin{minipage}{0.475\linewidth}
+        \vspace{2pt}
+        #2
+        
+        \vspace{2pt}
+    \end{minipage}
+    \hfill\vline\hrule
+}
 
 \begin{document}
 \maketitle
@@ -148,13 +185,13 @@ Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\old
 \vspace{-\belowdisplayskip}
 \mintinline{latexmath}?\l? et \mintinline{latexmath}?\r? sont définis dans \hyperlink{section.2}{Preambule.sty et HTMLPreambule.sty}.
 
-La commande \mintinline{latex}?$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$? donne donc\linebreak$\sup{\left\{x\in\mathbb{Q}\;\sq\;x^2<2\right\}}$.
+La commande \mintinline{latex}?$\sup{\left\{x\in\mathbb{Q}\;\middle|\;x^2<2\right\}}$? donne : $\sup{\left\{x\in\mathbb{Q}\;\middle|\;x^2<2\right\}}$.
 
 \vspace{0.5cm}
 
 L'ensembles des titres des sections (et sous-sections si le fichier n'est pas déjà dans une section) sont des liens qui pointent vers les fichiers en ligne pour un téléchargement direct.
 
-Il est aussi possible de télécharger la version la plus récente de ce fichier en cliquant sur le titre.
+Il est aussi possible de télécharger la version la plus récente de ce fichier en cliquant sur le titre en \hyperlink{section*.1}{page 1}.
 \setcounter{pagenb}{\thepage}
 \stepcounter{pagenb}
 \newpage
@@ -168,18 +205,18 @@ Les fichiers \texttt{Flashcards.py} et \texttt{Htmlcards.py} permettent d'export
 
 Pour pouvoir créer des fiches de révision, il faut mettre un fichier \texttt{.txt} (décrit plus bas) dans un dossier \texttt{input} et mettre les fichiers \texttt{.sty} nécessaires dans un dossier \texttt{output}.
 \subsection{Flashcards.py}
-Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \Verb?python Flashcards.py --file=fiche? (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \Verb?--n=nombre? (avec le nombre d'exemplaires), \Verb?--dest=dossier? (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \Verb?--open=True/False? (pour ouvrir le dossize où le \texttt{.pdf} est produit).
+Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \texttt{-{}-n=nombre} (avec le nombre d'exemplaires), \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossize où le \texttt{.pdf} est produit).
 \subsection{Htmlcards.py}
-Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \Verb?python Flashcards.py --file=fiche? (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \Verb?--dest=dossier? (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \Verb?--open=True/False? (pour ouvrir le dossize où le \texttt{.pdf} est produit).
+Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossize où le \texttt{.pdf} est produit).
 
-Modifier la valeur de \texttt{--dest} peut rendre inutilisable certaines fonctions liées au site pour visualiser les fiches.
+Modifier la valeur de \texttt{-{}-dest} peut rendre inutilisable certaines fonctions liées au site pour visualiser les fiches.
 \subsection{Les options spéciales}
 Il est possible de compiler l'ensemble des fichiers du fichier à compiler \texttt{input} en mettant \texttt{\_\_compile\_all\_\_} comme nom de fichier.
 
 Il est également possible de recompiler les Flashcards en utilisant \texttt{\_\_recompile\_\_} comme nom de fichier.
 \subsection{Les fiches .txt}
 Pour faire des fiches, il faut créer un fichier \texttt{.txt} de la forme
-\begin{Verbatim}[vspace=0pt]
+\vspace{-\abovedisplayskip}\begin{verbatim}
 TITRE
 Shuffle questions : True/False
 Q/R & R/Q : True/False
@@ -187,14 +224,15 @@ PACKAGES & COMMANDES SUPPLÉMENTAIRES
 QUESTION;;RÉPONSE
 ...
 QUESTION;;RÉPONSE
-\end{Verbatim}
+\end{verbatim}
+\vspace{-\belowdisplayskip}
 
-Le titre doit être de la forme \Verb?Thème -- Chapitre? ou \Verb?Chapitre?.
-On peut aussi spécifier un titre racourci pour le nom du fichier avec \verb?Titre_raccourci!!ttleTitre classique? où le titre raccourci ne peut pas contenir d'espaces ou de caractères spéciaux, et titre classique étant de la forme des seux premiers.
+Le titre doit être de la forme \texttt{Thème -{}- Chapitre} ou \texttt{Chapitre}.
+On peut aussi spécifier un titre racourci pour le nom du fichier avec \texttt{Titre\_raccourci!!ttleTitre classique} où le titre raccourci ne peut pas contenir d'espaces ou de caractères spéciaux, et titre classique étant de la forme des seux premiers.
 
 La ligne 2 indique si on peut ou non mettre un ordre aléatoire pour les questions.
 
-La ligne 3 indique si on peut échanger l'ordre des questions et des réponses pour les fiches. Avec cette option à \texttt{True}, il est possible de forcer une question à être avant la réponse en mettant \Verb?!!fst? devant la/les ligne(s) concernée(s).
+La ligne 3 indique si on peut échanger l'ordre des questions et des réponses pour les fiches. Avec cette option à \texttt{True}, il est possible de forcer une question à être avant la réponse en mettant \texttt{!!fst} devant la/les ligne(s) concernée(s).
 
 Les packages et commandes supplémentaires (voir \href{https://www.overleaf.com/learn/latex/Commands}{CTAN}) doivent être placées sur une seule ligne.
 
@@ -206,16 +244,17 @@ Exemple de fiches : \href{https://github.com/rfoxinter/revisions/tree/main/input
 \subsection{Visionner les flashcards en svg (Htmlcards)}
 Pour pouvoir visionner les flashcards exportées en svg, il faut disposer d'un serveur web (comme \href{https://github.com/}{github} avec \href{https://pages.github.com/}{github pages}) sur lequel on met le dossier généré par \texttt{Htmlcards.py} (on suppose que l'url est \texttt{https://example.fr/dossier}).
 
-Il faut alors convertir l'url du dossier en base64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}}, avec la fonction \texttt{btoa} de JavaScript ou avec la  fonction Python \texttt{base64.b64encode}) en enlevant les \Verb?=? à la fin. Dans l'exemple, en exécutant le code Python suivant
-\begin{Verbatim}[vspace=0pt]
-from base64 import b64encode # encoder en base64
-from re import sub # remplacer tous les "=" finaux
+Il faut alors convertir l'url du dossier en base64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}}, avec la fonction \mintinline{javascript}?btoa? de JavaScript ou avec la  fonction Python \mintinline{python}?base64.b64encode?) en enlevant les << \texttt{=} >> à la fin. Dans l'exemple, en exécutant le code Python suivant
+\vspace{-\abovedisplayskip}\begin{minted}[curlyquotes]{python}
+import base64 # encoder en base64
+import re # remplacer tous les `=' finaux
 url = "https://example.fr/dossier"
-base64url = sub("=", "", b64encode(url.encode()).decode())
+base64url = re.sub("=", "", base64.b64encode(url.encode()).decode())
 print(base64url)
-\end{Verbatim}
+\end{minted}
+\vspace{-\belowdisplayskip}
 
-on obtient \Verb?aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI=?.
+on obtient \texttt{aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI}.
 
 Il faut alors aller sur le site \href{https://rfoxinter.github.io/revisions/flashcards/?file=}{\texttt{https://rfoxinter.github.io/revisions/flashcards/}} en rajoutant à la fin de l'url \texttt{?file=nom\_du\_dossier} où le nom du dossier correspond à celui en base64.
 
@@ -223,7 +262,7 @@ Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/
 
 \hfill\texttt{?file=aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI}
 \subsection{Télécharger des Htmlcards depuis le site}
-Il est possible de faire en sorte que les cartes téléchargées puissent être mises à jour en ajoutant un fichier \texttt{cards.txt} à la racine du dossier des Htmlcards. Ce fichier doit contenir l'adresse à laquelle il est stocké en première ligne, puis plusieurs lignes contenant le chemin vers une Htmlcard à partir de l'url en première ligne, puis la date de dernière mise à jour du dossier (au format \Verb?%YYYY%MM%dd%hh%mm%ss? (année, mois, jour, heure, minutes, secondes)).
+Il est possible de faire en sorte que les cartes téléchargées puissent être mises à jour en ajoutant un fichier \texttt{cards.txt} à la racine du dossier des Htmlcards. Ce fichier doit contenir l'adresse à laquelle il est stocké en première ligne, puis plusieurs lignes contenant le chemin vers une Htmlcard à partir de l'url en première ligne, puis la date de dernière mise à jour du dossier (au format \texttt{\%YYYY\%MM\%dd\%hh\%mm\%ss} (année, mois, jour, heure, minutes, secondes)).
 
 Exemple : \href{https://rfoxinter.github.io/revisions/flashcards/cards.txt}{\texttt{https://rfoxinter.github.io/revisions/flashcards/cards.txt}}.
 
@@ -250,7 +289,7 @@ Un exemple de fichier python générant un tel fichier est disponible à l'adres
 \mcmd[\footnotemark]{\overrightarrow{AB}}
 \footnotetext{Le résultat est le même qu'avec \mintinline{latexmath}?\vec?}
 \hsection{AL.sty}
-Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatiquement avec \Verb?AL.sty?.
+Le package \hyperlink{section.10}{\texttt{Matrices.sty}} sera importé automatiquement avec \texttt{AL.sty}.
 
 \vspace{0.5cm}
 
@@ -260,9 +299,9 @@ Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatique
 \mcmd{\al{E}{}}
 \mcmd{\al{E}{F}}
 \mcmd[\footnotemark]{\oplus}
-\footnotetext{Le \mintinline{latexmath}?\oplus? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\Verb?stmaryrd?}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \Verb?\let\oldoplus\oplus? avant \Verb?\usepackage{al}? puis de faire \Verb?\let\oplus\oldoplus? après importation\\Comparaison \LaTeX~- \href{https://ctan.org/pkg/stmaryrd}{\color{black}\Verb?stmaryrd?} avec le plus normal $\oldoplus\oplus+$}
+\footnotetext{Le \mintinline{latexmath}?\oplus? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \mintinline{latex}?\let\oldoplus\oplus? avant \mintinline{latex}?\usepackage{al}? puis de faire \mintinline{latex}?\let\oplus\oldoplus? après importation\\Comparaison \LaTeX~- \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}} avec le plus normal $\oldoplus\oplus+$}
 \mcmd[\footnotemark]{\matgl{n}{\mathbb{K}}}
-\footnotetext{Le \mintinline{latexmath}?\matgl? de \Verb?AL.sty? correspond à la commande \mintinline{latexmath}?\gl? de \hyperlink{section.10}{\Verb?Matrices.sty?} qui a été renommé}
+\footnotetext{Le \mintinline{latexmath}?\matgl? de \texttt{AL.sty} correspond à la commande \mintinline{latexmath}?\gl? de \hyperlink{section.10}{\texttt{Matrices.sty}} qui a été renommé}
 \mcmd{\gl{E}}
 \mcmd[\footnotemark]{\olddim}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\dim?}
@@ -273,7 +312,7 @@ Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatique
 \mcmd{\tr{u}}
 \mcmd{\oldmat}
 \mcmd[\footnotemark]{\almat{u}{\mathcal{B}}{}}
-\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.10}{\Verb?Matrices.sty?}}
+\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.10}{\texttt{Matrices.sty}}}
 \mcmd{\almat{u}{\mathcal{B}}{\mathcal{C}}}
 \mmcmd{\lc}{$\lc\right.$}
 \mmcmd{\rc}{$\left.\rc$}
@@ -285,19 +324,22 @@ Le package \hyperlink{section.10}{\Verb?Matrices.sty?} sera importé automatique
 \mcmd{\so{n}}
 \mcmd{\so[n]{\mathbb{R}}}
 \hsection{Analyse.sty}
-Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automatiquement avec \Verb?Analyse.sty?.
+Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
 
 \vspace{0.5cm}
 
 \mhd
 \mcmd[\footnotemark]{\dd}
 \footnotetext{$\dd$ de dérivation}
-\mcmd{\der{f(x)}}
-\mcmd{\der[n]{f(x)}}
-\mcmd{\der[][t]{f(t)}}
-\mcmd{\der[n][t]{f(t)}}
-\mcmd[\footnotemark]{\pder{f(x)}}
-\footnotetext{On peut appliquer les mêmes arguments optionnels que pour \mintinline{latexmath}?\der?}
+\mcmd{\der{}{f(x)}}
+\mcmd{\der[n]{}{f(x)}}
+\mcmd{\der[][t]{f(t)}{}}
+\mcmd[\footnotemark]{\der[n][t]{f}{t}}
+\footnotetext{Le parenthésage de l'expression dans le second argument se fait automatiquement si ce dernier est non vide}
+\mcmd[\footnotemark]{\pder{}{f(x,y)}}
+\footnotetext{On peut appliquer les mêmes arguments optionnels que pour \mintinline{latexmath}?\der? et les arguments obligatoires sont les mêmes que pour \mintinline{latexmath}?\der?}
+\mcmd[\footnotemark]{\mpder[x,y,z]{}{f(x,y,z)}}
+\footnotetext{Sans argument optionnel, \mintinline{latexmath}?\mpder? agit comme \mintinline{latexmath}?\pder? et les arguments obligatoires sont les mêmes que pour \mintinline{latexmath}?\der?}
 \mcmd[\footnotemark]{\oldint}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\int?}
 \mcmd{\int{f}}
@@ -312,6 +354,7 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \footnotetext{Comme \hyperlink{section.6}{\texttt{BigOperators.sty}} est chargé, la commande \mintinline{latexmath}?\sum? est remplacée et il est nécessaire de taper \mintinline{latexmath}?\oldsum? pour obtenir $\oldsum$}
 \mcmd{\oldesc}
 \mcmd{\esc{\left[a,b\right]}}
+\mcmd{\esc[+]{f}}
 \hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
@@ -362,7 +405,7 @@ Le package \hyperlink{section.6}{\Verb?BigOperators.sty?} sera importé automati
 \mcmd{\Re}
 \mcmd{\pRe{x}}
 \subsection{Dessiner des arcs}
-Il est aussi possible de faire des arcs en important le package \texttt{Complexes.sty} avec l'option \texttt{arc}, en utilisant \Verb?\usepackage[arc]{complexes}?.
+Il est aussi possible de faire des arcs en important le package \texttt{Complexes.sty} avec l'option {\color{namecolour}\texttt{arc}}, en utilisant \mintinline{latex}?\usepackage[arc]{complexes}? au lieu de \mintinline{latex}?\usepackage{complexes}?.
 
 Cette option importe automatiquement le package \texttt{graphics} (disponible sur \href{https://ctan.org/pkg/graphics}{CTAN}).
 \vspace{0.5cm}
@@ -370,7 +413,7 @@ Cette option importe automatiquement le package \texttt{graphics} (disponible su
 \mcmd{\arc{AB}}
 \mcmd{\arc{ABCDEFFGH}}
 \hsection{Dsft.sty}
-Ce package remplace le $\mathds 1$ du package \Verb?Dsfonts.sty? disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et introduit quelques symboles.
+Ce package remplace le $\mathds 1$ du package \texttt{Dsfonts.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et introduit quelques symboles.
 
 \vspace{0.5cm}
 
@@ -382,7 +425,7 @@ Ce package remplace le $\mathds 1$ du package \Verb?Dsfonts.sty? disponible sur 
 \mcmd{\triangle}
 \subsection{\href{https://rfoxinter.github.io/revisions/output/dsrom12.pfb}{\color{black}\texttt{dsrom12.pfb}} et \href{https://rfoxinter.github.io/revisions/output/dsrom12.tfm}{\color{black}\texttt{dsrom12.tfm}}}
 
-Pour utiliser ce package, il faut copier les fichiers \Verb?dsrom12.pfb? et \Verb?dsrom12.tfm? dans les dossiers où ils sont actuellement avec \Verb?dsfonts? (et éventuellement créer une copie des anciens fichiers).
+Pour utiliser ce package, il faut copier les fichiers \texttt{dsrom12.pfb} et \texttt{dsrom12.tfm} dans les dossiers où ils sont actuellement avec \texttt{dsfonts} (et éventuellement créer une copie des anciens fichiers).
 \hsection{Equivalents.sty}
 \mhd
 \mcmd{\o{x}}
@@ -407,11 +450,11 @@ Pour utiliser ce package, il faut copier les fichiers \Verb?dsrom12.pfb? et \Ver
 \mcmd{\ts{n}{\mathbb{K}}}
 \mcmd{\ti{n}{\mathbb{K}}}
 \mcmd[\footnotemark]{\olddet}
-\footnotetext{Correspond à la commande usuelle \Verb?\det?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\det?}
 \mcmd{\det{M}}
 \mcmd{\det[\mathcal{B}]{\mathcal{B}'}}
 \mmcmd[\footnotemark]{\gl{n}{\mathbb{K}}}{$\matgl{n}{\mathbb{K}}$}
-\footnotetext{Si \Verb?AL.sty? est chargé, cette commande est remplacée et il faut utiliser \Verb?\matgl{n}{\mathbb{K}}? pour obtenir ce résultat}
+\footnotetext{Si \texttt{AL.sty} est chargé, cette commande est remplacée et il faut utiliser \mintinline{latexmath}?\matgl{n}{\mathbb{K}}? pour obtenir ce résultat}
 \mcmd{\oldcom}
 \mcmd{\com{M}}
 \mmcmd{\mdots}{$\oldmdots$}
@@ -421,35 +464,35 @@ Pour utiliser ce package, il faut copier les fichiers \Verb?dsrom12.pfb? et \Ver
 \mmcmd{\xdots}{$\oldxdots$}
 \mmcmd{\plusdots}{$\oldplusdots$}
 \mcmd[\footnotemark]{\tmatrix({1\&0\\0\&1\\})}
-\footnotetext{Les caractères \Verb?\&? sont utilisés au lieu du \Verb?&? utilisé habituellement avec \tikzlg{} pour des raisons de compatibilité avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}}
+\footnotetext{Les caractères \mintinline{latex}?\&? sont utilisés au lieu du \mintinline{latex}?&? utilisé habituellement avec \tikzlg{} pour des raisons de compatibilité avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}\\Il n'est pas nécessaire de mettre la \mintinline{latex}?\tmatrix? dans une équation et les cellules sont par défaut des équations}
 \subsection{\boldmath Ne pas importer les commandes avec $\mcdot$}
-Il est possible de ne pas modifier les commandes usuelles en utilisant l'option \Verb?nodots? de ce package. Il faut alors importer le package avec \Verb?\usepackage[nodots]{matrices}?.
+Il est possible de ne pas modifier les commandes usuelles en utilisant l'option {\color{namecolour}\texttt{nodots}} de ce package. Il faut alors importer le package avec \mintinline{latex}?\usepackage[nodots]{matrices}?.
 \subsection{\boldmath Modifier les séparations entre les $\mcdot$}
-Les commandes avec des points tel que $\xdots$ ont des définitions qui dépendent de la taille de la police (celle pour \LaTeX~est adaptée pour 12pt, et celle de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} pour 17pt). Pour avoir des points alignés correctement, il est possible de modifier la valeur de \Verb?\dotsep? en utilisant \Verb?\setlength{\dotsep}{taille_en_pt}?.
+Les commandes avec des points tel que $\xdots$ ont des définitions qui dépendent de la taille de la police. Par défaut, celle pour \LaTeX~est adaptée pour 12pt, et celle de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} pour 17pt. Pour avoir des points alignés correctement, il est possible de modifier la valeur de \mintinline{latex}?\dotsep? en utilisant \mintinline{latex}?\setlength{\dotsep}{Xpt}?.
 
-Par exemple, avec 2pt, on obtient : \setlength{\dotsep}{2pt} $\xdots$.\setlength{\dotsep}{3.5pt}
+Par exemple, avec 2pt, on obtient : \setlength{\dotsep}{2pt}<< $\xdots$ >>.\setlength{\dotsep}{3.5pt}
 
-Il est également possible de faire de même avec la hauteur des $\mdots$ en modifiant la longueur \Verb?\dotlift?. De même avec \Verb?\matmin? pour \texttt{minimum width} et \texttt{minimum width}, ou encore \Verb?\matsep? pour \texttt{row sep} et \texttt{column sep}.
-\subsection{La commande \texttt{\textbackslash tmatrix}}
+Il est également possible de faire de même avec la hauteur des $\mdots$ en modifiant la longueur \mintinline{latex}?\dotlift?. De même avec \mintinline{latex}?\matmin? pour {\color{namecolour}\texttt{minimum width}} et {\color{namecolour}\texttt{minimum width}}, ou encore \mintinline{latex}?\matsep? pour {\color{namecolour}\texttt{row sep}} et {\color{namecolour}\texttt{column sep}}.
+\subsection{La commande \mintinline{latex}?\tmatrix?}
 
-\Verb?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice \tikzlg{} et les éléments de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
+\mintinline{latex}?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice \tikzlg{} et les éléments de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
 
 \vspace{0.5cm}
 
 \mhd
-\mmcmd{\mtxvline{params}{n}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
-\mmcmd{\mtxhline{params}{n}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
-\mmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou left/right pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou top/bottom) avec les paramètres \tikzlg{} \texttt{params}}
-\mmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou top/bottom pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou left/right) avec les paramètres \tikzlg{} \texttt{params}}
-\mmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres \tikzlg{} \texttt{params}}
-\subsection{Exemples avec \texttt{\textbackslash tmatrix}}
+\nmcmd{\mtxvline{params}{n}}{Crée une ligne verticale après la colonne \texttt{n} (ou \texttt{left}/\texttt{right} pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
+\nmcmd{\mtxhline{params}{n}}{Crée une ligne horizontale après la ligne \texttt{n} (ou \texttt{top}/\texttt{bottom} pour les extrémités) avec les paramètres \tikzlg{} \texttt{params}}
+\nmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou \texttt{left}/\texttt{right} pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou \texttt{top}/\texttt{bottom}) avec les paramètres \tikzlg{} \texttt{params}}
+\nmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou \texttt{top}/\texttt{bottom} pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou \texttt{left}/\texttt{right}) avec les paramètres \tikzlg{} \texttt{params}}
+\nmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres \tikzlg{} \texttt{params}}
+\subsection{Exemples avec \mintinline{latex}?\tmatrix?}
 
-$\det M=\tmatrix|{a\&b\\c\&d\\}|$ est produit par \Verb?$\det{M}=\tmatrix|{a\&b\\c\&d\\}|$?.
+$\det M=\tmatrix|{a\&b\\c\&d\\}|$ est produit par \mintinline{latex}?$\det{M}=\tmatrix|{a\&b\\c\&d\\}|$?.
 
 \vspace{0.25cm}
 
 $I_{n,p,r}=\tmatrix[\mtxvline{line width = 0.05em}{1}\mtxhline{line width = 0.05em}{1}][minimum height = 5ex, row sep = 1ex,minimum width = 5ex, column sep = 1ex,]({I_r\&0_{r,p-r}\\0_{n-r,r}\&0_{n-r,p-r}\\})$ est produit par
-\begin{Verbatim}[vspace=0pt]
+\vspace{-\abovedisplayskip}\begin{minted}{latex}
 $
 I_{n,p,r}=\tmatrix
     [\mtxvline{line width = 0.05em}{1}\mtxhline{line width = 0.05em}{1}]
@@ -457,30 +500,42 @@ I_{n,p,r}=\tmatrix
         column sep = 1ex,]
     ({I_r\&0_{r,p-r}\\0_{n-r,r}\&0_{n-r,p-r}\\})
 $
-\end{Verbatim}
+\end{minted}
+\vspace{-\belowdisplayskip}
 
 \vspace{0.25cm}
 
-$\tmatrix[\mtxbox{red, dashed}{1}{1}\mtxbox{teal, dotted, ultra thick}{2}{2}\mtxbox{}{4}{4}][minimum height = 5ex, minimum width = 5ex, row sep = 10pt,inner sep = 5pt, column sep = 10pt,]{{[}}{A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\0\&0\&0\&A_n\\}{\}}$ est produit par
-\begin{Verbatim}[breaklines,breakafter=\&,breakaftersymbolpre=,breaksymbol=~~~~,curlyquotes,vspace=0pt]
-$
+\tmatrix[\mtxbox{red, dashed}{1}{1}\mtxbox{teal, dotted, ultra thick}{2}{2}\mtxbox{}{4}{4}][minimum height = 5ex, minimum width = 5ex, row sep = 10pt,inner sep = 5pt, column sep = 10pt,]{{[}}{A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\0\&0\&0\&A_n\\}{\}} est produit par
+\vspace{-\abovedisplayskip}\begin{minted}[breaklines,breakafter=\&,breakaftersymbolpre=,breaksymbol=~~~~,curlyquotes]{latex}
 \tmatrix
-    [\mtxbox{red, dashed}{1}{1}\mtxbox{teal, dotted,
-        ultra thick}{2}{2}\mtxbox{}{4}{4}]
-    [minimum height = 5ex, minimum width = 5ex, row sep = 10pt,
-        inner sep = 5pt, column sep = 10pt,]
+    [
+        \mtxbox{red, dashed}{1}{1}
+        \mtxbox{teal, dotted, ultra thick}{2}{2}
+        \mtxbox{}{4}{4}
+    ]
+    [
+        minimum height = 5ex,
+        minimum width = 5ex,
+        row sep = 10pt,
+        inner sep = 5pt,
+        column sep = 10pt,
+    ]
     {{[}} % Le crochet est entouré de deux paires d'accolades
-    {A_1\&0\&0\&0\\0\&A_2\&\ddots\&0\\0\&\ddots\&\ddots\&0\\
-        0\&0\&0\&A_n\\}
+    {
+        A_1\&0\&0\&0\\
+        0\&A_2\&\ddots\&0\\
+        0\&\ddots\&\ddots\&0\\
+        0\&0\&0\&A_n\\
+    }
     {\}}
-$
-\end{Verbatim}
+\end{minted}
+\vspace{-\belowdisplayskip}
 \hsection{Polynomes.sty}
 \mhd
 \mcmd{\pol{K}{X}}
 \mcmd{\fr{K}{X}}
 \mcmd[\footnotemark]{\olddeg}
-\footnotetext{Correspond à la commande usuelle \Verb?\deg?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\deg?}
 \mcmd{\deg{P}}
 \mcmd{\oldval}
 \mcmd{\val{P}}
@@ -491,20 +546,20 @@ $
 \mcmd{\p{A}}
 \mcmd{\p[B]{A}}
 \mcmd[\footnotemark]{\oldOmega}
-\footnotetext{Correspond à la commande usuelle \Verb?\Omega?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\Omega?}
 \mcmd[\footnotemark]{\Omega}
-\footnotetext{Correspond à la commande usuelle \Verb?\varOmega?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\varOmega?}
 \mmcmd[\footnotemark]{\sq}{$\left.\sq\right.$}
-\footnotetext{Doit être utilisé entre \Verb?\left? et \Verb?\right?, ou dans la commande \Verb?\p?: $\p{A\sq\bigcap{k=1}{n}{B_i}}$}
+\footnotetext{Doit être utilisé entre \mintinline{latexmath}?\left? et \mintinline{latexmath}?\right?, ou dans la commande \mintinline{latexmath}?\p?: $\p{A\sq\bigcap{k=1}{n}{B_i}}$}
 \mcmd[\footnotemark]{\bor}
-\footnotetext{Correspond à la commande usuelle \Verb?\mathcal{B}?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\mathcal{B}?}
 \mcmd{\esp{X}}
 \mcmd{\var{X}}
 \mcmd{\ect{X}}
 \mcmd{\oldcov}
 \mcmd{\cov{X}{Y}}
 \mcmd[\footnotemark]{\indep}
-\footnotetext{Ce symbole est obtenu avec la commande \Verb?\perp\!\!\!\perp?}
+\footnotetext{Ce symbole est obtenu avec la commande \mintinline{latexmath}?\perp\!\!\!\perp?}
 \mcmd{\unif{n}}
 \mcmd{\bin{p}}
 \mcmd{\bin[n]{p}}
@@ -514,23 +569,34 @@ $
 \mcmd{\hypg{N}{n}{q}}
 \mcmd{\poiss{\lambda}}
 \hsection{Sffont.sty}
-Ce package définit une nouvelle police \texttt{cmssp} qui correspond à \texttt{cmss} en 10pt. Pour l'utiliser, il faut utiliser \Verb?\fontfamily{cmssp}\fontsize{Xpt}{\baselineskip}\selectfont?.
+Ce package définit une nouvelle police \texttt{cmssp} qui correspond à \texttt{cmss} en 10pt. Pour l'utiliser, il faut utiliser \mintinline{latex}?\fontfamily{cmssp}\fontsize{Xpt}{\baselineskip}\selectfont?.
 
-Exemples avec \texttt{cmssp} :
+\vspace{0.5cm}
 
-{\bfseries\fontfamily{cmssp}\fontsize{25pt}{\baselineskip}\selectfont Exemple avec une police de taille 25pt en gras.}
+Comparaison entre \texttt{cmssp} et \texttt{cmss} :
 
-{\itshape\fontfamily{cmssp}\fontsize{17pt}{\baselineskip}\selectfont Exemple avec une police de taille 17pt en italique.}
+\hrule\vline\hfill
+\begin{minipage}{0.475\linewidth}
+    \begin{center}
+        \vspace{2pt}
+        \texttt{cmssp}
 
-{\itshape\bfseries\fontfamily{cmssp}\fontsize{12pt}{\baselineskip}\selectfont Exemple avec une police de taille 12pt en gras italique.}
-
-Les mêmes exemples avec \texttt{cmss} :
-
-{\bfseries\fontfamily{cmss}\fontsize{25pt}{\baselineskip}\selectfont Exemple avec une police de taille 25pt en gras.}
-
-{\itshape\fontfamily{cmss}\fontsize{17pt}{\baselineskip}\selectfont Exemple avec une police de taille 17pt en italique.}
-
-{\itshape\bfseries\fontfamily{cmss}\fontsize{12pt}{\baselineskip}\selectfont Exemple avec une police de taille 12pt en gras italique.}
+        \vspace{2pt}
+    \end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.475\linewidth}
+    \begin{center}
+        \vspace{2pt}
+        \texttt{cmss}
+        
+        \vspace{2pt}
+    \end{center}
+\end{minipage}
+\hfill\vline\hrule
+\mln{{\bfseries\fontfamily{cmssp}\fontsize{21pt}{\baselineskip}\selectfont Exemple avec une police de taille 21pt en gras.}}{{\bfseries\fontfamily{cmss}\fontsize{21pt}{\baselineskip}\selectfont Exemple avec une police de taille 21pt en gras.}}
+\mln{{\itshape\fontfamily{cmssp}\fontsize{17pt}{\baselineskip}\selectfont Exemple avec une police de taille 17pt en italique.}}{{\itshape\fontfamily{cmss}\fontsize{17pt}{\baselineskip}\selectfont Exemple avec une police de taille 17pt en italique.}}
+\mln{{\itshape\bfseries\fontfamily{cmssp}\fontsize{12pt}{\baselineskip}\selectfont Exemple avec une police de taille 12pt en gras italique.}}{{\itshape\bfseries\fontfamily{cmss}\fontsize{12pt}{\baselineskip}\selectfont Exemple avec une police de taille 12pt en gras italique.}}
 \hsection{Structures.sty}
 \mhd
 \mcmd{\oldhom}
@@ -538,39 +604,41 @@ Les mêmes exemples avec \texttt{cmss} :
 \mcmd{\oldaut}
 \mcmd{\aut{E}}
 \mcmd[\footnotemark]{\oldker}
-\footnotetext{Correspond à la commande usuelle \Verb?\ker?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ker?}
 \mcmd{\ker{f}}
 \mcmd{\oldim}
 \mcmd{\im{f}}
 \mmcmd[\footnotemark]{\la}{$\la\right.$}
-\footnotetext{Correspond à la commande usuelle \Verb?\left\langle?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left\langle?}
 \mmcmd[\footnotemark]{\ra}{$\left.\ra$}
-\footnotetext{Correspond à la commande usuelle \Verb?\right\rangle?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right\rangle?}
 \mcmd{\oldord}
 \mcmd{\ord{x}}
 \hsection{Tables.sty}
 Ce package sert à mettre en forme des tables an latex grâce à \tikzlg{}.
 
-Pour insérer une table, il faut appeler \Verb?\setrowcol[width][height]{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis rentrer la table \tikzlg{}, les arguments optionnels étant la largeur de la table et sa hauteur.
+Pour insérer une table, il faut appeler \mintinline{latex}?\setrowcol[width][height]{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis rentrer la table \tikzlg{}, les arguments optionnels étant la largeur de la table et sa hauteur.
 
-Une table a une largeur par défaut de 10cm et une hauteur de 6,5cm (est est réinitialisée à chaque appel de \Verb?\setrowcol?).
+Une table a une largeur par défaut de 10cm et une hauteur de 6,5cm (est est réinitialisée à chaque appel de \mintinline{latex}?\setrowcol?).
 
-Il est possible d'utiliser \Verb?[ampersand replacement=\&]? puis \Verb?\&? pour la matrice lorsque \Verb?&? est déjà défini par .
+Il est possible d'utiliser \mintinline{latex}?[ampersand replacement=\&]? puis \mintinline{latex}?\&? pour la matrice lorsque \mintinline{latex}?&? est déjà défini par l'environnement (comme \textsc{beamer}).
 
-Il est possible de récupérer la valeur de la largeur et de la hauteur avec \Verb?\tblw? et \Verb?\tblh?.
+Il est possible de récupérer la valeur de la largeur et de la hauteur avec \mintinline{latex}?\tblw? et \mintinline{latex}?\tblh?.
 
 \vspace{0.5cm}
 
 Par exemple, la table
 
-{\LARGE\setcolrow[\linewidth]{6}{5}\begin{tikzpicture}\matrix[table] {&$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$ \\ $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\ $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\ $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\ $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\}; \draw [line width=0.5mm] (-\tblw/3,-\tblh/2) -- (-\tblw/3,\tblh/2); \draw [line width=0.5mm] (-\tblw/2,3*\tblh/10) -- (\tblw/2,3*\tblh/10); \draw [line width=0.5mm] (-\tblw/2,-\tblh/2) rectangle (\tblw/2,\tblh/2);\end{tikzpicture}}
-
+\vspace{-\abovedisplayskip}\begin{center}
+{\LARGE\setcolrow[15cm]{6}{5}\begin{tikzpicture}\matrix[table]{&$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$ \\ $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\ $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\ $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\ $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\}; \draw [line width=0.5mm] (-\tblw/3,-\tblh/2) -- (-\tblw/3,\tblh/2); \draw [line width=0.5mm] (-\tblw/2,3*\tblh/10) -- (\tblw/2,3*\tblh/10); \draw [line width=0.5mm] (-\tblw/2,-\tblh/2) rectangle (\tblw/2,\tblh/2);\end{tikzpicture}}
+\end{center}
+\vspace{-\belowdisplayskip}
 est produite avec le code suivant
-\begin{Verbatim}[breaklines,breakafter=&,breakaftersymbolpre=,breaksymbol=~~~~,vspace=0pt]
+\vspace{-\abovedisplayskip}\begin{minted}[breaklines,breakafter=&,breakaftersymbolpre=,breaksymbol=~~~~]{latex}
 \LARGE
-\setcolrow{6}{5}
+\setcolrow[15cm]{6}{5}
 \begin{tikzpicture}
-    \matrix[table] {
+    \matrix[table]{
         &$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$\\
         $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\
         $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\
@@ -581,23 +649,24 @@ est produite avec le code suivant
     \draw [line width=0.5mm] (-\tblw/2,3*\tblh/10) -- (\tblw/2,3*\tblh/10);
     \draw [line width=0.5mm] (-\tblw/2,-\tblh/2) rectangle (\tblw/2,\tblh/2);
 \end{tikzpicture}
-\end{Verbatim}
+\end{minted}
+\vspace{-\belowdisplayskip}
 \hsection{Trigo.sty}
 \mhd
 \mcmd[\footnotemark]{\oldcos}
-\footnotetext{Correspond à la commande usuelle \Verb?\cos?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\cos?}
 \mcmd{\cos{x}}
 \mcmd{\cos[n]{x}}
 \mcmd[\footnotemark]{\oldsin}
-\footnotetext{Correspond à la commande usuelle \Verb?\sin?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\sin?}
 \mcmd{\sin{x}}
 \mcmd{\sin[n]{x}}
 \mcmd[\footnotemark]{\oldtan}
-\footnotetext{Correspond à la commande usuelle \Verb?\tan?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\tan?}
 \mcmd{\tan{x}}
 \mcmd{\tan[n]{x}}
 \mcmd[\footnotemark]{\oldcot}
-\footnotetext{Correspond à la commande usuelle \Verb?\cot?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\cot?}
 \mcmd{\cot{x}}
 \mcmd{\cot[n]{x}}
 \mcmd{\acos{x}}
@@ -627,15 +696,15 @@ est produite avec le code suivant
 \hsection{Usuelles.sty}
 \mhd
 \mcmd[\footnotemark]{\oldmin}
-\footnotetext{Correspond à la commande usuelle \Verb?\min?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\min?}
 \mcmd{\min{\llb0,n\rrb}}
 \mcmd{\min[\mathbb{N}^*]{\llb0,n\rrb}}
 \mcmd[\footnotemark]{\oldmax}
-\footnotetext{Correspond à la commande usuelle \Verb?\max?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\max?}
 \mcmd{\max{\llb0,n\rrb}}
 \mcmd{\max[\mathbb{Z}_-]{\llb0,n\rrb}}
 \mcmd[\footnotemark]{\oldlim}
-\footnotetext{Correspond à la commande usuelle \Verb?\lim?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\lim?}
 \mcmd{\lim{u_n}}
 \mcmd{\lim[x\to+\infty]{f(x)}}
 \mcmd{\limi{u_n}}
@@ -643,19 +712,19 @@ est produite avec le code suivant
 \mcmd{\lims{u_n}}
 \mcmd{\lims[x\to+\infty]{f(x)}}
 \mcmd[\footnotemark]{\oldexp}
-\footnotetext{Correspond à la commande usuelle \Verb?\exp?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\exp?}
 \mcmd{\exp{x}}
 \mcmd{\exp[n]{x}}
 \mcmd[\footnotemark]{\oldln}
-\footnotetext{Correspond à la commande usuelle \Verb?\ln?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ln?}
 \mcmd{\ln{x}}
 \mcmd{\ln[n]{x}}
 \mcmd[\footnotemark]{\oldinf}
-\footnotetext{Correspond à la commande usuelle \Verb?\inf?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\inf?}
 \mcmd{\inf{\varnothing}}
 \mcmd{\inf[\bar{\mathbb{R}}]{\{u_n\}}}
 \mcmd[\footnotemark]{\oldsup}
-\footnotetext{Correspond à la commande usuelle \Verb?\sup?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\sup?}
 \mcmd{\sup{\varnothing}}
 \mcmd{\sup[\bar{\mathbb{R}}]{\{u_n\}}}
 \end{document}
