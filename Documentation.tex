@@ -234,9 +234,7 @@ La ligne 2 indique si on peut ou non mettre un ordre aléatoire pour les questio
 
 La ligne 3 indique si on peut échanger l'ordre des questions et des réponses pour les fiches. Avec cette option à \texttt{True}, il est possible de forcer une question à être avant la réponse en mettant \texttt{!!fst} devant la/les ligne(s) concernée(s).
 
-Les packages et commandes supplémentaires (voir \href{https://www.overleaf.com/learn/latex/Commands}{CTAN}) doivent être placées sur une seule ligne.
-
-Il faut cependant s'assurer quele fichier ne contienne pas de lignes avec uniquement des espaces à la fin.
+Les packages et commandes supplémentaires (voir \href{https://www.overleaf.com/learn/latex/Commands}{overleaf}) doivent être placées sur une seule ligne.
 
 S'il y a une erreur lors de la compilation \LaTeX, le programme python affichera le message d'erreur affiché par \LaTeX.
 
@@ -261,6 +259,8 @@ Il faut alors aller sur le site \href{https://rfoxinter.github.io/revisions/flas
 Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/revisions/flashcards/}
 
 \hfill\texttt{?file=aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI}
+
+Il est sinon possible de mettre un lien vers un fichier téléchargé et hébergé sur un serveur (encodé en base64 et sans les << \texttt{=} >> finaux) en ajoutant \texttt{?card=nom\_du\_fichier}.
 \subsection{Télécharger des Htmlcards depuis le site}
 Il est possible de faire en sorte que les cartes téléchargées puissent être mises à jour en ajoutant un fichier \texttt{cards.txt} à la racine du dossier des Htmlcards. Ce fichier doit contenir l'adresse à laquelle il est stocké en première ligne, puis plusieurs lignes contenant le chemin vers une Htmlcard à partir de l'url en première ligne, puis la date de dernière mise à jour du dossier (au format \texttt{\%YYYY\%MM\%dd\%hh\%mm\%ss} (année, mois, jour, heure, minutes, secondes)).
 
