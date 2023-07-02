@@ -2,25 +2,19 @@
 
 \makeatletter
 \newcounter{mpdercount}
+\def\mpderden{}
 \def\do@scanmpder#1,{%
     \ifx#1\relax
         \let\next\relax
     \else
-        \partial#1\let\next\do@scanmpder
-    \fi\next
-}
-\newcommand{\scanmpder}[1]{\do@scanmpder#1,\relax,}
-\def\do@countmpder#1,{%
-    \ifx#1\relax
-        \let\next\relax
-    \else
         \stepcounter{mpdercount}
-        \let\next\do@countmpder
+        \edef\mpderden{\mpderden\partial#1}
+        \let\next\do@scanmpder
     \fi\next
 }
-\newcommand{\countmpder}[1]{
+\newcommand{\scanmpder}[1]{
     \setcounter{mpdercount}{0}
-    \do@countmpder#1,\relax,
+    \do@scanmpder#1,\relax,
 }
 \makeatother
 
@@ -40,12 +34,12 @@
     \else
         \def\argIII{\l#3\r}
     \fi\frac{\partial^{\argI}#2}{\partial#1^{\argI}}\argIII}
-\newcommand{\mpder}[3][x]{\countmpder{#1}
+\newcommand{\mpder}[3][x]{\scanmpder{#1}
     \ifx&#3&
         \def\argIII{}
     \else
         \def\argIII{\l#3\r}
-    \fi\frac{\partial^{\arabic{mpdercount}}#2}{\scanmpder{#1}}\argIII}
+    \fi\frac{\partial^{\arabic{mpdercount}}#2}{\mpderden}\argIII}
 \let\oldint\int
 \renewcommand{\int}[1][]{
     \ifx&#1&
