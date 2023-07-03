@@ -78,7 +78,7 @@
             var response;
             try {
                 response = await fetch(file);
-            } catch(error) {console.log(error);return 'Error'}
+            } catch(error) {return 'Error';}
             if (response.status == 200) {
                 const jsCode = await response.text();
                 fl = deflate(jsCode).split('\n');
@@ -109,7 +109,7 @@
                 if (sh_quest) {shuffleArray(ques);}
 
                 return 200;
-            } else {console.log(response.status); return response.status;}
+            } else {return response.status;}
         }
         async function get_code(file, ques, type) {
             var response = await fetch(file + '/' + type + ques + '.svg');
@@ -173,8 +173,6 @@
                 document.getElementById('down-button').setAttribute('onclick', 'sync()');
                 document.getElementById('card_nb').innerHTML = nth + 1;
                 document.getElementById('card_total').innerHTML = '/' + ques.length;
-            } else {
-                console.log('cannot download')
             }
         }
         if (file != null && file != '') {
@@ -294,7 +292,6 @@
                     if (ls[2*i + 1] == atob(filename)) {
                         if (parseInt(ls[2*i + 2]) > filedate) {
                             window.alert('Une mise à jour est disponible et va être chargée.');
-                            console.log(ls[0], ls[2*i + 1], absolute(ls[0] + ls[2*i + 1]));
                             document.getElementById('down-button').style.display = 'none';
                             await fill_svg(absolute(ls[0] + ls[2*i + 1]));
                             document.getElementById('down-button').style.display = 'none';
