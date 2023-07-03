@@ -158,11 +158,11 @@ Lors de l'utilisation de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc
 
 Il est possibles de changer les polices de caractères/symboles en important des packages après \mintinline{latex}?\usepackage{preambule}?. Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
 
-Il n'est pas possible d'utiliser en simultané le package \texttt{Dsfont.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\texttt{Dsft.sty}} décrit ci-dessous. De plus, la commande \mintinline{latexmath}?\1? ne sera pas modifiée si un package définissant \mintinline{latexmath}?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \mintinline{latex}?\newcommand\1[1]{\mathbb{1}_{#1}}? (si \texttt{Dsft.sty} n'est pas importé) ou \mintinline{latex}?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
+Il n'est pas possible d'utiliser en simultané le package \texttt{Dsfont.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\texttt{Dsft.sty}} décrit ci-dessous. De plus, la commande \mintinline{latexmath}?\1? ne sera pas modifiée si un package définissant \mintinline{latexmath}?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \mintinline{latex}?\newcommand\1[1]{\mathbb{1}_{#1}}? (si \hyperlink{section.8}{\texttt{Dsft.sty}} n'est pas importé) ou \mintinline{latex}?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
 
 \vspace{0.5cm}
 
-Il est possible de redéfinir le $l$ à sa version d'origine ($\oldl$) avec:
+Il est possible de redéfinir le << $l$ >> à sa version d'origine ($\oldl$) avec:
 \phantomsection\label{ldef}\vspace{-\abovedisplayskip}\begin{minted}{latex}
 \mathcode`l="8000
 \begingroup
@@ -205,13 +205,13 @@ Les fichiers \texttt{Flashcards.py} et \texttt{Htmlcards.py} permettent d'export
 
 Pour pouvoir créer des fiches de révision, il faut mettre un fichier \texttt{.txt} (décrit plus bas) dans un dossier \texttt{input} et mettre les fichiers \texttt{.sty} nécessaires dans un dossier \texttt{output}.
 \subsection{Flashcards.py}
-Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \texttt{-{}-n=nombre} (avec le nombre d'exemplaires), \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossize où le \texttt{.pdf} est produit).
+Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \texttt{-{}-n=nombre} (avec le nombre d'exemplaires), \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
 \subsection{Htmlcards.py}
-Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossize où le \texttt{.pdf} est produit).
+Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
 
 Modifier la valeur de \texttt{-{}-dest} peut rendre inutilisable certaines fonctions liées au site pour visualiser les fiches.
 \subsection{Les options spéciales}
-Il est possible de compiler l'ensemble des fichiers du fichier à compiler \texttt{input} en mettant \texttt{\_\_compile\_all\_\_} comme nom de fichier.
+Il est possible de compiler l'ensemble des fichiers \texttt{.txt} du dossier \texttt{input} en mettant \texttt{\_\_compile\_all\_\_} comme nom de fichier.
 
 Il est également possible de recompiler les Flashcards en utilisant \texttt{\_\_recompile\_\_} comme nom de fichier.
 \subsection{Les fiches .txt}
@@ -260,7 +260,7 @@ Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/
 
 \hfill\texttt{?file=aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI}
 
-Il est sinon possible de mettre un lien vers un fichier téléchargé et hébergé sur un serveur (encodé en base64 et sans les << \texttt{=} >> finaux) en ajoutant \texttt{?card=nom\_du\_fichier}.
+Il est sinon possible de mettre un lien vers un fichier téléchargé et hébergé sur un serveur (encodé en base64 et sans les << \texttt{=} >> finaux) en ajoutant \texttt{?card=nom\_du\_fichier} à la fin de l'url.
 \subsection{Télécharger des Htmlcards depuis le site}
 Il est possible de faire en sorte que les cartes téléchargées puissent être mises à jour en ajoutant un fichier \texttt{cards.txt} à la racine du dossier des Htmlcards. Ce fichier doit contenir l'adresse à laquelle il est stocké en première ligne, puis plusieurs lignes contenant le chemin vers une Htmlcard à partir de l'url en première ligne, puis la date de dernière mise à jour du dossier (au format \texttt{\%YYYY\%MM\%dd\%hh\%mm\%ss} (année, mois, jour, heure, minutes, secondes)).
 
