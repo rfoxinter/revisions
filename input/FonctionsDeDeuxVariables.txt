@@ -2,7 +2,7 @@ Analyse -- Fonctions de deux variables
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{analyse,matrices,structures,equivalents}\let\phi\varphi
-$\nabla f\l X\r$;;$\tmatrix({\pder[][x]{}{f\l X\r}\\\pder[][y]{}{f\l X\r}\\})$
+$\nabla f\l X\r$;;$\tmatrix({{\pder[][x]{}{f\l X\r}}\\{\pder[][y]{}{f\l X\r}}\\})$
 Règle de la chaîne;;Si $\gamma\l t\r=\l x\l t\r,y\l t\r\r$\linebreak$\der[][t]{}{f\l x\l t\r,y\l t\r\r}$\linebreak${}=x'\l t\r\pder[][x]{}{f\l\gamma\l t\r\r}+y'\l t\r\pder[][y]{}{f\l\gamma\l t\r\r}$\linebreak${}=\la\gamma'\l t\r,\nabla f\l\gamma\l t\r\r\ra$
 $\pder[][u]{}{f\l\phi\l u,v\r,\psi\l u,v\r\r}$;;$\pder[][x]{}{f\l\phi\l u,v\r,\psi\l u,v\r\r}\pder[][u]{}{\phi\l u,v\r}$\linebreak${}+\pder[][y]{}{f\l\phi\l u,v\r,\psi\l u,v\r\r}\pder[][u]{}{\psi\l u,v\r}$
 Ligne de niveau de $f$ de hauteur $a$;;$\left\{\l x,y\r\in\mathbb R^2\;\middle|\;f\l x,y\r=a\right\}$

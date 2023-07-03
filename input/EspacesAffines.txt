@@ -1,0 +1,10 @@
+Algèbre 2 -- Espaces affines
+Shuffle questions : True
+Q/R & R/Q : False
+
+Espace affine;;$\forall\l x,t,u\r\in\mathbb E\times T^2,\;x+\l\vec t+\vec u\r=\l x+\vec t\r+\vec u$\linebreak$\forall x\in E,\;x+\vec0=x$\linebreak$\forall\l x,y\r\in E^2,\;\exists\vec t\in T,\;x=y+\vec t$\linebreak$\l\forall x\in E,\;x+\vec t=x\r\Rightarrow\vec t=\vec0$\linebreak Le dernier point peut être remplacé par $\forall x\in E,\;\l x+\vec t=x\Rightarrow\vec t=\vec0\r$
+Orbite d'un point $x\in E$ sous l'action d'un sous-ensemble $S$ de $T$;;$\left\{x+\vec s,\;s\in S\right\}$
+$\tau_{\vec t}\l X\r$;;$\left\{x+\vec t,\;x\in X\right\}$
+Sous-espace affine d'un espace affine $E$;;$F\subset E$ est un sous-espace affine de $E$ s'il existe $A\in E$ et $V\subset T$ tel que $F$ est l'orbite de A sous l'action de V
+Direction d'un sous-espace affine $F$ de $E$;;L'unique sous-ensemble $V$ de $T$ tel que $F=A+V$
+Propriétés d'une fibre d'une application linéaire $u\in\mathcal L\l E,F\r$;;$u^{-1}\l\left\{a\right\}\r$ est soit vide, soit dirigé par $\ker\l u\r$

@@ -73,7 +73,7 @@ def recompile(dest:str) -> bool:
         c(d('output/'))
         ttle = files[i].replace('.tex', '')
         dest = output[i]
-        print('Compilation in progress [' + str(i + 1) + '/' + str(len(files)) + ']\nCompilation of [' + files[i] + ']\n')
+        print('[' + str(i + 1) + '/' + str(len(files)) + ']\nCompilation of [' + files[i] + ']\nCompilation in progress\n')
         out = rn('latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf ' + ttle, shell = True, stdout = PIPE, stderr = PIPE, text = True).stdout
         if 'Command for \'pdflatex\' gave return code 1' in out:
             print(out + '\n')
@@ -179,7 +179,7 @@ def compile(dest:str) -> bool:
     fail = False
     files = sorted(l('input/'))
     olddest = dest
-    for f in files:
+    for i, f in enumerate(files):
         f = f.replace('.txt','')
         c(d(__file__))
         try:
@@ -200,9 +200,10 @@ def compile(dest:str) -> bool:
         if dest == 'default':
             dest = t.split('--')
             if len(dest) == 1:
-                dest = 'flashcards/'
+                dest = 'pdf/'
             else:
-                dest = 'flashcards/' + remove_special_chars(dest[0].title()) + '/'
+                dest = 'pdf/' + remove_special_chars(dest[0].title()) + '/'
+        print('[' + str(i + 1) + '/' + str(len(files)) + ']\nCompilation of [' + f + ']')
         fail &= gen_latex(r, t, ttle, dest)
         dest = olddest
 

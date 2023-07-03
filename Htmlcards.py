@@ -131,7 +131,7 @@ def recompile(dest:str) -> bool:
     fail = False
     files = sorted(l('input/'))
     olddest = dest
-    for f in files:
+    for i, f in enumerate(files):
         f = f.replace('.txt','')
         c(d(__file__))
         try:
@@ -155,6 +155,7 @@ def recompile(dest:str) -> bool:
                 dest = 'flashcards/'
             else:
                 dest = 'flashcards/' + remove_special_chars(dest[0].title()) + '/'
+        print('[' + str(i + 1) + '/' + str(len(files)) + ']\nCompilation of [' + f + ']')
         fail &= gen_latex(r, t, ttle, dest)
         dest = olddest
 
