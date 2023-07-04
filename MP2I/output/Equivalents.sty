@@ -1,0 +1,42 @@
+\renewcommand{\o}[2][]{
+    \ifx&#1&
+        \def\argI{{o}}
+    \else
+    \def\argI{{\underset{\scriptscriptstyle{#1}}{o}}}
+    \fi\argI\l#2\r
+}
+\renewcommand{\O}[2][]{
+    \ifx&#1&
+        \def\argI{{O}}
+    \else
+    \def\argI{{\underset{\scriptscriptstyle{#1}}{O}}}
+    \fi\argI\l#2\r
+}
+\newcommand{\Th}[2][]{
+    \ifx&#1&
+        \def\argI{{\varTheta}}
+    \else
+    \def\argI{{\underset{\scriptscriptstyle{#1}}{\varTheta}}}
+    \fi\argI\l#2\r
+}
+\newcommand{\Om}[2][]{
+    \ifx&#1&
+        \def\argI{{\varOmega}}
+    \else
+    \def\argI{{\underset{\scriptscriptstyle{#1}}{\varOmega}}}
+    \fi\argI\l#2\r
+}
+\newcommand{\eq}[3][]{
+    \ifx&#1&
+        \def\argI{\sim}
+    \else
+    \def\argI{\underset{\scriptscriptstyle{#1}}{\sim}}
+    \fi#2\argI#3
+}
+\newcommand{\eg}[3][]{
+    \ifx&#1&
+        \def\argI{=}
+    \else
+    \def\argI{\underset{\scriptscriptstyle{#1}}{=}}
+    \fi#2\argI#3
+}

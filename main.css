@@ -8,7 +8,7 @@ ptr {
 }
 
 .menu-icon {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     margin-right: calc(min(20px,20vw));
@@ -58,6 +58,7 @@ li:last-child {
 
 #overlay {
     position: fixed;
+    cursor: unset;
     top: 0;
     left: 0;
     width: 100%;
@@ -67,12 +68,6 @@ li:last-child {
     display: none; /* hide it by default */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-}
-
-#overlay {
-    /* previous styles */
-    transition: opacity 0.3s ease-in-out;
-    cursor: pointer;
 }
   
 #overlay.show {

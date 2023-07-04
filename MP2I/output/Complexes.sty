@@ -1,0 +1,39 @@
+\newif\if@arc\@arcfalse
+\DeclareOption{arc}{\@arctrue}
+\DeclareOption*{}
+\ProcessOptions\relax
+
+\if@arc
+    \RequirePackage{graphics}
+    \makeatletter
+    \newcommand{\arc}[1]{\mathpalette\arc@arc{#1}\!}
+    \newcommand{\arc@arc}[2]{
+        \sbox0{$\m@th#1#2\ \!$}
+        \vbox{
+            \hbox{\hspace{-0.05\wd0}\resizebox{1.1\wd0}{\height}{$\frown$}}
+            \nointerlineskip
+            \vspace{-1pt}
+            \box0
+        }
+    }
+    \makeatother
+\fi
+
+\let\oldbar\bar
+\renewcommand{\bar}{\overline}
+\DeclareMathOperator{\olde}{e}
+\newcommand{\e}{{\olde}}
+\newcommand\ii\i
+\DeclareMathOperator{\oldi}{i}
+\renewcommand{\i}{{\oldi}}
+\newcommand\jj\j
+\DeclareMathOperator{\oldj}{j}
+\renewcommand{\j}{{\oldj}}
+\let\oldIm\Im
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\newcommand{\pIm}[1]{\Im\l#1\r}
+\let\oldRe\Re
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\newcommand{\pRe}[1]{\Re\l#1\r}

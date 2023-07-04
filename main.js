@@ -14,14 +14,17 @@ function folder_click(groupname) {
 
 window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#menu-button').addEventListener('click', function() {
+        document.body.style.overflow = "hidden";
         document.body.classList.toggle('open');
     });
 
     document.querySelector('#close-button').addEventListener('click', function() {
+        document.body.style.overflow = "unset";
         document.body.classList.remove('open');
     });
 
     document.querySelector('#overlay').addEventListener('click', function() {
+        document.body.style.overflow = "unset";
         document.body.classList.remove('open');
     });
 

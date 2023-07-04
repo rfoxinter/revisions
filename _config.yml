@@ -26,3 +26,9 @@ defaults:
       path: flashcards/**
     values:
       sitemap: false
+  -
+    scope:
+      path: MP2I/**
+    values:
+      sitemap: false
+

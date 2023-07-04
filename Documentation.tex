@@ -205,9 +205,9 @@ Les fichiers \texttt{Flashcards.py} et \texttt{Htmlcards.py} permettent d'export
 
 Pour pouvoir créer des fiches de révision, il faut mettre un fichier \texttt{.txt} (décrit plus bas) dans un dossier \texttt{input} et mettre les fichiers \texttt{.sty} nécessaires dans un dossier \texttt{output}.
 \subsection{Flashcards.py}
-Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \texttt{-{}-n=nombre} (avec le nombre d'exemplaires), \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
+Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelleil est possible de rajouter les paramètres optionnels \texttt{-{}-n=nombre} (avec le nombre d'exemplaires), \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
 \subsection{Htmlcards.py}
-Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle on peut rajouter les paramètres optionnels \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
+Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle il est possible de rajouter les paramètres optionnels \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
 
 Modifier la valeur de \texttt{-{}-dest} peut rendre inutilisable certaines fonctions liées au site pour visualiser les fiches.
 \subsection{Les options spéciales}
@@ -230,9 +230,9 @@ QUESTION;;RÉPONSE
 Le titre doit être de la forme \texttt{Thème -{}- Chapitre} ou \texttt{Chapitre}.
 On peut aussi spécifier un titre racourci pour le nom du fichier avec \texttt{Titre\_raccourci!!ttleTitre classique} où le titre raccourci ne peut pas contenir d'espaces ou de caractères spéciaux, et titre classique étant de la forme des seux premiers.
 
-La ligne 2 indique si on peut ou non mettre un ordre aléatoire pour les questions.
+La ligne 2 indique si le programme peut ou non mettre un ordre aléatoire pour les questions.
 
-La ligne 3 indique si on peut échanger l'ordre des questions et des réponses pour les fiches. Avec cette option à \texttt{True}, il est possible de forcer une question à être avant la réponse en mettant \texttt{!!fst} devant la/les ligne(s) concernée(s).
+La ligne 3 indique si le programme peut échanger l'ordre des questions et des réponses pour les fiches. Avec cette option à \texttt{True}, il est possible de forcer une question à être avant la réponse en mettant \texttt{!!fst} devant la/les ligne(s) concernée(s).
 
 Les packages et commandes supplémentaires (voir \href{https://www.overleaf.com/learn/latex/Commands}{overleaf}) doivent être placées sur une seule ligne.
 
@@ -240,7 +240,7 @@ S'il y a une erreur lors de la compilation \LaTeX, le programme python affichera
 
 Exemple de fiches : \href{https://github.com/rfoxinter/revisions/tree/main/input}{\texttt{https://github.com/rfoxinter/revisions/tree/main/input}}.
 \subsection{Visionner les flashcards en svg (Htmlcards)}
-Pour pouvoir visionner les flashcards exportées en svg, il faut disposer d'un serveur web (comme \href{https://github.com/}{github} avec \href{https://pages.github.com/}{github pages}) sur lequel on met le dossier généré par \texttt{Htmlcards.py} (on suppose que l'url est \texttt{https://example.fr/dossier}).
+Pour pouvoir visionner les flashcards exportées en svg, il faut disposer d'un serveur web (comme \href{https://github.com/}{github} avec \href{https://pages.github.com/}{github pages}) sur lequel le programme va mettre le dossier généré par \texttt{Htmlcards.py} (on suppose que l'url est \texttt{https://example.fr/dossier}).
 
 Il faut alors convertir l'url du dossier en base64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}}, avec la fonction \mintinline{javascript}?btoa? de JavaScript ou avec la  fonction Python \mintinline{python}?base64.b64encode?) en enlevant les << \texttt{=} >> à la fin. Dans l'exemple, en exécutant le code Python suivant
 \vspace{-\abovedisplayskip}\begin{minted}[curlyquotes]{python}
@@ -260,11 +260,13 @@ Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/
 
 \hfill\texttt{?file=aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI}
 
-Il est sinon possible de mettre un lien vers un fichier téléchargé et hébergé sur un serveur (encodé en base64 et sans les << \texttt{=} >> finaux) en ajoutant \texttt{?card=nom\_du\_fichier} à la fin de l'url.
+Il est sinon possible de mettre un lien vers un fichier téléchargé et hébergé sur un serveur (encodé en base64, et sans les << \texttt{=} >> finaux) en ajoutant \texttt{?card=nom\_du\_fichier} à la fin de l'url.
 \subsection{Télécharger des Htmlcards depuis le site}
-Il est possible de faire en sorte que les cartes téléchargées puissent être mises à jour en ajoutant un fichier \texttt{cards.txt} à la racine du dossier des Htmlcards. Ce fichier doit contenir l'adresse à laquelle il est stocké en première ligne, puis plusieurs lignes contenant le chemin vers une Htmlcard à partir de l'url en première ligne, puis la date de dernière mise à jour du dossier (au format \texttt{\%YYYY\%MM\%dd\%hh\%mm\%ss} (année, mois, jour, heure, minutes, secondes)).
+Il est possible de faire en sorte que les cartes téléchargées puissent être mises à jour en ajoutant un fichier \texttt{cards.txt} à la racine du dossier des Htmlcards.
 
-Exemple : \href{https://rfoxinter.github.io/revisions/flashcards/cards.txt}{\texttt{https://rfoxinter.github.io/revisions/flashcards/cards.txt}}.
+Ce fichier doit contenir en première ligne la racine à partir de laquelle sont données les url des Htmlcards (si l'url n'est pas absolue), puis plusieurs lignes (2 pour chacune des Htmlcards) contenant en premier le chemin vers la Htmlcard (relatif ou absolu, sachant que la racine est \texttt{https://rfoxinter.github.io/revisions/flashcards/}), suivi de la date de dernière mise à jour du dossier de la Htmlcard concernée (au format \texttt{\%YYYY\%MM\%dd\%hh\%mm\%ss} (année, mois, jour, heure, minutes, secondes)).
+
+Exemple : \href{https://rfoxinter.github.io/revisions/MP2I/flashcards/cards.txt}{\texttt{https://rfoxinter.github.io/revisions/MP2I/flashcards/cards.txt}}.
 
 Un exemple de fichier python générant un tel fichier est disponible à l'adresse suivante : \href{https://rfoxinter.github.io/revisions/CardsList.py}{\texttt{https://rfoxinter.github.io/revisions/CardsList.py}}.
 \ssection[Preambule.sty et HTMLPreambule.sty]{\href{https://rfoxinter.github.io/revisions/output/Preambule.sty}{\color{black}Preambule.sty} et \href{https://rfoxinter.github.io/revisions/output/HTMLPreambule.sty}{\color{black}HTMLPreambule.sty}}
