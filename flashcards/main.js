@@ -239,7 +239,7 @@ function download() {
 }
 function _close() {
     document.title = 'Révisions';
-    document.getElementById('title').innerHTML = '';
+    document.getElementById('title').innerHTML = '&nbsp;';
     document.getElementById('flashcard').innerHTML = '';
     document.getElementById('incor').disabled = true;
     document.getElementById('corr').disabled = true;
