@@ -285,7 +285,7 @@ Un exemple de fichier python générant un tel fichier est disponible à l'adres
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ell?\\Le $l$ peut être redéfini en $\oldl$ avec le code donné dans l'\hyperref[ldef]{introduction}}
 \mcmd[\footnotemark]{\oldvec{x}}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\vec?}
-\mcmd{\vec{AB}}
+\mcmd{\vec{x}}
 \mcmd[\footnotemark]{\overrightarrow{AB}}
 \footnotetext{Le résultat est le même qu'avec \mintinline{latexmath}?\vec?}
 \hsection{AL.sty}
@@ -314,13 +314,17 @@ Le package \hyperlink{section.10}{\texttt{Matrices.sty}} sera importé automatiq
 \mcmd[\footnotemark]{\almat{u}{\mathcal{B}}{}}
 \footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.10}{\texttt{Matrices.sty}}}
 \mcmd{\almat{u}{\mathcal{B}}{\mathcal{C}}}
-\mmcmd{\lc}{$\lc\right.$}
-\mmcmd{\rc}{$\left.\rc$}
+\mmcmd[\footnotemark]{\lc}{$\lc\right.$}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left[?}
+\mmcmd[\footnotemark]{\rc}{$\left.\rc$}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right]?}
 \mcmd{\oldsl}
 \mcmd{\sl{E}}
 \mcmd{\sl[n]{\mathbb{K}}}
+\mcmd{\oldorth}
 \mcmd{\orth{n}}
 \mcmd{\orth[n]{\mathbb{R}}}
+\mcmd{\oldso}
 \mcmd{\so{n}}
 \mcmd{\so[n]{\mathbb{R}}}
 \hsection{Analyse.sty}
@@ -453,6 +457,7 @@ Pour utiliser ce package, il faut copier les fichiers \texttt{dsrom12.pfb} et \t
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\det?}
 \mcmd{\det{M}}
 \mcmd{\det[\mathcal{B}]{\mathcal{B}'}}
+\mcmd{\oldgl}
 \mmcmd[\footnotemark]{\gl{n}{\mathbb{K}}}{$\matgl{n}{\mathbb{K}}$}
 \footnotetext{Si \texttt{AL.sty} est chargé, cette commande est remplacée et il faut utiliser \mintinline{latexmath}?\matgl{n}{\mathbb{K}}? pour obtenir ce résultat}
 \mcmd{\oldcom}
@@ -550,7 +555,7 @@ $
 \mcmd[\footnotemark]{\Omega}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\varOmega?}
 \mmcmd[\footnotemark]{\sq}{$\left.\sq\right.$}
-\footnotetext{Doit être utilisé entre \mintinline{latexmath}?\left? et \mintinline{latexmath}?\right?, ou dans la commande \mintinline{latexmath}?\p?: $\p{A\sq\bigcap{k=1}{n}{B_i}}$}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\middle|?\\Doit être utilisé entre \mintinline{latexmath}?\left? et \mintinline{latexmath}?\right?, ou dans la commande \mintinline{latexmath}?\p?: $\p{A\sq\bigcap{k=1}{n}{B_i}}$}
 \mcmd[\footnotemark]{\bor}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\mathcal{B}?}
 \mcmd{\esp{X}}
