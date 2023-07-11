@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="https://rfoxinter.github.io/favicon.ico">
@@ -25,6 +26,22 @@
         .material-symbols-rounded {
             font-size: 80% !important;
         }
+        #down-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: calc(min(20px,20vw));
+            margin-top: calc(min(20px,2vh));
+            margin-bottom: calc(min(20px,2vh));
+        }
+        #up-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: calc(min(20px,20vw));
+            margin-top: calc(min(20px,2vh));
+            margin-bottom: calc(min(20px,2vh));
+        }
         p {
             white-space: pre-wrap;
         }
@@ -35,7 +52,8 @@
     <div id="downloaded">
         <header class="page-header">
             <h1>Fiches téléchargées</h1>
-            <span class="menu-icon material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'none'; document.getElementById('download').style.display = 'block';" style="font-size: 24px !important;">download_for_offline</ptr></span>
+            <span id="down-button" class="material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'none'; document.getElementById('download').style.display = 'block';" style="font-size: 24px !important;">download_for_offline</ptr></span>
+            <span id="up-button" class="material-symbols-rounded"><ptr onclick="refresh()" style="font-size: 24px !important;">refresh</ptr></span>
         </header>
         <main class="main-content">
             <div id="down_cards_container">
