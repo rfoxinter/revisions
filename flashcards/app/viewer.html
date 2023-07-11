@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='description' content='Révisions'>
+    <link rel='icon' href='https://rfoxinter.github.io/favicon.ico' />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Révisions</title>
+    <meta name='theme-color' content='#157878'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&display=swap'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/main.css'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/normalize.css'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/style.css'>
+    <script type="text/javascript" src="huffman.js"></script>
+    <link rel="preload" as="script" href="viewer.js">
+    <script type="text/javascript" src="viewer.js"></script>
+    <style>
+        svg {
+            max-width: 100%;
+            max-height: calc(max(20vh, 120px)) !important;
+            fill: #606c71;
+            width: unset !important;
+            vertical-align: middle;
+        }
+        path {
+            stroke: #606c71;
+        }
+        button {
+            display: inline-block;
+            width: 25vw;
+            min-height: 40px;
+        }
+        ptr {
+            cursor: pointer;
+        }
+        #down-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: calc(min(20px,20vw));
+            margin-top: calc(min(20px,2vh));
+            margin-bottom: calc(min(20px,2vh));
+        }
+        .material-symbols-rounded {
+            display: block !important;
+        }
+    </style>
+</head>
+<body onload="load(); document.getElementById('incor').disabled = true;document.getElementById('corr').disabled = true;document.getElementById('flip').disabled = true;">
+    <div id='overlay'></div>
+    <header class='page-header'>
+        <h1 id='title'>&nbsp;</h1>
+        <input type='file' id='open' accept='.txt' hidden>
+        <a href='.'><span id='down-button' class='menu-icon material-symbols-rounded' style="color: white;">close</span></a>
+    </header>
+    <main class='main-content'>
+        <p style='text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem;'>
+            <span style='display: flex; align-items: center; justify-content: center; height: 100%;'>
+                <span id='flashcard' style='scale: 2.5; max-width: 40%;'></span>
+            </span>
+        </p>
+        <p style='text-align: center; margin-bottom: 0.5rem;'>
+            <span id='card_nb'></span><span id='card_total'></span>
+        </p>
+        <p style='text-align: center;'>
+            <button id='flip' onclick='reverse_card()' disabled>Voir la réponse</button>
+        </p>
+        <p>
+            <button id='incor' onclick='new_card(false)' style='position: relative; left: 15vw; color: #EC7063;' disabled>Réponse incorrecte</button><button id='corr' onclick='new_card(true)' style='position: relative; left: calc(100% - 65vw); color: #159957;' disabled>Réponse correcte</button>
+        </p>
+    </main>
+    <footer class='site-footer'></footer>
+</body>
+</html>

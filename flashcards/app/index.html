@@ -1,0 +1,67 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://rfoxinter.github.io/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="./maskable192.png">
+    <link rel="canonical" href="https://rfoxinter.github.io/revisions/flashcards/app/"/>
+    <link rel="icon" href="favicon.ico"/>
+    <title>Flashcards app</title>
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap&amp;text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%A90123456789.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&amp;display=swap">
+    <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/main.css">
+    <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/style.css">
+    <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/revisions/main.css">
+    <link rel="manifest" href="app.webmanifest" crossorigin="use-credentials">
+    <link rel="manifest" href="manifest.json">
+    <script src="main.js"></script>
+    <script src="site.js"></script>
+    <script src="huffman.js"></script>
+    <style>
+        * {
+            font-size: calc(min(3.75vw,100%));
+        }
+        .material-symbols-rounded {
+            font-size: 80% !important;
+        }
+        p {
+            white-space: pre-wrap;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body onload="display_cards()">
+    <div id="downloaded">
+        <header class="page-header">
+            <h1>Fiches téléchargées</h1>
+            <span class="menu-icon material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'none'; document.getElementById('download').style.display = 'block';" style="font-size: 24px !important;">download_for_offline</ptr></span>
+        </header>
+        <main class="main-content">
+            <div id="down_cards_container">
+            </div>
+        </main>
+        <footer class="site-footer" style="padding-top: 0pt;"></footer>
+    </div>
+    <div style="display: none;" id="download">
+        <header class="page-header">
+            <h1>Ajout de nouvelles fiches</h1>
+            <span class="menu-icon material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('download').style.display = 'none';" style="font-size: 24px !important;">close</ptr></span>
+        </header>
+        <main class="main-content">
+            <input type="url" id="file" name="file" placeholder="Url du dossier" style="width: calc(min(50%,20em)); display: inline-block; margin-right: 2em;"></input><button onclick="list_cards()" style="width: calc(min(15ex,50% - 2em)); display: inline-block;">Voir les fiches</button>
+            <div id="cards_container">
+            </div>
+        </main>
+        <footer class="site-footer" style="padding-top: 0pt;"></footer>
+        <script>
+            document.getElementById("file").onkeypress = function(e){
+                if (!e) {e = window.event};
+                var key = e.code || e.key;
+                if (key === "Enter" || key === "NumpadEnter"){
+                    list_cards();
+                } else {console.log(key)}
+            }
+        </script>
+    </div>
+</body>
