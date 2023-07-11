@@ -93,7 +93,13 @@ function append_card(src, name) {
         span.setAttribute('class','material-symbols-rounded folder');
         span.innerHTML = 'folder_open';
         h1.appendChild(span);
-        h1.innerHTML += ' ' + src;
+        h1.innerHTML += '\xa0';
+        span2 = document.createElement('span');
+        span2.setAttribute('onclick', 'document.getElementById("downloaded").style.display = "none"; document.getElementById("download").style.display = "block"; document.getElementById("file").value = "' + src + '"; list_cards();');
+        span2.setAttribute('id', src+'_icon');
+        span2.style.cursor = 'pointer';
+        span2.innerHTML = src;
+        h1.appendChild(span2);
         d.appendChild(h1);
         if (document.getElementById('down_cards_container').children.length > 0) {
             hr = document.createElement('hr');
