@@ -4,11 +4,6 @@ class OutBitFile {
         this.data = '';
         this.buff = 1;
     }
-
-    writeData() {
-        localStorage.setItem(finename, this.data);
-        this.data = '';
-    }
 }
 
 class InBitFile {
