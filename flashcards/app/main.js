@@ -273,4 +273,10 @@ function read_all() {
     return contents;
 }
 
-    
+function refresh() {
+    var c = document.getElementById('down_cards_container');
+    for (let i = 0; i<c.children.length; ++i) {
+        c.removeChild(c.children[i]);
+    }
+    display_cards();
+}
