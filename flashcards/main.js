@@ -56,7 +56,7 @@ async function loadFile(file) {
         fst = fl[4].replace(']', '').replace('[', '').split(',').map(x => parseInt(x));
         arr = new Array(2*n.length);
         for (let i = 0; i < 2*n.length; ++i) {
-            arr[i] = decodeURIComponent(escape(fl[5+i]));
+            arr[i] = decodeURIComponent(fl[5+i]);
         }
         filedate = parseInt(fl[5+2*n.length]);
         filename = fl[8+2*n.length];
@@ -130,7 +130,7 @@ async function fill_svg(file) {
     }
 }
 async function fill_card(file) {
-    let res = await loadFile(atob(card), false);
+    let res = await loadFile(atob(card));
     if (res == 200) {
         document.getElementById('flip').disabled = false;
         document.getElementById('title').innerHTML = title;
@@ -233,7 +233,7 @@ function toTitle(str) {
 function download() {
     var date = new Date;
     var a = document.createElement('a');
-    var text = lst[0].replaceAll('"', '') + '\n' + lst[1] + '\n' + lst[2] + '\n' + lst[3].replaceAll(' ', '') + '\n' + lst[4].replaceAll(' ', '') + '\n' + arr.map((x,i,a) => x.replaceAll('\r', '').replaceAll('\n', '')).map(x => unescape(encodeURIComponent(x))).join('\n') + '\n' + date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + String(date.getDate()).padStart(2, '0') + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0') + '\n' + btoa(title) + '\n' + absolute(atob(file) + (title.includes('&ndash;')?'/../..':'/..')) + 'cards.txt' + '\n' + filename;
+    var text = lst[0].replaceAll('"', '') + '\n' + lst[1] + '\n' + lst[2] + '\n' + lst[3].replaceAll(' ', '') + '\n' + lst[4].replaceAll(' ', '') + '\n' + arr.map((x,i,a) => x.replaceAll('\r', '').replaceAll('\n', '')).map(x => encodeURIComponent(x)).join('\n') + '\n' + date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + String(date.getDate()).padStart(2, '0') + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0') + '\n' + btoa(title) + '\n' + absolute(atob(file) + (title.includes('&ndash;')?'/../..':'/..')) + 'cards.txt' + '\n' + filename;
     compress(text,toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')).replaceAll(' ', '') + '.txt');
 
 }
