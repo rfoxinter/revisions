@@ -27,7 +27,7 @@
         .material-symbols-rounded {
             font-size: 80% !important;
         }
-        #down-button {
+        .down-button {
             position: absolute;
             top: 0;
             right: 0;
@@ -35,7 +35,7 @@
             margin-top: calc(min(20px,2vh));
             margin-bottom: calc(min(20px,2vh));
         }
-        #up-button {
+        .up-button {
             position: absolute;
             top: 0;
             left: 0;
@@ -53,8 +53,8 @@
     <div id="downloaded">
         <header class="page-header">
             <h1>Fiches téléchargées</h1>
-            <span id="down-button" class="material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'none'; document.getElementById('download').style.display = 'block'; document.getElementById('file').value = ''" style="font-size: 24px !important;">download_for_offline</ptr></span>
-            <span id="up-button" class="material-symbols-rounded"><ptr onclick="refresh()" style="font-size: 24px !important;">refresh</ptr></span>
+            <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'none'; document.getElementById('download').style.display = 'block'; document.getElementById('file').value = ''" style="font-size: 24px !important;">download_for_offline</ptr></span>
+            <span class="up-button material-symbols-rounded"><ptr onclick="refresh()" style="font-size: 24px !important;">refresh</ptr></span>
         </header>
         <main class="main-content">
             <div id="down_cards_container">
@@ -65,7 +65,7 @@
     <div style="display: none;" id="download">
         <header class="page-header">
             <h1>Ajout de nouvelles fiches</h1>
-            <span class="menu-icon material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('download').style.display = 'none';" style="font-size: 24px !important;">close</ptr></span>
+            <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('download').style.display = 'none';" style="font-size: 24px !important;">close</ptr></span>
         </header>
         <main class="main-content">
             <input type="url" id="file" name="file" placeholder="Url du fichier" style="width: calc(min(50%,20em)); display: inline-block; margin-right: 2em;"></input><button onclick="list_cards()" style="width: calc(min(15ex,50% - 2em)); display: inline-block;">Voir les fiches</button>
@@ -82,6 +82,19 @@
                 } else {console.log(key)}
             }
         </script>
+    </div>
+    <div style="display: none;" id="config">
+        <header class="page-header">
+            <h1>Configuration de la source</h1>
+            <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('download').style.display = 'block'; document.getElementById('config').style.display = 'none';" style="font-size: 24px !important;">close</ptr></span>
+        </header>
+        <main class="main-content">
+            <p>Source&nbsp;:&nbsp;<span id="cfgsrc"></span></p>
+            <p><label for="alias">Nom de la source&nbsp;:&nbsp;</label><input type="text" name="alias" id="alias" style="display: unset; margin: 0.5em;"></p>
+            <p><label for="root">Racine de la source&nbsp;:&nbsp;</label><input type="text" name="root" id="root" style="display: unset; margin: 0.5em;"></p>
+            <p style="text-align: center;"><button onclick="set_config()" style="display: unset; margin-top: 0.5em;">Appliquer la configuration</button></p>
+        </main>
+        <footer class="site-footer" style="padding-top: 0pt;"></footer>
     </div>
 </body>
 </html>
