@@ -366,7 +366,6 @@ function config_src(src) {
 
 function set_config() {
     let src = document.getElementById('cfgsrc').innerHTML;
-    if (document.getElementById("alias").value === "" || document.getElementById("root").value === "") {window.alert("Certains champs sont vides"); return;}
     var open = indexedDB.open("flcrddb");
     open.onsuccess = function(event) {
         var db = event.target.result;
@@ -380,7 +379,7 @@ function set_config() {
             if (result) {
                 await store.delete(src);
             }
-            add_config(src, document.getElementById("alias").value, document.getElementById("root").value);
+            add_config(src, document.getElementById("alias").value==""?src:document.getElementById("alias").value, document.getElementById("root").value);
         };
 
         tx.oncomplete = function() {
