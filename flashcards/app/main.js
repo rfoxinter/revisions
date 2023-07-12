@@ -380,6 +380,9 @@ function set_config() {
                 await store.delete(src);
             }
             add_config(src, document.getElementById("alias").value==""?src:document.getElementById("alias").value, document.getElementById("root").value);
+            window.alert("Configuration appliquée");
+            document.getElementById('download').style.display = 'block';
+            document.getElementById('config').style.display = 'none';
         };
 
         tx.oncomplete = function() {
