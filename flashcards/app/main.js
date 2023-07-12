@@ -98,6 +98,7 @@ function append_card(src, name) {
         span2.setAttribute('onclick', 'document.getElementById("downloaded").style.display = "none"; document.getElementById("download").style.display = "block"; document.getElementById("file").value = "' + src + '"; list_cards();');
         span2.setAttribute('id', src+'_icon');
         span2.style.cursor = 'pointer';
+        span2.style.fontSize = 'inherit';
         span2.innerHTML = src;
         h1.appendChild(span2);
         d.appendChild(h1);
