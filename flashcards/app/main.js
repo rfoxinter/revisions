@@ -39,6 +39,12 @@ async function list_cards() {
     } catch(error) {window.alert('Impossible de rafraîchir le fichier.');}
     if (response.status == 200) {
         document.getElementById("cards_container").textContent= "";
+        let p = document.createElement("p");
+        let a = document.createElement("a");
+        a.innerText = "Configurer la source";
+        a.href = "javascript:config_src('" + flurl + "')";
+        p.appendChild(a);
+        document.getElementById("cards_container").appendChild(p);
         const jsCode = await response.text();
         let ls = jsCode.split('\n');
         var open = indexedDB.open("flcrddb");
@@ -79,7 +85,7 @@ async function list_cards() {
     } else {window.alert('Impossible de rafraîchir le fichier.');}
 }
 
-function append_card(src, name) {
+async function append_card(src, name) {
     let c = document.getElementById('down_cards_container');
     if (document.getElementsByClassName(src).length == 0) {
         d = document.createElement('div');
@@ -96,7 +102,7 @@ function append_card(src, name) {
         h1.innerHTML += '\xa0';
         span2 = document.createElement('span');
         span2.setAttribute('onclick', 'document.getElementById("downloaded").style.display = "none"; document.getElementById("download").style.display = "block"; document.getElementById("file").value = "' + src + '"; list_cards();');
-        span2.setAttribute('id', src+'_icon');
+        span2.setAttribute('id', src+'_text');
         span2.style.cursor = 'pointer';
         span2.style.fontSize = 'inherit';
         span2.innerHTML = src;
@@ -107,6 +113,7 @@ function append_card(src, name) {
             c.appendChild(hr);
         }
         c.appendChild(d);
+        set_config_title(src);
     }
     p = document.createElement('p');
     p.setAttribute('class',src+'_elem');
@@ -138,6 +145,7 @@ function append_card(src, name) {
     p.appendChild(a3);
     p.id = '[' + src + ',' + name + ']';
     document.getElementsByClassName(src)[0].appendChild(p);
+    set_config_card(src, name)
 }
 
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
@@ -147,6 +155,7 @@ var open = indexedDB.open("flcrddb");
 open.onupgradeneeded = function(event) {
     var db = event.target.result;
     var store = db.createObjectStore("flcrd", {keyPath: ["url", "name"]});
+    var store2 = db.createObjectStore("flcfg", {keyPath: "url"});
 };
 
 function delete_card(_url, _name) {
@@ -286,4 +295,96 @@ function refresh() {
         c.removeChild(c.children[i]);
     }
     display_cards();
+}
+
+function add_config(_url, _alias, _root) {
+    var open = indexedDB.open("flcrddb");
+    open.onsuccess = function(event) {
+        var db = event.target.result;
+        var tx = db.transaction("flcfg", "readwrite");
+        var store = tx.objectStore("flcfg");
+
+        store.put({url: _url, alias: _alias, root: _root});
+
+        tx.oncomplete = function() {
+            db.close();
+        };
+    };
+}
+
+function set_config_title(_url) {
+    var open = indexedDB.open("flcrddb");
+    open.onsuccess = function(event) {
+        var db = event.target.result;
+        var tx = db.transaction("flcfg", "readonly");
+        var store = tx.objectStore("flcfg");
+
+        var getRequest = store.get(_url);
+
+        getRequest.onsuccess = function(event) {
+            var result = event.target.result;
+            if (result) {
+                document.getElementById(_url + '_text').innerHTML = result.alias;
+            }
+        };
+
+        tx.oncomplete = function() {
+            db.close();
+        };
+    };
+}
+
+function set_config_card(_url, _name) {
+    var open = indexedDB.open("flcrddb");
+    open.onsuccess = function(event) {
+        var db = event.target.result;
+        var tx = db.transaction("flcfg", "readonly");
+        var store = tx.objectStore("flcfg");
+
+        var getRequest = store.get(_url);
+
+        getRequest.onsuccess = function(event) {
+            var result = event.target.result;
+            if (result) {
+                document.getElementById('[' + _url + ',' + _name + ']').innerHTML = document.getElementById('[' + _url + ',' + _name + ']').innerHTML.replace(result.root, '');
+            }
+        };
+
+        tx.oncomplete = function() {
+            db.close();
+        };
+    };
+}
+
+function config_src(src) {
+    document.getElementById('download').style.display = 'none';
+    document.getElementById('config').style.display = 'block';
+    document.getElementById('cfgsrc').innerHTML = src;
+    document.getElementById("alias").value = "";
+    document.getElementById("root").value = "";
+}
+
+function set_config() {
+    let src = document.getElementById('cfgsrc').innerHTML;
+    if (document.getElementById("alias").value === "" || document.getElementById("root").value === "") {window.alert("Certains champs sont vides"); return;}
+    var open = indexedDB.open("flcrddb");
+    open.onsuccess = function(event) {
+        var db = event.target.result;
+        var tx = db.transaction("flcfg", "readwrite");
+        var store = tx.objectStore("flcfg");
+
+        var getRequest = store.get(src);
+
+        getRequest.onsuccess = async function(event) {
+            var result = event.target.result;
+            if (result) {
+                await store.delete(src);
+            }
+            add_config(src, document.getElementById("alias").value, document.getElementById("root").value);
+        };
+
+        tx.oncomplete = function() {
+            db.close();
+        };
+    };
 }
