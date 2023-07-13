@@ -360,8 +360,26 @@ function config_src(src) {
     document.getElementById('download').style.display = 'none';
     document.getElementById('config').style.display = 'block';
     document.getElementById('cfgsrc').innerHTML = src;
-    document.getElementById("alias").value = "";
-    document.getElementById("root").value = "";
+    var open = indexedDB.open("flcrddb");
+    open.onsuccess = function(event) {
+        var db = event.target.result;
+        var tx = db.transaction("flcfg", "readonly");
+        var store = tx.objectStore("flcfg");
+
+        var getRequest = store.get(src);
+
+        getRequest.onsuccess = function(event) {
+            var result = event.target.result;
+            if (result) {
+                document.getElementById("alias").value = result.alias;
+                document.getElementById("root").value = result.root;
+            }
+        };
+
+        tx.oncomplete = function() {
+            db.close();
+        };
+    };
 }
 
 function set_config() {
