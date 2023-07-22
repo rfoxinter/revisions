@@ -407,6 +407,7 @@ function set_config() {
 
         tx.oncomplete = function() {
             db.close();
+            refresh();
         };
     };
 }
