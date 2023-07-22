@@ -10,7 +10,9 @@ var URLS = [                            // Add URL you want to cache in this lis
   'https://rfoxinter.github.io/main.css',
   'https://rfoxinter.github.io/normalize.css',
   'https://rfoxinter.github.io/style.css',
-  'https://rfoxinter.github.io/revisions/main.css'
+  'https://rfoxinter.github.io/revisions/main.css',
+  'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%A90123456789.',
+  'https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&display=swap'
 ]
 
 // Respond with cached resources
