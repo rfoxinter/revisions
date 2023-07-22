@@ -35,11 +35,7 @@ function read_card(_url, _name) {
     };
 }
 
-var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = []; var qr = [0, 1]; var lst; var fl; var syncurl; var filedate; var filename;
-
-const params = new URLSearchParams(document.location.search.substring(1));
-const src = params.get('src');
-const file = params.get('file');
+var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = []; var qr = [0, 1]; var lst; var fl; var syncurl; var filedate; var filename; var id;
 
 async function loadFile(src, file) {
     var open = indexedDB.open("flcrddb");
@@ -95,11 +91,19 @@ async function loadFile(src, file) {
     };
 }
 
-async function load() {
-    if (file != null && file != '') {
-        await loadFile(atob(src), atob(file));
-        filename = file;
-    }
+async function load(src, file) {
+    document.getElementById("downloaded").style.display="none";
+    document.getElementById("viewer").style.display="block";
+    id = [src, file];
+    document.getElementById('incor').disabled = true;
+    document.getElementById('corr').disabled = true;
+    document.getElementById('flip').disabled = true;
+    document.getElementById('title').innerHTML = '&nbsp;';
+    document.getElementById('flashcard').innerHTML = '';
+    document.getElementById('card_nb').innerHTML = '';
+    document.getElementById('card_total').innerHTML = '';
+    await loadFile(src, file);
+    filename = file;
 }
 
 function reverse_card() {
