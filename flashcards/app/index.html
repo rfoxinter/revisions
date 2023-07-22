@@ -9,17 +9,18 @@
     <link rel="icon" href="favicon.ico"/>
     <title>Flashcards app</title>
     <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap&amp;text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%A90123456789.">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%A90123456789.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&display=swap">
     <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/main.css">
     <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/normalize.css">
     <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/style.css">
     <link rel="stylesheet" type="text/css" href="https://rfoxinter.github.io/revisions/main.css">
     <link rel="manifest" href="app.webmanifest" crossorigin="use-credentials">
     <link rel="manifest" href="manifest.json">
-    <script src="main.js"></script>
-    <script src="site.js"></script>
-    <script src="huffman.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="site.js"></script>
+    <script type="text/javascript" src="huffman.js"></script>
+    <script type="text/javascript" src="viewer.js"></script>
     <style>
         * {
             font-size: calc(min(3.75vw,100%));
@@ -45,6 +46,21 @@
         }
         p {
             white-space: pre-wrap;
+        }
+        svg {
+            max-width: 100%;
+            max-height: calc(max(20vh, 120px)) !important;
+            fill: #606c71;
+            width: unset !important;
+            vertical-align: middle;
+        }
+        path {
+            stroke: #606c71;
+        }
+        .vbutton {
+            display: inline-block;
+            width: 25vw;
+            min-height: 40px;
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -74,12 +90,12 @@
         </main>
         <footer class="site-footer" style="padding-top: 0pt;"></footer>
         <script>
-            document.getElementById("file").onkeypress = function(e){
+            document.getElementById("file").onkeypress = function(e) {
                 if (!e) {e = window.event};
                 var key = e.code || e.key;
                 if (key === "Enter" || key === "NumpadEnter"){
                     list_cards();
-                } else {console.log(key)}
+                }
             }
         </script>
     </div>
@@ -92,11 +108,36 @@
             <p>Source&nbsp;:&nbsp;<span id="cfgsrc"></span></p>
             <p><label for="alias">Surnom de la source&nbsp;:&nbsp;</label><input type="text" name="alias" id="alias" style="display: unset; margin-top: 0.5em; margin-bottom: 0.25em;"></p>
             <p><label for="root">Racine des fichiers&nbsp;:&nbsp;</label><input type="text" name="root" id="root" style="display: unset; margin-top: 0.25em; margin-bottom: 0.25em;"></p>
-            <p style="text-align: center;"><button onclick="set_config()" style="display: unset; margin-top: 0.25em; width: calc(100% / 3);">Appliquer la configuration</button></p>
+            <p style="text-align: center;"><button onclick="set_config()" style="display: unset; margin-top: 0.25em; width: calc(max(100% / 3, min(100%, 50px)));">Appliquer la configuration</button></p>
         </main>
         <footer class="site-footer" style="padding-top: 0pt;"></footer>
     </div>
-    <script>
+    <div style="display: none;" id="viewer">
+        <div id='overlay'></div>
+        <header class='page-header'>
+            <h1 id='title'>&nbsp;</h1>
+            <input type='file' id='open' accept='.txt' hidden>
+            <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('viewer').style.display = 'none';" style="font-size: 24px !important;">close</ptr></span>
+        </header>
+        <main class='main-content'>
+            <p style='text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem; white-space: unset;'>
+                <span style='display: flex; align-items: center; justify-content: center; height: 100%;'>
+                    <span id='flashcard' style='scale: 2.5; max-width: 40%;'></span>
+                </span>
+            </p>
+            <p style='text-align: center; margin-bottom: 0.5rem; white-space: unset;'>
+                <span id='card_nb'></span><span id='card_total'></span>
+            </p>
+            <p style='text-align: center; white-space: unset;'>
+                <button id='flip' onclick='reverse_card()' class="vbutton" disabled>Voir la réponse</button>
+            </p>
+            <p style="white-space: unset;">
+                <button id='incor' onclick='new_card(false)' style='position: relative; left: 15vw; color: #EC7063;' class="vbutton" disabled>Réponse incorrecte</button><button id='corr' onclick='new_card(true)' style='position: relative; left: calc(100% - 65vw); color: #159957;' class="vbutton" disabled>Réponse correcte</button>
+            </p>
+        </main>
+        <footer class='site-footer'></footer>
+    </div>
+    <script type="text/javascript" >
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./sw.js', {scope: './'})
         }
