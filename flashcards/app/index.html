@@ -62,6 +62,9 @@
             width: 25vw;
             min-height: 40px;
         }
+        h1>* {
+            font-size: inherit;
+        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
@@ -117,7 +120,7 @@
         <header class='page-header'>
             <h1 id='title'>&nbsp;</h1>
             <input type='file' id='open' accept='.txt' hidden>
-            <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('viewer').style.display = 'none';" style="font-size: 24px !important;">close</ptr></span>
+            <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('viewer').style.display = 'none'; document.title = 'Flashcards app';" style="font-size: 24px !important;">close</ptr></span>
         </header>
         <main class='main-content'>
             <p style='text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem; white-space: unset;'>
