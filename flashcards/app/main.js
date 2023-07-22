@@ -159,21 +159,23 @@ open.onupgradeneeded = function(event) {
 };
 
 function delete_card(_url, _name) {
-    var open = indexedDB.open("flcrddb");
-    open.onsuccess = function(event) {
-        var db = event.target.result;
-        var tx = db.transaction("flcrd", "readwrite");
-        var store = tx.objectStore("flcrd");
+    if (window.confirm("Supprimer la fiche")) {
+        var open = indexedDB.open("flcrddb");
+        open.onsuccess = function(event) {
+            var db = event.target.result;
+            var tx = db.transaction("flcrd", "readwrite");
+            var store = tx.objectStore("flcrd");
 
-        store.delete([_url, _name]);
+            store.delete([_url, _name]);
 
-        tx.oncomplete = function() {
-            db.close();
+            tx.oncomplete = function() {
+                db.close();
+            };
         };
-    };
-    document.getElementsByClassName(_url)[0].removeChild(document.getElementById('[' + _url + ',' + _name + ']'));
-    if (document.getElementsByClassName(_url)[0].children.length <= 1) {
-        document.getElementById('down_cards_container').removeChild(document.getElementsByClassName(_url)[0]);
+        document.getElementsByClassName(_url)[0].removeChild(document.getElementById('[' + _url + ',' + _name + ']'));
+        if (document.getElementsByClassName(_url)[0].children.length <= 1) {
+            document.getElementById('down_cards_container').removeChild(document.getElementsByClassName(_url)[0]);
+        }
     }
 }
 
