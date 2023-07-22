@@ -90,11 +90,16 @@
         </header>
         <main class="main-content">
             <p>Source&nbsp;:&nbsp;<span id="cfgsrc"></span></p>
-            <p><label for="alias">Surnom de la source&nbsp;:&nbsp;</label><input type="text" name="alias" id="alias" style="display: unset; margin: 0.5em;"></p>
-            <p><label for="root">Racine des fichiers&nbsp;:&nbsp;</label><input type="text" name="root" id="root" style="display: unset; margin: 0.5em;"></p>
-            <p style="text-align: center;"><button onclick="set_config()" style="display: unset; margin-top: 0.5em;">Appliquer la configuration</button></p>
+            <p><label for="alias">Surnom de la source&nbsp;:&nbsp;</label><input type="text" name="alias" id="alias" style="display: unset; margin-top: 0.5em; margin-bottom: 0.25em;"></p>
+            <p><label for="root">Racine des fichiers&nbsp;:&nbsp;</label><input type="text" name="root" id="root" style="display: unset; margin-top: 0.25em; margin-bottom: 0.25em;"></p>
+            <p style="text-align: center;"><button onclick="set_config()" style="display: unset; margin-top: 0.25em; width: calc(100% / 3);">Appliquer la configuration</button></p>
         </main>
         <footer class="site-footer" style="padding-top: 0pt;"></footer>
     </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js', {scope: './'})
+        }
+    </script>
 </body>
 </html>
