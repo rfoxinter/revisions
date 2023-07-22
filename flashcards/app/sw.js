@@ -6,7 +6,11 @@ var URLS = [                            // Add URL you want to cache in this lis
   './huffman.js',
   './main.js',
   './site.js',
-  './viewer.js'
+  './viewer.js',
+  'https://rfoxinter.github.io/main.css',
+  'https://rfoxinter.github.io/normalize.css',
+  'https://rfoxinter.github.io/style.css',
+  'https://rfoxinter.github.io/revisions/main.css'
 ]
 
 // Respond with cached resources
