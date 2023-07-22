@@ -119,7 +119,7 @@ async function append_card(src, name) {
     p.setAttribute('class',src+'_elem');
     p.innerHTML = name + ' ';
     var a = document.createElement('a');
-    a.setAttribute('href', 'viewer.html?src='+btoa(src)+'&file='+btoa(name));
+    a.setAttribute('href', 'javascript:load("'+src+'","'+name+'")');
     span = document.createElement('span');
     span.setAttribute('class','material-symbols-rounded');
     span.innerHTML = 'open_in_new';
