@@ -31,20 +31,22 @@ function display_cards() {
     };
 }
 
-async function list_cards() {
+async function list_cards(downloaded = false) {
     let flurl = absolute(document.getElementById("file").value);
-    if (flurl.substring(flurl.length - 9) !== "cards.txt") {window.alert("Fichier incorrect");return;}
-    try {
-        response = await fetch(flurl);
-    } catch(error) {window.alert('Impossible de rafraîchir le fichier.');}
-    if (response.status == 200) {
-        document.getElementById("cards_container").textContent= "";
+    document.getElementById("cards_container").textContent= "";
+    if (downloaded) {
         let p = document.createElement("p");
         let a = document.createElement("a");
         a.innerText = "Configurer la source";
         a.href = "javascript:config_src('" + flurl + "')";
         p.appendChild(a);
         document.getElementById("cards_container").appendChild(p);
+    }
+    if (flurl.substring(flurl.length - 9) !== "cards.txt") {window.alert("Fichier incorrect"); return;}
+    try {
+        response = await fetch(flurl);
+    } catch(error) {window.alert('Impossible de rafraîchir le fichier.');}
+    if (response.status == 200) {
         const jsCode = await response.text();
         let ls = jsCode.split('\n');
         var open = indexedDB.open("flcrddb");
@@ -101,7 +103,7 @@ async function append_card(src, name) {
         h1.appendChild(span);
         h1.innerHTML += '\xa0';
         span2 = document.createElement('span');
-        span2.setAttribute('onclick', 'document.getElementById("downloaded").style.display = "none"; document.getElementById("download").style.display = "block"; document.getElementById("file").value = "' + src + '"; list_cards();');
+        span2.setAttribute('onclick', 'document.getElementById("downloaded").style.display = "none"; document.getElementById("download").style.display = "block"; document.getElementById("file").value = "' + src + '"; list_cards(true);');
         span2.setAttribute('id', src+'_text');
         span2.style.cursor = 'pointer';
         span2.style.fontSize = 'inherit';
