@@ -176,3 +176,12 @@ function new_card(corr) {
         document.getElementById('card_nb').innerHTML = nth + 1;
     }
 }
+
+var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+
+var open = indexedDB.open("flcrdsv");
+
+open.onupgradeneeded = function(event) {
+    var db = event.target.result;
+    var store = db.createObjectStore("flcrd", {keyPath: ["url", "name"]});
+};
