@@ -65,6 +65,29 @@
         h1>* {
             font-size: inherit;
         }
+        .dropdown {
+            margin-bottom: 0;
+            width: calc(min(150px, 25%));
+            overflow: hidden;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: whitesmoke;
+            overflow: auto;
+            width: 6.5em;
+            padding: 0;
+            left: calc(min(20px,20vw));
+            top: calc(min(20px,20vw) + 24px);
+            color: #606c71;
+        }
+        .option {
+            padding: 2px;
+        }
+        .option_text:hover {
+            background-color: #ddd;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body onload="display_cards()">
@@ -120,7 +143,12 @@
             <h1 id='title'>&nbsp;</h1>
             <input type='file' id='open' accept='.txt' hidden>
             <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('viewer').style.display = 'none'; document.title = 'Flashcards app';" style="font-size: 24px !important;">close</ptr></span>
-            <!-- <span class="up-button material-symbols-rounded"><ptr onclick="save()" style="font-size: 24px !important;">save</ptr></span> -->
+            <span class="up-button material-symbols-rounded"><ptr id="save" style="font-size: 24px !important;">save</ptr></span>
+            <div id="dropdown" class="dropdown-content">
+                <p onclick="save()" class="option option_text">Enregistrer la progression</p>
+                <hr style="padding: 0px; margin: 0px;" class="option">
+                <p onclick="loadsv()" class="option option_text">Charger la progression</p>
+            </div>
         </header>
         <main class='main-content'>
             <p style='text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem; white-space: unset;'>
