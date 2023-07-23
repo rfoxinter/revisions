@@ -7,6 +7,7 @@ var URLS = [                            // Add URL you want to cache in this lis
   './main.js',
   './site.js',
   './viewer.js',
+  './sw.js',
   'https://rfoxinter.github.io/main.css',
   'https://rfoxinter.github.io/normalize.css',
   'https://rfoxinter.github.io/style.css',
