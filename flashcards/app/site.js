@@ -41,7 +41,6 @@ function absolute(rel) {
 
 function download_text(start, title, file, filename) {
     var date = new Date;
-    console.log(start);
     var time = date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + String(date.getDate()).padStart(2, '0') + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0');
     var text = start + time + '\n' + btoa(title) + '\n' + absolute(file + (title.includes('&ndash;')?'/../..':'/..')) + 'cards.txt' + '\n' + filename;
     return [compress_text(text), time];
