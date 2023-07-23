@@ -1,8 +1,9 @@
-var APP_PREFIX = 'Flashcards'     // Identifier for this app (this needs to be consistent across every cache update)
-var VERSION = '1'              // Version of the off-line cache (change this value everytime you want to update cache)
-var CACHE_NAME = APP_PREFIX + VERSION
+var CACHE_NAME = 'Flashcards'     // Identifier for this app (this needs to be consistent across every cache update)
+var VERSION = '2'              // Version of the off-line cache (change this value everytime you want to update cache)
 var URLS = [                            // Add URL you want to cache in this list.
+  './',
   './app.html',
+  './sw.js',
   './huffman.js',
   './main.js',
   './site.js',
