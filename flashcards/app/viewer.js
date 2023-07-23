@@ -35,7 +35,7 @@ function read_card(_url, _name) {
     };
 }
 
-var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr = []; var wrong = []; var qr = [0, 1]; var lst; var fl; var syncurl; var filedate; var filename; var id;
+var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr; var wrong = []; var qr = [0, 1]; var id;
 
 async function loadFile(src, file) {
     var open = indexedDB.open("flcrddb");
@@ -50,7 +50,7 @@ async function loadFile(src, file) {
             var result = event.target.result;
             if (result) {
                 var jsCode = result.content;
-                fl = deflate(jsCode).split('\n');
+                var fl = deflate(jsCode).split('\n');
                 title = fl[0];
                 sh_quest = parseInt(fl[1]);
                 sh_qr = parseInt(fl[2]);
@@ -60,9 +60,6 @@ async function loadFile(src, file) {
                 for (let i = 0; i < 2*n.length; ++i) {
                     arr[i] = decodeURIComponent(fl[5+i]);
                 }
-                filedate = parseInt(fl[5+2*n.length]);
-                filename = fl[8+2*n.length];
-                syncurl = fl[7+2*n.length];
                 
                 if (fl[6+2*n.length] != btoa(title)) {
                     throw new Error('Fichier corrompu')
@@ -103,7 +100,6 @@ async function load(src, file) {
     document.getElementById('card_nb').innerHTML = '';
     document.getElementById('card_total').innerHTML = '';
     await loadFile(src, file);
-    filename = file;
 }
 
 function reverse_card() {
@@ -185,3 +181,64 @@ open.onupgradeneeded = function(event) {
     var db = event.target.result;
     var store = db.createObjectStore("flcrd", {keyPath: ["url", "name"]});
 };
+
+function save() {
+    try {
+        var open = indexedDB.open("flcrdsv");
+        open.onsuccess = function(event) {
+            var db = event.target.result;
+            var tx = db.transaction("flcrd", "readwrite");
+            var store = tx.objectStore("flcrd");
+
+            store.put({url: id[0], name: id[1], content: compress_text((q?1:0) + "\n" + (viewed?1:0) + "\n" + nth + "\n" + ques.join(",") + "\n" + wrong.join(","))});
+
+            tx.oncomplete = function() {
+                window.alert("Sauvegarde effectuée.");
+                db.close();
+            };
+        };
+    } catch {window.alert("Une erreur est survenue lors de la sauvegarde.");}
+}
+
+function loadsv() {
+    var open = indexedDB.open("flcrdsv");
+    open.onsuccess = function(event) {
+        var db = event.target.result;
+        var tx = db.transaction("flcrd", "readonly");
+        var store = tx.objectStore("flcrd");
+
+        var getRequest = store.get(id);
+
+        getRequest.onsuccess = function(event) {
+            var result = event.target.result;
+            if (result) {
+                var code = deflate(result.content).split("\n");
+                q = !code[0];
+                nth = parseInt(code[2]);
+                document.getElementById('card_nb').innerHTML = nth + 1;
+                ques = code[3].split(",").map(x => parseInt(x));
+                reverse_card();
+                viewed = code[1];
+                if (!viewed) {
+                    document.getElementById('incor').disabled = false;
+                    document.getElementById('corr').disabled = false;
+                } else {
+                    document.getElementById('incor').disabled = true;
+                    document.getElementById('corr').disabled = true;
+                }
+                wrong = code[4].split(",").map(x => parseInt(x));
+            } else {
+                window.alert("Aucune sauvegarde à charger");
+            }
+        };
+
+        tx.oncomplete = function() {
+            db.close();
+        };
+    };
+}
+
+function displaydd(event){event.target.id === "save" || event.target.classList.contains("option")?document.getElementById("dropdown").style.display="block":document.getElementById("dropdown").style.display="none";}
+
+if (/Mobi|Android/i.test(navigator.userAgent)) {addEventListener("touchstart", (event) => {displaydd(event);});} else {addEventListener("mouseover", (event) => {displaydd(event);});}
+ 
