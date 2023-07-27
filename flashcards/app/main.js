@@ -45,7 +45,7 @@ async function list_cards(downloaded = false) {
     if (flurl.substring(flurl.length - 9) !== "cards.txt") {window.alert("Fichier incorrect"); return;}
     try {
         response = await fetch(flurl);
-    } catch(error) {window.alert('Impossible de rafraîchir le fichier.');}
+    } catch(error) {window.alert('Impossible de charger les fichies.');}
     if (response.status == 200) {
         const jsCode = await response.text();
         let ls = jsCode.split('\n');
