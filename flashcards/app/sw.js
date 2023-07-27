@@ -1,5 +1,5 @@
 var APP_PREFIX = 'Flashcards'     // Identifier for this app (this needs to be consistent across every cache update)
-var VERSION = '2'              // Version of the off-line cache (change this value everytime you want to update cache)
+var VERSION = '1'              // Version of the off-line cache (change this value everytime you want to update cache)
 var CACHE_NAME = APP_PREFIX + '-v' + VERSION
 var URLS = [                            // Add URL you want to cache in this list.
   './',
@@ -14,7 +14,9 @@ var URLS = [                            // Add URL you want to cache in this lis
   'https://rfoxinter.github.io/style.css',
   'https://rfoxinter.github.io/revisions/main.css',
   './symb.css',
-  './symb.woff2'
+  './symb.woff2',
+  './favicon.ico',
+  './maskable192.png'
 ]
 
 // Respond with cached resources
