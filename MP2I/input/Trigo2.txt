@@ -1,7 +1,7 @@
 Trigo2!!ttleTrigonométrie 2
 Shuffle questions : True
 Q/R & R/Q : True
-\usepackage{tables}\usepackage{trigo}\newcommand\N{\mathbb{N}}\newcommand\R{\mathbb{R}}\let\oldlim\lim\renewcommand\lim[2]{\oldlim\limits_{#1}\l#2\r}\let\oldexp\exp\renewcommand\exp[2][]{\oldexp^{#1}\l#2\r}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{mathtools}\usepackage{rotating}\usepackage{analyse}
+\usepackage{tables}\usepackage{trigo}\newcommand\N{\mathbb{N}}\newcommand\R{\mathbb{R}}\let\oldlim\lim\renewcommand\lim[2]{\oldlim\limits_{#1}\l#2\r}\let\oldexp\exp\renewcommand\exp[2][]{\oldexp^{#1}\l#2\r}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\usepackage{mathtools}\usepackage{rotating}\usepackage{analyse}\DeclareMathOperator{\oldIm}{Im}\renewcommand{\Im}[1]{\oldIm\l#1\r}\DeclareMathOperator{\oldRe}{Re}\renewcommand{\Re}[1]{\oldRe\l#1\r}
 $\sin{x+y}$;;$\sin{x}\cos{y}+\sin{y}\cos{x}$
 $\sin{x-y}$;;$\sin{x}\cos{y}-\sin{y}\cos{x}$
 $\cos{x+y}$;;$\cos{x}\cos{y}-\sin{x}\sin{y}$
@@ -52,7 +52,7 @@ $\cot{x}$\linebreak\linebreak$t=\tan{\frac{x}{2}}$;;$\frac{1-t^2}{2t}$\linebreak
 !!fst$\lim{x\to0}{\frac{\atan{x}}{x}}$;;$1$
 !!fstInégalité classique de $\atan{x}$;;$\forall x\in\R,\;\left|\atan{x}\right|\leqslant\left|x\right|$
 !!fstPropriétés remarquables de $\atan{x}$;;$\forall x\in\R,\;\tan{\atan{x}}=x$\linebreak$\forall x\in\left]-\oldfrac{\pi}{2},\oldfrac{\pi}{2}\right[,\;\atan{\tan{x}}=x$\linebreak$\forall n\in\N,\;\forall x\in\left]-\oldfrac{\pi}{2}+n\pi,\oldfrac{\pi}{2}+n\pi\right[$\linebreak$\atan{\tan{x}}=x-n\pi$\linebreak$\forall x\in\R^*,\;\atan{x}+\atan{\oldfrac{1}{x}}=\oldfrac{x}{\left|x\right|}\oldfrac{\pi}{2}$
-!!fstArgument d'un nombre complexe $z$ avec $\atan{x}$;;$\arg\l z\r\equiv\atan{\frac{\Im\l z\r}{\Re\l z\r}}\,\left[\pi\right]$
+!!fstArgument d'un nombre complexe $z$ avec $\arctan$;;$\arg\l z\r\equiv\atan{\frac{\Im z}{\Re z}}\,\left[\pi\right]$
 !!fstCourbe représentative de $\atan{x}$;;\begin{tikzpicture} \draw[color=gray,opacity=0.2] (-5.2,-2.2) grid[ystep=pi/4](5.2,2.2); \draw[->] (-5.2, 0) -- (5.2, 0) node[above left]{$x$}; \draw[->] (0,-2.2) -- (0, 2.2) node[below right]{$y$}; \foreach \y[count=\cnt] in {-\frac{\pi}{4},-\frac{\pi}{2}} \draw(0,{(-\cnt/4)*pi}) node[left]{\footnotesize$\y$}; \foreach \y[count=\cnt] in {\frac{\pi}{4},\frac{\pi}{2}} \draw(0,{(\cnt/4)*pi}) node[left]{\footnotesize$\y$}; \foreach \x in {-5,...,-1} \draw(\x,0) node[below]{\footnotesize$\x$}; \foreach \x in {1,...,5} \draw(\x,0) node[below]{\footnotesize$\x$}; \draw(0,0) node[below left]{\footnotesize$0$}; \draw[domain=-5.2:5.2, samples=2000, scale=1, smooth, variable=\x, black] plot (\x,{rad(atan(\x))}); \node[above] at (current bounding box.north) {$y=\atan{x}$}; \end{tikzpicture}
 !!fst$\der{}{\asin{x}}$;;$\frac{1}{\sqrt{1-x^2}}$
 !!fst$\lim{x\to0}{\frac{\asin{x}}{x}}$;;$1$

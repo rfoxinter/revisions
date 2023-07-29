@@ -4,7 +4,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Trigo
 20230703153339
 ../MP2I/flashcards/Trigo2
-20230703153957
+20230729223728
 ../MP2I/flashcards/Algebre1/Anneaux
 20230703144847
 ../MP2I/flashcards/Algebre1/Arithmetique
