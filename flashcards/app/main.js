@@ -160,8 +160,8 @@ open.onupgradeneeded = function(event) {
     var store2 = db.createObjectStore("flcfg", {keyPath: "url"});
 };
 
-function delete_card(_url, _name) {
-    if (window.confirm("Supprimer la fiche")) {
+function delete_card(_url, _name, _confirm = true) {
+    if ((!_confirm) || window.confirm("Supprimer la fiche")) {
         var open = indexedDB.open("flcrddb");
         open.onsuccess = function(event) {
             var db = event.target.result;
@@ -204,25 +204,29 @@ function read_card(_url, _name) {
 }
 
 function read_date(_url, _name) {
-    var open = indexedDB.open("flcrddb");
-    open.onsuccess = function(event) {
-        var db = event.target.result;
-        var tx = db.transaction("flcrd", "readonly");
-        var store = tx.objectStore("flcrd");
+    return new Promise(function(resolve, reject) {
+        var open = indexedDB.open("flcrddb");
+        open.onsuccess = function(event) {
+            var db = event.target.result;
+            var tx = db.transaction("flcrd", "readonly");
+            var store = tx.objectStore("flcrd");
 
-        var getRequest = store.get([_url, _name]);
+            var getRequest = store.get([_url, _name]);
 
-        getRequest.onsuccess = function(event) {
-            var result = event.target.result;
-            if (result) {
-                return parseInt(result.date);
-            }
+            getRequest.onsuccess = function(event) {
+                var result = event.target.result;
+                if (result) {
+                    resolve(parseInt(result.date));
+                } else {
+                    reject("Pas trouvé");
+                }
+            };
+
+            tx.oncomplete = function() {
+                db.close();
+            };
         };
-
-        tx.oncomplete = function() {
-            db.close();
-        };
-    };
+    });
 }
 
 async function add_card(_url, _name, filesrc, nb) {
