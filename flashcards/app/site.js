@@ -56,9 +56,9 @@ async function sync(url, name) {
         let ls = jsCode.split('\n'); let found = false;
         for (let i = 0; i < (ls.length - 1)/2; ++i) {
             if (ls[2*i + 1] == name) {
-                if (parseInt(ls[2*i + 2]) > read_date(url, name)) {
+                if (parseInt(ls[2*i + 2]) > await read_date(url, name)) {
                     window.alert('Une mise à jour est disponible et va être chargée.');
-                    await delete_card(url, name);
+                    await delete_card(url, name, false);
                     add_card(url, name, absolute(ls[0]+ls[2*i+1]), undefined)
                 } else {window.alert('Le fichier est à jour.')}
                 found = true;
