@@ -45,7 +45,7 @@ async function list_cards(downloaded = false) {
     if (flurl.substring(flurl.length - 9) !== "cards.txt") {window.alert("Fichier incorrect"); return;}
     try {
         response = await fetch(flurl);
-    } catch(error) {window.alert('Impossible de charger les fichies.');}
+    } catch(error) {window.alert("Impossible de charger les fiches");}
     if (response.status == 200) {
         const jsCode = await response.text();
         let ls = jsCode.split('\n');
@@ -161,26 +161,29 @@ open.onupgradeneeded = function(event) {
 };
 
 function delete_card(_url, _name, _confirm = true) {
-    if ((!_confirm) || window.confirm("Supprimer la fiche")) {
-        var open = indexedDB.open("flcrddb");
-        open.onsuccess = function(event) {
-            var db = event.target.result;
-            var tx = db.transaction("flcrd", "readwrite");
-            var store = tx.objectStore("flcrd");
+    return new Promise(function(resolve, reject) {
+        if ((!_confirm) || window.confirm("Supprimer la fiche")) {
+            var open = indexedDB.open("flcrddb");
+            open.onsuccess = function(event) {
+                var db = event.target.result;
+                var tx = db.transaction("flcrd", "readwrite");
+                var store = tx.objectStore("flcrd");
 
-            store.delete([_url, _name]);
+                store.delete([_url, _name]);
 
-            tx.oncomplete = function() {
-                db.close();
+                tx.oncomplete = function() {
+                    resolve();
+                    db.close();
+                };
             };
-        };
-        if (_confirm) {
-            document.getElementsByClassName(_url)[0].removeChild(document.getElementById('[' + _url + ',' + _name + ']'));
-            if (document.getElementsByClassName(_url)[0].children.length <= 1) {
-                document.getElementById('down_cards_container').removeChild(document.getElementsByClassName(_url)[0]);
+            if (_confirm) {
+                document.getElementsByClassName(_url)[0].removeChild(document.getElementById('[' + _url + ',' + _name + ']'));
+                if (document.getElementsByClassName(_url)[0].children.length <= 1) {
+                    document.getElementById('down_cards_container').removeChild(document.getElementsByClassName(_url)[0]);
+                }
             }
         }
-    }
+    });
 }
 
 function read_card(_url, _name) {
@@ -231,51 +234,56 @@ function read_date(_url, _name) {
     });
 }
 
-async function add_card(_url, _name, filesrc, nb) {
-    if (nb !== undefined) {
-        let a = document.getElementById(nb + "_card");
-        try {
-            a.href = "javascript:void(0)";
-            a.innerHTML = "downloading";
-            a.style.color = "#F5B041";
+function add_card(_url, _name, filesrc, nb) {
+    return new Promise(async function(resolve, reject) {
+        if (nb !== undefined) {
+            let a = document.getElementById(nb + "_card");
+            try {
+                a.href = "javascript:void(0)";
+                a.innerHTML = "downloading";
+                a.style.color = "#F5B041";
+                var contentdate = await downcrd(filesrc, _name);
+                if (contentdate === undefined) {throw new Error("Erreur lors du téléchargement");}
+                a.innerHTML = "check_circle";
+                a.style.color = "#159957";
+                var open = indexedDB.open("flcrddb");
+                open.onsuccess = function(event) {
+                    var db = event.target.result;
+                    var tx = db.transaction("flcrd", "readwrite");
+                    var store = tx.objectStore("flcrd");
+            
+                    store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1]});
+            
+                    tx.oncomplete = function() {
+                        resolve();
+                        db.close();
+                    };
+                };
+                append_card(_url, _name);
+            } catch {
+                reject();
+                a.innerHTML = "error";
+                a.style.color = "#EC7063";
+                a.href = "javascript:add_card('" + _url + "', '" + _name + "', '" + filesrc + "', " + nb + ")";
+            }
+        } else {
             var contentdate = await downcrd(filesrc, _name);
             if (contentdate === undefined) {throw new Error("Erreur lors du téléchargement")}
-            a.innerHTML = "check_circle";
-            a.style.color = "#159957";
             var open = indexedDB.open("flcrddb");
             open.onsuccess = function(event) {
                 var db = event.target.result;
                 var tx = db.transaction("flcrd", "readwrite");
                 var store = tx.objectStore("flcrd");
-        
+
                 store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1]});
-        
+
                 tx.oncomplete = function() {
+                    resolve();
                     db.close();
                 };
             };
-            append_card(_url, _name);
-        } catch {
-            a.innerHTML = "error";
-            a.style.color = "#EC7063";
-            a.href = "javascript:add_card('" + _url + "', '" + _name + "', '" + filesrc + "', " + nb + ")";
         }
-    } else {
-        var contentdate = await downcrd(filesrc, _name);
-        if (contentdate === undefined) {throw new Error("Erreur lors du téléchargement")}
-        var open = indexedDB.open("flcrddb");
-        open.onsuccess = function(event) {
-            var db = event.target.result;
-            var tx = db.transaction("flcrd", "readwrite");
-            var store = tx.objectStore("flcrd");
-
-            store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1]});
-
-            tx.oncomplete = function() {
-                db.close();
-            };
-        };
-    }
+    });
 }
 
 function read_all() {
