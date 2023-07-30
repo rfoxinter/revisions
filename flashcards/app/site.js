@@ -50,23 +50,36 @@ function download_text(start, title, file, filename) {
 async function sync(url, name) {
     try {
         response = await fetch(url);
-    } catch(error) {window.alert('Impossible de rafraîchir le fichier.');}
+    } catch(error) {window.alert('Impossible de rafraîchir le fichier');}
     if (response.status == 200) {
         const jsCode = await response.text();
         let ls = jsCode.split('\n'); let found = false;
         for (let i = 0; i < (ls.length - 1)/2; ++i) {
             if (ls[2*i + 1] == name) {
                 if (parseInt(ls[2*i + 2]) > await read_date(url, name)) {
-                    window.alert('Une mise à jour est disponible et va être chargée.');
+                    window.alert('Une mise à jour est disponible et va être téléchargée');
+                    let card = document.getElementById('[' + url + ',' + name + ']').getElementsByTagName('a');
+                    let href = [];
+                    for (let i = 0; i < card.length; ++i) {
+                        href.push(card[i].href);
+                        card[i].style.filter = 'grayscale(100%)';
+                        card[i].href = 'javascript:void(0);'
+                        
+                    }
                     await delete_card(url, name, false);
-                    add_card(url, name, absolute(ls[0]+ls[2*i+1]), undefined)
-                } else {window.alert('Le fichier est à jour.')}
+                    await add_card(url, name, absolute(ls[0]+ls[2*i+1]), undefined);
+                    for (let i = 0; i < card.length; ++i) {
+                        card[i].style.filter = '';
+                        card[i].href = href[i];
+                    }
+                    window.alert('Mise à jour téléchargée');
+                } else {window.alert('Le fichier est à jour.');}
                 found = true;
                 break;
             }
         }
-        if (!found) {window.alert('Le fichier n\'est pas disponible.')}
-    } else {window.alert('Impossible de rafraîchir le fichier.');}
+        if (!found) {window.alert('Le fichier n\'est pas disponible');}
+    } else {window.alert('Impossible de rafraîchir le fichier');}
 }
 
 async function downcrd(url,fl) {
