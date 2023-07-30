@@ -174,9 +174,11 @@ function delete_card(_url, _name, _confirm = true) {
                 db.close();
             };
         };
-        document.getElementsByClassName(_url)[0].removeChild(document.getElementById('[' + _url + ',' + _name + ']'));
-        if (document.getElementsByClassName(_url)[0].children.length <= 1) {
-            document.getElementById('down_cards_container').removeChild(document.getElementsByClassName(_url)[0]);
+        if (_confirm) {
+            document.getElementsByClassName(_url)[0].removeChild(document.getElementById('[' + _url + ',' + _name + ']'));
+            if (document.getElementsByClassName(_url)[0].children.length <= 1) {
+                document.getElementById('down_cards_container').removeChild(document.getElementsByClassName(_url)[0]);
+            }
         }
     }
 }
