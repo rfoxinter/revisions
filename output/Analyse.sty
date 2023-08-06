@@ -1,19 +1,32 @@
 \RequirePackage{bigoperators}
+\RequirePackage{tools}
 
 \makeatletter
 \newcounter{mpdercount}
 \def\mpderden{}
+\newcounter{mpdervarcount}
+\def\prevmpdervar{}
 \def\do@scanmpder#1,{%
     \ifx#1\relax
         \let\next\relax
     \else
         \stepcounter{mpdercount}
-        \edef\mpderden{\mpderden\partial#1}
+        \comparestring{\prevmpdervar}{#1}{
+            \stepcounter{mpdervarcount}
+        }{
+            \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\mpderden^{\arabic{mpdervarcount}}}}
+            \edef\mpderden{\mpderden\partial#1}
+            \setcounter{mpdervarcount}{1}
+            \def\prevmpdervar{#1}
+        }
         \let\next\do@scanmpder
     \fi\next
 }
 \newcommand{\scanmpder}[1]{
     \setcounter{mpdercount}{0}
+    \def\mpderden{}
+    \setcounter{mpdervarcount}{1}
+    \def\prevmpdervar{}
     \do@scanmpder#1,\relax,
 }
 \makeatother
