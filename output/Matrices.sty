@@ -1,3 +1,5 @@
+\RequirePackage{tools}
+
 \newif\if@dots\@dotstrue
 \DeclareOption{nodots}{\@dotsfalse}
 \DeclareOption*{}
@@ -67,15 +69,6 @@
     \newcommand{\xdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldxdots$}$}}}
     \newcommand{\plusdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldplusdots$}$}}}
 \fi
-\def\comparestring#1#2{%
-    \edef\tempa{#1}%
-    \edef\tempb{#2}%
-    \ifx\tempa\tempb%
-        \expandafter\@firstoftwo
-    \else
-        \expandafter\@secondoftwo
-    \fi
-}
 \def\tikz@lib@fit@scan{%
   \pgfutil@ifnextchar\pgf@stop{\pgfutil@gobble}{%
     \pgfutil@ifnextchar\foreach{\tikz@lib@fit@scan@handle@foreach}{%
