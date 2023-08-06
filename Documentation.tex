@@ -9,7 +9,7 @@
 \hypersetup{pdftitle=Documentation}
 \newcommand{\tikzlg}{\href{https://ctan.org/pkg/tikz}{\color{black}Ti\textit{k}Z}}
 \let\oldoplus\oplus
-\usepackage{output/sffont,output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
+\usepackage{output/sffont,output/tools,output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
 \usepackage[arc]{output/complexes}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
@@ -178,7 +178,7 @@ Il est possible de redéfinir le << $l$ >> à sa version d'origine ($\oldl$) ave
 
 \vspace{0.5cm}
 
-Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.17}{\texttt{Usuelles.sty}}} :
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.18}{\texttt{Usuelles.sty}}} :
 \vspace{-\abovedisplayskip}\begin{minted}{latex}
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
@@ -390,6 +390,7 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \footnotetext{On peut appliquer les mêmes arguments optionnels que pour \mintinline{latexmath}?\der? et les arguments obligatoires sont les mêmes que pour \mintinline{latexmath}?\der?}
 \mcmd[\footnotemark]{\mpder[x,y,z]{}{f(x,y,z)}}
 \footnotetext{Sans argument optionnel, \mintinline{latexmath}?\mpder? agit comme \mintinline{latexmath}?\pder? et les arguments obligatoires sont les mêmes que pour \mintinline{latexmath}?\der?}
+\mcmd{\mpder[x,y,y,z]{f}{x,y,z}}
 \mcmd[\footnotemark]{\oldint}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\int?}
 \mcmd{\int{f}}
@@ -403,6 +404,8 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd[\footnotemark]{\serie{a_n}}
 \footnotetext{Comme \hyperlink{section.6}{\texttt{BigOperators.sty}} est chargé, la commande \mintinline{latexmath}?\sum? est remplacée et il est nécessaire de taper \mintinline{latexmath}?\oldsum? pour obtenir $\oldsum$}
 \mcmd{\oldesc}
+\pagebreak
+\hrule
 \mcmd{\esc{\left[a,b\right]}}
 \mcmd{\esc[+]{f}}
 \hsection{Arithmetique.sty}
@@ -702,6 +705,13 @@ est produite avec le code suivant
 \end{tikzpicture}
 \end{minted}
 \vspace{-\belowdisplayskip}
+\hsection{Tools.sty}
+Ce fichier fournit des commandes latex utiles pour créer des macros.
+
+\vspace{0.5cm}
+
+\mhd
+\nmcmd{\comparestring{a}{b}{if}{else}}{Compare les chaînes de caractères \mintinline{latex}?a? et \mintinline{latex}?b?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est égal à \mintinline{latex}?b? et le \mintinline{latex}?else? sinon}
 \hsection{Trigo.sty}
 \mhd
 \mcmd[\footnotemark]{\oldcos}
