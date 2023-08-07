@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        function delete_sw_cache() {
+            caches.open("Flashcards-v1").then((cache) => {
+                cache.keys().then((key_lst) => {
+                    key_lst.map((key) => {
+                        cache.delete(key)
+                    });
+                });
+            });
+            navigator.serviceWorker.getRegistrations().then((registrations) => {
+                registrations.map((registration) => {
+                    registration.unregister()
+                });
+            });
+        }
+    </script>
+</head>
+<body onload="delete_sw_cache()">
+</body>
+</html>
