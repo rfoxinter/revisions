@@ -3,22 +3,35 @@
 <head>
     <meta charset="utf-8">
     <script>
-        function delete_sw_cache() {
-            caches.open("Flashcards-v1").then((cache) => {
-                cache.keys().then((key_lst) => {
-                    key_lst.map((key) => {
-                        cache.delete(key)
+        function delete_cache() {
+            return new Promise(function(resolve, reject) {
+                caches.open("Flashcards-v1").then((cache) => {
+                    cache.keys().then(async (key_lst) => {
+                        await key_lst.map((key) => {
+                            cache.delete(key);
+                        });
+                        resolve();
                     });
                 });
             });
-            navigator.serviceWorker.getRegistrations().then((registrations) => {
-                registrations.map((registration) => {
-                    registration.unregister()
+        }
+        function delete_sw() {
+            return new Promise(function(resolve, reject) {
+                navigator.serviceWorker.getRegistrations().then(async (registrations) => {
+                    await registrations.map((registration) => {
+                        registration.unregister();
+                    });
+                    resolve();
                 });
             });
         }
+        async function main() {
+            await delete_cache();
+            await delete_sw();
+            window.location.replace("./app.html");
+        }
     </script>
 </head>
-<body onload="delete_sw_cache()">
+<body onload="main()">
 </body>
 </html>
