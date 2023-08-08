@@ -183,21 +183,21 @@ open.onupgradeneeded = function(event) {
 };
 
 function save() {
-    try {
-        var open = indexedDB.open("flcrdsv");
-        open.onsuccess = function(event) {
-            var db = event.target.result;
-            var tx = db.transaction("flcrd", "readwrite");
-            var store = tx.objectStore("flcrd");
+    var open = indexedDB.open("flcrdsv");
+    open.onsuccess = function(event) {
+        var db = event.target.result;
+        var tx = db.transaction("flcrd", "readwrite");
+        var store = tx.objectStore("flcrd");
 
+        try {
             store.put({url: id[0], name: id[1], content: compress_text((q?1:0) + "\n" + (viewed?1:0) + "\n" + nth + "\n" + ques.join(",") + "\n" + wrong.join(","))});
+            window.alert("Sauvegarde effectuée");
+        } catch {window.alert("Une erreur est survenue lors de la sauvegarde");}
 
-            tx.oncomplete = function() {
-                window.alert("Sauvegarde effectuée.");
-                db.close();
-            };
+        tx.oncomplete = function() {
+            db.close();
         };
-    } catch {window.alert("Une erreur est survenue lors de la sauvegarde.");}
+    };
 }
 
 function loadsv() {
@@ -215,18 +215,27 @@ function loadsv() {
                 var code = deflate(result.content).split("\n");
                 q = !code[0];
                 nth = parseInt(code[2]);
-                document.getElementById('card_nb').innerHTML = nth + 1;
                 ques = code[3].split(",").map(x => parseInt(x));
-                reverse_card();
                 viewed = code[1];
-                if (!viewed) {
-                    document.getElementById('incor').disabled = false;
-                    document.getElementById('corr').disabled = false;
-                } else {
-                    document.getElementById('incor').disabled = true;
-                    document.getElementById('corr').disabled = true;
-                }
                 wrong = code[4].split(",").map(x => parseInt(x));
+                if (nth === ques.length) {
+                    nth -= 1;
+                    new_card(true);
+                } else {
+                    document.getElementById('card_total').innerHTML = '/' + ques.length;
+                    document.getElementById('card_nb').innerHTML = nth + 1;
+                    reverse_card();
+                    viewed = code[1];
+                    if (!viewed) {
+                        document.getElementById('incor').disabled = false;
+                        document.getElementById('corr').disabled = false;
+                    } else {
+                        document.getElementById('incor').disabled = true;
+                        document.getElementById('corr').disabled = true;
+                    }
+                    
+                }
+                window.alert("Sauvegarde chargée")
             } else {
                 window.alert("Aucune sauvegarde à charger");
             }
@@ -236,6 +245,33 @@ function loadsv() {
             db.close();
         };
     };
+}
+
+function delsv() {
+    if (window.confirm("Supprimer la sauvegarde")) {
+        var open = indexedDB.open("flcrdsv");
+        open.onsuccess = function(event) {
+            var db = event.target.result;
+            var tx = db.transaction("flcrd", "readwrite");
+            var store = tx.objectStore("flcrd");
+
+            var getRequest = store.get(id);
+
+            getRequest.onsuccess = function(event) {
+                var result = event.target.result;
+                if (result) {
+                    store.delete(id);
+                    window.alert("Sauvegarde supprimée")
+                } else {
+                    window.alert("Aucune sauvegarde à supprimer");
+                }
+            }
+
+            tx.oncomplete = function() {
+                db.close();
+            };
+        };
+    }
 }
 
 function displaydd(event){event.target.id === "save" || event.target.classList.contains("option")?document.getElementById("dropdown").style.display="block":document.getElementById("dropdown").style.display="none";}
