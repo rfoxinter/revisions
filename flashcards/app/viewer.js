@@ -191,6 +191,7 @@ function save() {
 
         try {
             store.put({url: id[0], name: id[1], content: compress_text((q?1:0) + "\n" + (viewed?1:0) + "\n" + nth + "\n" + ques.join(",") + "\n" + wrong.join(","))});
+            document.getElementById("dropdown").style.display="none";
             window.alert("Sauvegarde effectuée");
         } catch {window.alert("Une erreur est survenue lors de la sauvegarde");}
 
@@ -235,8 +236,10 @@ function loadsv() {
                     }
                     
                 }
-                window.alert("Sauvegarde chargée")
+                document.getElementById("dropdown").style.display="none";
+                window.alert("Sauvegarde chargée");
             } else {
+                document.getElementById("dropdown").style.display="none";
                 window.alert("Aucune sauvegarde à charger");
             }
         };
@@ -261,8 +264,10 @@ function delsv() {
                 var result = event.target.result;
                 if (result) {
                     store.delete(id);
+                    document.getElementById("dropdown").style.display="none";
                     window.alert("Sauvegarde supprimée")
                 } else {
+                    document.getElementById("dropdown").style.display="none";
                     window.alert("Aucune sauvegarde à supprimer");
                 }
             }
