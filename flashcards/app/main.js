@@ -55,6 +55,14 @@ async function list_cards(downloaded = false) {
             var tx = db.transaction("flcrd", "readonly");
             var store = tx.objectStore("flcrd");
 
+            
+            let p = document.createElement("p");
+            let a = document.createElement("a");
+            a.innerText = "Tout télécharger";
+            a.href = "javascript:add_all()";
+            p.appendChild(a);
+            document.getElementById("cards_container").appendChild(p);
+
             for (let i = 0; i < (ls.length - 1)/2; ++i) {
                 let p = document.createElement("p");
                 p.innerText = ls[2*i+1] + "\xa0";
@@ -103,9 +111,11 @@ async function append_card(src, name) {
         h1.appendChild(span);
         h1.innerHTML += '\xa0';
         span2 = document.createElement('span');
-        span2.setAttribute('onclick', 'document.getElementById("downloaded").style.display = "none"; document.getElementById("download").style.display = "block"; document.getElementById("file").value = "' + src + '"; list_cards(true);');
+        if (src !== "Fichiers importés") {
+            span2.setAttribute('onclick', 'document.getElementById("downloaded").style.display = "none"; document.getElementById("download").style.display = "block"; document.getElementById("file").value = "' + src + '"; list_cards(true);');
+            span2.style.cursor = 'pointer';
+        }
         span2.setAttribute('id', src+'_text');
-        span2.style.cursor = 'pointer';
         span2.style.fontSize = 'inherit';
         span2.innerHTML = src;
         h1.appendChild(span2);
@@ -129,7 +139,11 @@ async function append_card(src, name) {
     p.appendChild(a);
     p.innerHTML += ' ';
     var a2 = document.createElement('a');
-    a2.setAttribute('href', 'javascript:sync("'+src+'","'+name+'")');
+    if (src !== "Fichiers importés") {
+        a2.setAttribute('href', 'javascript:sync("'+src+'","'+name+'")')
+    } else {
+        a2.style.filter = 'grayscale(100%)';
+    }
     a2.style.color = "#159957";
     span2 = document.createElement('span');
     span2.setAttribute('class','material-symbols-rounded');
@@ -286,6 +300,13 @@ function add_card(_url, _name, filesrc, nb) {
     });
 }
 
+function add_all () {
+    var elems = document.getElementById("cards_container").childNodes;
+    for (i = 2; i < elems.length; ++i) {
+        elems[i].getElementsByTagName("span")[0].click();
+    }
+}
+
 function read_all() {
     var contents = [];
     var open = indexedDB.open("flcrddb");
@@ -309,10 +330,11 @@ function read_all() {
 
 function refresh() {
     var c = document.getElementById('down_cards_container');
-    for (let i = 0; i<c.children.length; ++i) {
-        c.removeChild(c.children[i]);
+    var l = c.children.length;
+    for (let i = 0; i < l; ++i) {
+        c.removeChild(c.children[0]);
+        if (i === l - 1) {display_cards();}
     }
-    display_cards();
 }
 
 function add_config(_url, _alias, _root) {
@@ -364,7 +386,9 @@ function set_config_card(_url, _name) {
         getRequest.onsuccess = function(event) {
             var result = event.target.result;
             if (result) {
-                document.getElementById('[' + _url + ',' + _name + ']').innerHTML = document.getElementById('[' + _url + ',' + _name + ']').innerHTML.replace(result.root, '');
+                try {
+                    document.getElementById('[' + _url + ',' + _name + ']').innerHTML = document.getElementById('[' + _url + ',' + _name + ']').innerHTML.replace(result.root, '');
+                } catch {}
             }
         };
 
@@ -427,3 +451,10 @@ function set_config() {
         };
     };
 }
+
+document.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    if (event.target.getAttribute("onclick") === "refresh()") {
+        window.location.href = "./delete_sw_cache.html";
+    }
+});
