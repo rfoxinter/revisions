@@ -94,7 +94,7 @@
                         fst = fl[4].replace(']', '').replace('[', '').split(',').map(x => parseInt(x));
                         arr = new Array(2*n.length);
                         for (let i = 0; i < 2*n.length; ++i) {
-                            arr[i] = decodeURIComponent(escape(fl[5+i]));
+                            arr[i] = decodeURIComponent(fl[5+i]);
                         }
                         filedate = parseInt(fl[5+2*n.length]);
                         filename = fl[8+2*n.length];
