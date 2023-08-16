@@ -201,6 +201,37 @@ function save() {
     };
 }
 
+function load_sv_content(content) {
+    var code = deflate(content).split("\n");
+    q = !code[0];
+    nth = parseInt(code[2]);
+    ques = code[3].split(",").map(x => parseInt(x));
+    while (n.length > ques.length) {
+        ques.push(ques.length + 1);
+    }
+    viewed = code[1];
+    wrong = code[4].split(",").map(x => parseInt(x));
+    if (nth === ques.length) {
+        nth -= 1;
+        new_card(true);
+    } else {
+        document.getElementById('card_total').innerHTML = '/' + ques.length;
+        document.getElementById('card_nb').innerHTML = nth + 1;
+        reverse_card();
+        viewed = code[1];
+        if (!viewed) {
+            document.getElementById('incor').disabled = false;
+            document.getElementById('corr').disabled = false;
+        } else {
+            document.getElementById('incor').disabled = true;
+            document.getElementById('corr').disabled = true;
+        }
+        
+    }
+    document.getElementById("dropdown").style.display="none";
+    window.alert("Sauvegarde chargée");
+}
+
 function loadsv() {
     var open = indexedDB.open("flcrdsv");
     open.onsuccess = function(event) {
@@ -213,31 +244,7 @@ function loadsv() {
         getRequest.onsuccess = function(event) {
             var result = event.target.result;
             if (result) {
-                var code = deflate(result.content).split("\n");
-                q = !code[0];
-                nth = parseInt(code[2]);
-                ques = code[3].split(",").map(x => parseInt(x));
-                viewed = code[1];
-                wrong = code[4].split(",").map(x => parseInt(x));
-                if (nth === ques.length) {
-                    nth -= 1;
-                    new_card(true);
-                } else {
-                    document.getElementById('card_total').innerHTML = '/' + ques.length;
-                    document.getElementById('card_nb').innerHTML = nth + 1;
-                    reverse_card();
-                    viewed = code[1];
-                    if (!viewed) {
-                        document.getElementById('incor').disabled = false;
-                        document.getElementById('corr').disabled = false;
-                    } else {
-                        document.getElementById('incor').disabled = true;
-                        document.getElementById('corr').disabled = true;
-                    }
-                    
-                }
-                document.getElementById("dropdown").style.display="none";
-                window.alert("Sauvegarde chargée");
+                load_sv_content(result.content);
             } else {
                 document.getElementById("dropdown").style.display="none";
                 window.alert("Aucune sauvegarde à charger");
@@ -279,7 +286,67 @@ function delsv() {
     }
 }
 
-function displaydd(event) {event.target.id === "save" || event.target.classList.contains("option")?document.getElementById("dropdown").style.display="block":document.getElementById("dropdown").style.display="none";}
+function toTitle(str) {
+    return str.replace(
+        /\w\S*/g,
+        function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
+}
 
-if (/Mobi|Android/i.test(navigator.userAgent)) {addEventListener("touchstart", (event) => {displaydd(event);});} else {addEventListener("mouseover", (event) => {displaydd(event);});}
+function expsv() {
+    var open = indexedDB.open("flcrdsv");
+    open.onsuccess = function(event) {
+        var db = event.target.result;
+        var tx = db.transaction("flcrd", "readonly");
+        var store = tx.objectStore("flcrd");
+
+        var getRequest = store.get(id);
+
+        getRequest.onsuccess = function(event) {
+            var result = event.target.result;
+            if (result) {
+                const data = new Blob([result.content], { type: 'application/octet-stream' });
+                const url = URL.createObjectURL(data);
+
+                const downloadLink = document.createElement('a');
+                downloadLink.href = url;
+                downloadLink.download = toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')).replaceAll(' ', '') + '_Progression.txt';
+                downloadLink.style.display = 'none';
+                document.body.appendChild(downloadLink);
+
+                downloadLink.click();
+
+                // Clean up
+                document.body.removeChild(downloadLink);
+                URL.revokeObjectURL(url);
+            } else {
+                window.alert("Aucune sauvegarde à exporter");
+            }
+        };
+
+        tx.oncomplete = function() {
+            db.close();
+        };
+    };
+}
+
+function displaydd(event) {
+    if (event.target.id === "save" || event.target.classList.contains("option")) {
+        document.getElementById("dropdown").style.display="block"
+    } else {
+        document.getElementById("dropdown").style.display="none";
+        document.getElementById("adv_dropdown").style.display = "none";
+    }
+}
+
+if (/Mobi|Android/i.test(navigator.userAgent)) {document.addEventListener("touchstart", (event) => {displaydd(event);});} else {document.addEventListener("mouseover", (event) => {displaydd(event);});}
+
+document.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    if (event.target.id === "save") {
+        document.getElementById("adv_dropdown").style.display = "block";
+    }
+});
  
