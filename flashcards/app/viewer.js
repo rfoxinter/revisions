@@ -279,7 +279,7 @@ function delsv() {
     }
 }
 
-function displaydd(event){event.target.id === "save" || event.target.classList.contains("option")?document.getElementById("dropdown").style.display="block":document.getElementById("dropdown").style.display="none";}
+function displaydd(event) {event.target.id === "save" || event.target.classList.contains("option")?document.getElementById("dropdown").style.display="block":document.getElementById("dropdown").style.display="none";}
 
 if (/Mobi|Android/i.test(navigator.userAgent)) {addEventListener("touchstart", (event) => {displaydd(event);});} else {addEventListener("mouseover", (event) => {displaydd(event);});}
  
