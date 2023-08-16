@@ -131,9 +131,9 @@
             document.getElementById("upload_click").addEventListener("change", function() {
                 var fl = new FileReader();
                 if (document.getElementById("upload_click").value != "") {
-                    try {
-                        fl.onload = function() {
-                            fl_defl = deflate(fl.result).split("\n");
+                    fl.onload = function() {
+                        try {
+                            var fl_defl = deflate(fl.result).split("\n");
                             if (fl_defl[fl_defl[3].replace(']"', '').replace('"[', '').split(',').map(x => parseInt(x)).length * 2 + 6] !== btoa(fl_defl[0])) {
                                 console.log(fl_defl);
                                 throw new Error("Fichier corrompu");
@@ -162,13 +162,13 @@
                                     };
                                 };
                             }
+                        } catch {
+                            window.alert("Fichier corrompu");
                         }
-                    } catch {
-                        window.alert("Fichier corrompu");
                     }
                 }
                 fl.readAsText(this.files[0]);
-            })
+            });
         </script>
     </div>
     <div style="display: none;" id="config">
@@ -188,7 +188,6 @@
         <div id='overlay'></div>
         <header class='page-header'>
             <h1 id='title'>&nbsp;</h1>
-            <input type='file' id='open' accept='.txt' hidden>
             <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('viewer').style.display = 'none'; document.title = 'Flashcards app';" style="font-size: 24px !important;">close</ptr></span>
             <span class="up-button material-symbols-rounded"><ptr id="save" style="font-size: 24px !important;">save</ptr></span>
             <div id="dropdown" class="dropdown-content">
@@ -197,6 +196,13 @@
                 <p onclick="loadsv()" class="option option_text">Charger la progression</p>
                 <hr style="padding: 0px; margin: 0px;" class="option">
                 <p onclick="delsv()" class="option option_text">Supprimer la progression</p>
+                <span id="adv_dropdown" style="display: none;">
+                    <hr style="padding: 0px; margin: 0px;" class="option">
+                    <p onclick="expsv()" class="option option_text">Exporter la progression</p>
+                    <hr style="padding: 0px; margin: 0px;" class="option">
+                    <input type='file' id='upload_sv_click' accept='.txt' hidden>
+                    <p onclick="document.getElementById('upload_sv_click').click()" class="option option_text">Importer la progression</p>
+                </span>
             </div>
         </header>
         <main class='main-content'>
@@ -216,6 +222,21 @@
             </p>
         </main>
         <footer class='site-footer'></footer>
+        <script type="text/javascript">
+            document.getElementById("upload_sv_click").addEventListener("change", function() {
+                var fl = new FileReader();
+                if (document.getElementById("upload_sv_click").value != "") {
+                    fl.onload = function() {
+                        try {
+                            load_sv_content(fl.result);
+                        } catch {
+                            window.alert("Fichier corrompu");
+                        }
+                    }
+                }
+                fl.readAsText(this.files[0]);
+            });
+        </script>
     </div>
     <script type="text/javascript" >
         if ('serviceWorker' in navigator) {
