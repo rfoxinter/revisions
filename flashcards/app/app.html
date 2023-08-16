@@ -24,6 +24,9 @@
     <style>
         * {
             font-size: calc(min(3.75vw,100%));
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         .material-symbols-rounded {
             font-size: 80% !important;
@@ -91,7 +94,7 @@
         }
     </style>
 </head>
-<body onload="display_cards()">
+<body onload="display_cards();">
     <div id="downloaded">
         <header class="page-header">
             <h1>Fiches téléchargées</h1>
@@ -108,6 +111,8 @@
         <header class="page-header">
             <h1>Ajout de nouvelles fiches</h1>
             <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('download').style.display = 'none';" style="font-size: 24px !important;">close</ptr></span>
+            <input type='file' id='upload_click' accept='.txt' hidden>
+            <span class="up-button material-symbols-rounded"><ptr onclick="document.getElementById('upload_click').click();" style="font-size: 24px !important;">upload</ptr></span>
         </header>
         <main class="main-content">
             <input type="url" id="file" name="file" placeholder="Url du fichier" style="width: calc(min(50%,20em)); display: inline-block; margin-right: 2em;"></input><button onclick="list_cards()" style="width: calc(min(15ex,50% - 2em)); display: inline-block;">Voir les fiches</button>
@@ -123,6 +128,47 @@
                     list_cards();
                 }
             }
+            document.getElementById("upload_click").addEventListener("change", function() {
+                var fl = new FileReader();
+                if (document.getElementById("upload_click").value != "") {
+                    try {
+                        fl.onload = function() {
+                            fl_defl = deflate(fl.result).split("\n");
+                            if (fl_defl[fl_defl[3].replace(']"', '').replace('"[', '').split(',').map(x => parseInt(x)).length * 2 + 6] !== btoa(fl_defl[0])) {
+                                console.log(fl_defl);
+                                throw new Error("Fichier corrompu");
+                            } else {
+                                var open = indexedDB.open("flcrddb");
+                                open.onsuccess = function(event) {
+                                    var db = event.target.result;
+                                    var tx = db.transaction("flcrd", "readwrite");
+                                    var store = tx.objectStore("flcrd");
+                                    
+                                    var getRequest = store.get(["Fichiers importés", fl_defl[0]]);
+                                    getRequest.onsuccess = function(event) {
+                                        var result = event.target.result;
+                                        if (result) {
+                                            if (window.confirm("Une fiche avec ce nom a déjà été importée. Souhaitez-vous la remplacer ?")) {store.put({url: "Fichiers importés", name: fl_defl[0], content: fl.result});}
+                                        }
+                                        else {
+                                            store.put({url: "Fichiers importés", name: fl_defl[0], content: fl.result});
+                                            append_card("Fichiers importés", fl_defl[0]);
+                                            window.alert("Fichier importé");
+                                        }
+                                    };
+
+                                    tx.oncomplete = function() {
+                                        db.close();
+                                    };
+                                };
+                            }
+                        }
+                    } catch {
+                        window.alert("Fichier corrompu");
+                    }
+                }
+                fl.readAsText(this.files[0]);
+            })
         </script>
     </div>
     <div style="display: none;" id="config">
