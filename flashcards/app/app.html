@@ -79,7 +79,7 @@
             background-color: whitesmoke;
             border-radius: 5px;
             overflow: auto;
-            width: 6.5em;
+            width: 6.75em;
             padding: 0;
             left: calc(min(20px,20vw));
             top: calc(min(20px,20vw) + 24px);
@@ -112,7 +112,12 @@
             <h1>Ajout de nouvelles fiches</h1>
             <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('download').style.display = 'none';" style="font-size: 24px !important;">close</ptr></span>
             <input type='file' id='upload_click' accept='.txt' hidden>
-            <span class="up-button material-symbols-rounded"><ptr onclick="document.getElementById('upload_click').click();" style="font-size: 24px !important;">upload</ptr></span>
+            <span class="up-button material-symbols-rounded"><ptr id="upload" style="font-size: 24px !important;">upload</ptr></span>
+            <div id="dropdown_up" class="dropdown-content">
+                <p onclick="document.getElementById('upload_click').click();" class="option option_text">Charger une fichie locale</p>
+                <hr style="padding: 0px; margin: 0px;" class="option">
+                <p onclick="loadfl()" class="option option_text">Charger une fiche distante</p>
+            </div>
         </header>
         <main class="main-content">
             <input type="url" id="file" name="file" placeholder="Url du fichier" style="width: calc(min(50%,20em)); display: inline-block; margin-right: 2em;"></input><button onclick="list_cards()" style="width: calc(min(15ex,50% - 2em)); display: inline-block;">Voir les fiches</button>
@@ -179,6 +184,7 @@
         <main class="main-content">
             <p>Source&nbsp;:&nbsp;<span id="cfgsrc"></span></p>
             <p><label for="alias">Surnom de la source&nbsp;:&nbsp;</label><input type="text" name="alias" id="alias" style="display: unset; margin-top: 0.5em; margin-bottom: 0.25em;"></p>
+            <p><input type="checkbox" onclick="ch_clicked()" id="fl_name" name="fl_name" style="display: inline-block;"/><label for="fl_name"> Utiliser le nom des fiches</label></p>
             <p><label for="root">Racine des fichiers&nbsp;:&nbsp;</label><input type="text" name="root" id="root" style="display: unset; margin-top: 0.25em; margin-bottom: 0.25em;"></p>
             <p style="text-align: center;"><button onclick="set_config()" style="display: unset; margin-top: 0.25em; width: calc(max(100% / 3, min(100%, 50px)));">Appliquer la configuration</button></p>
         </main>
@@ -201,7 +207,9 @@
                     <p onclick="expsv()" class="option option_text">Exporter la progression</p>
                     <hr style="padding: 0px; margin: 0px;" class="option">
                     <input type='file' id='upload_sv_click' accept='.txt' hidden>
-                    <p onclick="document.getElementById('upload_sv_click').click()" class="option option_text">Importer la progression</p>
+                    <p onclick="document.getElementById('upload_sv_click').click()" class="option option_text">Importer une progression locale</p>
+                    <hr style="padding: 0px; margin: 0px;" class="option">
+                    <p onclick="upsv()" class="option option_text">Importer une progression distante</p>
                 </span>
             </div>
         </header>
