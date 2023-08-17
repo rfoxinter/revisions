@@ -59,7 +59,7 @@ async function list_cards(downloaded = false) {
             let p = document.createElement("p");
             let a = document.createElement("a");
             a.innerText = "Tout télécharger";
-            a.href = "javascript:add_all()";
+            a.href = "javascript:add_all(" + downloaded + ")";
             p.appendChild(a);
             document.getElementById("cards_container").appendChild(p);
 
@@ -248,6 +248,32 @@ function read_date(_url, _name) {
     });
 }
 
+function read_name(_url, _name) {
+    return new Promise(function(resolve, reject) {
+        var open = indexedDB.open("flcrddb");
+        open.onsuccess = function(event) {
+            var db = event.target.result;
+            var tx = db.transaction("flcrd", "readonly");
+            var store = tx.objectStore("flcrd");
+
+            var getRequest = store.get([_url, _name]);
+
+            getRequest.onsuccess = function(event) {
+                var result = event.target.result;
+                if (result) {
+                    resolve(result.card_name);
+                } else {
+                    reject("Pas trouvé");
+                }
+            };
+
+            tx.oncomplete = function() {
+                db.close();
+            };
+        };
+    });
+}
+
 function add_card(_url, _name, filesrc, nb) {
     return new Promise(async function(resolve, reject) {
         if (nb !== undefined) {
@@ -266,7 +292,7 @@ function add_card(_url, _name, filesrc, nb) {
                     var tx = db.transaction("flcrd", "readwrite");
                     var store = tx.objectStore("flcrd");
             
-                    store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1]});
+                    store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1], card_name: deflate(contentdate[0]).split("\n")[0]});
             
                     tx.oncomplete = function() {
                         resolve();
@@ -289,7 +315,7 @@ function add_card(_url, _name, filesrc, nb) {
                 var tx = db.transaction("flcrd", "readwrite");
                 var store = tx.objectStore("flcrd");
 
-                store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1]});
+                store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1], card_name: deflate(text).split("\n")[0]});
 
                 tx.oncomplete = function() {
                     resolve();
@@ -300,9 +326,9 @@ function add_card(_url, _name, filesrc, nb) {
     });
 }
 
-function add_all () {
+function add_all(downloaded) {
     var elems = document.getElementById("cards_container").childNodes;
-    for (i = 2; i < elems.length; ++i) {
+    for (i = 1 + downloaded; i < elems.length; ++i) {
         elems[i].getElementsByTagName("span")[0].click();
     }
 }
@@ -337,14 +363,14 @@ function refresh() {
     }
 }
 
-function add_config(_url, _alias, _root) {
+function add_config(_url, _alias, _orig_name, _root) {
     var open = indexedDB.open("flcrddb");
     open.onsuccess = function(event) {
         var db = event.target.result;
         var tx = db.transaction("flcfg", "readwrite");
         var store = tx.objectStore("flcfg");
 
-        store.put({url: _url, alias: _alias, root: _root});
+        store.put({url: _url, alias: _alias, orig_name: _orig_name, root: _root});
 
         tx.oncomplete = function() {
             db.close();
@@ -383,11 +409,15 @@ function set_config_card(_url, _name) {
 
         var getRequest = store.get(_url);
 
-        getRequest.onsuccess = function(event) {
+        getRequest.onsuccess = async function(event) {
             var result = event.target.result;
             if (result) {
                 try {
-                    document.getElementById('[' + _url + ',' + _name + ']').innerHTML = document.getElementById('[' + _url + ',' + _name + ']').innerHTML.replace(result.root, '');
+                    if (result.orig_name) {
+                        document.getElementById('[' + _url + ',' + _name + ']').innerHTML = (await read_name(_url, _name)) + document.getElementById('[' + _url + ',' + _name + ']').innerHTML.substring(document.getElementById('[' + _url + ',' + _name + ']').innerHTML.search(" <a"));
+                    } else {
+                        document.getElementById('[' + _url + ',' + _name + ']').innerHTML = document.getElementById('[' + _url + ',' + _name + ']').innerHTML.replace(result.root, '');
+                    }
                 } catch {}
             }
         };
@@ -414,6 +444,8 @@ function config_src(src) {
             var result = event.target.result;
             if (result) {
                 document.getElementById("alias").value = result.alias;
+                document.getElementById("fl_name").checked = result.orig_name;
+                ch_clicked();
                 document.getElementById("root").value = result.root;
             }
         };
@@ -439,7 +471,7 @@ function set_config() {
             if (result) {
                 await store.delete(src);
             }
-            add_config(src, document.getElementById("alias").value==""?src:document.getElementById("alias").value, document.getElementById("root").value);
+            add_config(src, document.getElementById("alias").value==""?src:document.getElementById("alias").value, document.getElementById("fl_name").checked, document.getElementById("root").value);
             window.alert("Configuration appliquée");
             document.getElementById('download').style.display = 'block';
             document.getElementById('config').style.display = 'none';
@@ -451,6 +483,67 @@ function set_config() {
         };
     };
 }
+
+function displaydd_up(event) {
+    if (event.target.id === "upload" || event.target.classList.contains("option")) {
+        document.getElementById("dropdown_up").style.display="block"
+    } else if (event.target.id === "save" || event.target.classList.contains("option")) {
+        document.getElementById("dropdown").style.display="block"
+    } else {
+        document.getElementById("dropdown").style.display="none";
+        document.getElementById("adv_dropdown").style.display = "none";
+        document.getElementById("dropdown_up").style.display="none";
+    }
+}
+
+async function loadfl() {
+    var response;
+    try {
+        response = await fetch(prompt("URL de la fiche"));
+        if (response.status == 200) {
+            var text = await response.text();
+            var fl_defl = deflate(text).split("\n");
+            if (fl_defl[fl_defl[3].replace(']"', '').replace('"[', '').split(',').map(x => parseInt(x)).length * 2 + 6] !== btoa(fl_defl[0])) {
+                console.log(fl_defl);
+                throw new Error("Fichier corrompu");
+            } else {
+                var open = indexedDB.open("flcrddb");
+                open.onsuccess = function(event) {
+                    var db = event.target.result;
+                    var tx = db.transaction("flcrd", "readwrite");
+                    var store = tx.objectStore("flcrd");
+                    
+                    var getRequest = store.get(["Fichiers importés", fl_defl[0]]);
+                    getRequest.onsuccess = function(event) {
+                        var result = event.target.result;
+                        if (result) {
+                            if (window.confirm("Une fiche avec ce nom a déjà été importée. Souhaitez-vous la remplacer ?")) {store.put({url: "Fichiers importés", name: fl_defl[0], content: fl.result});}
+                        }
+                        else {
+                            store.put({url: "Fichiers importés", name: fl_defl[0], content: text});
+                            append_card("Fichiers importés", fl_defl[0]);
+                            window.alert("Fichier importé");
+                        }
+                    };
+
+                    tx.oncomplete = function() {
+                        db.close();
+                    };
+                };
+            }
+        } else {
+            window.alert("Impossible de charger la fiche");
+        }
+    } catch {
+        window.alert("Impossible de charger la fiche");
+    }
+}
+
+function ch_clicked() {
+    document.getElementById("root").disabled = document.getElementById("fl_name").checked;
+}
+
+if (/Mobi|Android/i.test(navigator.userAgent)) {document.addEventListener("touchstart", (event) => {displaydd_up(event);});} else {document.addEventListener("mouseover", (event) => {displaydd_up(event);});}
 
 document.addEventListener("contextmenu", (event) => {
     event.preventDefault();
