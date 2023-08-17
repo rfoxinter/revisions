@@ -332,16 +332,19 @@ function expsv() {
     };
 }
 
-function displaydd(event) {
-    if (event.target.id === "save" || event.target.classList.contains("option")) {
-        document.getElementById("dropdown").style.display="block"
-    } else {
-        document.getElementById("dropdown").style.display="none";
-        document.getElementById("adv_dropdown").style.display = "none";
+async function upsv() {
+    var response;
+    try {
+        response = await fetch(prompt("URL de la sauvegarde"));
+        if (response.status == 200) {
+            load_sv_content(await response.text());
+        } else {
+            window.alert("Impossible de charger la sauvegarde");
+        }
+    } catch {
+        window.alert("Impossible de charger la sauvegarde");
     }
 }
-
-if (/Mobi|Android/i.test(navigator.userAgent)) {document.addEventListener("touchstart", (event) => {displaydd(event);});} else {document.addEventListener("mouseover", (event) => {displaydd(event);});}
 
 document.addEventListener("contextmenu", (event) => {
     event.preventDefault();
