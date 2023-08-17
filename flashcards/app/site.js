@@ -2,7 +2,7 @@ async function loadModule(file) {
     var response;
     try {
         response = await fetch(file + '/info.txt');
-    } catch(error) {return ['Error']}
+    } catch {return [];}
     if (response.status == 200) {
         const jsCode = await response.text();
         lst = jsCode.split('\n');
