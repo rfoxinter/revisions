@@ -129,7 +129,10 @@ async function append_card(src, name) {
     }
     p = document.createElement('p');
     p.setAttribute('class',src+'_elem');
-    p.innerHTML = name + ' ';
+    span = document.createElement('span');
+    span.innerHTML = name;
+    p.appendChild(span);
+    p.innerHTML += ' ';
     var a = document.createElement('a');
     a.setAttribute('href', 'javascript:load("'+src+'","'+name+'")');
     span = document.createElement('span');
@@ -142,7 +145,7 @@ async function append_card(src, name) {
     if (src !== "Fichiers importés") {
         a2.setAttribute('href', 'javascript:sync("'+src+'","'+name+'")')
     } else {
-        a2.style.filter = 'grayscale(100%)';
+        a2.setAttribute('href', 'javascript:sync_upload("'+name+'")')
     }
     a2.style.color = "#159957";
     span2 = document.createElement('span');
@@ -201,25 +204,29 @@ function delete_card(_url, _name, _confirm = true) {
 }
 
 function read_card(_url, _name) {
-    var open = indexedDB.open("flcrddb");
-    open.onsuccess = function(event) {
-        var db = event.target.result;
-        var tx = db.transaction("flcrd", "readonly");
-        var store = tx.objectStore("flcrd");
+    return new Promise(function(resolve, reject) {
+        var open = indexedDB.open("flcrddb");
+        open.onsuccess = function(event) {
+            var db = event.target.result;
+            var tx = db.transaction("flcrd", "readonly");
+            var store = tx.objectStore("flcrd");
 
-        var getRequest = store.get([_url, _name]);
+            var getRequest = store.get([_url, _name]);
 
-        getRequest.onsuccess = function(event) {
-            var result = event.target.result;
-            if (result) {
-                return result.content;
-            }
+            getRequest.onsuccess = function(event) {
+                var result = event.target.result;
+                if (result) {
+                    resolve(result.content);
+                } else {
+                    reject();
+                }
+            };
+
+            tx.oncomplete = function() {
+                db.close();
+            };
         };
-
-        tx.oncomplete = function() {
-            db.close();
-        };
-    };
+    });
 }
 
 function read_date(_url, _name) {
@@ -284,6 +291,7 @@ function add_card(_url, _name, filesrc, nb) {
                 a.style.color = "#F5B041";
                 var contentdate = await downcrd(filesrc, _name);
                 if (contentdate === undefined) {throw new Error("Erreur lors du téléchargement");}
+                console.log(contentdate[2]);
                 a.innerHTML = "check_circle";
                 a.style.color = "#159957";
                 var open = indexedDB.open("flcrddb");
@@ -292,7 +300,7 @@ function add_card(_url, _name, filesrc, nb) {
                     var tx = db.transaction("flcrd", "readwrite");
                     var store = tx.objectStore("flcrd");
             
-                    store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1], card_name: deflate(contentdate[0]).split("\n")[0]});
+                    store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1], card_name: contentdate[2]});
             
                     tx.oncomplete = function() {
                         resolve();
@@ -315,7 +323,7 @@ function add_card(_url, _name, filesrc, nb) {
                 var tx = db.transaction("flcrd", "readwrite");
                 var store = tx.objectStore("flcrd");
 
-                store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1], card_name: deflate(text).split("\n")[0]});
+                store.put({url: _url, name: _name, content: contentdate[0], date: contentdate[1], card_name: contentdate[2]});
 
                 tx.oncomplete = function() {
                     resolve();
@@ -414,9 +422,9 @@ function set_config_card(_url, _name) {
             if (result) {
                 try {
                     if (result.orig_name) {
-                        document.getElementById('[' + _url + ',' + _name + ']').innerHTML = (await read_name(_url, _name)) + document.getElementById('[' + _url + ',' + _name + ']').innerHTML.substring(document.getElementById('[' + _url + ',' + _name + ']').innerHTML.search("&nbsp;<a"));
+                        document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = await read_name(_url, _name);
                     } else {
-                        document.getElementById('[' + _url + ',' + _name + ']').innerHTML = document.getElementById('[' + _url + ',' + _name + ']').innerHTML.replace(result.root, '');
+                        document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML.replace(result.root, '');
                     }
                 } catch {}
             }
@@ -519,7 +527,10 @@ async function loadfl() {
                         getRequest.onsuccess = function(event) {
                             var result = event.target.result;
                             if (result) {
-                                if (window.confirm("Une fiche avec ce nom a déjà été importée. Souhaitez-vous la remplacer ?")) {store.put({url: "Fichiers importés", name: fl_defl[0], content: fl.result});}
+                                if (window.confirm("Une fiche avec ce nom a déjà été importée. Souhaitez-vous la remplacer ?")) {
+                                    store.put({url: "Fichiers importés", name: fl_defl[0], content: fl.result});
+                                    window.alert("Fichier importé");
+                                }
                             }
                             else {
                                 store.put({url: "Fichiers importés", name: fl_defl[0], content: text});
