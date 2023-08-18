@@ -414,7 +414,7 @@ function set_config_card(_url, _name) {
             if (result) {
                 try {
                     if (result.orig_name) {
-                        document.getElementById('[' + _url + ',' + _name + ']').innerHTML = (await read_name(_url, _name)) + document.getElementById('[' + _url + ',' + _name + ']').innerHTML.substring(document.getElementById('[' + _url + ',' + _name + ']').innerHTML.search(" <a"));
+                        document.getElementById('[' + _url + ',' + _name + ']').innerHTML = (await read_name(_url, _name)) + document.getElementById('[' + _url + ',' + _name + ']').innerHTML.substring(document.getElementById('[' + _url + ',' + _name + ']').innerHTML.search("&nbsp;<a"));
                     } else {
                         document.getElementById('[' + _url + ',' + _name + ']').innerHTML = document.getElementById('[' + _url + ',' + _name + ']').innerHTML.replace(result.root, '');
                     }
@@ -499,41 +499,46 @@ function displaydd_up(event) {
 async function loadfl() {
     var response;
     try {
-        response = await fetch(prompt("URL de la fiche"));
-        if (response.status == 200) {
-            var text = await response.text();
-            var fl_defl = deflate(text).split("\n");
-            if (fl_defl[fl_defl[3].replace(']"', '').replace('"[', '').split(',').map(x => parseInt(x)).length * 2 + 6] !== btoa(fl_defl[0])) {
-                console.log(fl_defl);
-                throw new Error("Fichier corrompu");
-            } else {
-                var open = indexedDB.open("flcrddb");
-                open.onsuccess = function(event) {
-                    var db = event.target.result;
-                    var tx = db.transaction("flcrd", "readwrite");
-                    var store = tx.objectStore("flcrd");
-                    
-                    var getRequest = store.get(["Fichiers importés", fl_defl[0]]);
-                    getRequest.onsuccess = function(event) {
-                        var result = event.target.result;
-                        if (result) {
-                            if (window.confirm("Une fiche avec ce nom a déjà été importée. Souhaitez-vous la remplacer ?")) {store.put({url: "Fichiers importés", name: fl_defl[0], content: fl.result});}
-                        }
-                        else {
-                            store.put({url: "Fichiers importés", name: fl_defl[0], content: text});
-                            append_card("Fichiers importés", fl_defl[0]);
-                            window.alert("Fichier importé");
-                        }
-                    };
+        var url = prompt("URL de la fiche");
+        if (url !== "" && url !== null) {
+            response = await fetch(url);
+            if (response.status == 200) {
+                var text = await response.text();
+                var fl_defl = deflate(text).split("\n");
+                if (fl_defl[fl_defl[3].replace(']"', '').replace('"[', '').split(',').map(x => parseInt(x)).length * 2 + 6] !== btoa(fl_defl[0])) {
+                    console.log(fl_defl);
+                    throw new Error("Fichier corrompu");
+                } else {
+                    var open = indexedDB.open("flcrddb");
+                    open.onsuccess = function(event) {
+                        var db = event.target.result;
+                        var tx = db.transaction("flcrd", "readwrite");
+                        var store = tx.objectStore("flcrd");
+                        
+                        var getRequest = store.get(["Fichiers importés", fl_defl[0]]);
+                        getRequest.onsuccess = function(event) {
+                            var result = event.target.result;
+                            if (result) {
+                                if (window.confirm("Une fiche avec ce nom a déjà été importée. Souhaitez-vous la remplacer ?")) {store.put({url: "Fichiers importés", name: fl_defl[0], content: fl.result});}
+                            }
+                            else {
+                                store.put({url: "Fichiers importés", name: fl_defl[0], content: text});
+                                append_card("Fichiers importés", fl_defl[0]);
+                                window.alert("Fichier importé");
+                            }
+                        };
 
-                    tx.oncomplete = function() {
-                        db.close();
+                        tx.oncomplete = function() {
+                            db.close();
+                        };
                     };
-                };
+                }
+            } else {
+                window.alert("Impossible de charger la fiche");
             }
-        } else {
-            window.alert("Impossible de charger la fiche");
         }
+        document.getElementById("dropdown").style.display = "none";
+        document.getElementById("adv_dropdown").style.display = "none";
     } catch {
         window.alert("Impossible de charger la fiche");
     }
