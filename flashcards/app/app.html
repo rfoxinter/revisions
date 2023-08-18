@@ -36,16 +36,16 @@
             top: 0;
             right: 0;
             margin-right: calc(min(20px,20vw));
-            margin-top: calc(min(20px,2vh));
-            margin-bottom: calc(min(20px,2vh));
+            margin-top: calc(min(20px,20vw));
+            margin-bottom: calc(min(20px,20vw));
         }
         .up-button {
             position: absolute;
             top: 0;
             left: 0;
             margin-left: calc(min(20px,20vw));
-            margin-top: calc(min(20px,2vh));
-            margin-bottom: calc(min(20px,2vh));
+            margin-top: calc(min(20px,20vw));
+            margin-bottom: calc(min(20px,20vw));
         }
         p {
             white-space: pre-wrap;
@@ -79,11 +79,12 @@
             background-color: whitesmoke;
             border-radius: 5px;
             overflow: auto;
-            width: 6.75em;
+            width: calc(max(12em, 12.5vw));
             padding: 0;
             left: calc(min(20px,20vw));
             top: calc(min(20px,20vw) + 24px);
             color: #606c71;
+            z-index: 1;
         }
         .option {
             padding: 2px;
@@ -114,7 +115,7 @@
             <input type='file' id='upload_click' accept='.txt' hidden>
             <span class="up-button material-symbols-rounded"><ptr id="upload" style="font-size: 24px !important;">upload</ptr></span>
             <div id="dropdown_up" class="dropdown-content">
-                <p onclick="document.getElementById('upload_click').click();" class="option option_text">Charger une fichie locale</p>
+                <p onclick="document.getElementById('upload_click').click();" class="option option_text">Charger une fiche locale</p>
                 <hr style="padding: 0px; margin: 0px;" class="option">
                 <p onclick="loadfl()" class="option option_text">Charger une fiche distante</p>
             </div>
@@ -167,6 +168,7 @@
                                     };
                                 };
                             }
+                            document.getElementById("dropdown_up").style.display = "none";
                         } catch {
                             window.alert("Fichier corrompu");
                         }
@@ -243,6 +245,8 @@
                     }
                 }
                 fl.readAsText(this.files[0]);
+                document.getElementById("dropdown").style.display = "none";
+                document.getElementById("adv_dropdown").style.display = "none";
             });
         </script>
     </div>
