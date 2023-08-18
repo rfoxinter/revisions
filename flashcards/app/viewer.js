@@ -13,28 +13,6 @@ function copyArray(array) {
     return cparr;
 }
 
-function read_card(_url, _name) {
-    var open = indexedDB.open("flcrddb");
-    open.onsuccess = function(event) {
-        var db = event.target.result;
-        var tx = db.transaction("flcrd", "readonly");
-        var store = tx.objectStore("flcrd");
-
-        var getRequest = store.get([_url, _name]);
-
-        getRequest.onsuccess = function(event) {
-            var result = event.target.result;
-            if (result) {
-                return result.content;
-            }
-        };
-
-        tx.oncomplete = function() {
-            db.close();
-        };
-    };
-}
-
 var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr; var wrong = []; var qr = [0, 1]; var id;
 
 async function loadFile(src, file) {
