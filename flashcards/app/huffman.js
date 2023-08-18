@@ -183,17 +183,6 @@ function encode_tree(out, tree) {
     }
 }
 
-function compress(str, filenm) {
-    const out = open_bit_out(filenm);
-    const tr = build_huffman_tree(str);
-    const dict = tree_to_dict(tr);
-    encode_tree(out, tr);
-    output_bit(out, true);
-    encode_text(out, dict, str);
-    encode_leaf(out, 256);
-    close_bit_out(out, filenm);
-}
-
 function compress_text(str) {
     const out = open_bit_out();
     const tr = build_huffman_tree(str);
