@@ -154,7 +154,10 @@
                                     getRequest.onsuccess = function(event) {
                                         var result = event.target.result;
                                         if (result) {
-                                            if (window.confirm("Une fiche avec ce nom a déjà été importée. Souhaitez-vous la remplacer ?")) {store.put({url: "Fichiers importés", name: fl_defl[0], content: fl.result});}
+                                            if (window.confirm("Une fiche avec ce nom a déjà été importée. Souhaitez-vous la remplacer ?")) {
+                                                store.put({url: "Fichiers importés", name: fl_defl[0], content: fl.result});
+                                                window.alert("Fichier importé");
+                                            }
                                         }
                                         else {
                                             store.put({url: "Fichiers importés", name: fl_defl[0], content: fl.result});
