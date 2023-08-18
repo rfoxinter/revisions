@@ -192,6 +192,7 @@ function save() {
         try {
             store.put({url: id[0], name: id[1], content: compress_text((q?1:0) + "\n" + (viewed?1:0) + "\n" + nth + "\n" + ques.join(",") + "\n" + wrong.join(","))});
             document.getElementById("dropdown").style.display="none";
+            document.getElementById("adv_dropdown").style.display = "none";
             window.alert("Sauvegarde effectuée");
         } catch {window.alert("Une erreur est survenue lors de la sauvegarde");}
 
@@ -229,6 +230,7 @@ function load_sv_content(content) {
         
     }
     document.getElementById("dropdown").style.display="none";
+    document.getElementById("adv_dropdown").style.display = "none";
     window.alert("Sauvegarde chargée");
 }
 
@@ -247,6 +249,7 @@ function loadsv() {
                 load_sv_content(result.content);
             } else {
                 document.getElementById("dropdown").style.display="none";
+                document.getElementById("adv_dropdown").style.display = "none";
                 window.alert("Aucune sauvegarde à charger");
             }
         };
@@ -272,9 +275,11 @@ function delsv() {
                 if (result) {
                     store.delete(id);
                     document.getElementById("dropdown").style.display="none";
+                    document.getElementById("adv_dropdown").style.display = "none";
                     window.alert("Sauvegarde supprimée")
                 } else {
                     document.getElementById("dropdown").style.display="none";
+                    document.getElementById("adv_dropdown").style.display = "none";
                     window.alert("Aucune sauvegarde à supprimer");
                 }
             }
@@ -335,12 +340,16 @@ function expsv() {
 async function upsv() {
     var response;
     try {
-        response = await fetch(prompt("URL de la sauvegarde"));
-        if (response.status == 200) {
-            load_sv_content(await response.text());
-        } else {
-            window.alert("Impossible de charger la sauvegarde");
+        var url = prompt("URL de la sauvegarde");
+        if (url !== "" && url !== null) {
+            response = await fetch(url);
+            if (response.status == 200) {
+                load_sv_content(await response.text());
+            } else {
+                window.alert("Impossible de charger la sauvegarde");
+            }
         }
+        document.getElementById("dropdown_up").style.display = "none";
     } catch {
         window.alert("Impossible de charger la sauvegarde");
     }
