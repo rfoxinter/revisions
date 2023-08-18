@@ -82,10 +82,98 @@ async function sync(url, name) {
     } else {window.alert('Impossible de rafraîchir le fichier');}
 }
 
+async function sync_upload(name) {
+    var card = await read_card("Fichiers importés", name);
+    var file = await deflate(card).split('\n');
+    var n = file[3].replace(']', '').replace('[', '').split(',').map(x => parseInt(x));
+    var filedate = parseInt(file[5+2*n.length]);
+    var syncurl = file[7+2*n.length];
+    var filename = file[8+2*n.length];
+    try {
+        response = await fetch(syncurl);
+    } catch(error) {window.alert('Impossible de rafraîchir le fichier');}
+    if (response.status == 200) {
+        const jsCode = await response.text();
+        let ls = jsCode.split('\n'); let found = false;
+        for (let i = 0; i < (ls.length - 1)/2; ++i) {
+            if (ls[2*i + 1] == atob(filename)) {
+                if (parseInt(ls[2*i + 2]) > filedate) {
+                    window.alert('Une mise à jour est disponible et va être téléchargée');
+                    let card = document.getElementById('[Fichiers importés,' + name + ']').getElementsByTagName('a');
+                    let href = [];
+                    for (let i = 0; i < card.length; ++i) {
+                        href.push(card[i].href);
+                        card[i].style.filter = 'grayscale(100%)';
+                        card[i].href = 'javascript:void(0);'
+                        
+                    }
+                    await download_upload(file, n, absolute(ls[0] + ls[2*i + 1]));
+                    for (let i = 0; i < card.length; ++i) {
+                        card[i].style.filter = '';
+                        card[i].href = href[i];
+                    }
+                    window.alert('Mise à jour téléchargée');
+                } else {window.alert('Le fichier est à jour')}
+                found = true;
+                break;
+            }
+        }
+        if (!found) {window.alert('Le fichier n\'est pas disponible')}
+    } else {window.alert('Impossible de rafraîchir le fichier');}
+}
+
+function absolute(rel) {
+    var link = document.createElement("a");
+    link.href = rel;
+    return (link.protocol + "//" + link.host + link.pathname);
+}
+
+async function down_svg_upload(file, len) {
+    var arr = [];
+    for (let i = 0; i < len; i++) {
+        await get_code(file, i + 1, 'Q');
+        arr[2*i] = svgcode;
+        await get_code(file, i + 1, 'R');
+        arr[2*i + 1] = svgcode;
+    }
+    return arr;
+}
+
+async function download_upload(file, n, fileurl) {
+    var response; var lst;
+    try {
+        response = await fetch(fileurl + '/info.txt');
+    } catch(error) {window.alert('Impossible de rafraîchir le fichier'); return;}
+    if (response.status == 200) {
+        const jsCode = await response.text();
+        lst = jsCode.split('\n');
+    } else {window.alert('Impossible de rafraîchir le fichier'); return;}
+    var n = lst[3].replace(']', '').replace('[', '').split(',').map(x => parseInt(x));
+    var filename = file[8+2*n.length];
+    file = file[7+2*n.length];
+    var date = new Date;
+    var arr = await down_svg_upload(fileurl, n.length);
+    var text = lst[0].replaceAll('"', '') + '\n' + lst[1] + '\n' + lst[2] + '\n' + lst[3].replaceAll(' ', '') + '\n' + lst[4].replaceAll(' ', '') + '\n' + arr.map((x,i,a) => x.replaceAll('\r', '').replaceAll('\n', '')).map(x => encodeURIComponent(x)).join('\n') + '\n' + date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + String(date.getDate()).padStart(2, '0') + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0') + '\n' + btoa(lst[0].replaceAll('"', '')) + '\n' + file + '\n' + filename;
+    var open = indexedDB.open("flcrddb");
+    open.onsuccess = function(event) {
+        var db = event.target.result;
+        var tx = db.transaction("flcrd", "readwrite");
+        var store = tx.objectStore("flcrd");
+
+        store.put({url: "Fichiers importés", name: lst[0].replaceAll('"', ''), content: compress_text(text)});
+        window.alert("Fiche mise à jour");
+
+        tx.oncomplete = function() {
+            db.close();
+        };
+    };
+}
+
 async function downcrd(url,fl) {
     let [start, title] = await fill_svg(url);
     if (start !== undefined) {
         let txt = download_text(start, title, url, fl);
+        txt.push(title);
         return txt;
     } else {
         return undefined;
