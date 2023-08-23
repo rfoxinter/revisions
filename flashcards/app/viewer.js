@@ -189,7 +189,7 @@ function load_sv_content(content) {
         ques.push(ques.length + 1);
     }
     viewed = code[1];
-    wrong = code[4].split(",").map(x => parseInt(x));
+    wrong = code[4] === ""?[]:code[4].split(",").map(x => parseInt(x));
     if (nth === ques.length) {
         nth -= 1;
         new_card(true);
