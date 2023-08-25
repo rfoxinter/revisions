@@ -66,7 +66,10 @@ async function loadFile(src, file) {
     };
 }
 
-async function load(src, file) {
+function load(src, file) {
+    document.getElementById('incor').innerText = 'Réponse incorrecte';
+    document.getElementById('corr').innerText = 'Réponse correcte';
+    document.getElementById('flip').innerHTML = 'Voir la réponse';
     document.getElementById("downloaded").style.display="none";
     document.getElementById("viewer").style.display="block";
     id = [src, file];
@@ -77,7 +80,7 @@ async function load(src, file) {
     document.getElementById('flashcard').innerHTML = '';
     document.getElementById('card_nb').innerHTML = '';
     document.getElementById('card_total').innerHTML = '';
-    await loadFile(src, file);
+    loadFile(src, file);
 }
 
 function reverse_card() {
