@@ -40,7 +40,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Analyse/DeveloppementsLimites
 20230703145834
 ../MP2I/flashcards/Analyse/EquationsDifferentielles
-20230703150147
+20230825113045
 ../MP2I/flashcards/Analyse/FonctionsC0OuD1
 20230703150709
 ../MP2I/flashcards/Analyse/FonctionsDeDeuxVariables
