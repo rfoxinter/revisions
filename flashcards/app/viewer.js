@@ -171,7 +171,7 @@ function save() {
         var store = tx.objectStore("flcrd");
 
         try {
-            store.put({url: id[0], name: id[1], content: compress_text((q?1:0) + "\n" + (viewed?1:0) + "\n" + nth + "\n" + ques.join(",") + "\n" + wrong.join(","))});
+            store.put({url: id[0], name: id[1], content: compress_text((q?1:0) + "\n" + (viewed?1:0) + "\n" + nth + "\n" + ques.join(",") + "\n" + wrong.join(",") + "\n" + id.map(x => btoa(x)).join(','))});
             document.getElementById("dropdown").style.display="none";
             document.getElementById("adv_dropdown").style.display = "none";
             window.alert("Sauvegarde effectuée");
@@ -185,12 +185,13 @@ function save() {
 
 function load_sv_content(content) {
     var code = deflate(content).split("\n");
+    if (code.length > 5 && code[5] !== id.map(x => btoa(x)).join(',')) {
+        window.alert("Sauvegarde corrompue");
+        return;
+    }
     q = !code[0];
     nth = parseInt(code[2]);
     ques = code[3].split(",").map(x => parseInt(x));
-    while (n.length > ques.length) {
-        ques.push(ques.length + 1);
-    }
     viewed = code[1];
     wrong = code[4] === ""?[]:code[4].split(",").map(x => parseInt(x));
     if (nth === ques.length) {
