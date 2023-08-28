@@ -17,4 +17,4 @@ Décomposition en éléments simples dans $\fr CX$\linebreak$F$ a des pôles $\l
 Partie polaire d'une décomposition en éléments simples dans $\fr CX$\linebreak$F$ a des pôles $\l r_1,\cdots,r_k\r$ de multiplicité $\l\alpha_1,\cdots,\alpha_k\r$;;$\sum{j=0}{\alpha_i}{\frac{\lambda_{i,j}}{\l X-r_i\r^j}}$
 Coefficient avec le terme $X-r$ de la décomposition en éléments simples de $F=\frac PQ$ dans $\fr CX$;;$\lambda=\frac{P\l r\r}{\frac{Q}{X-r}\l r\r}=\frac{P\l r\r}{Q'\l r\r}$
 Décomposition en éléments simples de $\frac{P'}{P}$ de racines $\l r_1,\cdots,r_k\r$ de multiplicité $\l\alpha_1,\cdots,\alpha_k\r$;;$\frac{P'}{P}=\sum{i=1}{n}{\frac{\alpha_i}{X-r_i}}$
-Décomposition en éléments simples dans $\fr RX$\linebreak$F$ avec $Q=Q_1^{\alpha_1}\cdots Q_k^{\alpha_k}$, $\deg{Q_i}\leqslant2$;;$F=E+\sum{i=0}{k}{\sum{j=0}{\alpha_i}{\frac{A_{i,j}}{Q_i^j}}}$\linebreak$\deg{A_{i,j}}<\deg{Q_i}$
+Décomposition en éléments simples dans $\fr RX$\linebreak$F=\frac PQ$ avec $Q=Q_1^{\alpha_1}\cdots Q_k^{\alpha_k}$, $\deg{Q_i}\leqslant2$;;$F=E+\sum{i=0}{k}{\sum{j=0}{\alpha_i}{\frac{A_{i,j}}{Q_i^j}}}$\linebreak$\deg{A_{i,j}}<\deg{Q_i}$
