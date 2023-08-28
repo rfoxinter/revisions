@@ -1,34 +1,37 @@
 plugins:
     - jekyll-sitemap
+exclude:
+    - informatique/
+    - documentation_res/
 defaults:
-  -
-    scope:
-      path: "*.html"
-    values:
-      sitemap: false
-  -
-    scope:
-      path: informatique/**
-    values:
-      sitemap: false
-  -
-    scope:
-      path: Documentation.pdf
-    values:
-      sitemap: false
-  -
-    scope:
-      path: exercices/**
-    values:
-      sitemap: false
-  -
-    scope:
-      path: flashcards/**
-    values:
-      sitemap: false
-  -
-    scope:
-      path: MP2I/**
-    values:
-      sitemap: false
+    -
+          scope:
+            path: "*.html"
+          values:
+            sitemap: false
+    -
+        scope:
+            path: informatique/**
+        values:
+            sitemap: false
+    -
+        scope:
+            path: Documentation.pdf
+        values:
+            sitemap: false
+    -
+        scope:
+            path: exercices/**
+        values:
+            sitemap: false
+    -
+        scope:
+            path: flashcards/**
+        values:
+            sitemap: false
+    -
+        scope:
+            path: MP2I/**
+        values:
+            sitemap: false
 
