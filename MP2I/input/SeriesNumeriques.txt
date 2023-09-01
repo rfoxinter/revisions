@@ -1,4 +1,4 @@
-Analyse -- Séries Numériques
+Analyse -- Séries numériques
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{bigoperators}\renewcommand{\leq}{\leqslant}\renewcommand{\geq}{\geqslant}\usepackage{equivalents}\usepackage{analyse,complexes,trigo}\let\oldln\ln\renewcommand\ln[2][]{\oldln^{#1}\l#2\r}\let\oldsup\sup\renewcommand\sup[1]{\oldsup\l#1\r}\usepackage{tikz}\usetikzlibrary{animations}

@@ -50,7 +50,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Analyse/Integration
 20230703151634
 ../MP2I/flashcards/Analyse/SeriesNumeriques
-20230703152452
+20230901175029
 ../MP2I/flashcards/Analyse/SuitesNumeriques
 20230703153117
 ../MP2I/flashcards/Fondements/Applications
