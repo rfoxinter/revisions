@@ -66,7 +66,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Fondements/NombresReels
 20230703152158
 ../MP2I/flashcards/Fondements/Relations
-20230703152332
+20230901174107
 ../MP2I/flashcards/Fondements/SommesEtProduits
 20230703152506
 ../MP2I/flashcards/Probabilites/EspacesProbabilises

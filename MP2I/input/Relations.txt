@@ -5,7 +5,7 @@ Q/R & R/Q : False
 Réflexivité;;$x\R x$
 Irréflixivité ou antiréfléxivité;;$\neg\l x\R x\r$
 Symétrie;;$x\R y\Rightarrow y\R x$
-Antisymértie;;$\l x\R y\r\wedge\l y\R x\r\Rightarrow\l x=y\r$
+Antisymétrie;;$\l x\R y\r\wedge\l y\R x\r\Rightarrow\l x=y\r$
 Asymétrie;;$\l x\R y\r\Rightarrow\neg\l y\R x\r$
 Transitivité;;$\l x\R y\r\wedge\l y\R z\r\Rightarrow\l x\R z\r$
 Relation d'équivalence;; Réflexive, symétrique et transitive\linebreak Notée $\equiv$ ou $\sim$
