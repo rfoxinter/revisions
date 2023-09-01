@@ -13,7 +13,7 @@ function copyArray(array) {
     return cparr;
 }
 
-var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var svgcode; var arr; var wrong = []; var qr = [0, 1]; var id;
+var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var arr; var wrong = []; var qr = [0, 1]; var id;
 
 async function loadFile(src, file) {
     var open = indexedDB.open("flcrddb");
@@ -42,7 +42,9 @@ async function loadFile(src, file) {
                 if (fl[6+2*n.length] != btoa(title)) {
                     throw new Error('Fichier corrompu')
                 }
-            
+
+                qr = [0, 1]
+                wrong = []
                 q = true;
                 viewed = false;
                 nth = 0;
