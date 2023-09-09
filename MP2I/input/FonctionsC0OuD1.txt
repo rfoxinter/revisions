@@ -6,7 +6,7 @@ Théorème des valeurs intermédiaires\linebreak Si $f\in\mathcal C^0\l I\r$, av
 Continuité uniforme;;Si $X\subset\mathbb R$\linebreak$\forall \varepsilon>0,\;\exists\eta>0,\;\forall\l x,y\r\in X^2$\linebreak$\left|x-y\right|<\eta\Rightarrow\left|f\l x\r-f\l y\r\right|<\varepsilon$
 Théorème de Heine\linebreak Dans $\mathbb R$ ou $\mathbb C$;;Si $f\in\mathcal{C}^0\l \left[a,b\right]\r$, alors $f$ est uniformément continue sur $\left[a,b\right]$
 Compact;;$K\subset\mathbb R$ est un compact si de toute suite $\l k_n\r$ de $K$, on peut extraire une suite convergente vers un élément de $K$
-Théorème de compacité;;Soit $f\in\mathcal{C}^0\l \left[a,b\right]\r$ à valeurs dans $\mathbb R$, alors $f$ est bornée et atteint ses bornes
+Théorème des bornes atteintes;;Soit $f\in\mathcal{C}^0\l \left[a,b\right]\r$ à valeurs dans $\mathbb R$, alors $f$ est bornée et atteint ses bornes
 Homéomorphisme;;Si $A\subset\mathbb R$, $B\subset\mathbb R$, alors $f\!:\!A\to B$ est un homéomorphisme si c'est une application continue, bijective et dont la réciproque est continue
 Théorème de Rolle;;Si $f\in\mathcal C^0\l\left[a,b\right]\r$ et $f\in\mathcal D^1\l\left]a,b\right[\r$, et $f\l a\r=f\l b\r$, alors il existe $c\in\left]a,b\right[$ tel que $f'\l c\r=0$
 Théorème de Rolle pour un intervalle infini d'un côté;;Si $f\in\mathcal C^0\l\left[a,+\infty\right[\r$ et $f\in\mathcal D^1\l\left]a,+\infty\right[\r$, et $f\l a\r=\lim{x\to+\infty}{f\l x\r}$, alors il existe $c\in\left]a,+\infty\right[$ tel que $f'\l c\r=0$
