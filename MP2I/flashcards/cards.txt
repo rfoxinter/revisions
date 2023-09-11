@@ -42,7 +42,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Analyse/EquationsDifferentielles
 20230825113600
 ../MP2I/flashcards/Analyse/FonctionsC0OuD1
-20230703150709
+20230909173444
 ../MP2I/flashcards/Analyse/FonctionsDeDeuxVariables
 20230703150759
 ../MP2I/flashcards/Analyse/FonctionsUsuelles
