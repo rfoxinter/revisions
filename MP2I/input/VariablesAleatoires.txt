@@ -30,7 +30,7 @@ Variable centrée;;$\esp X=0$
 Variable réduite;;$\var X=1$
 Variable centrée réduite associée à $X$;;$X^*=\frac{X-\esp X}{\ect X}$
 Variables indépendantes;;$X\indep Y$\linebreak$\forall\l A_1,A_2\r\in\mathcal T_1\times\mathcal T_2$\linebreak$\p{X\in A_1,Y\in A_2}=\p{X\in A_1}\p{Y\in A_2}$
-Lemme des coalitions;;Si $\l X_1,\cdots,X_n\r$ sont mutuellement indépendantes, alors $f\l X_1,\cdots,X_m\r$ et $g\l X_{m+1},\cdots,X_n\r$
+Lemme des coalitions;;Si $\l X_1,\cdots,X_n\r$ sont mutuellement indépendantes, alors $f\l X_1,\cdots,X_m\r$ et $g\l X_{m+1},\cdots,X_n\r$ aussi
 $\esp{XY}$;;$\esp X\esp Y$ si $X\indep Y$
 Variables décorrélées;;$\cov XY=0$
 $\cov XY$;;$\esp{\l X-\esp X\r\l Y-\esp Y\r}$\linebreak${}=\esp{XY}-\esp X\esp Y$

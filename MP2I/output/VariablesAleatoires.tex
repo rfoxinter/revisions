@@ -10,112 +10,112 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$L^1$}{1/54}
-\slider{Variables aléatoires réelles discrètes admettant une espérance finie}{1/54}
-\slideq{Variables décorrélées}{2/54}
-\slider{$\cov XY=0$}{2/54}
-\slideq{Structure des variables aléatoires de $\mathbb R^\Omega$}{3/54}
-\slider{Sous-algèbre de $\mathbb R^\Omega$}{3/54}
-\slideq{Inégalités de Markov}{4/54}
-\slider{$\p{X\geqslant\lambda\esp X}\leqslant\frac1\lambda$\linebreak$\p{X\geqslant\varepsilon}\leqslant\frac{\esp X}\varepsilon$\linebreak$\p{X>\varepsilon}\leqslant\frac{\esp X}\varepsilon$\linebreak$\p{\left|X\right|\geqslant\varepsilon}\leqslant\frac{\esp{X^2}}{\varepsilon^2}$}{4/54}
-\slideq{Convergence en probabilités}{5/54}
-\slider{$\forall\varepsilon>0,\;\lim{n\to+\infty}{\p{\left|X_n-X\right|\leqslant\varepsilon}}=0$}{5/54}
-\slideq{Théorème d'or de Bernoulli}{6/54}
-\slider{$Z_n=\frac{X_1+\cdots+X_n}{n}$ avec les $X_i$ mutuellement indépendantes suivant une loi de Bernoulli de paramètre $p$\linebreak$\forall\varepsilon>0,\;\forall n\in\mathbb N^*,\;\p{\left|Z_n-p\right|\geqslant\varepsilon}\leqslant\frac1{4n\varepsilon^2}$}{6/54}
-\slideq{$\esp{XY}$}{7/54}
-\slider{$\esp X\esp Y$ si $X\indep Y$}{7/54}
-\slideq{Inégalité de Bienaymé-Tchebychev}{8/54}
-\slider{$\forall\varepsilon>0,\;\p{\left|X-\esp X\right|\geqslant\varepsilon}\leqslant\frac{\var X}{\varepsilon^2}$\linebreak$\forall\varepsilon>0,\;\p{\left|X-\esp X\right|\geqslant\varepsilon}\leqslant\frac{\ect X^2}{\varepsilon^2}$}{8/54}
-\slideq{Loi binomiale négative}{9/54}
-\slider{$X\l\Omega\r=\mathbb N$\linebreak$X\sim\nbin{r}{p}$\linebreak$\forall k\in\mathbb N,\;\p{X=k}=\binom{k+r-1}{k}p^r\l1-p\r^k$\linebreak$\esp X=\frac{rq}p$\linebreak$\var X=\frac{rq}{p^2}$}{9/54}
-\slideq{Loi hypergéométrique}{10/54}
-\slider{$X\l\Omega\r\subset\llb1,n\rrb$\linebreak$X\sim\hypg{N}{n}{p}$\linebreak$\forall k\in X\l\Omega\r,\;\p{X=k}=\frac{\binom{Np}k\binom{Nq}{n-k}}{\binom Nn}$\linebreak$\esp X=np$\linebreak$\var X=np\l1-p\r\frac{N-n}{N-1}$}{10/54}
-\slideq{$\esp X$}{11/54}
-\slider{$\sum{x\in X\l\Omega\r}{}{x\p{X=x}}=\sum{\omega\in\Omega}{}{\p{\left\{\omega\right\}}X\l\omega\r}$}{11/54}
-\slideq{$\var{\lambda X+\mu}$}{12/54}
-\slider{$\lambda^2\var X$}{12/54}
-\slideq{$\p[f\l X\r]{}$}{13/54}
-\slider{$\p[X]{}\circ\widehat{f^{-1}}$}{13/54}
-\slideq{Loi de Poisson}{14/54}
-\slider{$X\l\Omega\r=\mathbb N$\linebreak$X\sim\poiss{\lambda}$\linebreak$\forall k\in\mathbb N,\;\p{X=k}=\e^{-\lambda}\frac{\lambda^k}{k!}$\linebreak$\esp X=\lambda$\linebreak$\var X=\lambda$}{14/54}
-\slideq{Lemme des coalitions}{15/54}
-\slider{Si $\l X_1,\cdots,X_n\r$ sont mutuellement indépendantes, alors $f\l X_1,\cdots,X_m\r$ et $g\l X_{m+1},\cdots,X_n\r$}{15/54}
-\slideq{Variable aléatoire discrète}{16/54}
-\slider{$X\l\Omega\r$ est fini}{16/54}
-\slideq{Coefficient de corrélation}{17/54}
-\slider{$\rho\l X,Y\r=\frac{\cov XY}{\ect X\ect Y}$}{17/54}
-\slideq{Si $X\!:\!\l\Omega,\mathcal T\r\to\l E;\mathcal T'\r$\linebreak$\mathcal T_X$}{18/54}
-\slider{$\left\{X^{-1}\l A\r,\;A\in\mathcal T'\right\}$}{18/54}
-\slideq{Loi binomiale}{19/54}
-\slider{$X\l\Omega\r=\llb0,n\rrb$\linebreak$X\sim\bin[n]p$\linebreak$\forall k\in\llb0,n\rrb,\;\p{X=k}=\binom{n}{k}p^k\l1-p\r^{n-k}$\linebreak$\esp X=np$\linebreak$\var X=np\l1-p\r$}{19/54}
-\slideq{Matrice des variances-covariances}{20/54}
-\slider{$\underline{\mathbb V}\l X_1,\cdots,X_n\r=\l\cov{X_i}{X_j}\r_{\l i,j\r\in\llb1,n\rrb^2}$}{20/54}
-\slideq{$\ect X$}{21/54}
-\slider{$\sqrt{\var X}$}{21/54}
-\slideq{$\var{X_1+\cdots+X_n}$}{22/54}
-\slider{$\sum{k=1}{n}{\var X_i}+2\sum{1\leqslant i<j\leqslant n}{}{\cov{X_i}{X_j}}$\linebreak${}=\tmatrix[][minimum width=0pt,minimum height=20pt,]({1\&\mdots\&1\\})\underline{\mathbb V}\l X_1,\cdots,X_n\r\tmatrix[][minimum width=0pt,minimum height=20pt,]({1\\\oldvdots\\1\\})$}{22/54}
-\slideq{Loi de Bernoulli}{23/54}
-\slider{$X\l\Omega\r=\left\{0,1\right\}$\linebreak$X\sim\bin{p}$\linebreak$\p{X=1}=p$, $\p{X=0}=1-p$\linebreak$\esp X=p$\linebreak$\var X=p\l1-p\r$}{23/54}
-\slideq{Cas d'égalité de l'inégalité de Cauchy-Schwarz pour $\oldcov$}{24/54}
-\slider{Il existe $\l a,b\r\neq\l0,0\r$ tel que $aX+bY=c$ presque sûrement}{24/54}
-\slideq{$\p{f\l X\r=x}$}{25/54}
-\slider{$\sum{y\in f^{-1}\l x\r\cap X\l\Omega\r}{}{\p{X=y}}$}{25/54}
-\slideq{Variable aléatoire réelle}{26/54}
-\slider{Variable aléatoire à valeurs dans $\l\mathbb R,\bor^1\r$}{26/54}
-\slideq{Loi géométrique}{27/54}
-\slider{$X\l\Omega\r=\mathbb N^*$\linebreak$X\sim\geom{n}$\linebreak$\forall k\in\mathbb N^*,\;\p{X=k}=p\l1-p\r^{k-1}$\linebreak$\esp X=\frac1p$\linebreak$\var X=\frac{q}{p^2}$}{27/54}
-\slideq{Loi de Pascal}{28/54}
-\slider{$X\l\Omega\r=\llb r,+\infty\right\llbracket$\linebreak$X\sim\pasc{r}{p}$\linebreak$\forall k\in\llb r,+\infty\right\llbracket,\;\p{X=k}=\binom{k-1}{r-1}p^r\l1-p\r^{k-r}$\linebreak$\esp X=\frac rp$\linebreak$\var X=\frac{rq}{p^2}$}{28/54}
-\slideq{Variable centrée réduite associée à $X$}{29/54}
-\slider{$X^*=\frac{X-\esp X}{\ect X}$}{29/54}
-\slideq{$\var{X+Y}$}{30/54}
-\slider{$\var X+\var Y+2\cov XY$}{30/54}
-\slideq{Moment d'ordre $k$\linebreak Moment centré d'ordre $k$}{31/54}
-\slider{$\esp{X^k}$\linebreak$\esp{\l X-\esp X\r^k}$}{31/54}
-\slideq{Inégalité de Cauchy-Schwarz pour $\mathbb E$}{32/54}
-\slider{$\left|\esp {XY}\right|\leqslant\sqrt{\esp{X^2}\esp{Y^2}}$}{32/54}
-\slideq{Variables indépendantes}{33/54}
-\slider{$X\indep Y$\linebreak$\forall\l A_1,A_2\r\in\mathcal T_1\times\mathcal T_2$\linebreak$\p{X\in A_1,Y\in A_2}=\p{X\in A_1}\p{Y\in A_2}$}{33/54}
-\slideq{Fonction de répartition de $X\!:\!\Omega\to\mathbb R$}{34/54}
-\slider{$F_X\l x\r=\p{X\leqslant x}$}{34/54}
-\slideq{Variable réduite}{35/54}
-\slider{$\var X=1$}{35/54}
-\slideq{Variable centrée}{36/54}
-\slider{$\esp X=0$}{36/54}
-\slideq{$\cov XY$}{37/54}
-\slider{$\esp{\l X-\esp X\r\l Y-\esp Y\r}$\linebreak${}=\esp{XY}-\esp X\esp Y$}{37/54}
-\slideq{Loi conjointe de $\l X_1,\cdots,X_n\r$}{38/54}
-\slider{$\p{X_1,\cdots,X_n}$ définie sur $\l\mathbb R^n,\bor^n\r$}{38/54}
-\slideq{$k$-ième loi marginale de $\l X_1,\cdots,X_n\r$}{39/54}
-\slider{Loi de $X_k$}{39/54}
-\slideq{$L^n$}{40/54}
-\slider{Variables aléatoires réelles discrètes admettant un moment d'ordre $n$}{40/54}
-\slideq{Formule de polarisation}{41/54}
-\slider{$\cov XY=\frac12\l\var{X+Y}-\var X-\var Y\r$}{41/54}
-\slideq{$\esp{\lambda X+Y}$}{42/54}
-\slider{$\lambda\esp X+\esp Y$}{42/54}
-\slideq{Variable aléatoire}{43/54}
-\slider{Application mesurable $X\!:\!\l\Omega,\mathcal T\r\to\l E,\mathcal T'\r$\linebreak Si $\Omega'\in\mathcal T$ tel que $\p{\Omega'}=1$, on peut définir $X$ sur $\Omega'$}{43/54}
-\slideq{$\var X$}{44/54}
-\slider{$\esp{\l X-\esp X\r^2}$}{44/54}
-\slideq{Loi quasi-certaine}{45/54}
-\slider{$X=c$ presque sûrement\linebreak$\p{X=c}=1$, $\p{X\neq c}=0$\linebreak$\esp X=c$\linebreak$\var X=0$}{45/54}
-\slideq{Application mesurable}{46/54}
-\slider{Si $\l E,\mathcal S\r$ et $\l F,\mathcal T\r$ sont deux espaces mesurables et $f\!:\! E\to F$\linebreak$\forall B\in\mathcal T,\;f^{-1}\l B\r\in\mathcal S$}{46/54}
-\slideq{Formule de l'espérance totale}{47/54}
-\slider{Si $\l A_i\r$ est un système quasi-complet d'événements au plus dénombrale\linebreak$\esp{X}=\sum{i\in I}{}{\esp{X\sq A_i}\p{A_i}}$}{47/54}
-\slideq{Loi uniforme}{48/54}
-\slider{$X\l\Omega\r=\llb1,n\rrb$\linebreak$X\sim\unif{n}$\linebreak$\forall k\in\llb1,n\rrb,\;\p{X=k}=\frac1n$\linebreak$\esp X=\frac{n+1}{2}$\linebreak$\var X=\frac{n^2-1}{12}$}{48/54}
-\slideq{Vecteur aléatoire réel}{49/54}
-\slider{Vecteur aléatoire à valeurs dans $\l\mathbb R^n,\bor^n\r$}{49/54}
-\slideq{Loi d'une variable aléatoire}{50/54}
-\slider{$\p[X]A=\p{X^{-1}\l A\r}$}{50/54}
-\slideq{Loi faible des grands nombres}{51/54}
-\slider{$Z_n=\frac{X_1+\cdots+X_n}{n}$ avec les $X_i$ mutuellement indépendantes suivant une même loi et d'espérance $m$\linebreak$\forall\varepsilon>0,\;\forall n\in\mathbb N^*,\;\p{\left|Z_n-m\right|\geqslant\varepsilon}\leqslant\frac{\var X}{n\varepsilon^2}$}{51/54}
-\slideq{Espérance conditionnelle}{52/54}
-\slider{$\esp{X\sq A}=\sum{x\in X\l\Omega\r}{}{x\p{X=x\sq A}}$}{52/54}
-\slideq{Formule de Koenig-Huyghens}{53/54}
-\slider{$\var X=\esp{X^2}-\esp X^2$}{53/54}
-\slideq{Inégalité de Cauchy-Schwarz pour $\oldcov$}{54/54}
-\slider{$\left|\cov XY\right|\leqslant\ect X\ect Y$}{54/54}
+\slideq{Variable aléatoire réelle}{1/54}
+\slider{Variable aléatoire à valeurs dans $\l\mathbb R,\bor^1\r$}{1/54}
+\slideq{Théorème d'or de Bernoulli}{2/54}
+\slider{$Z_n=\frac{X_1+\cdots+X_n}{n}$ avec les $X_i$ mutuellement indépendantes suivant une loi de Bernoulli de paramètre $p$\linebreak$\forall\varepsilon>0,\;\forall n\in\mathbb N^*,\;\p{\left|Z_n-p\right|\geqslant\varepsilon}\leqslant\frac1{4n\varepsilon^2}$}{2/54}
+\slideq{Loi de Bernoulli}{3/54}
+\slider{$X\l\Omega\r=\left\{0,1\right\}$\linebreak$X\sim\bin{p}$\linebreak$\p{X=1}=p$, $\p{X=0}=1-p$\linebreak$\esp X=p$\linebreak$\var X=p\l1-p\r$}{3/54}
+\slideq{Loi de Pascal}{4/54}
+\slider{$X\l\Omega\r=\llb r,+\infty\right\llbracket$\linebreak$X\sim\pasc{r}{p}$\linebreak$\forall k\in\llb r,+\infty\right\llbracket,\;\p{X=k}=\binom{k-1}{r-1}p^r\l1-p\r^{k-r}$\linebreak$\esp X=\frac rp$\linebreak$\var X=\frac{rq}{p^2}$}{4/54}
+\slideq{$L^n$}{5/54}
+\slider{Variables aléatoires réelles discrètes admettant un moment d'ordre $n$}{5/54}
+\slideq{Loi faible des grands nombres}{6/54}
+\slider{$Z_n=\frac{X_1+\cdots+X_n}{n}$ avec les $X_i$ mutuellement indépendantes suivant une même loi et d'espérance $m$\linebreak$\forall\varepsilon>0,\;\forall n\in\mathbb N^*,\;\p{\left|Z_n-m\right|\geqslant\varepsilon}\leqslant\frac{\var X}{n\varepsilon^2}$}{6/54}
+\slideq{Formule de polarisation}{7/54}
+\slider{$\cov XY=\frac12\l\var{X+Y}-\var X-\var Y\r$}{7/54}
+\slideq{Variable centrée}{8/54}
+\slider{$\esp X=0$}{8/54}
+\slideq{Lemme des coalitions}{9/54}
+\slider{Si $\l X_1,\cdots,X_n\r$ sont mutuellement indépendantes, alors $f\l X_1,\cdots,X_m\r$ et $g\l X_{m+1},\cdots,X_n\r$ aussi}{9/54}
+\slideq{$\var{X_1+\cdots+X_n}$}{10/54}
+\slider{$\sum{k=1}{n}{\var X_i}+2\sum{1\leqslant i<j\leqslant n}{}{\cov{X_i}{X_j}}$\linebreak${}=\tmatrix[][minimum width=0pt,minimum height=20pt,]({1\&\mdots\&1\\})\underline{\mathbb V}\l X_1,\cdots,X_n\r\tmatrix[][minimum width=0pt,minimum height=20pt,]({1\\\oldvdots\\1\\})$}{10/54}
+\slideq{$\var{\lambda X+\mu}$}{11/54}
+\slider{$\lambda^2\var X$}{11/54}
+\slideq{Loi d'une variable aléatoire}{12/54}
+\slider{$\p[X]A=\p{X^{-1}\l A\r}$}{12/54}
+\slideq{$\esp X$}{13/54}
+\slider{$\sum{x\in X\l\Omega\r}{}{x\p{X=x}}=\sum{\omega\in\Omega}{}{\p{\left\{\omega\right\}}X\l\omega\r}$}{13/54}
+\slideq{Matrice des variances-covariances}{14/54}
+\slider{$\underline{\mathbb V}\l X_1,\cdots,X_n\r=\l\cov{X_i}{X_j}\r_{\l i,j\r\in\llb1,n\rrb^2}$}{14/54}
+\slideq{Inégalité de Cauchy-Schwarz pour $\mathbb E$}{15/54}
+\slider{$\left|\esp {XY}\right|\leqslant\sqrt{\esp{X^2}\esp{Y^2}}$}{15/54}
+\slideq{Vecteur aléatoire réel}{16/54}
+\slider{Vecteur aléatoire à valeurs dans $\l\mathbb R^n,\bor^n\r$}{16/54}
+\slideq{Inégalité de Cauchy-Schwarz pour $\oldcov$}{17/54}
+\slider{$\left|\cov XY\right|\leqslant\ect X\ect Y$}{17/54}
+\slideq{Loi binomiale négative}{18/54}
+\slider{$X\l\Omega\r=\mathbb N$\linebreak$X\sim\nbin{r}{p}$\linebreak$\forall k\in\mathbb N,\;\p{X=k}=\binom{k+r-1}{k}p^r\l1-p\r^k$\linebreak$\esp X=\frac{rq}p$\linebreak$\var X=\frac{rq}{p^2}$}{18/54}
+\slideq{Loi hypergéométrique}{19/54}
+\slider{$X\l\Omega\r\subset\llb1,n\rrb$\linebreak$X\sim\hypg{N}{n}{p}$\linebreak$\forall k\in X\l\Omega\r,\;\p{X=k}=\frac{\binom{Np}k\binom{Nq}{n-k}}{\binom Nn}$\linebreak$\esp X=np$\linebreak$\var X=np\l1-p\r\frac{N-n}{N-1}$}{19/54}
+\slideq{Variable réduite}{20/54}
+\slider{$\var X=1$}{20/54}
+\slideq{Inégalité de Bienaymé-Tchebychev}{21/54}
+\slider{$\forall\varepsilon>0,\;\p{\left|X-\esp X\right|\geqslant\varepsilon}\leqslant\frac{\var X}{\varepsilon^2}$\linebreak$\forall\varepsilon>0,\;\p{\left|X-\esp X\right|\geqslant\varepsilon}\leqslant\frac{\ect X^2}{\varepsilon^2}$}{21/54}
+\slideq{$k$-ième loi marginale de $\l X_1,\cdots,X_n\r$}{22/54}
+\slider{Loi de $X_k$}{22/54}
+\slideq{Loi uniforme}{23/54}
+\slider{$X\l\Omega\r=\llb1,n\rrb$\linebreak$X\sim\unif{n}$\linebreak$\forall k\in\llb1,n\rrb,\;\p{X=k}=\frac1n$\linebreak$\esp X=\frac{n+1}{2}$\linebreak$\var X=\frac{n^2-1}{12}$}{23/54}
+\slideq{Formule de Koenig-Huyghens}{24/54}
+\slider{$\var X=\esp{X^2}-\esp X^2$}{24/54}
+\slideq{Loi quasi-certaine}{25/54}
+\slider{$X=c$ presque sûrement\linebreak$\p{X=c}=1$, $\p{X\neq c}=0$\linebreak$\esp X=c$\linebreak$\var X=0$}{25/54}
+\slideq{Loi géométrique}{26/54}
+\slider{$X\l\Omega\r=\mathbb N^*$\linebreak$X\sim\geom{n}$\linebreak$\forall k\in\mathbb N^*,\;\p{X=k}=p\l1-p\r^{k-1}$\linebreak$\esp X=\frac1p$\linebreak$\var X=\frac{q}{p^2}$}{26/54}
+\slideq{Variable aléatoire}{27/54}
+\slider{Application mesurable $X\!:\!\l\Omega,\mathcal T\r\to\l E,\mathcal T'\r$\linebreak Si $\Omega'\in\mathcal T$ tel que $\p{\Omega'}=1$, on peut définir $X$ sur $\Omega'$}{27/54}
+\slideq{Loi de Poisson}{28/54}
+\slider{$X\l\Omega\r=\mathbb N$\linebreak$X\sim\poiss{\lambda}$\linebreak$\forall k\in\mathbb N,\;\p{X=k}=\e^{-\lambda}\frac{\lambda^k}{k!}$\linebreak$\esp X=\lambda$\linebreak$\var X=\lambda$}{28/54}
+\slideq{Formule de l'espérance totale}{29/54}
+\slider{Si $\l A_i\r$ est un système quasi-complet d'événements au plus dénombrale\linebreak$\esp{X}=\sum{i\in I}{}{\esp{X\sq A_i}\p{A_i}}$}{29/54}
+\slideq{Structure des variables aléatoires de $\mathbb R^\Omega$}{30/54}
+\slider{Sous-algèbre de $\mathbb R^\Omega$}{30/54}
+\slideq{Variable aléatoire discrète}{31/54}
+\slider{$X\l\Omega\r$ est fini}{31/54}
+\slideq{Variables décorrélées}{32/54}
+\slider{$\cov XY=0$}{32/54}
+\slideq{$\p[f\l X\r]{}$}{33/54}
+\slider{$\p[X]{}\circ\widehat{f^{-1}}$}{33/54}
+\slideq{Si $X\!:\!\l\Omega,\mathcal T\r\to\l E;\mathcal T'\r$\linebreak$\mathcal T_X$}{34/54}
+\slider{$\left\{X^{-1}\l A\r,\;A\in\mathcal T'\right\}$}{34/54}
+\slideq{Moment d'ordre $k$\linebreak Moment centré d'ordre $k$}{35/54}
+\slider{$\esp{X^k}$\linebreak$\esp{\l X-\esp X\r^k}$}{35/54}
+\slideq{$\p{f\l X\r=x}$}{36/54}
+\slider{$\sum{y\in f^{-1}\l x\r\cap X\l\Omega\r}{}{\p{X=y}}$}{36/54}
+\slideq{Cas d'égalité de l'inégalité de Cauchy-Schwarz pour $\oldcov$}{37/54}
+\slider{Il existe $\l a,b\r\neq\l0,0\r$ tel que $aX+bY=c$ presque sûrement}{37/54}
+\slideq{$\var X$}{38/54}
+\slider{$\esp{\l X-\esp X\r^2}$}{38/54}
+\slideq{$\cov XY$}{39/54}
+\slider{$\esp{\l X-\esp X\r\l Y-\esp Y\r}$\linebreak${}=\esp{XY}-\esp X\esp Y$}{39/54}
+\slideq{Variables indépendantes}{40/54}
+\slider{$X\indep Y$\linebreak$\forall\l A_1,A_2\r\in\mathcal T_1\times\mathcal T_2$\linebreak$\p{X\in A_1,Y\in A_2}=\p{X\in A_1}\p{Y\in A_2}$}{40/54}
+\slideq{Application mesurable}{41/54}
+\slider{Si $\l E,\mathcal S\r$ et $\l F,\mathcal T\r$ sont deux espaces mesurables et $f\!:\! E\to F$\linebreak$\forall B\in\mathcal T,\;f^{-1}\l B\r\in\mathcal S$}{41/54}
+\slideq{Variable centrée réduite associée à $X$}{42/54}
+\slider{$X^*=\frac{X-\esp X}{\ect X}$}{42/54}
+\slideq{$\var{X+Y}$}{43/54}
+\slider{$\var X+\var Y+2\cov XY$}{43/54}
+\slideq{Inégalités de Markov}{44/54}
+\slider{$\p{X\geqslant\lambda\esp X}\leqslant\frac1\lambda$\linebreak$\p{X\geqslant\varepsilon}\leqslant\frac{\esp X}\varepsilon$\linebreak$\p{X>\varepsilon}\leqslant\frac{\esp X}\varepsilon$\linebreak$\p{\left|X\right|\geqslant\varepsilon}\leqslant\frac{\esp{X^2}}{\varepsilon^2}$}{44/54}
+\slideq{Loi binomiale}{45/54}
+\slider{$X\l\Omega\r=\llb0,n\rrb$\linebreak$X\sim\bin[n]p$\linebreak$\forall k\in\llb0,n\rrb,\;\p{X=k}=\binom{n}{k}p^k\l1-p\r^{n-k}$\linebreak$\esp X=np$\linebreak$\var X=np\l1-p\r$}{45/54}
+\slideq{Loi conjointe de $\l X_1,\cdots,X_n\r$}{46/54}
+\slider{$\p{X_1,\cdots,X_n}$ définie sur $\l\mathbb R^n,\bor^n\r$}{46/54}
+\slideq{Fonction de répartition de $X\!:\!\Omega\to\mathbb R$}{47/54}
+\slider{$F_X\l x\r=\p{X\leqslant x}$}{47/54}
+\slideq{$\esp{\lambda X+Y}$}{48/54}
+\slider{$\lambda\esp X+\esp Y$}{48/54}
+\slideq{Espérance conditionnelle}{49/54}
+\slider{$\esp{X\sq A}=\sum{x\in X\l\Omega\r}{}{x\p{X=x\sq A}}$}{49/54}
+\slideq{$\ect X$}{50/54}
+\slider{$\sqrt{\var X}$}{50/54}
+\slideq{$L^1$}{51/54}
+\slider{Variables aléatoires réelles discrètes admettant une espérance finie}{51/54}
+\slideq{$\esp{XY}$}{52/54}
+\slider{$\esp X\esp Y$ si $X\indep Y$}{52/54}
+\slideq{Coefficient de corrélation}{53/54}
+\slider{$\rho\l X,Y\r=\frac{\cov XY}{\ect X\ect Y}$}{53/54}
+\slideq{Convergence en probabilités}{54/54}
+\slider{$\forall\varepsilon>0,\;\lim{n\to+\infty}{\p{\left|X_n-X\right|\leqslant\varepsilon}}=0$}{54/54}
 \end{document}
