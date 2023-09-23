@@ -1,26 +1,57 @@
 \RequirePackage{bigoperators}
 \RequirePackage{tools}
 
+\newif\if@dvar\@dvarfalse
+\DeclareOption{dvar}{\@dvartrue}
+\DeclareOption*{}
+\ProcessOptions\relax
+\if@dvar
+    \RequirePackage{pgffor}
+\fi
+
 \makeatletter
 \newcounter{mpdercount}
 \def\mpderden{}
 \newcounter{mpdervarcount}
 \def\prevmpdervar{}
-\def\do@scanmpder#1,{%
-    \ifx#1\relax
-        \let\next\relax
-    \else
+\if@dvar
+\newcommand{\scanmpderlist}[1]{
+    \foreach \i in {#1}{
         \stepcounter{mpdercount}
-        \comparestring{\prevmpdervar}{#1}{
+        \comparestring{\prevmpdervar}{\i}{
             \stepcounter{mpdervarcount}
         }{
-            \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\mpderden^{\arabic{mpdervarcount}}}}
-            \edef\mpderden{\mpderden\partial#1}
+            \comparestring{\arabic{mpdervarcount}}{1}{}{\xdef\mpderden{\mpderden^{\arabic{mpdervarcount}}}}
+            \xdef\mpderden{\mpderden\partial\i}
             \setcounter{mpdervarcount}{1}
-            \def\prevmpdervar{#1}
+            \xdef\prevmpdervar{\i}
         }
-        \let\next\do@scanmpder
-    \fi\next
+    }
+    \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\mpderden^{\arabic{mpdervarcount}}}}
+}
+\newcommand{\scanmpder}[1]{
+    \setcounter{mpdercount}{0}
+    \def\mpderden{}
+    \setcounter{mpdervarcount}{1}
+    \def\prevmpdervar{}
+    \scanmpderlist{#1}
+}
+\else
+\def\do@scanmpder#1,{%
+\ifx#1\relax
+    \let\next\relax
+\else
+    \stepcounter{mpdercount}
+    \comparestring{\prevmpdervar}{#1}{
+        \stepcounter{mpdervarcount}
+    }{
+        \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\mpderden^{\arabic{mpdervarcount}}}}
+        \edef\mpderden{\mpderden\partial#1}
+        \setcounter{mpdervarcount}{1}
+        \def\prevmpdervar{#1}
+    }
+    \let\next\do@scanmpder
+\fi\next
 }
 \newcommand{\scanmpder}[1]{
     \setcounter{mpdercount}{0}
@@ -28,7 +59,9 @@
     \setcounter{mpdervarcount}{1}
     \def\prevmpdervar{}
     \do@scanmpder#1,\relax,
+    \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\mpderden^{\arabic{mpdervarcount}}}}
 }
+\fi
 \makeatother
 
 \DeclareMathOperator{\dd}{d}
@@ -69,3 +102,4 @@
 \newcommand{\esc}[2][]{\oldesc_{#1}\l#2\r}
 \DeclareMathOperator{\oldfint}{Int}
 \newcommand{\fint}[1]{\oldfint\l#1\r}
+\newcommand{\nrm}[2][\infty]{\left\|#2\right\|_{#1}}
