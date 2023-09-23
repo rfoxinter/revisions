@@ -245,17 +245,17 @@ Pour pouvoir visionner les flashcards exportées en svg, il faut disposer d'un s
 
 Il faut alors convertir l'url du dossier en base64 (cette conversion peut se faire sur le site \href{https://www.base64encode.org/}{\texttt{https://www.base64encode.org/}}, avec la fonction \mintinline{javascript}?btoa? de JavaScript ou avec la  fonction Python \mintinline{python}?base64.b64encode?) en enlevant les << \texttt{=} >> à la fin. Dans l'exemple, en exécutant le code Python suivant
 \vspace{-\abovedisplayskip}\begin{minted}[curlyquotes]{python}
-import base64 # encoder en base64
-import re # remplacer tous les `=' finaux
+from base64 import b64encode # encoder en base64
+from re import sub # remplacer tous les `=' finaux
 url = "https://example.fr/dossier"
-base64url = re.sub("=", "", base64.b64encode(url.encode()).decode())
+base64url = sub("=", "", b64encode(url.encode()).decode())
 print(base64url)
 \end{minted}
 \vspace{-\belowdisplayskip}
 
 on obtient \texttt{aHR0cHM6Ly9leGFtcGxlLmZyL2Rvc3NpZXI}.
 
-Il faut alors aller sur le site \href{https://rfoxinter.github.io/revisions/flashcards/?file=}{\texttt{https://rfoxinter.github.io/revisions/flashcards/}} en rajoutant à la fin de l'url \texttt{?file=nom\_du\_dossier} où le nom du dossier correspond à celui en base64.
+Il faut alors aller sur le site \href{https://rfoxinter.github.io/revisions/flashcards/}{\texttt{https://rfoxinter.github.io/revisions/flashcards/}} en rajoutant à la fin de l'url \texttt{?file=nom\_du\_dossier} où le nom du dossier correspond à celui en base64.
 
 Dans l'exemple, on obtient l'url suivante:\\\texttt{https://rfoxinter.github.io/revisions/flashcards/}
 
@@ -390,7 +390,8 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \footnotetext{On peut appliquer les mêmes arguments optionnels que pour \mintinline{latexmath}?\der? et les arguments obligatoires sont les mêmes que pour \mintinline{latexmath}?\der?}
 \mcmd[\footnotemark]{\mpder[x,y,z]{}{f(x,y,z)}}
 \footnotetext{Sans argument optionnel, \mintinline{latexmath}?\mpder? agit comme \mintinline{latexmath}?\pder? et les arguments obligatoires sont les mêmes que pour \mintinline{latexmath}?\der?}
-\mcmd{\mpder[x,y,y,z]{f}{x,y,z}}
+\mcmd[\footnotemark]{\mpder[x_1,x_2,x_3,x_3]{f(X)}{}}
+\footnotetext{\mintinline{latexmath}?\mpder? peut ne pas marcher avec des variables de plusieurs lettres\\Si la commande n'affiche pas le résultat attendu avec des variabled de plusieurs lettres, il faut utiliser \mintinline{latex}?\usepackage[dvar]{analyse}?}
 \mcmd[\footnotemark]{\oldint}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\int?}
 \mcmd{\int{f}}
@@ -401,13 +402,15 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd{\int[][a][b]{f'}}
 \mcmd{\eval[{[a,b]}]{f(t)}}
 \mcmd{\eval[a][b]{f(t)}}
+\pagebreak
+\hrule
 \mcmd[\footnotemark]{\serie{a_n}}
 \footnotetext{Comme \hyperlink{section.6}{\texttt{BigOperators.sty}} est chargé, la commande \mintinline{latexmath}?\sum? est remplacée et il est nécessaire de taper \mintinline{latexmath}?\oldsum? pour obtenir $\oldsum$}
 \mcmd{\oldesc}
-\pagebreak
-\hrule
 \mcmd{\esc{\left[a,b\right]}}
 \mcmd{\esc[+]{f}}
+\mcmd{\nrm{f}}
+\mcmd{\nrm[1]{g}}
 \hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
