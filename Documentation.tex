@@ -391,7 +391,7 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd[\footnotemark]{\mpder[x,y,z]{}{f(x,y,z)}}
 \footnotetext{Sans argument optionnel, \mintinline{latexmath}?\mpder? agit comme \mintinline{latexmath}?\pder? et les arguments obligatoires sont les mêmes que pour \mintinline{latexmath}?\der?}
 \mcmd[\footnotemark]{\mpder[x_1,x_2,x_3,x_3]{f(X)}{}}
-\footnotetext{\mintinline{latexmath}?\mpder? peut ne pas marcher avec des variables de plusieurs lettres\\Si la commande n'affiche pas le résultat attendu avec des variabled de plusieurs lettres, il faut utiliser \mintinline{latex}?\usepackage[dvar]{analyse}?}
+\footnotetext{\mintinline{latexmath}?\mpder? peut ne pas marcher avec des variables de plusieurs lettres\\Si la commande n'affiche pas le résultat attendu avec des variabled de plusieurs lettres, il faut utiliser \mintinline{latex}?\usepackage[dvar]{analyse}?\\Cette option importe automatiquement \texttt{pgffor} (qui est utilisé importé par \tikzlg{} et PGF)}
 \mcmd[\footnotemark]{\oldint}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\int?}
 \mcmd{\int{f}}
@@ -411,6 +411,10 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd{\esc[+]{f}}
 \mcmd{\nrm{f}}
 \mcmd{\nrm[1]{g}}
+\mcmd{\oldva}
+\mcmd{\va{u}}
+\mcmd{\oldepi}
+\mcmd{\epi{f}}
 \hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
