@@ -5,9 +5,14 @@ from os.path import exists as e
 from os.path import isdir as i
 from os.path import getmtime as g
 from datetime import datetime as dt
+from argparse import ArgumentParser
+
+p = ArgumentParser()
+p.add_argument('--folder', type = str, help = 'Folder to analyze', default = '')
+args = p.parse_args()
+fld = args.folder if args.folder != '' else input('Folder: ')
 
 c(d(__file__) + '/flashcards')
-fld = input('Folder: ')
 f = open('./cards.txt', 'w')
 content = 'https://rfoxinter.github.io/revisions/flashcards/' + ((fld + '/') if fld != '.' else '')
 global cards
