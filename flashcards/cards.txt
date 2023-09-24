@@ -1,3 +1,7 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ./Analyse/ComplementsDePremiereAnnee
 20230924002308
+./Analyse/SeriesNumeriques
+20230924163108
+./Analyse/SuitesDeFonctions
+20230924162705

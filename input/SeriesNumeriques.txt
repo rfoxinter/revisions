@@ -1,0 +1,6 @@
+Analyse -- Séries numériques
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse,equivalents}
+Sommation des relations de comparaison dans le cas convergeant\linebreak$\serie{v_n}$ converge;;$u_n=\O{v_n}\Rightarrow\sum{k=n+1}{+\infty}{u_k}=\O{\sum{k=n+1}{+\infty}{v_k}}$\linebreak$u_n=\o{v_n}\Rightarrow\sum{k=n+1}{+\infty}{u_k}=\o{\sum{k=n+1}{+\infty}{v_k}}$\linebreak$\eq{u_n}{v_n}\Rightarrow\eq{\sum{k=n+1}{+\infty}{u_k}}{\sum{k=n+1}{+\infty}{v_k}}$\linebreak Dans ces trois cas, $\serie{u_n}$ converge
+Sommation des relations de comparaison dans le cas divergeant\linebreak$\serie{v_n}$ diverge;;$u_n=\O{v_n}\Rightarrow\sum{k=0}{n}{u_k}=\O{\sum{k=0}{n}{v_k}}$\linebreak$u_n=\o{v_n}\Rightarrow\sum{k=0}{n}{u_k}=\o{\sum{k=0}{n}{v_k}}$\linebreak$\eq{u_n}{v_n}\Rightarrow\eq{\sum{k=0}{n}{u_k}}{\sum{k=0}{n}{v_k}}$\linebreak Dans ce dernier cas, $\serie{u_n}$ diverge

@@ -20,4 +20,4 @@ Sommabilité;;$\l a_i\r$ est sommable si $\sum{i\in I}{}{\left|a_i\right|}<+\inf
 $l^1\l I,X\r$;;Ensemble des familles sommables indexées sur $I$ à valeurs dans $X\subset\mathbb C$
 Caractérisation par $\varepsilon$ de la somme;;$\forall\varepsilon>0,\;\exists J_\varepsilon\in\mathcal P_f\l I\r,\;\forall K\in\mathcal P_f\l I\r$\linebreak$J_\varepsilon\subset K\Rightarrow\left|S-\sum{i\in K}{}{a_i}\right|\leqslant\varepsilon$
 Produit de Cauchy;;Si $\serie{a_n}$ et $\serie{b_n}$ sont absolument convergentes et $c_n=\sum{k=0}{n}{a_kb_{n-k}}$, alors $\serie{c_n}$ est absolument convergente\linebreak$\l\sum{n=0}{+\infty}{a_n}\r\l\sum{n=0}{+\infty}{b_n}\r=\sum{n=0}{+\infty}{\sum{k=0}{n}{a_kb_{n-k}}}$
-Formule du binôme négatif;;$\sum{n=0}{+\infty}{\frac{n!}{\l n-p\r!}z^{n-p}}=\frac{p!}{\l1-z\r^{p+1}}$\linebreak$\frac{1}{\l1-z\r^{p+1}}=\sum{n=0}{+\infty}{\binom{n+p}{p}z^n}$
+Formule du binôme négatif;;$\sum{n=p}{+\infty}{\frac{n!}{\l n-p\r!}z^{n-p}}=\frac{p!}{\l1-z\r^{p+1}}$\linebreak$\sum{n=0}{+\infty}{\binom{n+p}{p}z^n}=\frac{1}{\l1-z\r^{p+1}}$
