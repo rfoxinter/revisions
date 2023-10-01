@@ -286,12 +286,11 @@ function add_card(_url, _name, filesrc, nb) {
         if (nb !== undefined) {
             let a = document.getElementById(nb + "_card");
             try {
-                a.href = "javascript:void(0)";
+                a.parentElement.href = "javascript:void(0)";
                 a.innerHTML = "downloading";
                 a.style.color = "#F5B041";
                 var contentdate = await downcrd(filesrc, _name);
                 if (contentdate === undefined) {throw new Error("Erreur lors du téléchargement");}
-                console.log(contentdate[2]);
                 a.innerHTML = "check_circle";
                 a.style.color = "#159957";
                 var open = indexedDB.open("flcrddb");
@@ -312,7 +311,7 @@ function add_card(_url, _name, filesrc, nb) {
                 reject();
                 a.innerHTML = "error";
                 a.style.color = "#EC7063";
-                a.href = "javascript:add_card('" + _url + "', '" + _name + "', '" + filesrc + "', " + nb + ")";
+                a.parentElement.href = "javascript:add_card('" + _url + "', '" + _name + "', '" + filesrc + "', " + nb + ")";
             }
         } else {
             var contentdate = await downcrd(filesrc, _name);
@@ -371,14 +370,14 @@ function refresh() {
     }
 }
 
-function add_config(_url, _alias, _orig_name, _root) {
+function add_config(_url, _alias, _orig_name, _root, closed) {
     var open = indexedDB.open("flcrddb");
     open.onsuccess = function(event) {
         var db = event.target.result;
         var tx = db.transaction("flcfg", "readwrite");
         var store = tx.objectStore("flcfg");
 
-        store.put({url: _url, alias: _alias, orig_name: _orig_name, root: _root});
+        store.put({url: _url, alias: _alias, orig_name: _orig_name, root: _root, close: closed});
 
         tx.oncomplete = function() {
             db.close();
@@ -399,6 +398,9 @@ function set_config_title(_url) {
             var result = event.target.result;
             if (result) {
                 document.getElementById(_url + '_text').innerHTML = result.alias;
+                if (result.close) {
+                    folder_click(_url);
+                }
             }
         };
 
@@ -479,7 +481,7 @@ function set_config() {
             if (result) {
                 await store.delete(src);
             }
-            add_config(src, document.getElementById("alias").value==""?src:document.getElementById("alias").value, document.getElementById("fl_name").checked, document.getElementById("root").value);
+            add_config(src, document.getElementById("alias").value==""?src:document.getElementById("alias").value, document.getElementById("fl_name").checked, document.getElementById("root").value, document.getElementById("fl_closed").checked);
             window.alert("Configuration appliquée");
             document.getElementById('download').style.display = 'block';
             document.getElementById('config').style.display = 'none';
