@@ -21,6 +21,7 @@
     <script type="text/javascript" src="site.js"></script>
     <script type="text/javascript" src="huffman.js"></script>
     <script type="text/javascript" src="viewer.js"></script>
+    <script type="text/javascript" src="book.js"></script>
     <style>
         * {
             font-size: calc(min(3.75vw,100%));
@@ -92,6 +93,23 @@
         .option_text:hover {
             background-color: #ddd;
             cursor: pointer;
+        }
+        table {
+			display: block;
+            border-collapse: collapse !important;
+            text-align: center;
+		}
+		td {
+			width: 50vw;
+			padding: 5px 5px !important;
+		}
+        tr, td {
+            height: 100%;
+        }
+        iframe {
+            height: 100%;
+            width: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -253,6 +271,30 @@
                 document.getElementById("adv_dropdown").style.display = "none";
             });
         </script>
+    </div>
+    <div style="display: none;" id="book">
+        <header class='page-header'>
+            <h1 id='book_title'>&nbsp;</h1>
+            <span class="down-button material-symbols-rounded"><ptr onclick="document.getElementById('downloaded').style.display = 'block'; document.getElementById('book').style.display = 'none'; document.title = 'Flashcards app';" style="font-size: 24px !important;">close</ptr></span>
+        </header>
+        <main class='main-content'>
+            <!-- <p style='text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem; white-space: unset;'>
+                <span style='display: flex; align-items: center; justify-content: center; height: 100%;'>
+                    <span style='scale: 2.5; max-width: 40%;'>text</span>
+                </span>
+            </p> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Réponse</th>
+                    </tr>
+                </thead>
+                <tbody id="book_table">
+                </tbody>
+            </table>
+        </main>
+        <footer class='site-footer'></footer>
     </div>
     <script type="text/javascript" >
         if ('serviceWorker' in navigator) {

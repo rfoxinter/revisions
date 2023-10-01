@@ -141,6 +141,15 @@ async function append_card(src, name) {
     a.appendChild(span);
     p.appendChild(a);
     p.innerHTML += ' ';
+    var a4 = document.createElement('a');
+    a4.setAttribute('href', 'javascript:list_card("'+src+'","'+name+'")');
+    a4.style.color = "#E29112";
+    span4 = document.createElement('span');
+    span4.setAttribute('class','material-symbols-rounded');
+    span4.innerHTML = 'menu_book';
+    a4.appendChild(span4);
+    p.appendChild(a4);
+    p.innerHTML += ' ';
     var a2 = document.createElement('a');
     if (src !== "Fichiers importés") {
         a2.setAttribute('href', 'javascript:sync("'+src+'","'+name+'")')
@@ -288,7 +297,7 @@ function add_card(_url, _name, filesrc, nb) {
             try {
                 a.parentElement.href = "javascript:void(0)";
                 a.innerHTML = "downloading";
-                a.style.color = "#F5B041";
+                a.style.color = "#E29112";
                 var contentdate = await downcrd(filesrc, _name);
                 if (contentdate === undefined) {throw new Error("Erreur lors du téléchargement");}
                 a.innerHTML = "check_circle";
@@ -427,6 +436,8 @@ function set_config_card(_url, _name) {
                         document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = await read_name(_url, _name);
                     } else {
                         document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML.replace(result.root, '');
+                    } if (result.close) {
+                        document.getElementById('[' + _url + ',' + _name + ']').style.display = 'none';
                     }
                 } catch {}
             }

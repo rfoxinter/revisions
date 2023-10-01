@@ -48,10 +48,10 @@ async function loadFile(src, file) {
                 q = true;
                 viewed = false;
                 nth = 0;
-            
+
                 document.title = title.replace('&ndash;', '-').replace('<i>', '').replace('</i>', '');
                 ques = copyArray(n);
-            
+
                 if (sh_quest) {shuffleArray(ques);}
 
                 document.getElementById('flip').disabled = false;
