@@ -23,14 +23,13 @@ async function loadBook(src, file) {
 
                 let tbl = document.getElementById('book_table');
                 tbl.innerHTML = '';
-                let start = '<html><head><meta charset="utf-8"><style>svg {max-width: 100%;max-height: calc(max(20vh, 120px)) !important;fill: #606c71;width: unset !important;vertical-align: middle;}path {stroke: #606c71;}* {-webkit-user-select: none; -ms-user-select: none; user-select: none;}body {margin: 0pt;}</style><script>document.addEventListener("contextmenu", (event) => {event.preventDefault();});</script></head><body><p style="text-align: center; height: calc(max(50%,300px)); margin-bottom: 0rem; white-space: unset;"><span style="display: flex; align-items: center; justify-content: center; height: 100%;"><span style="scale: 2.5; max-width: 40%;">';
-                let end = '</span></span></p></body></html>';
+                let start = '<!DOCTYPE html><html style="height: 100%;"><head style="height: 100%;"><meta charset="utf-8"><style>svg {max-width: 100%; max-height: 100% !important;fill: #606c71;width: unset !important;vertical-align: middle; scale: 2.5;}path {stroke: #606c71;}* {-webkit-user-select: none; -ms-user-select: none; user-select: none;}body {margin: 0pt;}</style><script>document.addEventListener("contextmenu", (event) => {event.preventDefault();});</script></head><body style="height: 100%;"><div style="text-align: center; height: calc(max(50%,300px)); margin-bottom: 0rem; white-space: unset; height: 100%;"><span style="display: flex; align-items: center; justify-content: center; height: 100%;"><div style="height: 40%; max-width: 40%; display: flex; align-items: center;">';
+                let end = '</div></span></div></body></html>';
                 for (let i = 0; i < 2*n.length; ++i) {
                     tr = document.createElement('tr');
                     td1 = document.createElement('td');
                     ifr1 = document.createElement('iframe');
                     ifr1.src = 'data:text/html;base64,' + btoa(start + unescape(fl[5+i]) + end);
-                    console.log(decodeURIComponent(fl[5+i]));
                     td1.appendChild(ifr1);
                     tr.appendChild(td1);
                     ++i;
@@ -55,9 +54,10 @@ async function loadBook(src, file) {
 }
 
 function list_card(src, file) {
+    document.getElementById('book_table').innerHTML = '';
+    document.getElementById('book_title').innerHTML = '&nbsp;';
     document.getElementById("downloaded").style.display="none";
     document.getElementById("book").style.display="block";
     id = [src, file];
-    document.getElementById('book_title').innerHTML = '&nbsp;';
     loadBook(src, file);
 }
