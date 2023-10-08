@@ -8,6 +8,7 @@
 \definecolor{namecolour}{HTML}{0028BA}
 \hypersetup{pdftitle=Documentation}
 \newcommand{\tikzlg}{\href{https://ctan.org/pkg/tikz}{\color{black}Ti\textit{k}Z}}
+\newcommand{\amslg}{\href{https://ctan.org/pkg/amsmath}{\color{black}\ensuremath{\mathcal A\mkern-3mu\raise-2pt\hbox{$\mathcal M$}\mkern-2mu\mathcal S}}}
 \let\oldoplus\oplus
 \usepackage{output/sffont,output/tools,output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
 \usepackage[arc]{output/complexes}
@@ -157,7 +158,7 @@ Il est nécessaire que \texttt{cm-super} soit installé (disponible sur \href{ht
 
 Lors de l'utilisation de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} (avec une police sans-sérif), il est possible d'utiliser les commandes avec les polices sans-serif, sauf pour les lettres grecques ($\Omega$, $\oldphi$, $\phi$, \dots), la redéfinition du $l$ en mathématiques, les alphabets \mintinline{latexmath}?\mathcal? et \mintinline{latexmath}?\mathbb? ainsi que les symboles.
 
-Il est possibles de changer les polices de caractères/symboles en important des packages après \mintinline{latex}?\usepackage{preambule}?. Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
+Il est possibles de changer les polices de caractères/symboles en important des packages avant \mintinline{latex}?\usepackage{preambule}?. Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
 
 Il n'est pas possible d'utiliser en simultané le package \texttt{Dsfont.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\texttt{Dsft.sty}} décrit ci-dessous. De plus, la commande \mintinline{latexmath}?\1? ne sera pas modifiée si un package définissant \mintinline{latexmath}?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \mintinline{latex}?\newcommand\1[1]{\mathbb{1}_{#1}}? (si \hyperlink{section.8}{\texttt{Dsft.sty}} n'est pas importé) ou \mintinline{latex}?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
 
@@ -207,10 +208,14 @@ Les fichiers \texttt{Flashcards.py} et \texttt{Htmlcards.py} permettent d'export
 Pour pouvoir créer des fiches de révision, il faut mettre un fichier \texttt{.txt} (décrit plus bas) dans un dossier \texttt{input} et mettre les fichiers \texttt{.sty} nécessaires dans un dossier \texttt{output}.
 \subsection{Flashcards.py}
 Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelleil est possible de rajouter les paramètres optionnels \texttt{-{}-n=nombre} (avec le nombre d'exemplaires), \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
+
+Il est nécessaire d'avoir \LaTeX{} d'installé pour pouvoir lancer le script.
 \subsection{Htmlcards.py}
 Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle il est possible de rajouter les paramètres optionnels \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
 
 Modifier la valeur de \texttt{-{}-dest} peut rendre inutilisable certaines fonctions liées au site pour visualiser les fiches.
+
+Il est nécessaire d'avoir \LaTeX{} et \href{https://ctan.org/pkg/dvisvgm/}{\color{black}\textsl{dvisvgm}} d'installés pour pouvoir lancer le script.
 \subsection{Les options spéciales}
 Il est possible de compiler l'ensemble des fichiers \texttt{.txt} du dossier \texttt{input} en mettant \texttt{\_\_compile\_all\_\_} comme nom de fichier.
 
@@ -454,8 +459,12 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \footnotetext{$\e$ de la fonction exponentielle}
 \mcmd[\footnotemark]{\i}
 \footnotetext{$\i$ complexe\\L'ancienne commande \mintinline{latex}?\i? s'obtient avec \mintinline{latex}?\ii?}
+\mcmd[\footnotemark]{\iii}
+\footnotetext{Utile pour obtenir $\bar\iii=-\i=\e^{\oldfrac{-\i\pi}2}$\\Cette commande ne fonctionne qu'avec la police de l'\amslg}
 \mcmd[\footnotemark]{\j}
 \footnotetext{$\j=\e^{\oldfrac{2\i\pi}{3}}$\\L'ancienne commande \mintinline{latex}?\j? s'obtient avec \mintinline{latex}?\jj?}
+\mcmd[\footnotemark]{\jjj}
+\footnotetext{Utile pour obtenir $\bar\jjj=\j^2=\e^{\oldfrac{-2\i\pi}3}$\\Cette commande ne fonctionne qu'avec la police de l'\amslg}
 \mcmd[\footnotemark]{\oldIm}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\Im?}
 \mcmd{\Im}
@@ -528,6 +537,8 @@ Pour utiliser ce package, il faut copier les fichiers \texttt{dsrom12.pfb} et \t
 \footnotetext{Les caractères \mintinline{latex}?\&? sont utilisés au lieu du \mintinline{latex}?&? utilisé habituellement avec \tikzlg{} pour des raisons de compatibilité avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}\\Il n'est pas nécessaire de mettre la \mintinline{latex}?\tmatrix? dans une équation et les cellules sont par défaut des équations}
 \subsection{\boldmath Ne pas importer les commandes avec $\mcdot$}
 Il est possible de ne pas modifier les commandes usuelles en utilisant l'option {\color{namecolour}\texttt{nodots}} de ce package. Il faut alors importer le package avec \mintinline{latex}?\usepackage[nodots]{matrices}?.
+
+Les commandes avec $\mcdot$ ne fonctionnent qu'avec les polices de l'\amslg. Lorsqu'une autre police est utilisée il faut désactiver l'importation de ces commandes.
 \subsection{\boldmath Modifier les séparations entre les $\mcdot$}
 Les commandes avec des points tel que $\xdots$ ont des définitions qui dépendent de la taille de la police. Par défaut, celle pour \LaTeX~est adaptée pour 12pt, et celle de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} pour 17pt. Pour avoir des points alignés correctement, il est possible de modifier la valeur de \mintinline{latex}?\dotsep? en utilisant \mintinline{latex}?\setlength{\dotsep}{Xpt}?.
 
@@ -680,7 +691,7 @@ Ce package sert à mettre en forme des tables an latex grâce à \tikzlg{}.
 
 Pour insérer une table, il faut appeler \mintinline{latex}?\setrowcol[width][height]{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis rentrer la table \tikzlg{}, les arguments optionnels étant la largeur de la table et sa hauteur.
 
-Une table a une largeur par défaut de 10cm et une hauteur de 6,5cm (est est réinitialisée à chaque appel de \mintinline{latex}?\setrowcol?).
+Une table a une largeur par défaut de 10cm et une hauteur de 6,5cm (et est réinitialisée à chaque appel de \mintinline{latex}?\setrowcol?).
 
 Il est possible d'utiliser \mintinline{latex}?[ampersand replacement=\&]? puis \mintinline{latex}?\&? pour la matrice lorsque \mintinline{latex}?&? est déjà défini par l'environnement (comme \textsc{beamer}).
 
@@ -691,13 +702,13 @@ Il est possible de récupérer la valeur de la largeur et de la hauteur avec \mi
 Par exemple, la table
 
 \vspace{-\abovedisplayskip}\begin{center}
-{\LARGE\setcolrow[15cm]{6}{5}\begin{tikzpicture}\matrix[table]{&$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$ \\ $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\ $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\ $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\ $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\}; \draw [line width=0.5mm] (-\tblw/3,-\tblh/2) -- (-\tblw/3,\tblh/2); \draw [line width=0.5mm] (-\tblw/2,3*\tblh/10) -- (\tblw/2,3*\tblh/10); \draw [line width=0.5mm] (-\tblw/2,-\tblh/2) rectangle (\tblw/2,\tblh/2);\end{tikzpicture}}
+{\LARGE\setcolrow[15cm][7.5cm]{6}{5}\begin{tikzpicture}\matrix[table]{&$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$ \\ $\oldsin$&$0$&$\oldfrac{1}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{\sqrt{3}}{2}$&$1$\\ $\oldcos$&$1$&$\oldfrac{\sqrt{3}}{2}$&$\oldfrac{\sqrt{2}}{2}$&$\oldfrac{1}{2}$&$0$\\ $\oldtan$&$0$&$\oldfrac{1}{\sqrt{3}}$&$1$&$\sqrt{3}$&--\\ $\oldcot$&--&$\sqrt{3}$&$1$&$\oldfrac{1}{\sqrt{3}}$&$0$\\}; \draw [line width=0.5mm] (-\tblw/3,-\tblh/2) -- (-\tblw/3,\tblh/2); \draw [line width=0.5mm] (-\tblw/2,3*\tblh/10) -- (\tblw/2,3*\tblh/10); \draw [line width=0.5mm] (-\tblw/2,-\tblh/2) rectangle (\tblw/2,\tblh/2);\end{tikzpicture}}
 \end{center}
 \vspace{-\belowdisplayskip}
 est produite avec le code suivant
 \vspace{-\abovedisplayskip}\begin{minted}[breaklines,breakafter=&,breakaftersymbolpre=,breaksymbol=~~~~]{latex}
 \LARGE
-\setcolrow[15cm]{6}{5}
+\setcolrow[15cm][7.5cm]{6}{5}
 \begin{tikzpicture}
     \matrix[table]{
         &$0$&$\oldfrac{\pi}{6}$&$\oldfrac{\pi}{4}$&$\oldfrac{\pi}{3}$&$\oldfrac{\pi}{2}$\\
