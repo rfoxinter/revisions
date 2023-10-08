@@ -23,19 +23,21 @@ async function loadBook(src, file) {
 
                 let tbl = document.getElementById('book_table');
                 tbl.innerHTML = '';
-                let start = '<!DOCTYPE html><html style="height: 100%;"><head style="height: 100%;"><meta charset="utf-8"><style>svg {max-width: 100%; max-height: 100% !important;fill: #606c71;width: unset !important;vertical-align: middle; scale: 2.5;}path {stroke: #606c71;}* {-webkit-user-select: none; -ms-user-select: none; user-select: none;}body {margin: 0pt;}</style><script>document.addEventListener("contextmenu", (event) => {event.preventDefault();});</script></head><body style="height: 100%;"><div style="text-align: center; height: calc(max(50%,300px)); margin-bottom: 0rem; white-space: unset; height: 100%;"><span style="display: flex; align-items: center; justify-content: center; height: 100%;"><div style="height: 40%; max-width: 40%; display: flex; align-items: center;">';
+                let start = '<!DOCTYPE html><html style="height: 100%;"><head style="height: 100%;"><meta charset="utf-8"><style>svg {max-width: 100%; max-height: 100% !important;fill: #606c71;width: unset !important;vertical-align: middle; scale: 2.5;}path {stroke: #606c71;}* {-webkit-user-select: none; -ms-user-select: none; user-select: none;}body {margin: 0pt;}</style><script>document.addEventListener("contextmenu", (event) => {event.preventDefault();});</script></head><body style="height: 100%;"><div style="text-align: center; margin-bottom: 0rem; white-space: unset; height: 100%;"><span style="display: flex; align-items: center; justify-content: center; height: 100%;"><div style="height: 40%; max-width: 40%; display: flex; align-items: center;">';
                 let end = '</div></span></div></body></html>';
                 for (let i = 0; i < 2*n.length; ++i) {
                     tr = document.createElement('tr');
                     td1 = document.createElement('td');
                     ifr1 = document.createElement('iframe');
-                    ifr1.src = 'data:text/html;base64,' + btoa(start + unescape(fl[5+i]) + end);
+                    ifr1.setAttribute('style', 'height: 100%');
+                    ifr1.src = 'data:text/html;base64,' + btoa(start + unescape(fl[5+i]) + end).replaceAll('=', '');
                     td1.appendChild(ifr1);
                     tr.appendChild(td1);
                     ++i;
                     td2 = document.createElement('td');
                     ifr2 = document.createElement('iframe');
-                    ifr2.src = 'data:text/html;base64,' + btoa(start + unescape(fl[5+i]) + end);
+                    ifr2.setAttribute('style', 'height: 100%');
+                    ifr2.src = 'data:text/html;base64,' + btoa(start + unescape(fl[5+i]) + end).replaceAll('=', '');
                     td2.appendChild(ifr2);
                     tr.appendChild(td2);
                     tbl.appendChild(tr);
