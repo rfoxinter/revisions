@@ -3,8 +3,11 @@
 \DeclareMathOperator{\oldvect}{Vect}
 \newcommand{\vect}[1]{\oldvect\l#1\r}
 \newcommand{\al}[2]{\def\argII{,#2}\ifx&#2&\def\argII{}\fi\mathcal{L}\l#1\argII\r}
-\let\oplus\relax
-\let\oplus\varoplus
+\if@notnofont
+    \let\oldoplus\oplus
+    \let\oplus\relax
+    \let\oplus\varoplus
+\fi
 \let\matgl\gl
 \renewcommand{\gl}[1]{\oldgl\l#1\r}
 \let\olddim\dim
