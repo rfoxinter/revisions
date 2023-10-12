@@ -9,13 +9,12 @@
 \hypersetup{pdftitle=Documentation}
 \newcommand{\tikzlg}{\href{https://ctan.org/pkg/tikz}{\color{black}Ti\textit{k}Z}}
 \newcommand{\amslg}{\href{https://ctan.org/pkg/amsmath}{\color{black}\ensuremath{\mathcal A\mkern-3mu\raise-2pt\hbox{$\mathcal M$}\mkern-2mu\mathcal S}}}
-\let\oldoplus\oplus
-\usepackage{output/sffont,output/tools,output/htmlpreambule,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
+\usepackage{output/htmlpreambule}
+\usepackage{output/sffont,output/tools,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
 \usepackage[arc]{output/complexes}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
 \makeatother
-\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
 \usepackage{minted}
 \usemintedstyle{perso}
 \setlength{\parindent}{0pt}
@@ -147,14 +146,15 @@ En utilisant \texttt{Preambule.sty} ou \texttt{HTMLPreambule.sty}, les packages 
     \item \mintinline{latex}?\usepackage[utf8]{inputenc}?
     \item \mintinline{latex}?\usepackage[french]{babel}?
     \item \mintinline{latex}?\usepackage[T1]{fontenc}?
-    \item \mintinline{latex}?\usepackage{amsmath, amsfonts, amssymb}?
-    \item \mintinline{latex}?\usepackage{stmaryrd}?
+    \item \mintinline{latex}?\usepackage{amsmath}?
+    \item \mintinline{latex}?\usepackage{amsfonts, amssymb}? (sans l'option {\color{namecolour}\texttt{nofont}})
+    \item \mintinline{latex}?\usepackage{stmaryrd}? (sans l'option {\color{namecolour}\texttt{nofont}})
     \item \mintinline{latex}?\usepackage{adjustbox}? (pour \texttt{HTMLPreambule.sty})
     \item \mintinline{latex}?\usepackage{xcolor}? (pour \texttt{Preambule.sty})
 \end{itemize}
 
 \vspace{0.5cm}
-Il est nécessaire que \texttt{cm-super} soit installé (disponible sur \href{https://ctan.org/pkg/cm-super}{CTAN}) pour pouvoir utiliser \texttt{Preambule.sty}. Pour ne pas avoir à installer \texttt{cm-super}, il est possible de commenter les lignes \mintinline{latex}?\usepackage{sffont}? et \mintinline{latex}?\renewcommand{\sfdefault}{cmssp}? du fichier \texttt{Preambule.sty} en mettant \mintinline{latex}?%? au début de chacune de ces lignes (numéro 10 et 11).
+Il est nécessaire que \texttt{cm-super} soit installé (disponible sur \href{https://ctan.org/pkg/cm-super}{CTAN}) pour pouvoir utiliser \texttt{Preambule.sty}. Pour ne pas avoir à installer \texttt{cm-super}, il est possible d'utiliser \mintinline{latex}?\usepackage[nocmssp]{premabule}?.
 
 Lors de l'utilisation de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} (avec une police sans-sérif), il est possible d'utiliser les commandes avec les polices sans-serif, sauf pour les lettres grecques ($\Omega$, $\oldphi$, $\phi$, \dots), la redéfinition du $l$ en mathématiques, les alphabets \mintinline{latexmath}?\mathcal? et \mintinline{latexmath}?\mathbb? ainsi que les symboles.
 
@@ -164,20 +164,9 @@ Il n'est pas possible d'utiliser en simultané le package \texttt{Dsfont.sty} di
 
 \vspace{0.5cm}
 
-Il est possible de redéfinir le << $l$ >> à sa version d'origine ($\oldl$) avec:
-\phantomsection\label{ldef}\vspace{-\abovedisplayskip}\begin{minted}{latex}
-\mathcode`l="8000
-\begingroup
-\makeatletter
-\lccode`\~=`\l
-\DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
-\lowercase{\gdef~{\lsb@l}}%
-\endgroup
-\makeatother
-\end{minted}
-\vspace{-\belowdisplayskip}
+Il est possible de redéfinir le $l$ en $\oldl$ avec \mintinline{latex}?\usepackage[noell]{premabule}?.
 
-\vspace{0.5cm}
+\pagebreak
 
 Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.18}{\texttt{Usuelles.sty}}} :
 \vspace{-\abovedisplayskip}\begin{minted}{latex}
@@ -191,7 +180,7 @@ La commande \mintinline{latex}?$\sup{\left\{x\in\mathbb{Q}\;\middle|\;x^2<2\righ
 
 \vspace{0.5cm}
 
-L'ensembles des titres des sections (et sous-sections si le fichier n'est pas déjà dans une section) sont des liens qui pointent vers les fichiers en ligne pour un téléchargement direct.
+L'ensembles des titres des sections (et sous-sections si le fichier n'est pas déjà dans une section) de ce document sont des liens qui pointent vers les fichiers en ligne pour un téléchargement direct.
 
 Il est aussi possible de télécharger la version la plus récente de ce fichier en cliquant sur le titre en \hyperlink{section*.1}{page 1}.
 \setcounter{pagenb}{\thepage}
@@ -283,21 +272,25 @@ Un exemple de fichier python générant un tel fichier est disponible à l'adres
 \mmcmd[\footnotemark]{\r}{$\left.\r$}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right)?}
 \mmcmd[\footnotemark]{\llb}{$\llb\right.$}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left\llbracket?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left\llbracket?\\Ce caractère n'est pas modifié avec l'option {\color{namecolour}\texttt{nofont}}}
 \mmcmd[\footnotemark]{\rrb}{$\left.\rrb$}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right\rrbracket?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right\rrbracket?\\Ce caractère n'est pas modifié avec l'option {\color{namecolour}\texttt{nofont}}}
 \mcmd[\footnotemark]{\oldfrac{a}{b}}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\frac?}
 \mcmd[\footnotemark]{\frac{a}{b}}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\dfrac?}
 \mcmd[\footnotemark]{l}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ell?\\Le $l$ peut être redéfini en $\oldl$ avec le code donné dans l'\hyperref[ldef]{introduction}}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ell?\\Le $l$ peut être redéfini en $\oldl$ avec \mintinline{latex}?\usepackage[nocmssp]{premabule}?}
 \mcmd[\footnotemark]{\oldvec{x}}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\vec?}
 \mcmd{\vec{x}}
 \mcmd[\footnotemark]{\overrightarrow{AB}}
 \footnotetext{Le résultat est le même qu'avec \mintinline{latexmath}?\vec?}
-\subsection{Commandes de \texttt{Preambule.sty}}
+\mmcmd[\footnotemark]{\fakebold}{Permet de produire des caractères mathématiques en gras}
+\footnotetext{Il est par exemple possible de produire $\fakebold{\mathbb{R}}$ avec \mintinline{latex}?$\fakebold{\mathbb{R}}$?\\Il est recommandé de n'utiliser cette commande que lorsque les caractères en gras ne sont pas disponibles avec \mintinline{latex}?\boldmath?\\Exemple de comparaison \mintinline{latexmath}?\fakebold? - \mintinline{latex}?\boldmath? avec le caractère normal: {\boldmath$\mathcal M$}$\fakebold{\mathcal M}$$\mathcal M$}
+\subsection{L'option {\color{namecolour}\texttt{nofont}}}
+Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n'a pas de commande \mintinline{latexmath}?\llbracket? et\linebreak\mintinline{latexmath}?\rrbracket?, il faut placer les commandes \mintinline{latex}?\newcommand{\llbracket}{\commandellb}? et \mintinline{latex}?\newcommand{\llbracket}{\commanderrb}? avant \mintinline{latex}?\usepackage{htmlpreambule}? ou \mintinline{latex}?\usepackage{preambule}? où \mintinline{latex}?\commandellb? correspond à la commande pour obtenir $\llbracket$ et \mintinline{latex}?\commanderrb? correspond à la commande pour obtenir $\rrbracket$. Ces deux commandes doivent être remplacées par << \texttt{.} >> si la police utilisée n'a pas ce caractère.
+\pagebreak\subsection{Commandes de \texttt{Preambule.sty}}
 \mhd
 \vline\hfill
 \begin{minipage}{0.475\linewidth}
@@ -350,7 +343,7 @@ Le package \hyperlink{section.10}{\texttt{Matrices.sty}} sera importé automatiq
 \mcmd{\al{E}{}}
 \mcmd{\al{E}{F}}
 \mcmd[\footnotemark]{\oplus}
-\footnotetext{Le \mintinline{latexmath}?\oplus? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \mintinline{latex}?\let\oldoplus\oplus? avant \mintinline{latex}?\usepackage{al}? puis de faire \mintinline{latex}?\let\oplus\oldoplus? après importation\\Comparaison \LaTeX~- \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}} avec le plus normal $\oldoplus\oplus+$}
+\footnotetext{Le \mintinline{latexmath}?\oplus? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \mintinline{latex}?\let\oldoplus\oplus? avant \mintinline{latex}?\usepackage{al}? puis de faire \mintinline{latex}?\let\oplus\oldoplus? après importation\\Comparaison \LaTeX{} - \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}} avec le plus normal $\oldoplus\oplus+$\\Ce caractère n'est pas modifié avec l'option \color{namecolour}\texttt{nofont}}
 \mcmd[\footnotemark]{\matgl{n}{\mathbb{K}}}
 \footnotetext{Le \mintinline{latexmath}?\matgl? de \texttt{AL.sty} correspond à la commande \mintinline{latexmath}?\gl? de \hyperlink{section.10}{\texttt{Matrices.sty}} qui a été renommé}
 \mcmd{\gl{E}}
@@ -414,6 +407,8 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd{\oldesc}
 \mcmd{\esc{\left[a,b\right]}}
 \mcmd{\esc[+]{f}}
+\mcmd{\oldfnint}
+\mcmd{\fnint{[a,b]}}
 \mcmd{\nrm{f}}
 \mcmd{\nrm[1]{g}}
 \mcmd{\oldva}
@@ -445,6 +440,9 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd[\footnotemark]{\oldcup}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\bigcup?}
 \mcmd{\bigcup{n=0}{+\infty}{A_n}}
+\mcmd[\footnotemark]{\oldbigsqcup}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\bigsqcup?}
+\mcmd{\bigsqcup{n=0}{+\infty}{A_n}}
 \mcmd[\footnotemark]{\olduplus}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\biguplus?}
 \mcmd{\biguplus{n=0}{+\infty}{A_n}}
@@ -538,7 +536,7 @@ Pour utiliser ce package, il faut copier les fichiers \texttt{dsrom12.pfb} et \t
 \subsection{\boldmath Ne pas importer les commandes avec $\mcdot$}
 Il est possible de ne pas modifier les commandes usuelles en utilisant l'option {\color{namecolour}\texttt{nodots}} de ce package. Il faut alors importer le package avec \mintinline{latex}?\usepackage[nodots]{matrices}?.
 
-Les commandes avec $\mcdot$ ne fonctionnent qu'avec les polices de l'\amslg. Lorsqu'une autre police est utilisée il faut désactiver l'importation de ces commandes.
+Les commandes avec $\mcdot$ peuvent ne pas fonctionner avec des polices autres que celles de l'\amslg. Lorsqu'une autre police est utilisée et que $\mcdot$ ne s'affiche pas correctement, il faut désactiver l'importation de ces commandes.
 \subsection{\boldmath Modifier les séparations entre les $\mcdot$}
 Les commandes avec des points tel que $\xdots$ ont des définitions qui dépendent de la taille de la police. Par défaut, celle pour \LaTeX~est adaptée pour 12pt, et celle de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} pour 17pt. Pour avoir des points alignés correctement, il est possible de modifier la valeur de \mintinline{latex}?\dotsep? en utilisant \mintinline{latex}?\setlength{\dotsep}{Xpt}?.
 
