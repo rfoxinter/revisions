@@ -3,8 +3,8 @@ Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{analyse,matrices,structures,equivalents}\let\phi\varphi
 $\nabla f\l X\r$;;$\tmatrix({{\pder[][x]{}{f\l X\r}}\\{\pder[][y]{}{f\l X\r}}\\})$
-Règle de la chaîne;;Si $\gamma\l t\r=\l x\l t\r,y\l t\r\r$\linebreak$\der[][t]{}{f\l x\l t\r,y\l t\r\r}$\linebreak${}=x'\l t\r\pder[][x]{}{f\l\gamma\l t\r\r}+y'\l t\r\pder[][y]{}{f\l\gamma\l t\r\r}$\linebreak${}=\la\gamma'\l t\r,\nabla f\l\gamma\l t\r\r\ra$
-$\pder[][u]{}{f\l\phi\l u,v\r,\psi\l u,v\r\r}$;;$\pder[][x]{}{f\l\phi\l u,v\r,\psi\l u,v\r\r}\pder[][u]{}{\phi\l u,v\r}$\linebreak${}+\pder[][y]{}{f\l\phi\l u,v\r,\psi\l u,v\r\r}\pder[][u]{}{\psi\l u,v\r}$
+Règle de la chaîne;;Si $f$ est $\mathcal C^1$\linebreak Si $\gamma\l t\r=\l x\l t\r,y\l t\r\r$\linebreak$\der[][t]{}{f\l x\l t\r,y\l t\r\r}$\linebreak${}=x'\l t\r\pder[][x]{}{f\l\gamma\l t\r\r}+y'\l t\r\pder[][y]{}{f\l\gamma\l t\r\r}$\linebreak${}=\la\gamma'\l t\r,\nabla f\l\gamma\l t\r\r\ra$
+$\pder[][u]{}{f\l\phi\l u,v\r,\psi\l u,v\r\r}$;;Si $f$ est $\mathcal C^1$\linebreak$\pder[][x]{}{f\l\phi\l u,v\r,\psi\l u,v\r\r}\pder[][u]{}{\phi\l u,v\r}$\linebreak${}+\pder[][y]{}{f\l\phi\l u,v\r,\psi\l u,v\r\r}\pder[][u]{}{\psi\l u,v\r}$
 Ligne de niveau de $f$ de hauteur $a$;;$\left\{\l x,y\r\in\mathbb R^2\;\middle|\;f\l x,y\r=a\right\}$
 Dérivée selon un vecteur $u$;;$D_u\l f\r=\der[][t]{}{f\l X+tu\r}$
 Expression de la dérivée le long d'un vecteur $u=\tmatrix[][minimum width = 0pt]({a\\b\\})$ avec $\nabla$;;$D_u\l f\r=\la\nabla f\l X\r,u\ra$\linebreak${}=a\der[][x]{}{f\l X\r}+b\der[][y]{}{f\l X\r}$
