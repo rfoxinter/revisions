@@ -575,8 +575,15 @@ function ch_clicked() {
 if (/Mobi|Android/i.test(navigator.userAgent)) {document.addEventListener("touchstart", (event) => {displaydd_up(event);});} else {document.addEventListener("mouseover", (event) => {displaydd_up(event);});}
 
 document.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-    if (event.target.getAttribute("onclick") === "refresh()") {
-        window.location.href = "./delete_sw_cache.html";
-    }
+    if (document.elementFromPoint(event.clientX, event.clientY).tagName != "INPUT") {
+        console.log(document.elementFromPoint(event.clientX, event.clientY).tagName);
+        console.log(typeof(document.elementFromPoint(event.clientX, event.clientY).tagName));
+        event.preventDefault();
+        if (event.target.getAttribute("onclick") === "refresh()") {
+            window.location.href = "./delete_sw_cache.html";
+        }
+        if (event.target.id === "save") {
+            document.getElementById("adv_dropdown").style.display = "block";
+        }
+    } else {}
 });
