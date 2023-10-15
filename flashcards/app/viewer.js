@@ -338,11 +338,3 @@ async function upsv() {
         window.alert("Impossible de charger la sauvegarde");
     }
 }
-
-document.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-    if (event.target.id === "save") {
-        document.getElementById("adv_dropdown").style.display = "block";
-    }
-});
- 
