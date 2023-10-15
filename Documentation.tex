@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \definecolor{namecolour}{HTML}{0028BA}
+\definecolor{keycolour}{HTML}{0095A0}
 \hypersetup{pdftitle=Documentation}
 \newcommand{\tikzlg}{\href{https://ctan.org/pkg/tikz}{\color{black}Ti\textit{k}Z}}
 \newcommand{\amslg}{\href{https://ctan.org/pkg/amsmath}{\color{black}\ensuremath{\mathcal A\mkern-3mu\raise-2pt\hbox{$\mathcal M$}\mkern-2mu\mathcal S}}}
@@ -158,7 +159,7 @@ Il est nécessaire que \texttt{cm-super} soit installé (disponible sur \href{ht
 
 Lors de l'utilisation de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}} (avec une police sans-sérif), il est possible d'utiliser les commandes avec les polices sans-serif, sauf pour les lettres grecques ($\Omega$, $\oldphi$, $\phi$, \dots), la redéfinition du $l$ en mathématiques, les alphabets \mintinline{latexmath}?\mathcal? et \mintinline{latexmath}?\mathbb? ainsi que les symboles.
 
-Il est possibles de changer les polices de caractères/symboles en important des packages avant \mintinline{latex}?\usepackage{preambule}?. Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
+Il est possibles de changer les polices de caractères/symboles en important des packages avant \mintinline{latex}?\usepackage{preambule}? (ou \texttt{htmlpreambule} et les options décrites après sont disponibles avec les deux sauf indication du contraire). Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
 
 Il n'est pas possible d'utiliser en simultané le package \texttt{Dsfont.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\texttt{Dsft.sty}} décrit ci-dessous. De plus, la commande \mintinline{latexmath}?\1? ne sera pas modifiée si un package définissant \mintinline{latexmath}?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \mintinline{latex}?\newcommand\1[1]{\mathbb{1}_{#1}}? (si \hyperlink{section.8}{\texttt{Dsft.sty}} n'est pas importé) ou \mintinline{latex}?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
 
@@ -280,7 +281,7 @@ Un exemple de fichier python générant un tel fichier est disponible à l'adres
 \mcmd[\footnotemark]{\frac{a}{b}}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\dfrac?}
 \mcmd[\footnotemark]{l}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ell?\\Le $l$ peut être redéfini en $\oldl$ avec \mintinline{latex}?\usepackage[nocmssp]{premabule}?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ell?\\Le $l$ peut être redéfini en $\oldl$ avec \mintinline{latex}?\usepackage[noell]{premabule}?}
 \mcmd[\footnotemark]{\oldvec{x}}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\vec?}
 \mcmd{\vec{x}}
@@ -289,7 +290,7 @@ Un exemple de fichier python générant un tel fichier est disponible à l'adres
 \mmcmd[\footnotemark]{\fakebold}{Permet de produire des caractères mathématiques en gras}
 \footnotetext{Il est par exemple possible de produire $\fakebold{\mathbb{R}}$ avec \mintinline{latex}?$\fakebold{\mathbb{R}}$?\\Il est recommandé de n'utiliser cette commande que lorsque les caractères en gras ne sont pas disponibles avec \mintinline{latex}?\boldmath?\\Exemple de comparaison \mintinline{latexmath}?\fakebold? - \mintinline{latex}?\boldmath? avec le caractère normal: {\boldmath$\mathcal M$}$\fakebold{\mathcal M}$$\mathcal M$}
 \subsection{L'option {\color{namecolour}\texttt{nofont}}}
-Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n'a pas de commande \mintinline{latexmath}?\llbracket? et\linebreak\mintinline{latexmath}?\rrbracket?, il faut placer les commandes \mintinline{latex}?\newcommand{\llbracket}{\commandellb}? et \mintinline{latex}?\newcommand{\llbracket}{\commanderrb}? avant \mintinline{latex}?\usepackage{htmlpreambule}? ou \mintinline{latex}?\usepackage{preambule}? où \mintinline{latex}?\commandellb? correspond à la commande pour obtenir $\llbracket$ et \mintinline{latex}?\commanderrb? correspond à la commande pour obtenir $\rrbracket$. Ces deux commandes doivent être remplacées par << \texttt{.} >> si la police utilisée n'a pas ce caractère.
+Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n'a pas de commande \mintinline{latexmath}?\llbracket? et\linebreak\mintinline{latexmath}?\rrbracket?, il faut mettre les commandes \mintinline{latex}?\newcommand{\llbracket}{\commandellb}? et \mintinline{latex}?\newcommand{\rrbracket}{\commanderrb}? avant \mintinline{latex}?\usepackage{preambule}?. Dans ces commandes, \mintinline{latex}?\commandellb? correspond à la commande pour obtenir $\llbracket$ et \mintinline{latex}?\commanderrb? correspond à la commande pour obtenir $\rrbracket$. Ces deux commandes doivent être remplacées par << \texttt{.} >> si la police utilisée n'a pas ce caractère : \mintinline{latex}?\newcommand{\llbracket}{.}? (idem pour {\color{keycolour}\texttt{\textbackslash llbracket}}).
 \pagebreak\subsection{Commandes de \texttt{Preambule.sty}}
 \mhd
 \vline\hfill
