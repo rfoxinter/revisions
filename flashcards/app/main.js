@@ -576,8 +576,6 @@ if (/Mobi|Android/i.test(navigator.userAgent)) {document.addEventListener("touch
 
 document.addEventListener("contextmenu", (event) => {
     if (document.elementFromPoint(event.clientX, event.clientY).tagName != "INPUT") {
-        console.log(document.elementFromPoint(event.clientX, event.clientY).tagName);
-        console.log(typeof(document.elementFromPoint(event.clientX, event.clientY).tagName));
         event.preventDefault();
         if (event.target.getAttribute("onclick") === "refresh()") {
             window.location.href = "./delete_sw_cache.html";
@@ -585,5 +583,5 @@ document.addEventListener("contextmenu", (event) => {
         if (event.target.id === "save") {
             document.getElementById("adv_dropdown").style.display = "block";
         }
-    } else {}
+    }
 });
