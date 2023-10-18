@@ -18,11 +18,11 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Algebre1/PolynomesEtFractionsRationnelles
 20230828220812
 ../MP2I/flashcards/Algebre1/StructuresAlgebriques
-20230703153024
+20231018213408
 ../MP2I/flashcards/Algebre2/AlgebreLineaire
 20230828220659
 ../MP2I/flashcards/Algebre2/Determinants
-20230703145707
+20231018213631
 ../MP2I/flashcards/Algebre2/DimensionFinie
 20230703150037
 ../MP2I/flashcards/Algebre2/EspacesAffines

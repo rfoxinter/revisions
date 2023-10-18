@@ -2,16 +2,16 @@ Algèbre 1 -- Structures algébriques
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{dsft}\usepackage{bigoperators}\usepackage{structures,arithmetique}
-Associativité;;$\star$ est associative si et seulement si$\forall\l x,y,z\r\in E^3,\;\l x\star y\r\star z=x\star\l y\star z\r$
-Commutativité;;$\star$ est commutative si et seulement si$\forall\l x,y\r\in E^2,\;x\star y=y\star x$
+Associativité;;$\star$ est associative si et seulement si $\forall\l x,y,z\r\in E^3,\;\l x\star y\r\star z=x\star\l y\star z\r$
+Commutativité;;$\star$ est commutative si et seulement si $\forall\l x,y\r\in E^2,\;x\star y=y\star x$
 Si $\star$ est une loi associative sur $E$ et $\l x_1,\cdots,x_n\r\in E^n$;;$x_1\star\cdots\star x_n$ ne dépend pas du parenthésage admissible
 Commutativité généralisée;;Si $\star$ est une loi commutative et associative sur $E$, $\l x_1,\cdots,x_n\r\in E^n$ et $\sigma\in\mathfrak{S}_n$\linebreak$x_1\star\cdots\star x_n=x_{\sigma\l1\r}\star\cdots\star x_{\sigma\l n\r}$
 Soit $e\in E$\linebreak$e$ est un élément neutre pour la loi $\star$;;$\forall x\in E,\;e\star x=x=x\star e$
 Soient $e\in E$ un élément neutre pour la loi $\star$ et $x\in E$\linebreak$y$ est un symétrique de $x$ pour la loi $\star$;;$x\star y=e=y\star x$
 Symétrique de $x\star y$;;$y^s\star x^s$
 Soit $x\in E$\linebreak$x$ est un élement absorbant pour $\star$;;$\forall y\in E,\;x\star y=x=y\star x$
-Élément régulier ou simplifiable;;$x$ est régulier à gauche si et seulement si$\forall\l y,z\r\in E^2,\;x\star y=x\star z\Rightarrow y=z$\linebreak$x$ est régulier à droite si et seulement si$\forall\l y,z\r\in E^2,\;y\star x=z\star x\Rightarrow y=z$\linebreak$x$ est régulier si et seulement s'il est régulier à gauche et à droite\linebreak Si $x$ admet un symétrique, alors il est régulier
-Distributivité;;La loi $\star$ est distributive à gauche sur $\diamond$ si et seulement si$\forall\l x,y,z\r\in E^3,\;x\star\l y\diamond z\r=\l x\star y\r\diamond\l x\star z\r$\linebreak La loi $\star$ est distributive à droite sur $\diamond$ si et seulement si$\forall\l x,y,z\r\in E^3,\;\l y\diamond z\r\star x=\l y\star x\r\diamond\l z\star x\r$\linebreak La loi $\star$ est distributive sur $\diamond$ si et seulement si elle est distributive à gauche et à droite
+Élément régulier ou simplifiable;;$x$ est régulier à gauche si et seulement si $\forall\l y,z\r\in E^2,\;x\star y=x\star z\Rightarrow y=z$\linebreak$x$ est régulier à droite si et seulement si $\forall\l y,z\r\in E^2,\;y\star x=z\star x\Rightarrow y=z$\linebreak$x$ est régulier si et seulement s'il est régulier à gauche et à droite\linebreak Si $x$ admet un symétrique, alors il est régulier
+Distributivité;;La loi $\star$ est distributive à gauche sur $\diamond$ si et seulement si $\forall\l x,y,z\r\in E^3,\;x\star\l y\diamond z\r=\l x\star y\r\diamond\l x\star z\r$\linebreak La loi $\star$ est distributive à droite sur $\diamond$ si et seulement si $\forall\l x,y,z\r\in E^3,\;\l y\diamond z\r\star x=\l y\star x\r\diamond\l z\star x\r$\linebreak La loi $\star$ est distributive sur $\diamond$ si et seulement si elle est distributive à gauche et à droite
 Distributivité généralisée\linebreak$\prod{i=1}{n}{\sum{j\in J_i}{}{x_{i,j}}}$;;$\sum{\l j_1,\cdots,j_n\r\in J_1\times\cdots\times J_n}{}{\prod{i=1}{n}{x_{i,j_i}}}$
 Associativité externe\linebreak$E$ est muni d'une loi decomposition externe $\diamond$ sur $\mathbb{K}$, muni d'une loi de composition interne $\star$;;$\forall\l\lambda,\mu,x\r\in\mathbb{K}^2\times E,\;\l\lambda\star\mu\r\diamond x=\lambda\diamond\l\mu\diamond x\r$
 Soient $E$ muni d'une loi $\star$, $F\subset E$\linebreak$F$ est stable par $\star$;;$\forall\l x,y\r\in F^2,\;x\star y\in F$\linebreak La loi de $E$ se restreint en une loi $\star_F$ appelée loi induite sur $F$ par $\star$
