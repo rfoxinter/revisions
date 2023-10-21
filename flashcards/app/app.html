@@ -111,6 +111,19 @@
             width: 100%;
             border: none;
         }
+        #topbtn {
+            display: block;
+            position: fixed;
+            bottom: -80px;
+            right: 16px;
+            border: medium;
+            outline: none;
+            cursor: pointer;
+            border-radius: 4px;
+            padding: 10px;
+            height: 40px;
+            margin: 0;
+        }
     </style>
 </head>
 <body onload="display_cards();">
@@ -289,9 +302,17 @@
                 </tbody>
             </table>
         </main>
-        <footer class='site-footer'></footer>
+        <footer class='site-footer' style="padding-top: 72px;"></footer>
+        <script type="text/javascript">
+            var topbtn = document.createElement("button");
+            topbtn.innerHTML = "Retour en haut";
+            topbtn.id = "topbtn";
+            topbtn.setAttribute("onclick", "window.scrollTo({top: 0, behavior: 'smooth'});");
+            document.getElementById("book").appendChild(topbtn);
+            window.onscroll = function() {topbtn.style.bottom = (-80 + Math.min(96, window.scrollY)) + 'px';};
+        </script>
     </div>
-    <script type="text/javascript" >
+    <script type="text/javascript">
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./sw.js', {scope: './'})
         }
