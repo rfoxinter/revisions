@@ -1,0 +1,7 @@
+Algèbre -- Structures algébriques 1
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}\renewcommand{\phi}[1]{\varphi\l#1\r}
+Extension du théorème des restes chinois pour $\mathbb Z/n\mathbb Z$;;$\mathbb Z/n\mathbb Z\simeq\prod{p\in\mathbb{P}}{}{\mathbb Z/p^{v_p\l n\r}\mathbb Z}$
+Expression explicite de $\phi n$;;$n\prod{\substack{p\in\mathbb P\\p\mid n}}{}{1-\frac1p}$
+Expression de $n$ avec $\varphi$;;$n=\sum{d\mid n}{}{\phi d}$

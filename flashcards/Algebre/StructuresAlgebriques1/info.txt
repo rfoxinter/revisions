@@ -1,0 +1,5 @@
+"Algèbre &ndash; <i>Structures algébriques 1</i>"
+1
+0
+[1, 2, 3]
+[0, 0, 0]
