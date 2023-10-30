@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='description' content='Révisions'>
+    <link rel='icon' href='https://rfoxinter.github.io/favicon.ico' />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Compilation</title>
+    <meta name='theme-color' content='#157878'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&display=swap'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/main.css'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/normalize.css'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/style.css'>
+    <script src="https://www.swiftlatex.com/PdfTeXEngine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://stuk.github.io/jszip/dist/jszip.min.js"></script>
+    <script src="https://rfoxinter.github.io/revisions/flashcards/huffman.js"></script>
+    <script src="./main.js"></script>
+    <style>
+        button {
+            display: inline-block;
+            width: 25vw;
+            min-height: 40px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .ptr {
+            cursor: pointer;
+        }
+        .loading-icon {
+            display: inline-block;
+            font-size: 36px; /* Adjust the size as needed */
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header class='page-header'>
+        <h1>Compilation de flashcards</h1>
+    </header>
+    <main class='main-content'>
+        <p>Le package Dsft.sty n&rsquo;est pas disponible avec ce compilateur.</p>
+        <hr>
+        <h1>Flashcards</h1>
+        <span style="text-align: center;">
+            <input type='file' id='open_flash' accept='.txt' hidden>
+            <div><button id="btn_flash" class="ptr" onclick='document.getElementById("open_flash").click()'>Choisir un fichier</button></div>
+            <div id="flash_loading" style="display: none;"><span class="material-symbols-rounded loading-icon">
+                progress_activity
+            </span></div>
+            <div id="flash_files"></div>
+        </span>
+        <hr>
+        <h1>Htmlcards</h1>
+        <span style="text-align: center;">
+            <input type='file' id='open_html' accept='.txt' hidden>
+            <div><button id="btn_html" class="ptr" onclick='document.getElementById("open_html").click()'>Choisir un fichier</button></div>
+            <div id="html_loading" style="display: none;"><span class="material-symbols-rounded loading-icon">
+                progress_activity
+            </span></div>
+            <div id="html_files"></div>
+            <input type='file' id='open_zip' accept='.zip' hidden>
+            <div id="html_zip" style="display: none;">
+                <p>Convertir le pdf sur <a href="https://image.online-convert.com/convert/pdf-to-svg" target="_blank">online-convert.com</a> et téléverser le zip obtenu ici :</p><button id="btn_zip" class="ptr" onclick='document.getElementById("open_zip").click()'>Fichier zip avec les svg</button>
+                <div id="result_loading" style="display: none;"><span class="material-symbols-rounded loading-icon">
+                    progress_activity
+                </span></div>
+                <div id="result_files"></div>
+            </div>
+        </span>
+    </main>
+    <footer></footer>
+    <script>
+        document.getElementById('open_flash').addEventListener('change', function() {
+            fl = new FileReader();
+            if (document.getElementById('open_flash').value != '') {
+                fl.onload = async function(){
+                    var nofinally = false;
+                    try {
+                        files = [];
+                        document.getElementById('flash_files').innerHTML = "";
+                        document.getElementById('btn_flash').innerText = "Compilation en cours";
+                        document.getElementById('btn_flash').disabled = true;
+                        document.getElementById('btn_flash').classList.toggle("ptr");
+                        document.getElementById('flash_loading').style.display = "block";
+                        await main_flash(fl.result);
+                        var button = document.createElement('button');
+                        button.innerHTML = "Télécharger le PDF";
+                        button.setAttribute("onclick", "downloadBlob(files[2], '"+ flash_ttle + ".pdf', 'application/pdf')");
+                        button.classList.add("ptr");
+                        document.getElementById('flash_files').appendChild(button);
+                    } catch(error) {
+                        if (error == "file") {
+                            document.getElementById('btn_flash').innerText = "Choisir un fichier";
+                            document.getElementById('btn_flash').disabled = false;
+                            document.getElementById('flash_loading').style.display = "none";
+                            var p = document.createElement('p');
+                            p.innerHTML = "Fichier incorrect";
+                            document.getElementById('flash_files').appendChild(p);
+                            nofinally = true;
+                        }
+                    } finally {
+                        document.getElementById('btn_flash').classList.toggle("ptr");
+                        if (!nofinally) {
+                            document.getElementById('btn_flash').innerText = "Choisir un fichier";
+                            document.getElementById('btn_flash').disabled = false;
+                            document.getElementById('flash_loading').style.display = "none";
+                            var button3 = document.createElement('button');
+                            button3.innerHTML = "Télécharger le fichier LaTeX";
+                            button3.setAttribute("onclick", "downloadBlob(files[0], '"+ flash_ttle + ".tex', 'text/x-tex')");
+                            button3.classList.add("ptr");
+                            document.getElementById('flash_files').appendChild(button3);
+                            var button2 = document.createElement('button');
+                            button2.innerHTML = "Télécharger le log";
+                            button2.setAttribute("onclick", "downloadBlob(files[1], '"+ flash_ttle + ".log', 'text/plain')");
+                            button2.classList.add("ptr");
+                            document.getElementById('flash_files').appendChild(button2);
+                        }
+                    }
+                }
+            }
+            fl.readAsText(this.files[0]);
+        });
+        
+        var html_ttle;
+        document.getElementById('open_html').addEventListener('change', function() {
+            fl = new FileReader();
+            if (document.getElementById('open_html').value != '') {
+                fl.onload = async function(){
+                    var nofinally = false;
+                    try {
+                        files = [];
+                        document.getElementById('html_files').innerHTML = "";
+                        document.getElementById('btn_html').innerText = "Compilation en cours";
+                        document.getElementById('btn_html').disabled = true;
+                        document.getElementById('btn_html').classList.toggle("ptr");
+                        document.getElementById('html_loading').style.display = "block";
+                        document.getElementById('html_zip').style.display = "none";
+                        await main_html(fl.result);
+                        var button = document.createElement('button');
+                        button.innerHTML = "Télécharger le PDF";
+                        button.setAttribute("onclick", "downloadBlob(html_pdf, '"+ html_ttle + ".pdf', 'application/pdf')");
+                        button.classList.add("ptr");
+                        document.getElementById('html_files').appendChild(button);
+                    } catch(error) {
+                        if (error == "file") {
+                            document.getElementById('btn_html').innerText = "Choisir un fichier";
+                            document.getElementById('btn_html').disabled = false;
+                            document.getElementById('html_loading').style.display = "none";
+                            var p = document.createElement('p');
+                            p.innerHTML = "Fichier incorrect";
+                            document.getElementById('html_files').appendChild(p);
+                            nofinally = true;
+                        } else {
+                            var p = document.createElement('p');
+                            p.innerHTML = "Une erreur est survenue lors de la compilation<br>Utiliser Flashcards pour plus d'informations";
+                            document.getElementById('html_files').appendChild(p);
+                        }
+                    } finally {
+                        document.getElementById('btn_html').classList.toggle("ptr");
+                        if (!nofinally) {
+                            document.getElementById('btn_html').innerText = "Choisir un fichier";
+                            document.getElementById('btn_html').disabled = false;
+                            document.getElementById('html_loading').style.display = "none";
+                            var button2 = document.createElement('button');
+                            button2.innerHTML = "Télécharger info.txt";
+                            button2.setAttribute("onclick", "downloadBlob(infoContent, 'info.txt', 'text/plain')");
+                            button2.classList.add("ptr");
+                            document.getElementById('html_files').appendChild(button2);
+                            document.getElementById('html_zip').style.display = 'block';
+                        }
+                    }
+                }
+            }
+            fl.readAsText(this.files[0]);
+        });
+
+        var html_zip = new JSZip(); var compressed; infoContent = '"Fondements &ndash; <i>Nombres complexes sans trigonométrie</i>"\n1\n0\n[1, 2, 3, 4, 5, 6, 7, 8]\n[0, 0, 0, 0, 0, 0, 0, 0]';
+        document.getElementById('open_zip').addEventListener('change', function() {
+            fl = new FileReader();
+            if (document.getElementById('open_html').value != '') {
+                fl.onload = async function(){
+                    document.getElementById('result_files').innerHTML = "";
+                    document.getElementById('btn_zip').innerText = "Compilation en cours";
+                    document.getElementById('btn_zip').disabled = true;
+                    document.getElementById('btn_zip').classList.toggle("ptr");
+                    document.getElementById('result_loading').style.display = "block";
+
+                    await html_zip.loadAsync(fl.result)
+                    var files = html_zip.file(/ */).map(x => x['name']).sort();
+                    var lst = infoContent.split('\n');
+                    var title = lst[0].replaceAll('"', '');
+                    var images = "";
+                    for (const file of files) {
+                        var content = await html_zip.file(file).async('string');
+                        content = content.replaceAll('\r', '').replaceAll('\n', '');
+                        images += encodeURIComponent(insertAtIndex(content, '<style>path{stroke: transparent; fill: #606c71;}</style>', content.indexOf('>', content.indexOf('>') + 1) + 1)) + "\n";
+                    }
+                    text = lst[0].replaceAll('"', '') + '\n' + lst[1] + '\n' + lst[2] + '\n' + lst[3].replaceAll(' ', '') + '\n' + lst[4].replaceAll(' ', '') + '\n' + images + '\n' + btoa(title) + '\n\n';
+                    compressed = [compress_text(text), toTitle(title.replace('&ndash;', '_').replace('<i>', '').replace('</i>', '').normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '')).replaceAll(' ', '') + '.txt'];
+
+                    
+                    var button = document.createElement('button');
+                    button.innerHTML = "Télécharger la fiche de révision";
+                    button.setAttribute("onclick", "downloadBlob(compressed[0], '" + compressed[1] + "', 'application/octet-stream')");
+                    button.classList.add("ptr");
+                    document.getElementById('result_files').appendChild(button);
+                    document.getElementById('result_loading').style.display = "none";
+                    document.getElementById('btn_html').classList.toggle("ptr");
+                    document.getElementById('btn_html').innerText = "Choisir un fichier";
+                    document.getElementById('btn_html').disabled = false;
+                    document.getElementById('html_loading').style.display = "none";
+                }
+            }
+            fl.readAsArrayBuffer(this.files[0]);
+        });
+    </script>
+</body>
+</html>
