@@ -196,16 +196,21 @@ Il est aussi possible de télécharger la version la plus récente de ce fichier
 Les fichiers \texttt{Flashcards.py} et \texttt{Htmlcards.py} permettent d'exporter facilement des flashcards en \texttt{.pdf} et \texttt{.svg} (pour affichage dans le navigateur).
 
 Pour pouvoir créer des fiches de révision, il faut mettre un fichier \texttt{.txt} (décrit plus bas) dans un dossier \texttt{input} et mettre les fichiers \texttt{.sty} nécessaires dans un dossier \texttt{output}.
-\subsection{Flashcards.py}
+\subsection[Flashcards.py]{\href{https://rfoxinter.github.io/revisions/Flashcards.py}{\color{black}Flashcards.py}}
 Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelleil est possible de rajouter les paramètres optionnels \texttt{-{}-n=nombre} (avec le nombre d'exemplaires), \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
 
 Il est nécessaire d'avoir \LaTeX{} d'installé pour pouvoir lancer le script.
-\subsection{Htmlcards.py}
+\subsection[Htmlcards.py]{\href{https://rfoxinter.github.io/revisions/Htmlcards.py}{\color{black}Htmlcards.py}}
 Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle il est possible de rajouter les paramètres optionnels \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
 
 Modifier la valeur de \texttt{-{}-dest} peut rendre inutilisable certaines fonctions liées au site pour visualiser les fiches.
 
 Il est nécessaire d'avoir \LaTeX{} et \href{https://ctan.org/pkg/dvisvgm/}{\color{black}\textsl{dvisvgm}} d'installés pour pouvoir lancer le script.
+
+\subsection{Compilation en ligne}
+Il est possible de compiler les fiches de révisions avec \texttt{Flashcards.py} ou \texttt{Htmlcards.py} avec le site \href{https://rfoxinter.github.io/revisions/flashcards/compilateur/}{\texttt{https://rfoxinter.github.io/revisions/flashcards/compilateur/}}.
+
+Cependant, sur ce site, le package \hyperlink{section.8}{\texttt{Dsft.sty}} ne marche pas. Pour compiler des fiches avec \texttt{Flashcards.py}, il est nécessaire de générer le fichier \LaTeX{} avec le site puis le charger dans un compilateur \LaTeX{} en ligne (comme \href{https://www.overleaf.com/}{overleaf}) avec les packages nécessaires. La compilation avec \texttt{Htmlcards.py} étant plus complexe, il n'est actuellement pas possible de télécharger les fichiers \LaTeX{} générés par ce dernier.
 \subsection{Les options spéciales}
 Il est possible de compiler l'ensemble des fichiers \texttt{.txt} du dossier \texttt{input} en mettant \texttt{\_\_compile\_all\_\_} comme nom de fichier.
 
@@ -493,7 +498,7 @@ Ce package remplace le $\mathds 1$ du package \texttt{Dsfonts.sty} disponible su
 \mcmd{\triangle}
 \subsection{\href{https://rfoxinter.github.io/revisions/output/dsrom12.pfb}{\color{black}\texttt{dsrom12.pfb}} et \href{https://rfoxinter.github.io/revisions/output/dsrom12.tfm}{\color{black}\texttt{dsrom12.tfm}}}
 
-Pour utiliser ce package, il faut copier les fichiers \texttt{dsrom12.pfb} et \texttt{dsrom12.tfm} dans les dossiers où ils sont actuellement avec \texttt{dsfonts} (et éventuellement créer une copie des anciens fichiers).
+Pour utiliser ce package, il suffit de copier les fichiers \texttt{dsrom12.pfb} et \texttt{dsrom12.tfm} dans le dossier \texttt{output}. Si cela ne marche pas, il faut les copier dans les dossiers où ils sont actuellement avec \texttt{dsfonts} (et éventuellement créer une copie des anciens fichiers).
 \hsection{Equivalents.sty}
 \mhd
 \mcmd{\o{x}}
