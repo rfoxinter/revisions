@@ -1,0 +1,58 @@
+\RequirePackage{bigoperators}
+
+\makeatletter
+\newcounter{mpdercount}
+\def\mpderden{}
+\def\do@scanmpder#1,{%
+    \ifx#1\relax
+        \let\next\relax
+    \else
+        \stepcounter{mpdercount}
+        \edef\mpderden{\mpderden\partial#1}
+        \let\next\do@scanmpder
+    \fi\next
+}
+\newcommand{\scanmpder}[1]{
+    \setcounter{mpdercount}{0}
+    \do@scanmpder#1,\relax,
+}
+\makeatother
+
+\DeclareMathOperator{\dd}{d}
+\newcommand{\oldd}{{\dd}}
+\newcommand{\der}[1][]{\def\argI{#1}\tmpder}
+\newcommand{\tmpder}[3][x]{
+    \ifx&#3&
+        \def\argIII{}
+    \else
+        \def\argIII{\l#3\r}
+    \fi\frac{\oldd^{\argI}#2}{\oldd#1^{\argI}}\argIII}
+\newcommand{\pder}[1][]{\def\argI{#1}\tmppder}
+\newcommand{\tmppder}[3][x]{
+    \ifx&#3&
+        \def\argIII{}
+    \else
+        \def\argIII{\l#3\r}
+    \fi\frac{\partial^{\argI}#2}{\partial#1^{\argI}}\argIII}
+\newcommand{\mpder}[3][x]{\scanmpder{#1}
+    \ifx&#3&
+        \def\argIII{}
+    \else
+        \def\argIII{\l#3\r}
+    \fi\frac{\partial^{\arabic{mpdercount}}#2}{\mpderden}\argIII}
+\let\oldint\int
+\renewcommand{\int}[1][]{
+    \ifx&#1&
+        \def\argI{}
+    \else
+        \def\argI{{{}\dd}#1}
+    \fi\tmpint}
+\newcommand{\tmpint}[1][]{\def\argII{#1}\tmptmpint}
+\newcommand{\tmptmpint}[2][]{\displaystyle{\oldint_{\argII}^{#1}}\l#2\r\argI}
+\newcommand{\eval}[1][]{\def\argI{#1}\tmpeval}
+\newcommand{\tmpeval}[2][]{\left[#2\right]_{\argI}^{#1}}
+\newcommand{\serie}[1]{\oldsum#1}
+\DeclareMathOperator{\oldesc}{Esc}
+\newcommand{\esc}[2][]{\oldesc_{#1}\l#2\r}
+\DeclareMathOperator{\oldfint}{Int}
+\newcommand{\fint}[1]{\oldfint\l#1\r}

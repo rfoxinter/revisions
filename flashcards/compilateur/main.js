@@ -139,11 +139,10 @@ function main_flash(fileContent) {
             t = r[0];
             ttle = r[0].split('--');
             if (ttle.length === 1) {
-            ttle = toTitle(ttle[0]);
+                ttle = toTitle(removeSpecialChars(ttle[0]));
             } else {
-            ttle = toTitle(ttle[1]);
+                ttle = toTitle(removeSpecialChars(ttle[1]));
             }
-            ttle = removeSpecialChars(ttle);
         }
 
         flash_ttle = ttle;
@@ -214,11 +213,10 @@ function main_html(fileContent) {
             t = r[0];
             ttle = r[0].split('--');
             if (ttle.length === 1) {
-                ttle = toTitle(ttle[0]);
+                ttle = toTitle(removeSpecialChars(ttle[0]));
             } else {
-                ttle = toTitle(ttle[1]);
+                ttle = toTitle(removeSpecialChars(ttle[1]));
             }
-            ttle = removeSpecialChars(ttle);
         }
 
         html_ttle = ttle;
