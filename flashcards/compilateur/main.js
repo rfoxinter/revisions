@@ -191,10 +191,6 @@ ${text}
                         fst.push(0);
                     }
 
-                    const fileName = `${ttle}${qr[j]}${i + 1}.tex`;
-                    const file = new Blob([fileContent], { type: 'text/plain' });
-                    const url = URL.createObjectURL(file);
-
                     promise.push(compile(fileContent, html_files, 4 * i + 2 * j));
 
                 }
