@@ -1,0 +1,26 @@
+Constantes
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{siunitx}\sisetup{inter-unit-product=\ensuremath{\!\cdot\!}, output-decimal-marker={,}, input-digits=0123456789\pi, exponent-product=\!\times\!, group-separator={\!\;}, group-minimum-digits=4}\newcommand{\q}[2]{#1\linebreak$#2$}\usepackage{tools}\renewcommand{\r}[1][]{\def\argI{\comparestring{#1}{}{}{#1\linebreak}}\tmpr}\newcommand{\tmpr}[3][]{\argI$#1\qty{#2}{#3}$}%\q{}{};;\r[]{}{}
+\q{Mécanique}{m_{\text{Terre}}};;\r[]{5e24}{kg}
+\q{Mécanique}{m_{\text{Soleil}}};;\r[]{e30}{kg}
+\q{Mécanique}{m_{\text{Lune}}};;\r[]{e21}{kg}
+\q{Mécanique}{R_\text{Terre}};;\r{6400}{km}
+\q{Mécanique}{d_{\text{Terre}-\text{Lune}}};;\r{4e6}{km}
+\q{Mécanique}{d_{\text{Terre}-\text{Soleil}}};;\r{1,5e8}{km}
+\q{Mécanique}{\mathcal G};;\r[Constante gravitationnelle]{e-10}{N.m^2.kg^{-2}}
+\q{Mécanique}{g_\text{Terre}};;\r[Accélération de la pesanteur]{10}{N.kg^{-1}=m.s^{2}}
+\q{Électromagnétique}{m_e};;\r{e-27}{kg}
+\q{Électromagnétique}{m_p};;\r{e-30}{kg}
+\q{Électromagnétique}{e};;\r{e-19}{C}
+\q{Électromagnétique}{\mu_0};;\r[Perméabilité (magnétique) du vide]{4\pi e-7}{H.m^{-1}}
+\q{Électromagnétique}{\varepsilon_0};;\r[Permittivité (diélectrique) du vide]{e-11}{F.m^{-1}}
+\q{Électromagnétique}{4\pi\varepsilon_0};;\r{e-10}{F.m^{-1}}
+\q{Électromagnétique}{\qty{1}{e\!\;\!V}};;\r[Électronvolt]{1,6e-19}{J}
+\q{Électromagnétique}{\qty{1}{D}};;\r[Debye]{3,3e-30}{C.m}
+\q{Électromagnétique}{\mu_B};;\r[Magnéton de Bohr][\frac{e\hbar}{2m_e}\simeq]{e-23}{A.m^2}
+\q{Thermodynamique}{R};;\r[Constante universelle des gaz parfaits]{8}{J.mol^{-1}.K^{-1}}
+\q{Thermodynamique}{k_B};;\r[Constante de Boltzmann]{e-23}{J.K^{-1}}
+\q{Signaux}{c_\text{vide}};;\r{e-30}{kg}
+\q{Mecanique quantique}{h};;\r[Constante de Planck]{e-33}{J.s}
+\q{Mecanique quantique}{\hbar};;\r[Constante de Planck réduite]{e-34}{J.s}
