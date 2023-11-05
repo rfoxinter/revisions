@@ -3,10 +3,18 @@
 
 \newif\if@dvar\@dvarfalse
 \DeclareOption{dvar}{\@dvartrue}
+\newif\if@nopar\@noparfalse
+\DeclareOption{nopar}{\@nopartrue}
 \DeclareOption*{}
 \ProcessOptions\relax
 \if@dvar
     \RequirePackage{pgffor}
+\fi
+\def\analyseleftp{\l}
+\def\analyserightp{\right)}
+\if@nopar
+    \def\analyseleftp{}
+    \def\analyserightp{}
 \fi
 
 \makeatletter
@@ -71,20 +79,20 @@
     \ifx&#3&
         \def\argIII{}
     \else
-        \def\argIII{\l#3\r}
+        \def\argIII{\analyseleftp#3\analyserightp}
     \fi\frac{\oldd^{\argI}#2}{\oldd#1^{\argI}}\argIII}
 \newcommand{\pder}[1][]{\def\argI{#1}\tmppder}
 \newcommand{\tmppder}[3][x]{
     \ifx&#3&
         \def\argIII{}
     \else
-        \def\argIII{\l#3\r}
+        \def\argIII{\analyseleftp#3\analyserightp}
     \fi\frac{\partial^{\argI}#2}{\partial#1^{\argI}}\argIII}
 \newcommand{\mpder}[3][x]{\scanmpder{#1}
     \ifx&#3&
         \def\argIII{}
     \else
-        \def\argIII{\l#3\r}
+        \def\argIII{\analyseleftp#3\analyserightp}
     \fi\frac{\partial^{\arabic{mpdercount}}#2}{\mpderden}\argIII}
 \let\oldint\int
 \renewcommand{\int}[1][]{
@@ -94,7 +102,7 @@
         \def\argI{{{}\dd}#1}
     \fi\tmpint}
 \newcommand{\tmpint}[1][]{\def\argII{#1}\tmptmpint}
-\newcommand{\tmptmpint}[2][]{\displaystyle{\oldint_{\argII}^{#1}}\l#2\r\argI}
+\newcommand{\tmptmpint}[2][]{\displaystyle{\oldint_{\argII}^{#1}}\analyseleftp#2\analyserightp\argI}
 \newcommand{\eval}[1][]{\def\argI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\argI}^{#1}}
 \newcommand{\serie}[1]{\oldsum#1}
