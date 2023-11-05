@@ -11,7 +11,10 @@
 \newcommand{\tikzlg}{\href{https://ctan.org/pkg/tikz}{\color{black}Ti\textit{k}Z}}
 \newcommand{\amslg}{\href{https://ctan.org/pkg/amsmath}{\color{black}\ensuremath{\mathcal A\mkern-3mu\raise-2pt\hbox{$\mathcal M$}\mkern-2mu\mathcal S}}}
 \usepackage{output/htmlpreambule}
-\usepackage{output/sffont,output/tools,output/matrices,output/al,output/bigoperators,output/analyse,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
+\usepackage{output/tools}
+\usepackage{output/bigoperators}
+\usepackage{output/analyse}
+\usepackage{output/sffont,output/matrices,output/al,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
 \usepackage[arc]{output/complexes}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
@@ -399,7 +402,7 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd[\footnotemark]{\oldint}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\int?}
 \mcmd{\int{f}}
-\mcmd{\int[t]{f(t)}}
+\mcmd{\int[x]{f(x)}}
 \mcmd[\footnotemark]{\int[t][{[a,b]}]{f(t)}}
 \footnotetext{L'argument \mintinline{latexmath}?[a,b]? doit être mis entre accolades pour être traîté correctement par \LaTeX}
 \mcmd{\int[t][a][b]{f(t)}}
@@ -421,6 +424,8 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd{\va{u}}
 \mcmd{\oldepi}
 \mcmd{\epi{f}}
+\subsection{L'option {\color{namecolour}\texttt{nopar}}}
+Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes comme \mintinline{latexmath}?\der?, \mintinline{latexmath}?\pder?, \mintinline{latexmath}?\mpder?, et \mintinline{latexmath}?\int? n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\der{}{f(x)}? qui produit <<~$\frac{{\dd}}{{\dd}x}f(x)$~>> et \mintinline{latexmath}?\int[x]{f(x)}? qui produit <<~$\displaystyle{\oldint}f(x){{}\dd}x$~>>.
 \hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
@@ -453,6 +458,8 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\biguplus?}
 \mcmd{\biguplus{n=0}{+\infty}{A_n}}
 \mcmd{\bigop{n=0}{+\infty}{E_n}}
+\subsection{L'option {\color{namecolour}\texttt{nopar}}}
+Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\displaystyle{\oldsum_{n=0}^{+\infty}}u_n$~>>.
 \hsection{Complexes.sty}
 \mhd
 \mcmd[\footnotemark]{\oldbar{z}}
@@ -749,6 +756,7 @@ Ce fichier fournit des commandes latex utiles pour créer des macros.
 
 \mhd
 \nmcmd{\comparestring{a}{b}{if}{else}}{Compare les chaînes de caractères \mintinline{latex}?a? et \mintinline{latex}?b?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est égal à \mintinline{latex}?b? et le \mintinline{latex}?else? sinon}
+\nmcmd{\compareint{a}{b}{if}{else}}{Compare les entiers \mintinline{latex}?a? et \mintinline{latex}?b?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est égal à \mintinline{latex}?b? et le \mintinline{latex}?else? sinon}
 \hsection{Trigo.sty}
 \mhd
 \mcmd[\footnotemark]{\oldcos}
