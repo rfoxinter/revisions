@@ -1,7 +1,18 @@
-\let\oldsum\sum\renewcommand\sum[3]{{\displaystyle\oldsum_{#1}^{#2}}\l#3\r}
-\let\oldprod\prod\renewcommand\prod[3]{{\displaystyle\oldprod_{#1}^{#2}}\l#3\r}
-\let\oldcap\bigcap\renewcommand\bigcap[3]{{\displaystyle\oldcap_{#1}^{#2}}\l#3\r}
-\let\oldcup\bigcup\renewcommand\bigcup[3]{{\displaystyle\oldcup_{#1}^{#2}}\l#3\r}
-\let\oldbigsqcup\bigsqcup\renewcommand\bigsqcup[3]{{\displaystyle\oldbigsqcup_{#1}^{#2}}\l#3\r}
-\let\olduplus\biguplus\renewcommand\biguplus[3]{{\displaystyle\olduplus_{#1}^{#2}}\l#3\r}
-\newcommand\bigop[3]{{\displaystyle\bigoplus_{#1}^{#2}}\l#3\r}
+\newif\if@nopar\@noparfalse
+\DeclareOption{nopar}{\@nopartrue}
+\DeclareOption*{}
+\ProcessOptions\relax
+\def\bigopleftp{\l}
+\def\bigoprightp{\right)}
+\if@nopar
+    \def\bigopleftp{}
+    \def\bigoprightp{}
+\fi
+
+\let\oldsum\sum\renewcommand\sum[3]{{\displaystyle\oldsum_{#1}^{#2}}\bigopleftp#3\bigoprightp}
+\let\oldprod\prod\renewcommand\prod[3]{{\displaystyle\oldprod_{#1}^{#2}}\bigopleftp#3\bigoprightp}
+\let\oldcap\bigcap\renewcommand\bigcap[3]{{\displaystyle\oldcap_{#1}^{#2}}\bigopleftp#3\bigoprightp}
+\let\oldcup\bigcup\renewcommand\bigcup[3]{{\displaystyle\oldcup_{#1}^{#2}}\bigopleftp#3\bigoprightp}
+\let\oldbigsqcup\bigsqcup\renewcommand\bigsqcup[3]{{\displaystyle\oldbigsqcup_{#1}^{#2}}\bigopleftp#3\bigoprightp}
+\let\olduplus\biguplus\renewcommand\biguplus[3]{{\displaystyle\olduplus_{#1}^{#2}}\bigopleftp#3\bigoprightp}
+\newcommand\bigop[3]{{\displaystyle\bigoplus_{#1}^{#2}}\bigopleftp#3\bigoprightp}
