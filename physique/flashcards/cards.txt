@@ -2,4 +2,4 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../physique/flashcards/Constantes
 20231104194903
 ../physique/flashcards/EquationsDeMaxwell
-20231103115011
+20231113222941
