@@ -28,3 +28,22 @@ for c in cards:
     content += '\n../physique/flashcards/' + c.replace('./', '') + '\n' + dt.fromtimestamp(g(c)).strftime('%Y%m%d%H%M%S')
 f.write(content)
 f.close()
+
+from os import chdir as c
+
+c(d(__file__))
+f = open('./files.txt', 'w')
+root = 'https://rfoxinter.github.io/revisions/physique/pdf/'
+cards = []
+def list_pdf(folder):
+    global cards
+    curr_cards = []
+    for content in sorted(l(folder), reverse=True):
+        if i(folder + '/' + content):
+            list_f(folder + '/' + content)
+        else:
+            cards.append(root + folder.replace('./pdf', '') + content)
+    cards = sorted(curr_cards) + cards
+list_pdf('./pdf')
+f.write('\n'.join(cards))
+f.close()
