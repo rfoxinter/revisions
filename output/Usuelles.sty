@@ -5,24 +5,24 @@
 \let\oldlim\lim
 \renewcommand\lim[2][]{
     \ifx&#1&
-        \def\argI{\oldlim}
+        \def\limargI{\oldlim}
     \else
-        \def\argI{\oldlim\limits_{#1}}
-    \fi\argI\l#2\r
+        \def\limargI{\oldlim\limits_{#1}}
+    \fi\limargI\l#2\r
 }
 \newcommand\limi[2][]{
     \ifx&#1&
-        \def\argI{\liminf}
+        \def\limiargI{\liminf}
     \else
-        \def\argI{\liminf\limits_{#1}}
-    \fi\argI\l#2\r
+        \def\limiargI{\liminf\limits_{#1}}
+    \fi\limiargI\l#2\r
 }
 \newcommand\lims[2][]{
     \ifx&#1&
-        \def\argI{\limsup}
+        \def\limsargI{\limsup}
     \else
-        \def\argI{\limsup\limits_{#1}}
-    \fi\argI\l#2\r
+        \def\limsargI{\limsup\limits_{#1}}
+    \fi\limsargI\l#2\r
 }
 \let\oldexp\exp
 \renewcommand\exp[2][]{\oldexp^{#1}\l#2\r}

@@ -1,10 +1,12 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ./Algebre/AlgebreLineraire
-20231023203002
+20231120123333
 ./Algebre/StructuresAlgebriques1
 20231023193234
 ./Analyse/ComplementsDePremiereAnnee
 20230924002308
+./Analyse/Integration
+20231121230825
 ./Analyse/SeriesNumeriques
 20230924163108
 ./Analyse/SuitesDeFonctions

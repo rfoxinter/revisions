@@ -1,9 +1,9 @@
 \newcommand\p[2][]{
     \ifx&#2&
-        \def\argII{}
+        \def\pargII{}
     \else
-        \def\argII{\l#2\r}
-    \fi\mathbb P_{#1}\argII
+        \def\pargII{\l#2\r}
+    \fi\mathbb P_{#1}\pargII
 }
 \let\oldOmega\Omega\let\Omega\varOmega
 \newcommand{\sq}{\;\middle|\;}
@@ -17,10 +17,10 @@
 \newcommand{\unif}[1]{\mathcal U\l#1\r}
 \newcommand{\bin}[2][]{
     \ifx&#1&
-        \def\argI{}
+        \def\binargI{}
     \else
-        \def\argI{#1,}
-    \fi\mathcal B\l\argI#2\r
+        \def\binargI{#1,}
+    \fi\mathcal B\l\binargI#2\r
 }
 \newcommand{\geom}[1]{\mathcal G\l#1\r}
 \newcommand{\pasc}[2]{\mathcal P\l#1,#2\r}

@@ -3,11 +3,13 @@
 \DeclareOption*{}
 \ProcessOptions\relax
 \def\bigopleftp{\l}
-\def\bigoprightp{\right)}
+\def\bigoprightp{\r}
 \if@nopar
     \def\bigopleftp{}
     \def\bigoprightp{}
 \fi
+
+\newcommand{\togglebigoppar}{\comparestring{\bigopleftp}{}{\def\bigopleftp{\l}\def\bigoprightp{\r}}{\def\bigopleftp{}\def\bigoprightp{}}}
 
 \let\oldsum\sum\renewcommand\sum[3]{{\displaystyle\oldsum_{#1}^{#2}}\bigopleftp#3\bigoprightp}
 \let\oldprod\prod\renewcommand\prod[3]{{\displaystyle\oldprod_{#1}^{#2}}\bigopleftp#3\bigoprightp}

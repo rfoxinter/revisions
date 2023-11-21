@@ -2,7 +2,7 @@
 
 \DeclareMathOperator{\oldvect}{Vect}
 \newcommand{\vect}[1]{\oldvect\l#1\r}
-\newcommand{\al}[2]{\def\argII{,#2}\ifx&#2&\def\argII{}\fi\mathcal{L}\l#1\argII\r}
+\newcommand{\al}[2]{\def\alargII{,#2}\ifx&#2&\def\alargII{}\fi\mathcal{L}\l#1\alargII\r}
 \if@notnofont
     \let\oldoplus\oplus
     \let\oplus\relax
@@ -17,7 +17,7 @@
 \DeclareMathOperator{\oldtr}{tr}
 \newcommand{\tr}[1]{\oldtr\l#1\r}
 \DeclareMathOperator{\oldmat}{Mat}
-\newcommand{\almat}[3]{\def\argIII{,#3}\ifx&#3&\def\argIII{}\fi\oldmat_{#2\argIII}\l#1\r}
+\newcommand{\almat}[3]{\def\almatargIII{,#3}\ifx&#3&\def\almatargIII{}\fi\oldmat_{#2\almatargIII}\l#1\r}
 \newcommand\lc{\left[}
 \newcommand\rc{\right]}
 \DeclareMathOperator{\oldsl}{SL}

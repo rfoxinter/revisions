@@ -213,6 +213,8 @@ Il est nécessaire d'avoir \LaTeX{} et \href{https://ctan.org/pkg/dvisvgm/}{\col
 \subsection{Compilation en ligne}
 Il est possible de compiler les fiches de révisions avec \texttt{Flashcards.py} ou \texttt{Htmlcards.py} avec le site \href{https://rfoxinter.github.io/revisions/flashcards/compilateur/}{\texttt{https://rfoxinter.github.io/revisions/flashcards/compilateur/}}.
 
+\textsl{Le site est actuellement en développement et il peut être nécessaire de rafraîchir la page si la compilation ne se lance pas.}
+
 Cependant, sur ce site, le package \hyperlink{section.8}{\texttt{Dsft.sty}} ne marche pas. Pour compiler des fiches avec \texttt{Flashcards.py}, il est nécessaire de générer le fichier \LaTeX{} avec le site puis le charger dans un compilateur \LaTeX{} en ligne (comme \href{https://www.overleaf.com/}{overleaf}) avec les packages nécessaires. La compilation avec \texttt{Htmlcards.py} étant plus complexe, il n'est actuellement pas possible de télécharger les fichiers \LaTeX{} générés par ce dernier.
 \subsection{Les options spéciales}
 Il est possible de compiler l'ensemble des fichiers \texttt{.txt} du dossier \texttt{input} en mettant \texttt{\_\_compile\_all\_\_} comme nom de fichier.
@@ -238,7 +240,7 @@ La ligne 2 indique si le programme peut ou non mettre un ordre aléatoire pour l
 
 La ligne 3 indique si le programme peut échanger l'ordre des questions et des réponses pour les fiches. Avec cette option à \texttt{True}, il est possible de forcer une question à être avant la réponse en mettant \texttt{!!fst} devant la/les ligne(s) concernée(s).
 
-Les packages et commandes supplémentaires (voir \href{https://www.overleaf.com/learn/latex/Commands}{overleaf}) doivent être placées sur une seule ligne.
+Les packages et commandes supplémentaires (voir \href{https://www.overleaf.com/learn/latex/Commands}{overleaf}) doivent être placées sur une seule ligne ou dans un fichier \texttt{.sty}.
 
 S'il y a une erreur lors de la compilation \LaTeX, le programme python affichera le message d'erreur affiché par \LaTeX.
 
@@ -387,7 +389,9 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 
 \mhd
 \mcmd[\footnotemark]{\dd}
-\footnotetext{$\dd$ de dérivation}
+\footnotetext{$\dd$ pour les différentielles}
+\mcmd[\footnotemark]{\intd}
+\footnotetext{$\dd$ pour les différentielles, avec l'espacement d'un opérateur à gauche pour les intégrales}
 \mcmd{\der{}{f(x)}}
 \mcmd{\der[n]{}{f(x)}}
 \mcmd{\der[][t]{f(t)}{}}
@@ -408,9 +412,9 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd{\int[t][a][b]{f(t)}}
 \mcmd{\int[][a][b]{f'}}
 \mcmd{\eval[{[a,b]}]{f(t)}}
-\mcmd{\eval[a][b]{f(t)}}
 \pagebreak
 \hrule
+\mcmd{\eval[a][b]{f(t)}}
 \mcmd[\footnotemark]{\serie{a_n}}
 \footnotetext{Comme \hyperlink{section.6}{\texttt{BigOperators.sty}} est chargé, la commande \mintinline{latexmath}?\sum? est remplacée et il est nécessaire de taper \mintinline{latexmath}?\oldsum? pour obtenir $\oldsum$}
 \mcmd{\oldesc}
@@ -425,7 +429,7 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd{\oldepi}
 \mcmd{\epi{f}}
 \subsection{L'option {\color{namecolour}\texttt{nopar}}}
-Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes comme \mintinline{latexmath}?\der?, \mintinline{latexmath}?\pder?, \mintinline{latexmath}?\mpder?, et \mintinline{latexmath}?\int? n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\der{}{f(x)}? qui produit <<~$\frac{{\dd}}{{\dd}x}f(x)$~>> et \mintinline{latexmath}?\int[x]{f(x)}? qui produit <<~$\displaystyle{\oldint}f(x){{}\dd}x$~>>.
+Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes comme \mintinline{latexmath}?\der?, \mintinline{latexmath}?\pder?, \mintinline{latexmath}?\mpder?, et \mintinline{latexmath}?\int? n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\der{}{f(x)}? qui produit <<~$\der{}{f(x)}$~>> et \mintinline{latexmath}?\int[x]{f(x)}? qui produit <<~$\int[x]{f(x)}$~>>. Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\toggleanalysepar?.
 \hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
@@ -458,8 +462,8 @@ Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes comme \mintinl
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\biguplus?}
 \mcmd{\biguplus{n=0}{+\infty}{A_n}}
 \mcmd{\bigop{n=0}{+\infty}{E_n}}
-\subsection{L'option {\color{namecolour}\texttt{nopar}}}
-Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\displaystyle{\oldsum_{n=0}^{+\infty}}u_n$~>>.
+\togglebigoppar\subsection{L'option {\color{namecolour}\texttt{nopar}}}
+Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\sum{n=0}{+\infty}{u_n}$~>>. Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\togglebigoppar?.
 \hsection{Complexes.sty}
 \mhd
 \mcmd[\footnotemark]{\oldbar{z}}
@@ -713,7 +717,7 @@ Comparaison entre \texttt{cmssp} et \texttt{cmss} :
 \mcmd{\oldord}
 \mcmd{\ord{x}}
 \hsection{Tables.sty}
-Ce package sert à mettre en forme des tables an latex grâce à \tikzlg{}.
+Ce package sert à mettre en forme des tables en latex grâce à \tikzlg{}.
 
 Pour insérer une table, il faut appeler \mintinline{latex}?\setrowcol[width][height]{ncols}{nrows}? avec le nombre de colonnes et de lignes de la table, puis rentrer la table \tikzlg{}, les arguments optionnels étant la largeur de la table et sa hauteur.
 
@@ -757,6 +761,7 @@ Ce fichier fournit des commandes latex utiles pour créer des macros.
 \mhd
 \nmcmd{\comparestring{a}{b}{if}{else}}{Compare les chaînes de caractères \mintinline{latex}?a? et \mintinline{latex}?b?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est égal à \mintinline{latex}?b? et le \mintinline{latex}?else? sinon}
 \nmcmd{\compareint{a}{b}{if}{else}}{Compare les entiers \mintinline{latex}?a? et \mintinline{latex}?b?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est égal à \mintinline{latex}?b? et le \mintinline{latex}?else? sinon}
+\nmcmd{\ifinlist{a}{lst}{if}{else}}{Recherche \mintinline{latex}?a? dans la liste \mintinline{latex}?lst?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est dans \mintinline{latex}?lst? et le \mintinline{latex}?else? sinon}
 \hsection{Trigo.sty}
 \mhd
 \mcmd[\footnotemark]{\oldcos}

@@ -1,42 +1,42 @@
 \renewcommand{\o}[2][]{
     \ifx&#1&
-        \def\argI{{o}}
+        \def\oargI{{o}}
     \else
-    \def\argI{{\underset{\scriptscriptstyle{#1}}{o}}}
-    \fi\argI\l#2\r
+    \def\oargI{{\underset{\scriptscriptstyle{#1}}{o}}}
+    \fi\oargI\l#2\r
 }
 \renewcommand{\O}[2][]{
     \ifx&#1&
-        \def\argI{{O}}
+        \def\OargI{{O}}
     \else
-    \def\argI{{\underset{\scriptscriptstyle{#1}}{O}}}
-    \fi\argI\l#2\r
+    \def\OargI{{\underset{\scriptscriptstyle{#1}}{O}}}
+    \fi\OargI\l#2\r
 }
 \newcommand{\Th}[2][]{
     \ifx&#1&
-        \def\argI{{\varTheta}}
+        \def\ThargI{{\varTheta}}
     \else
-    \def\argI{{\underset{\scriptscriptstyle{#1}}{\varTheta}}}
-    \fi\argI\l#2\r
+    \def\ThargI{{\underset{\scriptscriptstyle{#1}}{\varTheta}}}
+    \fi\ThargI\l#2\r
 }
 \newcommand{\Om}[2][]{
     \ifx&#1&
-        \def\argI{{\varOmega}}
+        \def\OmargI{{\varOmega}}
     \else
-    \def\argI{{\underset{\scriptscriptstyle{#1}}{\varOmega}}}
-    \fi\argI\l#2\r
+    \def\OmargI{{\underset{\scriptscriptstyle{#1}}{\varOmega}}}
+    \fi\OmargI\l#2\r
 }
 \newcommand{\eq}[3][]{
     \ifx&#1&
-        \def\argI{\sim}
+        \def\eqargI{\sim}
     \else
-    \def\argI{\underset{\scriptscriptstyle{#1}}{\sim}}
-    \fi#2\argI#3
+    \def\eqargI{\underset{\scriptscriptstyle{#1}}{\sim}}
+    \fi#2\eqargI#3
 }
 \newcommand{\eg}[3][]{
     \ifx&#1&
-        \def\argI{=}
+        \def\egargI{=}
     \else
-    \def\argI{\underset{\scriptscriptstyle{#1}}{=}}
-    \fi#2\argI#3
+    \def\egargI{\underset{\scriptscriptstyle{#1}}{=}}
+    \fi#2\egargI#3
 }

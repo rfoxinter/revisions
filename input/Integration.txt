@@ -1,0 +1,10 @@
+Analyse -- Intégration
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse,equivalents}\newcommand{\cv}[2][]{\xrightarrow[\scriptscriptstyle{#2}]{\scriptscriptstyle{\text{#1}}}}
+Majoration convergeante;;Si $f\in\cm{\left[a,b\right[,\mathbb K}$ et $g\in\cm{\left[a,b\right[,\mathbb R_+}$ telles que $f\l t\r=\O[t\to b^-]{g\l t\r}$\linebreak Si $g$ est intégrable en $b$, alors $f$ aussi
+Minoration divergeante;;Si $f\in\cm{\left[a,b\right[,\mathbb K}$ et $g\in\cm{\left[a,b\right[,\mathbb R_+}$ telles que $f\l t\r=\O[t\to b^-]{g\l t\r}$\linebreak Si $f$ n'est pas intégrable en $b$, alors $g$ non plus
+Intégration des relations de comparaison dans le cas convergeant\linebreak$g$ est intégrable;;$f=\O[b]{g}\Rightarrow\int[t][x][b]{f\l t\r}=\O[t\to b]{\int[t][x][b]{g\l t\r}}$\linebreak$f=\o[b]{g}\Rightarrow\int[t][x][b]{f\l t\r}=\o[t\to b]{\int[t][x][b]{g\l t\r}}$\linebreak$\eq[b]{f}{g}\Rightarrow\eq[t\to b]{\int[t][x][b]{f\l t\r}}{\int[t][x][b]{g\l t\r}}$\linebreak Dans ces trois cas, $f$ est intégrable
+Sommation des relations de comparaison dans le cas divergeant\linebreak${g}$ est non intégrable;;$f=\O[b]{g}\Rightarrow\int[t][a][x]{f\l t\r}=\O[t\to b]{\int[t][a][x]{g\l t\r}}$\linebreak$f=\o[b]{g}\Rightarrow\int[t][a][x]{f\l t\r}=\o[t\to b]{\int[t][a][x]{g\l t\r}}$\linebreak$\eq[b]{f}{g}\Rightarrow\eq[t\to b]{\int[t][a][x]{f\l t\r}}{\int[t][a][x]{g\l t\r}}$\linebreak Dans ce dernier cas, $f$ n'est pas intégrable
+Théorème de convergeance dominée;;Si $f_n\cv[\text{CVS}]{n\to+\infty}f$, et il existe $\varphi$ intégrable tel que $\forall n\in\mathbb N$, $t\in I$, $\left|f_n\l t\r\right|\leqslant\varphi\l t\r$\linebreak Alors, $f_n$ est intégrable et $\int[t][I]{f_n\l t\r}\cv{n\to+\infty}\int[t][I]{f\l t\r}$
+Théorème de convergeance dominée à paramètre continu;;Si $f_\lambda\l t\r\cv{\lambda\to l}f\l t\r$, et il existe $\varphi$ intégrable tel que $\forall \lambda\in J$, $t\in I$, $\left|f_\lambda\l t\r\right|\leqslant\varphi\l t\r$\linebreak Les $f_\lambda$ sont intégrables et $\int[t][I]{f_\lambda\l t\r}\cv{\lambda\to l}\int[t][I]{f\l t\r}$
