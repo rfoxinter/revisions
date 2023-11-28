@@ -3,8 +3,8 @@ Shuffle questions : True
 Q/R & R/Q : False
 \let\div\relax\DeclareMathOperator{\oldrot}{rot}\newcommand{\rot}{\mathop{\vec\oldrot}}\DeclareMathOperator{\div}{div}\usepackage{analyse}\usepackage{esint}\renewcommand{\d}{{{}\dd}}
 Équation de Maxwell-Gauss;;$\div\vec E=\frac\rho{\varepsilon_0}$
-Équation de Maxwell-Faraday;;$\div\vec B=0$
-Équation de Maxwell-Thomson;;$\rot\vec E=-\pder[][t]{\vec B}{}$
+Équation de Maxwell-Thomson;;$\div\vec B=0$
+Équation de Maxwell-Faraday;;$\rot\vec E=-\pder[][t]{\vec B}{}$
 Équation de Maxwell-Ampère;;$\rot\vec B=\mu_0\vec\jmath+\mu_0\varepsilon_0\pder[][t]{\vec E}{}$
 Formule d'Ostrogradski;;$\displaystyle{\varoiint_S}\vec F\cdot\d\vec S=\displaystyle{\iiint_V}\div\vec F\d V$
 Formule de Stokes;;$\displaystyle{\oint_\varGamma}\vec F\cdot\d\vec l=\displaystyle{\iint_S}\rot\vec F\cdot\d\vec S$
