@@ -17,7 +17,7 @@
     \def\analyserightp{}
 \fi
 
-\newcommand{\toggleanalysepar}{\ifstring{\analyseleftp}{}{\def\analyseleftp{\l}\def\analyserightp{\r}}{\def\analyseleftp{}\def\analyserightp{}}}
+\newcommand{\toggleanalysepar}{\comparestring{\analyseleftp}{}{\def\analyseleftp{\l}\def\analyserightp{\r}}{\def\analyseleftp{}\def\analyserightp{}}}
 
 \makeatletter
 \newcounter{mpdercount}
