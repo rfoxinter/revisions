@@ -1,6 +1,8 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ./Algebre/AlgebreLineraire
 20231120123333
+./Algebre/ReductionDEndomorphisme
+20231207001708
 ./Algebre/StructuresAlgebriques1
 20231023193234
 ./Analyse/ComplementsDePremiereAnnee

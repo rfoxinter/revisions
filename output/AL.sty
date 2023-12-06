@@ -26,5 +26,9 @@
 \newcommand{\orth}[2][]{\oldorth_{#1}\l#2\r}
 \DeclareMathOperator{\oldso}{SO}
 \newcommand{\so}[2][]{\oldso_{#1}\l#2\r}
-\DeclareMathOperator{\oldsp}{Sp}
+\DeclareMathOperator{\oldsp}{sp}
 \renewcommand{\sp}[2][]{\oldsp_{#1}\l#2\r}
+\let\oldid\relax
+\let\id\relax
+\DeclareMathOperator{\oldid}{id}
+\newcommand{\id}{{\oldid}}

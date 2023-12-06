@@ -14,7 +14,7 @@
 \usepackage{output/tools}
 \usepackage{output/bigoperators}
 \usepackage{output/analyse}
-\usepackage{output/sffont,output/matrices,output/al,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/usuelles}
+\usepackage{output/sffont,output/matrices,output/al,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
 \usepackage[arc]{output/complexes}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
@@ -172,7 +172,7 @@ Il est possible de redéfinir le $l$ en $\oldl$ avec \mintinline{latex}?\usepack
 
 \pagebreak
 
-Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.18}{\texttt{Usuelles.sty}}} :
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.19}{\texttt{Usuelles.sty}}} :
 \vspace{-\abovedisplayskip}\begin{minted}{latex}
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
@@ -385,6 +385,7 @@ Le package \hyperlink{section.10}{\texttt{Matrices.sty}} sera importé automatiq
 \mcmd{\oldsp}
 \mcmd{\sp{u}}
 \mcmd{\sp[\mathbb{C}]{u}}
+\mcmd{\id}
 \hsection{Analyse.sty}
 Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
 
@@ -425,12 +426,13 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd{\esc[+]{f}}
 \mcmd{\oldfnint}
 \mcmd{\fnint{[a,b]}}
-\mcmd{\nrm{f}}
-\mcmd{\nrm[1]{g}}
+\mcmd{\anrm{f}}
+\mcmd{\anrm[1]{g}}
 \mcmd{\oldva}
 \mcmd{\va{u}}
 \mcmd{\oldepi}
 \mcmd{\epi{f}}
+\mcmd{\id}
 \toggleanalysepar\subsection{L'option {\color{namecolour}\texttt{nopar}}}
 Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes comme \mintinline{latexmath}?\der?, \mintinline{latexmath}?\pder?, \mintinline{latexmath}?\mpder?, et \mintinline{latexmath}?\int? n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\der{}{f(x)}? qui produit <<~$\der{}{f(x)}$~>> et \mintinline{latexmath}?\int[x]{f(x)}? qui produit <<~$\int[x]{f(x)}$~>>. Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\toggleanalysepar?.
 \hsection{Arithmetique.sty}
@@ -528,6 +530,10 @@ Pour utiliser ce package, il suffit de copier les fichiers \texttt{dsrom12.pfb} 
 \mcmd{\eg{u_n}{v_n+\o{v_n}}}
 \mcmd{\eg[n\to+\infty]{u_n}{v_n+\o{v_n}}}
 \hsection{Matrices.sty}
+Le package \hyperlink{section.16}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+
+\vspace{0.5cm}
+
 \mhd
 \mcmd{\mat{n}{p}{\mathbb{K}}}
 \mcmd{\mat{n}{}{\mathbb{K}}}
@@ -646,6 +652,8 @@ $
 \mcmd{\val{P}}
 \mcmd{\oldcar}
 \mcmd{\car{\mathbb{K}}}
+\mcmd{\oldrac}
+\mcmd{\rac{P}}
 \hsection{Probas.sty}
 \mhd
 \mcmd{\p{A}}
@@ -765,6 +773,13 @@ Ce fichier fournit des commandes latex utiles pour créer des macros.
 \nmcmd{\comparestring{a}{b}{if}{else}}{Compare les chaînes de caractères \mintinline{latex}?a? et \mintinline{latex}?b?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est égal à \mintinline{latex}?b? et le \mintinline{latex}?else? sinon}
 \nmcmd{\compareint{a}{b}{if}{else}}{Compare les entiers \mintinline{latex}?a? et \mintinline{latex}?b?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est égal à \mintinline{latex}?b? et le \mintinline{latex}?else? sinon}
 \nmcmd{\ifinlist{a}{lst}{if}{else}}{Recherche \mintinline{latex}?a? dans la liste \mintinline{latex}?lst?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est dans \mintinline{latex}?lst? et le \mintinline{latex}?else? sinon}
+\hsection{Topologie.sty}
+\mhd
+\mcmd[\footnotemark]{\anrm{f}}
+\footnotetext{La commande est la même que celle définie dans \hyperlink{section.4}{\texttt{Analyse.sty}}}
+\mcmd{\vala{x}}
+\mcmd{\nrm{X}}
+\mcmd{\nnrm{M}}
 \hsection{Trigo.sty}
 \mhd
 \mcmd[\footnotemark]{\oldcos}

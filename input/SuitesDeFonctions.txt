@@ -5,8 +5,8 @@ Q/R & R/Q : False
 $u_n\cv[CVS]{n\to+\infty}u$\linebreak Caractérisation par les limites;;$\forall x\in\mathbb R,\;u_n\l x\r\cv{n\to+\infty}u\l x\r$
 $u_n\cv[CVS]{n\to+\infty}u$\linebreak Caractérisation par $\epsilon$;;$\forall x\in\mathbb R,\;\forall\epsilon>0,\;\exists N\in\mathbb N$\linebreak$\forall n\geqslant N,\;\left|u_n\l x\r-u\l x\r\right|\leqslant\epsilon$
 Propriétés conservées par convergence simple;;Paricité\linebreak$T$-périodicité\linebreak Monotonie\linebreak Caractère $k$-lipsichtzien
-$\nrm f$;;$\sup{\left\{\left|f\l x\r\right|,\;x\in A\right\}}$\linebreak$\nrm\cdot$ est une norme
-$u_n\cv[CVU]{n\to+\infty}u$\linebreak Caractérisation par les limites;;$\nrm{u_n-u}\cv{n\to+\infty}0$
+$\anrm f$;;$\sup{\left\{\left|f\l x\r\right|,\;x\in A\right\}}$\linebreak$\anrm\cdot$ est une norme
+$u_n\cv[CVU]{n\to+\infty}u$\linebreak Caractérisation par les limites;;$\anrm{u_n-u}\cv{n\to+\infty}0$
 $u_n\cv[CVU]{n\to+\infty}u$\linebreak Caractérisation par $\epsilon$;;$\forall\epsilon>0,\;\exists N\in\mathbb N,\;\forall n\geqslant N$\linebreak$\forall x\in\mathbb R,\;\left|u_n\l x\r-u\l x\r\right|\leqslant\epsilon$
 Conservation de la continuité par passage à la limite uniforme;;Si $\forall n\in\mathbb N$, $u_n$ est continue en $a$ et $u_n\cv[CVU]{n\to+\infty}u$ sur un voisinage de $a$, alors $u$ est continue en $a$
 Théorème de la double limite;;Si $\forall n\in\mathbb N$, $u_n\l x\r\cv{x\to a}l_n\in\mathbb C$ et $u_n\cv[CVU]{n\to+\infty}u$ alors $\l l_n\r$ converge vers $l\in\mathbb C$ et $u\l x\r\cv{x\to a}l$

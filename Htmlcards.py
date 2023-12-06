@@ -28,7 +28,7 @@ p.add_argument('--open', type = b, help = 'Open destination folder after generat
 args = p.parse_args()
 
 def remove_special_chars(s:str) -> str:
-    s = sb(u'[ ]', '', s)
+    s = sb(u'[ \'’]', '', s)
     s = sb(u'[àáâä]', 'a', s)
     s = sb(u'[èéêë]', 'e', s)
     s = sb(u'[îï]', 'i', s)

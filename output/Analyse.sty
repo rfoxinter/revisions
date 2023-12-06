@@ -115,8 +115,13 @@
 \newcommand{\cm}[2][]{\oldcm_{#1}\l#2\r}
 \DeclareMathOperator{\oldfnint}{Int}
 \newcommand{\fnint}[1]{\oldfnint\l#1\r}
-\newcommand{\nrm}[2][\infty]{\left\|#2\right\|_{#1}}
+\let\anrm\relax
+\newcommand{\anrm}[2][\infty]{\left\|#2\right\|_{#1}}
 \DeclareMathOperator{\oldva}{VA}
 \newcommand{\va}[1]{\oldva\l#1\r}
 \DeclareMathOperator{\oldepi}{Epi}
 \newcommand{\epi}[1]{\oldepi\l#1\r}
+\let\oldid\relax
+\let\id\relax
+\DeclareMathOperator{\oldid}{id}
+\newcommand{\id}{{\oldid}}

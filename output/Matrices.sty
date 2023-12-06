@@ -1,4 +1,6 @@
 \RequirePackage{tools}
+\RequirePackage{tikz}
+\usetikzlibrary{matrix,calc,fit}
 
 \newif\if@dots\@dotstrue
 \DeclareOption{nodots}{\@dotsfalse}
@@ -17,8 +19,6 @@
 \newcommand{\gl}[2]{\oldgl_{#1}\l#2\r}
 \DeclareMathOperator{\oldcom}{Com}
 \newcommand{\com}[1]{\oldcom\l#1\r}
-\usepackage{tikz}
-\usetikzlibrary{matrix,calc,fit}
 \newlength{\dotsep}
 \newlength{\dotlift}
 \newlength{\matsep}
