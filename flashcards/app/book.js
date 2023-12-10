@@ -1,4 +1,4 @@
-var fldebug;
+// var fldebug;
 async function loadBook(src, file) {
     var open = indexedDB.open("flcrddb");
     open.onsuccess = function(event) {
@@ -13,11 +13,11 @@ async function loadBook(src, file) {
             if (result) {
                 var jsCode = result.content;
                 var fl = deflate(jsCode).split('\n');
-                fldebug=fl;
-                title = fl[0];
+                // fldebug = fl;
+                title = dec_title(fl[0]);
                 n = fl[3].replace(']', '').replace('[', '').split(',').map(x => parseInt(x));
                 
-                if (fl[6+2*n.length] != btoa(title)) {
+                if (fl[6+2*n.length] != btoa(enc_title(title))) {
                     throw new Error('Fichier corrompu')
                 }
 

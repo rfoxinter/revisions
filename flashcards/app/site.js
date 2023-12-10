@@ -39,10 +39,17 @@ function absolute(rel) {
     return (link.protocol + "//" + link.host + link.pathname);
 }
 
+function enc_title(text) {
+    return text.replaceAll('\u2019', '````2019````')
+}
+function dec_title(text) {
+    return text.replaceAll('````2019````', '\u2019')
+}
+
 function download_text(start, title, file, filename) {
     var date = new Date;
     var time = date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + String(date.getDate()).padStart(2, '0') + String(date.getHours()).padStart(2, '0') + String(date.getMinutes()).padStart(2, '0') + String(date.getSeconds()).padStart(2, '0');
-    var text = start + time + '\n' + btoa(title) + '\n' + absolute(file + (title.includes('&ndash;')?'/../..':'/..')) + 'cards.txt' + '\n' + filename;
+    var text = enc_title(start) + time + '\n' + btoa(enc_title(title)) + '\n' + absolute(file + (title.includes('&ndash;')?'/../..':'/..')) + 'cards.txt' + '\n' + filename;
     return [compress_text(text), time];
 
 }

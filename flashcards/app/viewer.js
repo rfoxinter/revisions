@@ -29,7 +29,7 @@ async function loadFile(src, file) {
             if (result) {
                 var jsCode = result.content;
                 var fl = deflate(jsCode).split('\n');
-                title = fl[0];
+                title = dec_title(fl[0]);
                 sh_quest = parseInt(fl[1]);
                 sh_qr = parseInt(fl[2]);
                 n = fl[3].replace(']', '').replace('[', '').split(',').map(x => parseInt(x));
@@ -39,7 +39,7 @@ async function loadFile(src, file) {
                     arr[i] = decodeURIComponent(fl[5+i]);
                 }
                 
-                if (fl[6+2*n.length] != btoa(title)) {
+                if (fl[6+2*n.length] != btoa(enc_title(title))) {
                     throw new Error('Fichier corrompu')
                 }
 
