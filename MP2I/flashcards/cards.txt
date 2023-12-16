@@ -6,7 +6,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Trigo2
 20230729223728
 ../MP2I/flashcards/Algebre1/Anneaux
-20231021201938
+20231216153227
 ../MP2I/flashcards/Algebre1/Arithmetique
 20230703144954
 ../MP2I/flashcards/Algebre1/Corps
@@ -18,7 +18,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Algebre1/PolynomesEtFractionsRationnelles
 20230828220812
 ../MP2I/flashcards/Algebre1/StructuresAlgebriques
-20231021202624
+20231216153936
 ../MP2I/flashcards/Algebre2/AlgebreLineaire
 20230828220659
 ../MP2I/flashcards/Algebre2/Determinants
@@ -70,6 +70,6 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Fondements/SommesEtProduits
 20230703152506
 ../MP2I/flashcards/Probabilites/EspacesProbabilises
-20230703150623
+20231216154217
 ../MP2I/flashcards/Probabilites/VariablesAleatoires
 20230916200833

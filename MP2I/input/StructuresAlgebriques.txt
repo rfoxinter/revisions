@@ -75,7 +75,7 @@ Factorisation de $a^n-b^n$ dans un anneau $A$;;$\l a,b\r\in A^2$ tel que $ab=ba$
 Factorisation de $\l a+b\r^n$ dans un anneau $A$;;$\l a,b\r\in A^2$ tel que $ab=ba$\linebreak$\sum{k=0}{n}{\binom{n}{k}a^kb^{n-k}}$
 Groupe des inversibles d'un anneau;;$A^\times$\linebreak$A^\times$ est un groupe multiplicatif
 Diviseurs de zéro dans un anneau $A$;;$a\in A$ est un diviseur de $0$ à gauche si et seulement s'il existe $b\in A$ tel que $ab=0$\linebreak$a\in A$ est un diviseur de $0$ à droite si et seulement s'il existe $b\in A$ tel que $ba=0$\linebreak$a\in A$ est un diciseur de $0$ si et seulement si $a$ est diviseur de $0$ à gauche et à droite
-Élément réguulier d'un anneau;;L'élément n'est pas diviseur de $0$\linebreak La réciproque est vraie\linebreak S'adapte à gauche et à droite
+Élément régulier d'un anneau;;L'élément n'est pas diviseur de $0$\linebreak La réciproque est vraie\linebreak S'adapte à gauche et à droite
 Anneau intègre;;Anneau commutatif non réduit à $\left\{0\right\}$ et sans diviseurs de $0$
 Si $\l A,+,\times\r$ est un anneau commutatif\linebreak Un sous-ensemble $I$ de $A$ est un sous-anneau idéal de $A$;;$I$ est un sous-groupe de $\l A,+\r$\linebreak$\forall i\in I,\;\forall a\in A,\;ia\in I$
 Idéal principal;;Idéal engendré par un unique élément $a$ de la forme $I=aA=\left\{ay,\;y\in A\right\}$\linebreak$I$ est souvent noté $\l a\r$

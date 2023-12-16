@@ -19,7 +19,7 @@ Espace probabilisé\linebreak Modèle probabiliste de Kolmogorov;;$\l\Omega,\mat
 Distribution de probabilités;;Famille $\l p_i\r_{i\in I}$ tel que $\sum{i\in I}{}{p_i}=1$
 $\p\l\left\{\omega\right\}\r$ pour une distribution de probabilités uniforme;;$\frac1{\left|\Omega\right|}$
 $\p_B\l A\r=\p\l A\sq B\r$;;$\frac{\p\l A\cap B\r}{\p\l B\r}$
-$A$ et $B$ sont indépendants;;$\p\l A\cap B\r=\p\l A\r\p\l B\r$
+$A$ et $B$ sont indépendants\linebreak$\p\l A\cap B\r$;;$\p\l A\r\p\l B\r$
 Les $A_i$, $i\in I$ sont mutuellement indépendants;;$\forall J\in\mathcal P_f\l I\r,\;\p\l\bigcap{j\in J}{}{A_j}\r=\prod{j\in J}{}{\p\l A_j\r}$
 Système quasi-complet d'événements;;$\mathcal{C}$ est quasi-complet si\linebreak Les événements de $\mathcal C$ ne sont pas impossibles\linebreak Les événements de $\mathcal C$ sont deux à deux disjoints\linebreak$\sum{A\in\mathcal C}{}{\p\l A\r}=1$
 Formule des probabilités totales;;Si $\l A_i\r_{i\in I}$ est un système quasi-complet au plus dénombrable\linebreak$\p\l B\r=\sum{i\in I}{}{\p\l A_i\r\p\l B\sq A_i\r}$
