@@ -189,6 +189,7 @@ open.onupgradeneeded = function(event) {
 function delete_card(_url, _name, _confirm = true) {
     return new Promise(function(resolve, reject) {
         if ((!_confirm) || window.confirm("Supprimer la fiche")) {
+            delsv(false);
             var open = indexedDB.open("flcrddb");
             open.onsuccess = function(event) {
                 var db = event.target.result;
