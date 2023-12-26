@@ -470,7 +470,17 @@ Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes comme \mintinl
 \mcmd{\biguplus{n=0}{+\infty}{A_n}}
 \mcmd{\bigop{n=0}{+\infty}{E_n}}
 \togglebigoppar\subsection{L'option {\color{namecolour}\texttt{nopar}}}
-Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\sum{n=0}{+\infty}{u_n}$~>>. Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\togglebigoppar?.
+Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
+
+Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\togglebigoppar?.
+\togglebigoppar\togglebigopdisplay\subsection{L'option {\color{namecolour}\texttt{nodisplay}}}
+Si {\color{namecolour}\texttt{nodisplay}} est utilisé, les commandes ne sont plus affichées en mode \mintinline{latexmath}?\displaystyle?. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
+
+Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\togglebigopdisplay?.
+\togglebigopdisplay\togglebigoplimits\subsection{L'option {\color{namecolour}\texttt{nolimits}}}
+Si {\color{namecolour}\texttt{nolimits}} est utilisé, les indices des commandes se placent comme avec \mintinline{latexmath}?\nolimits?. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
+
+Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\togglebigoplimits?.
 \hsection{Complexes.sty}
 \mhd
 \mcmd[\footnotemark]{\oldbar{z}}
