@@ -244,8 +244,8 @@ function loadsv() {
     };
 }
 
-function delsv() {
-    if (window.confirm("Supprimer la sauvegarde")) {
+function delsv(messages = true) {
+    if ((messages && window.confirm("Supprimer la sauvegarde")) || (!messages)) {
         var open = indexedDB.open("flcrdsv");
         open.onsuccess = function(event) {
             var db = event.target.result;
@@ -260,11 +260,11 @@ function delsv() {
                     store.delete(id);
                     document.getElementById("dropdown").style.display="none";
                     document.getElementById("adv_dropdown").style.display = "none";
-                    window.alert("Sauvegarde supprimée")
+                    if (messages) {window.alert("Sauvegarde supprimée");}
                 } else {
                     document.getElementById("dropdown").style.display="none";
                     document.getElementById("adv_dropdown").style.display = "none";
-                    window.alert("Aucune sauvegarde à supprimer");
+                    if (messages) {window.alert("Aucune sauvegarde à supprimer");}
                 }
             }
 
