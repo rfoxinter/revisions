@@ -79,7 +79,8 @@
         document.getElementById('open_flash').addEventListener('change', function() {
             fl = new FileReader();
             if (document.getElementById('open_flash').value != '') {
-                fl.onload = async function(){
+                document.getElementById('open_flash').value = '';
+                fl.onload = async function() {
                     var nofinally = false;
                     try {
                         files = [];
@@ -131,6 +132,7 @@
         document.getElementById('open_html').addEventListener('change', function() {
             fl = new FileReader();
             if (document.getElementById('open_html').value != '') {
+                document.getElementById('open_html').value = '';
                 fl.onload = async function(){
                     var nofinally = false;
                     try {
@@ -180,10 +182,11 @@
             fl.readAsText(this.files[0]);
         });
 
-        var html_zip = new JSZip(); var compressed; infoContent = '"Fondements &ndash; <i>Nombres complexes sans trigonométrie</i>"\n1\n0\n[1, 2, 3, 4, 5, 6, 7, 8]\n[0, 0, 0, 0, 0, 0, 0, 0]';
+        var html_zip = new JSZip(); var compressed;
         document.getElementById('open_zip').addEventListener('change', function() {
             fl = new FileReader();
-            if (document.getElementById('open_html').value != '') {
+            if (document.getElementById('open_zip').value != '') {
+                document.getElementById('open_zip').value = '';
                 fl.onload = async function(){
                     document.getElementById('result_files').innerHTML = "";
                     document.getElementById('btn_zip').innerText = "Compilation en cours";
