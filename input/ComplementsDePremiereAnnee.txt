@@ -8,5 +8,5 @@ Caractérisation ensembliste des valeurs d'adhérence;;$\va u=\bigcap{n\in\mathb
 Suite de Cauchy;;$\forall\epsilon>0,\;\exists N\in\mathbb N,\;\forall n\geqslant N,\;\left|u_n-u_m\right|\leqslant\epsilon$\linebreak Une suite de Cauchy à valeurs dans $\mathbb R$ ou $\mathbb C$ converge
 $\mathcal{C}^n$-difféomorphisme;;Si $A\subset\mathbb R$, $B\subset\mathbb R$, alors $f\!:\!A\to B$ est un $\mathcal C^n$-difféomorphisme si c'est une application $\mathcal C^n$, bijective et dont la réciproque est $\mathcal C^n$
 Condition nécessaire simple pour réaliser un $\mathcal C^n$-difféomorphisme;;Si $f$ est $\mathcal C^n$ et de dérivée ne s'annulant pas sur un intervalle $I$, alors $f$ est un $\mathcal C^n$-difféomorphisme de $I$ sur $f\l I\r$
-$\epi f$;;$\left\{\l x,y\r\in\mathbb R^2\;\middle|\;y\geqslant f\l x\r\right\}$
+$\epi f$;;$\left\{\l x,y\r\in\mathbb R^2,y\geqslant f\l x\r\right\}$
 Lemme de l'escalier;;Si $u_{n+1}-u_n\to l\in\mathbb R$, alors, $\eq{u_n}{nl}$\linebreak Si $u_{n+1}-u_n\to0$, alors, $u_n=\o{n}$

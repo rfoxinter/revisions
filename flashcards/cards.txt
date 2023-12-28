@@ -6,10 +6,10 @@ https://rfoxinter.github.io/revisions/flashcards/
 ./Algebre/StructuresAlgebriques1
 20231023193234
 ./Analyse/ComplementsDePremiereAnnee
-20230924002308
+20231228225612
 ./Analyse/Integration
 20231121230825
 ./Analyse/SeriesNumeriques
 20230924163108
 ./Analyse/SuitesDeFonctions
-20230924162705
+20231228225723
