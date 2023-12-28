@@ -10,52 +10,52 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Propriété des matrices $E_{i,j}$ dans $\mat{n}{p}{\mathbb{K}}$}{1/24}
-\slider{La famille $\l E_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,p\rrb}$ est une base canonique de $\mat{n}{p}{\mathbb{K}}$\linebreak Toute matrice $A$ de $\mat{n}{p}{\mathbb{K}}$ peut s'exprimer de la forme $\sum{\l i,j\r\in\llb1,n\rrb\times\llb1,p\rrb}{}{\lambda_{i,j}E_{i,j}}$}{1/24}
-\slideq{$E\l i,j\r^{-1}$\linebreak$E\l i,j,\lambda\r^{-1}$\linebreak$E\l i,\lambda\r^{-1}$}{2/24}
-\slider{$E\l i,j\r$\linebreak$E\l i,j,-\lambda\r$\linebreak$E\l i,\lambda^{-1}\r$}{2/24}
-\slideq{Structure de $\mat{n}{}{\mathbb{K}}$}{3/24}
-\slider{$\mat{n}{}{\mathbb{K}}$ est un anneau non commutatif}{3/24}
-\slideq{Matrice de dilatation $E\l i,\lambda\r$}{4/24}
-\slider{$\forall\l k,l\r\in\llb1,n\rrb^2,\;k\neq l,\;e_{k,l}=0$\linebreak$\forall k\in\llb1,n\rrb\setminus\left\{i\right\},\;e_{k,k}=1$\linebreak$e_{i,i}=\lambda$}{4/24}
-\slideq{Matrice de transposition $E\l i,j\r$}{5/24}
-\slider{$\forall\l k,l\r\in\llb1,n\rrb^2\setminus\left\{\l i,j\r,\l j,i\r\right\},\;k\neq l,\;e_{k,l}=0$\linebreak$\forall k\in\llb1,n\rrb\setminus\left\{i,j\right\},\;e_{k,k}=1$\linebreak$e_{i,i}=e_{j,j}=0$\linebreak$e_{i,j}=e_{j,i}=1$}{5/24}
-\slideq{Matrice élémentaite $E_{i,j}$ de $\mat{n}{p}{\mathbb{K}}$}{6/24}
-\slider{$\forall\l k,l\r\in\llb1,n\rrb\times\llb1,p\rrb$\linebreak$e_{k,l}=\delta_{\l i,j\r,\l k,l\r}=\delta_{i,k}\delta_{j,l}$}{6/24}
-\slideq{$\gl{n}{\mathbb K}$}{7/24}
-\slider{$\left\{M\in\mat{n}{}{\mathbb{K}}\;\middle|\;\exists N\in\mat{n}{}{\mathbb{K}}\;\middle|\;MN=I_n\right\}$}{7/24}
-\slideq{Factorisation de $A^n-B^n$}{8/24}
-\slider{$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\l A-B\r\sum{k=0}{n-1}{A^{n-k-1}B^k}$}{8/24}
-\slideq{Description du produit matriciel par colonne\linebreak$\mathrm{C}_i\l M\r$ représente la $i$-ième colonne de $M$}{9/24}
-\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall k\in\llb1,q\rrb,\;\mathrm{C}_k\l{C}\r=\sum{j=1}{p}{b_{j,k}\mathrm{C}_j\l A\r}$}{9/24}
-\slideq{Factorisation de $\l A+B\r^n$}{10/24}
-\slider{$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\sum{k=0}{n}{\binom{n}{k}A^kB^{n-k}}$}{10/24}
-\slideq{$T=\tmatrix({t_{1,1} \& 0 \& \mdots \& 0 \\ \bullet \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ \bullet \& \mdots \& \bullet \& t_{n,n}\\})\in\ti{n}{\mathbb K}$\linebreak$T^m$}{11/24}
-\slider{$T^m=\tmatrix({t_{1,1}^m \& 0 \& \mdots \& 0 \\ \bullet \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ \bullet \& \mdots \& \bullet \& t_{n,n}^m\\})$}{11/24}
-\slideq{$T=\tmatrix({t_{1,1} \& \bullet \& \mdots \& \bullet \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& \bullet \\ 0 \& \mdots \& 0 \& t_{n,n}\\})\in\ts{n}{\mathbb K}$\linebreak$T^m$}{12/24}
-\slider{$T^m=\tmatrix({t_{1,1}^m \& \bullet \& \mdots \& \bullet \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& \bullet \\ 0 \& \mdots \& 0 \& t_{n,n}^m\\})$}{12/24}
-\slideq{$\sym{n}{\mathbb K}$}{13/24}
-\slider{$\left\{M\in\mat{n}{}{\mathbb{K}}\;\middle|\;M=M^\top\right\}$}{13/24}
-\slideq{$M=\tmatrix({a \& b \\ c \& d\\})\in\mat{2}{}{\mathbb{K}}$\linebreak$\det M=\tmatrix|{a \& b \\ c \& d \\}|$}{14/24}
-\slider{$ad-bc$}{14/24}
-\slideq{$\ant{n}{\mathbb K}$}{15/24}
-\slider{$\left\{M\in\mat{n}{}{\mathbb{K}}\;\middle|\;M=-M^\top\right\}$}{15/24}
-\slideq{Transposée de la matrice $A=\tmatrix({a_{1,1} \& \cdots \& a_{1,p} \\ \vdots \& \xdots \& \vdots \\ a_{n,1} \& \mdots \& a_{n,p}\\})$}{16/24}
-\slider{$A^\top=\tmatrix({a_{1,1} \& \mdots \& a_{n,1} \\ \vdots \& \xdots \& \vdots \\ a_{1,p} \& \mdots \& a_{n,p}\\})$}{16/24}
-\slideq{Matrice identité}{17/24}
-\slider{$I_n=\tmatrix({1 \& 0 \& \mdots \& 0 \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ 0 \& \mdots \& 0 \& 1\\})$}{17/24}
-\slideq{$D=\tmatrix({d_{1,1} \& 0 \& \mdots \& 0 \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ 0 \& \mdots \& 0 \& d_{n,n}\\})\in\diag{n}{\mathbb K}$\linebreak$D^m$}{18/24}
-\slider{$D^m=\tmatrix({d_{1,1}^m \& 0 \& \mdots \& 0 \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ 0 \& \mdots \& 0 \& d_{n,n}^m\\})$}{18/24}
-\slideq{Description du produit matriciel par ligne\linebreak$\mathrm{L}_i\l M\r$ représente la $i$-ième ligne de $M$}{19/24}
-\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall i\in\llb1,n\rrb,\;\mathrm{L}_i\l{C}\r=\sum{j=1}{p}{a_{i,j}\mathrm{L}_j\l B\r}$}{19/24}
-\slideq{$M=\tmatrix({a \& b \\ c \& d\\})\in\mat{2}{}{\mathbb{K}}$\linebreak$M^{-1}$}{20/24}
-\slider{$M^{-1}=\frac{1}{ad-bc}\tmatrix({d \& -b \\ -c \& a\\})$\linebreak${}=\frac{1}{\det M}\tmatrix({d \& -b \\ -c \& a\\})$}{20/24}
-\slideq{Définition du produit matriciel}{21/24}
-\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall\l i,k\r\in\llb1,n\rrb\times\llb1,q\rrb,\;c_{i,k}=\sum{j=1}{p}{a_{i,j}b_{j,k}}$}{21/24}
+\slideq{Matrice de transvection $E\l i,j,\lambda\r$}{1/24}
+\slider{$\forall\l k,l\r\in\llb1,n\rrb^2\setminus\left\{\l i,j\r\right\},\;k\neq l,\;e_{k,l}=0$\linebreak$\forall k\in\llb1,n\rrb,\;e_{k,k}=1$\linebreak$e_{i,j}=\lambda$}{1/24}
+\slideq{Factorisation de $A^n-B^n$}{2/24}
+\slider{$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\l A-B\r\sum{k=0}{n-1}{A^{n-k-1}B^k}$}{2/24}
+\slideq{$\ant{n}{\mathbb K}$}{3/24}
+\slider{$\left\{M\in\mat{n}{}{\mathbb{K}},M=-M^\top\right\}$}{3/24}
+\slideq{Matrice élémentaite $E_{i,j}$ de $\mat{n}{p}{\mathbb{K}}$}{4/24}
+\slider{$\forall\l k,l\r\in\llb1,n\rrb\times\llb1,p\rrb$\linebreak$e_{k,l}=\delta_{\l i,j\r,\l k,l\r}=\delta_{i,k}\delta_{j,l}$}{4/24}
+\slideq{$M=\tmatrix({a \& b \\ c \& d\\})\in\mat{2}{}{\mathbb{K}}$\linebreak$\det M=\tmatrix|{a \& b \\ c \& d \\}|$}{5/24}
+\slider{$ad-bc$}{5/24}
+\slideq{Structure de $\mat{n}{}{\mathbb{K}}$}{6/24}
+\slider{$\mat{n}{}{\mathbb{K}}$ est un anneau non commutatif}{6/24}
+\slideq{$T=\tmatrix({t_{1,1} \& 0 \& \mdots \& 0 \\ \bullet \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ \bullet \& \mdots \& \bullet \& t_{n,n}\\})\in\ti{n}{\mathbb K}$\linebreak$T^m$}{7/24}
+\slider{$T^m=\tmatrix({t_{1,1}^m \& 0 \& \mdots \& 0 \\ \bullet \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ \bullet \& \mdots \& \bullet \& t_{n,n}^m\\})$}{7/24}
+\slideq{Factorisation de $\l A+B\r^n$}{8/24}
+\slider{$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB=BA$\linebreak$\sum{k=0}{n}{\binom{n}{k}A^kB^{n-k}}$}{8/24}
+\slideq{Système de Cramer}{9/24}
+\slider{$AX=B$ est de Cramer si $A$ est inversible\linebreak$AX=B$ a une unique solution $X=A^{-1}B$}{9/24}
+\slideq{Description du produit matriciel par ligne\linebreak$\mathrm{L}_i\l M\r$ représente la $i$-ième ligne de $M$}{10/24}
+\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall i\in\llb1,n\rrb,\;\mathrm{L}_i\l{C}\r=\sum{j=1}{p}{a_{i,j}\mathrm{L}_j\l B\r}$}{10/24}
+\slideq{Propriété des matrices $E_{i,j}$ dans $\mat{n}{p}{\mathbb{K}}$}{11/24}
+\slider{La famille $\l E_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,p\rrb}$ est une base canonique de $\mat{n}{p}{\mathbb{K}}$\linebreak Toute matrice $A$ de $\mat{n}{p}{\mathbb{K}}$ peut s'exprimer de la forme $\sum{\l i,j\r\in\llb1,n\rrb\times\llb1,p\rrb}{}{\lambda_{i,j}E_{i,j}}$}{11/24}
+\slideq{$\gl{n}{\mathbb K}$}{12/24}
+\slider{$\left\{M\in\mat{n}{}{\mathbb{K}},\exists N\in\mat{n}{}{\mathbb{K}},MN=I_n\right\}$}{12/24}
+\slideq{Matrice de transposition $E\l i,j\r$}{13/24}
+\slider{$\forall\l k,l\r\in\llb1,n\rrb^2\setminus\left\{\l i,j\r,\l j,i\r\right\},\;k\neq l,\;e_{k,l}=0$\linebreak$\forall k\in\llb1,n\rrb\setminus\left\{i,j\right\},\;e_{k,k}=1$\linebreak$e_{i,i}=e_{j,j}=0$\linebreak$e_{i,j}=e_{j,i}=1$}{13/24}
+\slideq{Transposée de la matrice $A=\tmatrix({a_{1,1} \& \cdots \& a_{1,p} \\ \vdots \& \xdots \& \vdots \\ a_{n,1} \& \mdots \& a_{n,p}\\})$}{14/24}
+\slider{$A^\top=\tmatrix({a_{1,1} \& \mdots \& a_{n,1} \\ \vdots \& \xdots \& \vdots \\ a_{1,p} \& \mdots \& a_{n,p}\\})$}{14/24}
+\slideq{Définition du produit matriciel}{15/24}
+\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall\l i,k\r\in\llb1,n\rrb\times\llb1,q\rrb,\;c_{i,k}=\sum{j=1}{p}{a_{i,j}b_{j,k}}$}{15/24}
+\slideq{$E\l i,j\r^{-1}$\linebreak$E\l i,j,\lambda\r^{-1}$\linebreak$E\l i,\lambda\r^{-1}$}{16/24}
+\slider{$E\l i,j\r$\linebreak$E\l i,j,-\lambda\r$\linebreak$E\l i,\lambda^{-1}\r$}{16/24}
+\slideq{Description du produit matriciel par colonne\linebreak$\mathrm{C}_i\l M\r$ représente la $i$-ième colonne de $M$}{17/24}
+\slider{$A\in\mat{n}{p}{\mathbb{K}}$, $B\in\mat{p}{q}{\mathbb{K}}$, $C\in\mat{n}{q}{\mathbb{K}}$\linebreak$C=A\times B$\linebreak$\forall k\in\llb1,q\rrb,\;\mathrm{C}_k\l{C}\r=\sum{j=1}{p}{b_{j,k}\mathrm{C}_j\l A\r}$}{17/24}
+\slideq{$T=\tmatrix({t_{1,1} \& \bullet \& \mdots \& \bullet \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& \bullet \\ 0 \& \mdots \& 0 \& t_{n,n}\\})\in\ts{n}{\mathbb K}$\linebreak$T^m$}{18/24}
+\slider{$T^m=\tmatrix({t_{1,1}^m \& \bullet \& \mdots \& \bullet \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& \bullet \\ 0 \& \mdots \& 0 \& t_{n,n}^m\\})$}{18/24}
+\slideq{$M=\tmatrix({a \& b \\ c \& d\\})\in\mat{2}{}{\mathbb{K}}$\linebreak$M^{-1}$}{19/24}
+\slider{$M^{-1}=\frac{1}{ad-bc}\tmatrix({d \& -b \\ -c \& a\\})$\linebreak${}=\frac{1}{\det M}\tmatrix({d \& -b \\ -c \& a\\})$}{19/24}
+\slideq{$\sym{n}{\mathbb K}$}{20/24}
+\slider{$\left\{M\in\mat{n}{}{\mathbb{K}},M=M^\top\right\}$}{20/24}
+\slideq{$D=\tmatrix({d_{1,1} \& 0 \& \mdots \& 0 \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ 0 \& \mdots \& 0 \& d_{n,n}\\})\in\diag{n}{\mathbb K}$\linebreak$D^m$}{21/24}
+\slider{$D^m=\tmatrix({d_{1,1}^m \& 0 \& \mdots \& 0 \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ 0 \& \mdots \& 0 \& d_{n,n}^m\\})$}{21/24}
 \slideq{Produit par blocs\linebreak$A\in\mat{n}{p}{\mathbb{K}}$\linebreak$B\in\mat{p}{m}{\mathbb{K}}$\linebreak$C=AB$}{22/24}
 \slider{$0=i_0<\cdots<i_q=m$\linebreak$0=j_0<\cdots<j_r=p$\linebreak$0=k_0<\cdots<k_s=m$\linebreak$A=\l A_{i_a,j_b}\r,\;B=\l B_{j_b,k_c}\r$\linebreak$C=\l C_{i_a,k_c}\r=\l\sum{b=1}{r}{A_{i_a,j_b}B_{j_b,k_c}}\r$}{22/24}
-\slideq{Système de Cramer}{23/24}
-\slider{$AX=B$ est de Cramer si $A$ est inversible\linebreak$AX=B$ a une unique solution $X=A^{-1}B$}{23/24}
-\slideq{Matrice de transvection $E\l i,j,\lambda\r$}{24/24}
-\slider{$\forall\l k,l\r\in\llb1,n\rrb^2\setminus\left\{\l i,j\r\right\},\;k\neq l,\;e_{k,l}=0$\linebreak$\forall k\in\llb1,n\rrb,\;e_{k,k}=1$\linebreak$e_{i,j}=\lambda$}{24/24}
+\slideq{Matrice de dilatation $E\l i,\lambda\r$}{23/24}
+\slider{$\forall\l k,l\r\in\llb1,n\rrb^2,\;k\neq l,\;e_{k,l}=0$\linebreak$\forall k\in\llb1,n\rrb\setminus\left\{i\right\},\;e_{k,k}=1$\linebreak$e_{i,i}=\lambda$}{23/24}
+\slideq{Matrice identité}{24/24}
+\slider{$I_n=\tmatrix({1 \& 0 \& \mdots \& 0 \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ 0 \& \mdots \& 0 \& 1\\})$}{24/24}
 \end{document}

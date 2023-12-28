@@ -25,7 +25,7 @@ Théorème de Pythagore;;$x\perp y\Leftrightarrow\left\|x+y\right\|^2=\left\|x\r
 Théorème de Pythagore généralisé;;$\left\|\sum{i=1}{n}{x_i}\right\|^2=\sum{i=1}{n}{\left\|x_i\right\|^2}$
 Famille orthogonale\linebreak Famille orthonormale;;$\l x_i\r_{i\in I}$ est orthogonale : $\forall\l i,j\r\in I^2,\;i\neq j\Rightarrow x_i\perp x_j$\linebreak$\l x_i\r_{i\in I}$ est orthonormée :\linebreak$\l x_i\r_{i\in I}$ est orthogonale et $\forall i\in I,\;\left\|x_i\right\|$
 Sous-espaces orthogonaux;;$F\perp G\Leftrightarrow\forall\l x,y\r\in F\times G,\;x\perp y$
-$X^\perp$;;$\left\{x\in E\;\middle|\;x\perp X\right\}$
+$X^\perp$;;$\left\{x\in E,x\perp X\right\}$
 Orhtogonal d'une union\linebreak Orthogonal d'une somme\linebreak Orthogonal d'une intersection;;$\l F\cup G\r^\perp=F^\perp\cap G^\perp$\linebreak$\l F+G\r^\perp=F^\perp\cap G^\perp$\linebreak$\l F\cap G\r^\perp=F^\perp+G^\perp$ (en dimension finie)\linebreak$\l F\cap G\r^\perp\supset F^\perp+G^\perp$ (sinon)
 Structure de l'orthogonal;;$X^\perp$ est un sous-espace vectoriel de $E$
 Double orthogonal;;$X\subset\l X^\perp\r^\perp$\linebreak En dimension finie, $X=\l X^\perp\r^\perp$
@@ -39,6 +39,6 @@ Expression de $\la x,y\ra$ dans la base orthonormée $\mathcal{B}=\l b_1,\cdots,
 Expression de $\left\|x\right\|^2$ dans la base orthonormée $\mathcal{B}=\l b_1,\cdots,b_n\r$;;$\left\|x\right\|=\sum{i=1}{n}{\la x,b_i\ra^2}$
 Si $\mathcal{B}=\l b_1,\cdots,b_n\r$ est une base orthonormée et $u\in\al E{}$\linebreak$\almat u{\mathcal B}{}$;;$\l\la b_i,u\l b_j\r\ra\r_{\left\{i,j\right\}\in\llb1,n\rrb^2}$\linebreak${}=\tmatrix({\la b_1,u\l b_1\r\ra\&\mdots\&\la b_1,u\l b_n\r\ra\\\vdots\&\plusdots\&\vdots\\\la b_n,u\l b_1\r\ra\&\mdots\&\la b_n,u\l b_n\r\ra\\})$
 Matrice orthogonale;;$P\in\mat{n}{}{\mathbb R}$ est orthogonale si et seulement si $P^\top P=I_n$
-Groupe orthogonal;;$\orth[n]{\mathbb R}=\left\{P\in\mat{n}{}{\mathbb{R}}\;\middle|\;P^\top P=I_n\right\}$
-Groupe spécial orthogonal;;$\so[n]{\mathbb R}=\left\{P\in\orth[n]{\mathbb R}\;\middle|\;\det P=1\right\}$
+Groupe orthogonal;;$\orth[n]{\mathbb R}=\left\{P\in\mat{n}{}{\mathbb{R}},P^\top P=I_n\right\}$
+Groupe spécial orthogonal;;$\so[n]{\mathbb R}=\left\{P\in\orth[n]{\mathbb R},\det P=1\right\}$
 $d\l x,F\r$;;$\min\limits_{y\in F}\l\left\|x-y\right\|\r=\left\|x-p_F\l x\r\right\|$

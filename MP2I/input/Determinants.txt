@@ -15,8 +15,8 @@ Déterminant d'un endomorphisme;;$\phi_u=\det u\phi$
 Caractérisation du déterminant par l'image d'une base;;$\det u=\det[\mathcal B]{u\l\mathcal B\r}$
 $u\in\al{E}{}$\linebreak$\det{\lambda u}$;;$\lambda^{\dim E}\det u$
 $\det{u\circ v}$;;$\det u\det v$
-$\sl E$;;$\ker\olddet=\left\{u\in\al E{}\;\middle|\;\det u=1\right\}$
-$\sl[n]{\mathbb K}$;;$\ker\olddet=\left\{A\in\matgl n{\mathbb K}\;\middle|\;\det A=1\right\}$
+$\sl E$;;$\ker\olddet=\left\{u\in\al E{},\det u=1\right\}$
+$\sl[n]{\mathbb K}$;;$\ker\olddet=\left\{A\in\matgl n{\mathbb K},\det A=1\right\}$
 $\det A$;;$\sum{\sigma\in\mathfrak S_n}{}{\eps\sigma a_{\sigma\l1\r,1}\cdots a_{\sigma\l n\r,n}}$\linebreak${}=\sum{\tau\in\mathfrak S_n}{}{\eps\tau a_{1,\tau\l1\r}\cdots a_{n,\tau\l n\r}}$
 $\tmatrix|{\lambda_1\&\bullet\&\mdots\&\bullet\\0\&\ddots\&\ddots\&\vdots\\\vdots\&\ddots\&\ddots\&\bullet\\0\&\mdots\&0\&\lambda_n\\}|$;;$\prod{i=1}{n}{\lambda_i}$
 $\tmatrix[\mtxbox{}{1}{1}\mtxbox{}{2}{2}\mtxbox{}{4}{4}][inner sep = 0.5ex, minimum width = 30pt, minimum height = 30pt, row sep = 1ex, column sep = 1ex,]|{A_1\&0\&\mdots\&0\\0\&A_2\&\ddots\&\vdots\\\vdots\&\ddots\&\ddots\&0\\0\&\mdots\&0\&A_n\\}|$;;$\prod{i=1}{n}{\det{A_i}}$

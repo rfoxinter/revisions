@@ -9,10 +9,10 @@ Fonctions en escalier;;$f\!:\!\left[a,b\right]\to\mathbb R$ est en escalier s'il
 Subdivision associée à $f\!:\!\left[a,b\right]\to\mathbb R$;;Subdivision de $\left[a,b\right]$ telle que $f$ soit constante sur les $\left]\sigma_i,\sigma_{i+1}\right[$
 Structure de $\esc{\left[a,b\right]}$;;Sous-espace vectoriel de $\mathbb R^{\left[a,b\right]}$
 Intégrale d'une fonction en escalier;;$\int[x][a][b]{f\l x\r}=\sum{i=0}{n-1}{\l \sigma_{i+1}-\sigma_i\r f_i}$\linebreak$f_i$ est la valeur constante de $f$ sur $\left]\sigma_i,\sigma_{i+1}\right[$
-$\esc[-]f$;;$\left\{g\in\esc{\left[a,b\right]}\;\middle|\;\forall x\in\left[a,b\right],\;g\l x\r\leqslant f\l x\r\right\}$
-$\esc[+]f$;;$\left\{g\in\esc{\left[a,b\right]}\;\middle|\;\forall x\in\left[a,b\right],\;g\l x\r\geqslant f\l x\r\right\}$
+$\esc[-]f$;;$\left\{g\in\esc{\left[a,b\right]},\forall x\in\left[a,b\right],\;g\l x\r\leqslant f\l x\r\right\}$
+$\esc[+]f$;;$\left\{g\in\esc{\left[a,b\right]},\forall x\in\left[a,b\right],\;g\l x\r\geqslant f\l x\r\right\}$
 Intégrabilité au sens de Riemann de $f$ sur $\left[a,b\right]$;;$\forall\varepsilon>0,\;\exists\l g,h\r\in\esc[-]f\times\esc[+]f$\linebreak$\int[x][a][b]{h\l x\r-g\l x\r}<\varepsilon$
-Intégrale de Riemann;;$\int[x][a][b]{f\l x\r}$\linebreak${}=\sup{\int[x][a][b]{g\l x\r}\;\middle|\;g\in\esc[-]f}$\linebreak${}=\inf{\int[x][a][b]{g\l x\r}\;\middle|\;g\in\esc[+]f}$
+Intégrale de Riemann;;$\int[x][a][b]{f\l x\r}$\linebreak${}=\sup{\int[x][a][b]{g\l x\r},g\in\esc[-]f}$\linebreak${}=\inf{\int[x][a][b]{g\l x\r},g\in\esc[+]f}$
 Critère d'intégrabilité de $f$ par encadrement;;$\exists\l\phi,\theta\r\in\esc{[a,b]}^2$\linebreak$\left|f\l x\r-\phi\l x\r\right|\leqslant\theta\l x\r\wedge\int[x][a][b]{\theta\l x\r}\leqslant\varepsilon$
 Critère séquentiel d'intégrabilité;;$\exists\l\l\phi_n\r,\l\theta_n\r\r\in\l\esc{\left[a,b\right]}^{\mathbb N}\r^2$\linebreak$\left|f\l x\r-\phi_n\l x\r\right|\leqslant\theta_n\l x\r$\linebreak$\lim[n\to+\infty]{\int[x][a][b]{\theta_n\l x\r}}=0$\linebreak$\lim[n\to+\infty]{\int[x][a][b]{\phi_n\l x\r}}=\int[x][a][b]{f\l x\r}$
 Moyenne de $f$ sur $\left[a,b\right]$;;$\frac{1}{b-a}\int[x][a][b]{f\l x\r}$

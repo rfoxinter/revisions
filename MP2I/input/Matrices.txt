@@ -15,9 +15,9 @@ Factorisation de $\l A+B\r^n$;;$\l A,B\r\in \mat{n}{}{\mathbb{K}}^2$ tel que $AB
 $D=\tmatrix({d_{1,1} \& 0 \& \mdots \& 0 \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ 0 \& \mdots \& 0 \& d_{n,n}\\})\in\diag{n}{\mathbb K}$\linebreak$D^m$;;$D^m=\tmatrix({d_{1,1}^m \& 0 \& \mdots \& 0 \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ 0 \& \mdots \& 0 \& d_{n,n}^m\\})$
 $T=\tmatrix({t_{1,1} \& \bullet \& \mdots \& \bullet \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& \bullet \\ 0 \& \mdots \& 0 \& t_{n,n}\\})\in\ts{n}{\mathbb K}$\linebreak$T^m$;;$T^m=\tmatrix({t_{1,1}^m \& \bullet \& \mdots \& \bullet \\ 0 \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& \bullet \\ 0 \& \mdots \& 0 \& t_{n,n}^m\\})$
 $T=\tmatrix({t_{1,1} \& 0 \& \mdots \& 0 \\ \bullet \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ \bullet \& \mdots \& \bullet \& t_{n,n}\\})\in\ti{n}{\mathbb K}$\linebreak$T^m$;;$T^m=\tmatrix({t_{1,1}^m \& 0 \& \mdots \& 0 \\ \bullet \& \ddots \& \ddots \& \vdots \\ \vdots \& \ddots \& \ddots \& 0 \\ \bullet \& \mdots \& \bullet \& t_{n,n}^m\\})$
-$\sym{n}{\mathbb K}$;;$\left\{M\in\mat{n}{}{\mathbb{K}}\;\middle|\;M=M^\top\right\}$
-$\ant{n}{\mathbb K}$;;$\left\{M\in\mat{n}{}{\mathbb{K}}\;\middle|\;M=-M^\top\right\}$
-$\gl{n}{\mathbb K}$;;$\left\{M\in\mat{n}{}{\mathbb{K}}\;\middle|\;\exists N\in\mat{n}{}{\mathbb{K}}\;\middle|\;MN=I_n\right\}$
+$\sym{n}{\mathbb K}$;;$\left\{M\in\mat{n}{}{\mathbb{K}},M=M^\top\right\}$
+$\ant{n}{\mathbb K}$;;$\left\{M\in\mat{n}{}{\mathbb{K}},M=-M^\top\right\}$
+$\gl{n}{\mathbb K}$;;$\left\{M\in\mat{n}{}{\mathbb{K}},\exists N\in\mat{n}{}{\mathbb{K}},MN=I_n\right\}$
 $M=\tmatrix({a \& b \\ c \& d\\})\in\mat{2}{}{\mathbb{K}}$\linebreak$M^{-1}$;;$M^{-1}=\frac{1}{ad-bc}\tmatrix({d \& -b \\ -c \& a\\})$\linebreak${}=\frac{1}{\det M}\tmatrix({d \& -b \\ -c \& a\\})$
 $M=\tmatrix({a \& b \\ c \& d\\})\in\mat{2}{}{\mathbb{K}}$\linebreak$\det M=\tmatrix|{a \& b \\ c \& d \\}|$;;$ad-bc$
 Matrice de transposition $E\l i,j\r$;;$\forall\l k,l\r\in\llb1,n\rrb^2\setminus\left\{\l i,j\r,\l j,i\r\right\},\;k\neq l,\;e_{k,l}=0$\linebreak$\forall k\in\llb1,n\rrb\setminus\left\{i,j\right\},\;e_{k,k}=1$\linebreak$e_{i,i}=e_{j,j}=0$\linebreak$e_{i,j}=e_{j,i}=1$

@@ -12,4 +12,4 @@ Relation d'équivalence;; Réflexive, symétrique et transitive\linebreak Notée
 Relation d'ordre large;; Réflexive, antisymétrique et transitive\linebreak Notée $\leqslant$ ou $\geqslant$
 Relation d'ordre strict;; Irréflexive et transitive\linebreak Notée $<$ ou $>$
 !!fstLa relation d'équivalence $\R$ est une congruence sur $\l E,\times_1,\cdots,\times_n\r$;;$\forall\l x,x^\prime,y,y^\prime\r\in E^4,\;\forall i\in\llb1,n\rrb\linebreak\l x\R x^\prime\r\wedge\l y\R y^\prime\r\Rightarrow\l x\times_iy\r\R\l x^\prime\times_iy^\prime\r$
-!!fstThéorème de la factorisation d'une application constante sur les classes d'équivalences;;$\l\forall\l x,y\r\in E^2,\;x\R y\Rightarrow f\l x\r=f\l y\r\r\linebreak\Leftrightarrow\l\exists g\!:\!E/\R\to F\;\middle|\;f=g\circ\pi_\R\r$
+!!fstThéorème de la factorisation d'une application constante sur les classes d'équivalences;;$\l\forall\l x,y\r\in E^2,\;x\R y\Rightarrow f\l x\r=f\l y\r\r\linebreak\Leftrightarrow\l\exists g\!:\!E/\R\to F,f=g\circ\pi_\R\r$
