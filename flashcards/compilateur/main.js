@@ -30,9 +30,9 @@ function toTitle(str) {
     return str.replace(
         /\w\S*/g,
         function(txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         }
-    );
+    ).replaceAll(/[ ]/g, '');
 }
 
 function array_to_string(arr) {
@@ -54,8 +54,8 @@ function bl(str) {
     throw new Error('The value is not a Boolean');
 }
 
-function removeSpecialChars(s) {
-    s = s.replaceAll(/[ ]/g, '');
+function removeSpecialChars(s, removeSpaces = true) {
+    if (removeSpaces) {s = s.replaceAll(/[ ]/g, '');}
     s = s.replaceAll(/[àáâä]/g, 'a');
     s = s.replaceAll(/[èéêë]/g, 'e');
     s = s.replaceAll(/[îï]/g, 'i');
@@ -139,9 +139,9 @@ function main_flash(fileContent) {
             t = r[0];
             ttle = r[0].split('--');
             if (ttle.length === 1) {
-                ttle = toTitle(removeSpecialChars(ttle[0]));
+                ttle = toTitle(removeSpecialChars(ttle[0], false));
             } else {
-                ttle = toTitle(removeSpecialChars(ttle[1]));
+                ttle = toTitle(removeSpecialChars(ttle[1], false));
             }
         }
 
@@ -213,9 +213,9 @@ function main_html(fileContent) {
             t = r[0];
             ttle = r[0].split('--');
             if (ttle.length === 1) {
-                ttle = toTitle(removeSpecialChars(ttle[0]));
+                ttle = toTitle(removeSpecialChars(ttle[0], false));
             } else {
-                ttle = toTitle(removeSpecialChars(ttle[1]));
+                ttle = toTitle(removeSpecialChars(ttle[1], false));
             }
         }
 
