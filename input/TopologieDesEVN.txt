@@ -1,0 +1,48 @@
+TopologieDesEVN!!ttleTopolgie -- Topologie des espaces vectoriels normés
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{topologie}\usepackage{analyse}\usepackage{usuelles}\usepackage{polynomes}\usepackage[arc]{complexes}\usepackage{al}
+Identité du parallélogramme;;$\nrm{x+y}^2+\nrm{x-y}^2=2\nrm x^2+2\nrm y^2$
+Normes usuelles sur $\mathbb K^n$;;$\anrm[1]{x}=\sum{k=0}{n}{\vala{x_k}}$\linebreak$\anrm[2]{x}=\sqrt{\sum{k=0}{n}{\vala{x_k}^2}}$\linebreak$\anrm{x}=\max{\left\{\vala{x_k},k\in\llb1,n\rrb\right\}}$
+Normes usuelles sur $l_\mathbb K\l\mathbb N\r$;;$u\in l_\mathbb K^1\l\mathbb N\r$ : $\anrm[1]{u}=\sum{k=0}{+\infty}{\vala{u_k}}$\linebreak$u\in l_\mathbb K^2\l\mathbb N\r$ : $\anrm[2]{u}=\sqrt{\sum{k=0}{+\infty}{\vala{u_k}^2}}$\linebreak$u\in l_\mathbb K^\infty\l\mathbb N\r$ : $\anrm{u}=\sup{\left\{\vala{u_k},k\in\mathbb N\right\}}$
+Normes usuelles sur $\mathcal C\l\left[a,b\right]\r$;;$\anrm[1]{f}=\int[t][a][b]{\vala{f\l t\r}}$\linebreak$\anrm[2]{f}=\sqrt{\int[t][a][b]{\vala{f\l t\r}^2}}$\linebreak$\anrm{f}=\sup{\left\{\vala{f\l x\r},x\in\left[a,b\right]\right\}}$
+Normes usuelles sur $\pol KX$\linebreak Normes avec les coefficients;;$\anrm[1]{P}=\sum{k=0}{\deg P}{\vala{p_k}}$\linebreak$\anrm[2]{P}=\sqrt{\sum{k=0}{\deg P}{\vala{p_k}^2}}$\linebreak$\anrm{P}=\max{\left\{\vala{p_k},k\in\llb1,\deg P\rrb\right\}}$
+Normes usuelles sur $\pol KX$\linebreak Normes avec les valeurs;;$\anrm[1]{P}=\int[t][a][b]{\vala{P\l t\r}}$\linebreak$\anrm[2]{P}=\sqrt{\int[t][a][b]{\vala{P\l t\r}^2}}$\linebreak$\anrm{P}=\sup{\left\{\vala{P\l x\r},x\in\left[a,b\right]\right\}}$
+$\mathring A$;;$\left\{x\in A,\exists\varepsilon>0,\mathcal B\l x,\varepsilon\r\subset A\right\}$
+$E\setminus\bar A$;;$\mathring{\arc{E\setminus A}}$
+$E\setminus\mathring A$;;$\bar{E\setminus A}$
+$\frt A$;;$\bar A\setminus\mathring A$
+$f\!:\!A\to B$ est une isométrie;;$f\l A\r=B$\linebreak$\forall\l a,a'\r\in A^2$, $\nrm{f\l a\r-f\l a'\r}=\nrm{a-a'}$
+$\nnrm{u}$;;$\sup{\left\{\nrm{u\l x\r},x\in E,\nrm x=1\right\}}$
+Propriétés de $\nnrm\cdot$;;$\nnrm{u\circ v}\leqslant\nnrm u\times\nnrm v$\linebreak$\nnrm\id=1$\linebreak$\nnrm{u^{-1}}\geqslant\frac1{\nrm u}$
+$\varphi\in\al[]{E_1\times\cdot\times E_n}{F}$\linebreak$\nnrm\varphi$;;$\oldsup\limits_{{\substack{\l x_1,\cdots,x_n\r\in E_1\times\cdots\times E_n\\N_1\l x_1\r=\cdots=N_n\l x_n\r=1}}}\l\nrm{\varphi\l x_1,\cdots, x_n\r}\r$
+$N$ et $N'$ sont équivalentes;;$\exists\l\alpha,\beta\r\in\l\mathbb R_+^*\r^2$, $\alpha N\leqslant N'\leqslant\beta N$
+Image continue d'un compact;;Si $f$ est continue et $K$ un compact, alors $f\l K\r$ est un compact
+Théorème des bornes atteintes;;Si $K$ est un compact non vide et $f$ une application continue, alors $f$ est bornée sur $K$ et atteint ses bornes
+Théorème de Heine;;Si $f$ est une application continue sur un compact, alors $f$ est uniformément continue
+Théorème de Borel-Lebesgue;;Si $K$ est un compact et $\l\varOmega_i\r_{i\in I}$ une famille d'ouverts telle que $K\subset\bigcup{i\in I}{}{\varOmega_i}$\linebreak Alors, il existe $J\subset I$ fini tel que $K\subset\bigcup{i\in J}{}{\varOmega_i}$
+Chemin joignant $x\in E$ à $y\in E$;;Application $\gamma$ continue de $\left[0,1\right]$ dans $E$ telle que $\gamma\l0\r=x$ et $\gamma\l1\r=y$
+$A$ est une partie connexe par arcs de $E$;;$\forall\l x,y\r\in A^2$, il existe un chemin joignant $x$ à $y$
+$A$ est une partie étoilée de $E$;;$\exists a\in A$, $\forall x\in A$, $\left[a,x\right]\subset A$
+Image continue d'un connexe par arcs;;Si $f$ est continue et $A$ une partie connexe par arcs, alors $f\l A\r$ est connexe par arcs
+$A$ est connexe;;Les seules parties ouvertes et fermées de $A$ sont $A$ et $\varnothing$
+Image continue d'un connexe;;Si $f$ est continue et $A$ connexe, alors $f\l A\r$ est connexe
+Caractérisation des convexes par les applications continues;;$A$ est connexe si et seulement si toute application continue de $A$ dans $\left\{0,1\right\}$ est constante
+Théorème de Bolzano-Weirstrass;;Dans un evn de dimension finie, toute suite bornée admet une valeur d'adhérence
+Théorème de Riesz;;$E$ est de dimension finie si et seulement si sa boule unité est fermée
+$f\!:\!E\to\mathbb K$ est une application polynomiale sur $E$ de base $\l e_1,\cdots,e_n\r$;;Si $x=\sum{k=1}{n}{x_ke_k}$\linebreak$\exists\l\lambda_{k_1,\cdots,k_n}\r_{\l k_1,\cdots,k_n\r\in\mathbb N^n}\in\mathbb K^{\l\mathbb N^n\r}$, $f\l x\r=\sum{\l k_1,\cdots,k_n\r\in\mathbb N^n}{}{\lambda_{k_1,\cdots,k_n}x_1^{k_1}\cdots x_n^{k_n}}$
+Continuité des applications polynomiales;;Une application polynomiale dans un evn de dimension finie est continue
+$u\in\al{E}{}$\linebreak$\exp u$;;$\sum{n=0}{+\infty}{\frac{u^n}{n!}}$
+Normes usuelles sur $\mat{n}{p}{\mathbb{K}}$;;$\anrm[1]{M}=\sum{i=1}{n}{\sum{j=1}{p}{\vala{m_{i,j}}}}$\linebreak$\anrm[2]{M}=\sqrt{\sum{i=1}{n}{\sum{j=1}{p}{\vala{m_{i,j}}^2}}}$\linebreak$\anrm{M}=\max{\left\{\vala{m_{i,j}},i\in\llb1,n\rrb,j\in\llb1,p\rrb\right\}}$
+Expression de $\anrm[2]M$ avec $\oldtr$;;$\anrm[2]M=\sqrt{\tr{\bar{M}^\top M}}$
+Produit scalaire canonique sur $\mat n{}{\mathbb R}$;;$\left\langle A,B\right\rangle=\tr{A^\top B}$
+$M\in\mat n{}{\mathbb K}$\linebreak$\nnrm{M}$;;$\sup{\left\{\nrm{MX},X\in\mat n1{\mathbb K},\nrm X=1\right\}}$
+$M\in\mat n{}{\mathbb K}$ telle que $\nrm M<1$\linebreak$\serie{M^k}$;;$I_n-M\in\matgl n{\mathbb K}$ et $\sum{k=0}{+\infty}{M^k}=\l I_n-M\r^{-1}$
+$M\in\mat n{}{\mathbb K}$\linebreak$\exp M$;;$\sum{n=0}{+\infty}{\frac{M^n}{n!}}$
+$\sp{\exp M}$;;$\left\{\e^\lambda,\lambda\in\sp M\right\}$
+Espace complet;;Espace métrique où les suites de Cauchy sont convergeantes
+Espace de Banach;;Evn complet
+Espace de Hilbert;;Espace préhilbertien réel complet
+Définition alternative d'un espace complet;;Espace où toute suite convergeant absolument est convergeante
+Partie complète $A$ d'un espace métrique $E$;;Toute suite de Cauchy dans $A$ est convergeante dans $A$
+Théorème du point fixe de Picard;;Soit $A$ une partie complète d'un espace métrique $E$ et $f\!:\!A\to A$ une application $k$-contractante (i.e. $k$-lipsichtzienne, $k<1$)\linebreak$f$ a un unique poitn fixe $p\in A$\linebreak La suite définie par $u_0\in A$ et $u_{n+1}=f\l u_n\r$ converge vers $p$ et $d\l u_n,p\r\leqslant\frac{k^n}{1-k}d\l u_1,u_0\r$
