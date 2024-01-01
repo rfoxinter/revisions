@@ -492,6 +492,7 @@ function config_src(src) {
                 document.getElementById("alias").value = result.alias;
                 document.getElementById("fl_name").checked = result.orig_name;
                 ch_clicked();
+                document.getElementById("fl_closed").checked = result.close;
                 document.getElementById("auto_upd").checked = result.auto_upd;
                 document.getElementById("root").value = result.root;
             }
