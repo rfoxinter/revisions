@@ -2,7 +2,7 @@ TopologieDesEVN!!ttleTopolgie -- Topologie des espaces vectoriels normés
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{topologie}\usepackage{analyse}\usepackage{usuelles}\usepackage{polynomes}\usepackage[arc]{complexes}\usepackage{al}
-Identité du parallélogramme;;$\nrm{x+y}^2+\nrm{x-y}^2=2\nrm x^2+2\nrm y^2$
+Identité du parallélogramme;;Pour une norme assiciée à un produit scalaire\linebreak$\nrm{x+y}^2+\nrm{x-y}^2=2\nrm x^2+2\nrm y^2$
 Normes usuelles sur $\mathbb K^n$;;$\anrm[1]{x}=\sum{k=0}{n}{\vala{x_k}}$\linebreak$\anrm[2]{x}=\sqrt{\sum{k=0}{n}{\vala{x_k}^2}}$\linebreak$\anrm{x}=\max{\left\{\vala{x_k},k\in\llb1,n\rrb\right\}}$
 Normes usuelles sur $l_\mathbb K\l\mathbb N\r$;;$u\in l_\mathbb K^1\l\mathbb N\r$ : $\anrm[1]{u}=\sum{k=0}{+\infty}{\vala{u_k}}$\linebreak$u\in l_\mathbb K^2\l\mathbb N\r$ : $\anrm[2]{u}=\sqrt{\sum{k=0}{+\infty}{\vala{u_k}^2}}$\linebreak$u\in l_\mathbb K^\infty\l\mathbb N\r$ : $\anrm{u}=\sup{\left\{\vala{u_k},k\in\mathbb N\right\}}$
 Normes usuelles sur $\mathcal C\l\left[a,b\right]\r$;;$\anrm[1]{f}=\int[t][a][b]{\vala{f\l t\r}}$\linebreak$\anrm[2]{f}=\sqrt{\int[t][a][b]{\vala{f\l t\r}^2}}$\linebreak$\anrm{f}=\sup{\left\{\vala{f\l x\r},x\in\left[a,b\right]\right\}}$

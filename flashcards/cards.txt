@@ -9,9 +9,11 @@ https://rfoxinter.github.io/revisions/flashcards/
 20231228225612
 ./Analyse/Integration
 20231121230825
+./Analyse/SeriesDeFonctions
+20240101223902
 ./Analyse/SeriesNumeriques
 20230924163108
 ./Analyse/SuitesDeFonctions
 20231228225723
 ./Topolgie/TopologieDesEVN
-20231228235019
+20240101223137

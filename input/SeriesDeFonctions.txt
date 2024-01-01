@@ -1,0 +1,9 @@
+Analyse -- Séries de fonctions
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse}\newcommand{\cv}[2][]{\xrightarrow[\scriptscriptstyle{#2}]{\scriptscriptstyle{\text{#1}}}}\newcommand{\vala}[1]{\left|#1\right|}
+CVU d'une série de fonctions;;$\serie{u_n}$ CVU sur $A$ si et seulement si $u_n$ CVS sur $A$ et $\anrm{R_n}\cv{n\to+\infty}0$
+$\serie{u_n}$ converge normalement sur $A$;;$u_n$ est bornée sur $A$ pour tout $n$\linebreak$\serie{\anrm{u_n}}$ converge
+Dérivation terme à terme;;Si $\forall n\in\mathbb N$, $u_n$ est de classe $\mathcal C^1$ sur $I$, $\serie{u_n}$ CVS sur $I$, $\serie{u_n'}$ CVU sur $I$\linebreak Alors, $\sum{n=0}{+\infty}{u_n}$ est de classe $\mathcal C^1$ sur $I$, $S'=\sum{n=0}{+\infty}{u_n'}$, $\serie{u_n}$ CVU sur tout segment de $I$
+Dérivation terme à terme pour la classe $\mathcal C^k$;;Si $\forall n\in\mathbb N$, $u_n$ est de classe $\mathcal C^k$ sur $I$, $\serie{u_n^{\l k\r}}$ CVU sur $I$, $\forall j\in\llb1,k-1\rrb$, $\serie{u_n^{\l j\r}}$ CVS sur $I$\linebreak Alors, $\sum{n=0}{+\infty}{u_n}$ est de classe $\mathcal C^k$ sur $I$, $\forall j\in\llb0,k\rrb$, $S^{\l j\r}=\sum{n=0}{+\infty}{u_n^{\l j\r}}$ et $\serie{u_n^{j}}$ CVU sur tout segment de $I$
+Théorème de sommation $L^1$;;Si $u_n$ est intégrable sur $I$, $\serie{u_n}$ CVS vers $S$ sur $I$, $\serie{\int[][I]{\vala{u_n}}}$ converge\linebreak Alors, $S=\sum{n=0}{+\infty}{u_n}$ est intégrable, $\int[t][I]{S\l t\r}=\sum{n=0}{+\infty}{\int[t][I]{u_n\l t\r}}$
