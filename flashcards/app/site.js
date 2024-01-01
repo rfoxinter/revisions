@@ -54,10 +54,10 @@ function download_text(start, title, file, filename) {
 
 }
 
-async function sync(url, name) {
+async function sync(url, name, message = true) {
     try {
         response = await fetch(url);
-    } catch(error) {window.alert('Impossible de rafraîchir le fichier');}
+    } catch(error) {if (message) {window.alert('Impossible de rafraîchir le fichier');}}
     if (response.status == 200) {
         const jsCode = await response.text();
         let ls = jsCode.split('\n'); let found = false;
@@ -80,13 +80,13 @@ async function sync(url, name) {
                         card[i].href = href[i];
                     }
                     window.alert('Mise à jour téléchargée');
-                } else {window.alert('Le fichier est à jour.');}
+                } else {if (message) {window.alert('Le fichier est à jour.');}}
                 found = true;
                 break;
             }
         }
-        if (!found) {window.alert('Le fichier n\'est pas disponible');}
-    } else {window.alert('Impossible de rafraîchir le fichier');}
+        if (!found) {if (message) {window.alert('Le fichier n\'est pas disponible');}}
+    } else {if (message) {window.alert('Impossible de rafraîchir le fichier');}}
 }
 
 async function sync_upload(name) {

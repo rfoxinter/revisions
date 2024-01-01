@@ -265,6 +265,30 @@ function read_date(_url, _name) {
     });
 }
 
+function read_upd(_url) {
+    var open = indexedDB.open("flcrddb");
+    open.onsuccess = function(event) {
+        var db = event.target.result;
+        var tx = db.transaction("flcrd", "readonly");
+        var store = tx.objectStore("flcrd");
+
+        var getRequest = store.get(_url);
+
+        getRequest.onsuccess = function(event) {
+            var result = event.target.result;
+            if (result) {
+                return result.auto_upd;
+            } else {
+                return false;
+            }
+        };
+
+        tx.oncomplete = function() {
+            db.close();
+        };
+    };
+}
+
 function read_name(_url, _name) {
     return new Promise(function(resolve, reject) {
         var open = indexedDB.open("flcrddb");
@@ -380,14 +404,14 @@ function refresh() {
     }
 }
 
-function add_config(_url, _alias, _orig_name, _root, closed) {
+function add_config(_url, _alias, _orig_name, _root, closed, auto_upd) {
     var open = indexedDB.open("flcrddb");
     open.onsuccess = function(event) {
         var db = event.target.result;
         var tx = db.transaction("flcfg", "readwrite");
         var store = tx.objectStore("flcfg");
 
-        store.put({url: _url, alias: _alias, orig_name: _orig_name, root: _root, close: closed});
+        store.put({url: _url, alias: _alias, orig_name: _orig_name, root: _root, close: closed, auto_upd: auto_upd});
 
         tx.oncomplete = function() {
             db.close();
@@ -468,6 +492,7 @@ function config_src(src) {
                 document.getElementById("alias").value = result.alias;
                 document.getElementById("fl_name").checked = result.orig_name;
                 ch_clicked();
+                document.getElementById("auto_upd").checked = result.auto_upd;
                 document.getElementById("root").value = result.root;
             }
         };
@@ -493,7 +518,7 @@ function set_config() {
             if (result) {
                 await store.delete(src);
             }
-            add_config(src, document.getElementById("alias").value==""?src:document.getElementById("alias").value, document.getElementById("fl_name").checked, document.getElementById("root").value, document.getElementById("fl_closed").checked);
+            add_config(src, document.getElementById("alias").value==""?src:document.getElementById("alias").value, document.getElementById("fl_name").checked, document.getElementById("root").value, document.getElementById("fl_closed").checked, document.getElementById("auto_upd").checked);
             window.alert("Configuration appliquée");
             document.getElementById('download').style.display = 'block';
             document.getElementById('config').style.display = 'none';

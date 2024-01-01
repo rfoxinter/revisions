@@ -1,5 +1,6 @@
 // var fldebug;
 async function loadBook(src, file) {
+    if (read_upd) {sync(src, file, false);}
     var open = indexedDB.open("flcrddb");
     open.onsuccess = function(event) {
         var db = event.target.result;

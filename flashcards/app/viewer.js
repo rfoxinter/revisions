@@ -16,6 +16,7 @@ function copyArray(array) {
 var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed; var nth; var arr; var wrong = []; var qr = [0, 1]; var id;
 
 async function loadFile(src, file) {
+    if (read_upd) {sync(src, file, false);}
     var open = indexedDB.open("flcrddb");
     open.onsuccess = function(event) {
         var db = event.target.result;
