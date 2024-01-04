@@ -6,8 +6,8 @@ Q/R & R/Q : False
 Équation de Maxwell-Thomson;;$\div\vec B=0$
 Équation de Maxwell-Faraday;;$\rot\vec E=-\pder[][t]{\vec B}{}$
 Équation de Maxwell-Ampère;;$\rot\vec B=\mu_0\vec\jmath+\mu_0\varepsilon_0\pder[][t]{\vec E}{}$
-Formule d'Ostrogradski;;$\displaystyle{\varoiint_S}\vec F\cdot\d\vec S=\displaystyle{\iiint_V}\div\vec F\d V$
+Formule d'Ostrogradski;;$\displaystyle{\varoiint_S}\vec F\cdot\d\vec S=\displaystyle{\iiint_V}\div\vec F\d\tau$
 Formule de Stokes;;$\displaystyle{\oint_\varGamma}\vec F\cdot\d\vec l=\displaystyle{\iint_S}\rot\vec F\cdot\d\vec S$
 Équation de Poisson;;$\Delta V=-\frac\rho{\varepsilon_0}$
 Équation locale de la conservation de la charge;;$\pder[][t]{\rho}{}+\div\vec\jmath=0$
-Équation globale de la conservation de la charge;;$\displaystyle{\iiint_V}\rho\d V+\displaystyle{\varoiint_S}\vec\jmath\cdot\d\vec S=0$
+Équation globale de la conservation de la charge;;$\displaystyle{\iiint_V}\rho\d\tau+\displaystyle{\varoiint_S}\vec\jmath\cdot\d\vec S=0$

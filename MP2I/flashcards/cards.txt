@@ -70,6 +70,6 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Fondements/SommesEtProduits
 20230703152506
 ../MP2I/flashcards/Probabilites/EspacesProbabilises
-20231228231013
+20240104172050
 ../MP2I/flashcards/Probabilites/VariablesAleatoires
 20230916200833
