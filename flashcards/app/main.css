@@ -3,6 +3,14 @@ p, ul {
     margin-bottom: 0;
 }
 
+body::-webkit-scrollbar {
+    display: none; /* Most browsers */
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 @media print {
     .no_print, .down-button, .up-button {
         display: none !important;
