@@ -24,6 +24,7 @@
 
 \newcommand{\togglebigoppar}{\comparestring{\bigopleftp}{}{\def\bigopleftp{\l}\def\bigoprightp{\r}}{\def\bigopleftp{}\def\bigoprightp{}}}
 \newcommand{\togglebigoplimits}{\comparestring{\bigoplimits}{\limits}{\def\bigoplimits{\nolimits}}{\def\bigoplimits{\limits}}}
+\newcommand{\autobigoplimits}{\def\bigoplimits{}}
 \newcommand{\togglebigopdisplay}{\comparestring{\bigopdisplay}{}{\def\bigopdisplay{\displaystyle}}{\def\bigopdisplay{}}}
 
 \let\oldsum\sum\renewcommand\sum[3]{{\bigopdisplay\oldsum\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
