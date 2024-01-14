@@ -130,7 +130,7 @@ ${defs}
 
 function main_flash(fileContent) {
     return new Promise(async function(resolve, reject) {
-        const r = fileContent.split('\n');
+        const r = fileContent.replaceAll('\r', '').split('\n');
         let t, ttle;
 
         if (r[0].includes('!ttle')) {
@@ -204,7 +204,7 @@ ${text}
 
 function main_html(fileContent) {
     return new Promise(async function(resolve, reject) {
-        const r = fileContent.split('\n');
+        const r = fileContent.replaceAll('\r', '').split('\n');
         let t, ttle;
 
         if (r[0].includes('!ttle')) {
