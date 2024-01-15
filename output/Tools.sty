@@ -1,5 +1,5 @@
-\newif\if@nopgffor\@nopgfforfalse
-\DeclareOption{nopgffor}{\@nopgffortrue}
+\newif\if@usepgffor\@usepgffortrue
+\DeclareOption{nopgffor}{\@usepgfforfalse}
 \DeclareOption*{}
 \ProcessOptions\relax
 
@@ -28,7 +28,7 @@
 }
 \makeatother
 
-\if@nopgffor
+\if@usepgffor
     \RequirePackage{pgffor}
     \makeatletter
     \def\toolsfindlist{}
