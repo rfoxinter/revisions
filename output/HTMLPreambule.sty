@@ -37,6 +37,13 @@
 \renewcommand{\right}{\aftergroup\egroup\oldright}
 \let\oldfrac\frac
 \let\frac\dfrac
+\newcommand{\toggledfrac}{
+    \ifx\frac\dfrac%
+        \let\frac\oldfrac
+    \else
+        \let\frac\dfrac
+    \fi
+}
 \let\oldvec\vec
 \renewcommand{\vec}{\overrightarrow}
 \renewcommand*{\overrightarrow}[1]{\vbox{\halign{##\cr\scriptsize\rightarrowfill\cr\noalign{\nointerlineskip\vskip1pt}$#1\mskip2mu$\cr}}}
