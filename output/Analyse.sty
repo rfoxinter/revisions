@@ -105,7 +105,7 @@
         \def\intargI{{{}\oldd}#1}
     \fi\tmpint}
 \newcommand{\tmpint}[1][]{\def\intargII{#1}\tmptmpint}
-\newcommand{\tmptmpint}[2][]{\displaystyle{\oldint_{\intargII}^{#1}}\analyseleftp#2\analyserightp\intargI}
+\newcommand{\tmptmpint}[2][]{{\displaystyle\oldint_{\intargII}^{#1}}\analyseleftp#2\analyserightp\intargI}
 \newcommand{\eval}[1][]{\def\evalargI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\evalargI}^{#1}}
 \newcommand{\serie}[1]{\oldsum#1}
