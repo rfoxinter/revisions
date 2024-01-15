@@ -236,7 +236,7 @@ QUESTION;;RÉPONSE
 \vspace{-\belowdisplayskip}
 
 Le titre doit être de la forme \texttt{Thème -{}- Chapitre} ou \texttt{Chapitre}.
-On peut aussi spécifier un titre racourci pour le nom du fichier avec \texttt{Titre\_raccourci!!ttleTitre classique} où le titre raccourci ne peut pas contenir d'espaces ou de caractères spéciaux, et titre classique étant de la forme des seux premiers.
+On peut aussi spécifier un titre racourci pour le nom du fichier avec \texttt{Titre\_raccourci!!ttleTitre classique} où le titre raccourci ne peut pas contenir d'espaces ou de caractères spéciaux, et le titre classique étant de la forme des deux premiers.
 
 La ligne 2 indique si le programme peut ou non mettre un ordre aléatoire pour les questions.
 
@@ -291,7 +291,7 @@ Un exemple de fichier python générant un tel fichier est disponible à l'adres
 \mcmd[\footnotemark]{\oldfrac{a}{b}}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\frac?}
 \mcmd[\footnotemark]{\frac{a}{b}}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\dfrac?}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\dfrac?\\Il est possible de changer le type de fraction par défaut (entre \mintinline{latexmath}?\frac? et \mintinline{latexmath}?\dfrac?) avec la commande \mintinline{latex}?\toggledfrac?)}
 \mcmd[\footnotemark]{l}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ell?\\Le $l$ peut être redéfini en $\oldl$ avec \mintinline{latex}?\usepackage[noell]{premabule}?}
 \mcmd[\footnotemark]{\oldvec{x}}
@@ -300,7 +300,7 @@ Un exemple de fichier python générant un tel fichier est disponible à l'adres
 \mcmd[\footnotemark]{\overrightarrow{AB}}
 \footnotetext{Le résultat est le même qu'avec \mintinline{latexmath}?\vec?}
 \mmcmd[\footnotemark]{\fakebold}{Permet de produire des caractères mathématiques en gras}
-\footnotetext{Il est par exemple possible de produire $\fakebold{\mathbb{R}}$ avec \mintinline{latex}?$\fakebold{\mathbb{R}}$?\\Il est recommandé de n'utiliser cette commande que lorsque les caractères en gras ne sont pas disponibles avec \mintinline{latex}?\boldmath?\\Exemple de comparaison \mintinline{latexmath}?\fakebold? - \mintinline{latex}?\boldmath? avec le caractère normal: {\boldmath$\mathcal M$}$\fakebold{\mathcal M}$$\mathcal M$}
+\footnotetext{Il est par exemple possible de produire $\fakebold{\mathbb{R}}$ avec \mintinline{latex}?$\fakebold{\mathbb{R}}$?\\Il est recommandé de n'utiliser cette commande que lorsque les caractères en gras ne sont pas disponibles avec \mintinline{latex}?\boldmath?\\Exemple de comparaison \mintinline{latex}?\boldmath? - \mintinline{latexmath}?\fakebold? avec le caractère normal: {\boldmath$\mathcal M$}$\fakebold{\mathcal M}$$\mathcal M$}
 \subsection{L'option {\color{namecolour}\texttt{nofont}}}
 Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n'a pas de commande \mintinline{latexmath}?\llbracket? et\linebreak\mintinline{latexmath}?\rrbracket?, il faut mettre les commandes \mintinline{latex}?\newcommand{\llbracket}{\commandellb}? et \mintinline{latex}?\newcommand{\rrbracket}{\commanderrb}? avant \mintinline{latex}?\usepackage{preambule}?. Dans ces commandes, \mintinline{latex}?\commandellb? correspond à la commande pour obtenir $\llbracket$ et \mintinline{latex}?\commanderrb? correspond à la commande pour obtenir $\rrbracket$. Ces deux commandes doivent être remplacées par << \texttt{.} >> si la police utilisée n'a pas ce caractère : \mintinline{latex}?\newcommand{\llbracket}{.}? (idem pour {\color{keycolour}\texttt{\textbackslash llbracket}}).
 \pagebreak\subsection{Commandes de \texttt{Preambule.sty}}
@@ -408,7 +408,7 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd[\footnotemark]{\mpder[x,y,z]{}{f(x,y,z)}}
 \footnotetext{Sans argument optionnel, \mintinline{latexmath}?\mpder? agit comme \mintinline{latexmath}?\pder? et les arguments obligatoires sont les mêmes que pour \mintinline{latexmath}?\der?}
 \mcmd[\footnotemark]{\mpder[x_1,x_2,x_3,x_3]{f(X)}{}}
-\footnotetext{\mintinline{latexmath}?\mpder? peut ne pas marcher avec des variables de plusieurs lettres\\Si la commande n'affiche pas le résultat attendu avec des variables de plusieurs lettres, il faut utiliser \mintinline{latex}?\usepackage[dvar]{analyse}?\\Cette option importe automatiquement \texttt{pgffor} (qui est utilisé importé par \tikzlg{} et \href{https://ctan.org/pkg/pgf}{\color{black}PGF})}
+\footnotetext{\mintinline{latexmath}?\mpder? peut ne pas marcher avec des variables de plusieurs lettres\\Si la commande n'affiche pas le résultat attendu avec des variables de plusieurs lettres, il faut utiliser \mintinline{latex}?\usepackage[dvar]{analyse}?\\Cette option importe automatiquement \texttt{pgffor} (qui est utilisé par \tikzlg{} et \href{https://ctan.org/pkg/pgf}{\color{black}PGF})}
 \mcmd[\footnotemark]{\oldint}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\int?}
 \mcmd{\int{f}}
@@ -779,14 +779,15 @@ est produite avec le code suivant
 \end{minted}
 \vspace{-\belowdisplayskip}
 \hsection{Tools.sty}
-Ce fichier fournit des commandes latex utiles pour créer des macros.
+Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 
 \vspace{0.5cm}
 
 \mhd
 \nmcmd{\comparestring{a}{b}{if}{else}}{Compare les chaînes de caractères \mintinline{latex}?a? et \mintinline{latex}?b?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est égal à \mintinline{latex}?b? et le \mintinline{latex}?else? sinon}
 \nmcmd{\compareint{a}{b}{if}{else}}{Compare les entiers \mintinline{latex}?a? et \mintinline{latex}?b?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est égal à \mintinline{latex}?b? et le \mintinline{latex}?else? sinon}
-\nmcmd{\ifinlist{a}{lst}{if}{else}}{Recherche \mintinline{latex}?a? dans la liste \mintinline{latex}?lst?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est dans \mintinline{latex}?lst? et le \mintinline{latex}?else? sinon}
+\nmcmd[\footnotemark]{\ifinlist{a}{lst}{if}{else}}{Recherche \mintinline{latex}?a? dans la liste \mintinline{latex}?lst?; puis exécute le \mintinline{latex}?if? si \mintinline{latex}?a? est dans \mintinline{latex}?lst? et le \mintinline{latex}?else? sinon}
+\footnotetext{\mintinline{latex}?\footnotemark? nécessite d'importer \texttt{pgffor} (qui est utilisé par \tikzlg{} et \href{https://ctan.org/pkg/pgf}{\color{black}PGF})\\Pour ne pas importer \texttt{pgffor}, il est possible d'utiliser \mintinline{latex}?\usepackage[nopgffor]{tools}?}
 \hsection{Topologie.sty}
 \mhd
 \mcmd[\footnotemark]{\anrm{f}}
@@ -794,7 +795,9 @@ Ce fichier fournit des commandes latex utiles pour créer des macros.
 \mcmd{\vala{x}}
 \mcmd{\nrm{X}}
 \mcmd{\nnrm{M}}
+\mcmd{\oldfrt}
 \mcmd{\frt{A}}
+\mcmd{\psc{x}{y}}
 \hsection{Trigo.sty}
 \mhd
 \mcmd[\footnotemark]{\oldcos}
