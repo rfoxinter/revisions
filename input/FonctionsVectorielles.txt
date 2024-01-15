@@ -1,0 +1,10 @@
+Analyse -- Fonctions vectorielles
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al}\usepackage{topologie}\usepackage{bigoperators}\usepackage{analyse}\usepackage{usuelles}\let\psc\relax\newcommand{\psc}[2]{\left\langle#1,#2\right\rangle}
+$u\in\al{E}{F}$\linebreak$\l u\circ f\r'$;;$u\circ\l f'\r$
+$\nrm f'$;;$\frac{\psc f{f'}}{\nrm f}$
+$m\!:\!E_1\times\cdots\times E_p\to F$ multilinéaire\linebreak$m\l f_1,\cdots,f_p\r'$;;$\sum{k=1}{p}{m\l f_1,\cdots,f_{k-1},f_k',f_{k+1},\cdots,f_p\r}$
+$u\in\al{E}{}$\linebreak$\der[][t]{}{\exp{tu}}$;;$u\circ\exp{tu}=\exp{tu}\circ u$
+$A\in\mat{n}{}{\mathbb K}$\linebreak$\der[][t]{}{\exp{tA}}$;;$A\exp{tA}=\exp{tA}A$
+$u\in\al{E}{F}$\linebreak$u\l\int[t][a][b]{f\l t\r}\r$;;$\int[t][a][b]{u\l f\l t\r\r}$
