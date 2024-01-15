@@ -7,6 +7,10 @@ https://rfoxinter.github.io/revisions/flashcards/
 20231023193234
 ./Analyse/ComplementsDePremiereAnnee
 20231228225612
+./Analyse/FonctionsVectorielles
+20240115174036
+./Analyse/IntegralesAParametre
+20240115174215
 ./Analyse/Integration
 20231121230825
 ./Analyse/SeriesDeFonctions

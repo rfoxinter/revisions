@@ -1,0 +1,25 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{al}\usepackage{topologie}\usepackage{bigoperators}\usepackage{analyse}\usepackage{usuelles}\let\psc\relax\newcommand{\psc}[2]{\left\langle#1,#2\right\rangle}
+\hypersetup{pdftitle=Analyse -- Fonctions vectorielles}
+\title{Analyse\\\emph{Fonctions vectorielles}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$A\in\mat{n}{}{\mathbb K}$\linebreak$\der[][t]{}{\exp{tA}}$}{1/6}
+\slider{$A\exp{tA}=\exp{tA}A$}{1/6}
+\slideq{$\nrm f'$}{2/6}
+\slider{$\frac{\psc f{f'}}{\nrm f}$}{2/6}
+\slideq{$u\in\al{E}{}$\linebreak$\der[][t]{}{\exp{tu}}$}{3/6}
+\slider{$u\circ\exp{tu}=\exp{tu}\circ u$}{3/6}
+\slideq{$u\in\al{E}{F}$\linebreak$\l u\circ f\r'$}{4/6}
+\slider{$u\circ\l f'\r$}{4/6}
+\slideq{$u\in\al{E}{F}$\linebreak$u\l\int[t][a][b]{f\l t\r}\r$}{5/6}
+\slider{$\int[t][a][b]{u\l f\l t\r\r}$}{5/6}
+\slideq{$m\!:\!E_1\times\cdots\times E_p\to F$ multilinéaire\linebreak$m\l f_1,\cdots,f_p\r'$}{6/6}
+\slider{$\sum{k=1}{p}{m\l f_1,\cdots,f_{k-1},f_k',f_{k+1},\cdots,f_p\r}$}{6/6}
+\end{document}

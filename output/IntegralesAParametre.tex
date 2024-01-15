@@ -1,0 +1,19 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{analyse}
+\hypersetup{pdftitle=Analyse -- Intégrales à paramètre}
+\title{Analyse\\\emph{Intégrales à paramètre}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Dérivation d'une intégrale à paramètre pour la classe $\mathcal C^k$}{1/3}
+\slider{\let\oldoldfrac\frac\let\frac\oldfrac\let\oldoldint\oldint\renewcommand\oldint{\textstyle\oldoldint} Si $\forall t\in J$, $f\l\cdot,t\r$ est de classe $\mathcal C^k$\linebreak$\forall x,i\in I\times\llb1,k-1\rrb$, $\pder[i]{}{f\l x,\cdot\r}$ est intégrable et $\pder[k]{}{f\l x,\cdot\r}$ est continue par morceaux\linebreak$\exists\varphi\!:\!J\to\mathbb R_+$ intégrable telle que $\forall\l x,t\r\in I\times J$, $\left|\pder[k]{}{f\l x,t\r}\right|\leqslant\varphi\l t\r$\linebreak Alors, $\int[t][J]{f\l x,t\r}$ est de classe $\mathcal C^k$, $\forall i\leqslant k$, $\der[i]{}{\int[t][J]{f\l x,t\r}}=\int[t][J]{\pder[i]{}{f\l x,t\r}}$\let\frac\oldoldfrac\let\oldoldfrac\relax\let\oldint\oldoldint\let\oldoldint\relax}{1/3}
+\slideq{Dérivation d'une intégrale à paramètre}{2/3}
+\slider{\let\oldoldfrac\frac\let\frac\oldfrac\let\oldoldint\oldint\renewcommand\oldint{\textstyle\oldoldint} Si $\forall t\in J$, $f\l\cdot,t\r$ est de classe $\mathcal C^1$\linebreak$\forall x\in I$, $f\l x,\cdot\r$ est intégrable et $\pder{}{f\l x,\cdot\r}$ est continue par morceaux\linebreak$\exists\varphi\!:\!J\to\mathbb R_+$ intégrable telle que $\forall\l x,t\r\in I\times J$, $\left|\pder{}{f\l x,t\r}\right|\leqslant\varphi\l t\r$\linebreak Alors, $\int[t][J]{f\l x,t\r}$ est de classe $\mathcal C^1$\linebreak$\der{}{\int[t][J]{f\l x,t\r}}=\int[t][J]{\pder{}{f\l x,t\r}}$\let\frac\oldoldfrac\let\oldoldfrac\relax\let\oldint\oldoldint\let\oldoldint\relax}{2/3}
+\slideq{Continuité d'une intégrale à paramètre}{3/3}
+\slider{Si $\forall t\in J$, $f\l\cdot,t\r$ est continue\linebreak$\forall x\in I$, $f\l x,\cdot\r$ est continue par morceaux\linebreak$\exists\varphi\!:\!J\to\mathbb R_+$ intégrable telle que $\forall\l x,t\r\in I\times J$, $\left|f\l x,t\r\right|\leqslant\varphi\l t\r$\linebreak Alors, $x\mapsto\int[t][J]{f\l x,t\r}$ est continue sur I}{3/3}
+\end{document}
