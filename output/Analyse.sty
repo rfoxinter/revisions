@@ -18,6 +18,20 @@
 \fi
 
 \newcommand{\toggleanalysepar}{\comparestring{\analyseleftp}{}{\def\analyseleftp{\l}\def\analyserightp{\r}}{\def\analyseleftp{}\def\analyserightp{}}}
+\let\slantpartial\partial
+% \renewcommand{\partial}{\unslant{\slantpartial}\kern-1.2pt}
+\newsavebox{\partialbox}
+\renewcommand{\partial}{
+    \mbox{%
+        \sbox{\partialbox}{$\slantpartial$}%
+        \hskip\wd\partialbox%
+        \pdfsave%
+        \pdfsetmatrix{1 0 -.25 1}%
+        \llap{\usebox{\partialbox}}%
+        \pdfrestore%
+    }%
+    \kern-1.2pt%
+}
 
 \makeatletter
 \newcounter{mpdercount}
@@ -25,52 +39,52 @@
 \newcounter{mpdervarcount}
 \def\prevmpdervar{}
 \if@dvar
-\newcommand{\scanmpderlist}[1]{
-    \foreach \i in {#1}{
+    \newcommand{\scanmpderlist}[1]{
+        \foreach \i in {#1}{
+            \stepcounter{mpdercount}
+            \comparestring{\prevmpdervar}{\i}{
+                \stepcounter{mpdervarcount}
+            }{
+                \comparestring{\arabic{mpdervarcount}}{1}{}{\xdef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
+                \xdef\mpderden{\unexpanded\expandafter{\mpderden}\noexpand\partial\i}
+                \setcounter{mpdervarcount}{1}
+                \xdef\prevmpdervar{\i}
+            }
+        }
+        \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
+    }
+    \newcommand{\scanmpder}[1]{
+        \setcounter{mpdercount}{0}
+        \def\mpderden{}
+        \setcounter{mpdervarcount}{1}
+        \def\prevmpdervar{}
+        \scanmpderlist{#1}
+    }
+\else
+    \def\do@scanmpder#1,{%
+    \ifx#1\relax
+        \let\next\relax
+    \else
         \stepcounter{mpdercount}
-        \comparestring{\prevmpdervar}{\i}{
+        \comparestring{\prevmpdervar}{#1}{
             \stepcounter{mpdervarcount}
         }{
-            \comparestring{\arabic{mpdervarcount}}{1}{}{\xdef\mpderden{\mpderden^{\arabic{mpdervarcount}}}}
-            \xdef\mpderden{\mpderden\partial\i}
+            \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
+            \edef\mpderden{\unexpanded\expandafter{\mpderden}\noexpand\partial#1}
             \setcounter{mpdervarcount}{1}
-            \xdef\prevmpdervar{\i}
+            \def\prevmpdervar{#1}
         }
+        \let\next\do@scanmpder
+    \fi\next
     }
-    \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\mpderden^{\arabic{mpdervarcount}}}}
-}
-\newcommand{\scanmpder}[1]{
-    \setcounter{mpdercount}{0}
-    \def\mpderden{}
-    \setcounter{mpdervarcount}{1}
-    \def\prevmpdervar{}
-    \scanmpderlist{#1}
-}
-\else
-\def\do@scanmpder#1,{%
-\ifx#1\relax
-    \let\next\relax
-\else
-    \stepcounter{mpdercount}
-    \comparestring{\prevmpdervar}{#1}{
-        \stepcounter{mpdervarcount}
-    }{
-        \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\mpderden^{\arabic{mpdervarcount}}}}
-        \edef\mpderden{\mpderden\partial#1}
+    \newcommand{\scanmpder}[1]{
+        \setcounter{mpdercount}{0}
+        \def\mpderden{}
         \setcounter{mpdervarcount}{1}
-        \def\prevmpdervar{#1}
+        \def\prevmpdervar{}
+        \do@scanmpder#1,\relax,
+        \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
     }
-    \let\next\do@scanmpder
-\fi\next
-}
-\newcommand{\scanmpder}[1]{
-    \setcounter{mpdercount}{0}
-    \def\mpderden{}
-    \setcounter{mpdervarcount}{1}
-    \def\prevmpdervar{}
-    \do@scanmpder#1,\relax,
-    \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\mpderden^{\arabic{mpdervarcount}}}}
-}
 \fi
 \makeatother
 
