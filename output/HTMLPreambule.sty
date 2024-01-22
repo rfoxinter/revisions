@@ -50,3 +50,13 @@
 \newlength\bshft
 \bshft=.18pt\relax
 \def\fakebold#1{\setbox0=\hbox{$#1$}#1\kern-\wd0\kern\bshft#1\kern-\wd0\kern\bshft#1}
+\newsavebox{\foobox}
+\newcommand{\slantbox}[2][0]{\mbox{%
+    \sbox{\foobox}{#2}%
+    \hskip\wd\foobox
+    \pdfsave
+    \pdfsetmatrix{1 0 #1 1}%
+    \llap{\usebox{\foobox}}%
+    \pdfrestore
+}}
+\newcommand{\unslant}[2][-.25]{\slantbox[#1]{$#2$}}
