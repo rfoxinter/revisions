@@ -1,4 +1,5 @@
 \RequirePackage{bigoperators}
+\RequirePackage{iftex}
 
 \makeatletter
 \newcounter{mpdercount}
@@ -17,6 +18,27 @@
     \do@scanmpder#1,\relax,
 }
 \makeatother
+
+\let\slantpartial\partial
+\ifpdf
+    % pdfLaTeX
+    \newsavebox{\partialbox}
+    \renewcommand{\partial}{
+        \mbox{%
+            \sbox{\partialbox}{$\slantpartial$}%
+            \hskip\wd\partialbox%
+            \pdfsave%
+            \pdfsetmatrix{1 0 -.25 1}%
+            \llap{\usebox{\partialbox}}%
+            \pdfrestore%
+        }%
+        \kern-1.2pt%
+    }
+\else
+    % LaTeX
+    \RequirePackage{graphics}
+    \renewcommand{\partial}{\includegraphics{partial}}
+\fi
 
 \DeclareMathOperator{\dd}{d}
 \newcommand{\oldd}{{\dd}}
