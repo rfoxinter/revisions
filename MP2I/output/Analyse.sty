@@ -21,23 +21,13 @@
 
 \let\slantpartial\partial
 \ifpdf
-    % pdfLaTeX
+    % pdfLaTeX (flashcards)
     \newsavebox{\partialbox}
-    \renewcommand{\partial}{
-        \mbox{%
-            \sbox{\partialbox}{$\slantpartial$}%
-            \hskip\wd\partialbox%
-            \pdfsave%
-            \pdfsetmatrix{1 0 -.25 1}%
-            \llap{\usebox{\partialbox}}%
-            \pdfrestore%
-        }%
-        \kern-1.2pt%
-    }
-\else
-    % LaTeX
-    \RequirePackage{graphics}
-    \renewcommand{\partial}{\includegraphics{partial}}
+    \newcommand{\displaypartial}{\unslant{\displaystyle\textstyle\slantpartial}\kern-1.2pt}
+    \newcommand{\normalpartial}{\unslant{\textstyle\slantpartial}\kern-1.2pt}
+    \newcommand{\scriptpartial}{\unslant{\scriptstyle\slantpartial}\kern-1.2pt}
+    \newcommand{\scriptscriptpartial}{\unslant{\scriptscriptstyle\slantpartial}\kern-1.2pt}
+    \renewcommand{\partial}{\mathchoice{\displaypartial}{\normalpartial}{\scriptpartial}{\scriptscriptpartial}}
 \fi
 
 \DeclareMathOperator{\dd}{d}
