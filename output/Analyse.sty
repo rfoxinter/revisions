@@ -1,6 +1,5 @@
 \RequirePackage{bigoperators}
 \RequirePackage{tools}
-\RequirePackage{iftex}
 
 \newif\if@dvar\@dvarfalse
 \DeclareOption{dvar}{\@dvartrue}
@@ -22,11 +21,11 @@
 \ifpdf
     % pdfLaTeX (flashcards)
     \newsavebox{\partialbox}
-    \renewcommand{\partial}{\unslant{\slantpartial}\kern-1.2pt}
-\else
-    % LaTeX (htmlcards)
-    \RequirePackage{graphics}
-    \renewcommand{\partial}{\includegraphics{partial}}
+    \newcommand{\displaypartial}{\unslant{\displaystyle\textstyle\slantpartial}\kern-1.2pt}
+    \newcommand{\normalpartial}{\unslant{\textstyle\slantpartial}\kern-1.2pt}
+    \newcommand{\scriptpartial}{\unslant{\scriptstyle\slantpartial}\kern-1.2pt}
+    \newcommand{\scriptscriptpartial}{\unslant{\scriptscriptstyle\slantpartial}\kern-1.2pt}
+    \renewcommand{\partial}{\mathchoice{\displaypartial}{\normalpartial}{\scriptpartial}{\scriptscriptpartial}}
 \fi
 
 \makeatletter
