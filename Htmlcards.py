@@ -13,6 +13,8 @@ from platform import system
 from re import sub as sb
 from time import sleep as sl
 from argparse import ArgumentParser
+c(d(__file__))
+import edit_svg
 
 def b(a:str) -> bool:
     if 'True' in a:
@@ -110,6 +112,7 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
             _ = rn('dvisvgm --font-format=woff2 flcrd.dvi ' + ('--bbox=papersize' if not noborder else '') + ' -o ' + ttle + qr[j] + str(i + 1) + '.svg', shell = True, stdout = PIPE, stderr = PIPE, text = True, check = True).stdout
             rem('flcrd.dvi')
             rem('flcrd.tex')
+            edit_svg.main(defs, ttle + qr[j] + str(i + 1) + '.svg')
             c('../')
             if not e(dest + '/' + ttle):
                 try:

@@ -16,17 +16,22 @@
     \def\analyseleftp{}
     \def\analyserightp{}
 \fi
+\newcommand{\toggleanalysepar}{\comparestring{\analyseleftp}{}{\def\analyseleftp{\l}\def\analyserightp{\r}}{\def\analyseleftp{}\def\analyserightp{}}}
 
 \let\slantpartial\partial
 \ifpdf
     % pdfLaTeX (flashcards)
     \newsavebox{\partialbox}
-    \newcommand{\displaypartial}{\unslant{\displaystyle\textstyle\slantpartial}\kern-1.2pt}
-    \newcommand{\normalpartial}{\unslant{\textstyle\slantpartial}\kern-1.2pt}
-    \newcommand{\scriptpartial}{\unslant{\scriptstyle\slantpartial}\kern-1.2pt}
-    \newcommand{\scriptscriptpartial}{\unslant{\scriptscriptstyle\slantpartial}\kern-1.2pt}
+    \newcommand{\displaypartial}{\noexpand{\unslant{\displaystyle\textstyle\slantpartial}}\kern-1.2pt}
+    \newcommand{\normalpartial}{\noexpand{\unslant{\textstyle\slantpartial}}\kern-1.2pt}
+    \newcommand{\scriptpartial}{\noexpand{\unslant{\scriptstyle\slantpartial}}\kern-1.2pt}
+    \newcommand{\scriptscriptpartial}{\noexpand{\unslant{\scriptscriptstyle\slantpartial}}\kern-1.2pt}
     \renewcommand{\partial}{\mathchoice{\displaypartial}{\normalpartial}{\scriptpartial}{\scriptscriptpartial}}
+\else
+    % LaTeX (htmlcards)
+    \renewcommand{\partial}{\slantpartial\kern-0.8pt}
 \fi
+\newcommand{\resetpartial}{\let\partial\slantpartial}
 
 \makeatletter
 \newcounter{mpdercount}
@@ -41,7 +46,7 @@
                 \stepcounter{mpdervarcount}
             }{
                 \comparestring{\arabic{mpdervarcount}}{1}{}{\xdef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
-                \xdef\mpderden{\unexpanded\expandafter{\mpderden}\noexpand\partial\i}
+                \xdef\mpderden{\unexpanded\expandafter{\mpderden}\noexpand\partial\noexpand\i}
                 \setcounter{mpdervarcount}{1}
                 \xdef\prevmpdervar{\i}
             }
@@ -65,7 +70,7 @@
             \stepcounter{mpdervarcount}
         }{
             \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
-            \edef\mpderden{\unexpanded\expandafter{\mpderden}\noexpand\partial#1}
+            \edef\mpderden{\unexpanded\expandafter{\mpderden}\noexpand\partial\noexpand#1}
             \setcounter{mpdervarcount}{1}
             \def\prevmpdervar{#1}
         }

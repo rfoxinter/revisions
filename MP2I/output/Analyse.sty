@@ -1,5 +1,4 @@
 \RequirePackage{bigoperators}
-\RequirePackage{iftex}
 
 \makeatletter
 \newcounter{mpdercount}
@@ -18,17 +17,6 @@
     \do@scanmpder#1,\relax,
 }
 \makeatother
-
-\let\slantpartial\partial
-\ifpdf
-    % pdfLaTeX (flashcards)
-    \newsavebox{\partialbox}
-    \newcommand{\displaypartial}{\unslant{\displaystyle\textstyle\slantpartial}\kern-1.2pt}
-    \newcommand{\normalpartial}{\unslant{\textstyle\slantpartial}\kern-1.2pt}
-    \newcommand{\scriptpartial}{\unslant{\scriptstyle\slantpartial}\kern-1.2pt}
-    \newcommand{\scriptscriptpartial}{\unslant{\scriptscriptstyle\slantpartial}\kern-1.2pt}
-    \renewcommand{\partial}{\mathchoice{\displaypartial}{\normalpartial}{\scriptpartial}{\scriptscriptpartial}}
-\fi
 
 \DeclareMathOperator{\dd}{d}
 \newcommand{\oldd}{{\dd}}

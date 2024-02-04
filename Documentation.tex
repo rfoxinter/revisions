@@ -404,7 +404,7 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd[\footnotemark]{\der[n][t]{f}{t}}
 \footnotetext{Le parenthésage de l'expression dans le second argument se fait automatiquement si ce dernier est non vide}
 \mcmd[\footnotemark]{\slantpartial}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\partial?\\Il est possible de rétablir le symbole italique $\slantpartial$ pour les commandes avec le symbole $\partial$ en utilisant \mintinline{latex}?\let\partial\slantpartial? après l'import de ce package}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\partial?\\Il est possible de rétablir le symbole italique $\slantpartial$ pour les commandes avec le symbole $\partial$ en utilisant \mintinline{latex}?\resetpartial? après l'import de ce package\\Cette option ne marche qu'avec PDF\LaTeX}
 \mcmd[\footnotemark]{\pder{}{f(x,y)}}
 \footnotetext{On peut appliquer les mêmes arguments optionnels que pour \mintinline{latexmath}?\der? et les arguments obligatoires sont les mêmes que pour \mintinline{latexmath}?\der?}
 \mcmd[\footnotemark]{\mpder[x,y,z]{}{f(x,y,z)}}

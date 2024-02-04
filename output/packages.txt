@@ -21,7 +21,4 @@ Trigo.sty
 Usuelles.sty
 dsrom12.pfb
 dsrom12.tfm
-partial.eps
-partial.pdf
-scriptpartial.eps
-scriptpartial.pdf
+pdflatex4389.fls
