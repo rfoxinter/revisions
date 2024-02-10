@@ -44,7 +44,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MP2I/flashcards/Analyse/FonctionsC0OuD1
 20230909173444
 ../MP2I/flashcards/Analyse/FonctionsDeDeuxVariables
-20240210182215
+20240210220815
 ../MP2I/flashcards/Analyse/FonctionsUsuelles
 20230703151223
 ../MP2I/flashcards/Analyse/Integration
