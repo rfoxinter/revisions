@@ -1,0 +1,43 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{analyse,usuelles,bigoperators,complexes,trigo}\usepackage{mathtools}
+\hypersetup{pdftitle=Analyse -- Séries entières}
+\title{Analyse\\\emph{Séries entières}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Développement en série entière de $\frac{1}{1+x}$}{1/15}
+\slider{$\frac{1}{1+x}=\sum{n=0}{+\infty}{\l-1\r^nx^n}$\linebreak$R=1$}{1/15}
+\slideq{Développement en série entière de $\atan{x}$}{2/15}
+\slider{$\atan{x}=\sum{n=0}{+\infty}{\l-1\r^n\frac{x^{2n+1}}{2n+1}}$\linebreak$R=1$}{2/15}
+\slideq{Règle de d'Alembert pour les séries entières}{3/15}
+\slider{Si $\lim[n\to+\infty]{\left|\frac{u_{n+1}}{u_n}\right|}=l$ alors $R_u=\frac1l$}{3/15}
+\slideq{Développement en série entière de $\sh{x}$}{4/15}
+\slider{$\sh{x}=\sum{n=0}{+\infty}{\frac{x^{2n+1}}{\l2n+1\r!}}$\linebreak$R=+\infty$}{4/15}
+\slideq{Développement en série entière de $\exp{x}$}{5/15}
+\slider{$\e^x=\sum{n=0}{+\infty}{\frac{x^n}{n!}}$\linebreak$R=+\infty$}{5/15}
+\slideq{Développement en série entière de $\ch{x}$}{6/15}
+\slider{$\ch{x}=\sum{n=0}{+\infty}{\frac{x^{2n}}{\l2n\r!}}$\linebreak$R=+\infty$}{6/15}
+\slideq{Unicité du développement en série entière}{7/15}
+\slider{S'il existe une suite $\l z_n\r$ non nulle telle que $\lim[n\to+\infty]{z_n}=0$ et $\sum{n=0}{+\infty}{a_nz^n}=0$ alors $\sum{n=0}{+\infty}{a_nz^n}$ est nulle sur son domaine de définition}{7/15}
+\slideq{Développement en série entière de $\l1+x\r^\alpha$}{8/15}
+\slider{$\l1+x\r^\alpha=\sum{n=0}{+\infty}{\frac{\oldprod\limits_{j=0}^{n-1}\l\alpha-j\r}{n!}x^n}$\linebreak$R=\left\{\begin{matrix*}[l]1&\;\text{si }\alpha\notin\mathbb N\\+\infty&\;\text{si }\alpha\in\mathbb N\end{matrix*}\right.\!$}{8/15}
+\slideq{Développement en série entière de $\frac{1}{1+x^2}$}{9/15}
+\slider{$\frac{1}{1+x^2}=\sum{n=0}{+\infty}{\l-1\r^nx^{2n}}$\linebreak$R=1$}{9/15}
+\slideq{Développement en série entière de $\cos{x}$}{10/15}
+\slider{$\cos{x}=\sum{n=0}{+\infty}{\l-1\r^n\frac{x^{2n}}{\l2n\r!}}$\linebreak$R=+\infty$}{10/15}
+\slideq{Théorème d'Abel radial}{11/15}
+\slider{Si $\serie{a_nx^n}$ est une série entière de rayon de convergeance $R>0$ et que $\serie{a_nR^n}$ converge, alors la série entière est continue sur $\left[0,R\right]$ et $\lim[x\to l]{\sum{n=0}{+\infty}{a_nx^n}}=\sum{n=0}{+\infty}{a_nR^n}$}{11/15}
+\slideq{Développement en série entière de $\sin{x}$}{12/15}
+\slider{$\sin{x}=\sum{n=0}{+\infty}{\l-1\r^n\frac{x^{2n+1}}{\l2n+1\r!}}$\linebreak$R=+\infty$}{12/15}
+\slideq{Développement en série entière de $\ln{1+x}$}{13/15}
+\slider{$\ln{1+x}=\sum{n=1}{+\infty}{\l-1\r^{n-1}\frac{x^n}{n}}$\linebreak$R=1$}{13/15}
+\slideq{Lemme d'Abel}{14/15}
+\slider{Si $\l a_nz_0^n\r$ est bornée et $n\in\mathbb N$ alors, si $\left|z\right|<\left|z_0\right|$ alors $\serie{a_nz^n}$ converge absolument}{14/15}
+\slideq{Développement en série entière de $\frac{1}{1-x}$}{15/15}
+\slider{$\frac{1}{1-x}=\sum{n=0}{+\infty}{x^n}$\linebreak$R=1$}{15/15}
+\end{document}

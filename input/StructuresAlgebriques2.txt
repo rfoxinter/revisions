@@ -1,0 +1,5 @@
+Algèbre -- Structures algébriques 2
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{matrices}\newcommand\permut[1]{\tmatrix[][minimum height = 2ex, minimum width = 2ex, column sep = 1ex,]({#1})}
+$\sigma\in\mathfrak S_n$\linebreak$\sigma\circ\permut{a_1\&\mdots\&a_n\\}\circ\sigma^{-1}$;;$\permut{\sigma\l a_1\r\&\mdots\&\sigma\l a_n\r\\}$

@@ -1,0 +1,15 @@
+DSE!!ttleDéveloppements en série entière
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{usuelles,bigoperators,complexes,trigo}\usepackage{mathtools}
+Développement en série entière de $\exp{x}$;;$\e^x=\sum{n=0}{+\infty}{\frac{x^n}{n!}}$\linebreak$R=+\infty$
+Développement en série entière de $\ln{1+x}$;;$\ln{1+x}=\sum{n=1}{+\infty}{\l-1\r^{n-1}\frac{x^n}{n}}$\linebreak$R=1$
+Développement en série entière de $\sin{x}$;;$\sin{x}=\sum{n=0}{+\infty}{\l-1\r^n\frac{x^{2n+1}}{\l2n+1\r!}}$\linebreak$R=+\infty$
+Développement en série entière de $\cos{x}$;;$\cos{x}=\sum{n=0}{+\infty}{\l-1\r^n\frac{x^{2n}}{\l2n\r!}}$\linebreak$R=+\infty$
+Développement en série entière de $\atan{x}$;;$\atan{x}=\sum{n=0}{+\infty}{\l-1\r^n\frac{x^{2n+1}}{2n+1}}$\linebreak$R=1$
+Développement en série entière de $\sh{x}$;;$\sh{x}=\sum{n=0}{+\infty}{\frac{x^{2n+1}}{\l2n+1\r!}}$\linebreak$R=+\infty$
+Développement en série entière de $\ch{x}$;;$\ch{x}=\sum{n=0}{+\infty}{\frac{x^{2n}}{\l2n\r!}}$\linebreak$R=+\infty$
+Développement en série entière de $\l1+x\r^\alpha$;;$\l1+x\r^\alpha=\sum{n=0}{+\infty}{\frac{\oldprod\limits_{j=0}^{n-1}\l\alpha-j\r}{n!}x^n}$\linebreak$R=\left\{\begin{matrix*}[l]1&\;\text{si }\alpha\notin\mathbb N\\+\infty&\;\text{si }\alpha\in\mathbb N\end{matrix*}\right.\!$
+Développement en série entière de $\frac{1}{1+x}$;;$\frac{1}{1+x}=\sum{n=0}{+\infty}{\l-1\r^nx^n}$\linebreak$R=1$
+Développement en série entière de $\frac{1}{1-x}$;;$\frac{1}{1-x}=\sum{n=0}{+\infty}{x^n}$\linebreak$R=1$
+Développement en série entière de $\frac{1}{1+x^2}$;;$\frac{1}{1+x^2}=\sum{n=0}{+\infty}{\l-1\r^nx^{2n}}$\linebreak$R=1$

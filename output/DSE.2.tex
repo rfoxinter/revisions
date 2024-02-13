@@ -1,0 +1,35 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{usuelles,bigoperators,complexes,trigo}\usepackage{mathtools}
+\hypersetup{pdftitle=Développements en série entière}
+\title{Développements en série entière}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Développement en série entière de $\exp{x}$}{1/11}
+\slider{$\e^x=\sum{n=0}{+\infty}{\frac{x^n}{n!}}$\linebreak$R=+\infty$}{1/11}
+\slideq{Développement en série entière de $\ch{x}$}{2/11}
+\slider{$\ch{x}=\sum{n=0}{+\infty}{\frac{x^{2n}}{\l2n\r!}}$\linebreak$R=+\infty$}{2/11}
+\slideq{Développement en série entière de $\sh{x}$}{3/11}
+\slider{$\sh{x}=\sum{n=0}{+\infty}{\frac{x^{2n+1}}{\l2n+1\r!}}$\linebreak$R=+\infty$}{3/11}
+\slideq{Développement en série entière de $\frac{1}{1+x^2}$}{4/11}
+\slider{$\frac{1}{1+x^2}=\sum{n=0}{+\infty}{\l-1\r^nx^{2n}}$\linebreak$R=1$}{4/11}
+\slideq{Développement en série entière de $\frac{1}{1+x}$}{5/11}
+\slider{$\frac{1}{1+x}=\sum{n=0}{+\infty}{\l-1\r^nx^n}$\linebreak$R=1$}{5/11}
+\slideq{Développement en série entière de $\l1+x\r^\alpha$}{6/11}
+\slider{$\l1+x\r^\alpha=\sum{n=0}{+\infty}{\frac{\oldprod\limits_{j=0}^{n-1}\l\alpha-j\r}{n!}x^n}$\linebreak$R=\left\{\begin{matrix*}[l]1&\;\text{si }\alpha\notin\mathbb N\\+\infty&\;\text{si }\alpha\in\mathbb N\end{matrix*}\right.\!$}{6/11}
+\slideq{Développement en série entière de $\cos{x}$}{7/11}
+\slider{$\cos{x}=\sum{n=0}{+\infty}{\l-1\r^n\frac{x^{2n}}{\l2n\r!}}$\linebreak$R=+\infty$}{7/11}
+\slideq{Développement en série entière de $\sin{x}$}{8/11}
+\slider{$\sin{x}=\sum{n=0}{+\infty}{\l-1\r^n\frac{x^{2n+1}}{\l2n+1\r!}}$\linebreak$R=+\infty$}{8/11}
+\slideq{Développement en série entière de $\ln{1+x}$}{9/11}
+\slider{$\ln{1+x}=\sum{n=1}{+\infty}{\l-1\r^{n-1}\frac{x^n}{n}}$\linebreak$R=1$}{9/11}
+\slideq{Développement en série entière de $\frac{1}{1-x}$}{10/11}
+\slider{$\frac{1}{1-x}=\sum{n=0}{+\infty}{x^n}$\linebreak$R=1$}{10/11}
+\slideq{Développement en série entière de $\atan{x}$}{11/11}
+\slider{$\atan{x}=\sum{n=0}{+\infty}{\l-1\r^n\frac{x^{2n+1}}{2n+1}}$\linebreak$R=1$}{11/11}
+\end{document}
