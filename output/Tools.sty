@@ -7,7 +7,7 @@
 \def\comparestring#1#2{%
     \edef\tempa{#1}%
     \edef\tempb{#2}%
-    \ifx\tempa\tempb\relax%
+    \ifx\tempa\tempb%
         \expandafter\@firstoftwo%
     \else%
         \expandafter\@secondoftwo%
