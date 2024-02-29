@@ -5,7 +5,7 @@ Q/R & R/Q : False
 Lemme d'Abel;;Si $\l a_nz_0^n\r$ est bornée et $n\in\mathbb N$ alors, si $\left|z\right|<\left|z_0\right|$ alors $\serie{a_nz^n}$ converge absolument
 Règle de d'Alembert pour les séries entières;;Si $\lim[n\to+\infty]{\left|\frac{u_{n+1}}{u_n}\right|}=l$ alors $R_u=\frac1l$
 Théorème d'Abel radial;;Si $\serie{a_nx^n}$ est une série entière de rayon de convergeance $R>0$ et que $\serie{a_nR^n}$ converge, alors la série entière est continue sur $\left[0,R\right]$ et $\lim[x\to l]{\sum{n=0}{+\infty}{a_nx^n}}=\sum{n=0}{+\infty}{a_nR^n}$
-Unicité du développement en série entière;;S'il existe une suite $\l z_n\r$ non nulle telle que $\lim[n\to+\infty]{z_n}=0$ et $\sum{n=0}{+\infty}{a_nz^n}=0$ alors $\sum{n=0}{+\infty}{a_nz^n}$ est nulle sur son domaine de définition
+Unicité du développement en série entière;;S'il existe une suite $\l z_n\r$ non nulle telle que $\lim[n\to+\infty]{z_n}=0$ et $\sum{n=0}{+\infty}{a_nz_k^n}=0$ alors $\sum{n=0}{+\infty}{a_nz^n}$ est nulle sur son domaine de définition
 Développement en série entière de $\exp{x}$;;$\e^x=\sum{n=0}{+\infty}{\frac{x^n}{n!}}$\linebreak$R=+\infty$
 Développement en série entière de $\ln{1+x}$;;$\ln{1+x}=\sum{n=1}{+\infty}{\l-1\r^{n-1}\frac{x^n}{n}}$\linebreak$R=1$
 Développement en série entière de $\sin{x}$;;$\sin{x}=\sum{n=0}{+\infty}{\l-1\r^n\frac{x^{2n+1}}{\l2n+1\r!}}$\linebreak$R=+\infty$
