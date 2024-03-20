@@ -1,0 +1,23 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{probas,complexes}
+\hypersetup{pdftitle=Lois de probabilité usuelles}
+\title{Lois de probabilité usuelles}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$X\sim\unif n$}{1/5}
+\slider{$X\l\Omega\r=\llb1,n\rrb$\linebreak$\p{X=k}=\frac1n$\linebreak$\esp X=\frac{n+1}{2}$\linebreak$\var X=\frac{n^2-1}{12}$\linebreak$G_X\l t\r=\frac1n\frac{t^n-1}{t-1}$}{1/5}
+\slideq{$X\sim\poiss\lambda$}{2/5}
+\slider{$X\l\Omega\r=\mathbb N$\linebreak$\p{X=k}=\e^{-\lambda}\frac{\lambda^k}{k!}$\linebreak$\esp X=\lambda$\linebreak$\var X=\lambda$\linebreak$G_X\l t\r=\e^{\lambda\l t-1\r}$}{2/5}
+\slideq{$X\sim\bin[n]p$}{3/5}
+\slider{$X\l\Omega\r=\llb0,n\rrb$\linebreak$\p{X=k}=\binom nkp^kq^{n-k}$\linebreak$\esp X=npq$\linebreak$\var X=\frac{n^2-1}{12}$\linebreak$G_X\l t\r=\frac1n\frac{t^n-1}{t-1}$}{3/5}
+\slideq{$X\sim\bin p$}{4/5}
+\slider{$X\l\Omega\r=\left\{0,1\right\}$\linebreak$\p{X=1}=p$\linebreak$\esp X=p$\linebreak$\var X=pq$\linebreak$G_X\l t\r=pt+q$}{4/5}
+\slideq{$X\sim\geom p$}{5/5}
+\slider{$X\l\Omega\r=\mathbb N^*$\linebreak$\p{X=k}=pq^{k-1}$\linebreak$\esp X=\frac1p$\linebreak$\var X=\frac{q}{p^2}$\linebreak$G_X\l t\r=\frac{pt}{1-qt}$}{5/5}
+\end{document}

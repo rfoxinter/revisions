@@ -1,6 +1,8 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ./DSE
 20240213224801
+./LoisDeProbabiliteUsuelles
+20240320231238
 ./Algebre/AlgebreLineraire
 20231120123333
 ./Algebre/ReductionDEndomorphismes
@@ -25,5 +27,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 20240213230003
 ./Analyse/SuitesDeFonctions
 20231228225723
+./Probabilites/VariablesAleatoiresDiscretes
+20240320231001
 ./Topolgie/TopologieDesEVN
 20240101223137
