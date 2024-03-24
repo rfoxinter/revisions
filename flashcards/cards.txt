@@ -5,6 +5,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20240320231238
 ./Algebre/AlgebreLineraire
 20231120123333
+./Algebre/EspacesPrehilbertiensReels
+20240324145149
 ./Algebre/ReductionDEndomorphismes
 20231210141306
 ./Algebre/StructuresAlgebriques1

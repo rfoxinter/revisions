@@ -1,0 +1,53 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{topologie}\usepackage{structures,al}\usepackage{trigo,bigoperators}
+\hypersetup{pdftitle=Algèbre -- Espaces préhilbertiens réels}
+\title{Algèbre\\\emph{Espaces préhilbertiens réels}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Caractérisation des isométrie vectorielle}{1/20}
+\slider{$\forall\l x,y\r\in E^2, \psc{u\l x\r}{u\l y\r}=\psc xy$\linebreak$u\in\orth E\Leftrightarrow u\in\gl E\wedge u^*=u^{-1}$\linebreak il existe une BON $e$ telle que $u\l e\r$ est une BON}{1/20}
+\slideq{Représentation des formes linéaires d'un espace euclidien}{2/20}
+\slider{Pour toute forme linéaire $\varphi$, il existe un unique $u\in E$ tel que $\varphi\l\cdot\r=\psc u\cdot$}{2/20}
+\slideq{Décomposition polaire de $A\in\mat n{}{\mathbb R}$}{3/20}
+\slider{$\exists\l O,S\r\in\orth[n]{\mathbb R}\times\sym n{\mathbb R},A=OS$\linebreak Il y a unicité si $A\in\matgl n{\mathbb R}$}{3/20}
+\slideq{$\im{u^*}$}{4/20}
+\slider{$\ker u^\bot$}{4/20}
+\slideq{$R_\theta^{-1}=R_\theta^\bot$}{5/20}
+\slider{$R_{-\theta}$}{5/20}
+\slideq{$\ker{u^*}$}{6/20}
+\slider{$\im u^\bot$}{6/20}
+\slideq{$u\in\alsym[++]{\mathbb R}$}{7/20}
+\slider{$\forall x\in E,\psc{u\l x\r}x>0$}{7/20}
+\slideq{Réduction des isométries en BON}{8/20}
+\slider{Il existe une BON (ou pour toute) $\mathbb B$ telle que $\almat[\mathbb B]u=\tmatrix({I_p\&\&\&\&\\\&-I_q\&\&\&\\\&\&R_{\theta_1}\&\&\\\&\&\&\ddots\&\\\&\&\&\&R_{\theta_r}\\})$}{8/20}
+\slideq{Racine d'un endomorphisme}{9/20}
+\slider{$\forall u\in\alsym[+]E,\exists!r\in\alsym[+]E,r^2=s$}{9/20}
+\slideq{Description de $\orth[n]{\mathbb R}$}{10/20}
+\slider{$R_\theta=\tmatrix({\cos\theta\&-\sin\theta\\\sin\theta\&\cos\theta\\})$\linebreak$S_\theta=\tmatrix({\cos\theta\&\sin\theta\\\sin\theta\&-\cos\theta\\})$}{10/20}
+\slideq{Théorème spectral matriciel}{11/20}
+\slider{$M\in\sym n{\mathbb R}\Leftrightarrow\exists\l P,D\r\in\orth[n]{\mathbb R}\times\diag n{\mathbb R}, M=PDP^\top$}{11/20}
+\slideq{Caractérisation spectrale de $\alsym[+]{\mathbb R}$}{12/20}
+\slider{$\sp u\subset\mathbb R_+$}{12/20}
+\slideq{Théorème spectral}{13/20}
+\slider{Sont équivalents:\linebreak$u\in\alsym E$\linebreak Il existe une BON de vecteurs propres de $u$\linebreak$E={\displaystyle\bigoplus_{\lambda\in\sp u}}^\bot\l E_\lambda\l u\r\r$}{13/20}
+\slideq{$S_\theta S_{\theta'}$}{14/20}
+\slider{$R_{\theta-\theta'}$}{14/20}
+\slideq{Caractérisation spectrale de $\alsym[++]{\mathbb R}$}{15/20}
+\slider{$\sp u\subset\mathbb R_+^*$}{15/20}
+\slideq{$R_\theta R_{\theta'}$}{16/20}
+\slider{$R_{\theta'+\theta}$}{16/20}
+\slideq{Inégalité de Bessel}{17/20}
+\slider{Une projection $p$ est orthogonale si et seulement si pour tout $x\in E$, $\nrm{p\l x\r}\leqslant\nrm x$}{17/20}
+\slideq{Fromules de polarisation}{18/20}
+\slider{$\psc xy=\frac{\nrm{x+y}^2-\nrm x^2-\nrm{y}^2}{2}$\linebreak$\psc xy=\frac{\nrm{x}^2+\nrm y^2-\nrm{x-y}^2}{2}$\linebreak$\psc xy=\frac{\nrm{x+y}^2-\nrm{x-y}^2}{4}$}{18/20}
+\slideq{$u\in\alsym[+]{\mathbb R}$}{19/20}
+\slider{$\forall x\in E,\psc{u\l x\r}x\geqslant0$}{19/20}
+\slideq{Caractérisation matricielle de $u\in\alsym E$}{20/20}
+\slider{Il existe une BON (ou pour toute) $\mathcal{B}$ $\almat[\mathbb B] u\in\sym n{\mathbb R}$}{20/20}
+\end{document}
