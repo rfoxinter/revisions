@@ -1,0 +1,10 @@
+Dipôles statiques
+Shuffle questions : True
+Q/R & R/Q : False
+\let\div\relax\DeclareMathOperator{\oldrot}{rot}\newcommand{\rot}{\mathop{\vec\oldrot}}\DeclareMathOperator{\div}{div}\DeclareMathOperator{\oldgrad}{grad}\newcommand{\grad}{\mathop{\vec\oldgrad}}
+$\mathcal E_p$ lié à $\vec{E_\text{ext}}$;;$-\vec p\cdot\vec{E_\text{ext}}$
+$\vec{\mathcal M_O}$ lié à $\vec{E_\text{ext}}$;;$\vec p\wedge\vec{E_\text{ext}}$
+$\vec{F_{E_\text{ext}\to\text{dip}}}$;;$\l\vec p\cdot\grad\r\vec{E_\text{ext}}$
+$\mathcal E_p$ lié à $\vec{B_\text{ext}}$;;$-\vec M\cdot\vec{B_\text{ext}}$
+$\vec{\mathcal M_O}$ lié à $\vec{B_\text{ext}}$;;$\vec M\wedge\vec{B_\text{ext}}$
+$\vec{F_{B_\text{ext}\to\text{dip}}}$;;$\l\vec M\cdot\grad\r\vec{B_\text{ext}}$

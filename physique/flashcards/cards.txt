@@ -1,5 +1,7 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ../physique/flashcards/Constantes
 20231126114827
+../physique/flashcards/DipolesStatiques
+20240324091706
 ../physique/flashcards/EquationsDeMaxwell
 20240104171718
