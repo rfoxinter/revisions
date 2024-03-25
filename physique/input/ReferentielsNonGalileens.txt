@@ -1,0 +1,5 @@
+Référentiels non galiléens
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse}
+Formule de dérivation composée;;$\l\der[][t]{\vec U}{}\r_{\mathcal R}{}=\l\der[][t]{\vec U}{}\r_{\mathcal R'}+\vec{\varOmega_{\mathcal R'/\mathcal R}}\wedge\vec{U}$

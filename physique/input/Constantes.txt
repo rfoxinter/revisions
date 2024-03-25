@@ -9,7 +9,7 @@ Q/R & R/Q : False
 \q{Mécanique}{d_{\text{Terre}-\text{Lune}}};;\r{3.84e5}{km}
 \q{Mécanique}{d_{\text{Terre}-\text{Soleil}}};;\r{1.48e8}{km}
 \q{Mécanique}{\mathcal G};;\r[Constante gravitationnelle]{6.67e-11}{N.m^2.kg^{-2}}
-\q{Mécanique}{g_\text{Terre}};;\r[Accélération de la pesanteur]{9.8}{N.kg^{-1}=m.s^{2}}
+\q{Mécanique}{g_\text{Terre}};;\r[Accélération de la pesanteur]{9.8}{N.kg^{-1}=m.s^{-2}}
 \q{Électromagnétique}{m_e};;\r{9,11e-31}{kg}
 \q{Électromagnétique}{m_p};;\r{1,67e-27}{kg}
 \q{Électromagnétique}{e};;\r{1.60e-19}{C}
