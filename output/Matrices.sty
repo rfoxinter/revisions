@@ -7,7 +7,7 @@
 \DeclareOption*{}
 \ProcessOptions\relax
 
-\newcommand{\mat}[3]{\def\matargII{,#2}\ifx&#2&\def\matargII{}\fi\mathcal{M}_{#1\matargII}\l#3\r}
+\newcommand{\mat}[3]{\def\matargII{,#2}\if\relax\detokenize{#2}\relax\def\matargII{}\fi\mathcal{M}_{#1\matargII}\l#3\r}
 \newcommand{\sym}[3][]{\mathcal{S}_{#2}^{#1}\l#3\r}
 \newcommand{\ant}[2]{\mathcal{A}_{#1}\l#2\r}
 \newcommand{\diag}[2]{\mathcal{D}_{#1}\l#2\r}
