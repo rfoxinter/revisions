@@ -1,0 +1,9 @@
+Analyse -- Équations différentielles linéaires
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse,complexes,usuelles,matrices}
+Wronskien;;$W\l t\r=\det[\mathcal{B}]{s_1\l t\r,\cdots,s_n\l t\r}$\linebreak$\l s_1,\cdots,s_n\r$ un système fondamental de solutions
+Caractérisation d'un système fondamental de solutions par le Wronskien;;$\l s_1,\cdots,s_n\r$ est un système fondamental de solutions si et seulement si $\exists t\in I$, $W\l t\r\neq0$ (ou $\forall t\in I$, $W\l t\r\neq0$)
+Solutions de $x'=a\l x\r$, $x\l t_0\r=x_0$;;$x\l t\r=\exp{\l t-t_0\r a}\l x_0\r$
+Solutions de $X'=MX$, $X\l t_0\r=X_0$;;$X\l t\r=\e^{\l t-t_0\r M}X_0$
+Méthode de variation des constantes pour des EDL scalaires d'ordre $2$;;Chercher une solution particulière $\lambda u+\mu v=b$ avec $\l\lambda,\mu\r\in\mathcal D^1\l I\r$ sour la contrainte $\lambda'u+\mu'v=0$

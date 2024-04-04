@@ -1,0 +1,23 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{analyse,complexes,usuelles,matrices}
+\hypersetup{pdftitle=Analyse -- Équations différentielles linéaires}
+\title{Analyse\\\emph{Équations différentielles linéaires}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Solutions de $X'=MX$, $X\l t_0\r=X_0$}{1/5}
+\slider{$X\l t\r=\e^{\l t-t_0\r M}X_0$}{1/5}
+\slideq{Caractérisation d'un système fondamental de solutions par le Wronskien}{2/5}
+\slider{$\l s_1,\cdots,s_n\r$ est un système fondamental de solutions si et seulement si $\exists t\in I$, $W\l t\r\neq0$ (ou $\forall t\in I$, $W\l t\r\neq0$)}{2/5}
+\slideq{Méthode de variation des constantes pour des EDL scalaires d'ordre $2$}{3/5}
+\slider{Chercher une solution particulière $\lambda u+\mu v=b$ avec $\l\lambda,\mu\r\in\mathcal D^1\l I\r$ sour la contrainte $\lambda'u+\mu'v=0$}{3/5}
+\slideq{Solutions de $x'=a\l x\r$, $x\l t_0\r=x_0$}{4/5}
+\slider{$x\l t\r=\exp{\l t-t_0\r a}\l x_0\r$}{4/5}
+\slideq{Wronskien}{5/5}
+\slider{$W\l t\r=\det[\mathcal{B}]{s_1\l t\r,\cdots,s_n\l t\r}$\linebreak$\l s_1,\cdots,s_n\r$ un système fondamental de solutions}{5/5}
+\end{document}

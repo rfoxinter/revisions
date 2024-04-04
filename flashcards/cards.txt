@@ -15,6 +15,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20240213220210
 ./Analyse/ComplementsDePremiereAnnee
 20240213225915
+./Analyse/EquationsDifferentiellesLineaires
+20240404161922
 ./Analyse/FonctionsVectorielles
 20240115174036
 ./Analyse/IntegralesAParametre
