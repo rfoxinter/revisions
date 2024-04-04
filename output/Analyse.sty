@@ -93,27 +93,27 @@
 \newcommand{\intd}{{{}\oldd}}
 \newcommand{\der}[1][]{\def\derargI{#1}\tmpder}
 \newcommand{\tmpder}[3][x]{
-    \ifx&#3&
+    \if\relax\detokenize{#3}\relax
         \def\derargIII{}
     \else
         \def\derargIII{\analyseleftp{#3}\analyserightp}
     \fi\frac{\dd^{\derargI}{#2}}{\dd#1^{\derargI}}\derargIII}
 \newcommand{\pder}[1][]{\def\pderargI{#1}\tmppder}
 \newcommand{\tmppder}[3][x]{
-    \ifx&#3&
+    \if\relax\detokenize{#3}\relax
         \def\pderargIII{}
     \else
         \def\pderargIII{\analyseleftp{#3}\analyserightp}
     \fi\frac{\partial^{\pderargI}{#2}}{\partial#1^{\pderargI}}\pderargIII}
 \newcommand{\mpder}[3][x]{\scanmpder{#1}
-    \ifx&#3&
+    \if\relax\detokenize{#3}\relax
         \def\mpderargIII{}
     \else
         \def\mpderargIII{\analyseleftp{#3}\analyserightp}
     \fi\frac{\partial^{\arabic{mpdercount}}{#2}}{\mpderden}\mpderargIII}
 \let\oldint\int
 \renewcommand{\int}[1][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\intargI{}
     \else
         \def\intargI{{{}\oldd}#1}
