@@ -7,7 +7,7 @@ $f$ est différentiable sur un ouvert $U$ en $a\in U$;;$f\l a+h\r=f\l a\r+u_a\l 
 Différentielle de $f$ en $a$;;$\dd f\l a\r\in\al EF$\linebreak$f\l a+h\r=f\l a\r+\dd f\l a\r\cdot h+\o[{\anrm[]h\to0}]{\anrm[]h}$
 Lien entre $D$ et $\dd$ pour une fonction différentiable;;$\dd f\l a\r\cdot h=D_hf\l a\r$
 Différentielle avec les dérivées partielles;;$\dd f\l a\r\cdot h=\sum{k=1}{n}{h_j\pder[][x_j]{f}{a}}$
-Jacobienne;;\let\frac\tfrac$J_f\l a\r=\tmatrix[{\node at (m-3-1-|m.east)[xshift=1.25ex,anchor=west] {$\almat{\dd f_i\l a\r}{\mathcal{B}}{}$};\mtxvpartial{thick}{left}{2}{3};\mtxvpartial{thick}{right}{2}{3};\mtxhline{thick}{2};\mtxhline{thick}{3};\node at (m-1-3|-m.south)[anchor=north] {$\partial_jf\l a\r$};\mtxhpartial{thick}{top}{2}{3};\mtxhpartial{thick}{bottom}{2}{3};\mtxvline{thick}{2};\mtxvline{thick}{3};}][row sep=0pt,minimum height=4ex]({\pder[][x_1]{f_1}{a}\&\mdots\&\pder[][x_j]{f_1}{a}\&\mdots\&\pder[][x_n]{f_i}{a}\\\vdots\&\&\vdots\&\&\vdots\\\pder[][x_1]{f_i}{a}\&\mdots\&\pder[][x_j]{f_i}{a}\&\mdots\&\pder[][x_n]{f_i}{a}\\\vdots\&\&\vdots\&\&\vdots\\\pder[][x_1]{f_n}{a}\&\mdots\&\pder[][x_j]{f_n}{a}\&\mdots\&\pder[][x_n]{f_n}{a}\\})$\let\frac\dfrac
+Jacobienne\linebreak$J_f\l a\r$;;\let\frac\tfrac$\tmatrix[{\node at (m-3-1-|m.east)[xshift=1.25ex,anchor=west] {$\almat{\dd f_i\l a\r}{\mathcal{B}}{}$};\mtxvpartial{thick}{left}{2}{3}\mtxvpartial{thick}{right}{2}{3}\mtxhline{thick}{2}\mtxhline{thick}{3}\node at (m-1-3|-m.south)[anchor=north] {$\partial_jf\l a\r$};\mtxhpartial{thick}{top}{2}{3}\mtxhpartial{thick}{bottom}{2}{3}\mtxvline{thick}{2}\mtxvline{thick}{3}}][row sep=0pt,minimum height=4ex]({\pder[][x_1]{f_1}{a}\&\mdots\&\pder[][x_j]{f_1}{a}\&\mdots\&\pder[][x_n]{f_i}{a}\\\vdots\&\&\vdots\&\&\vdots\\\pder[][x_1]{f_i}{a}\&\mdots\&\pder[][x_j]{f_i}{a}\&\mdots\&\pder[][x_n]{f_i}{a}\\\vdots\&\&\vdots\&\&\vdots\\\pder[][x_1]{f_n}{a}\&\mdots\&\pder[][x_j]{f_n}{a}\&\mdots\&\pder[][x_n]{f_n}{a}\\})$\let\frac\dfrac
 $L\in\al FG$\linebreak$\dd\l L\circ f\r\l a\r$;;$L\circ\dd f\l a\r$
 $\dd \l f\circ g\r\l a\r$;;$\dd f\l g\l a\r\r\circ\dd f\l a\r$
 $\l f\circ \gamma\r'\l t\r$\linebreak$\gamma\!:\!I\subset\mathbb R\to E$;;$\dd f\l \gamma\l t\r\r\cdot\gamma'\l t\r$
@@ -17,3 +17,12 @@ Lien différentielle -- intégration;;$f\l b\r-f\l a\r=\int[t][a][b]{\dd f(\gamm
 $\nabla f\l a\r$;;L'unique vecteur vérifiant $\dd f\l a\r\cdot h=\left\langle\nabla f\l a\r,h\right\rangle$
 Théorème de Schwarz;;Si $f$ est $\mathcal C^2$\linebreak$\mpder[x_1,x_2]{f}{}=\mpder[x_2,x_1]{f}{}$
 Hessienne;;$H_f\l a\r=\l\mpder[x_j,x_i]{f}{a}\r_{\l i,j\r\in\llb1,n\rrb^2}=J_{\nabla f}\l a\r$
+Développement de Taylor-Young à l'ordre $2$;;$\eg[{\anrm[]h\to0}]{f\l a+h\r}{f\l a\r+\dd f\l a\r\cdot h+\frac12\left\langle H_f\l a\r h,h\right\rangle+\o{\anrm[]{h^2}}}$
+Développement de Taylor-Young matriciel à l'ordre $2$;;$\eg[{\anrm[]h\to0}]{f\l a+h\r}{f\l a\r+\nabla f\l a\r^\top h+\frac12h^\top H_f\l a\r h+\o{\anrm[]{h^2}}}$
+Développement de Taylor-Young numérique à l'ordre $2$;;$\eg[{\anrm[]h\to0}]{f\l a+h\r}{f\l a\r+\sum{i=1}{n}{h_i\pder[][x_i]fa}+\frac12\sum{\l i,j\r\in\llb1,n\rrb^2}{}{h_ih_j\mpder[x_i,x_j]fa}+\o{\anrm[]{h^2}}}$
+CN d'extrémum de $f$ en $a$;;Maximum: $\nabla f\l a\r=0$ et $H_f\l a\r\in\mathcal{S}_n^+\l\mathbb R\r$\linebreak Minimum: $\nabla f\l a\r=0$ et $H_f\l a\r\in\mathcal{S}_n^-\l\mathbb R\r$
+CS d'extrémum de $f$ en $a$;;Maximum: $\nabla f\l a\r=0$ et $H_f\l a\r\in\mathcal{S}_n^{++}\l\mathbb R\r$\linebreak Minimum: $\nabla f\l a\r=0$ et $H_f\l a\r\in\mathcal{S}_n^{--}\l\mathbb R\r$
+$v$ est tangent à $X$ en $x$;;$\exists\gamma\!:\!\left]-\epsilon,\epsilon\right[\to X$, $\gamma\l0\r=x\wedge\gamma'\l0\r=v$
+Vecteurs tangents à $\varGamma_k\l f\r=f^{-1}\l\left\{k\right\}\r$;;$T_{x_0}\varGamma_k\l f\r\subset\ker\l\dd f\l x_0\r\r$ avec égalité si $\dd f\l x_0\r\neq0$
+Vecteurs tangents à $\varGamma_k\l f\r=f^{-1}\l\left\{k\right\}\r$ dans un euclidien;;$T_{x_0}\varGamma_k\l f\r\subset\nabla f\l a\r^\bot$ avec égalité si $\nabla f\l a\r\neq0$
+Optimisation sous contrainte;;Soient $U$ un ouvert de $E$ et $\l f,g\r\in\mathcal C^1\l U,\mathbb R\r^2$\linebreak Pour $X=g^{-1}\l\left\{0\right\}\r$ et $a\in X$, si $\dd g\l a\r\neq0$ et $f_{|X}$ a un extrémum local en $a$ alors il existe $\lambda\in\mathbb R$ tel que $\dd f\l a\r=\lambda\dd g\l a\r$
