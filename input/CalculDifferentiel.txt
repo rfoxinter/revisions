@@ -1,0 +1,19 @@
+Analyse -- Calcul différentiel
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al,matrices,analyse,usuelles,equivalents,bigoperators}\let\epsilon\varepsilon\let\phi\varphi
+$D_h\l f\r$;;$\lim[t\to0]{\frac{f\l a+th\r-f\l a\r}t}$
+$f$ est différentiable sur un ouvert $U$ en $a\in U$;;$f\l a+h\r=f\l a\r+u_a\l h\r+\anrm[]h\epsilon_a\l h\r$\linebreak$u_a\in\al EF$\linebreak$\lim[{\anrm[]h\to0}]{\epsilon_a\l h\r}=0$
+Différentielle de $f$ en $a$;;$\dd f\l a\r\in\al EF$\linebreak$f\l a+h\r=f\l a\r+\dd f\l a\r\cdot h+\o[{\anrm[]h\to0}]{\anrm[]h}$
+Lien entre $D$ et $\dd$ pour une fonction différentiable;;$\dd f\l a\r\cdot h=D_hf\l a\r$
+Différentielle avec les dérivées partielles;;$\dd f\l a\r\cdot h=\sum{k=1}{n}{h_j\pder[][x_j]{f}{a}}$
+Jacobienne;;\let\frac\tfrac$J_f\l a\r=\tmatrix[{\node at (m-3-1-|m.east)[xshift=1.25ex,anchor=west] {$\almat{\dd f_i\l a\r}{\mathcal{B}}{}$};\mtxvpartial{thick}{left}{2}{3};\mtxvpartial{thick}{right}{2}{3};\mtxhline{thick}{2};\mtxhline{thick}{3};\node at (m-1-3|-m.south)[anchor=north] {$\partial_jf\l a\r$};\mtxhpartial{thick}{top}{2}{3};\mtxhpartial{thick}{bottom}{2}{3};\mtxvline{thick}{2};\mtxvline{thick}{3};}][row sep=0pt,minimum height=4ex]({\pder[][x_1]{f_1}{a}\&\mdots\&\pder[][x_j]{f_1}{a}\&\mdots\&\pder[][x_n]{f_i}{a}\\\vdots\&\&\vdots\&\&\vdots\\\pder[][x_1]{f_i}{a}\&\mdots\&\pder[][x_j]{f_i}{a}\&\mdots\&\pder[][x_n]{f_i}{a}\\\vdots\&\&\vdots\&\&\vdots\\\pder[][x_1]{f_n}{a}\&\mdots\&\pder[][x_j]{f_n}{a}\&\mdots\&\pder[][x_n]{f_n}{a}\\})$\let\frac\dfrac
+$L\in\al FG$\linebreak$\dd\l L\circ f\r\l a\r$;;$L\circ\dd f\l a\r$
+$\dd \l f\circ g\r\l a\r$;;$\dd f\l g\l a\r\r\circ\dd f\l a\r$
+$\l f\circ \gamma\r'\l t\r$\linebreak$\gamma\!:\!I\subset\mathbb R\to E$;;$\dd f\l \gamma\l t\r\r\cdot\gamma'\l t\r$
+$\pder[][x_j]{f\circ g}{a}$;;$\sum{k=1}{n}{\pder[][y_k]{f}{g\l a\r}\pder[][x_j]{g_k}{a}}$
+Règle de la chaîne;;$\pder[][x_j]{f\circ\phi}{a}=\sum{k=1}{n}{\pder[][y_k]{f}{\phi\l a\r}\pder[][x_j]{y_k}{a}}$
+Lien différentielle -- intégration;;$f\l b\r-f\l a\r=\int[t][a][b]{\dd f(\gamma\l t\r)\cdot\gamma'\l t\r}$
+$\nabla f\l a\r$;;L'unique vecteur vérifiant $\dd f\l a\r\cdot h=\left\langle\nabla f\l a\r,h\right\rangle$
+Théorème de Schwarz;;Si $f$ est $\mathcal C^2$\linebreak$\mpder[x_1,x_2]{f}{}=\mpder[x_2,x_1]{f}{}$
+Hessienne;;$H_f\l a\r=\l\mpder[x_j,x_i]{f}{a}\r_{\l i,j\r\in\llb1,n\rrb^2}=J_{\nabla f}\l a\r$

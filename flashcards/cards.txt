@@ -13,6 +13,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20231023193234
 ./Algebre/StructuresAlgebriques2
 20240213220210
+./Analyse/CalculDifferentiel
+20240411120917
 ./Analyse/ComplementsDePremiereAnnee
 20240213225915
 ./Analyse/EquationsDifferentiellesLineaires

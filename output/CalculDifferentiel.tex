@@ -1,0 +1,43 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{al,matrices,analyse,usuelles,equivalents,bigoperators}\let\epsilon\varepsilon\let\phi\varphi
+\hypersetup{pdftitle=Analyse -- Calcul différentiel}
+\title{Analyse\\\emph{Calcul différentiel}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Hessienne}{1/15}
+\slider{$H_f\l a\r=\l\mpder[x_j,x_i]{f}{a}\r_{\l i,j\r\in\llb1,n\rrb^2}=J_{\nabla f}\l a\r$}{1/15}
+\slideq{$L\in\al FG$\linebreak$\dd\l L\circ f\r\l a\r$}{2/15}
+\slider{$L\circ\dd f\l a\r$}{2/15}
+\slideq{Jacobienne}{3/15}
+\slider{\let\frac\tfrac$J_f\l a\r=\tmatrix[{\node at (m-3-1-|m.east)[xshift=1.25ex,anchor=west] {$\almat{\dd f_i\l a\r}{\mathcal{B}}{}$};\mtxvpartial{thick}{left}{2}{3};\mtxvpartial{thick}{right}{2}{3};\mtxhline{thick}{2};\mtxhline{thick}{3};\node at (m-1-3|-m.south)[anchor=north] {$\partial_jf\l a\r$};\mtxhpartial{thick}{top}{2}{3};\mtxhpartial{thick}{bottom}{2}{3};\mtxvline{thick}{2};\mtxvline{thick}{3};}][row sep=0pt,minimum height=4ex]({\pder[][x_1]{f_1}{a}\&\mdots\&\pder[][x_j]{f_1}{a}\&\mdots\&\pder[][x_n]{f_i}{a}\\\vdots\&\&\vdots\&\&\vdots\\\pder[][x_1]{f_i}{a}\&\mdots\&\pder[][x_j]{f_i}{a}\&\mdots\&\pder[][x_n]{f_i}{a}\\\vdots\&\&\vdots\&\&\vdots\\\pder[][x_1]{f_n}{a}\&\mdots\&\pder[][x_j]{f_n}{a}\&\mdots\&\pder[][x_n]{f_n}{a}\\})$\let\frac\dfrac}{3/15}
+\slideq{$\dd \l f\circ g\r\l a\r$}{4/15}
+\slider{$\dd f\l g\l a\r\r\circ\dd f\l a\r$}{4/15}
+\slideq{Différentielle de $f$ en $a$}{5/15}
+\slider{$\dd f\l a\r\in\al EF$\linebreak$f\l a+h\r=f\l a\r+\dd f\l a\r\cdot h+\o[{\anrm[]h\to0}]{\anrm[]h}$}{5/15}
+\slideq{$\nabla f\l a\r$}{6/15}
+\slider{L'unique vecteur vérifiant $\dd f\l a\r\cdot h=\left\langle\nabla f\l a\r,h\right\rangle$}{6/15}
+\slideq{Théorème de Schwarz}{7/15}
+\slider{Si $f$ est $\mathcal C^2$\linebreak$\mpder[x_1,x_2]{f}{}=\mpder[x_2,x_1]{f}{}$}{7/15}
+\slideq{$\pder[][x_j]{f\circ g}{a}$}{8/15}
+\slider{$\sum{k=1}{n}{\pder[][y_k]{f}{g\l a\r}\pder[][x_j]{g_k}{a}}$}{8/15}
+\slideq{$\l f\circ \gamma\r'\l t\r$\linebreak$\gamma\!:\!I\subset\mathbb R\to E$}{9/15}
+\slider{$\dd f\l \gamma\l t\r\r\cdot\gamma'\l t\r$}{9/15}
+\slideq{$D_h\l f\r$}{10/15}
+\slider{$\lim[t\to0]{\frac{f\l a+th\r-f\l a\r}t}$}{10/15}
+\slideq{Règle de la chaîne}{11/15}
+\slider{$\pder[][x_j]{f\circ\phi}{a}=\sum{k=1}{n}{\pder[][y_k]{f}{\phi\l a\r}\pder[][x_j]{y_k}{a}}$}{11/15}
+\slideq{Lien différentielle -- intégration}{12/15}
+\slider{$f\l b\r-f\l a\r=\int[t][a][b]{\dd f(\gamma\l t\r)\cdot\gamma'\l t\r}$}{12/15}
+\slideq{Différentielle avec les dérivées partielles}{13/15}
+\slider{$\dd f\l a\r\cdot h=\sum{k=1}{n}{h_j\pder[][x_j]{f}{a}}$}{13/15}
+\slideq{Lien entre $D$ et $\dd$ pour une fonction différentiable}{14/15}
+\slider{$\dd f\l a\r\cdot h=D_hf\l a\r$}{14/15}
+\slideq{$f$ est différentiable sur un ouvert $U$ en $a\in U$}{15/15}
+\slider{$f\l a+h\r=f\l a\r+u_a\l h\r+\anrm[]h\epsilon_a\l h\r$\linebreak$u_a\in\al EF$\linebreak$\lim[{\anrm[]h\to0}]{\epsilon_a\l h\r}=0$}{15/15}
+\end{document}
