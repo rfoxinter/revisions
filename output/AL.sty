@@ -3,9 +3,8 @@
 \DeclareMathOperator{\oldvect}{Vect}
 \newcommand{\vect}[1]{\oldvect\l#1\r}
 \newcommand{\al}[3][]{\def\alargII{,#3}\ifx&#3&\def\alargII{}\fi\mathcal{L}_{#1}\l#2\alargII\r}
-\if@notnofont
+\ifdefined\varoplus
     \let\oldoplus\oplus
-    \let\oplus\relax
     \let\oplus\varoplus
 \fi
 \let\matgl\gl
