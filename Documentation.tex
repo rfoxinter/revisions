@@ -34,6 +34,26 @@
 \date{}
 \newcounter{pagenb}
 
+\makeatletter
+\renewcommand{\kernFFN}{{ }}
+\renewcommand\insertfootnotemarkFB
+  {\rule\z@\footnotesep%
+   \makebox[\parindentFFN][l]{\hfill\@thefnmark\dotFFN}%
+   \kernFFN
+  }
+\makeatother
+
+\newcounter{footnotemarkcounter}
+\setcounter{footnotemarkcounter}0
+\newcounter{footnotetextcounter}
+\setcounter{footnotetextcounter}0
+\newcommand{\footnotetextcounterautorefname}{note}
+
+\renewcommand{\footnotemark}{\refstepcounter{footnotemarkcounter}\label{footnotemark \thefootnotemarkcounter}{\textsuperscript{\textit{\oldstylenums{\ref{footnotetext \thefootnotemarkcounter}}}}}}
+\let\oldfootnotetext\footnotetext
+\renewcommand{\footnotetext}[2][]{{\addtocounter{footnotetextcounter}{1}\def\thefootnote{\textit{\oldstylenums{\ref{footnotemark \thefootnotetextcounter}}}}\oldfootnotetext[\thefootnotetextcounter]{\addtocounter{footnotetextcounter}{-1}\refstepcounter{footnotetextcounter}\label{footnotetext \thefootnotetextcounter}\comparestring{#1}{}{}{\label{footnote #1}}#2}}}
+\renewcommand{\footnote}{\footnotemark\footnotetext}
+
 \newcommand{\mhd}{
     \hrule\vline\hfill
     \begin{minipage}{0.475\linewidth}
@@ -670,6 +690,7 @@ $
 \mcmd{\car{\mathbb{K}}}
 \mcmd{\oldrac}
 \mcmd{\rac{P}}
+\mcmd{\rac[\mathbb{Q}]{X^2-2}}
 \hsection{Probas.sty}
 \mhd
 \mcmd{\p{A}}
@@ -743,6 +764,7 @@ Comparaison entre \texttt{cmssp} et \texttt{cmss} :
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right\rangle?}
 \mcmd{\oldord}
 \mcmd{\ord{x}}
+\mcmd{\ord[G]{x}}
 \hsection{Tables.sty}
 Ce package sert à mettre en forme des tables en latex grâce à \tikzlg{}.
 
