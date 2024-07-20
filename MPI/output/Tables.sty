@@ -1,0 +1,35 @@
+\RequirePackage{tikz}
+\usetikzlibrary{matrix}
+\newlength\tblw
+\newlength\tblh
+\newcommand{\setcolrow}[1][]{
+    \ifx&#1&
+        \setlength\tblw{10cm}
+    \else
+        \setlength\tblw{#1}
+    \fi\tmpsetcolrow}
+\newcommand{\tmpsetcolrow}[3][]{ %\setcolrow{n°col}{n°row}
+    \ifx&#1&
+        \setlength\tblh{6.5cm}
+    \else
+        \setlength\tblh{#1}
+    \fi
+    \tikzset{
+        table/.style={
+            matrix of nodes,
+            row sep=-\pgflinewidth,
+            column sep=-\pgflinewidth,
+            nodes={
+                rectangle,
+                draw=black,
+                align=center,
+                text width = \tblw/#2,
+                inner sep = 0pt,
+                minimum height = \tblh/#3,
+                anchor=south,
+            },
+            inner sep = 0pt,
+            nodes in empty cells,
+        }
+    }
+}

@@ -1,0 +1,9 @@
+Lois de probabilité usuelles
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{probas,complexes}
+$X\sim\unif n$;;$X\l\Omega\r=\llb1,n\rrb$\linebreak$\p{X=k}=\frac1n$\linebreak$\esp X=\frac{n+1}{2}$\linebreak$\var X=\frac{n^2-1}{12}$\linebreak$G_X\l t\r=\frac1n\frac{t^n-1}{t-1}$
+$X\sim\bin p$;;$X\l\Omega\r=\left\{0,1\right\}$\linebreak$\p{X=1}=p$\linebreak$\esp X=p$\linebreak$\var X=pq$\linebreak$G_X\l t\r=pt+q$
+$X\sim\bin[n]p$;;$X\l\Omega\r=\llb0,n\rrb$\linebreak$\p{X=k}=\binom nkp^kq^{n-k}$\linebreak$\esp X=np$\linebreak$\var X=npq$\linebreak$G_X\l t\r=\l pt+q\r^n$
+$X\sim\geom p$;;$X\l\Omega\r=\mathbb N^*$\linebreak$\p{X=k}=pq^{k-1}$\linebreak$\esp X=\frac1p$\linebreak$\var X=\frac{q}{p^2}$\linebreak$G_X\l t\r=\frac{pt}{1-qt}$
+$X\sim\poiss\lambda$;;$X\l\Omega\r=\mathbb N$\linebreak$\p{X=k}=\e^{-\lambda}\frac{\lambda^k}{k!}$\linebreak$\esp X=\lambda$\linebreak$\var X=\lambda$\linebreak$G_X\l t\r=\e^{\lambda\l t-1\r}$

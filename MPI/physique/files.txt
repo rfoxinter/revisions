@@ -1,0 +1,4 @@
+https://rfoxinter.github.io/revisions/MPI/physique/pdf/ReferentielsNonGalileens.pdf
+https://rfoxinter.github.io/revisions/MPI/physique/pdf/EquationsDeMaxwell.pdf
+https://rfoxinter.github.io/revisions/MPI/physique/pdf/DipolesStatiques.pdf
+https://rfoxinter.github.io/revisions/MPI/physique/pdf/Constantes.pdf

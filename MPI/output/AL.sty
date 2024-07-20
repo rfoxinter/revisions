@@ -7,9 +7,8 @@
     \let\oldoplus\oplus
     \let\oplus\varoplus
 \fi
-\let\oldgl\relax
-\DeclareMathOperator{\oldgl}{GL}
-\newcommand{\gl}[1]{\oldgl\l#1\r}
+\let\matgl\gl
+\renewcommand{\gl}[1]{\oldgl\l#1\r}
 \let\olddim\dim
 \renewcommand{\dim}[1]{\olddim\l#1\r}
 \DeclareMathOperator{\oldrg}{rg}
