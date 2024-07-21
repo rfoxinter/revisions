@@ -16,6 +16,7 @@
     <link rel="preload" as="script" href="load.js">
     <script type="text/javascript" src="load.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="hamburger.js"></script>
     <style>
         * {
             font-size: calc(min(3.75vw,100%));
@@ -28,18 +29,14 @@
         }
     </style>
 </head>
-<body onload="display()">
+<body onload="display();hamburger();">
     <div id="overlay"></div>
     <header class="page-header">
         <h1>&nbsp;</h1>
         <span class="menu-icon material-symbols-rounded"><ptr id="menu-button">menu</ptr></span>
         <div class="menu" id="menu">
             <span class="close-icon material-symbols-rounded"><ptr id="close-button">close</ptr></span>
-            <ul style="border-top: 2px solid #eff0f1;;border-bottom: 2px solid #eff0f1;;">
-                <li><a href="MPI">Mathématiques MPI</a></li>
-                <li><a href="MPI/flashcards">Flashcards MPI</a></li>
-                <li><a href="MP2I">Mathématiques MP2I</a></li>
-                <li><a href="MP2I/flashcards">Flashcards MP2I</a></li>
+            <ul id="hamburger" style="border-top: 2px solid #eff0f1;;border-bottom: 2px solid #eff0f1;;">
             </ul>
           </div>          
     </header>
