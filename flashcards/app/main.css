@@ -30,7 +30,7 @@ body {
         margin-bottom: 0 !important;
         padding-bottom: 0 !important;
     }
-    * {
+    *:not(tspan) {
         color: #000000FF !important;
         line-height: 1.15 !important;
     }
@@ -68,7 +68,7 @@ body {
 }
 
 
-* {
+*:not(tspan) {
     font-size: calc(min(3.75vw,100%));
     -webkit-user-select: none;
     -ms-user-select: none;
