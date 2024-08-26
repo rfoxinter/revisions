@@ -120,11 +120,19 @@ async function append_card(src, name) {
         span2.innerHTML = src;
         h1.appendChild(span2);
         d.appendChild(h1);
-        if (document.getElementById('down_cards_container').children.length > 0) {
-            hr = document.createElement('hr');
-            c.appendChild(hr);
+        if (src == "Fichiers importés") {
+            if (document.getElementById('down_cards_container').children.length > 0) {
+                hr = document.createElement('hr');
+                c.prepend(hr);
+            }
+            c.prepend(d);
+        } else {
+            if (document.getElementById('down_cards_container').children.length > 0) {
+                hr = document.createElement('hr');
+                c.appendChild(hr);
+            }
+            c.appendChild(d);
         }
-        c.appendChild(d);
         set_config_title(src);
     }
     p = document.createElement('p');
