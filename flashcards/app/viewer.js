@@ -73,6 +73,7 @@ function load(src, file) {
     document.getElementById('incor').innerText = 'Réponse incorrecte';
     document.getElementById('corr').innerText = 'Réponse correcte';
     document.getElementById('flip').innerHTML = 'Voir la réponse';
+    main_xpos = window.scrollY;
     document.getElementById("downloaded").style.display="none";
     document.getElementById("viewer").style.display="block";
     id = [src, file];
