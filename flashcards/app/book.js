@@ -59,6 +59,7 @@ async function loadBook(src, file) {
 function list_card(src, file) {
     document.getElementById('book_table').innerHTML = '';
     document.getElementById('book_title').innerHTML = '&nbsp;';
+    main_xpos = window.scrollY;
     document.getElementById("downloaded").style.display="none";
     document.getElementById("book").style.display="block";
     id = [src, file];
