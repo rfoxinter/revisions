@@ -1,0 +1,75 @@
+\newif\if@notnofont\@notnofonttrue
+\DeclareOption{nofont}{\@notnofontfalse}
+\newif\if@notnocmssp\@notnocmssptrue
+\DeclareOption{nocmssp}{\@notnocmsspfalse}
+\newif\if@notnoell\@notnoelltrue
+\DeclareOption{noell}{\@notnoellfalse}
+\DeclareOption*{}
+\ProcessOptions\relax
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{ifpdf}
+
+\if@notnofont
+    \usepackage{amsfonts, amssymb}
+    \usepackage{stmaryrd}
+    \SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\fi
+\if@notnocmssp
+    \usepackage{sffont}
+    \renewcommand{\sfdefault}{cmssp}
+\fi
+\if@notnoell
+    \mathcode`l="8000
+    \begingroup
+    \makeatletter
+    \lccode`\~=`\l
+    \DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
+    \lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
+    \endgroup
+    \makeatother
+\fi
+
+\usepackage{xcolor}
+\setbeamertemplate{navigation symbols}{}
+\usefonttheme{serif}
+\setbeamerfont{title}{series=\bfseries,family=\sffamily,size=\Huge,parent=structure}
+\renewcommand\l{\left(}
+\renewcommand\r{\right)}
+\newcommand{\llb}{\left\llbracket}
+\newcommand{\rrb}{\right\rrbracket}
+\let\oldleft\left
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
+\let\oldright\right
+\renewcommand{\right}{\aftergroup\egroup\oldright}
+\newcommand{\slideq}[2]{\begin{frame}[c]{\textcolor{blue}{\Large\sffamily\bfseries Question #2}}\begin{center}\Large#1\end{center}\end{frame}}
+\newcommand{\slider}[2]{\begin{frame}[c]{\textcolor{cyan}{\Large\sffamily\bfseries Réponse #2}}\begin{center}\Large#1\end{center}\end{frame}}
+\let\oldfrac\frac
+\let\frac\dfrac\newcommand{\toggledfrac}{
+    \ifx\frac\dfrac%
+        \let\frac\oldfrac
+    \else
+        \let\frac\dfrac
+    \fi
+}
+\let\oldvec\vec
+\renewcommand{\vec}{\overrightarrow}
+\renewcommand*{\overrightarrow}[1]{\vbox{\halign{##\cr\scriptsize\rightarrowfill\cr\noalign{\nointerlineskip\vskip1pt}$#1\mskip2mu$\cr}}}
+\newlength\bshft
+\bshft=.18pt\relax
+\def\fakebold#1{\setbox0=\hbox{$#1$}#1\kern-\wd0\kern\bshft#1\kern-\wd0\kern\bshft#1}
+\newsavebox{\foobox}
+\newcommand{\slantbox}[2][0]{\mbox{%
+    \sbox{\foobox}{#2}%
+    \hskip\wd\foobox
+    \pdfsave
+    \pdfsetmatrix{1 0 #1 1}%
+    \llap{\usebox{\foobox}}%
+    \pdfrestore
+}}
+\newcommand{\unslant}[2][-.25]{\slantbox[#1]{$#2$}}
+\let\oldOmega\Omega
+\let\oldTheta\Theta
