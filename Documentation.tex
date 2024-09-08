@@ -498,7 +498,7 @@ Il est possible de changer cette option au milieu du document en utilisant la co
 Si {\color{namecolour}\texttt{nolimits}} est utilisé, les indices des commandes se placent comme avec \mintinline{latexmath}?\nolimits?. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
 
 Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\togglebigoplimits?.
-\togglebigoplimits\subsection{La commande \mintinline{latex}?\autobigoplimits?}
+\togglebigoplimits\subsection{La commande {\color{keycolour}\texttt{\textbackslash autobigoplimits}}}
 Il est possible de remettre le comportement automatiques de \LaTeX{} pour l'affichage des indices avec \mintinline{latex}?\autobigoplimits?. La commande \mintinline{latex}?\togglebigoplimits? remettra alors le comportement par défaut du package (donc avec \mintinline{latexmath}?\limits?).
 \hsection{Complexes.sty}
 \mhd
@@ -599,7 +599,7 @@ Les commandes avec des points tel que $\xdots$ ont des définitions qui dépende
 Par exemple, avec 2pt, on obtient : \setlength{\dotsep}{2pt}<< $\xdots$ >>.\setlength{\dotsep}{3.5pt}
 
 Il est également possible de faire de même avec la hauteur des $\mdots$ en modifiant la longueur \mintinline{latex}?\dotlift?. De même avec \mintinline{latex}?\matmin? pour {\color{namecolour}\texttt{minimum width}} et {\color{namecolour}\texttt{minimum height}}, ou encore \mintinline{latex}?\matsep? pour {\color{namecolour}\texttt{row sep}} et {\color{namecolour}\texttt{column sep}}.
-\subsection{La commande \mintinline{latex}?\tmatrix?}
+\subsection{La commande {\color{keycolour}\texttt{\textbackslash tmatrix}}}
 
 \mintinline{latex}?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice \tikzlg{} et les éléments de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
 
@@ -611,7 +611,7 @@ Il est également possible de faire de même avec la hauteur des $\mdots$ en mod
 \nmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou \texttt{left}/\texttt{right} pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou \texttt{top}/\texttt{bottom}) avec les paramètres \tikzlg{} \texttt{params}}
 \nmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou \texttt{top}/\texttt{bottom} pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou \texttt{left}/\texttt{right}) avec les paramètres \tikzlg{} \texttt{params}}
 \nmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres \tikzlg{} \texttt{params}}
-\subsection{Exemples avec \mintinline{latex}?\tmatrix?}
+\subsection{Exemples avec {\color{keycolour}\texttt{\textbackslash tmatrix}}}
 
 $\det M=\tmatrix|{a\&b\\c\&d\\}|$ est produit par \mintinline{latex}?$\det{M}=\tmatrix|{a\&b\\c\&d\\}|$?.
 
@@ -821,43 +821,43 @@ Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 \mcmd[\footnotemark]{\oldcos}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\cos?}
 \mcmd{\cos{x}}
-\mcmd{\cos[n]{x}}
+\mcmd{\cos[^n]{x}}
 \mcmd[\footnotemark]{\oldsin}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\sin?}
 \mcmd{\sin{x}}
-\mcmd{\sin[n]{x}}
+\mcmd{\sin[^n]{x}}
 \mcmd[\footnotemark]{\oldtan}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\tan?}
 \mcmd{\tan{x}}
-\mcmd{\tan[n]{x}}
+\mcmd{\tan[']{x}}
 \mcmd[\footnotemark]{\oldcot}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\cot?}
 \mcmd{\cot{x}}
-\mcmd{\cot[n]{x}}
+\mcmd{\cot[^n]{x}}
 \mcmd{\acos{x}}
-\mcmd{\acos[n]{x}}
+\mcmd{\acos[^n]{x}}
 \mcmd{\asin{x}}
-\mcmd{\asin[n]{x}}
+\mcmd{\asin[^n]{x}}
 \mcmd{\atan{x}}
-\mcmd{\atan[n]{x}}
+\mcmd{\atan[']{x}}
 \mcmd{\oldch}
 \mcmd{\ch{x}}
-\mcmd{\ch[n]{x}}
+\mcmd{\ch[^n]{x}}
 \mcmd{\oldsh}
 \mcmd{\sh{x}}
-\mcmd{\sh[n]{x}}
+\mcmd{\sh[^n]{x}}
 \mcmd{\oldth}
 \mcmd{\th{x}}
-\mcmd{\th[n]{x}}
+\mcmd{\th[']{x}}
 \mcmd{\oldach}
 \mcmd{\ach{x}}
-\mcmd{\ach[n]{x}}
+\mcmd{\ach[^n]{x}}
 \mcmd{\oldash}
 \mcmd{\ash{x}}
-\mcmd{\ash[n]{x}}
+\mcmd{\ash[^n]{x}}
 \mcmd{\oldath}
 \mcmd{\ath{x}}
-\mcmd{\ath[n]{x}}
+\mcmd{\ath[']{x}}
 \hsection{Usuelles.sty}
 \mhd
 \mcmd[\footnotemark]{\oldmin}
@@ -879,11 +879,11 @@ Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 \mcmd[\footnotemark]{\oldexp}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\exp?}
 \mcmd{\exp{x}}
-\mcmd{\exp[n]{x}}
+\mcmd{\exp[^n]{x}}
 \mcmd[\footnotemark]{\oldln}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ln?}
 \mcmd{\ln{x}}
-\mcmd{\ln[n]{x}}
+\mcmd{\ln[^n]{x}}
 \mcmd[\footnotemark]{\oldinf}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\inf?}
 \mcmd{\inf{\varnothing}}
