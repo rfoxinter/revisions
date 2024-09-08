@@ -42,13 +42,13 @@ body.open .menu {
     margin-bottom: calc(min(20px,2vh));
 }
   
-ul {
+#hamburger {
     margin: 0;
     padding: 0;
     list-style: none;
 }
   
-li {
+#hamburger>li {
     padding: calc(min(10px,1vh));;
     border-bottom: 2px solid #eff0f1;;
 }
