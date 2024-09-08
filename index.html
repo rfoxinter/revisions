@@ -32,17 +32,38 @@
 <body onload="display();hamburger();">
     <div id="overlay"></div>
     <header class="page-header">
-        <h1>&nbsp;</h1>
+        <h1>Accueil</h1>
         <span class="menu-icon material-symbols-rounded"><ptr id="menu-button">menu</ptr></span>
         <div class="menu" id="menu">
             <span class="close-icon material-symbols-rounded"><ptr id="close-button">close</ptr></span>
-            <ul id="hamburger" style="border-top: 2px solid #eff0f1;;border-bottom: 2px solid #eff0f1;;">
+            <ul id="hamburger" style="border-top: 2px solid #eff0f1;border-bottom: 2px solid #eff0f1;">
             </ul>
           </div>          
     </header>
     <main class="main-content">
-        <div class="None"></div>
+        <h1 style="margin-bottom: 0;">Accéder à une année</h1>
+        <div id="access_pages"></div>
     </main>
+    <script type="text/javascript">
+        async function page_hamburger() {
+            var response = await fetch('https://rfoxinter.github.io/revisions/hamburger.txt');
+            if (response.status == 200) {
+                const jsCode = await response.text();
+                const div = document.getElementById('access_pages');
+                var array = jsCode.split('\n');
+                const url = document.location.href.replace('index.html', '');
+                for (let i = 0; i < array.length/2; ++i) {
+                    let p = document.createElement('p');
+                    let a = document.createElement('a');
+                    a.setAttribute('href', array[2 * i + 1]);
+                    a.innerHTML = array[2 *i];
+                    p.appendChild(a);
+                    div.appendChild(p);
+                }
+            }
+        }
+        page_hamburger()
+    </script>
     <footer class="site-footer" style="padding-top: 0pt;"></footer>
 </body>
 </html>
