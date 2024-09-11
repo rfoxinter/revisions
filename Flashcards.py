@@ -139,7 +139,7 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
             r[i][0], r[i][1] = r[i][1].replace('!!fst', ''), r[i][0]
         file += '\\slideq{' + r[i][0] + '}{' + str(i + 1) + '/' + str(len(r)) + '}\n'
         file += '\\slider{' + r[i][1] + '}{' + str(i + 1) + '/' + str(len(r)) + '}\n'
-    file += '\end{document}'
+    file += '\\end{document}'
     f = open('output/' + ttle + '.tex', 'w', encoding='utf-8')
     f.write(file)
     f.close()
