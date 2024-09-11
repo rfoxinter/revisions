@@ -92,9 +92,9 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
                 fst.append(0)
             file += sb(r'\\\\\\\\', r'\\\\', sb(r'\\linebreak', r'\\\\', r[i][j]))
             file += '''
-\end{center}
-\end{adjustbox}
-\end{document}'''
+\\end{center}
+\\end{adjustbox}
+\\end{document}'''
             f = open('output/flcrd.tex', 'w', encoding='utf-8')
             f.write(file)
             f.close()
