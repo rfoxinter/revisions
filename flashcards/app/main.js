@@ -503,7 +503,7 @@ async function set_config_card(_url, _name) {
         } if (close) {
             document.getElementById('[' + _url + ',' + _name + ']').style.display = 'none';
         } if (group_folder) {
-            group_per_folder(_url, _name, name);
+            group_per_folder(_url, _name, name, close);
         }
     } catch {}
 }
@@ -517,7 +517,7 @@ Element.prototype.insertChildAtIndex = function(child, index) {
         this.insertBefore(child, this.children[index]);
     }
 }
-function group_per_folder (_url, _name, name) {
+function group_per_folder (_url, _name, name, close) {
     let urldiv = document.getElementsByClassName(_url)[0];
     let title = name.split(" &ndash; ");
     if (title.length == 1) {
@@ -552,6 +552,9 @@ function group_per_folder (_url, _name, name) {
         span2.innerHTML = folder_name;
         h2.appendChild(span2);
         div.appendChild(h2);
+        if (close) {
+            div.style.display = 'none';
+        }
         document.getElementsByClassName(_url)[0].appendChild(div);
     }
     let elt = document.getElementById('[' + _url + ',' + _name + ']');
