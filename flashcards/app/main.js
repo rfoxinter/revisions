@@ -538,6 +538,7 @@ function group_per_folder (_url, _name, name) {
     if (document.getElementsByClassName("["+_url+","+folder+"]").length === 0) {
         let div = document.createElement("div");
         div.classList.add("["+_url+","+folder+"]");
+        div.classList.add(_url+"_elem");
         div.setAttribute('style','margin-left: 1.5rem;');
         h2 = document.createElement('h2');
         h2.setAttribute('style','margin-bottom:0;margin-left: -1.5rem; font-size: calc(0.8 * 1.5em);')
