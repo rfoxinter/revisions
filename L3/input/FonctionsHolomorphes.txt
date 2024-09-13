@@ -2,7 +2,7 @@ Analyse complexe -- Fonctions holomorphes
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{analyse}\usepackage{complexes}
-Lemme de Hadamard pour les séries entières;;$R=\limsup\limits_{n\in\mathbb N}\l\left|a_n\right|^{\oldfrac1n}\r$
+Lemme de Hadamard pour les séries entières;;$R^{-1}=\limsup\limits_{n\in\mathbb N}\l\left|a_n\right|^{\oldfrac1n}\r$
 Condition de Cauchy-Riemann;;$f\l x+\i y\r=P\l x,y\r+\i Q\l x,y\r$ est holomorphe si et seulement si $\pder{P}{}=\pder[][y]{Q}{}$ et $\pder[][y]{P}{}=-\pder{Q}{}$
 $\pder[][z]{f\l x+\i y\r}{}$;;$\frac12\l\pder{f\l x+\i y\r}{}-\i\pder[][y]{f\l x+\i y\r}{}\r$
 $\pder[][\bar z]{f\l x+\i y\r}{}$;;$\frac12\l\pder{f\l x+\i y\r}{}+\i\pder[][y]{f\l x+\i y\r}{}\r$
