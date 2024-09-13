@@ -584,6 +584,7 @@ function config_src(src) {
                 document.getElementById("fl_closed").checked = result.close;
                 document.getElementById("auto_upd").checked = result.auto_upd;
                 document.getElementById("root").value = result.root;
+                document.getElementById("group_folder").checked = result.group_folder;
             }
         };
 
@@ -609,6 +610,7 @@ function set_config() {
                 await store.delete(src);
             }
             add_config(src, document.getElementById("alias").value==""?src:document.getElementById("alias").value, document.getElementById("fl_name").checked, document.getElementById("root").value, document.getElementById("fl_closed").checked, document.getElementById("auto_upd").checked, document.getElementById("group_folder").checked);
+            _url_orig_name_close.clear();
             window.alert("Configuration appliquée");
             document.getElementById('download').style.display = 'block';
             document.getElementById('config').style.display = 'none';
