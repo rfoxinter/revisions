@@ -18,14 +18,14 @@ function replace_css_rule(edit_class, visibility) {
     var modified = false;
     for (var i=0; i<content.length; i++) {
         if (content[i].search('.' + css_selector.replaceAll("\\", "\\\\")) !== -1) {
-            content[i] = "." + css_selector + "{display:" + visibility + "};";
+            content[i] = "." + css_selector + "{display:" + visibility + ";}";
             styleTag.innerHTML = content.join("\n");
             modified = true;
             break;
         }
     }
 
-    if (!modified) {styleTag.innerHTML += "." + css_selector + "{display:" + visibility + "};\n";}
+    if (!modified) {styleTag.innerHTML += "." + css_selector + "{display:" + visibility + ";}\n";}
 }
 
 var card_nb = 0;
