@@ -13,6 +13,7 @@ function folder_click(groupname) {
 }
 
 var card_nb = 0;
+var first_of_folder = new Map();
 function display_cards() {
     var open = indexedDB.open("flcrddb");
     open.onsuccess = function(event) {
@@ -25,11 +26,22 @@ function display_cards() {
             var cursor = event.target.result;
             if (cursor) {
                 var key = cursor.primaryKey;
+                var card_name = cursor.value.card_name;
                 ++ card_nb;
-                append_card(key[0], key[1], card_nb);
+                let title = card_name.split(" &ndash; ");
+                if (title.length == 1) {
+                    var folder = "root";
+                } else {
+                    var folder = title[0].replaceAll(" ", "_");
+                }
+                let val = first_of_folder.get([key[0], key[1], folder]);
+                if (val === undefined) {
+                    first_of_folder.set((key[0], folder), card_nb);
+                }
+                append_card(key[0], key[1], card_nb, card_name);
                 cursor.continue();
             }
-        };
+        }
 
         tx.oncomplete = function() {
             db.close();
@@ -101,7 +113,7 @@ async function list_cards(downloaded = false) {
     } else {window.alert('Impossible de rafraîchir le fichier.');}
 }
 
-async function append_card(src, name, card_number) {
+async function append_card(src, name, card_number, card_name) {
     let c = document.getElementById('down_cards_container');
     if (document.getElementsByClassName(src).length == 0) {
         d = document.createElement('div');
@@ -190,7 +202,7 @@ async function append_card(src, name, card_number) {
     p.appendChild(a3);
     p.id = '[' + src + ',' + name + ']';
     document.getElementsByClassName(src)[0].appendChild(p);
-    set_config_card(src, name, card_number)
+    set_config_card(src, name, card_number, card_name);
 }
 
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
@@ -480,8 +492,8 @@ function get_orig_name_close(_url) {
                 getRequest.onsuccess = function(event) {
                     var result = event.target.result;
                     if (result) {
-                        _url_orig_name_close.set(_url, [result.orig_name,result.close,result.group_folder]);
-                        resolve([result.orig_name,result.close,result.group_folder]);
+                        _url_orig_name_close.set(_url, [result.orig_name,result.close,result.group_folder,result.root]);
+                        resolve([result.orig_name,result.close,result.group_folder,result.root]);
                     } else {
                         reject("Pas trouvé");
                     }
@@ -495,18 +507,17 @@ function get_orig_name_close(_url) {
     });
 }
 
-async function set_config_card(_url, _name, card_number) {
-    let [orig_name, close, group_folder] = await get_orig_name_close(_url);
+async function set_config_card(_url, _name, card_number, card_name) {
+    let [orig_name, close, group_folder, root] = await get_orig_name_close(_url);
     try {
         if (orig_name) {
-            var name = await read_name(_url, _name);
-            document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = name;
+            document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = card_name;
         } else {
-            document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML.replace(result.root, '');
+            document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML.replace(root, '');
         } if (close) {
             document.getElementById('[' + _url + ',' + _name + ']').style.display = 'none';
         } if (group_folder) {
-            group_per_folder(_url, _name, name, close, card_number);
+            group_per_folder(_url, _name, card_name, close, card_number);
         }
     } catch {}
 }
@@ -519,7 +530,6 @@ Element.prototype.insertChildAtIndex = function(child, index) {
         this.insertBefore(child, this.children[index]);
     }
 }
-var first_of_folder = new Map();
 function group_per_folder(_url, _name, name, close, card_number) {
     let urldiv = document.getElementsByClassName(_url)[0];
     let title = name.split(" &ndash; ");
@@ -532,10 +542,6 @@ function group_per_folder(_url, _name, name, close, card_number) {
         var card_name = title[1].replace("<i>","").replace("</i>","");
     }
     var first_number = first_of_folder.get((_url, folder));
-    if (first_number === undefined) {
-        first_of_folder.set((_url, folder), card_number);
-        first_number = card_number;
-    }
     if (document.getElementsByClassName("["+_url+","+folder+"]").length === 0) {
         let div = document.createElement("div");
         div.classList.add("["+_url+","+folder+"]");
