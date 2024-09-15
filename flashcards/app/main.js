@@ -560,7 +560,7 @@ function group_per_folder(_url, _name, name, close, card_number) {
     }
     let elt = document.getElementById('[' + _url + ',' + _name + ']');
     urldiv.removeChild(elt);
-    document.getElementsByClassName("["+_url+","+folder+"]")[0].insertChildAtIndex(elt, max(card_number - first_number, 0) + 1);
+    document.getElementsByClassName("["+_url+","+folder+"]")[0].insertChildAtIndex(elt, Math.max(card_number - first_number, 0) + 1);
     elt.children[0].innerHTML = card_name;
 }
 
