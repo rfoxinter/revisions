@@ -1,15 +1,31 @@
 const icon_state = {'folder':0, 'folder_open':1};
 const disp_icon = {0:'folder', 1:'folder_open'};
-const text_state = {'none':0, '':1};
-const disp_text = {0:'none', 1:''};
+const text_state = {'none':0, 'block':1};
+const disp_text = {0:'none', 1:'block'};
 
 function folder_click(groupname) {
     document.getElementById(groupname+'_icon').innerHTML=disp_icon[1-icon_state[document.getElementById(groupname+'_icon').innerHTML]];
     const elem = document.getElementsByClassName(groupname+'_elem');
-    const disp = disp_text[1-text_state[elem[0].style.display]];
-    for(var i = 0; i < elem.length; ++i) {
-        elem[i].style.display = disp;
+    const disp = disp_text[1-text_state[window.getComputedStyle(elem[0], null).display]];
+    replace_css_rule(groupname + "_elem", disp);
+}
+
+function replace_css_rule(edit_class, visibility) {
+    var styleTag = document.getElementById("folders_display_style");
+    var content = styleTag.innerHTML.split("\n");
+    var css_selector = edit_class.replaceAll("/", "\\/").replaceAll(":", "\\:").replaceAll(".", "\\.").replaceAll("_", "\\_");
+
+    var modified = false;
+    for (var i=0; i<content.length; i++) {
+        if (content[i].search('.' + css_selector.replaceAll("\\", "\\\\")) !== -1) {
+            content[i] = "." + css_selector + "{display:" + visibility + "};";
+            styleTag.innerHTML = content.join("\n");
+            modified = true;
+            break;
+        }
     }
+
+    if (!modified) {styleTag.innerHTML += "." + css_selector + "{display:" + visibility + "};\n";}
 }
 
 var card_nb = 0;
@@ -24,6 +40,7 @@ function display_cards() {
 
         request.onsuccess = function(event) {
             var cursor = event.target.result;
+            var prev_url = "";
             if (cursor) {
                 var key = cursor.primaryKey;
                 var card_name = cursor.value.card_name;
@@ -34,11 +51,12 @@ function display_cards() {
                 } else {
                     var folder = title[0].replaceAll(" ", "_");
                 }
-                let val = first_of_folder.get([key[0], key[1], folder]);
+                let val = first_of_folder.get((key[0], folder));
                 if (val === undefined) {
                     first_of_folder.set((key[0], folder), card_nb);
                 }
-                append_card(key[0], key[1], card_nb, card_name);
+                append_card(key[0], key[1], card_nb, card_name, prev_url != key[0]);
+                prev_url = key[0];
                 cursor.continue();
             }
         }
@@ -113,7 +131,7 @@ async function list_cards(downloaded = false) {
     } else {window.alert('Impossible de rafraîchir le fichier.');}
 }
 
-async function append_card(src, name, card_number, card_name) {
+async function append_card(src, name, card_number, card_name, edit_visibility) {
     let c = document.getElementById('down_cards_container');
     if (document.getElementsByClassName(src).length == 0) {
         d = document.createElement('div');
@@ -202,7 +220,7 @@ async function append_card(src, name, card_number, card_name) {
     p.appendChild(a3);
     p.id = '[' + src + ',' + name + ']';
     document.getElementsByClassName(src)[0].appendChild(p);
-    set_config_card(src, name, card_number, card_name);
+    set_config_card(src, name, card_number, card_name, edit_visibility);
 }
 
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
@@ -514,9 +532,9 @@ async function set_config_card(_url, _name, card_number, card_name) {
             document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = card_name;
         } else {
             document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML.replace(root, '');
-        } if (close) {
-            document.getElementById('[' + _url + ',' + _name + ']').style.display = 'none';
-        } if (group_folder) {
+        }
+        replace_css_rule(_url + "_elem", close?"none":"block");
+        if (group_folder) {
             group_per_folder(_url, _name, card_name, close, card_number);
         }
     } catch {}
@@ -559,15 +577,16 @@ function group_per_folder(_url, _name, name, close, card_number) {
         span2.innerHTML = folder_name;
         h2.appendChild(span2);
         div.appendChild(h2);
-        if (close) {
-            div.style.display = 'none';
-        }
         document.getElementsByClassName(_url)[0].appendChild(div);
     }
     let elt = document.getElementById('[' + _url + ',' + _name + ']');
     urldiv.removeChild(elt);
     document.getElementsByClassName("["+_url+","+folder+"]")[0].insertChildAtIndex(elt, Math.max(card_number - first_number, 0) + 1);
     elt.children[0].innerHTML = card_name;
+    if (folder != "root") {
+        elt.classList.toggle(_url + "_elem");
+        elt.style.display = "block";
+    }
 }
 
 function config_src(src) {
