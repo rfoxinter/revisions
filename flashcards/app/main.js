@@ -12,6 +12,7 @@ function folder_click(groupname) {
     }
 }
 
+var card_nb = 0;
 function display_cards() {
     var open = indexedDB.open("flcrddb");
     open.onsuccess = function(event) {
@@ -24,7 +25,8 @@ function display_cards() {
             var cursor = event.target.result;
             if (cursor) {
                 var key = cursor.primaryKey;
-                append_card(key[0], key[1]);
+                ++ card_nb;
+                append_card(key[0], key[1], card_nb);
                 cursor.continue();
             }
         };
@@ -99,7 +101,7 @@ async function list_cards(downloaded = false) {
     } else {window.alert('Impossible de rafraîchir le fichier.');}
 }
 
-async function append_card(src, name) {
+async function append_card(src, name, card_number) {
     let c = document.getElementById('down_cards_container');
     if (document.getElementsByClassName(src).length == 0) {
         d = document.createElement('div');
@@ -188,7 +190,7 @@ async function append_card(src, name) {
     p.appendChild(a3);
     p.id = '[' + src + ',' + name + ']';
     document.getElementsByClassName(src)[0].appendChild(p);
-    set_config_card(src, name)
+    set_config_card(src, name, card_number)
 }
 
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
@@ -355,7 +357,8 @@ function add_card(_url, _name, filesrc, nb) {
                         db.close();
                     };
                 };
-                append_card(_url, _name);
+                append_card(_url, _name, card_nb);
+                ++ card_nb;
             } catch {
                 reject();
                 a.innerHTML = "error";
@@ -492,7 +495,7 @@ function get_orig_name_close(_url) {
     });
 }
 
-async function set_config_card(_url, _name) {
+async function set_config_card(_url, _name, card_number) {
     let [orig_name, close, group_folder] = await get_orig_name_close(_url);
     try {
         if (orig_name) {
@@ -503,12 +506,12 @@ async function set_config_card(_url, _name) {
         } if (close) {
             document.getElementById('[' + _url + ',' + _name + ']').style.display = 'none';
         } if (group_folder) {
-            group_per_folder(_url, _name, name, close);
+            group_per_folder(_url, _name, name, close, card_number);
         }
     } catch {}
 }
 
-var eltpos = new Map();
+// var eltpos = new Map();
 Element.prototype.insertChildAtIndex = function(child, index) {
     if (!index) {index = 0};
     if (index >= this.children.length) {
@@ -517,7 +520,8 @@ Element.prototype.insertChildAtIndex = function(child, index) {
         this.insertBefore(child, this.children[index]);
     }
 }
-function group_per_folder (_url, _name, name, close) {
+var first_of_folder = new Map();
+function group_per_folder(_url, _name, name, close, card_number) {
     let urldiv = document.getElementsByClassName(_url)[0];
     let title = name.split(" &ndash; ");
     if (title.length == 1) {
@@ -528,13 +532,18 @@ function group_per_folder (_url, _name, name, close) {
         var folder = title[0].replaceAll(" ", "_");
         var card_name = title[1].replace("<i>","").replace("</i>","");
     }
-    var pos = eltpos.get((_url, folder));
-    if (pos == undefined) {
-        eltpos.set((_url, folder), 2);
-        pos = 1;
-    } else {
-        eltpos.set((_url, folder), pos + 1);
+    var first_number = first_of_folder.get((_url, folder));
+    if (first_number === undefined) {
+        first_of_folder.set((_utrl, folder), card_number);
+        first_number = card_number;
     }
+    // var pos = eltpos.get((_url, folder));
+    // if (pos == undefined) {
+    //     eltpos.set((_url, folder), 2);
+    //     pos = 1;
+    // } else {
+    //     eltpos.set((_url, folder), pos + 1);
+    // }
     if (document.getElementsByClassName("["+_url+","+folder+"]").length === 0) {
         let div = document.createElement("div");
         div.classList.add("["+_url+","+folder+"]");
@@ -559,7 +568,7 @@ function group_per_folder (_url, _name, name, close) {
     }
     let elt = document.getElementById('[' + _url + ',' + _name + ']');
     urldiv.removeChild(elt);
-    document.getElementsByClassName("["+_url+","+folder+"]")[0].insertChildAtIndex(elt, pos);
+    document.getElementsByClassName("["+_url+","+folder+"]")[0].insertChildAtIndex(elt, max(first_number - first_of_folder, 0) + 1);
     elt.children[0].innerHTML = card_name;
 }
 
@@ -665,7 +674,8 @@ async function loadfl() {
                             }
                             else {
                                 store.put({url: "Fichiers importés", name: fl_defl[0], content: text});
-                                append_card("Fichiers importés", fl_defl[0]);
+                                ++ card_nb;
+                                append_card("Fichiers importés", fl_defl[0], card_nb);
                                 window.alert("Fichier importé");
                             }
                         };
