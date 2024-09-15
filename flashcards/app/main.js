@@ -511,7 +511,6 @@ async function set_config_card(_url, _name, card_number) {
     } catch {}
 }
 
-// var eltpos = new Map();
 Element.prototype.insertChildAtIndex = function(child, index) {
     if (!index) {index = 0};
     if (index >= this.children.length) {
@@ -534,16 +533,9 @@ function group_per_folder(_url, _name, name, close, card_number) {
     }
     var first_number = first_of_folder.get((_url, folder));
     if (first_number === undefined) {
-        first_of_folder.set((_utrl, folder), card_number);
+        first_of_folder.set((_url, folder), card_number);
         first_number = card_number;
     }
-    // var pos = eltpos.get((_url, folder));
-    // if (pos == undefined) {
-    //     eltpos.set((_url, folder), 2);
-    //     pos = 1;
-    // } else {
-    //     eltpos.set((_url, folder), pos + 1);
-    // }
     if (document.getElementsByClassName("["+_url+","+folder+"]").length === 0) {
         let div = document.createElement("div");
         div.classList.add("["+_url+","+folder+"]");
@@ -568,7 +560,7 @@ function group_per_folder(_url, _name, name, close, card_number) {
     }
     let elt = document.getElementById('[' + _url + ',' + _name + ']');
     urldiv.removeChild(elt);
-    document.getElementsByClassName("["+_url+","+folder+"]")[0].insertChildAtIndex(elt, max(first_number - first_of_folder, 0) + 1);
+    document.getElementsByClassName("["+_url+","+folder+"]")[0].insertChildAtIndex(elt, max(card_number - first_number, 0) + 1);
     elt.children[0].innerHTML = card_name;
 }
 
