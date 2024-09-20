@@ -1,0 +1,5 @@
+"Intégration et théorie de la mesure &ndash; <i>Théorie de la mesure</i>"
+1
+0
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

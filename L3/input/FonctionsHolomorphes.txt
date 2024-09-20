@@ -9,3 +9,4 @@ Condition de Cauchy-Riemann;;$f\l x+\i y\r=P\l x,y\r+\i Q\l x,y\r$ est holomorph
 $\pder[][z]{f\l x+\i y\r}{}$;;$\frac12\l\pder{f\l x+\i y\r}{}-\i\pder[][y]{f\l x+\i y\r}{}\r$
 $\pder[][\bar z]{f\l x+\i y\r}{}$;;$\frac12\l\pder{f\l x+\i y\r}{}+\i\pder[][y]{f\l x+\i y\r}{}\r$
 Théorème d'inversion locale pour une fonction holomorphe;;Si $f$ est holomorphe et de classe $\mathcal C^1$ sur $U$ tel que $f\l z_0\r\neq 0$ alors il existe $V\in\mathcal V\l z_0\r$ et $W\in\mathcal V\l f\l z_0\r\r$ tels que $f$ induit un biholomorphisme de $V$ dans $W$ (ie bijectif, holomorphe de réciproque holomorphe)
+Non-existence d'une réciproques de $\oldexp$;;Il n'existe pas de fonction $f$ continue sur $\mathbb C^*$ vérifiant $\oldexp\circ f=\id$

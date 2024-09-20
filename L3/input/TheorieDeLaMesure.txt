@@ -1,0 +1,15 @@
+Intégration et théorie de la mesure -- Théorie de la mesure
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}
+Algèbre (de Boole);;$\mathcal A$ est une algèbre si $\varnothing\in\mathcal A$, $\forall A\in\mathcal A$, $A^\complement\in\mathcal A$ et $\forall\l A,B\r\in\mathcal A^2$, $A\cup B\in\mathcal A$
+$\sigma$-algèbre (ou tribu);;$\mathcal A$ est une $\sigma$-algèbre si $\varnothing\in\mathcal A$, $\forall A\in\mathcal A$, $A^\complement\in\mathcal A$ et $\forall\l A_n\r\in\mathcal A^{\mathbb N}$, $\bigcup{n\in\mathbb N}{}{A_n}\in\mathcal A$
+Intersection de tribus;;Toute intersection de tribus est une tribu
+$\sigma\l C\r$;;$\bigcap{\substack{\mathcal A\text{ tribu}\\C\subset\mathcal A}}{}{\mathcal A}$
+Tribu borélienne;;Tribu engendrée par les ouverts
+Espace mesurable;;$\l X,\mathcal A\r$
+Mesure (positive);;$\mu\!:\!\mathcal A\to\mathbb R_+$ est une mesure si $\mu\l\varnothing\r=0$ et pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$ alors $\mu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\mu\l A_n\r}$
+Mesure finie;;$\mu\l X\r<+\infty$
+Mesure $\sigma$-finie;;$\exists\l X_n\r\in\mathcal A^{\mathbb N}$, $X=\bigcup{n\in\mathbb N}{}{A_n}$ et $\forall n\in\mathbb N$, $\mu\l A_n\r<+\infty$
+Espace mesuré;;$\l X,\mathcal A,\mu\r$
+Fonction mesurable;;$f\!:\!\l X,\mathcal A\r\to\l Y,\mathcal B\r$ est mesurable si $f^{-1}\l\mathcal B\r\subset\mathcal A$

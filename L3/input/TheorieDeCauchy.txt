@@ -1,0 +1,17 @@
+Analyse complexe -- Théorie de Cauchy
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse}\toggleanalysepar\usepackage{complexes}\let\phi\varphi\usepackage{usuelles}
+Théorème de Cauchy;;Pour $U$ un ouvert de $\mathbb C$ et $f\!:\!U\to\mathbb C$, $f$ est holomorphe sur $U$ si et seulement si $f$ est analytique sur $U$
+$\int[z][\gamma]{f\l z\r}$\linebreak$\gamma\!:\!\left[a,b\right]\to\mathbb C$ de classe $\mathcal C^1$ par morceaux;;$\int[t][a][b]{f\l\gamma\l t\r\r\times\gamma'\l t\r}$
+Invariance par paramétrage de l'intégrale;;Si $\phi\!:\!\left[a',b'\right]\to\left[a,b\right]$ est croissante et $\mathcal C^1$, en posant $\gamma_0=\gamma\circ\phi$, $\int[z][\gamma_0]{f\l z\r}=\int[z][\gamma]{f\l z\r}$
+Intégration sur le chemin opposé;;Si $\gamma^*\l t\r=\gamma\l a+b-t\r$, $\int[z][\gamma^*]{f\l z\r}=-\int[z][\gamma]{f\l z\r}$
+Concaténation d'intégrales;;Si $c\in\left[a,b\right]$, $\gamma_1=\gamma_{|\left[a,c\right]}$ et $\gamma_2=\gamma_{|\left[c,b\right]}$, $\int[z][\gamma_1]{f\l z\r}+\int[z][\gamma_2]{f\l z\r}=\int[z][\gamma]{f\l z\r}$
+Majoration d'une intégrale;;$\left|\int[z][\gamma]{f\l z\r}\right|\leqslant\oldmax\limits_{z\in\gamma\l\left[a,b\right]\r}{\left|f\l z\r\right|}\times\underbrace{\int[t][a][b]{\left|\gamma'\l t\r\right|}}_{\text{longueur de }\gamma}$
+Intégrales sur un lacet;;Si $f$ est holomorphe sur $U$ et $\gamma\l a\r=\gamma\l b\r$, $\int[z][\gamma]{f\l z\r}=0$
+Formule de Cauchy;;Si $U$ est un ouvert de $\mathbb C$, $f$ holomorphe sur $U$ et $z_0\in U$ alors pour tout $z\in D\l z_0,r\r$, $f\l z\r=\frac{1}{2\i\pi}\int[w][C\l z_0,r\r]{\frac{f\l w\r}{w-r}}$
+Coefficients de la série de Taylor d'une fonction holomorphe;;$a_n=\frac{1}{2\i\pi}\int[w][C\l z_0,r\r]{\frac{f\l w\r}{\l w-z_0\r^{n+1}}}$
+Intégrale sur $\partial\Gamma$ où $\Gamma\!:\!\left[0,1\right]^2\to U$;;Si $f$ est holomorphe et $\Gamma$ de classe $\mathcal C^2$ alors $\int[z][\partial\Gamma]{f\l z\r}=0$
+Invariance par homotopie des intégrales;;Si $f$ est holomorphe et $\Gamma$ de classe $\mathcal C^2$, en posant $\gamma_s=\Gamma\l s,\cdot\r$, si $\gamma_s$ vérifie l'une des deux conditions suivantes, $\forall s\in\left[0,1\right]$, $\gamma_s$ est fermé ou $\gamma_s\l0\r$ et $\gamma_s\l1\r$ sont indépendant de $s$ alors $\int[z][\gamma_0]{f\l z\r}=\int[z][\gamma_1]{f\l z\r}$
+Primitive de fonctions holomorphe sur un ouvert simplement connexe $U$ (ie connexe par arcs et tout lacet est homotope à un lacet constant);;Toute fonction $f$ holomorphe de classe $\mathcal C^1$ admet une primitive holomorphe sur $U$\linebreak Ce résultat est en particulier vrai si $U$ est étoilé
+Théorème de Morera;;Si $U$ est un ouvert de $\mathbb C$ et $f\!:\!U\to\mathbb C$, il y a équivalence entre $f$ est analytique sur $U$ et $f$ est continue et vérifie $\forall\l a,b,c\r\in U^3$ tels que $\Delta\l a,b,c\r\subset U$, $\int[z][{\left[a,b\right]}]{f\l z\r}+\int[z][{\left[b,c\right]}]{f\l z\r}+\int[z][{\left[c,a\right]}]{f\l z\r}=0$
