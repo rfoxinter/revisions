@@ -1,0 +1,8 @@
+Algèbre 1 -- Groupes
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{structures}\let\phi\varphi
+Normalisateur de $H\leqslant G$;;$N_G\l H\r=\left\{x\in G,xH=Hx\right\}$
+Premier théorème d'isomorphisme;;Si $\phi\!:\!G\to G'$ est un morphisme de groupes alors $\overline\phi\!:\!G/\ker\phi\to\im\phi$ est un isomorphisme
+Deuxième théorème d'isomorphisme;;Si $H\leqslant G$ et $K\vartriangleleft G$ alors $HK\leqslant G$ et $HK/K\cong H/\l H\cap K\r$
+Troisième théorème d'isomorphisme;;Si $H\vartriangleleft G$ et $K\vartriangleleft G$ tels que $H\leqslant K$ alors $K/H\vartriangleleft G/H$ et $\l G/H\r/\l K/H\r\cong G/K$

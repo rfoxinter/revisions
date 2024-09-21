@@ -1,0 +1,11 @@
+Topologie et calcul différentiel -- Espaces métriques
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{topologie}
+Distance sur $E$;;$d\!:\!E\times E\to\mathbb R$ vérifiant\linebreak$d\l x,y\r\geqslant0$ et $d\l x,y\r=0\Leftrightarrow x=y$\linebreak$d\l x,y\r=d\l y,x\r$\linebreak$d\l x,y\r\leqslant d\l x,z\r+d\l z,y\r$
+$f$ est un homéomorphisme;;$f$ est continue, bijective et de réciproque continue
+$f\!:\!\l X,d\r\to\l Y,d'\r$ est une isométrie;;$d'\l f\l x\r,f\l x'\r\r=d\l x,x'\r$
+Lien entre espace métrique et les evn par des isomorphies;;Si $\l X,d\r$ est un espace méteique, il existe un evn $\l E,\nrm\cdot\r$ et une isométrie $i\!:\!X\to E$
+$\l X,d\r$ est connexe\linebreak Caractérisation par les ouverts;;Il n'existe pas d'ouverts disjoints $U$ et $V$ tels que $X=U\sqcup V$
+$\l X,d\r$ est connexe\linebreak Caractérisation par les fonctions;;$X$ est connexe si et seulement si toute fonction continue $f\!:\!X\to\left\{0,1\right\}$ est constante
+Lien entre connexe par arcs est connexe;;Tout connexe par arcs est connexe\linebreak Si $X$ est connexe et localement connexe par arcs (connexe par arcs sur un voisinnage de chaque point) alors $X$ est connexe

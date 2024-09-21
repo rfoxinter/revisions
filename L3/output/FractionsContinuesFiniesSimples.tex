@@ -1,0 +1,19 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{matrices}
+\hypersetup{pdftitle=Fractions continues -- Fractions continues finies simples}
+\title{Fractions continues\\\emph{Fractions continues finies simples}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Comparaison des réduites}{1/3}
+\slider{$\l q_n\r_{n\in\mathbb N^*}$ est strictement croissante\linebreak$\frac{p_n}{q_n}-\frac{p_{n-1}}{q_{n-1}}=\frac{\l-1\r^{n-1}}{q_nq_{n-1}}$\linebreak$\frac{p_n}{q_n}-\frac{p_{n-2}}{q_{n-2}}=\frac{\l-1\r^{n-1}a_n}{q_nq_{n-2}}$}{1/3}
+\slideq{Formule du déterminant}{2/3}
+\slider{$p_nq_{n-1}+q_np_{n-1}=\l-1\r^{n-1}$}{2/3}
+\slideq{Théorème des réduites}{3/3}
+\slider{Les suites $\l p_n\r_{n\geqslant-2}$ et $\l q_n\r_{n\geqslant-2}$ définies par \tmatrix[][row sep = 0pt, inner sep = 0pt]\{{p_{-2}=0\\p_{-1}=1\\q_{-2}=1\\q_{-1}=1\\}{.\kern-\nulldelimiterspace} et \tmatrix[][row sep = 0pt, inner sep = 0pt]\{{p_n=a_np_{n-1}+p_{n-2}\\q_n=a_nq_{n-1}+q_{n-2}\\}{.\kern-\nulldelimiterspace} vérifient $\left[a_0,\cdots,a_n\right]=\frac{p_n}{q_n}$, $\l\frac{p_n}{q_n}\r$ est la suite des réduites et $p_n\wedge q_n=1$}{3/3}
+\end{document}
