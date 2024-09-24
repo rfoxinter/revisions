@@ -2,7 +2,7 @@ from subprocess import run as rn
 from subprocess import PIPE
 from os import chdir as c
 from os import remove as rem
-from os import rename as ren
+from os import replace as ren
 from os import makedirs as m
 from os import listdir as l
 from os.path import realpath as rp
@@ -153,14 +153,15 @@ def recompile(dest:str) -> bool:
                 ttle = ttle[1].title()
             ttle = remove_special_chars(ttle)
         if dest == 'default':
-            dest = t.split('--')
-            if len(dest) == 1:
+            ldest = t.split('--')
+            if len(ldest) == 1:
                 dest = 'flashcards/'
             else:
-                dest = 'flashcards/' + remove_special_chars(dest[0].title()) + '/'
+                dest = 'flashcards/' + remove_special_chars(ldest[0].title()) + '/'
         print('[' + str(i + 1) + '/' + str(len(files)) + ']\nCompilation of [' + f + ']')
-        fail &= gen_latex(r, t, ttle, dest)
+        fail |= gen_latex(r, t, ttle, dest)
         dest = olddest
+    return fail
 
 
 def main(file_path:str, file:str, dest:str, _open:bool) -> bool:
@@ -187,11 +188,11 @@ def main(file_path:str, file:str, dest:str, _open:bool) -> bool:
             ttle = ttle[1].title()
         ttle = remove_special_chars(ttle)
     if dest == 'default':
-        dest = t.split('--')
-        if len(dest) == 1:
+        ldest = t.split('--')
+        if len(ldest) == 1:
             dest = 'flashcards/'
         else:
-            dest = 'flashcards/' + remove_special_chars(dest[0].title()) + '/'
+            dest = 'flashcards/' + remove_special_chars(ldest[0].title()) + '/'
     fail = gen_latex(r, t, ttle, dest)
     if _open:
         sl(.5)

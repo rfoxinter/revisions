@@ -39,4 +39,9 @@ defaults:
             path: MPI/**
         values:
             sitemap: false
+    -
+        scope:
+            path: L3/anglais/**
+        values:
+            sitemap: false
 
