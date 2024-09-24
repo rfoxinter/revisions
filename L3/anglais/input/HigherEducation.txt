@@ -1,6 +1,6 @@
 Anglais B2+ -- Higher education
-Shuffle questions : True
-Q/R & R/Q : True
+True
+True
 \usepackage{worldflags}\usepackage{tabularray}\SetTblrInner{rowsep=0pt}\setlength{\tabcolsep}{0pt}\newcommand{\engdef}[2]{\begin{tblr}{Q[c,m]Q[c,m]}\worldflag[framewidth=0mm,width=5mm]{GB}&#1\\\worldflag[framewidth=0mm,width=5mm]{US}&#2\end{tblr}}
 !!fstClasses préparatoires;;Undergraduate/preparatory/cram school
 !!fstL3;;The third/junior year of my undergraduate degree
@@ -13,21 +13,21 @@ Q/R & R/Q : True
 !!fstNormalien-ne élève;;A civil servant student who was admitted to highly-selective academic/higher education institutions dedicated to research-training and teacher-training via competitive entrance exam and is paid a salary
 !!fstNormalien-ne étudiant-e;;Student admitted to highly-selective academic/higher education institutions dedicated to research-training and teacher-training based on their academic report
 !!fstSuivre un cours de X matière;;To take a subject X course/class
-!!fstUse of past simple;;Events that happened in the past and whose results are contained in the past\linebreak Habitually repeated actions/general truths of the past\linebreak\linebreak Refer to a point in time
-!!fstUse of present perfect;;Events that happened in the past with a result that has an impact on the present moment\linebreak Repeated actions/general truths of the past that are likely to be repeated/true in the future\linebreak Adverbs and time phrases that contextually or necessarily invoke the passage of time\linebreak\linebreak Refer to a period of time leading up to and including the present
-Université;;\engdef{university}{college}
-L1;;\negdef{first year of undergrad}{freshman year}
-L2;;\negdef{second year of undergrad}{sophomore year}
-L3;;\negdef{third year of undergrad}{junior year}
-<<~L4~>>;;\negdef{fourth year of undergrad}{senior year}
-Soutenance de thèse;;\engdef{PhD viva}{thesis defense}
-Thèse;;\engdef{thesis}{thesis}
-Mémoire de master;;\engdef{master's dissertation}{master's thesis}
-Dissertation;;\engdef{essay}{essay}
-Mémoire;;\engdef{dissertation}{thesis}
-Mémoires;;\engdef{memoir}{memoir}
-Scolaire;;\engdef{school}{school}
-Érudit/intellectuel;;\engdef{scholarly/academic}{scholarly/academic}
-Travaux de contrôle continu;;\engdef{coursework}{coursework}
-Un contrôle;;\engdef{a test}{a test}
-Un examen;;\engdef{an exam}{an exam}
+!!fstUse of past simple;;Events that happened in the past and whose results are contained in the past\linebreak Habitually repeated actions/general truths of the past\linebreak\emph{Refer to a point in time}
+!!fstUse of present perfect;;Events that happened in the past with a result that has an impact on the present moment\linebreak Repeated actions/general truths of the past that are likely to be repeated/true in the future\linebreak Adverbs and time phrases that contextually or necessarily invoke the passage of time\linebreak\emph{Refer to a period of time leading up to and including the present}
+Université;;\engdef{University}{College}
+L1;;\engdef{First year of undergrad}{Freshman year}
+L2;;\engdef{Second year of undergrad}{Sophomore year}
+L3;;\engdef{Third year of undergrad}{Junior year}
+<<~L4~>>;;\engdef{Fourth year of undergrad}{Senior year}
+Soutenance de thèse;;\engdef{PhD viva}{Thesis defense}
+Thèse;;\engdef{Thesis}{Thesis}
+Mémoire de master;;\engdef{Master's dissertation}{Master's thesis}
+Dissertation;;\engdef{Essay}{Essay}
+Mémoire;;\engdef{Dissertation}{Thesis}
+Mémoires;;\engdef{Memoir}{Memoir}
+Scolaire;;\engdef{School}{School}
+Érudit/intellectuel;;\engdef{Scholarly/academic}{Scholarly/academic}
+Travaux de contrôle continu;;\engdef{Coursework}{Coursework}
+Un contrôle;;\engdef{A test}{A test}
+Un examen;;\engdef{An exam}{An exam}
