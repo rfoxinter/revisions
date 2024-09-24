@@ -45,7 +45,7 @@ body {
     svg {
         fill: #000000FF !important;
     }
-    path {
+    path:not([stroke],[fill]) {
         stroke: #000000FF !important;
     }
     #flashcard {
@@ -103,7 +103,7 @@ svg {
     width: unset !important;
     vertical-align: middle;
 }
-path {
+path:not([stroke],[fill]) {
     stroke: #606c71;
 }
 .vbutton {
