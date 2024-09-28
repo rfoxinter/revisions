@@ -1,6 +1,6 @@
 Anglais B2+ -- Higher education
-True
-True
+Shuffle questions : True
+Q/R & R/Q : True
 \usepackage{worldflags}\usepackage{tabularray}\SetTblrInner{rowsep=0pt}\setlength{\tabcolsep}{0pt}\newcommand{\engdef}[2]{\begin{tblr}{Q[c,m]Q[c,m]}\worldflag[framewidth=0mm,width=5mm]{GB}&#1\\\worldflag[framewidth=0mm,width=5mm]{US}&#2\end{tblr}}
 !!fstClasses préparatoires;;Undergraduate/preparatory/cram school
 !!fstL3;;The third/junior year of my undergraduate degree
@@ -20,14 +20,33 @@ L1;;\engdef{First year of undergrad}{Freshman year}
 L2;;\engdef{Second year of undergrad}{Sophomore year}
 L3;;\engdef{Third year of undergrad}{Junior year}
 <<~L4~>>;;\engdef{Fourth year of undergrad}{Senior year}
+Master;;\engdef{Master}{Master}
+Collège;;\engdef{Middle school}{Middle school}
+Lycée;;\engdef{College}{High school}
+Grande école;;\engdef{Elite higher education establishment}{Elite higher education establishment}
 Soutenance de thèse;;\engdef{PhD viva}{Thesis defense}
 Thèse;;\engdef{Thesis}{Thesis}
+Thèses;;\engdef{Theses}{Theses}
 Mémoire de master;;\engdef{Master's dissertation}{Master's thesis}
 Dissertation;;\engdef{Essay}{Essay}
 Mémoire;;\engdef{Dissertation}{Thesis}
 Mémoires;;\engdef{Memoir}{Memoir}
-Scolaire;;\engdef{School}{School}
-Érudit/intellectuel;;\engdef{Scholarly/academic}{Scholarly/academic}
+Scolaire;;\engdef{School/secondary school level}{School/secondary school level}
+Érudit/intellectuel/académique;;\engdef{Scholarly/academic}{Scholarly/academic}
 Travaux de contrôle continu;;\engdef{Coursework}{Coursework}
 Un contrôle;;\engdef{A test}{A test}
 Un examen;;\engdef{An exam}{An exam}
+Un essai;;\engdef{An attempt}{An attempt}
+Un académique;;\engdef{A scholar}{A scholar}
+Écolier;;\engdef{Pupil}{Pupil}
+Le contrôle;;\engdef{Control}{Control}
+Le travail;;\engdef{Work}{Work}
+Les travaux;;\engdef{Exercises/projects}{Exercises/projects}
+Travaux de laboratoire;;\engdef{Labwork}{Labwork}
+Travaux de contrôle continu;;\engdef{Coursework}{Coursework}
+Licence;;\engdef{Bachelor's}{Bachelor's}
+Les arts;;\engdef{The Arts}{The Arts}
+Les sciences;;\engdef{The Sciences}{The Sciences}
+Les humanités;;\engdef{The Humanities}{The Humanities}
+Doctorat;;\engdef{Doctorate}{Doctorate}
+Doctorant;;\engdef{PhD student}{PhD student}
