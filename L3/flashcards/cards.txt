@@ -1,6 +1,6 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/Algebre1/ActionsDeGroupes
-20240929110840
+20240929150605
 ../L3/flashcards/Algebre1/GroupeSymetrique
 20240929113139
 ../L3/flashcards/Algebre1/Groupes

@@ -17,3 +17,4 @@ $\left|G/\stab x\right|$ pour $G$ fini;;$\left|G/\stab x\right|=\frac{\left|G\ri
 $p$-groupe;;Pour $p\in\mathbb P$, un $p$-groupe est un groupe $G$ vérifiant $\left|G\right|=p^n$
 Non-trivialité de $X^G$ pour $G$ un $p$-groupe;;$\cgr{\left|X^G\right|}{\left|X\right|}{p}$\linebreak En particulier, $Z\l G\r$ est non trivial
 Lemme de Cauchy;;Si $p\in\mathbb P$ divise l'ordre de $G$, alors $G$ possède un élément d'ordre $p$
+Formule de Burnside;;Le nombre d'orbites $N$ d'une action de $G$ sur $X$ vérifie $N=\frac1{\left|G\right|}\sum{g\in G}{}{\left|\fix g\right|}$
