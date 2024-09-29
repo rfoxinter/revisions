@@ -1,0 +1,5 @@
+"Intégration et théorie de la mesure &ndash; <i>Intégration de Lebesgue</i>"
+1
+0
+[1, 2, 3]
+[0, 0, 0]

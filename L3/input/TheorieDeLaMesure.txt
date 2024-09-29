@@ -13,3 +13,4 @@ Mesure finie;;$\mu\l X\r<+\infty$
 Mesure $\sigma$-finie;;$\exists\l X_n\r\in\mathcal A^{\mathbb N}$, $X=\bigcup{n\in\mathbb N}{}{A_n}$ et $\forall n\in\mathbb N$, $\mu\l A_n\r<+\infty$
 Espace mesuré;;$\l X,\mathcal A,\mu\r$
 Fonction mesurable;;$f\!:\!\l X,\mathcal A\r\to\l Y,\mathcal B\r$ est mesurable si $f^{-1}\l\mathcal B\r\subset\mathcal A$
+Limites de fonctions mesurables;;Si $\l f_n\r$ est une suite de fonctions mesurables alors $\sup\limits_{n\in\mathbb N}\l f_n\r$, $\inf\limits_{n\in\mathbb N}\l f_n\r$, $\limsup\limits_{n\in\mathbb N}\l f_n\r$ et $\liminf\limits_{n\in\mathbb N}\l f_n\r$ sont mesurables

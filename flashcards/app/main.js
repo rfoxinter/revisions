@@ -568,7 +568,7 @@ function group_per_folder(_url, _name, name, close, card_number) {
         h2 = document.createElement('h2');
         h2.setAttribute('style','margin-bottom:0;margin-left: -1.5rem; font-size: calc(0.8 * 1.5em);')
         span = document.createElement('span');
-        span.setAttribute('class','material-symbols-rounded folder');
+        span.setAttribute('class','material-symbols-rounded');
         span.innerHTML = 'folder_open';
         h2.appendChild(span);
         h2.innerHTML += '\xa0';

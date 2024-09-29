@@ -1,0 +1,7 @@
+Fractions continues -- Fractions continues simples infinies
+Shuffle questions : True
+Q/R & R/Q : False
+
+Propriétés de $\l\frac{p_{2n}}{q_{2n}}\r$ et $\l\frac{p_{2n+1}}{q_{2n+1}}\r$ pour $x\notin\mathbb Q$;;$\l\frac{p_{2n}}{q_{2n}}\r$ est strictement croissante\linebreak$\l\frac{p_{2n+1}}{q_{2n+1}}\r$ est strictement décroissante\linebreak Les suites $\l\frac{p_{2n}}{q_{2n}}\r$ et $\l\frac{p_{2n+1}}{q_{2n+1}}\r$ sont adjacentes
+Fraction continue périodique;;Une fraction continue simple est périodique si et seulement si elle converge vers $\frac{\pm a\pm\sqrt b}c$ pour $\l a,b,c\r\in\mathbb N^3$
+Lien entre $x$, la suite des réduites et le reste de son développement;;$x=\frac{p_nx_{n+1}+p_{n-1}}{q_nx_{n+1}+q_{n-1}}$

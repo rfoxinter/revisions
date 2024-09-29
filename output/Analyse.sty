@@ -5,6 +5,10 @@
 \DeclareOption{dvar}{\@dvartrue}
 \newif\if@nopar\@noparfalse
 \DeclareOption{nopar}{\@nopartrue}
+\newif\if@limits\@limitsfalse
+\DeclareOption{limits}{\@limitstrue}
+\newif\if@nodisplay\@nodisplayfalse
+\DeclareOption{nodisplay}{\@nodisplaytrue}
 \DeclareOption*{}
 \ProcessOptions\relax
 \if@dvar
@@ -16,7 +20,19 @@
     \def\analyseleftp{}
     \def\analyserightp{}
 \fi
+\def\analyselimits{\nolimits}
+\if@limits
+    \def\analyselimits{\limits}
+\fi
+\def\analysedisplay{\displaystyle}
+\if@nodisplay
+    \def\analysedisplay{}
+\fi
+
 \newcommand{\toggleanalysepar}{\comparestring{\analyseleftp}{}{\def\analyseleftp{\l}\def\analyserightp{\r}}{\def\analyseleftp{}\def\analyserightp{}}}
+\newcommand{\toggleanalyselimits}{\comparestring{\analyselimits}{\limits}{\def\analyselimits{\nolimits}}{\def\analyselimits{\limits}}}
+\newcommand{\autoanalyselimits}{\def\analyselimits{}}
+\newcommand{\toggleanalysedisplay}{\comparestring{\analysedisplay}{}{\def\analysedisplay{\displaystyle}}{\def\analysedisplay{}}}
 
 \let\slantpartial\partial
 \ifpdf
@@ -119,7 +135,7 @@
         \def\intargI{{{}\oldd}#1}
     \fi\tmpint}
 \newcommand{\tmpint}[1][]{\def\intargII{#1}\tmptmpint}
-\newcommand{\tmptmpint}[2][]{{\displaystyle\oldint_{\intargII}^{#1}}\analyseleftp{#2}\analyserightp\intargI}
+\newcommand{\tmptmpint}[2][]{{\analysedisplay\oldint\analyselimits_{\intargII}^{#1}}\analyseleftp{#2}\analyserightp\intargI}
 \newcommand{\eval}[1][]{\def\evalargI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\evalargI}^{#1}}
 \newcommand{\serie}[1]{\oldsum#1}

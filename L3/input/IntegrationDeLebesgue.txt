@@ -1,0 +1,7 @@
+Intégration et théorie de la mesure -- Intégration de Lebesgue
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators,analyse}\usepackage{dsft}\usepackage{structures}
+$f$ est étagée;;$f=\sum{i=1}{n}{\lambda_i\1{\left\{f=\lambda_i\right\}}}$
+Lien entre fonction mesurable et fonction étagée;;Toute fonction mesurable est limite simple de fonctions mesurables croissantes
+Intégrale d'une fonction étagée;;\toggleanalysepar$\int[\mu]{f}=\sum{\lambda\in\im f}{}{\lambda\mu\l\left\{f=\lambda_i\right\}\r}$\toggleanalysepar

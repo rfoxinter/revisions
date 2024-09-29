@@ -1,0 +1,7 @@
+Algèbre 1 -- Groupes de Sylow
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{matrices}\DeclareMathOperator{\ut}{UT}
+$p$-groupe de Sylow;;Si $\left|G\right|=p^lm$, $p\wedge m=1$, un $p$-groupe de Sylow est un sous-groupe $H$ de $G$ vérifiant $\left|H\right|=p^l$
+Groupe de Sylow de $\matgl n{\mathbb F_p}$;;$\ut_n\l\mathbb F_p\r$
+Théorèmes de Sylow de $G$ avec $p\mid\left|G\right|$;;$G$ contient un $p$-Sylow\linebreak Les $p$-Sylow sont conjugués\linebreak Tout $p$-groupe est inclus dans un $p$-Sylow\linebreak Le nombre de $p$-Sylow est $\equiv1\ \left[p\right]$ et divise $\frac{\left|G\right|}{p^{v_p\l\left|G\right|\r}}$

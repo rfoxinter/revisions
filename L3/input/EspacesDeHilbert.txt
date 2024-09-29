@@ -1,0 +1,9 @@
+Topologie et calcul différentiel -- Espaces de Hilbert
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{topologie}\DeclareMathOperator{\oldpr}{pr}\newcommand{\pr}[2]{\oldpr_{#1}\l#2\r}\usepackage{bigoperators}
+Espace de Hilbert sur $\mathbb R$;;Espace de Banach dont la norme provient d'un produit scalaire
+Projection orthogonale sur un convexe fermé;;Si $C$ est un convexe fermé alors il existe un unique $c\in C$ tel que $d\l x,C\r=\nrm{x-c}$
+Lien entre $V$ et $E$ dans le cas où $V$ est un sev fermé de $E$;;$E=V\varoplus V^\bot$
+$\pr Vx$ pour $V$ de dimension finie;;Si $\l v_1,\cdots,v_n\r$ est une bon de $V$\linebreak$\pr Vx=\sum{k=1}{n}{\psc x{v_i}v_i}$
+Espace en bijection isomorphique avec un espace de Hilbert;;Si l'espace est de dimension finie alors in est en bijection isomorphe avec $\mathbb R^n$ muni de la norme euclidienne\linebreak Si l'espace est de dimension infinie alors in est en bijection isomorphe avec $l^2\l\mathbb R\r$ muni de la norme euclidienne
