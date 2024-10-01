@@ -6,7 +6,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MPI/flashcards/Algebre/AlgebreLineraire
 20231120123333
 ../MPI/flashcards/Algebre/EspacesPrehilbertiensReels
-20240324145149
+20241001084457
 ../MPI/flashcards/Algebre/ReductionDEndomorphismes
 20231210141306
 ../MPI/flashcards/Algebre/StructuresAlgebriques1

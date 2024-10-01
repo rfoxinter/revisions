@@ -12,8 +12,8 @@ Description de $\orth[n]{\mathbb R}$;;$R_\theta=\tmatrix({\cos\theta\&-\sin\thet
 $R_\theta^{-1}=R_\theta^\bot$;;$R_{-\theta}$
 $R_\theta R_{\theta'}$;;$R_{\theta'+\theta}$
 $S_\theta S_{\theta'}$;;$R_{\theta-\theta'}$
-Réduction des isométries en BON;;Il existe une BON (ou pour toute) $\mathbb B$ telle que $\almat[\mathbb B]u=\tmatrix({I_p\&\&\&\&\\\&-I_q\&\&\&\\\&\&R_{\theta_1}\&\&\\\&\&\&\ddots\&\\\&\&\&\&R_{\theta_r}\\})$
-Caractérisation matricielle de $u\in\alsym E$;;Il existe une BON (ou pour toute) $\mathcal{B}$ $\almat[\mathbb B] u\in\sym n{\mathbb R}$
+Réduction des isométries en BON;;Il existe une BON (ou pour toute) $\mathcal B$ telle que $\almat{u}{\mathcal B}{}=\tmatrix({I_p\&\&\&\&\\\&-I_q\&\&\&\\\&\&R_{\theta_1}\&\&\\\&\&\&\ddots\&\\\&\&\&\&R_{\theta_r}\\})$
+Caractérisation matricielle de $u\in\alsym E$;;Il existe une BON (ou pour toute) $\mathcal{B}$ $\almat{u}{\mathcal B}{}\in\sym n{\mathbb R}$
 Théorème spectral;;Sont équivalents:\linebreak$u\in\alsym E$\linebreak Il existe une BON de vecteurs propres de $u$\linebreak$E={\displaystyle\bigoplus_{\lambda\in\sp u}}^\bot\l E_\lambda\l u\r\r$
 Théorème spectral matriciel;;$M\in\sym n{\mathbb R}\Leftrightarrow\exists\l P,D\r\in\orth[n]{\mathbb R}\times\diag n{\mathbb R}, M=PDP^\top$
 $u\in\alsym[+]{\mathbb R}$;;$\forall x\in E,\psc{u\l x\r}x\geqslant0$
