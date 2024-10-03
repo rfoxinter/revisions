@@ -1,7 +1,7 @@
 Anglais B2+ -- Higher education
 Shuffle questions : True
 Q/R & R/Q : True
-\usepackage{worldflags}\usepackage{tabularray}\SetTblrInner{rowsep=0pt}\setlength{\tabcolsep}{0pt}\newcommand{\engdef}[2]{\begin{tblr}{Q[c,m]Q[c,m]}\worldflag[framewidth=0mm,width=5mm]{GB}&#1\\\worldflag[framewidth=0mm,width=5mm]{US}&#2\end{tblr}}\newcommand{\frdef}[1]{\begin{tblr}{Q[c,m]Q[c,m]}\worldflag[framewidth=0mm,width=5mm]{FR}&#1\end{tblr}}
+\usepackage{worldflags}\usepackage{tabularray}\SetTblrInner{rowsep=0pt}\setlength{\tabcolsep}{0pt}\newcommand{\engdef}[2]{\begin{tblr}{Q[c,m]Q[c,m]}\worldflag[framewidth=.2pt,framecolor=black,width=8pt]{GBalt}&#1\\\worldflag[framewidth=.2pt,framecolor=black,width=8pt]{USalt}&#2\end{tblr}}\newcommand{\frdef}[1]{\begin{tblr}{Q[c,m]Q[c,m]}\worldflag[framewidth=.2pt,framecolor=black,width=8pt]{FRalt}&#1\end{tblr}}
 !!fstClasses préparatoires;;Undergraduate/preparatory/cram school
 !!fstL3;;The third/junior year of my undergraduate degree
 !!fstM1;;The first year of my master's degree

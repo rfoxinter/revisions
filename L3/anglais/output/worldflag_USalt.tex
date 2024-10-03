@@ -1,0 +1,14 @@
+\begin{flagdescription}{10/19}
+\definecolor{red}{RGB}{179,25,66}
+\definecolor{blue}{RGB}{10,49,97}
+\fill [white] (0,0) rectangle (\flaglength,1);
+\foreach \x in {0,4,...,24} \fill [red] (0,\x/26)rectangle ++(\flaglength,1/13);
+\begin{scope}[yshift=6/13*\flagwidth]
+\fill [blue] (0,0) rectangle (0.76,0.5385);
+\foreach \x in {0,1,2,3,4,5} \foreach \y in {0,1,2,3,4}
+  {\starV{white}{($(0.063*\flagwidth,0.054)+(0.126*\x,0.108*\y)$)}{0.0308}{0}}
+\foreach \x in {1,2,3,4,5} \foreach \y in {1,2,3,4}
+  {\starV{white}{($(0.126*\x,0.108*\y)$)}{0.0308}{0}}
+\end{scope}
+\framecode{}
+\end{flagdescription}
