@@ -55,7 +55,7 @@ function display_cards() {
                 if (val === undefined) {
                     first_of_folder.set((key[0], folder), card_nb);
                 }
-                append_card(key[0], key[1], card_nb, card_name, prev_url != key[0]);
+                append_card(key[0], key[1], card_nb, card_name);
                 prev_url = key[0];
                 cursor.continue();
             }
@@ -131,7 +131,7 @@ async function list_cards(downloaded = false) {
     } else {window.alert('Impossible de rafraîchir le fichier.');}
 }
 
-async function append_card(src, name, card_number, card_name, edit_visibility) {
+async function append_card(src, name, card_number, card_name) {
     let c = document.getElementById('down_cards_container');
     if (document.getElementsByClassName(src).length == 0) {
         d = document.createElement('div');
@@ -220,7 +220,7 @@ async function append_card(src, name, card_number, card_name, edit_visibility) {
     p.appendChild(a3);
     p.id = '[' + src + ',' + name + ']';
     document.getElementsByClassName(src)[0].appendChild(p);
-    set_config_card(src, name, card_number, card_name, edit_visibility);
+    set_config_card(src, name, card_number, card_name);
 }
 
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
@@ -387,7 +387,7 @@ function add_card(_url, _name, filesrc, nb) {
                         db.close();
                     };
                 };
-                append_card(_url, _name, card_nb);
+                append_card(_url, _name, card_nb, contentdate[2]);
                 ++ card_nb;
             } catch {
                 reject();
@@ -535,7 +535,7 @@ async function set_config_card(_url, _name, card_number, card_name) {
         }
         replace_css_rule(_url + "_elem", close?"none":"block");
         if (group_folder) {
-            group_per_folder(_url, _name, card_name, close, card_number);
+            group_per_folder(_url, _name, card_name, card_number);
         }
     } catch {}
 }
@@ -548,7 +548,7 @@ Element.prototype.insertChildAtIndex = function(child, index) {
         this.insertBefore(child, this.children[index]);
     }
 }
-function group_per_folder(_url, _name, name, close, card_number) {
+function group_per_folder(_url, _name, name, card_number) {
     let urldiv = document.getElementsByClassName(_url)[0];
     let title = name.split(" &ndash; ");
     if (title.length == 1) {
@@ -692,7 +692,7 @@ async function loadfl() {
                             else {
                                 store.put({url: "Fichiers importés", name: fl_defl[0], content: text});
                                 ++ card_nb;
-                                append_card("Fichiers importés", fl_defl[0], card_nb);
+                                append_card("Fichiers importés", fl_defl[0], card_nb, fl_defl[0]);
                                 window.alert("Fichier importé");
                             }
                         };
