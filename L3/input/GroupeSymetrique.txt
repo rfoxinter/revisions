@@ -5,3 +5,4 @@ Q/R & R/Q : False
 Nature de l'action de $\mathfrak S_n$ sur $\llb 1,n\rrb$;;Fidèle et transitive
 Partition de $n$;;Suite $k_1\geqslant k_2\geqslant\cdots\geqslant k_r$ vérifiant $\sum{l=1}{r}{k_l}=n$
 Noyau de $\sigma\mapsto\l l\l\sigma_1\r\geqslant\cdots\geqslant l\l\sigma_r\r\r$;;Les classes de conjugaison
+Simplicité des $\mathcal A_n$;;Pour $n\geqslant5$, $\mathcal A_n$ est simple

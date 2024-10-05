@@ -1,0 +1,35 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{al,matrices}\usepackage{graphicx}\makeatletter\DeclareRobustCommand\@bigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}\newcommand{\bigop@}[2]{\bigop@@#1#2}\newcommand{\bigop@@}[3]{\vcenter{\sbox\z@{$#1\oldsum$}\hbox{\resizebox{\ifx#1\displaystyle#2\fi\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#3$}}}}\newcommand{\fracK}{\DOTSB\@bigop{\mathcal{K}}}\makeatother\usepackage{bigoperators}
+\hypersetup{pdftitle=Fractions continues -- Transformation de Möbius}
+\title{Fractions continues\\\emph{Transformation de Möbius}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Définition des $A_n$ et $B_n$ associés à $\l b_n\r_{n\in\mathbb N}$ et $\l a_n\r\in_{\mathbb N^*}$}{1/11}
+\slider{\tmatrix[][row sep = 0pt, inner sep = 0pt]\{{A_{-1}=1\\A_{0}=b_0\\B_{-1}=0\\B_{0}=1\\}{.\kern-\nulldelimiterspace} et \tmatrix[][row sep = 0pt, inner sep = 0pt]\{{A_n=b_nA_{n-1}+a_nA_{n-2}\\B_n=b_nq_{n-1}+a_nB_{n-2}\\}{.\kern-\nulldelimiterspace}}{1/11}
+\slideq{$f\in M$ est loxodromique}{2/11}
+\slider{$f\sim\alpha z$, $\alpha\in\mathbb C^*$, $\alpha\neq1$\linebreak $f$ est diagonalisable}{2/11}
+\slideq{Théorème de Stern-Stolz}{3/11}
+\slider{La fraction continue $b_0+{\displaystyle\fracK_{k=0}^{+\infty}}\l\frac{a_n}{b_n}\r$ converge si et seulement si $\oldsum\left|b_n\right|$ diverge}{3/11}
+\slideq{Définition des $S_n$ associés à $\l b_n\r_{n\in\mathbb N}$ et $\l a_n\r\in_{\mathbb N^*}$}{4/11}
+\slider{$S_0\l w\r=s_0\l w\r$ où $s_0\l w\r=b_0+w$\linebreak$S_n\l w\r=S_{n-1}\circ s_n\l w\r$ où $s_n\l w\r=\frac{a_n}{b_n+w}$\linebreak$S_n\l w\r)\frac{A_n+A_{n-1}w}{B_n+B_{n-1}w}$}{4/11}
+\slideq{$f\in M$ est parabolique}{5/11}
+\slider{$f\sim z+1$ (translation)\linebreak $f$ n'est pas diagonalisable}{5/11}
+\slideq{CNS pour que $f\in M$ et $g\in M$ soient conjuguées}{6/11}
+\slider{$\tr{f}^2=\tr{g}^2$}{6/11}
+\slideq{Fromule du déterminant généralisée}{7/11}
+\slider{$A_nB_{n-1}-A_{n-1}B_n=\l-1\r^{n-1}\prod{k=1}{n}{a_k}$}{7/11}
+\slideq{$f\!:\!z\mapsto\frac{az+b}{cz+d}$ est normalisé}{8/11}
+\slider{$\det{\tmatrix({a\&b\\c\&d\\})}=1$}{8/11}
+\slideq{$f\in M$ et $g\in M$ sont conjuguées}{9/11}
+\slider{Il existe $h\in M$ tel que $f=h\circ g\circ h^{-1}$}{9/11}
+\slideq{$f\in M$ est hyperbolique}{10/11}
+\slider{$f\sim kz$, $k\in\mathbb R^*$, $k\neq1$\linebreak $f$ est diagonalisable}{10/11}
+\slideq{$f\in M$ est elliptique}{11/11}
+\slider{$f\sim\alpha z$, $\alpha\in\mathbb U^*$ (rotation)\linebreak $f$ est diagonalisable}{11/11}
+\end{document}

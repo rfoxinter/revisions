@@ -1,0 +1,8 @@
+Topologie et calcul différentiel -- Espaces compacts
+Shuffle questions : True
+Q/R & R/Q : False
+
+Espace précompact;;Espace $X$ pour lequel pour tout $\varepsilon>0$, $X$ est recouvrable par un nombre fini de boules de rayon $\varepsilon$
+Définition équivalente à la compacité;;Complet et précompact
+Théorème de Heine;;Si $X$ est compact et $f\!:\!X\to Y$ est continue alors $f$ est uniformément continue
+Théorème de Poincaré;;Si $X$ est compact et $f\!:\!X\to Y$ est bijective et continue alors $f^{-1}\!:\!Y\to X$ est continue

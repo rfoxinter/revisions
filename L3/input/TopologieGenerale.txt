@@ -1,0 +1,9 @@
+Topologie et calcul différentiel -- Topologie générale
+Shuffle questions : True
+Q/R & R/Q : False
+
+Topologie sur $X$;;Ensemble de parties de $X$ appelé ouvets qui vérifie\linebreak $\varnothing$ et $X$ sont ouverts\linebreak Une intersection finie d'ouverts est un ouvert\linebreak Une union quelconque d'ouverts est un ouvert
+Distances équivalentes;;Distances qui engendrent la même topologie
+Propriété $T_0$ d'un espace topologique;;Tout espace topologique métrisable est séparé (il existe $U$ et $V$ des ouverts de $x$ et $y$ tels que $U\cap V=\varnothing$)
+Topologie produit $X\times Y$;;Topologie qui a pour base d'ouverts les $U\times V$ avec $U$ un ouvert de $X$ et $V$ un ouvert de $Y$
+Topologie engendrée par $C$ ensemble de parties de $X$;;Topologie qui a pour base d'ouverts les intersections finies d'éléments de $C$
