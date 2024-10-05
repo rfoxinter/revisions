@@ -9,14 +9,14 @@ Q/R & R/Q : True
 \frdef{Une politique};;\engdef{A policy}{A policy}
 \frdef{Un thème};;\engdef{A topic}{A topic}
 \frdef{Largement};;\engdef{Widely}{Widely}
-\frdef{Majoritairement/ en grande partie};;\engdef{Largely}{Largely}
+\frdef{Majoritairement/en grande partie};;\engdef{Largely}{Largely}
 \frdef{Répondre (formel)};;\engdef{To respond}{To respond}
 \frdef{Répondre (neutre)};;\engdef{To reply}{To reply}
 \frdef{Répondre (informel)};;\engdef{To answer}{To answer}
 \frdef{Avoir des nouvelles de quelqu'un};;\engdef{To hear from someone}{To hear from someone}
 \frdef{La pièce (qui est) jointe};;\engdef{The attached file}{The attached file}
-\frdef{Rester au courant des avancées dans quelque chose};;\engdef{To follow developments in something}{To follow developments in something}
+\frdef{Rester au courant des avancées dans \dots};;\engdef{To follow developments in \dots}{To follow developments in \dots}
 \frdef{Enthousiasme};;\engdef{Enthusiasm}{Enthusiasm}
 \frdef{Enthousiaste};;\engdef{Enthusiastic}{Enthusiastic}
-\frdef{Un-e enthousiaste};;\engdef{An enthusiast}{An enthusiast}
+\frdef{Un enthousiaste};;\engdef{An enthusiast}{An enthusiast}
 \frdef{Étendre/prolonger};;\engdef{To extend}{To extend}

@@ -1,7 +1,12 @@
 Intégration et théorie de la mesure -- Intégration de Lebesgue
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{bigoperators,analyse}\usepackage{dsft}\usepackage{structures}
+\usepackage{bigoperators,analyse}\usepackage{dsft}\usepackage{structures}\usepackage{usuelles}\toggleanalysepar
 $f$ est étagée;;$f=\sum{i=1}{n}{\lambda_i\1{\left\{f=\lambda_i\right\}}}$
 Lien entre fonction mesurable et fonction étagée;;Toute fonction mesurable est limite simple de fonctions mesurables croissantes
-Intégrale d'une fonction étagée;;\toggleanalysepar$\int[\mu]{f}=\sum{\lambda\in\im f}{}{\lambda\mu\l\left\{f=\lambda_i\right\}\r}$\toggleanalysepar
+Intégrale d'une fonction étagée;;$\int[\mu]{f}=\sum{\lambda\in\im f}{}{\lambda\mu\l\left\{f=\lambda_i\right\}\r}$
+Intégrale d'une fonction positive $f$;;$\int[\mu][X]f=\sup{\left\{\int[\mu][X]g,g\text{ étagée }, g\leqslant f\right\}}$
+Inegailté de Tchebychev;;Si $\alpha>0$, $\mu\l\left\{f\geqslant\alpha\right\}\r\leqslant\frac1\alpha\int[\mu][X]f$
+Théorème de convergence monotone (ou Beppo-Levi);;Si $\l f_n\!:\!\l X,\mathcal A\r\to\overline{\mathbb R_+}\r$ est une suite croissantes de fonctions mesurables qui convergent simplement vers $f$ alors $\lim{\int[\mu][X]{f_n}}=\int[\mu][X]f$
+Lemme de Fatou;;Si $\l f_n\r$ est une suite de fonctions mesurables alors $\liminf\l\int[\mu][X]{f_n}\r\leqslant\int[\mu][X]{\liminf\l f_n\r}$
+Théorème de convergence dominée;;Si $\l f_n\!:\!\l X,\mathcal A\r\to\overline{\mathbb R_+}\r$ est une suite de fonctions mesurables qui convergent simplement vers $f$ et telle qu'il existe $g\in L^1\l X\r$ pour laquelle $f_n\leqslant\left|g\right|$ $\mu$-pp pour tout $n\in\mathbb N$, alors $\lim{\int[\mu][X]{f_n}}=\int[\mu][X]f$
