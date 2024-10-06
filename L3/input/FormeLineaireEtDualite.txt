@@ -1,0 +1,9 @@
+Algèbre 1 -- Forme linéaire et dualité
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}
+Théorème du rang;;Si $S$ est un supplémentaire de $F$ dans $E$, alors $S$ est un système de représentants de $E/F$ et $\pi_S\!:\!S\to E/F$ est un isomorphisme
+Forme linéaire sur $\Bbbk$ où $E$ est un $\Bbbk$-ev;;Application linéaire $l\!:\!E\to\Bbbk$\linebreak L'ensemble des formes linéaires est le dual de $E$ noté $E^*$
+Première forme coordonnée;;Forme linéaire sur $E$ de base $\l e_1,\cdots,e_n\r$ vérifiant $e_i^*\l e_j\r=\delta_{i,j}$
+Propriété de $\appl{\tau}{E}{E^{**}}{x}{\l\nappl{E^*}{\Bbbk}{l}{l\l x\r}\r}$;;$\tau$ est un isomorphisme en dimension finie
+Propriétés sur les bases de $E^*$;;Pour toute base $\mathcal B'$ de $E^*$, il existe une base $\mathcal B$ de $E$ telle que $\mathcal B'=\mathcal B^*$

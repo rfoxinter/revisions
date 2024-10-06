@@ -12,7 +12,7 @@
 \newcommand{\amslg}{\href{https://ctan.org/pkg/amsmath}{\color{black}\ensuremath{\mathcal{A}\kern-.1667em\lower.5ex\hbox{\ensuremath{\mathcal{M}}}\kern-.125em\mathcal{S}}}}
 \usepackage{output/htmlpreambule}
 \usepackage{output/tools}
-\usepackage{output/bigoperators}
+\usepackage[bigopsymb]{output/bigoperators}
 \usepackage{output/analyse}
 \usepackage{output/sffont,output/matrices,output/al,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
 \usepackage[arc]{output/complexes}
@@ -483,9 +483,20 @@ Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes comme \mintinl
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\bigsqcup?}
 \mcmd{\bigsqcup{n=0}{+\infty}{A_n}}
 \mcmd[\footnotemark]{\olduplus}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\biguplus?}
 \mcmd{\biguplus{n=0}{+\infty}{A_n}}
 \mcmd{\bigop{n=0}{+\infty}{E_n}}
+\subsection{Grands opérateurs avec des symboles quelconques}
+Il est aussi possible de faire des grands opérateurs avec des symboles quelconques en important le package \texttt{BigOperators.sty} avec l'option {\color{namecolour}\texttt{bigopsymb}}.
+
+Cette option importe automatiquement le package \texttt{graphics} (disponible sur \href{https://ctan.org/pkg/graphics}{CTAN}).
+\vspace{0.5cm}
+\mhd
+\nmcmd{\makebigop[p]{symb}}{Produit un opérateur avec le symbole \texttt{symb} et ajuste sa taille pour qu'elle soit de $p$ fois celle du caractère $\oldsum$}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\biguplus?}
+\mcmd{\fracKsymb}
+\pagebreak
+\hrule
+\mcmd{b_0+\fracK{n>0}{}{\frac{a_n}{b_n}}}
 \togglebigoppar\subsection{L'option {\color{namecolour}\texttt{nopar}}}
 Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
 

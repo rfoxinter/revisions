@@ -1,7 +1,7 @@
 Fractions continues -- Transformation de Möbius
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al,matrices}\usepackage{graphicx}\makeatletter\DeclareRobustCommand\@bigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}\newcommand{\bigop@}[2]{\bigop@@#1#2}\newcommand{\bigop@@}[3]{\vcenter{\sbox\z@{$#1\oldsum$}\hbox{\resizebox{\ifx#1\displaystyle#2\fi\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#3$}}}}\newcommand{\fracK}{\DOTSB\@bigop{\mathcal{K}}}\makeatother\usepackage{bigoperators}
+\usepackage{al,matrices}\usepackage{graphics}\makeatletter\DeclareRobustCommand\@bigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}\newcommand{\bigop@}[2]{\bigop@@#1#2}\newcommand{\bigop@@}[3]{\vcenter{\sbox\z@{$#1\oldsum$}\hbox{\resizebox{\ifx#1\displaystyle#2\fi\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#3$}}}}\newcommand{\fracK}{\DOTSB\@bigop{\mathcal{K}}}\makeatother\usepackage{bigoperators}
 $f\!:\!z\mapsto\frac{az+b}{cz+d}$ est normalisé;;$\det{\tmatrix({a\&b\\c\&d\\})}=1$
 $f\in M$ et $g\in M$ sont conjuguées;;Il existe $h\in M$ tel que $f=h\circ g\circ h^{-1}$
 CNS pour que $f\in M$ et $g\in M$ soient conjuguées;;$\tr{f}^2=\tr{g}^2$

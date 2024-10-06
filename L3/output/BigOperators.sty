@@ -4,6 +4,8 @@
 \DeclareOption{nolimits}{\@nolimitstrue}
 \newif\if@nodisplay\@nodisplayfalse
 \DeclareOption{nodisplay}{\@nodisplaytrue}
+\newif\if@bigopsymb\@bigopsymbfalse
+\DeclareOption{bigopsymb}{\@bigopsymbtrue}
 \DeclareOption*{}
 \ProcessOptions\relax
 \def\bigopleftp{\l}
@@ -34,3 +36,13 @@
 \let\oldbigsqcup\bigsqcup\renewcommand\bigsqcup[3]{{\bigopdisplay\oldbigsqcup\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
 \let\olduplus\biguplus\renewcommand\biguplus[3]{{\bigopdisplay\olduplus\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
 \newcommand\bigop[3]{{\bigopdisplay\bigoplus\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
+
+
+\if@bigopsymb
+    \usepackage{graphics}
+    \DeclareRobustCommand\makebigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}
+    \newcommand{\bigop@}[2]{\bigop@@#1#2}
+    \newcommand{\bigop@@}[3]{\vcenter{\sbox\z@{$#1\oldsum$}\hbox{\resizebox{\ifx#1\displaystyle#2\fi\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#3$}}}}
+    \newcommand\fracKsymb{\DOTSB\makebigop{\mathcal{K}}}
+    \newcommand\fracK[3]{{\bigopdisplay\fracKsymb\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
+\fi

@@ -5,7 +5,6 @@
 
 \if@arc
     \RequirePackage{graphics}
-    \makeatletter
     \newcommand{\arc}[1]{\mathpalette\arc@arc{#1}\!}
     \newcommand{\arc@arc}[2]{
         \sbox0{$\m@th#1#2\ \!$}
@@ -16,7 +15,6 @@
             \box0
         }
     }
-    \makeatother
 \fi
 
 \let\oldbar\bar
