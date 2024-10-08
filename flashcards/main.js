@@ -88,22 +88,14 @@ async function fill_svg(file) {
         arr = new Array(2*n.length);
         await get_code(file, ques[0], 'Q');
         arr[2*ques[0]-2] = svgcode;
-        if (document.readyState !== 'loading') {
+        document.addEventListener("DOMContentLoaded", (event) => {
             document.getElementById('up-button').style.display = 'none';
             document.getElementById('title').innerHTML = title;
             document.getElementById('flip').disabled = false;
             document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
             document.getElementById('card_nb').innerHTML = nth + 1;
             document.getElementById('card_total').innerHTML = '/' + ques.length;
-        } else {
-            document.addEventListener('DOMContentLoaded', onReady);
-            document.getElementById('up-button').style.display = 'none';
-            document.getElementById('title').innerHTML = title;
-            document.getElementById('flip').disabled = false;
-            document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
-            document.getElementById('card_nb').innerHTML = nth + 1;
-            document.getElementById('card_total').innerHTML = '/' + ques.length;
-        }
+        });
         await get_code(file, ques[0], 'R');
         arr[2*ques[0]-1] = svgcode;
         for (let i = 1; i < n.length; i++) {
