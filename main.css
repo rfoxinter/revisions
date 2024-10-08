@@ -83,3 +83,6 @@ li:last-child {
     width: 0px;
     background: transparent;
 }
+* {
+  scrollbar-width: none;
+}
