@@ -174,3 +174,6 @@ iframe {
     width: 0px;
     background: transparent;
 }
+* {
+  scrollbar-width: none;
+}
