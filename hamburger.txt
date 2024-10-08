@@ -10,3 +10,7 @@ Mathématiques MP2I
 https://rfoxinter.github.io/revisions/MP2I/
 Flashcards MP2I
 https://rfoxinter.github.io/revisions/MP2I/flashcards/
+Physique MPI
+https://rfoxinter.github.io/revisions/MPI/physique
+Flashcards physique MPI
+https://rfoxinter.github.io/revisions/MPI/physique/flashcards/
