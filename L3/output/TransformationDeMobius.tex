@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{al,matrices}\usepackage{graphicx}\makeatletter\DeclareRobustCommand\@bigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}\newcommand{\bigop@}[2]{\bigop@@#1#2}\newcommand{\bigop@@}[3]{\vcenter{\sbox\z@{$#1\oldsum$}\hbox{\resizebox{\ifx#1\displaystyle#2\fi\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#3$}}}}\newcommand{\fracK}{\DOTSB\@bigop{\mathcal{K}}}\makeatother\usepackage{bigoperators}
+\usepackage{al,matrices}\usepackage{graphics}\makeatletter\DeclareRobustCommand\@bigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}\newcommand{\bigop@}[2]{\bigop@@#1#2}\newcommand{\bigop@@}[3]{\vcenter{\sbox\z@{$#1\oldsum$}\hbox{\resizebox{\ifx#1\displaystyle#2\fi\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#3$}}}}\newcommand{\fracK}{\DOTSB\@bigop{\mathcal{K}}}\makeatother\usepackage{bigoperators}
 \hypersetup{pdftitle=Fractions continues -- Transformation de Möbius}
 \title{Fractions continues\\\emph{Transformation de Möbius}}
 \author{}
@@ -10,26 +10,32 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Définition des $A_n$ et $B_n$ associés à $\l b_n\r_{n\in\mathbb N}$ et $\l a_n\r\in_{\mathbb N^*}$}{1/11}
-\slider{\tmatrix[][row sep = 0pt, inner sep = 0pt]\{{A_{-1}=1\\A_{0}=b_0\\B_{-1}=0\\B_{0}=1\\}{.\kern-\nulldelimiterspace} et \tmatrix[][row sep = 0pt, inner sep = 0pt]\{{A_n=b_nA_{n-1}+a_nA_{n-2}\\B_n=b_nq_{n-1}+a_nB_{n-2}\\}{.\kern-\nulldelimiterspace}}{1/11}
-\slideq{Théorème de Stern-Stolz}{2/11}
-\slider{La fraction continue $b_0+{\displaystyle\fracK_{k=0}^{+\infty}}\l\frac{a_n}{b_n}\r$ converge si et seulement si $\oldsum\left|b_n\right|$ diverge}{2/11}
-\slideq{CNS pour que $f\in M$ et $g\in M$ soient conjuguées}{3/11}
-\slider{$\tr{f}^2=\tr{g}^2$}{3/11}
-\slideq{$f\in M$ est loxodromique}{4/11}
-\slider{$f\sim\alpha z$, $\alpha\in\mathbb C^*$, $\alpha\neq1$\linebreak $f$ est diagonalisable}{4/11}
-\slideq{Fromule du déterminant généralisée}{5/11}
-\slider{$A_nB_{n-1}-A_{n-1}B_n=\l-1\r^{n-1}\prod{k=1}{n}{a_k}$}{5/11}
-\slideq{$f\!:\!z\mapsto\frac{az+b}{cz+d}$ est normalisé}{6/11}
-\slider{$\det{\tmatrix({a\&b\\c\&d\\})}=1$}{6/11}
-\slideq{$f\in M$ est hyperbolique}{7/11}
-\slider{$f\sim kz$, $k\in\mathbb R^*$, $k\neq1$\linebreak $f$ est diagonalisable}{7/11}
-\slideq{Définition des $S_n$ associés à $\l b_n\r_{n\in\mathbb N}$ et $\l a_n\r\in_{\mathbb N^*}$}{8/11}
-\slider{$S_0\l w\r=s_0\l w\r$ où $s_0\l w\r=b_0+w$\linebreak$S_n\l w\r=S_{n-1}\circ s_n\l w\r$ où $s_n\l w\r=\frac{a_n}{b_n+w}$\linebreak$S_n\l w\r)\frac{A_n+A_{n-1}w}{B_n+B_{n-1}w}$}{8/11}
-\slideq{$f\in M$ est parabolique}{9/11}
-\slider{$f\sim z+1$ (translation)\linebreak $f$ n'est pas diagonalisable}{9/11}
-\slideq{$f\in M$ et $g\in M$ sont conjuguées}{10/11}
-\slider{Il existe $h\in M$ tel que $f=h\circ g\circ h^{-1}$}{10/11}
-\slideq{$f\in M$ est elliptique}{11/11}
-\slider{$f\sim\alpha z$, $\alpha\in\mathbb U^*$ (rotation)\linebreak $f$ est diagonalisable}{11/11}
+\slideq{$f\!:\!z\mapsto\frac{az+b}{cz+d}$ est normalisé}{1/14}
+\slider{$\det{\tmatrix({a\&b\\c\&d\\})}=1$}{1/14}
+\slideq{Définition des $A_n$ et $B_n$ associés à $\l b_n\r_{n\in\mathbb N}$ et $\l a_n\r_{n\in\mathbb N^*}$}{2/14}
+\slider{\tmatrix[][row sep = 0pt, inner sep = 0pt]\{{A_{-1}=1\\A_{0}=b_0\\B_{-1}=0\\B_{0}=1\\}{.\kern-\nulldelimiterspace} et \tmatrix[][row sep = 0pt, inner sep = 0pt]\{{A_n=b_nA_{n-1}+a_nA_{n-2}\\B_n=b_nq_{n-1}+a_nB_{n-2}\\}{.\kern-\nulldelimiterspace}}{2/14}
+\slideq{Fromule du déterminant généralisée}{3/14}
+\slider{$A_nB_{n-1}-A_{n-1}B_n=\l-1\r^{n-1}\prod{k=1}{n}{a_k}$}{3/14}
+\slideq{$f\in\mathcal M$ est loxodromique}{4/14}
+\slider{$f\sim\alpha z$, $\alpha\in\mathbb C^*$, $\alpha\neq1$\linebreak $f$ est diagonalisable}{4/14}
+\slideq{$f\in\mathcal M$ et $g\in\mathcal M$ sont conjuguées}{5/14}
+\slider{Il existe $h\in\mathcal M$ tel que $f=h\circ g\circ h^{-1}$}{5/14}
+\slideq{$f\in\mathcal M$ est hyperbolique}{6/14}
+\slider{$f\sim kz$, $k\in\mathbb R^*$, $k\neq1$\linebreak $f$ est diagonalisable}{6/14}
+\slideq{Théorème de Pringsheim}{7/14}
+\slider{Soient $\l a_n\r$ et $\l b_n\r$ deux suites complexes telle que pour tout $n\in\mathbb N^*$, $\left|b_n\right|\geqslant\left|a_n\right|+1$ alors ${\displaystyle\fracK_{k=1}^{+\infty}}\l\frac{a_n}{b_n}\r$ converge}{7/14}
+\slideq{$f\in\mathcal M$ est parabolique}{8/14}
+\slider{$f\sim z+1$ (translation)\linebreak $f$ n'est pas diagonalisable}{8/14}
+\slideq{${\displaystyle\fracK_{k=1}^{+\infty}}\l\frac{a_n}{b_n}\r\sim{\displaystyle\fracK_{k=1}^{+\infty}}\l\frac{a_n'}{b_n'}\r$}{9/14}
+\slider{Il existe $\l r_n\r\in\mathbb C^{\mathbb N}$ telle que $r_0=1$, $b_0=b_0'$ et pour tout $n\in\mathbb N^*$, \tmatrix[][row sep = 0pt, inner sep = 0pt]\{{a_n=r_nr_{n-1}a_n'\\b_n=r_nb_n'\\}{.\kern-\nulldelimiterspace}}{9/14}
+\slideq{Théorème de Stern-Stolz}{10/14}
+\slider{La fraction continue $b_0+{\displaystyle\fracK_{k=1}^{+\infty}}\l\frac{a_n}{b_n}\r$ converge si et seulement si $\oldsum\left|b_n\right|$ diverge}{10/14}
+\slideq{Définition des $S_n$ associés à $\l b_n\r_{n\in\mathbb N}$ et $\l a_n\r\in_{\mathbb N^*}$}{11/14}
+\slider{$S_0\l w\r=s_0\l w\r$ où $s_0\l w\r=b_0+w$\linebreak$S_n\l w\r=S_{n-1}\circ s_n\l w\r$ où $s_n\l w\r=\frac{a_n}{b_n+w}$\linebreak$S_n\l w\r\frac{A_n+A_{n-1}w}{B_n+B_{n-1}w}$}{11/14}
+\slideq{CNS pour que $f\in\mathcal M$ et $g\in\mathcal M$ soient conjuguées}{12/14}
+\slider{$\tr{f}^2=\tr{g}^2$}{12/14}
+\slideq{Théorème de Seidel-Stern}{13/14}
+\slider{Soit ${\displaystyle\fracK_{k=1}^{+\infty}}\l\frac1{b_n}\r$ une fraction continue telle que \tmatrix[][row sep = 0pt, inner sep = 0pt]\{{b_n>0\\\oldsum b_n\text{ diverge}\\}{.\kern-\nulldelimiterspace} alors ${\displaystyle\fracK_{k=1}^{+\infty}}\l\frac1{b_n}\r$ converge dans $\mathbb R$}{13/14}
+\slideq{$f\in\mathcal M$ est elliptique}{14/14}
+\slider{$f\sim\alpha z$, $\alpha\in\mathbb U^*$ (rotation)\linebreak $f$ est diagonalisable}{14/14}
 \end{document}

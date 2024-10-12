@@ -109,22 +109,18 @@ async function fill_svg(file) {
         document.getElementById('up-button').innerHTML = 'close';
         document.getElementById('up-button').setAttribute('onclick', '_close()');
     } else if (res == 'Error') {
-        if (document.readyState !== 'loading') {
+        document.addEventListener("DOMContentLoaded", (event) => {
             document.getElementById('up-button').style.display = 'none';
             document.getElementById('title').innerHTML = 'Erreur';
             document.getElementById('flashcard').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
-        } else {
-            document.addEventListener('DOMContentLoaded', onReady);
-        }
+        });
     }
     else {
-        if (document.readyState !== 'loading') {
+        document.addEventListener("DOMContentLoaded", (event) => {
             document.getElementById('up-button').style.display = 'none';
             document.getElementById('title').innerHTML = 'Erreur ' + res;
             document.getElementById('flashcard').innerHTML = 'Fichier introuvable';
-        } else {
-            document.addEventListener('DOMContentLoaded', onReady);
-        }
+        });
     }
 }
 async function fill_card(file) {
