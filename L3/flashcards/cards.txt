@@ -20,7 +20,9 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/FractionsContinues/FractionsContinuesSimplesInfinies
 20240929094741
 ../L3/flashcards/FractionsContinues/TransformationDeMobius
-20241012174701
+20241012231946
+../L3/flashcards/IntegrationEtTheorieDeLaMesure/ConstructionDeMesures
+20241012232815
 ../L3/flashcards/IntegrationEtTheorieDeLaMesure/IntegrationDeLebesgue
 20241005174517
 ../L3/flashcards/IntegrationEtTheorieDeLaMesure/TheorieDeLaMesure

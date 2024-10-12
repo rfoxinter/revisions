@@ -1,0 +1,11 @@
+Intégration et théorie de la mesure -- Construction de mesures
+Shuffle questions : True
+Q/R & R/Q : False
+\newcommand\mus{\mu^*}\usepackage{bigoperators,usuelles}\togglebigoppar\DeclareMathOperator{\oldvol}{vol}\newcommand{\vol}[1]{\oldvol\l#1\r}
+Mesure extérieure;;$\mus$ est une mesure extérieure si\linebreak$\mus\l\varnothing\r=0$\linebreak$A\subset B\Rightarrow\mus\l A\r\leqslant\mus\l B\r$\linebreak$\mus\l{\bigcup{n=0}{+\infty}{A_n}}\r\leqslant\sum{n=0}{+\infty}{\mus\l A_n\r}$
+Mesure extérieure de Lebesgue;;$\mus_L\l A\r=\oldinf\limits_{\togglebigopdisplay\substack{A\subset\bigcup{n\in\mathbb N}{}{P_j}\\P_j\text{ pavés ouverts}}}\l\left\{\sum{j\in\mathbb N}{}{\vol{P_j}}\right\}\r$
+$A$ est $\mus$-mesurable;;Pour tout $E\subset X$, $\mus\l E\r=\mus\l E\cap A\r+\mus\l E\setminus A\r$
+Théorème de Carathéodory;;$\mathcal M\l\mu\r=\left\{A\subset X,A\text{ est $\mus$-mesurable}\right\}$ est une tribu et $\mus$ est une mesure sur $\mathcal M\l\mus\r$
+$\mathcal{N}\subset\mathcal P\l X\r$ est une classe momotone (ou $\lambda$-algèbre);;$X\in\mathcal N$\linebreak$\l A,B\r\in\mathcal N^2$, $A\subset B\Rightarrow B\setminus A\in\mathcal N$\linebreak$\l A_j\r\in\mathcal N^{\mathbb N^*}$ croissante alors $\bigcup{n\geqslant1}{}{A_j}\in\mathcal N$
+$m\l\mathcal C\r$ pour $\mathcal C\subset X$;;$\bigcap{\substack{\mathcal N\text{ $\lambda$-système}\\\mathcal C\subset\mathcal N}}{}{\mathcal N}$
+Lemme des classes monotones;;Si $\mathcal C\subset\mathcal P\l X\r$ stable par intersection finie alors $m\l\mathcal C\r=\sigma\l\mathcal C\r$

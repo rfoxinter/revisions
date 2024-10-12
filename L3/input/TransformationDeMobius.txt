@@ -10,7 +10,7 @@ $f\in\mathcal M$ est elliptique;;$f\sim\alpha z$, $\alpha\in\mathbb U^*$ (rotati
 $f\in\mathcal M$ est hyperbolique;;$f\sim kz$, $k\in\mathbb R^*$, $k\neq1$\linebreak $f$ est diagonalisable
 $f\in\mathcal M$ est loxodromique;;$f\sim\alpha z$, $\alpha\in\mathbb C^*$, $\alpha\neq1$\linebreak $f$ est diagonalisable
 Définition des $A_n$ et $B_n$ associés à $\l b_n\r_{n\in\mathbb N}$ et $\l a_n\r_{n\in\mathbb N^*}$;;\tmatrix[][row sep = 0pt, inner sep = 0pt]\{{A_{-1}=1\\A_{0}=b_0\\B_{-1}=0\\B_{0}=1\\}{.\kern-\nulldelimiterspace} et \tmatrix[][row sep = 0pt, inner sep = 0pt]\{{A_n=b_nA_{n-1}+a_nA_{n-2}\\B_n=b_nq_{n-1}+a_nB_{n-2}\\}{.\kern-\nulldelimiterspace}
-Définition des $S_n$ associés à $\l b_n\r_{n\in\mathbb N}$ et $\l a_n\r\in_{\mathbb N^*}$;;$S_0\l w\r=s_0\l w\r$ où $s_0\l w\r=b_0+w$\linebreak$S_n\l w\r=S_{n-1}\circ s_n\l w\r$ où $s_n\l w\r=\frac{a_n}{b_n+w}$\linebreak$S_n\l w\r\frac{A_n+A_{n-1}w}{B_n+B_{n-1}w}$
+Définition des $S_n$ associés à $\l b_n\r_{n\in\mathbb N}$ et $\l a_n\r\in_{\mathbb N^*}$;;$S_0\l w\r=s_0\l w\r$ où $s_0\l w\r=b_0+w$\linebreak$S_n\l w\r=S_{n-1}\circ s_n\l w\r$ où $s_n\l w\r=\frac{a_n}{b_n+w}$\linebreak$S_n\l w\r=\frac{A_n+A_{n-1}w}{B_n+B_{n-1}w}$
 Fromule du déterminant généralisée;;$A_nB_{n-1}-A_{n-1}B_n=\l-1\r^{n-1}\prod{k=1}{n}{a_k}$
 Théorème de Stern-Stolz;;La fraction continue $b_0+{\displaystyle\fracK_{k=1}^{+\infty}}\l\frac{a_n}{b_n}\r$ converge si et seulement si $\oldsum\left|b_n\right|$ diverge
 Théorème de Seidel-Stern;;Soit ${\displaystyle\fracK_{k=1}^{+\infty}}\l\frac1{b_n}\r$ une fraction continue telle que \tmatrix[][row sep = 0pt, inner sep = 0pt]\{{b_n>0\\\oldsum b_n\text{ diverge}\\}{.\kern-\nulldelimiterspace} alors ${\displaystyle\fracK_{k=1}^{+\infty}}\l\frac1{b_n}\r$ converge dans $\mathbb R$
