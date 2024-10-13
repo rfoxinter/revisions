@@ -1,0 +1,5 @@
+"Algèbre 1 &ndash; <i>Formes bilinéaires</i>"
+1
+0
+[1, 2, 3]
+[0, 0, 0]

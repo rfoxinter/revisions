@@ -1,0 +1,9 @@
+Topologie et calcul différentiel -- Calcul différentiel
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al,analyse,topologie,equivalents}
+$R\l\left[a,b\right],F\r$;;Adhérence des fonctions en escalier sur $\left[a,b\right]$\linebreak$\l R\l\left[a,b\right],F\r,\anrm[{\left[a,b\right]}]{\cdot}\r$ est un espace de Banach
+$\al EF$;;Applications linéaires continues de $E$ dans $F$
+$f$ est différentiable en $a\in U$;;$\exists g\in\al EF$\linebreak$f\l a+h\r=f\l a\r+g\l h\r+\o[\nrm h\to0]{\nrm{h}}$
+$f\in\al EF$\linebreak$\dd f_a$;;$f$
+Gradient de $f$ en $a$;;L'unique vecteur $\nabla f\l a\r$ tel que $\dd f_a\l h\r=\psc{\nabla f\l a\r}{h}$

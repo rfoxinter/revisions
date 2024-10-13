@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{al}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}
+\usepackage{al,structures}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}\newcommand{\transp}{{^t}}\usepackage{topologie}
 \hypersetup{pdftitle=Algèbre 1 -- Forme linéaire et dualité}
 \title{Algèbre 1\\\emph{Forme linéaire et dualité}}
 \author{}
@@ -10,14 +10,44 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Propriété de $\appl{\tau}{E}{E^{**}}{x}{\l\nappl{E^*}{\Bbbk}{l}{l\l x\r}\r}$}{1/5}
-\slider{$\tau$ est un isomorphisme en dimension finie}{1/5}
-\slideq{Théorème du rang}{2/5}
-\slider{Si $S$ est un supplémentaire de $F$ dans $E$, alors $S$ est un système de représentants de $E/F$ et $\pi_S\!:\!S\to E/F$ est un isomorphisme}{2/5}
-\slideq{Forme linéaire sur $\Bbbk$ où $E$ est un $\Bbbk$-ev}{3/5}
-\slider{Application linéaire $l\!:\!E\to\Bbbk$\linebreak L'ensemble des formes linéaires est le dual de $E$ noté $E^*$}{3/5}
-\slideq{Première forme coordonnée}{4/5}
-\slider{Forme linéaire sur $E$ de base $\l e_1,\cdots,e_n\r$ vérifiant $e_i^*\l e_j\r=\delta_{i,j}$}{4/5}
-\slideq{Propriétés sur les bases de $E^*$}{5/5}
-\slider{Pour toute base $\mathcal B'$ de $E^*$, il existe une base $\mathcal B$ de $E$ telle que $\mathcal B'=\mathcal B^*$}{5/5}
+\slideq{Crochet de dualité}{1/20}
+\slider{$\appl{\psc\cdot\cdot}{E^*\times E}{\Bbbk}{\l l,u\r}{l\l u\r}$}{1/20}
+\slideq{$\dim{F^\bot}$ en dimension finie}{2/20}
+\slider{$\dim E=\dim{F^\bot}+\dim F$}{2/20}
+\slideq{$\ker{\transp u}$\linebreak$\im{\transp u}$}{3/20}
+\slider{En dimension finie\linebreak$\im u^\bot$\linebreak$\ker u^\bot$}{3/20}
+\slideq{Forme linéaire sur $\Bbbk$ où $E$ est un $\Bbbk$-ev}{4/20}
+\slider{Application linéaire $l\!:\!E\to\Bbbk$\linebreak L'ensemble des formes linéaires est le dual de $E$ noté $E^*$}{4/20}
+\slideq{$A=\almat u{\mathcal B_E}{\mathcal B_F}$\linebreak$A^\top$}{5/20}
+\slider{$A^\top=\almat{\transp u}{\mathcal B_F^*}{\mathcal B_E^*}$}{5/20}
+\slideq{Première forme coordonnée}{6/20}
+\slider{Forme linéaire sur $E$ de base $\l e_1,\cdots,e_n\r$ vérifiant $e_i^*\l e_j\r=\delta_{i,j}$}{6/20}
+\slideq{$\l F+G\r^\bot$}{7/20}
+\slider{$F^\bot\cap G^\bot$}{7/20}
+\slideq{Propriété de $\appl{\tau}{E}{E^{**}}{x}{\l\nappl{E^*}{\Bbbk}{l}{l\l x\r}\r}$}{8/20}
+\slider{$\tau$ est un isomorphisme en dimension finie}{8/20}
+\slideq{$u\in\al EF$\linebreak$\transp u$}{9/20}
+\slider{$\appl{\transp u}{F^*}{E^*}{l}{l\circ u}$}{9/20}
+\slideq{Propriétés sur les bases de $E^*$}{10/20}
+\slider{Pour toute base $\mathcal B'$ de $E^*$, il existe une base $\mathcal B$ de $E$ telle que $\mathcal B'=\mathcal B^*$}{10/20}
+\slideq{$V\subset E^*$\linebreak$V^\top$}{11/20}
+\slider{$\left\{x\in E,\forall l\in V,l\l x\r=0\right\}$}{11/20}
+\slideq{Propriétés de ${^\bot}$ en dimension finie}{12/20}
+\slider{$\l F^\bot\r^\bot=F$\linebreak$\l F\cap G\r^\bot=F^\bot+G^\bot$}{12/20}
+\slideq{Propriété de $\transp\cdot$ en dimension finie}{13/20}
+\slider{$\transp\cdot$ est un isomorphisme}{13/20}
+\slideq{Théorème du rang}{14/20}
+\slider{Si $S$ est un supplémentaire de $F$ dans $E$, alors $S$ est un système de représentants de $E/F$ et $\pi_S\!:\!S\to E/F$ est un isomorphisme}{14/20}
+\slideq{$V^\bot\cap E^{**}$}{15/20}
+\slider{$\tau\l V^\top\r$}{15/20}
+\slideq{$\ker g^\bot$}{16/20}
+\slider{$\Bbbk g$}{16/20}
+\slideq{Élément canoniquement isomorphe à $F^\bot$ $F$ sev de $E$}{17/20}
+\slider{$\l E/F\r^*$}{17/20}
+\slideq{$\rg{\transp u}$}{18/20}
+\slider{En dimension finie\linebreak$\rg u$}{18/20}
+\slideq{CNS pour $f\in\vect{f_1,\cdots,f_n}$ dans $E$ de dimension finie}{19/20}
+\slider{$\ker f\supset\bigcap{i=1}{n}{\ker'{f_i}}$}{19/20}
+\slideq{$A\subset E$\linebreak$A^\bot$}{20/20}
+\slider{$\left\{l\in E^*,\forall a\in A,\psc la=0\right\}$}{20/20}
 \end{document}

@@ -1,0 +1,19 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\DeclareMathOperator{\oldbil}{Bil}\newcommand{\bil}[2]{\oldbil\l#1,#2\r}\let\phi\varphi\def\bb{\mathcal B}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}\usepackage{al}\newcommand{\transp}{{^t}}
+\hypersetup{pdftitle=Algèbre 1 -- Formes bilinéaires}
+\title{Algèbre 1\\\emph{Formes bilinéaires}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Lien entre $\appl{l_\phi}{E}{F}{x}{\phi\l x,\cdot\r}$, $\appl{r_\phi}{E}{F}{x}{\phi\l\cdot,x\r}$ et $\bil EF$}{1/3}
+\slider{$\appl{l}{\bil EF}{{\al EF}}{\phi}{l_\phi}$\linebreak et\linebreak$\appl{r}{\bil EF}{{\al EF}}{\phi}{r_\phi}$\linebreak sont deux isomorphismes}{1/3}
+\slideq{$\phi\l X,Y\r$ matriciellement}{2/3}
+\slider{$\transp XMY$ où $X$ et $Y$ sont des vecteurs colonnes}{2/3}
+\slideq{$\phi\in\bil EF$\linebreak$\almat{\phi}{\bb_E}{\bb_F}$}{3/3}
+\slider{$\l\phi\l e_i,f_j\r\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,m\rrb}$}{3/3}
+\end{document}

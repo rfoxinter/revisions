@@ -1,9 +1,24 @@
 Algèbre 1 -- Forme linéaire et dualité
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}
+\usepackage{al,structures}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}\newcommand{\transp}{{^t}}\usepackage{topologie}
 Théorème du rang;;Si $S$ est un supplémentaire de $F$ dans $E$, alors $S$ est un système de représentants de $E/F$ et $\pi_S\!:\!S\to E/F$ est un isomorphisme
 Forme linéaire sur $\Bbbk$ où $E$ est un $\Bbbk$-ev;;Application linéaire $l\!:\!E\to\Bbbk$\linebreak L'ensemble des formes linéaires est le dual de $E$ noté $E^*$
 Première forme coordonnée;;Forme linéaire sur $E$ de base $\l e_1,\cdots,e_n\r$ vérifiant $e_i^*\l e_j\r=\delta_{i,j}$
 Propriété de $\appl{\tau}{E}{E^{**}}{x}{\l\nappl{E^*}{\Bbbk}{l}{l\l x\r}\r}$;;$\tau$ est un isomorphisme en dimension finie
 Propriétés sur les bases de $E^*$;;Pour toute base $\mathcal B'$ de $E^*$, il existe une base $\mathcal B$ de $E$ telle que $\mathcal B'=\mathcal B^*$
+$u\in\al EF$\linebreak$\transp u$;;$\appl{\transp u}{F^*}{E^*}{l}{l\circ u}$
+$A=\almat u{\mathcal B_E}{\mathcal B_F}$\linebreak$A^\top$;;$A^\top=\almat{\transp u}{\mathcal B_F^*}{\mathcal B_E^*}$
+Propriété de $\transp\cdot$ en dimension finie;;$\transp\cdot$ est un isomorphisme
+Crochet de dualité;;$\appl{\psc\cdot\cdot}{E^*\times E}{\Bbbk}{\l l,u\r}{l\l u\r}$
+$A\subset E$\linebreak$A^\bot$;;$\left\{l\in E^*,\forall a\in A,\psc la=0\right\}$
+$\l F+G\r^\bot$;;$F^\bot\cap G^\bot$
+Élément canoniquement isomorphe à $F^\bot$ $F$ sev de $E$;;$\l E/F\r^*$
+$\dim{F^\bot}$ en dimension finie;;$\dim E=\dim{F^\bot}+\dim F$
+$V\subset E^*$\linebreak$V^\top$;;$\left\{x\in E,\forall l\in V,l\l x\r=0\right\}$
+$V^\bot\cap E^{**}$;;$\tau\l V^\top\r$
+Propriétés de ${^\bot}$ en dimension finie;;$\l F^\bot\r^\bot=F$\linebreak$\l F\cap G\r^\bot=F^\bot+G^\bot$
+$\ker g^\bot$;;$\Bbbk g$
+CNS pour $f\in\vect{f_1,\cdots,f_n}$ dans $E$ de dimension finie;;$\ker f\supset\bigcap{i=1}{n}{\ker'{f_i}}$
+$\ker{\transp u}$\linebreak$\im{\transp u}$;;En dimension finie\linebreak$\im u^\bot$\linebreak$\ker u^\bot$
+$\rg{\transp u}$;;En dimension finie\linebreak$\rg u$

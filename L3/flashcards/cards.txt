@@ -2,7 +2,9 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/Algebre1/ActionsDeGroupes
 20240929150605
 ../L3/flashcards/Algebre1/FormeLineaireEtDualite
-20241006110214
+20241013114248
+../L3/flashcards/Algebre1/FormesBilineaires
+20241013115628
 ../L3/flashcards/Algebre1/GroupeSymetrique
 20241005183407
 ../L3/flashcards/Algebre1/Groupes
@@ -27,10 +29,12 @@ https://rfoxinter.github.io/revisions/flashcards/
 20241005174517
 ../L3/flashcards/IntegrationEtTheorieDeLaMesure/TheorieDeLaMesure
 20240929095021
+../L3/flashcards/TopologieEtCalculDifferentiel/CalculDifferentiel
+20241013102014
 ../L3/flashcards/TopologieEtCalculDifferentiel/Completude
 20240921135357
 ../L3/flashcards/TopologieEtCalculDifferentiel/EspacesCompacts
-20241005212104
+20241013092936
 ../L3/flashcards/TopologieEtCalculDifferentiel/EspacesDeHilbert
 20240929114341
 ../L3/flashcards/TopologieEtCalculDifferentiel/EspacesMetriques

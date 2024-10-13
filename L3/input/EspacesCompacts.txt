@@ -1,8 +1,11 @@
 Topologie et calcul différentiel -- Espaces compacts
 Shuffle questions : True
 Q/R & R/Q : False
-
+\newcounter{footnotemarkcounter}\setcounter{footnotemarkcounter}0\newcounter{footnotetextcounter}\setcounter{footnotetextcounter}0\renewcommand{\footnotemark}{\stepcounter{footnotemarkcounter}{\textsuperscript{\textit{\oldstylenums{\thefootnotemarkcounter}}}}}\let\oldfootnotetext\footnotetext\renewcommand{\footnotetext}[1]{{\stepcounter{footnotetextcounter}\def\thefootnote{\textit{\oldstylenums{\thefootnotetextcounter}}}\def\thempfootnote{\textit{\oldstylenums{\thefootnotetextcounter}}}\oldfootnotetext{#1}}}\renewcommand{\footnote}{\footnotemark\footnotetext}
 Espace précompact;;Espace $X$ pour lequel pour tout $\varepsilon>0$, $X$ est recouvrable par un nombre fini de boules de rayon $\varepsilon$
 Définition équivalente à la compacité;;Complet et précompact
 Théorème de Heine;;Si $X$ est compact et $f\!:\!X\to Y$ est continue alors $f$ est uniformément continue
 Théorème de Poincaré;;Si $X$ est compact et $f\!:\!X\to Y$ est bijective et continue alors $f^{-1}\!:\!Y\to X$ est continue
+Théorème de Riesz;;La boule unité d'un ev $E$ est compacte si et seulement si $E$ est de dimension finie
+Théorème de Borel-Lebesgue;;L'espace métrique $\l E,d\r$ est compact si et seulement si de tout recouvrement par des ouverts, on peut extraire un sous-recouvrement fini
+Description topologique des espaces compact;;Si $E$ est un espace topologique, $E$ est compact si \emph{$E$ est séparé}\footnote{seulement en français} et tout recouvrement ouvert de $E$ a un sous-recouvrement fini
