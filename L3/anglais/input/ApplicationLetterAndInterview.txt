@@ -1,35 +1,35 @@
 Anglais B2+ -- Application letter and interview
 Shuffle questions : True
-Q/R & R/Q : False
+Q/R & R/Q : True
  
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to graduate;;to graduate\linebreak{}\linebreak{}to graduate in + DATE\linebreak{}\linebreak{}to graduate from + INSTITUTION
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to stress;;to stress + SOMEONE + out\linebreak{}\linebreak{}to stress + ONESELF + out (reflexive)
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to pick;;to pick + SOMETHING (meaning 'to choose something')\linebreak{}\linebreak{}to pick + ONESELF + back up (reflexive, meaning to recover from a setback)
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to have a background;;to have a background in + SOMETHING
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to be involved;;to be involved in + ACTIVITY (to actively participate in an activity)\linebreak{}\linebreak{}to be involved with + SOMETHING/SOMEONE (to be associated with/ to have a connection with/ to have a relationship with something or someone)
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to tend;;to tend + SOMETHING (=to care for something)\linebreak{}\linebreak{}to tend to do + SOMETHING (to usually do something)
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to spend time;;to spend time + GERUND
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to plan;;to plan + ACTIVITY (to prepare and organise an activity)\linebreak{}\linebreak{}to plan on + GERUND (to intend to do an activity)\linebreak{}\linebreak{}to plan to + BARE INFINITIVE (to intend to do an activity)
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to end up;;to end up + ADJECTIVE (to become + ADJECTIVE (as a final state))\linebreak{}\linebreak{}to end up + GERUND (to eventually do an activity (finir par faire qqch))
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to participate;;to participate in + ACTIVITY
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to put;;to put + SOMETHING + on + SOMETHING\linebreak{}\linebreak{}to put on + CLOTHING\linebreak{}\linebreak{}to put + IDEA/CONCEPT + forward (to present an idea or concept as being important or more important than other things)
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to tie;;to tie + SOMETHING + to SOMETHING\linebreak{}\linebreak{}to tie + MULTIPLE THINGS\linebreak{}\linebreak{}to tie in with + SOMETHING (to be on a similar topic as something)
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to be able;;to be able to + BARE INFINITIVE VERB
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to pertain;;to pertain to + SOMETHING (to be about something)
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to deepen;;to deepen one's knowledge of + SOMETHING (approfondir ses connaissances sur qqch)
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to familiarise;;to familiarise oneself with + TOPIC/DOMAIN
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to do research;;to do research on + TOPIC
-What preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to be faced;;to be faced with + SOMETHING (usually a challenge)
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to graduate;;to graduate\linebreak{}\linebreak{}to graduate in + DATE\linebreak{}\linebreak{}to graduate from + INSTITUTION
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to stress;;to stress + SOMEONE + out\linebreak{}\linebreak{}to stress + ONESELF + out (reflexive)
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to pick;;to pick + SOMETHING (meaning `to choose something')\linebreak{}\linebreak{}to pick + ONESELF + back up (reflexive, meaning to recover from a setback)
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to have a background;;to have a background in + SOMETHING
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to be involved;;to be involved in + ACTIVITY (to actively participate in an activity)\linebreak{}\linebreak{}to be involved with + SOMETHING/SOMEONE (to be associated with/ to have a connection with/ to have a relationship with something or someone)
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to tend;;to tend + SOMETHING (=to care for something)\linebreak{}\linebreak{}to tend to do + SOMETHING (to usually do something)
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to spend time;;to spend time + GERUND
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to plan;;to plan + ACTIVITY (to prepare and organise an activity)\linebreak{}\linebreak{}to plan on + GERUND (to intend to do an activity)\linebreak{}\linebreak{}to plan to + BARE INFINITIVE (to intend to do an activity)
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to end up;;to end up + ADJECTIVE (to become + ADJECTIVE (as a final state))\linebreak{}\linebreak{}to end up + GERUND (to eventually do an activity (finir par faire qqch))
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to participate;;to participate in + ACTIVITY
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to put;;to put + SOMETHING + on + SOMETHING\linebreak{}\linebreak{}to put on + CLOTHING\linebreak{}\linebreak{}to put + IDEA/CONCEPT + forward (to present an idea or concept as being important or more important than other things)
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to tie;;to tie + SOMETHING + to SOMETHING\linebreak{}\linebreak{}to tie + MULTIPLE THINGS\linebreak{}\linebreak{}to tie in with + SOMETHING (to be on a similar topic as something)
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to be able;;to be able to + BARE INFINITIVE VERB
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to pertain;;to pertain to + SOMETHING (to be about something)
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to deepen;;to deepen one's knowledge of + SOMETHING (approfondir ses connaissances sur qqch)
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to familiarise;;to familiarise oneself with + TOPIC/DOMAIN
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to do research;;to do research on + TOPIC
+!!fstWhat preposition(s) and what objects (if any) should be used with the verb below{?}\linebreak{}\linebreak{}to be faced;;to be faced with + SOMETHING (usually a challenge)
 Authorship bullying;;Using bullying to force somebody to give an authorship role on a paper
 Career sabotage;;1) Denying somebody a promotion because of personal bias\linebreak{}\linebreak{}2) Plagiarising a subordinate's work or otherwise restricting resources in order to advance one's own career, to the detriment of that subordinate's career
-Engaging in forms of bullying online or via telephone;;Cyberbullying
+Cyberbullying;;Engaging in forms of bullying online or via telephone
 Forced misconduct;;Compelling a subordinate to engage in academic misconduct and expecting them to take the fall if discovered
 Funding threats;;Threatening to remove necessary funding if the target does not do as they are told
 Hazing;;Playing tricks on someone, especially a new person in a social organization
 Incivility;;Rudeness
 Intimidation;;Frightening or threatening someone, usually in order to persuade them to do something that you want them to do
-Mobbing;;Encouraging or using intimidation to get other members of the academic community to "gang up" and harass a target
-Overwork;;Expecting a subordinate to work excessive hours and neglect other aspects of their life, questioning their commitment if they do not work "enough'
+Mobbing;;Encouraging or using intimidation to get other members of the academic community to ``gang up'' and harass a target
+Overwork;;Expecting a subordinate to work excessive hours and neglect other aspects of their life, questioning their commitment if they do not work ``enough''
 Physical sabotage;;Interfering with experimental apparatus, forcing somebody to waste many hours and part of their budget to redo their experiments
 Setting up for failure;;Setting impossible deadlines, targets, and workloads, then using these missed targets as a pretext for abuse
 Stalking;;Crime of illegally following and watching someone over a period of time
