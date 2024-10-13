@@ -16,7 +16,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/AnalyseComplexe/FonctionsHolomorphes
 20240921135513
 ../L3/flashcards/AnalyseComplexe/TheorieDeCauchy
-20241005181714
+20241013181806
 ../L3/flashcards/FractionsContinues/FractionsContinuesFiniesSimples
 20240921102759
 ../L3/flashcards/FractionsContinues/FractionsContinuesSimplesInfinies
