@@ -1,1 +1,31 @@
-Sésame: p2416418
+Anglais B2+ -- Power dynamics
+Shuffle questions : True
+Q/R & R/Q : True
+\usepackage{worldflags}\usepackage{tabularray}\SetTblrInner{rowsep=0pt}\setlength{\tabcolsep}{0pt}\newcommand{\engdef}[2]{\begin{tblr}{Q[c,m]Q[c,m]}\worldflag[framewidth=.2pt,framecolor=black,width=8pt]{GBalt}&#1\\\worldflag[framewidth=.2pt,framecolor=black,width=8pt]{USalt}&#2\end{tblr}}\newcommand{\frdef}[1]{\begin{tblr}{Q[c,m]Q[c,m]}\worldflag[framewidth=.2pt,framecolor=black,width=8pt]{FRalt}&#1\end{tblr}}
+!!fstLatin term for a female ex-student;;An alumna
+!!fstLatin term for ex-students;;Alumni
+!!fstLatin term for a make ex-student;;An alumnus
+!!fstAnother term for the head or director of a department or committee;;A chair
+!!fstAnother term for the president or director of an institution;;A dean
+!!fstSomeone who advises and directs your research, also called a doctoral advisor;;A supervisor
+!!fstA principal investigator, i.e. the leader of a research project;;A PI
+!!fstA postdoctoral researcher in a (usually) temporary position;;A postdoc
+!!fstSomeone who works to promote equality and reduce discrimination;;An equality and diversity officer
+\frdef{Malgré};;\engdef{Despite}{Despite}
+\frdef{Malgré le fait que};;\engdef{Despite the fact that}{Despite the fact that}
+\frdef{Quel que soit};;\engdef{Regardless of}{Regardless of}
+\frdef{Même si (faits réels)};;\engdef{Even though}{Even though}
+\frdef{Cependant};;\engdef{However}{However}
+\frdef{Mais};;\engdef{But}{But}
+\frdef{Par comparaison};;\engdef{By comparison}{By comparison}
+\frdef{Alors que};;\engdef{While}{While}
+\frdef{Au contraire};;\engdef{On the contrary}{On the contrary}
+\frdef{D’un autre côté};;\engdef{On the other hand}{On the other hand}
+\frdef{Néanmoins};;\engdef{Nevertheless}{Nevertheless}
+\frdef{Ou bien/ ou sinon};;\engdef{Alternatively}{Alternatively}
+\frdef{Même si (faits iréels)};;\engdef{Even if}{Even if}
+\frdef{En dépit de};;\engdef{In spite of}{In spite of}
+\frdef{En dépit du fait que};;\engdef{In spite of the fact that}{In spite of the fact that}
+\frdef{Pour autant};;\engdef{For all that}{For all that}
+\frdef{Contrairement à};;\engdef{Unlike}{Unlike}
+\frdef{Contrairement à};;\engdef{In contrast to}{In contrast to}
