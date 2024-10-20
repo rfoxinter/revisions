@@ -1,7 +1,9 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ../L3/anglais/flashcards/AnglaisB2+/ApplicationLetterAndInterview
-20241013185032
+20241020155417
 ../L3/anglais/flashcards/AnglaisB2+/HigherEducation
 20241003172210
 ../L3/anglais/flashcards/AnglaisB2+/Internships
 20241005114902
+../L3/anglais/flashcards/AnglaisB2+/PowerDynamics
+20241020154818
