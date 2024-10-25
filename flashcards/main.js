@@ -134,10 +134,13 @@ async function resume_loading(file) {
     arr[2*ques[0]-1] = svgcode;
     for (let i = 1; i < n.length; i++) {
         await get_code(file, ques[i], 'Q');
+        document.getElementById('flip').disabled = false;
         arr[2*ques[i]-2] = svgcode;
         await get_code(file, ques[i], 'R');
+        document.getElementById('flip').disabled = false;
         arr[2*ques[i]-1] = svgcode;
     }
+    document.getElementById('flip').disabled = false;
     document.getElementById('down-button').style.display = 'block';
     document.getElementById('up-button').style.display = 'block';
     document.getElementById('up-button').innerHTML = 'close';
