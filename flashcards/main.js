@@ -125,7 +125,6 @@ async function fill_svg(file) {
 async function resume_loading(file) {
     document.getElementById('up-button').style.display = 'none';
     document.getElementById('title').innerHTML = title;
-    document.getElementById('flip').disabled = false;
     document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
     document.getElementById('card_nb').innerHTML = nth + 1;
     document.getElementById('card_total').innerHTML = '/' + ques.length;
@@ -160,6 +159,8 @@ if (file != null && file != '') {
     filename = file;
 } else if (card != null && card != '') {
     fill_card(atob(card));
+} else {
+    document.getElementById('flip').disabled = false;
 }
 function reverse_card() {
     if (q) {
