@@ -88,25 +88,41 @@ async function fill_svg(file) {
         arr = new Array(2*n.length);
         await get_code(file, ques[0], 'Q');
         arr[2*ques[0]-2] = svgcode;
-        document.addEventListener("DOMContentLoaded", (event) => {
-            resume_loading()
-        });
+        if (document.readyState !== "loading") {
+            resume_loading(file);
+        } else {
+            document.addEventListener("DOMContentLoaded", (event) => {
+                resume_loading(file);
+            });
+        }
     } else if (res == 'Error') {
-        document.addEventListener("DOMContentLoaded", (event) => {
+        if (document.readyState !== "loading") {
             document.getElementById('up-button').style.display = 'none';
             document.getElementById('title').innerHTML = 'Erreur';
             document.getElementById('flashcard').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
-        });
+        } else {
+            document.addEventListener("DOMContentLoaded", (event) => {
+                document.getElementById('up-button').style.display = 'none';
+                document.getElementById('title').innerHTML = 'Erreur';
+                document.getElementById('flashcard').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
+            });
+        }
     }
     else {
-        document.addEventListener("DOMContentLoaded", (event) => {
+        if (document.readyState !== "loading") {
             document.getElementById('up-button').style.display = 'none';
             document.getElementById('title').innerHTML = 'Erreur ' + res;
             document.getElementById('flashcard').innerHTML = 'Fichier introuvable';
-        });
+        } else {
+            document.addEventListener("DOMContentLoaded", (event) => {
+                document.getElementById('up-button').style.display = 'none';
+                document.getElementById('title').innerHTML = 'Erreur ' + res;
+                document.getElementById('flashcard').innerHTML = 'Fichier introuvable';
+            });
+        }
     }
 }
-async function resume_loading() {
+async function resume_loading(file) {
     document.getElementById('up-button').style.display = 'none';
     document.getElementById('title').innerHTML = title;
     document.getElementById('flip').disabled = false;
