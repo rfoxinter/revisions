@@ -88,25 +88,8 @@ async function fill_svg(file) {
         arr = new Array(2*n.length);
         await get_code(file, ques[0], 'Q');
         arr[2*ques[0]-2] = svgcode;
-        document.addEventListener("DOMContentLoaded", async (event) => {
-            document.getElementById('up-button').style.display = 'none';
-            document.getElementById('title').innerHTML = title;
-            document.getElementById('flip').disabled = false;
-            document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
-            document.getElementById('card_nb').innerHTML = nth + 1;
-            document.getElementById('card_total').innerHTML = '/' + ques.length;
-            await get_code(file, ques[0], 'R');
-            arr[2*ques[0]-1] = svgcode;
-            for (let i = 1; i < n.length; i++) {
-                await get_code(file, ques[i], 'Q');
-                arr[2*ques[i]-2] = svgcode;
-                await get_code(file, ques[i], 'R');
-                arr[2*ques[i]-1] = svgcode;
-            }
-            document.getElementById('down-button').style.display = 'block';
-            document.getElementById('up-button').style.display = 'block';
-            document.getElementById('up-button').innerHTML = 'close';
-            document.getElementById('up-button').setAttribute('onclick', '_close()');
+        document.addEventListener("DOMContentLoaded", (event) => {
+            resume_loading()
         });
     } else if (res == 'Error') {
         document.addEventListener("DOMContentLoaded", (event) => {
@@ -122,6 +105,26 @@ async function fill_svg(file) {
             document.getElementById('flashcard').innerHTML = 'Fichier introuvable';
         });
     }
+}
+async function resume_loading() {
+    document.getElementById('up-button').style.display = 'none';
+    document.getElementById('title').innerHTML = title;
+    document.getElementById('flip').disabled = false;
+    document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
+    document.getElementById('card_nb').innerHTML = nth + 1;
+    document.getElementById('card_total').innerHTML = '/' + ques.length;
+    await get_code(file, ques[0], 'R');
+    arr[2*ques[0]-1] = svgcode;
+    for (let i = 1; i < n.length; i++) {
+        await get_code(file, ques[i], 'Q');
+        arr[2*ques[i]-2] = svgcode;
+        await get_code(file, ques[i], 'R');
+        arr[2*ques[i]-1] = svgcode;
+    }
+    document.getElementById('down-button').style.display = 'block';
+    document.getElementById('up-button').style.display = 'block';
+    document.getElementById('up-button').innerHTML = 'close';
+    document.getElementById('up-button').setAttribute('onclick', '_close()');
 }
 async function fill_card(file) {
     let res = await loadFile(atob(card));
