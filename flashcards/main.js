@@ -128,7 +128,9 @@ async function resume_loading(file) {
     document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
     document.getElementById('card_nb').innerHTML = nth + 1;
     document.getElementById('card_total').innerHTML = '/' + ques.length;
+    document.getElementById('flip').disabled = false;
     await get_code(file, ques[0], 'R');
+    document.getElementById('flip').disabled = false;
     arr[2*ques[0]-1] = svgcode;
     for (let i = 1; i < n.length; i++) {
         await get_code(file, ques[i], 'Q');
@@ -160,7 +162,7 @@ if (file != null && file != '') {
 } else if (card != null && card != '') {
     fill_card(atob(card));
 } else {
-    document.getElementById('flip').disabled = false;
+    document.getElementById('flip').disabled = true;
 }
 function reverse_card() {
     if (q) {
