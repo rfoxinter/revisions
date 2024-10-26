@@ -10,60 +10,66 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Série de fonctions holomorphes}{1/28}
-\slider{Si $\l u_n\r$ est une suite de fonctions holomorphe telle que $\sum{n=0}{+\infty}{u_n}$ converge uniformément vers $f$ sur tout compact de $U$ alors $f$ est holomorphe sur $U$ et $\sum{n=0}{+\infty}{u_n^{\l k\r}}$ cvu vers $f^{\l k\r}$ sur tout compact de $U$}{1/28}
-\slideq{Invariance par homotopie des intégrales}{2/28}
-\slider{Si $f$ est holomorphe et $\Gamma$ de classe $\mathcal C^2$, en posant $\gamma_s=\Gamma\l s,\cdot\r$, si $\gamma_s$ vérifie l'une des deux conditions suivantes, $\forall s\in\left[0,1\right]$, $\gamma_s$ est fermé ou $\gamma_s\l0\r$ et $\gamma_s\l1\r$ sont indépendant de $s$ alors $\int[z][\gamma_0]{f\l z\r}=\int[z][\gamma_1]{f\l z\r}$}{2/28}
-\slideq{Théorème de Cauchy}{3/28}
-\slider{Pour $U$ un ouvert de $\mathbb C$ et $f\!:\!U\to\mathbb C$, $f$ est holomorphe sur $U$ si et seulement si $f$ est analytique sur $U$}{3/28}
-\slideq{CNS de convergence de $\prod{n=0}{+\infty}{1+a_n}$ pour $a_n\in\mathbb R_+$}{4/28}
-\slider{$\sum{n=0}{+\infty}{a_n}$ converge}{4/28}
-\slideq{Lien entre fonction holomorphe sur la couronne $A\l R_1,R_2\r$ et série de Laurent}{5/28}
-\slider{\togglebigopdisplay\toggleanalysedisplay Les application $\l a_n\r_{n\in\mathbb Z}\mapsto\l z\mapsto\sum{n\in\mathbb Z}{}{a_nz^n}\r$ et $f\mapsto \l\tfrac{1}{2\i\pi}\int[z][C\l0,r\r]{\tfrac{f\l z\r}{z^{n+1}}}\r_{n\in\mathbb N}$ où $\sum{n\in\mathbb N}{}{a_nz^n}$ est holomorphe sur $D\l0,R_1\r$ et $\sum{n\in-\mathbb N^*}{}{a_nz^n}$ est holomorphe sur $D\l0,R_2\r$ sont deux bijections réciproques\togglebigopdisplay\toggleanalysedisplay}{5/28}
-\slideq{Inégalité de Cauchy via la formule de Parseval}{6/28}
-\slider{$\sum{n=0}{+\infty}{\left|\frac{1}{n!}f^{(n)}\l z_0\r\right|^2r^{2n}}=\frac{1}{2\pi}\int[\theta][0][2\pi]{\left|f\l z+r\e^{\i\theta}\r\right|^2}$}{6/28}
-\slideq{Intégrales sur un lacet}{7/28}
-\slider{Si $f$ est holomorphe sur $U$ et $\gamma\l a\r=\gamma\l b\r$, $\int[z][\gamma]{f\l z\r}=0$}{7/28}
-\slideq{Limite uniforme de fonctions holomorphes}{8/28}
-\slider{Si $\l f_n\r$ est une suite de fonctions holomorphes qui converge uniformément sur $U$ vers $f$ sur tout compact de $U$ alors $f$ est holomorphe et pour tout $k\in\mathbb N$, $\l f_n^{\l k\r}\r$ converge uniformément sur tout compact de $U$ vers $f^{\l k\r}$}{8/28}
-\slideq{Majoration élémentaire de $\prod{k=1}{n}{1+a_k}-1$, $a_k\in\mathbb C$}{9/28}
-\slider{$\left|\prod{k=1}{n}{1+a_k}-1\right|\leqslant\prod{k=1}{n}{1+\left|a_k\right|}-1$}{9/28}
-\slideq{Théorème de Liouville}{10/28}
-\slider{Toute fonction holomorphe bornée sur $\mathbb C$ est constante}{10/28}
-\slideq{Inégalité de Cauchy}{11/28}
-\slider{$\left|\frac{f^{\l n\r}\l z_0\r}{n!}\right|\leqslant r^{-n}\oldmax\limits_{\theta\in\left[0,2\pi\right]}\left|f\l z_0+r\e^{\i\theta}\r\right|$}{11/28}
-\slideq{Concaténation d'intégrales}{12/28}
-\slider{Si $c\in\left[a,b\right]$, $\gamma_1=\gamma_{|\left[a,c\right]}$ et $\gamma_2=\gamma_{|\left[c,b\right]}$, $\int[z][\gamma_1]{f\l z\r}+\int[z][\gamma_2]{f\l z\r}=\int[z][\gamma]{f\l z\r}$}{12/28}
-\slideq{Coefficients de la série de Taylor d'une fonction holomorphe}{13/28}
-\slider{$a_n=\frac{1}{2\i\pi}\int[w][C\l z_0,r\r]{\frac{f\l w\r}{\l w-z_0\r^{n+1}}}$}{13/28}
-\slideq{Majoration d'une intégrale}{14/28}
-\slider{$\left|\int[z][\gamma]{f\l z\r}\right|\leqslant\oldmax\limits_{z\in\gamma\l\left[a,b\right]\r}{\left|f\l z\r\right|}\times\underbrace{\int[t][a][b]{\left|\gamma'\l t\r\right|}}_{\text{longueur de }\gamma}$}{14/28}
-\slideq{Théorème de Morera}{15/28}
-\slider{Si $U$ est un ouvert de $\mathbb C$ et $f\!:\!U\to\mathbb C$, il y a équivalence entre $f$ est analytique sur $U$ et $f$ est continue et vérifie $\forall\l a,b,c\r\in U^3$ tels que $\Delta\l a,b,c\r\subset U$, $\int[z][{\left[a,b\right]}]{f\l z\r}+\int[z][{\left[b,c\right]}]{f\l z\r}+\int[z][{\left[c,a\right]}]{f\l z\r}=0$}{15/28}
-\slideq{Intégrale sur $\partial\Gamma$ où $\Gamma\!:\!\left[0,1\right]^2\to U$}{16/28}
-\slider{Si $f$ est holomorphe et $\Gamma$ de classe $\mathcal C^2$ alors $\int[z][\partial\Gamma]{f\l z\r}=0$}{16/28}
-\slideq{Principe du maximum}{17/28}
-\slider{Si $f$ est holomorphe sur $U$ et $\left|f\right|$ admet un maximum sur $U$ alors $f$ est constante dur $U$}{17/28}
-\slideq{Propriétés équivalentes à $f=0$ sur $U$ ou $f$ est holomorphe}{18/28}
-\slider{L'ensemble des zéros de $f$ possède un point d'accumulation dans $U$\linebreak$\exists z_0\in  U$, $\forall n\in\mathbb N$, $f^{\l n\r}\l z_0\r=0$}{18/28}
-\slideq{Formule de Cauchy}{19/28}
-\slider{Si $U$ est un ouvert de $\mathbb C$, $f$ holomorphe sur $U$ et $z_0\in U$ alors pour tout $z\in D\l z_0,r\r$, $f\l z\r=\frac{1}{2\i\pi}\int[w][C\l z_0,r\r]{\frac{f\l w\r}{w-r}}$}{19/28}
-\slideq{Invariance par paramétrage de l'intégrale}{20/28}
-\slider{Si $\phi\!:\!\left[a',b'\right]\to\left[a,b\right]$ est croissante et $\mathcal C^1$, en posant $\gamma_0=\gamma\circ\phi$, $\int[z][\gamma_0]{f\l z\r}=\int[z][\gamma]{f\l z\r}$}{20/28}
-\slideq{Majoration de $\left|\sum{k=0}{N}{f\l\frac{kT}{N}\r}-\int[x][0][T]{f\l x\r}\right|$ dans le cas où $f$ est la restiction d'une fonction holomorphe $T$-périodique sur $B\l-a,a\r$ avec $a>0$}{21/28}
-\slider{Si $\left|f\right|$ est majorée par $M$ et $r=\e^{\oldfrac{2\pi a}T}$ $\left|\sum{k=0}{N}{f\l\frac{kT}{N}\r}-\int[x][0][T]{f\l x\r}\right|\leqslant\frac{2TM}{r^N-1}$}{21/28}
-\slideq{Maximum de $f$ continue sur $\bar U$ et holomorphe sur $U$ un ouvert connexe de $\mathbb C$}{22/28}
-\slider{$\oldmax\limits_{z\in\bar U}\left|f\l z\r\right|=\oldmax\limits_{z\in\partial U}\left|f\l z\r\right|$}{22/28}
-\slideq{$\int[z][\gamma]{f\l z\r}$\linebreak$\gamma\!:\!\left[a,b\right]\to\mathbb C$ de classe $\mathcal C^1$ par morceaux}{23/28}
-\slider{$\int[t][a][b]{f\l\gamma\l t\r\r\times\gamma'\l t\r}$}{23/28}
-\slideq{Principe du prolongement analytique}{24/28}
-\slider{Si $f$ et $g$ sont holomorphe sur $U$ et coïncident sur un ouvert de $U$ alors $f=g$ sur $U$\linebreak\linebreak Soit $f$ analytique non identiquement nulle sur $U$, l'ensemble des zéros de $f$ sont isolés}{24/28}
-\slideq{Intégration sur le chemin opposé}{25/28}
-\slider{Si $\gamma^*\l t\r=\gamma\l a+b-t\r$, $\int[z][\gamma^*]{f\l z\r}=-\int[z][\gamma]{f\l z\r}$}{25/28}
-\slideq{Réexpression d'une fonction $f$ holomorphe et $T$-périodique sur une bande $B\l a_1,a_2\r=\left\{z\in\mathbb C,a_1<\Im z<a_2\right\}$ où $-\infty\leqslant a_1<a_2\leqslant+\infty$}{26/28}
-\slider{$f=g\circ e_T$ où $e_T\l z\r=\e^{\oldfrac{2\i\pi}{T}z}$ et $g$ est holomorphe sur $A\l\e^{\oldfrac{-2\i\pi a_2}{T}},\e^{\oldfrac{-2\i\pi a_1}{T}}\r$}{26/28}
-\slideq{Primitive de fonctions holomorphe sur un ouvert simplement connexe $U$ (ie connexe par arcs et tout lacet est homotope à un lacet constant)}{27/28}
-\slider{Toute fonction $f$ holomorphe de classe $\mathcal C^1$ admet une primitive holomorphe sur $U$\linebreak Ce résultat est en particulier vrai si $U$ est étoilé}{27/28}
-\slideq{Intgrale de $f$ sur $C\l0,r\r$ holomorphe sur couronne}{28/28}
-\slider{$\int[z][C\l0,r\r]{f\l z\r}$ est indépendante de $r$}{28/28}
+\slideq{Convergence de $\prod{n=0}{+\infty}{1+u_n\l z\r}$ avec $u_n$ holomorphe}{1/31}
+\slider{\togglebigopdisplay\togglebigoplimits Si aucun $u_n$ ne vaut identiquement $-1$ et que $\sum{n=0}{+\infty}{u_n}$ converge uniformément sur tout compact de $U$ alors $\prod{n=0}{+\infty}{1+u_n\l z\r}$ converge vers $u$ holomorphe sur $U$ non identiquement nulle et telle que pour tout $z_0\in\mathbb C$, $v_{z_0}\l u\r=\sum{n=0}{+\infty}{v_{z_0}\l u_n\r}<+\infty$ (et la somme est finie)\togglebigopdisplay\togglebigoplimits}{1/31}
+\slideq{Réexpression d'une fonction $f$ holomorphe et $T$-périodique sur une bande $B\l a_1,a_2\r=\left\{z\in\mathbb C,a_1<\Im z<a_2\right\}$ où $-\infty\leqslant a_1<a_2\leqslant+\infty$}{2/31}
+\slider{$f=g\circ e_T$ où $e_T\l z\r=\e^{\oldfrac{2\i\pi}{T}z}$ et $g$ est holomorphe sur $A\l\e^{\oldfrac{-2\i\pi a_2}{T}},\e^{\oldfrac{-2\i\pi a_1}{T}}\r$}{2/31}
+\slideq{Principe du maximum}{3/31}
+\slider{Si $f$ est holomorphe sur $U$ et $\left|f\right|$ admet un maximum sur $U$ alors $f$ est constante dur $U$}{3/31}
+\slideq{Série de fonctions holomorphes}{4/31}
+\slider{Si $\l u_n\r$ est une suite de fonctions holomorphe telle que $\sum{n=0}{+\infty}{u_n}$ converge uniformément vers $f$ sur tout compact de $U$ alors $f$ est holomorphe sur $U$ et $\sum{n=0}{+\infty}{u_n^{\l k\r}}$ cvu vers $f^{\l k\r}$ sur tout compact de $U$}{4/31}
+\slideq{Coefficients de la série de Taylor d'une fonction holomorphe}{5/31}
+\slider{$a_n=\frac{1}{2\i\pi}\int[w][C\l z_0,r\r]{\frac{f\l w\r}{\l w-z_0\r^{n+1}}}$}{5/31}
+\slideq{Lien entre fonction holomorphe sur la couronne $A\l R_1,R_2\r$ et série de Laurent}{6/31}
+\slider{\togglebigopdisplay\toggleanalysedisplay Les application $\l a_n\r_{n\in\mathbb Z}\mapsto\l z\mapsto\sum{n\in\mathbb Z}{}{a_nz^n}\r$ et $f\mapsto \l\tfrac{1}{2\i\pi}\int[z][C\l0,r\r]{\tfrac{f\l z\r}{z^{n+1}}}\r_{n\in\mathbb N}$ où $\sum{n\in\mathbb N}{}{a_nz^n}$ est holomorphe sur $D\l0,R_1\r$ et $\sum{n\in-\mathbb N^*}{}{a_nz^n}$ est holomorphe sur $D\l0,R_2\r$ sont deux bijections réciproques\togglebigopdisplay\toggleanalysedisplay}{6/31}
+\slideq{Formule de Cauchy}{7/31}
+\slider{Si $U$ est un ouvert de $\mathbb C$, $f$ holomorphe sur $U$ et $z_0\in U$ alors pour tout $z\in D\l z_0,r\r$, $f\l z\r=\frac{1}{2\i\pi}\int[w][C\l z_0,r\r]{\frac{f\l w\r}{w-r}}$}{7/31}
+\slideq{CNS de convergence de $\prod{n=0}{+\infty}{1-a_n}$ vers un réel non nul pour $a_n\in\left[0,1\right[$}{8/31}
+\slider{$\sum{n=0}{+\infty}{a_n}$ converge}{8/31}
+\slideq{Intgrale de $f$ sur $C\l0,r\r$ holomorphe sur couronne}{9/31}
+\slider{$\int[z][C\l0,r\r]{f\l z\r}$ est indépendante de $r$}{9/31}
+\slideq{Primitive de fonctions holomorphe sur un ouvert simplement connexe $U$ (ie connexe par arcs et tout lacet est homotope à un lacet constant)}{10/31}
+\slider{Toute fonction $f$ holomorphe de classe $\mathcal C^1$ admet une primitive holomorphe sur $U$\linebreak Ce résultat est en particulier vrai si $U$ est étoilé}{10/31}
+\slideq{Théorème de Morera}{11/31}
+\slider{Si $U$ est un ouvert de $\mathbb C$ et $f\!:\!U\to\mathbb C$, il y a équivalence entre $f$ est analytique sur $U$ et $f$ est continue et vérifie $\forall\l a,b,c\r\in U^3$ tels que $\Delta\l a,b,c\r\subset U$, $\int[z][{\left[a,b\right]}]{f\l z\r}+\int[z][{\left[b,c\right]}]{f\l z\r}+\int[z][{\left[c,a\right]}]{f\l z\r}=0$}{11/31}
+\slideq{Intégrale sur $\partial\Gamma$ où $\Gamma\!:\!\left[0,1\right]^2\to U$}{12/31}
+\slider{Si $f$ est holomorphe et $\Gamma$ de classe $\mathcal C^2$ alors $\int[z][\partial\Gamma]{f\l z\r}=0$}{12/31}
+\slideq{Propriétés équivalentes à $f=0$ sur $U$ ou $f$ est holomorphe}{13/31}
+\slider{L'ensemble des zéros de $f$ possède un point d'accumulation dans $U$\linebreak$\exists z_0\in  U$, $\forall n\in\mathbb N$, $f^{\l n\r}\l z_0\r=0$}{13/31}
+\slideq{Invariance par homotopie des intégrales}{14/31}
+\slider{Si $f$ est holomorphe et $\Gamma$ de classe $\mathcal C^2$, en posant $\gamma_s=\Gamma\l s,\cdot\r$, si $\gamma_s$ vérifie l'une des deux conditions suivantes, $\forall s\in\left[0,1\right]$, $\gamma_s$ est fermé ou $\gamma_s\l0\r$ et $\gamma_s\l1\r$ sont indépendant de $s$ alors $\int[z][\gamma_0]{f\l z\r}=\int[z][\gamma_1]{f\l z\r}$}{14/31}
+\slideq{Invariance par paramétrage de l'intégrale}{15/31}
+\slider{Si $\phi\!:\!\left[a',b'\right]\to\left[a,b\right]$ est croissante et $\mathcal C^1$, en posant $\gamma_0=\gamma\circ\phi$, $\int[z][\gamma_0]{f\l z\r}=\int[z][\gamma]{f\l z\r}$}{15/31}
+\slideq{Majoration d'une intégrale}{16/31}
+\slider{$\left|\int[z][\gamma]{f\l z\r}\right|\leqslant\oldmax\limits_{z\in\gamma\l\left[a,b\right]\r}{\left|f\l z\r\right|}\times\underbrace{\int[t][a][b]{\left|\gamma'\l t\r\right|}}_{\text{longueur de }\gamma}$}{16/31}
+\slideq{Limite uniforme de fonctions holomorphes}{17/31}
+\slider{Si $\l f_n\r$ est une suite de fonctions holomorphes qui converge uniformément sur $U$ vers $f$ sur tout compact de $U$ alors $f$ est holomorphe et pour tout $k\in\mathbb N$, $\l f_n^{\l k\r}\r$ converge uniformément sur tout compact de $U$ vers $f^{\l k\r}$}{17/31}
+\slideq{Intégrales sur un lacet}{18/31}
+\slider{Si $f$ est holomorphe sur $U$ et $\gamma\l a\r=\gamma\l b\r$, $\int[z][\gamma]{f\l z\r}=0$}{18/31}
+\slideq{Inégalité de Cauchy}{19/31}
+\slider{$\left|\frac{f^{\l n\r}\l z_0\r}{n!}\right|\leqslant r^{-n}\oldmax\limits_{\theta\in\left[0,2\pi\right]}\left|f\l z_0+r\e^{\i\theta}\r\right|$}{19/31}
+\slideq{Théorème de Cauchy}{20/31}
+\slider{Pour $U$ un ouvert de $\mathbb C$ et $f\!:\!U\to\mathbb C$, $f$ est holomorphe sur $U$ si et seulement si $f$ est analytique sur $U$}{20/31}
+\slideq{Maximum de $f$ continue sur $\bar U$ et holomorphe sur $U$ un ouvert connexe de $\mathbb C$}{21/31}
+\slider{$\oldmax\limits_{z\in\bar U}\left|f\l z\r\right|=\oldmax\limits_{z\in\partial U}\left|f\l z\r\right|$}{21/31}
+\slideq{Principe du prolongement analytique}{22/31}
+\slider{Si $f$ et $g$ sont holomorphe sur $U$ et coïncident sur un ouvert de $U$ alors $f=g$ sur $U$\linebreak\linebreak Soit $f$ analytique non identiquement nulle sur $U$, l'ensemble des zéros de $f$ sont isolés}{22/31}
+\slideq{CNS de convergence de $\prod{n=0}{+\infty}{1+a_n}$ pour $a_n\in\mathbb R_+$}{23/31}
+\slider{$\sum{n=0}{+\infty}{a_n}$ converge}{23/31}
+\slideq{$\int[z][\gamma]{f\l z\r}$\linebreak$\gamma\!:\!\left[a,b\right]\to\mathbb C$ de classe $\mathcal C^1$ par morceaux}{24/31}
+\slider{$\int[t][a][b]{f\l\gamma\l t\r\r\times\gamma'\l t\r}$}{24/31}
+\slideq{Majoration de $\left|\sum{k=0}{N}{f\l\frac{kT}{N}\r}-\int[x][0][T]{f\l x\r}\right|$ dans le cas où $f$ est la restiction d'une fonction holomorphe $T$-périodique sur $B\l-a,a\r$ avec $a>0$}{25/31}
+\slider{Si $\left|f\right|$ est majorée par $M$ et $r=\e^{\oldfrac{2\pi a}T}$ $\left|\sum{k=0}{N}{f\l\frac{kT}{N}\r}-\int[x][0][T]{f\l x\r}\right|\leqslant\frac{2TM}{r^N-1}$}{25/31}
+\slideq{Majoration élémentaire de $\prod{k=1}{n}{1+a_k}-1$, $a_k\in\mathbb C$}{26/31}
+\slider{$\left|\prod{k=1}{n}{1+a_k}-1\right|\leqslant\prod{k=1}{n}{1+\left|a_k\right|}-1$}{26/31}
+\slideq{CN de convergence de $\prod{n=0}{+\infty}{1+a_n}$ pour $a_n\in\mathbb C$}{27/31}
+\slider{$\sum{n=0}{+\infty}{\left|a_n\right|}$ converge\linebreak Le produit est non nul ssi pour tout $n$, $a_n\neq-1$}{27/31}
+\slideq{Inégalité de Cauchy via la formule de Parseval}{28/31}
+\slider{$\sum{n=0}{+\infty}{\left|\frac{1}{n!}f^{(n)}\l z_0\r\right|^2r^{2n}}=\frac{1}{2\pi}\int[\theta][0][2\pi]{\left|f\l z+r\e^{\i\theta}\r\right|^2}$}{28/31}
+\slideq{Théorème de Liouville}{29/31}
+\slider{Toute fonction holomorphe bornée sur $\mathbb C$ est constante}{29/31}
+\slideq{Intégration sur le chemin opposé}{30/31}
+\slider{Si $\gamma^*\l t\r=\gamma\l a+b-t\r$, $\int[z][\gamma^*]{f\l z\r}=-\int[z][\gamma]{f\l z\r}$}{30/31}
+\slideq{Concaténation d'intégrales}{31/31}
+\slider{Si $c\in\left[a,b\right]$, $\gamma_1=\gamma_{|\left[a,c\right]}$ et $\gamma_2=\gamma_{|\left[c,b\right]}$, $\int[z][\gamma_1]{f\l z\r}+\int[z][\gamma_2]{f\l z\r}=\int[z][\gamma]{f\l z\r}$}{31/31}
 \end{document}

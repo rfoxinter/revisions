@@ -144,6 +144,12 @@ def recompile(dest:str) -> bool:
         t, ttle = '', ''
         if '!ttle' in r[0]:
             ttle, t = r[0].split('!!ttle')
+            ttle = ttle.split('--')
+            if len(ttle) == 1:
+                ttle = ttle[0].title()
+            else:
+                ttle = ttle[1].title()
+            ttle = remove_special_chars(ttle)
         else:
             t = r[0]
             ttle = t.split('--')
@@ -179,6 +185,12 @@ def main(file_path:str, file:str, dest:str, _open:bool) -> bool:
     t, ttle = '', ''
     if '!ttle' in r[0]:
         ttle, t = r[0].split('!!ttle')
+        ttle = ttle.split('--')
+        if len(ttle) == 1:
+            ttle = ttle[0].title()
+        else:
+            ttle = ttle[1].title()
+        ttle = remove_special_chars(ttle)
     else:
         t = r[0]
         ttle = t.split('--')

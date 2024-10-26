@@ -13,10 +13,12 @@ https://rfoxinter.github.io/revisions/flashcards/
 20240929111927
 ../L3/flashcards/Algebre1/SommeDirectesEtProduits
 20241006110233
+../L3/flashcards/AnalyseComplexe/EtudeLocaleDeFonctionsHolomorphes
+20241026184059
 ../L3/flashcards/AnalyseComplexe/FonctionsHolomorphes
 20240921135513
 ../L3/flashcards/AnalyseComplexe/TheorieDeCauchy
-20241013181806
+20241026181305
 ../L3/flashcards/FractionsContinues/FractionsContinuesFiniesSimples
 20240921102759
 ../L3/flashcards/FractionsContinues/FractionsContinuesSimplesInfinies
@@ -24,7 +26,9 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/FractionsContinues/TransformationDeMobius
 20241012231946
 ../L3/flashcards/IntegrationEtTheorieDeLaMesure/ConstructionDeMesures
-20241012232815
+20241026103118
+../L3/flashcards/IntegrationEtTheorieDeLaMesure/EspacesLp
+20241026110239
 ../L3/flashcards/IntegrationEtTheorieDeLaMesure/IntegrationDeLebesgue
 20241005174517
 ../L3/flashcards/IntegrationEtTheorieDeLaMesure/TheorieDeLaMesure

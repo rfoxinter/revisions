@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\newcommand\mus{\mu^*}\usepackage{bigoperators,usuelles}\togglebigoppar\DeclareMathOperator{\oldvol}{vol}\newcommand{\vol}[1]{\oldvol\l#1\r}
+\newcommand\mus{\mu^*}\usepackage{bigoperators,analyse,usuelles,usuelles}\togglebigoppar\toggleanalysepar\DeclareMathOperator{\oldvol}{vol}\newcommand{\vol}[1]{\oldvol\l#1\r}\let\bar\overline
 \hypersetup{pdftitle=Intégration et théorie de la mesure -- Construction de mesures}
 \title{Intégration et théorie de la mesure\\\emph{Construction de mesures}}
 \author{}
@@ -10,18 +10,32 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$A$ est $\mus$-mesurable}{1/7}
-\slider{Pour tout $E\subset X$, $\mus\l E\r=\mus\l E\cap A\r+\mus\l E\setminus A\r$}{1/7}
-\slideq{Théorème de Carathéodory}{2/7}
-\slider{$\mathcal M\l\mu\r=\left\{A\subset X,A\text{ est $\mus$-mesurable}\right\}$ est une tribu et $\mus$ est une mesure sur $\mathcal M\l\mus\r$}{2/7}
-\slideq{Mesure extérieure de Lebesgue}{3/7}
-\slider{$\mus_L\l A\r=\oldinf\limits_{\togglebigopdisplay\substack{A\subset\bigcup{n\in\mathbb N}{}{P_j}\\P_j\text{ pavés ouverts}}}\l\left\{\sum{j\in\mathbb N}{}{\vol{P_j}}\right\}\r$}{3/7}
-\slideq{Lemme des classes monotones}{4/7}
-\slider{Si $\mathcal C\subset\mathcal P\l X\r$ stable par intersection finie alors $m\l\mathcal C\r=\sigma\l\mathcal C\r$}{4/7}
-\slideq{$m\l\mathcal C\r$ pour $\mathcal C\subset X$}{5/7}
-\slider{$\bigcap{\substack{\mathcal N\text{ $\lambda$-système}\\\mathcal C\subset\mathcal N}}{}{\mathcal N}$}{5/7}
-\slideq{Mesure extérieure}{6/7}
-\slider{$\mus$ est une mesure extérieure si\linebreak$\mus\l\varnothing\r=0$\linebreak$A\subset B\Rightarrow\mus\l A\r\leqslant\mus\l B\r$\linebreak$\mus\l{\bigcup{n=0}{+\infty}{A_n}}\r\leqslant\sum{n=0}{+\infty}{\mus\l A_n\r}$}{6/7}
-\slideq{$\mathcal{N}\subset\mathcal P\l X\r$ est une classe momotone (ou $\lambda$-algèbre)}{7/7}
-\slider{$X\in\mathcal N$\linebreak$\l A,B\r\in\mathcal N^2$, $A\subset B\Rightarrow B\setminus A\in\mathcal N$\linebreak$\l A_j\r\in\mathcal N^{\mathbb N^*}$ croissante alors $\bigcup{n\geqslant1}{}{A_j}\in\mathcal N$}{7/7}
+\slideq{$\mathcal{N}\subset\mathcal P\l X\r$ est une classe momotone (ou $\lambda$-système)}{1/14}
+\slider{$X\in\mathcal N$\linebreak$\l A,B\r\in\mathcal N^2$, $A\subset B\Rightarrow B\setminus A\in\mathcal N$\linebreak$\l A_j\r\in\mathcal N^{\mathbb N^*}$ croissante alors $\bigcup{n\geqslant1}{}{A_j}\in\mathcal N$}{1/14}
+\slideq{Régularité extérieure}{2/14}
+\slider{$\mu\l A\r=\inf{\left\{\mu\l O\r,O\text{ ouvert},A\subset O\right\}}$}{2/14}
+\slideq{Lemme des classes monotones}{3/14}
+\slider{Si $\mathcal C\subset\mathcal P\l X\r$ stable par intersection finie alors $m\l\mathcal C\r=\sigma\l\mathcal C\r$}{3/14}
+\slideq{Mesure extérieure}{4/14}
+\slider{$\mus$ est une mesure extérieure si\linebreak$\mus\l\varnothing\r=0$\linebreak$A\subset B\Rightarrow\mus\l A\r\leqslant\mus\l B\r$\linebreak$\mus\l{\bigcup{n=0}{+\infty}{A_n}}\r\leqslant\sum{n=0}{+\infty}{\mus\l A_n\r}$}{4/14}
+\slideq{Tribu complétée $\bar{\mathcal A}$}{5/14}
+\slider{$\sigma\l\mathcal A\cup\mathcal N_\mu\r$ où $\mathcal N_\mu=\left\{A\subset X,\exists B\in\mathcal A,A\subset B\wedge \mu\l B\r=0\right\}$}{5/14}
+\slideq{Définition explicite de $\bar{\mathcal A}$}{6/14}
+\slider{$\left\{A\subset X,\exists\l B,B'\r\in\mathcal A^2,\vphantom{B\subset A\subset B'\wedge\mu\l B'\setminus B\r=0}\right.\kern-\nulldelimiterspace$\linebreak$\left.\kern-\nulldelimiterspace\vphantom{A\subset X,\exists\l B,B'\r\in\mathcal A^2,}B\subset A\subset B'\wedge\mu\l B'\setminus B\r=0\right\}$\linebreak$\mu$ se prolonge de manière unique sur $\bar{\mathcal A}$}{6/14}
+\slideq{Lien entre Riemann-intégrable et Lebesgue-intégrable}{7/14}
+\slider{Toute fonction Riemann-intégrable est Lebesgue-intégrable et la valeur des intégrales est la même}{7/14}
+\slideq{Théorème de Carathéodory}{8/14}
+\slider{$\mathcal M\l\mu\r=\left\{A\subset X,A\text{ est $\mus$-mesurable}\right\}$ est une tribu et $\mus$ est une mesure sur $\mathcal M\l\mus\r$}{8/14}
+\slideq{$A$ est $\mus$-mesurable}{9/14}
+\slider{Pour tout $E\subset X$, $\mus\l E\r=\mus\l E\cap A\r+\mus\l E\setminus A\r$}{9/14}
+\slideq{Mesure extérieure de Lebesgue}{10/14}
+\slider{$\mus_L\l A\r=\oldinf\limits_{\togglebigopdisplay\substack{A\subset\bigcup{n\in\mathbb N}{}{P_j}\\P_j\text{ pavés ouverts}}}\l\left\{\sum{j\in\mathbb N}{}{\vol{P_j}}\right\}\r$}{10/14}
+\slideq{$m\l\mathcal C\r$ pour $\mathcal C\subset X$}{11/14}
+\slider{$\bigcap{\substack{\mathcal N\text{ $\lambda$-système}\\\mathcal C\subset\mathcal N}}{}{\mathcal N}$}{11/14}
+\slideq{Régularité intérieure}{12/14}
+\slider{$\mu\l A\r=\sup{\left\{\mu\l K\r,K\text{ compact},K\subset A\right\}}$}{12/14}
+\slideq{Régularité de $\mu_L$ la mesure de Lebesgue}{13/14}
+\slider{$\mu_L$ est intérieurement et extérieurement régulière}{13/14}
+\slideq{Unicité de meusures qui coïncident sur un ensembl $\mathcal C\subset\mathcal A$}{14/14}
+\slider{Si $\mathcal C$ est stable par intersections finies, $\sigma\l\mathcal C\r=\mathcal A$ et il existe $\l X_k\r\in\mathcal C^{\mathbb N}$ croissante avec $\mu\l X_k\r<+\infty$ tel que $\mathcal A=\bigcup{k\in\mathbb N}{}{X_k}$ alors $\mu=\nu$ sur $\mathcal A$}{14/14}
 \end{document}

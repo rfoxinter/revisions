@@ -1,11 +1,18 @@
 Intégration et théorie de la mesure -- Construction de mesures
 Shuffle questions : True
 Q/R & R/Q : False
-\newcommand\mus{\mu^*}\usepackage{bigoperators,usuelles}\togglebigoppar\DeclareMathOperator{\oldvol}{vol}\newcommand{\vol}[1]{\oldvol\l#1\r}
+\newcommand\mus{\mu^*}\usepackage{bigoperators,analyse,usuelles,usuelles}\togglebigoppar\toggleanalysepar\DeclareMathOperator{\oldvol}{vol}\newcommand{\vol}[1]{\oldvol\l#1\r}\let\bar\overline
 Mesure extérieure;;$\mus$ est une mesure extérieure si\linebreak$\mus\l\varnothing\r=0$\linebreak$A\subset B\Rightarrow\mus\l A\r\leqslant\mus\l B\r$\linebreak$\mus\l{\bigcup{n=0}{+\infty}{A_n}}\r\leqslant\sum{n=0}{+\infty}{\mus\l A_n\r}$
 Mesure extérieure de Lebesgue;;$\mus_L\l A\r=\oldinf\limits_{\togglebigopdisplay\substack{A\subset\bigcup{n\in\mathbb N}{}{P_j}\\P_j\text{ pavés ouverts}}}\l\left\{\sum{j\in\mathbb N}{}{\vol{P_j}}\right\}\r$
 $A$ est $\mus$-mesurable;;Pour tout $E\subset X$, $\mus\l E\r=\mus\l E\cap A\r+\mus\l E\setminus A\r$
 Théorème de Carathéodory;;$\mathcal M\l\mu\r=\left\{A\subset X,A\text{ est $\mus$-mesurable}\right\}$ est une tribu et $\mus$ est une mesure sur $\mathcal M\l\mus\r$
-$\mathcal{N}\subset\mathcal P\l X\r$ est une classe momotone (ou $\lambda$-algèbre);;$X\in\mathcal N$\linebreak$\l A,B\r\in\mathcal N^2$, $A\subset B\Rightarrow B\setminus A\in\mathcal N$\linebreak$\l A_j\r\in\mathcal N^{\mathbb N^*}$ croissante alors $\bigcup{n\geqslant1}{}{A_j}\in\mathcal N$
+$\mathcal{N}\subset\mathcal P\l X\r$ est une classe momotone (ou $\lambda$-système);;$X\in\mathcal N$\linebreak$\l A,B\r\in\mathcal N^2$, $A\subset B\Rightarrow B\setminus A\in\mathcal N$\linebreak$\l A_j\r\in\mathcal N^{\mathbb N^*}$ croissante alors $\bigcup{n\geqslant1}{}{A_j}\in\mathcal N$
 $m\l\mathcal C\r$ pour $\mathcal C\subset X$;;$\bigcap{\substack{\mathcal N\text{ $\lambda$-système}\\\mathcal C\subset\mathcal N}}{}{\mathcal N}$
 Lemme des classes monotones;;Si $\mathcal C\subset\mathcal P\l X\r$ stable par intersection finie alors $m\l\mathcal C\r=\sigma\l\mathcal C\r$
+Unicité de meusures qui coïncident sur un ensembl $\mathcal C\subset\mathcal A$;;Si $\mathcal C$ est stable par intersections finies, $\sigma\l\mathcal C\r=\mathcal A$ et il existe $\l X_k\r\in\mathcal C^{\mathbb N}$ croissante avec $\mu\l X_k\r<+\infty$ tel que $\mathcal A=\bigcup{k\in\mathbb N}{}{X_k}$ alors $\mu=\nu$ sur $\mathcal A$
+Tribu complétée $\bar{\mathcal A}$;;$\sigma\l\mathcal A\cup\mathcal N_\mu\r$ où $\mathcal N_\mu=\left\{A\subset X,\exists B\in\mathcal A,A\subset B\wedge \mu\l B\r=0\right\}$
+Définition explicite de $\bar{\mathcal A}$;;$\left\{A\subset X,\exists\l B,B'\r\in\mathcal A^2,\vphantom{B\subset A\subset B'\wedge\mu\l B'\setminus B\r=0}\right.\kern-\nulldelimiterspace$\linebreak$\left.\kern-\nulldelimiterspace\vphantom{A\subset X,\exists\l B,B'\r\in\mathcal A^2,}B\subset A\subset B'\wedge\mu\l B'\setminus B\r=0\right\}$\linebreak$\mu$ se prolonge de manière unique sur $\bar{\mathcal A}$
+Régularité extérieure;;$\mu\l A\r=\inf{\left\{\mu\l O\r,O\text{ ouvert},A\subset O\right\}}$
+Régularité intérieure;;$\mu\l A\r=\sup{\left\{\mu\l K\r,K\text{ compact},K\subset A\right\}}$
+Régularité de $\mu_L$ la mesure de Lebesgue;;$\mu_L$ est intérieurement et extérieurement régulière
+Lien entre Riemann-intégrable et Lebesgue-intégrable;;Toute fonction Riemann-intégrable est Lebesgue-intégrable et la valeur des intégrales est la même

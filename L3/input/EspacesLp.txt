@@ -1,0 +1,11 @@
+Intégration et théorie de la mesure -- Espaces Lp!!ttleIntégration et théorie de la mesure -- Espaces \textit{L\raisebox{0.5ex}{\textsuperscript{p}}}
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators,analyse,topologie}\togglebigoppar\toggleanalysepar\let\bar\overline\newcommand{\lnrm}[2][p]{\anrm[L^{#1}]{#2}}\let\phi\varphi
+$\mathcal L^p\l\mu\r$;;$\left\{f\!:\!X\to\mathbb R\text{ mesurables},\int[\mu]{\left|f\right|^p}<+\infty\right\}$\linebreak$\mathcal L^\infty=\left\{f\!:\!X\to\mathbb R\text{ mesurables},\anrm f<+\infty\right\}$
+$L^p\l\mu\r$;;$\mathcal L^p/{\sim}$ où $f\sim g$ ssi $f=g$ $\mu$-pp
+$\lnrm f$;;$\l\int[\mu][X]{\left|f\right|^p}\r^{\oldfrac1p}$ si $p\in\mathbb N^*$\linebreak$\lnrm[\infty]f=\inf{\left\{c\geqslant0,\left|f\right|\leqslant c\text{ $\mu$-pp}\right\}}$
+Inégalité de Jensen;;Soit $I\subset\mathbb R$ un intervalle, $\mu$ une mesure de probabilités ($\mu\l X\r=1$ et $\mu\geqslant0$), si $\phi\!:\!I\to\mathbb R$ est convexe et $f\!:\!X\to\mathbb R$ mesurable alors $\phi\l\int[\mu][X]f\r\leqslant\int[\mu][X]{\phi\circ f}$
+Inégalité de Hölder;;Si $p\in\left[1,+\infty\right]$ et $p'=\frac{p}{p-1}$ alors pour $f$ et $g$ mesurables, $\int{\left|fg\right|}\leqslant\lnrm f\lnrm[p']g$
+Inégalité de Minkowski;;Si $f,g\!:\!X\to\mathbb R$ sont mesurables et $p\in\left[1,+\infty\right]$, alors $\lnrm{f+g}\leqslant\lnrm f+\lnrm g$
+Structures des $L^p$;;$L^p$ sont des espaces de Banach\linebreak$L^2$ est un expace de Hilbert avec $\psc fg=\int{fg}$
