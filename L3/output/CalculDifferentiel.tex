@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{al,analyse,topologie,equivalents}
+\usepackage{al,analyse,topologie,equivalents,structures}\toggleanalysepar\let\epsilon\varepsilon\newcommand{\biappl}[6]{\begin{array}[t]{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\\#6&{}\longmapsfrom{}&#5\end{array}}
 \hypersetup{pdftitle=Topologie et calcul différentiel -- Calcul différentiel}
 \title{Topologie et calcul différentiel\\\emph{Calcul différentiel}}
 \author{}
@@ -10,14 +10,50 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$\al EF$}{1/5}
-\slider{Applications linéaires continues de $E$ dans $F$}{1/5}
-\slideq{$R\l\left[a,b\right],F\r$}{2/5}
-\slider{Adhérence des fonctions en escalier sur $\left[a,b\right]$\linebreak$\l R\l\left[a,b\right],F\r,\anrm[{\left[a,b\right]}]{\cdot}\r$ est un espace de Banach}{2/5}
-\slideq{$f\in\al EF$\linebreak$\dd f_a$}{3/5}
-\slider{$f$}{3/5}
-\slideq{$f$ est différentiable en $a\in U$}{4/5}
-\slider{$\exists g\in\al EF$\linebreak$f\l a+h\r=f\l a\r+g\l h\r+\o[\nrm h\to0]{\nrm{h}}$}{4/5}
-\slideq{Gradient de $f$ en $a$}{5/5}
-\slider{L'unique vecteur $\nabla f\l a\r$ tel que $\dd f_a\l h\r=\psc{\nabla f\l a\r}{h}$}{5/5}
+\slideq{Lien entre extremum local et les différentielles de $f\in\mathcal C^2$}{1/23}
+\slider{Si $\dd f_a=0$ et $\dd^2f_a$ est définie positive alors $f$ admet un minimum local strict en $a$}{1/23}
+\slideq{Uniforme continuité relative}{2/23}
+\slider{Soit $f\!:\!I\times U\to\mathbb R$, $I=\left[a,b\right]$ est continue alors pour tout $\epsilon>0$ et $x\in U$, il existe $\delta>0$ tel que si $\nrm{x-x'}<\delta$ alors $\nrm{f\l t,x\r-f\l t,x'\r}<\epsilon$ pour tout $t\in I$\linebreak Ainsi, $x\mapsto\int[t][a][b]{f\l t,x\r}$ est continue}{2/23}
+\slideq{$f\in\al EF$\linebreak$\dd f_a$}{3/23}
+\slider{$f$}{3/23}
+\slideq{Différentielle d'une fonction bilinéaire $B\l f,g\r$}{4/23}
+\slider{Si $f$ et $g$ sont différentiables en $a$ alors $B\l f,g\r$ l'est et $\dd B\l f,g\r_a=B\l\dd f_a,g\r+B\l f,\dd g_a\r$\linebreak Cas particulier du produit: $\dd\l fg\r_a=\dd f_ag+f\dd g_a$}{4/23}
+\slideq{Théorème de Hahn-Banach}{5/23}
+\slider{Si $v\in F$, $v\neq0$ alors il existe $\lambda\!:\!F\to\mathbb R$ forme linéaire continue telle que $\lambda\l v\r=0$}{5/23}
+\slideq{Hessienne de $f$ en $a$}{6/23}
+\slider{Si $f$ est $\mathcal C^2$, sa Hessienne en $a$ est $\l \dd^2f\l e_i,e_j\r\r_{\l i,j\r\in\llb1,n\rrb^2}$}{6/23}
+\slideq{CNS pour $f\in\mathcal C^1$ en dimension finie et $f\!:\!U\to\mathbb R$}{7/23}
+\slider{Toutes les dérivées partielles $\pder[][x_k]{f}{}$ existent et sont continues}{7/23}
+\slideq{Propriétés de $\int[t][a][b]{\dd_E f_{\l t,x\r}}$}{8/23}
+\slider{Si $f\!:\!I\times U\to\mathbb R$, $I=\left[a,b\right]$ est continue et $\dd_Ef\!:\!I\times U\to\al EF$ existe et est continue alors $g\!:\!x\mapsto\int[t][a][b]{f\l t,x\r}$ est $\mathcal C^1$ et $\dd g_x=\int[t][a][b]{\dd_E f_{\l t,x\r}}$}{8/23}
+\slideq{Différentielle en un extremum local}{9/23}
+\slider{Si $f$ admet un extremum local en $a$ alors $\dd f_a=0$}{9/23}
+\slideq{Comportement de $f\!:\!\left[a,b\right]\to F$ si $\dd f_x=0$ pour tout $x\in\left]a,b\right[$}{10/23}
+\slider{$f$ est constante}{10/23}
+\slideq{Théorème de Schwarz}{11/23}
+\slider{Si $f\!:\!U\to F$ est $\mathcal C^2$ alors pour tout $a\in U$, la forme bilinéaire $\dd^2f_a$ est symétrique\linebreak En dimesion finie, on obtient $\mpder[x_i,x_j]{f}{}=\mpder[x_j,x_i]f{}$}{11/23}
+\slideq{Isomorphisme entre $\al E{\al EF}$ et $\mathcal L^2\l E,F\r$}{12/23}
+\slider{$\biappl{{\al{E}{{\al{E}{F}}}}}{\mathcal L^2\l E,F\r}{f}{\l\l u,v\r\mapsto f\l v\r\l w\r\r}{B}{\l v\mapsto B\l v,\cdot\r\r}$}{12/23}
+\slideq{Gradient de $f$ en $a$}{13/23}
+\slider{L'unique vecteur $\nabla f\l a\r$ tel que $\dd f_a\l h\r=\psc{\nabla f\l a\r}{h}$}{13/23}
+\slideq{$R\l\left[a,b\right],F\r$}{14/23}
+\slider{Adhérence des fonctions en escalier sur $\left[a,b\right]$\linebreak$\l R\l\left[a,b\right],F\r,\anrm[{\left[a,b\right]}]{\cdot}\r$ est un espace de Banach}{14/23}
+\slideq{Expression de $f$ par rapport à sa différentielle}{15/23}
+\slider{$f\l y\r=f\l x\r+\int[t][0][1]{\dd f_{x+t\l y-x\r}\l y-x\r}$\linebreak Plus généralement, si $\gamma$ est un chemin $\mathcal C^1$ de $x$ à $y$, $f\l y\r=\int[t][0][1]{\dd f_{\gamma\l t\r}\l \gamma'\l t\r\r}$}{15/23}
+\slideq{Formule de Taylor}{16/23}
+\slider{Si $f$ est $\mathcal C^n$ alors $f\l a+h\r=\sum{k=0}{n-1}{\frac{\dd^kf_a\l h,\cdots,h\r}{k!}}$\linebreak${}+\int[t][0][1]{\frac{\l1-t\r^{n-1}}{\l n-1\r!}\dd^nf_{a+th}\l h,\cdots,h\r}$}{16/23}
+\slideq{$f$ est différentiable en $a\in U$}{17/23}
+\slider{$\exists g\in\al EF$\linebreak$f\l a+h\r=f\l a\r+g\l h\r+\o[\nrm h\to0]{\nrm{h}}$}{17/23}
+\slideq{Caractère $\mathcal C^1$ d'une intégrale}{18/23}
+\slider{Si $f\!\left[a,b\right]\to F$ est continue alors $g\!:\!x\mapsto\int[][a][x]f$ est $\mathcal C^1$ sur $\left[a,b\right]$}{18/23}
+\slideq{Différentielle d'une combinaison linéaire $f+\lambda g$}{19/23}
+\slider{Si $f$ et $g$ sont différentiables en $a$ alors $f+\lambda g$ l'est et $\dd\l f+\lambda g\r_a=\dd f_a+\lambda\dd g_a$}{19/23}
+\slideq{Différentielle d'un couple $\l f_1,f_2\r$}{20/23}
+\slider{$f_1$ et $f_2$ sont différentiables en $a$ si et seulement si $\l f_1,f_2\r$ le sont et $\dd\l f_1,f_2\r_a=\l\dd\l f_1\r_a,\dd\l f_2\r_a\r$}{20/23}
+\slideq{Convergence de $\l f_n\r$ si $\l\dd f_n\r$ converge}{21/23}
+\slider{Si $\l f_n\r$ une suite de fonctions $\mathcal C^1$ converge simplement vers $f$ et $\l\dd f_n\r$ converge uniformément vers $g\!:\!U\to\al EF$ alors $f$ est $\mathcal C^1$ et $\dd f=g$}{21/23}
+\slideq{Différentielle d'une composée $g\circ f$}{22/23}
+\slider{Si $f$ est différentiable en $a$ et $g$ est différentiable en $f\l a\r$ alors $g\circ f$ est différentiable en $a$ et $\dd\l g\circ f\r_a=\dd g_{f\l a\r}\circ\dd f_a$}{22/23}
+\slideq{$\al EF$}{23/23}
+\slider{Applications linéaires continues de $E$ dans $F$}{23/23}
 \end{document}

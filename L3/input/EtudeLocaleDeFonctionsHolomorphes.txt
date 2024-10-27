@@ -2,6 +2,6 @@ Analyse complexe -- Étude locale de fonctions holomorphes
 Shuffle questions : True
 Q/R & R/Q : False
 \let\phi\varphi
-<<~Expression locale~>> d'une fonction $f$ holomorphe sur $U$;;Pour $z_0\in U$, il existe un voisinnage ouvert $V$ de $z_0$ dans $U$ et $r>0$ $m\in\mathbb N$ et un biholomorphisme $\phi\!:\!V\to D\l f\l z_0\r,r\r$ tels que $f\l z\r=f\l z_0\r+\phi\l z\r^m$
+<<~Expression locale~>> d'une fonction $f$ holomorphe sur $U$;;Pour $z_0\in U$, et $m=v_{z_0}\l f-f\l z_0\r\r$ il existe un voisinnage ouvert $V$ de $z_0$ dans $U$ et $r>0$ et un biholomorphisme $\phi\!:\!V\to D\l f\l z_0\r,r\r$ tels que $f\l z\r=f\l z_0\r+\phi\l z\r^m$
 Théorème de l'image ouverte;;Si $f\!:\!U\to\mathbb C$ est holomorphe et $U$ est un ouvert connexe de $\mathbb C$ alors $f$ est ouverte (ie pour tout $V$ ouvert de $U$, $f\l V\r$ est un ouvert de $\mathbb C$)
 Théorème d'inversion globale;;Si $f\!:\!U\to\mathbb C$ est holomorphe et injective alors $f^{|f\l U\r}\!:\!U\to f\l U\r$ est un biholomorphisme
