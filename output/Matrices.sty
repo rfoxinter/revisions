@@ -20,6 +20,8 @@
 \newcommand{\matgl}[2]{\oldgl_{#1}\l#2\r}
 \DeclareMathOperator{\oldcom}{Com}
 \newcommand{\com}[1]{\oldcom\l#1\r}
+\let\transp\relax
+\newcommand{\transp}[1]{{\vphantom{#1}^t}{#1}}
 \newlength{\dotsep}
 \newlength{\dotlift}
 \newlength{\matsep}
@@ -54,6 +56,28 @@
         nodes in empty cells,
         #1
     ] {#3};
+    \tmatargI
+\end{tikzpicture}}
+\newcommand{\tcase}[1][]{\def\tmatargI{#1}\tmptcase}
+\newcommand{\tmptcase}[2][]{
+\begin{tikzpicture}[every left delimiter/.style={xshift=.2em},every right delimiter/.style={xshift=-.125em},baseline={([yshift=-0.5ex]m.center)}]
+\matrix (m) [
+        ampersand replacement=\&,
+        nodes={anchor=west, execute at begin node=$\vphantom{1},%
+            execute at end node=$%
+        },
+        matrix of nodes,
+        left delimiter=\{,
+        right delimiter={.\kern-\nulldelimiterspace},
+        anchor=center,
+        minimum width=0pt,
+        minimum height=\matmin,
+        row sep=0pt,
+        column sep=1ex,
+        inner sep=0pt,
+        nodes in empty cells,
+        #1
+    ] {#2};
     \tmatargI
 \end{tikzpicture}}
 \if@dots

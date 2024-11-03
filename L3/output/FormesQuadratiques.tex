@@ -1,0 +1,31 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\DeclareMathOperator{\oldbil}{Bil}\newcommand{\bil}[2]{\oldbil\l#1,#2\r}\let\phi\varphi\DeclareMathOperator{\oldquad}{Q}\newcommand{\quadr}[1]{\oldquad\l#1\r}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\usepackage{bigoperators,al,matrices}
+\hypersetup{pdftitle=Algèbre 1 -- Formes quadratiques}
+\title{Algèbre 1\\\emph{Formes quadratiques}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Forme polaire associée à $q$}{1/9}
+\slider{$\pi^{-1}\l q\r$ où $\appl\pi{\bil EE}{\quadr E}\phi{q_\phi:=\phi\l\cdot,\cdot\r}$\linebreak$\pi$ est un isomorphisme}{1/9}
+\slideq{$q$ est une forme quadratique}{2/9}
+\slider{Il existe $\phi\in\bil EE$ tel que $q\l x\r=\phi\l x,x\r$}{2/9}
+\slideq{Espace quadratique}{3/9}
+\slider{$\l E,q\r$ avec $q$ une forme quadratique sur $E$}{3/9}
+\slideq{Polynôme homogène associée à $q\in\quadr E$}{4/9}
+\slider{$\appl{\rho_q}{\Bbbk^n}{\Bbbk}{\l x_1,\cdots,x_n\r}{q\l\sum{i=1}{n}{x_ie_i}\r}$\linebreak$\rho_q$ est homogène de degré $2$ si et seulement si $q\in\quadr E$}{4/9}
+\slideq{CNS pour que $\l q,q'\r\in\quadr E^2$ soient isomorphes}{5/9}
+\slider{$\almat{q}{\mathcal B}{}$ et $\almat{q'}{\mathcal B}{}$ sont congruentes}{5/9}
+\slideq{$A$ et $A'$ sont congruentes}{6/9}
+\slider{$\exists P\in\matgl n\Bbbk$, $A=\transp PAP$}{6/9}
+\slideq{Matrice de $q\in\quadr E$ dans une base $\mathcal B$ de $E$}{7/9}
+\slider{$\almat{q}{\mathcal B}{}=\almat{\pi^{-1}\l q\r}{\mathcal B}{}\in\sym n\Bbbk$}{7/9}
+\slideq{$\l E,q\r$ et $\l E',q'\r$ sont isomorphes}{8/9}
+\slider{Il existe $u\!:\!E\to E'$ un isomorphisme tel que $u\l E\r=E'$ et $q'=q\circ u$}{8/9}
+\slideq{$\discr q$}{9/9}
+\slider{$\tcase{0\&\text{si $q$ dégénérée}\\\det[\mathcal B]q\bmod\l\Bbbk^\times\r^2\&\text{sinon}\\}$}{9/9}
+\end{document}

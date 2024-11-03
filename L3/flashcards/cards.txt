@@ -4,7 +4,9 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/Algebre1/FormeLineaireEtDualite
 20241013114248
 ../L3/flashcards/Algebre1/FormesBilineaires
-20241013115628
+20241103185500
+../L3/flashcards/Algebre1/FormesQuadratiques
+20241103211950
 ../L3/flashcards/Algebre1/GroupeSymetrique
 20241005183407
 ../L3/flashcards/Algebre1/Groupes

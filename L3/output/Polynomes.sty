@@ -4,7 +4,9 @@
 \renewcommand{\deg}[1]{\olddeg\l#1\r}
 \DeclareMathOperator{\oldval}{val}
 \newcommand{\val}[1]{\oldval\l#1\r}
+\let\oldcar\relax
 \DeclareMathOperator{\oldcar}{car}
+\let\car\relax
 \newcommand{\car}[1]{\oldcar\l#1\r}
 \DeclareMathOperator{\oldrac}{rac}
 \newcommand{\rac}[2][]{\oldrac_{#1}\l#2\r}

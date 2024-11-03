@@ -1,0 +1,13 @@
+Algèbre 1 -- Formes quadratiques
+Shuffle questions : True
+Q/R & R/Q : False
+\DeclareMathOperator{\oldbil}{Bil}\newcommand{\bil}[2]{\oldbil\l#1,#2\r}\let\phi\varphi\DeclareMathOperator{\oldquad}{Q}\newcommand{\quadr}[1]{\oldquad\l#1\r}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\usepackage{bigoperators,al,matrices}
+$q$ est une forme quadratique;;Il existe $\phi\in\bil EE$ tel que $q\l x\r=\phi\l x,x\r$
+Espace quadratique;;$\l E,q\r$ avec $q$ une forme quadratique sur $E$
+Forme polaire associée à $q$;;$\pi^{-1}\l q\r$ où $\appl\pi{\bil EE}{\quadr E}\phi{q_\phi:=\phi\l\cdot,\cdot\r}$\linebreak$\pi$ est un isomorphisme
+Polynôme homogène associée à $q\in\quadr E$;;$\appl{\rho_q}{\Bbbk^n}{\Bbbk}{\l x_1,\cdots,x_n\r}{q\l\sum{i=1}{n}{x_ie_i}\r}$\linebreak$\rho_q$ est homogène de degré $2$ si et seulement si $q\in\quadr E$
+Matrice de $q\in\quadr E$ dans une base $\mathcal B$ de $E$;;$\almat{q}{\mathcal B}{}=\almat{\pi^{-1}\l q\r}{\mathcal B}{}\in\sym n\Bbbk$
+$A$ et $A'$ sont congruentes;;$\exists P\in\matgl n\Bbbk$, $A=\transp PAP$
+$\discr q$;;$\tcase{0\&\text{si $q$ dégénérée}\\\det[\mathcal B]q\bmod\l\Bbbk^\times\r^2\&\text{sinon}\\}$
+$\l E,q\r$ et $\l E',q'\r$ sont isomorphes;;Il existe $u\!:\!E\to E'$ un isomorphisme tel que $u\l E\r=E'$ et $q'=q\circ u$
+CNS pour que $\l q,q'\r\in\quadr E^2$ soient isomorphes;;$\almat{q}{\mathcal B}{}$ et $\almat{q'}{\mathcal B}{}$ sont congruentes

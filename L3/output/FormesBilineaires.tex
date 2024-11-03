@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\DeclareMathOperator{\oldbil}{Bil}\newcommand{\bil}[2]{\oldbil\l#1,#2\r}\let\phi\varphi\def\bb{\mathcal B}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}\usepackage{al}\newcommand{\transp}{{^t}}
+\DeclareMathOperator{\oldbil}{Bil}\newcommand{\bil}[2]{\oldbil\l#1,#2\r}\let\phi\varphi\def\bb{\mathcal B}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}\usepackage{al}\newcommand{\oldtransp}{{^t}}\newcommand{\transp}[1]{{\vphantom{#1}^t}{#1}}\newcommand{\B}[1]{\mathcal B_{#1}}\usepackage{structures}
 \hypersetup{pdftitle=Algèbre 1 -- Formes bilinéaires}
 \title{Algèbre 1\\\emph{Formes bilinéaires}}
 \author{}
@@ -10,10 +10,54 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Lien entre $\appl{l_\phi}{E}{F}{x}{\phi\l x,\cdot\r}$, $\appl{r_\phi}{E}{F}{x}{\phi\l\cdot,x\r}$ et $\bil EF$}{1/3}
-\slider{$\appl{l}{\bil EF}{{\al EF}}{\phi}{l_\phi}$\linebreak et\linebreak$\appl{r}{\bil EF}{{\al EF}}{\phi}{r_\phi}$\linebreak sont deux isomorphismes}{1/3}
-\slideq{$\phi\l X,Y\r$ matriciellement}{2/3}
-\slider{$\transp XMY$ où $X$ et $Y$ sont des vecteurs colonnes}{2/3}
-\slideq{$\phi\in\bil EF$\linebreak$\almat{\phi}{\bb_E}{\bb_F}$}{3/3}
-\slider{$\l\phi\l e_i,f_j\r\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,m\rrb}$}{3/3}
+\slideq{$\phi\in\bil EF$\linebreak$\almat{\phi}{\bb_E}{\bb_F}$}{1/25}
+\slider{$\l\phi\l e_i,f_j\r\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,m\rrb}$}{1/25}
+\slideq{Lien entre $\alsym E$ et $\alant E$}{2/25}
+\slider{Si $\car\Bbbk\neq2$, $\bil EE=\alsym E\oplus\alant E$\linebreak Si $\car\Bbbk=2$, $\alant E\subset\alsym E$}{2/25}
+\slideq{$\phi$ est non dégénérée}{3/25}
+\slider{$\rg\phi=\dim E=\dim F$}{3/25}
+\slideq{$\dim{\alant E}$}{4/25}
+\slider{$\frac{n\l n61\r}{2}$}{4/25}
+\slideq{Équivalences à $\phi$ symétrique sur $l_\phi$ et $r_\phi$}{5/25}
+\slider{$l_\phi=r_\phi$\linebreak$l_\phi=\transp{l_\phi}$\linebreak$r_\phi=\transp{r_\phi}$}{5/25}
+\slideq{$\phi\in\bil EE$ est symétrique}{6/25}
+\slider{$\phi\l x,y\r=\phi\l y,x\r$}{6/25}
+\slideq{Décomposition explicite de $\phi\in\bil EE$ dans $\alsym E\oplus\alant E$}{7/25}
+\slider{$\phi_S\l x,y\r=\frac12\l\phi\l x,y\r+\phi\l y,x\r\r$\linebreak$\phi_A\l x,y\r=\frac12\l\phi\l x,y\r-\phi\l y,x\r\r$}{7/25}
+\slideq{$\almat{l_\phi}{\B E}{\B F^*}$}{8/25}
+\slider{$\transp{\almat{\phi}{\B E}{\B F}}$}{8/25}
+\slideq{$V^{\bot,\phi}$\linebreak$V\subset E$}{9/25}
+\slider{$\left\{y\in F,\forall x\in V,\phi\l x,y\r=0\right\}$}{9/25}
+\slideq{$\phi\in\bil EE$ est alternée}{10/25}
+\slider{$\phi\l x,x\r=0$}{10/25}
+\slideq{$\almat{r_\phi}{\B F}{\B E^*}$}{11/25}
+\slider{$\almat{\phi}{\B E}{\B F}$}{11/25}
+\slideq{Lien entre $\dim V$, $\dim{V^{\bot,\phi}}$ et $\dim E$}{12/25}
+\slider{$\dim V+\dim{V^{\bot,\phi}}\geqslant\dim E$\linebreak Il y a égalité si et seulement si $\phi$ est non dégénérée}{12/25}
+\slideq{$\dim{\alsym E}$}{13/25}
+\slider{$\frac{n\l n+1\r}{2}$}{13/25}
+\slideq{Expression de $V^{\bot,\phi}$ avec $r_\phi$ et $l_\phi$}{14/25}
+\slider{$V^{\bot,\phi}=l_\phi\l V\r^\bot=r_\phi^{-1}\l V\r$}{14/25}
+\slideq{Lien entre $\appl{l_\phi}{E}{F}{x}{\phi\l x,\cdot\r}$, $\appl{r_\phi}{E}{F}{x}{\phi\l\cdot,x\r}$ et $\bil EF$}{15/25}
+\slider{$\appl{l}{\bil EF}{{\al EF}}{\phi}{l_\phi}$\linebreak et\linebreak$\appl{r}{\bil EF}{{\al EF}}{\phi}{r_\phi}$\linebreak sont deux isomorphismes}{15/25}
+\slideq{$\phi\l X,Y\r$ matriciellement}{16/25}
+\slider{$\transp XMY$ où $X$ et $Y$ sont des vecteurs colonnes}{16/25}
+\slideq{Lien entre antisymétrique et alternée}{17/25}
+\slider{Si $\phi$ est alternée alors elle est antisymétrique\linebreak Si $\car\Bbbk\neq2$ est $\phi$ est antisymétrique alors elle est alternée}{17/25}
+\slideq{Restriction d'une forme bilinéaire non dégénérée}{18/25}
+\slider{La restriction d'une forme bilinéaire non dégénérée n'est en général pas dégénérée}{18/25}
+\slideq{$\phi\in\bil EE$ est antisymétrique}{19/25}
+\slider{$\phi\l x,y\r=-\phi\l y,x\r$}{19/25}
+\slideq{$E^{\bot,\phi}$}{20/25}
+\slider{$\ker{r_\phi}$}{20/25}
+\slideq{$W^{\phi,\bot}$\linebreak$W\subset F$}{21/25}
+\slider{$\left\{x\in E,\forall y\in W,\phi\l x,y\r=0\right\}$}{21/25}
+\slideq{$F^{\phi,\bot}$}{22/25}
+\slider{$\ker{l_\phi}$}{22/25}
+\slideq{Quotient d'une fore bilinéaire dégénérée}{23/25}
+\slider{Si $\phi\in\bil EF$ est dégénérée alors il existe une unique forme bilinéaire non dégénérée $\phi'\in\bil{E/\ker{l_\phi}}{F/\ker{r_\phi}}$ telle que $\phi\l\cdot,\cdot\r=\phi'\l\pi_E\l\cdot\r,\pi_F\l\cdot\r\r$}{23/25}
+\slideq{Équivalences à $\phi$ antisymétrique sur $l_\phi$ et $r_\phi$}{24/25}
+\slider{$l_\phi=-r_\phi$\linebreak$l_\phi=-\transp{l_\phi}$\linebreak$r_\phi=-\transp{r_\phi}$}{24/25}
+\slideq{Expression de $W^{\phi,\bot}$ avec $r_\phi$ et $l_\phi$}{25/25}
+\slider{$V^{\bot,\phi}=l_\phi^{-1}\l W\r=r_\phi\l W\r^\bot$}{25/25}
 \end{document}
