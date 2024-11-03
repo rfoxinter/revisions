@@ -406,6 +406,8 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\sp[\mathbb{C}]{u}}
 \mcmd{\id}
 \mcmd{\transp{u}}
+\pagebreak
+\hrule
 \mcmd{\discr[\mathbb{B}]{q}}
 \hsection{Analyse.sty}
 Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
@@ -616,8 +618,7 @@ Par exemple, avec 2pt, on obtient : \setlength{\dotsep}{2pt}<< $\xdots$ >>.\setl
 
 Il est également possible de faire de même avec la hauteur des $\mdots$ en modifiant la longueur \mintinline{latex}?\dotlift?. De même avec \mintinline{latex}?\matmin? pour {\color{namecolour}\texttt{minimum width}} et {\color{namecolour}\texttt{minimum height}}, ou encore \mintinline{latex}?\matsep? pour {\color{namecolour}\texttt{row sep}} et {\color{namecolour}\texttt{column sep}}.
 \subsection{La commande {\color{keycolour}\texttt{\textbackslash tmatrix}}}
-
-\mintinline{latex}?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice \tikzlg{} et les éléments de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
+\mintinline{latex}?\tmatrix? est composé de deux arguments optionnels (les éléments à ajouter à la matrice \tikzlg{} et les options de mise en page de la matrice) ainsi que de trois arguments (le délimiteur d'ouverture, le contenu de la matrice et le délimiteur de fermeture).
 
 \vspace{0.5cm}
 
@@ -627,6 +628,8 @@ Il est également possible de faire de même avec la hauteur des $\mdots$ en mod
 \nmcmd{\mtxvpartial{params}{n}{a}{b}}{Crée une ligne verticale après la colonne \texttt{n} (ou \texttt{left}/\texttt{right} pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou \texttt{top}/\texttt{bottom}) avec les paramètres \tikzlg{} \texttt{params}}
 \nmcmd{\mtxhpartial{params}{n}{a}{b}}{Crée une ligne horizontale après la ligne \texttt{n} (ou \texttt{top}/\texttt{bottom} pour les extrémités), la ligne ayant pour extrémités la fin de la ligne \texttt{a} et \texttt{b} (ou \texttt{left}/\texttt{right}) avec les paramètres \tikzlg{} \texttt{params}}
 \nmcmd{\mtxbox{params}{x}{y}}{Crée une boîte autour de la case de coordonnées \texttt{x} et \texttt{y} (l'indexation commence à 1) avec les paramètres \tikzlg{} \texttt{params}}
+\subsection{La commande {\color{keycolour}\texttt{\textbackslash tcase}}}
+\mintinline{latex}?\tcase? est composé de deux arguments optionnels (les éléments à ajouter à la matrice \tikzlg{} et les options de mise en page de la matrice comme pour \mintinline{latex}?\tmatrix?) ainsi que d'un argument (le contenu de la matrice).
 \subsection{Exemples avec {\color{keycolour}\texttt{\textbackslash tmatrix}}}
 
 $\det M=\tmatrix|{a\&b\\c\&d\\}|$ est produit par \mintinline{latex}?$\det{M}=\tmatrix|{a\&b\\c\&d\\}|$?.
@@ -685,6 +688,17 @@ $
     \vdots\&      \&\ddots\&\ddots\&\ddots\&\beta \\
     0     \&\mdots\&\mdots\&0     \&\gamma\&\alpha\\
 }|
+\end{minted}
+\vspace{-\belowdisplayskip}
+
+\vspace{0.25cm}
+
+$\left\lfloor\frac{n}{2}\right\rfloor=\tcase{\frac{n}{2}\&\text{si $n$ est pair}\\\frac{n-1}{2}\&\text{si $n$ est impair}\\}$\qquad{} est produit par\vspace{2px}
+\vspace{-\abovedisplayskip}\begin{minted}{latex}
+$\left\lfloor\frac{n}{2}\right\rfloor=\tcase{
+    \frac{n}{2}   \& \text{si $n$ est pair}   \\
+    \frac{n-1}{2} \& \text{si $n$ est impair} \\
+}$
 \end{minted}
 \vspace{-\belowdisplayskip}
 \hsection{Polynomes.sty}
