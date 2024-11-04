@@ -4,13 +4,13 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/Algebre1/FormeLineaireEtDualite
 20241013114248
 ../L3/flashcards/Algebre1/FormesBilineaires
-20241103185500
+20241104094001
 ../L3/flashcards/Algebre1/FormesQuadratiques
-20241103211950
+20241104095920
 ../L3/flashcards/Algebre1/GroupeSymetrique
 20241005183407
 ../L3/flashcards/Algebre1/Groupes
-20240921135612
+20241104085535
 ../L3/flashcards/Algebre1/GroupesDeSylow
 20240929111927
 ../L3/flashcards/Algebre1/SommeDirectesEtProduits

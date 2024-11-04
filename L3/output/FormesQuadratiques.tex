@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\DeclareMathOperator{\oldbil}{Bil}\newcommand{\bil}[2]{\oldbil\l#1,#2\r}\let\phi\varphi\DeclareMathOperator{\oldquad}{Q}\newcommand{\quadr}[1]{\oldquad\l#1\r}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\usepackage{bigoperators,al,matrices}
+\DeclareMathOperator{\oldbil}{Bil}\newcommand{\bil}[2]{\oldbil\l#1,#2\r}\let\phi\varphi\DeclareMathOperator{\oldquad}{Q}\newcommand{\quadr}[1]{\oldquad\l#1\r}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\usepackage{bigoperators,al,matrices,structures}\togglebigoppar\newcounter{footnotemarkcounter}\setcounter{footnotemarkcounter}0\newcounter{footnotetextcounter}\setcounter{footnotetextcounter}0\renewcommand{\footnotemark}{\stepcounter{footnotemarkcounter}{\textsuperscript{\textit{\oldstylenums{\thefootnotemarkcounter}}}}}\let\oldfootnotetext\footnotetext\renewcommand{\footnotetext}[1]{{\stepcounter{footnotetextcounter}\def\thefootnote{\textit{\oldstylenums{\thefootnotetextcounter}}}\def\thempfootnote{\textit{\oldstylenums{\thefootnotetextcounter}}}\oldfootnotetext{#1}}}\renewcommand{\footnote}{\footnotemark\footnotetext}
 \hypersetup{pdftitle=Algèbre 1 -- Formes quadratiques}
 \title{Algèbre 1\\\emph{Formes quadratiques}}
 \author{}
@@ -10,22 +10,54 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Forme polaire associée à $q$}{1/9}
-\slider{$\pi^{-1}\l q\r$ où $\appl\pi{\bil EE}{\quadr E}\phi{q_\phi:=\phi\l\cdot,\cdot\r}$\linebreak$\pi$ est un isomorphisme}{1/9}
-\slideq{$q$ est une forme quadratique}{2/9}
-\slider{Il existe $\phi\in\bil EE$ tel que $q\l x\r=\phi\l x,x\r$}{2/9}
-\slideq{Espace quadratique}{3/9}
-\slider{$\l E,q\r$ avec $q$ une forme quadratique sur $E$}{3/9}
-\slideq{Polynôme homogène associée à $q\in\quadr E$}{4/9}
-\slider{$\appl{\rho_q}{\Bbbk^n}{\Bbbk}{\l x_1,\cdots,x_n\r}{q\l\sum{i=1}{n}{x_ie_i}\r}$\linebreak$\rho_q$ est homogène de degré $2$ si et seulement si $q\in\quadr E$}{4/9}
-\slideq{CNS pour que $\l q,q'\r\in\quadr E^2$ soient isomorphes}{5/9}
-\slider{$\almat{q}{\mathcal B}{}$ et $\almat{q'}{\mathcal B}{}$ sont congruentes}{5/9}
-\slideq{$A$ et $A'$ sont congruentes}{6/9}
-\slider{$\exists P\in\matgl n\Bbbk$, $A=\transp PAP$}{6/9}
-\slideq{Matrice de $q\in\quadr E$ dans une base $\mathcal B$ de $E$}{7/9}
-\slider{$\almat{q}{\mathcal B}{}=\almat{\pi^{-1}\l q\r}{\mathcal B}{}\in\sym n\Bbbk$}{7/9}
-\slideq{$\l E,q\r$ et $\l E',q'\r$ sont isomorphes}{8/9}
-\slider{Il existe $u\!:\!E\to E'$ un isomorphisme tel que $u\l E\r=E'$ et $q'=q\circ u$}{8/9}
-\slideq{$\discr q$}{9/9}
-\slider{$\tcase{0\&\text{si $q$ dégénérée}\\\det[\mathcal B]q\bmod\l\Bbbk^\times\r^2\&\text{sinon}\\}$}{9/9}
+\slideq{Poupriétés de $q$ exprimée dans la base duale de $\l e_1,\cdots,e_n\r$ base orthogonale de $E$}{1/25}
+\slider{\togglebigopdisplay\togglebigoplimits$q=\sum{i=1}{n}{q\l e_i\r\mu_i^2}$, $\l\mu_i\r$ base duale de $\l e_i\r$\linebreak Réciproquement, si $q=\sum{i=1}{n}{a_i\mu_i^2}$ alors la base antéduale de $\l\mu_i\r$ est $\l e_i\r$ et $q\l e_i\r=a_i$\linebreak$\rg q=\left|\left\{i\in\llb1,n\rrb,a_i\neq0\right\}\right|$\linebreak$\discr q=\tcase{\scriptstyle0\&\scriptstyle\text{si $\exists i\in\llb1,n\rrb,a_i=0$}\\\scriptstyle\oldprod\limits_{i=1}^na_i\bmod\l\Bbbk^\times\r^2\&\scriptstyle\text{sinon}\\}$\linebreak$\ker q=\bigcap{\substack{i\in\llb1,n\rrb\\a_i\neq0}}{}{\ker{\mu_i}}$\togglebigopdisplay\togglebigoplimits}{1/25}
+\slideq{Polynôme homogène associée à $q\in\quadr E$}{2/25}
+\slider{$\appl{\rho_q}{\Bbbk^n}{\Bbbk}{\l x_1,\cdots,x_n\r}{q\l\sum{i=1}{n}{x_ie_i}\r}$\linebreak$\rho_q$ est homogène de degré $2$ si et seulement si $q\in\quadr E$}{2/25}
+\slideq{$\im{u^*}$}{3/25}
+\slider{$\ker u^\bot$}{3/25}
+\slideq{Classification des formes quadratiques sur $\mathbb C$}{4/25}
+\slider{Si $q$ est une forme quadratique sur $\mathbb C$ alors il existe $\l\mu_1,\cdots,\mu_{\rg q}\r\in\l E^*\r^{\rg q}$ tel que $q=\sum{i=1}{\rg q}{\mu_i^2}$}{4/25}
+\slideq{$q$ est positive (resp. négative)\linebreak$\l E,q\r$ espace quadratique sur $\mathbb R$}{5/25}
+\slider{$\forall x\in E$, $q\l x\r\geqslant0$ (resp. $\leqslant0$)}{5/25}
+\slideq{Cône}{6/25}
+\slider{Partie d'un ev stable par multiplication scalaire}{6/25}
+\slideq{CNS pour que $\l q,q'\r\in\quadr E^2$ soient isomorphes}{7/25}
+\slider{$\almat{q}{\mathcal B}{}$ et $\almat{q'}{\mathcal B}{}$ sont congruentes}{7/25}
+\slideq{Forme polaire associée à $q$}{8/25}
+\slider{$\pi^{-1}\l q\r$ où $\appl\pi{\bil EE}{\quadr E}\phi{q_\phi:=\phi\l\cdot,\cdot\r}$\linebreak$\pi$ est un isomorphisme}{8/25}
+\slideq{Classification des formes quadratiques sur $\mathbb R$}{9/25}
+\slider{Si $q$ est une forme quadratique sur $\mathbb R$ alors il existe $\l r,s\r\in\mathbb N^2$ et $\l\mu_1,\cdots,\mu_{r+s}\r\in\l E^*\r^{r+s}$ tel que $q=\sum{i=1}{r}{\mu_i^2}-\sum{i=r+1}{r+s}{\mu_i^2}$}{9/25}
+\slideq{$q$ est une forme quadratique}{10/25}
+\slider{Il existe $\phi\in\bil EE$ tel que $q\l x\r=\phi\l x,x\r$}{10/25}
+\slideq{Cône isotrope de $q$}{11/25}
+\slider{$\mathcal C\l q\r=\left\{x\in E,q\l x\r=0\right\}$\linebreak$\ker q\subset\mathcal C\l q\r$}{11/25}
+\slideq{$\discr q$}{12/25}
+\slider{$\tcase{0\&\text{si $q$ dégénérée}\\\det[\mathcal B]q\bmod\l\Bbbk^\times\r^2\&\text{sinon}\\}$}{12/25}
+\slideq{CN entre $V$ et $\mathcal C\l q\r$ pour avoir $E=V\oplus V^\bot$}{13/25}
+\slider{$V\cap\mathcal C\l q\r=\left\{0\right\}$}{13/25}
+\slideq{Matrice de $q\in\quadr E$ dans une base $\mathcal B$ de $E$}{14/25}
+\slider{$\almat{q}{\mathcal B}{}=\almat{\pi^{-1}\l q\r}{\mathcal B}{}\in\sym n\Bbbk$}{14/25}
+\slideq{Factorisation d'une forme quadratique}{15/25}
+\slider{Si $q$ est une forme quadratique sur $E$ alors il existe une unique forme quadratique $q'\!:\!E/\ker q\to\Bbbk$\linebreak$q'$ est non dégénérée}{15/25}
+\slideq{$\l E,q\r$ et $\l E',q'\r$ sont isomorphes}{16/25}
+\slider{Il existe $u\!:\!E\to E'$ un isomorphisme tel que $u\l E\r=E'$ et $q'=q\circ u$}{16/25}
+\slideq{$A$ et $A'$ sont congruentes}{17/25}
+\slider{$\exists P\in\matgl n\Bbbk$, $A=\transp PAP$}{17/25}
+\slideq{$\l E,q\r$ espace quadratique, $\phi$ forme polaire associée à $q$\linebreak$A^\bot$}{18/25}
+\slider{$l_\phi\l A\r^\bot$}{18/25}
+\slideq{$q$ est définie positive (resp. définie négative)\linebreak$\l E,q\r$ espace quadratique sur $\mathbb R$}{19/25}
+\slider{$\forall x\neq0$, $q\l x\r>0$ (resp. $<0$)\linebreak Dans ce cas, $\mathcal C\l q\r=\left\{0\right\}$ et pour tout sev $V$, $q_{|V}$ est non dégénérée}{19/25}
+\slideq{$\ker{u^*}$}{20/25}
+\slider{$\im u^\bot$}{20/25}
+\slideq{Espace quadratique}{21/25}
+\slider{$\l E,q\r$ avec $q$ une forme quadratique sur $E$}{21/25}
+\slideq{Méthode de Gauss}{22/25}
+\slider{Si $f\in\Bbbk\left[X_1,\cdots,X_n\right]_2$\footnote{polynômes homogènes de degré $2$} et $\l X_i:=\mu_i\r$ est une base de $E^*$ alors il existe un algorithme qui permet de trouver $\l L_1,\cdots ,L_n\r\in\l \Bbbk\left[X_1,\cdots,X_n\right]_1\r^n$ et $\l a_1,\cdots,a_n\r\in\Bbbk^n$ tels que $f=\sum{i=1}{n}{a_iL_i^2}$}{22/25}
+\slideq{$u^*$}{23/25}
+\slider{Si $\l E,q\r$ est un espace quadratique non dégénéré et $\phi$ la forme polaire associée à $q$ et $u\in\al E{}$ alors il existe un unique $u^*\in\al E{}$ telle que $\phi\l u\l x\r,y\r=\phi\l x,u^*\l y\r\r$}{23/25}
+\slideq{$\ker q$}{24/25}
+\slider{$E^\bot=\ker{l_\phi}$}{24/25}
+\slideq{$\ker{q_{|V}}$}{25/25}
+\slider{$V\cap V^\bot$}{25/25}
 \end{document}

@@ -45,6 +45,10 @@ def remove_special_chars(s:str) -> str:
     s = sb(u'[Ç]', 'C', s)
     return s
 
+def latexparse(s:str) -> str:
+    # print(s)
+    return s
+
 def output_f(files:list) -> list:
     ret = []
     for i in files:
@@ -125,7 +129,7 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
                 fail = True
     c(dest + '/' + ttle)
     f = open('info.txt', 'w', encoding='utf-8')
-    f.write('"' + htmlttle + '"\n' + ('1' if sh_quest else '0') + '\n' + ('1' if sh_qr else '0') + '\n' + str([i for i in range(1, len(r) + 1)]) + '\n' + str(fst))
+    f.write('"' + latexparse(htmlttle) + '"\n' + ('1' if sh_quest else '0') + '\n' + ('1' if sh_qr else '0') + '\n' + str([i for i in range(1, len(r) + 1)]) + '\n' + str(fst))
     f.close()
     c('../../')
     return fail
