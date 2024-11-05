@@ -13,6 +13,12 @@ from platform import system
 from re import sub as sb
 from time import sleep as sl
 from argparse import ArgumentParser
+try:
+    from regex import finditer, sub
+    importregex = True
+except ImportError:
+    print("regex n'a pas été chargé, les titres en latex ne seront pas convertis en HTML")
+    importregex = False
 c(d(__file__))
 import edit_svg
 
@@ -46,8 +52,33 @@ def remove_special_chars(s:str) -> str:
     return s
 
 def latexparse(s:str) -> str:
-    # print(s)
-    return s
+    if importregex:
+        pattern = r"\\.*?({([^{}]*+(?:(?1)[^{}]*)*+)})"
+        strings = [s0]
+        extracted = []
+        while strings != []:
+            s = strings.pop(0)
+            match = finditer(pattern, s)
+            for m in match:
+                tag = m.group(0)
+                tag = tag[1:tag.find("{")]
+                if m.group(2) != "":
+                    strings.append(m.group(2))
+                    extracted.append((m.group(0), tag, m.group(2)))
+        for (subs, tag, cont) in extracted:
+            if tag == "textit":
+                s0 = s0.replace(subs, "<span style='font-style: italic'>" + cont + "</span>")
+            elif tag == "textbf":
+                s0 = s0.replace(subs, "<span style='font-decoration: bold'>" + cont + "</span>")
+            elif tag == "textsuperscript":
+                s0 = s0.replace(subs, "<sup>" + cont + "</sup>")
+            elif tag == "textsubscript":
+                s0 = s0.replace(subs, "<sub>" + cont + "</sub>")
+            else:
+                s0 = s0.replace(subs, "")
+        s0 = sub("{", "", s0)
+        s0 = sub("}", "", s0)
+    return s0
 
 def output_f(files:list) -> list:
     ret = []
