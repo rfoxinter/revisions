@@ -1,6 +1,10 @@
 https://rfoxinter.github.io/revisions/flashcards/
+../L3/anglais/flashcards/AnglaisB2+/Accessibility
+20241108220554
 ../L3/anglais/flashcards/AnglaisB2+/ApplicationLetterAndInterview
 20241025224007
+../L3/anglais/flashcards/AnglaisB2+/Disability
+20241108221235
 ../L3/anglais/flashcards/AnglaisB2+/HigherEducation
 20241003172210
 ../L3/anglais/flashcards/AnglaisB2+/Internships
