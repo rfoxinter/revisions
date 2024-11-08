@@ -1,0 +1,6 @@
+Intégration et théorie de la mesure -- Intégrales à paramètre
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse}\toggleanalysepar
+Continuité d'une intégrale à paramètre\linebreak$F\l x\r=\int[\mu\l t\r][X][]{f\l x,t\r}$\linebreak$f\!:\!I\times\l X,\mathcal A,\mu\r\to\mathbb C$\linebreak$I$ intervalle de $\mathbb R$;;Si pour tout $x\in I$, $f\l x,\cdot\r$ est mesurable de $\l X,\mathcal A\r$ dans $\l\mathbb C,\mathcal B\l\mathbb C\r\r$, $f\l\cdot,t\r$ est continue en $x_0$ $\mu$-pp, il existe $g\!:\!X\to\mathbb R_+$ intégrable telle que pour tout $\l x,t\r\in I\times X$, $\left|f\l x,t\r\right|\leqslant g\l t\r$ $\mu$-pp\linebreak Alors $F$ est continue en $x_0$
+Dérivation d'une intégrale à paramètre\linebreak$F\l x\r=\int[\mu\l t\r][X][]{f\l x,t\r}$\linebreak$f\!:\!I\times\l X,\mathcal A,\mu\r\to\mathbb C$\linebreak$I$ intervalle de $\mathbb R$;;Si pour tout $x\in I$, $f\l x,\cdot\r\in\mathcal L^1\l\mu\r$, $\pder f{\l x_0,t\r}$ existe $\mu$-pp, il existe $g\!:\!X\to\mathbb R_+$ intégrable telle que pour tout $\l x,t\r\in I\times X$, $\left|f\l x,t\r-f\l x_0,t\r\right|\leqslant g\l t\r\left|x-x_0\right|$ $\mu$-pp\linebreak Alors $F$ est dérivable en $x_0$ et $F'\l x_0\r\int[\mu\l t\r][X]{\pder f{\l x_0,t\r}}$

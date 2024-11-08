@@ -1,4 +1,4 @@
-"Intégration et théorie de la mesure &ndash; <i>Espaces \textit{L\raisebox{0.5ex}{\textsuperscript{p}}}</i>"
+"Intégration et théorie de la mesure &ndash; <i>Espaces <span style='font-style: italic'>L<sup>p</sup></span></i>"
 1
 0
 [1, 2, 3, 4, 5, 6, 7]
