@@ -17,7 +17,7 @@ try:
     from regex import finditer, sub
     importregex = True
 except ImportError:
-    print("regex n'a pas été chargé, les titres en latex ne seront pas convertis en HTML")
+    print("The regex module was not loaded, LATEX titles will not be converted to HTML")
     importregex = False
 c(d(__file__))
 import edit_svg
@@ -51,7 +51,7 @@ def remove_special_chars(s:str) -> str:
     s = sb(u'[Ç]', 'C', s)
     return s
 
-def latexparse(s:str) -> str:
+def latexparse(s0:str) -> str:
     if importregex:
         pattern = r"\\.*?({([^{}]*+(?:(?1)[^{}]*)*+)})"
         strings = [s0]
