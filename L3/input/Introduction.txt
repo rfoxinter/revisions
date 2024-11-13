@@ -1,0 +1,7 @@
+Groupe fondamental et revêtement -- Introduction
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al}
+Foncteur covariant;;Application $F$ d'un objet $X$ d'une catégorie dans un objet $Y$ d'une autre catégorie\linebreak Si $f\!:\!X\to Y$ est un morphisme alors $F\l f\r\!:\!F\l X\r\to F\l Y\r$ est un morphisme\linebreak$F\l\id_X\r=\id_{F\l X\r}$\linebreak$F\l g\circ f\r=F\l g\r\circ F\l f\r$\linebreak En particulier, si $f$ est un isomorphisme alors $F\l f\r$ aussi
+Théorème d'invariance du domaine de Brower;;Si $m\neq n$ alors $\mathbb R^m$ et $\mathbb R^n$ ne sont pas homéomorphes
+Théorème du point fixe de Brower;;Toute application continue de $\mathcal B^n$ dans $\mathcal B^n$ a au moins un point fixe

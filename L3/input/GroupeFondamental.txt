@@ -1,0 +1,7 @@
+Groupe fondamental et revêtement -- Groupe fondamental
+Shuffle questions : True
+Q/R & R/Q : False
+\let\Pi\varPi
+Espace pointé;;$\l B,b\r$ où $B$ est un espace topologique et $b\in B$ est appelé point base
+$c_1\sim c_2$\linebreak Homotopie de chemins;;Il existe $H\!:\!\left[0,1\right]\times\left[0,1\right]\to B$ continue telle que $H\l0,\cdot\r=c_1$, $H\l1,\cdot\r=c_2$, pour tout $s\in\left[0,1\right]$, $H\l s,0\r=c_1\l0\r=c_2\l0\r$ et $H\l s,1\r=c_1\l1\r=c_2\l1\r$
+$\Pi_1\l B,b\r$;;$\l\left\{\text{classes d'homotopie de lacets basés en $b$}\right\},*\r$\linebreak$*$ désigne la loi de concaténation de chemins
