@@ -1,0 +1,17 @@
+Anglais B2+ -- Proposal
+Shuffle questions : True
+Q/R & R/Q : True
+\usepackage{vocab}
+\frdef{Une bourse au mérite};;\engdef{A merit scholarship}{A merit scholarship}
+\frdef{Un fond de secours/de solidarité};;\engdef{A hardship fund}{A hardship fund}
+\frdef{Une bourse sur critères sociaux};;\engdef{A means-tested maintenance grant}{A means-tested maintenance grant}
+\frdef{Les frais universitaires};;\engdef{Tuition fees}{Tuition fees}
+I believe\linebreak\emph{written};;I really do think\linebreak\emph{oral}
+Specifically\linebreak\emph{written};;To be specific,\linebreak\emph{oral}
+X has become apparent\linebreak\emph{written};;It has come to our attention that X\linebreak\emph{oral}
+All staff members\linebreak\emph{written};;everyone in the team\linebreak\emph{oral}
+As demonstrated by\linebreak\emph{written};;As you can tell from\linebreak\emph{oral}
+Overall,\linebreak\emph{written};;All in all,\linebreak\emph{oral}
+A number of\linebreak\emph{written};;Quite a few\linebreak\emph{oral}
+Similar to our own\linebreak\emph{written};;Like ours\linebreak\emph{oral}
+To address this issue\linebreak\emph{written};;To tackle this issue\linebreak\emph{oral}
