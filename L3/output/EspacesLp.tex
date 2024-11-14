@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{bigoperators,analyse,topologie}\togglebigoppar\toggleanalysepar\let\bar\overline\newcommand{\lnrm}[2][p]{\anrm[L^{#1}]{#2}}\let\phi\varphi
+\usepackage{bigoperators,analyse,topologie}\togglebigoppar\toggleanalysepar\let\bar\overline\newcommand{\lnrm}[2][p]{\anrm[L^{#1}]{#2}}\let\phi\varphi\let\otimes\varotimes
 \hypersetup{pdftitle=Intégration et théorie de la mesure -- Espaces \textit{L\raisebox{0.5ex}{\textsuperscript{p}}}}
 \title{Intégration et théorie de la mesure\\\emph{Espaces \textit{L\raisebox{0.5ex}{\textsuperscript{p}}}}}
 \author{}
@@ -10,18 +10,30 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Inégalité de Minkowski}{1/7}
-\slider{Si $f,g\!:\!X\to\mathbb R$ sont mesurables et $p\in\left[1,+\infty\right]$, alors $\lnrm{f+g}\leqslant\lnrm f+\lnrm g$}{1/7}
-\slideq{$\lnrm f$}{2/7}
-\slider{$\l\int[\mu][X]{\left|f\right|^p}\r^{\oldfrac1p}$ si $p\in\mathbb N^*$\linebreak$\lnrm[\infty]f=\inf{\left\{c\geqslant0,\left|f\right|\leqslant c\text{ $\mu$-pp}\right\}}$}{2/7}
-\slideq{$\mathcal L^p\l\mu\r$}{3/7}
-\slider{$\left\{f\!:\!X\to\mathbb R\text{ mesurables},\int[\mu]{\left|f\right|^p}<+\infty\right\}$\linebreak$\mathcal L^\infty=\left\{f\!:\!X\to\mathbb R\text{ mesurables},\anrm f<+\infty\right\}$}{3/7}
-\slideq{$L^p\l\mu\r$}{4/7}
-\slider{$\mathcal L^p/{\sim}$ où $f\sim g$ ssi $f=g$ $\mu$-pp}{4/7}
-\slideq{Inégalité de Hölder}{5/7}
-\slider{Si $p\in\left[1,+\infty\right]$ et $p'=\frac{p}{p-1}$ alors pour $f$ et $g$ mesurables, $\int{\left|fg\right|}\leqslant\lnrm f\lnrm[p']g$}{5/7}
-\slideq{Structures des $L^p$}{6/7}
-\slider{$L^p$ sont des espaces de Banach\linebreak$L^2$ est un expace de Hilbert avec $\psc fg=\int{fg}$}{6/7}
-\slideq{Inégalité de Jensen}{7/7}
-\slider{Soit $I\subset\mathbb R$ un intervalle, $\mu$ une mesure de probabilités ($\mu\l X\r=1$ et $\mu\geqslant0$), si $\phi\!:\!I\to\mathbb R$ est convexe et $f\!:\!X\to\mathbb R$ mesurable alors $\phi\l\int[\mu][X]f\r\leqslant\int[\mu][X]{\phi\circ f}$}{7/7}
+\slideq{$\lnrm f$}{1/13}
+\slider{$\l\int[\mu][X]{\left|f\right|^p}\r^{\oldfrac1p}$ si $p\in\mathbb N^*$\linebreak$\lnrm[\infty]f=\inf{\left\{c\geqslant0,\left|f\right|\leqslant c\text{ $\mu$-pp}\right\}}$}{1/13}
+\slideq{Inégalité de Jensen}{2/13}
+\slider{Soit $I\subset\mathbb R$ un intervalle, $\mu$ une mesure de probabilités ($\mu\l X\r=1$ et $\mu\geqslant0$), si $\phi\!:\!I\to\mathbb R$ est convexe et $f\!:\!X\to\mathbb R$ mesurable alors $\phi\l\int[\mu][X]f\r\leqslant\int[\mu][X]{\phi\circ f}$}{2/13}
+\slideq{Densité des fonctions lipschitziennes à support compact dans $L^p$}{3/13}
+\slider{Si $\l X,d\r$ est un espace métrique localement compact (pour tout $x\in X$, il existe $O$ ouvert tel que $x\in O$ et $\overline O$ est compact), séparable et $\mu$ de Radon (finie sur tout compact) et $p\in\left[1,+\infty\right[$ alors les fonctions lipschitziennes à support compact de $L^p$ sont dense dans $L^p$}{3/13}
+\slideq{Densité des fonctions lipschitziennes dans $L^p$}{4/13}
+\slider{Si $p\in\left[1,+\infty\right[$ alors les fonctions lipschitziennes de $L^p$ sont dense dans $L^p$}{4/13}
+\slideq{Densité des fonctions en escalier dans $L^p$}{5/13}
+\slider{Si $p\in\left[1,+\infty\right]$ alors les fonctions en escalier sont dense dans $L^p$}{5/13}
+\slideq{Inégalité de Hölder}{6/13}
+\slider{Si $p\in\left[1,+\infty\right]$ et $p'=\frac{p}{p-1}$ alors pour $f$ et $g$ mesurables, $\int{\left|fg\right|}\leqslant\lnrm f\lnrm[p']g$}{6/13}
+\slideq{$\mathcal B\l X\times Y\r$}{7/13}
+\slider{$\mathcal B\l X\r\otimes\mathcal{B}\l Y\r$ si $X$ et $Y$ sont à base dénombrable d'ouverts}{7/13}
+\slideq{$\mathcal L^p\l\mu\r$}{8/13}
+\slider{$\left\{f\!:\!X\to\mathbb R\text{ mesurables},\int[\mu]{\left|f\right|^p}<+\infty\right\}$\linebreak$\mathcal L^\infty=\left\{f\!:\!X\to\mathbb R\text{ mesurables},\anrm f<+\infty\right\}$}{8/13}
+\slideq{$L^p\l\mu\r$}{9/13}
+\slider{$\mathcal L^p/{\sim}$ où $f\sim g$ ssi $f=g$ $\mu$-pp}{9/13}
+\slideq{Structures des $L^p$}{10/13}
+\slider{$L^p$ sont des espaces de Banach\linebreak$L^2$ est un expace de Hilbert avec $\psc fg=\int{fg}$}{10/13}
+\slideq{Inégalité de Minkowski}{11/13}
+\slider{Si $f,g\!:\!X\to\mathbb R$ sont mesurables et $p\in\left[1,+\infty\right]$, alors $\lnrm{f+g}\leqslant\lnrm f+\lnrm g$}{11/13}
+\slideq{$\mathcal A\otimes\mathcal B$}{12/13}
+\slider{$\sigma\l\left\{A\times B,\l A,B\r\in\mathcal A\times\mathcal B\right\}\r$\linebreak C'est la plus petite tribu qui rend les fonctions coordonnées mesurables }{12/13}
+\slideq{$\mu\otimes\nu$}{13/13}
+\slider{L'unique mesure sur $\mathcal A\otimes\mathcal B$ vérifiant $\mu\otimes\nu\l A\times B\r=\mu\l A\r\times\nu\l B\r$\linebreak$\mu\otimes\nu\l C\r=\int[x][X][][\mu]{\nu\l C_x\r}=\int[y][Y][][\nu]{\mu\l C^y\r}$}{13/13}
 \end{document}

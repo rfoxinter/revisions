@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{analyse,trigo}\togglebigoppar
+\usepackage{analyse,trigo,complexes}\togglebigoppar\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}
 \hypersetup{pdftitle=Analyse complexe -- Fonctions méromorphes}
 \title{Analyse complexe\\\emph{Fonctions méromorphes}}
 \author{}
@@ -10,32 +10,50 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Image de $f$ au voisinage de $z_0$ qui est une singularité essentielle}{1/14}
-\slider{Si $V$ est un voisinage de $z_0$ dans $U$ alors $f\l V\setminus\left\{z_0\right\}\r$ est dense dans $\mathbb C$}{1/14}
-\slideq{Grand théorème de Picard}{2/14}
-\slider{Si $f$ a une singularité essentielle en $z_0$ alors il existe $F\subset\mathbb C$, $\left|F\right|\leqslant1$ telle que pour tout $V$ voisinage de $z_0$ dans $U$, $\mathbb C\setminus F\subset f\l V\setminus\left\{z_0\right\}\r$}{2/14}
-\slideq{Théorème de Mittag-Leffler}{3/14}
-\slider{Soit $U$ un ouvert de $\mathbb C$ et $F$ une partie discrète et fermée de $U$, alors pour $\l P_a\r_{a\in F}$ des polynômes non nuls sans termes constants, il existe une fonction méromorphe suc $\mathbb C$ qui a exactement $F$ comme pôles et qui admet $P_a\l\frac{1}{z-a}\r$ comme partie singulière en tout $a\in F$}{3/14}
-\slideq{$f$ est méromorphe en $z_0$}{4/14}
-\slider{$f$ admet une singularité illusoire ou un pôle en $z_0$}{4/14}
-\slideq{$\sum{\alpha\in A}{}{u_\alpha\l z\r}$ converge normalement sur tout compact de $U$}{5/14}
-\slider{Pour tout compact $K$ de $U$, il existe une partie $F_K$ finie de $A$ telle que pour tout $\alpha\in A\setminus F_K$, $u_\alpha$ n'a pas de pôles dans $K$ et $\sum{\alpha\in A\setminus F_K}{}{u_\alpha\l z\r}$ converge normalement sur $K$}{5/14}
-\slideq{Coefficients de la DSE de $u\l z\r=\sum{\alpha\in A}{}{u_\alpha\l z\r}$ en $z_0$}{6/14}
-\slider{Si pour tout $\alpha\in A$, $u_\alpha\l z\r=\sum{n\in\mathbb Z}{}{a_{\alpha,n}\l z-z_0\r^n}$ alors $a_n=\sum{\alpha\in A}{}{a_{\alpha,n}}$ qui converge absolument}{6/14}
-\slideq{Partie singulière de $f$ en $z_0$}{7/14}
-\slider{Partie négative du développenent en série de Laurent de $f$ holomorphe sur $U\setminus\left\{z_0\right\}$ où $z_0\in U$}{7/14}
-\slideq{$f$ admet une singularité essentielle en $z_0$}{8/14}
-\slider{$f$ est holomorphe sur $U\setminus\left\{z_0\right\}$ et la singularité en $z_0$ n'est ni illusoire ni un pôle}{8/14}
-\slideq{$f$ admet un pôle d'ordre $k$ en $z_0$}{9/14}
-\slider{$\left|f\l z\r\right|\xrightarrow[\substack{z\to z_0\\z\neq z_0}]{}+\infty$\linebreak Il existe $k\geqslant1$ tel que $a_{-k}\neq0$ et pour tout $n<-k$, $a_n=0$\linebreak Il existe $P\in\mathbb C\left[X\right]$ tel que $f\l z\r-P\l\frac{1}{z-z_0}\r$ est bornée au voisinage de $z_0$}{9/14}
-\slideq{Pôles de $\serie{u_\alpha\l z\r}$ qui converge normalement sur tout compact}{10/14}
-\slider{Pour $F_\alpha$ les pôles de $u_\alpha$ alors $F=\bigcup{\alpha\in A}{}{F_\alpha}$ est une partie discrète fermée de $U$ et $u\l z\r=\sum{\alpha\in A}{}{u_\alpha\l z\r}$ converge absolument sur $U\setminus F$}{10/14}
-\slideq{Convergence de $\sum{\alpha\in A}{}{u_\alpha^{\l n\r}\l z\r}$}{11/14}
-\slider{Si $\sum{\alpha\in A}{}{u_\alpha\l z\r}$ converge normalement vers $u$ sur tout compact de $\mathbb C$ alors $u$ est méromorphe et $\sum{\alpha\in A}{}{u_\alpha^{\l n\r}\l z\r}$ converge normalement vers $u^{\l n\r}\l z\r$}{11/14}
-\slideq{$f$ est méromorphe sur $U$}{12/14}
-\slider{$f\!:\!U\setminus F\to\mathbb C$ est holomorphe avec $F$ une partie discrète et fermée de $U$ et $f$ est méromorphe en tout point de $F$}{12/14}
-\slideq{Identité d'Euler}{13/14}
-\slider{\togglebigoppar$\cot z=\frac1z+\sum{n=1}{+\infty}{\frac1{z+n\pi}+\frac1{z-n\pi}}$\togglebigoppar}{13/14}
-\slideq{$f$ admet une singularité illusoire en $z_0$}{14/14}
-\slider{$f$ est bornée au voisinage de $z_0$\linebreak Pour tout $n<0$, $a_n=0$\linebreak$f$ se prolonge en $\widetilde f$ folomorphe sur $U$}{14/14}
+\slideq{Image de $f$ au voisinage de $z_0$ qui est une singularité essentielle}{1/23}
+\slider{Si $V$ est un voisinage de $z_0$ dans $U$ alors $f\l V\setminus\left\{z_0\right\}\r$ est dense dans $\mathbb C$}{1/23}
+\slideq{$\sum{\alpha\in A}{}{u_\alpha\l z\r}$ converge normalement sur tout compact de $U$}{2/23}
+\slider{Pour tout compact $K$ de $U$, il existe une partie $F_K$ finie de $A$ telle que pour tout $\alpha\in A\setminus F_K$, $u_\alpha$ n'a pas de pôles dans $K$ et $\sum{\alpha\in A\setminus F_K}{}{u_\alpha\l z\r}$ converge normalement sur $K$}{2/23}
+\slideq{Fonction elliptique holomorphe sur $\mathbb C$}{3/23}
+\slider{Une fonction elliptique et holomorphe sur $\mathbb C$ est constante}{3/23}
+\slideq{Réseau de $\mathbb C$}{4/23}
+\slider{$\varLambda\leqslant\mathbb C$ de la forme $\varLambda=\omega_1\mathbb Z+\omega_2\mathbb Z$}{4/23}
+\slideq{Fonction elliptique pour $\varLambda$}{5/23}
+\slider{Fonction $f$ méromorphe sur $\mathbb C$ vérifiant $f\l z+\lambda\r=f\l z\r$ pour tout $z\in\mathbb C$, $\lambda\in\varLambda$}{5/23}
+\slideq{$f$ est méromorphe sur $U$}{6/23}
+\slider{$f\!:\!U\setminus F\to\mathbb C$ est holomorphe avec $F$ une partie discrète et fermée de $U$ et $f$ est méromorphe en tout point de $F$}{6/23}
+\slideq{$f$ est méromorphe en $z_0$}{7/23}
+\slider{$f$ admet une singularité illusoire ou un pôle en $z_0$}{7/23}
+\slideq{$\zeta\l s\r$}{8/23}
+\slider{$\sum{n=1}{+\infty}{\frac{1}{n^s}}$}{8/23}
+\slideq{CNS de Convergence de $\sum{\lambda\in\varLambda}{}{\frac{1}{\left|\lambda\right|^\alpha}}$ avec $\varLambda$ un réseau}{9/23}
+\slider{$\alpha>2$}{9/23}
+\slideq{$G_n\l\alpha\varLambda\r$\linebreak$G_n\l\varLambda\r=\sum{\lambda\in\varLambda\setminus\left\{0\right\}}{}{\frac{1}{\lambda^n}}$}{10/23}
+\slider{$\frac{1}{\alpha^n}G_n\l\varLambda\r$}{10/23}
+\slideq{Coefficients de la DSE de $u\l z\r=\sum{\alpha\in A}{}{u_\alpha\l z\r}$ en $z_0$}{11/23}
+\slider{Si pour tout $\alpha\in A$, $u_\alpha\l z\r=\sum{n\in\mathbb Z}{}{a_{\alpha,n}\l z-z_0\r^n}$ alors $a_n=\sum{\alpha\in A}{}{a_{\alpha,n}}$ qui converge absolument}{11/23}
+\slideq{Formes des fonction elliptiques pour $\varLambda$}{12/23}
+\slider{Si $f$ est une fonction elliptique pour $\varLambda$ alors il existe un unique $\l R,S\r\in\mathbb C\l X\r$ tel que $f=R\l\wp_\varLambda\r+S\l\wp_\varLambda\r\wp_\varLambda'$}{12/23}
+\slideq{Grand théorème de Picard}{13/23}
+\slider{Si $f$ a une singularité essentielle en $z_0$ alors il existe $F\subset\mathbb C$, $\left|F\right|\leqslant1$ telle que pour tout $V$ voisinage de $z_0$ dans $U$, $\mathbb C\setminus F\subset f\l V\setminus\left\{z_0\right\}\r$}{13/23}
+\slideq{$f$ admet une singularité illusoire en $z_0$}{14/23}
+\slider{$f$ est bornée au voisinage de $z_0$\linebreak Pour tout $n<0$, $a_n=0$\linebreak$f$ se prolonge en $\widetilde f$ folomorphe sur $U$}{14/23}
+\slideq{Théorème de Mittag-Leffler}{15/23}
+\slider{Soit $U$ un ouvert de $\mathbb C$ et $F$ une partie discrète et fermée de $U$, alors pour $\l P_a\r_{a\in F}$ des polynômes non nuls sans termes constants, il existe une fonction méromorphe suc $\mathbb C$ qui a exactement $F$ comme pôles et qui admet $P_a\l\frac{1}{z-a}\r$ comme partie singulière en tout $a\in F$}{15/23}
+\slideq{Identité d'Euler}{16/23}
+\slider{\togglebigoppar$\cot z=\frac1z+\sum{n=1}{+\infty}{\frac1{z+n\pi}+\frac1{z-n\pi}}$\togglebigoppar}{16/23}
+\slideq{Pôles de $\serie{u_\alpha\l z\r}$ qui converge normalement sur tout compact}{17/23}
+\slider{Pour $F_\alpha$ les pôles de $u_\alpha$ alors $F=\bigcup{\alpha\in A}{}{F_\alpha}$ est une partie discrète fermée de $U$ et $u\l z\r=\sum{\alpha\in A}{}{u_\alpha\l z\r}$ converge absolument sur $U\setminus F$}{17/23}
+\slideq{Partie singulière de $f$ en $z_0$}{18/23}
+\slider{Partie négative du développenent en série de Laurent de $f$ holomorphe sur $U\setminus\left\{z_0\right\}$ où $z_0\in U$}{18/23}
+\slideq{$f$ admet une singularité essentielle en $z_0$}{19/23}
+\slider{$f$ est holomorphe sur $U\setminus\left\{z_0\right\}$ et la singularité en $z_0$ n'est ni illusoire ni un pôle}{19/23}
+\slideq{$\wp_\varLambda\l z\r$}{20/23}
+\slider{\togglebigoppar$\frac{1}{z^2}+\sum{\lambda\in\varLambda\setminus\left\{0\right\}}{}{\frac{1}{\l z+\lambda\r^2}-\frac{1}{\lambda^2}}$\togglebigoppar\linebreak$\wp_\varLambda$ converge normalement sur tout compact de $\mathbb C$ et définit une fonction méromorphe sur $\mathbb C$ et $\varLambda$-périodique}{20/23}
+\slideq{Convergence de $\sum{\alpha\in A}{}{u_\alpha^{\l n\r}\l z\r}$}{21/23}
+\slider{Si $\sum{\alpha\in A}{}{u_\alpha\l z\r}$ converge normalement vers $u$ sur tout compact de $\mathbb C$ alors $u$ est méromorphe et $\sum{\alpha\in A}{}{u_\alpha^{\l n\r}\l z\r}$ converge normalement vers $u^{\l n\r}\l z\r$}{21/23}
+\slideq{Propriété de $\appl{G_n}{\mathbb H}{\mathbb C}{\tau}{G_n\l\mathbb Z+\tau\mathbb Z\r}$\linebreak$G_n\l\varLambda\r=\sum{\lambda\in\varLambda\setminus\left\{0\right\}}{}{\frac{1}{\lambda^n}}$\linebreak$\mathbb H=\left\{z\in\mathbb C,\pIm z>0\right\}$}{22/23}
+\slider{$G_n$ est holomorphe}{22/23}
+\slideq{$f$ admet un pôle d'ordre $k$ en $z_0$}{23/23}
+\slider{$\left|f\l z\r\right|\xrightarrow[\substack{z\to z_0\\z\neq z_0}]{}+\infty$\linebreak Il existe $k\geqslant1$ tel que $a_{-k}\neq0$ et pour tout $n<-k$, $a_n=0$\linebreak Il existe $P\in\mathbb C\left[X\right]$ tel que $f\l z\r-P\l\frac{1}{z-z_0}\r$ est bornée au voisinage de $z_0$}{23/23}
 \end{document}

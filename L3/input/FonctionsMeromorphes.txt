@@ -1,7 +1,7 @@
 Analyse complexe -- Fonctions méromorphes
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{analyse,trigo}\togglebigoppar
+\usepackage{analyse,trigo,complexes}\togglebigoppar\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}
 Partie singulière de $f$ en $z_0$;;Partie négative du développenent en série de Laurent de $f$ holomorphe sur $U\setminus\left\{z_0\right\}$ où $z_0\in U$
 $f$ admet une singularité illusoire en $z_0$;;$f$ est bornée au voisinage de $z_0$\linebreak Pour tout $n<0$, $a_n=0$\linebreak$f$ se prolonge en $\widetilde f$ folomorphe sur $U$
 $f$ admet un pôle d'ordre $k$ en $z_0$;;$\left|f\l z\r\right|\xrightarrow[\substack{z\to z_0\\z\neq z_0}]{}+\infty$\linebreak Il existe $k\geqslant1$ tel que $a_{-k}\neq0$ et pour tout $n<-k$, $a_n=0$\linebreak Il existe $P\in\mathbb C\left[X\right]$ tel que $f\l z\r-P\l\frac{1}{z-z_0}\r$ est bornée au voisinage de $z_0$
@@ -16,3 +16,12 @@ Convergence de $\sum{\alpha\in A}{}{u_\alpha^{\l n\r}\l z\r}$;;Si $\sum{\alpha\i
 Coefficients de la DSE de $u\l z\r=\sum{\alpha\in A}{}{u_\alpha\l z\r}$ en $z_0$;;Si pour tout $\alpha\in A$, $u_\alpha\l z\r=\sum{n\in\mathbb Z}{}{a_{\alpha,n}\l z-z_0\r^n}$ alors $a_n=\sum{\alpha\in A}{}{a_{\alpha,n}}$ qui converge absolument
 Théorème de Mittag-Leffler;;Soit $U$ un ouvert de $\mathbb C$ et $F$ une partie discrète et fermée de $U$, alors pour $\l P_a\r_{a\in F}$ des polynômes non nuls sans termes constants, il existe une fonction méromorphe suc $\mathbb C$ qui a exactement $F$ comme pôles et qui admet $P_a\l\frac{1}{z-a}\r$ comme partie singulière en tout $a\in F$
 Identité d'Euler;;\togglebigoppar$\cot z=\frac1z+\sum{n=1}{+\infty}{\frac1{z+n\pi}+\frac1{z-n\pi}}$\togglebigoppar
+$\zeta\l s\r$;;$\sum{n=1}{+\infty}{\frac{1}{n^s}}$
+Réseau de $\mathbb C$;;$\varLambda\leqslant\mathbb C$ de la forme $\varLambda=\omega_1\mathbb Z+\omega_2\mathbb Z$
+Fonction elliptique pour $\varLambda$;;Fonction $f$ méromorphe sur $\mathbb C$ vérifiant $f\l z+\lambda\r=f\l z\r$ pour tout $z\in\mathbb C$, $\lambda\in\varLambda$
+Fonction elliptique holomorphe sur $\mathbb C$;;Une fonction elliptique et holomorphe sur $\mathbb C$ est constante
+CNS de Convergence de $\sum{\lambda\in\varLambda}{}{\frac{1}{\left|\lambda\right|^\alpha}}$ avec $\varLambda$ un réseau;;$\alpha>2$
+$\wp_\varLambda\l z\r$;;\togglebigoppar$\frac{1}{z^2}+\sum{\lambda\in\varLambda\setminus\left\{0\right\}}{}{\frac{1}{\l z+\lambda\r^2}-\frac{1}{\lambda^2}}$\togglebigoppar\linebreak$\wp_\varLambda$ converge normalement sur tout compact de $\mathbb C$ et définit une fonction méromorphe sur $\mathbb C$ et $\varLambda$-périodique
+Formes des fonction elliptiques pour $\varLambda$;;Si $f$ est une fonction elliptique pour $\varLambda$ alors il existe un unique $\l R,S\r\in\mathbb C\l X\r$ tel que $f=R\l\wp_\varLambda\r+S\l\wp_\varLambda\r\wp_\varLambda'$
+$G_n\l\alpha\varLambda\r$\linebreak$G_n\l\varLambda\r=\sum{\lambda\in\varLambda\setminus\left\{0\right\}}{}{\frac{1}{\lambda^n}}$;;$\frac{1}{\alpha^n}G_n\l\varLambda\r$
+Propriété de $\appl{G_n}{\mathbb H}{\mathbb C}{\tau}{G_n\l\mathbb Z+\tau\mathbb Z\r}$\linebreak$G_n\l\varLambda\r=\sum{\lambda\in\varLambda\setminus\left\{0\right\}}{}{\frac{1}{\lambda^n}}$\linebreak$\mathbb H=\left\{z\in\mathbb C,\pIm z>0\right\}$;;$G_n$ est holomorphe

@@ -128,14 +128,15 @@
         \def\mpderargIII{\analyseleftp{#3}\analyserightp}
     \fi\frac{\partial^{\arabic{mpdercount}}{#2}}{\mpderden}\mpderargIII}
 \let\oldint\int
-\renewcommand{\int}[1][]{
+\renewcommand{\int}[1][]{\def\intvar{#1}
     \if\relax\detokenize{#1}\relax
         \def\intargI{}
     \else
         \def\intargI{{{}\oldd}#1}
     \fi\tmpint}
 \newcommand{\tmpint}[1][]{\def\intargII{#1}\tmptmpint}
-\newcommand{\tmptmpint}[2][]{{\analysedisplay\oldint\analyselimits_{\intargII}^{#1}}\analyseleftp{#2}\analyserightp\intargI}
+\newcommand{\tmptmpint}[1][]{\def\intargIII{#1}\tmptmptmpint}
+\newcommand{\tmptmptmpint}[2][]{{\analysedisplay\oldint\analyselimits_{\intargII}^{\intargIII}}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\intargI\else{{}\mathop{#1\l\dd\intvar\r}}\fi}
 \newcommand{\eval}[1][]{\def\evalargI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\evalargI}^{#1}}
 \newcommand{\serie}[1]{\oldsum#1}
