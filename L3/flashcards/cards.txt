@@ -6,13 +6,15 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/Algebre1/FormesBilineaires
 20241104094001
 ../L3/flashcards/Algebre1/FormesQuadratiques
-20241104095920
+20241115084340
 ../L3/flashcards/Algebre1/GroupeSymetrique
 20241005183407
 ../L3/flashcards/Algebre1/Groupes
 20241104085535
 ../L3/flashcards/Algebre1/GroupesDeSylow
 20240929111927
+../L3/flashcards/Algebre1/ProduitTensoriel
+20241115091650
 ../L3/flashcards/Algebre1/SommeDirectesEtProduits
 20241006110233
 ../L3/flashcards/AnalyseComplexe/EtudeLocaleDeFonctionsHolomorphes

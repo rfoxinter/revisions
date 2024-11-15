@@ -1,0 +1,7 @@
+Algèbre 1 -- Produit tensoriel
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al}\DeclareMathOperator{\nlin}{\text{$n$}-Lin}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\let\phi\varphi%\DeclareMathOperator{\nlin}{\text{\usefont{T1}{cmr}{m}{ui}n}-Lin}
+Structure de $\nlin$;;$\Bbbk$-ev
+Application linéaire associée à une application $u\in\mathcal E=\nlin\l E_1,\cdots,E_n;F\r$;;$\appl{\varPhi}{\mathcal E}{F^{I_1\times\cdots\times I_n}}{\phi}{\l\phi\l e_{i_1}^{\l1\r},\cdots,e_{i_n}^{\l n\r}\r\r_{\l i_1,\cdots,i_n\r\in I_1\times\cdots\times I_n}}$\linebreak Où $\l e_i^{\l j\r}\r_{i\in I_j}$ est une base de $E_j$
+Définition du produit tensoriel de $E_1,\cdots,E_n$ des $\Bbbk$-ev de dimension finie;;Il existe $\l E_1\otimes\cdots\otimes E_n,\varPi\r$ tel que $E_1\otimes\cdots\otimes E_n$ est un $\Bbbk$-ev et $\varPi\in\nlin\l E_1,\cdots,E_n;E_1\otimes\cdots\otimes E_n\r$ est tel que pour tout $F$ $\Bbbk$-ev, tout $\phi\in\nlin\l E_1,\cdots,E_n;F\r$ se factorise en un unique $\overline\phi$ linéaire vérifiant $\phi=\overline\phi\circ\varPi$\linebreak$\l E_1\otimes\cdots\otimes E_n,\varPi\r$ est unique à unique isomorphisme près

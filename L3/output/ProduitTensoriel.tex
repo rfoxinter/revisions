@@ -1,0 +1,19 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{al}\DeclareMathOperator{\nlin}{\text{$n$}-Lin}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\let\phi\varphi%\DeclareMathOperator{\nlin}{\text{\usefont{T1}{cmr}{m}{ui}n}-Lin}
+\hypersetup{pdftitle=Algèbre 1 -- Produit tensoriel}
+\title{Algèbre 1\\\emph{Produit tensoriel}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Définition du produit tensoriel de $E_1,\cdots,E_n$ des $\Bbbk$-ev de dimension finie}{1/3}
+\slider{Il existe $\l E_1\otimes\cdots\otimes E_n,\varPi\r$ tel que $E_1\otimes\cdots\otimes E_n$ est un $\Bbbk$-ev et $\varPi\in\nlin\l E_1,\cdots,E_n;E_1\otimes\cdots\otimes E_n\r$ est tel que pour tout $F$ $\Bbbk$-ev, tout $\phi\in\nlin\l E_1,\cdots,E_n;F\r$ se factorise en un unique $\overline\phi$ linéaire vérifiant $\phi=\overline\phi\circ\varPi$\linebreak$\l E_1\otimes\cdots\otimes E_n,\varPi\r$ est unique à unique isomorphisme près}{1/3}
+\slideq{Application linéaire associée à une application $u\in\mathcal E=\nlin\l E_1,\cdots,E_n;F\r$}{2/3}
+\slider{$\appl{\varPhi}{\mathcal E}{F^{I_1\times\cdots\times I_n}}{\phi}{\l\phi\l e_{i_1}^{\l1\r},\cdots,e_{i_n}^{\l n\r}\r\r_{\l i_1,\cdots,i_n\r\in I_1\times\cdots\times I_n}}$\linebreak Où $\l e_i^{\l j\r}\r_{i\in I_j}$ est une base de $E_j$}{2/3}
+\slideq{Structure de $\nlin$}{3/3}
+\slider{$\Bbbk$-ev}{3/3}
+\end{document}

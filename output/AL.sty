@@ -7,6 +7,10 @@
     \let\oldoplus\oplus
     \let\oplus\varoplus
 \fi
+\ifdefined\varotimes
+    \let\oldotimes\otimes
+    \let\otimes\varotimes
+\fi
 \let\oldgl\relax
 \DeclareMathOperator{\oldgl}{GL}
 \newcommand{\gl}[1]{\oldgl\l#1\r}
