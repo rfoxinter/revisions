@@ -372,7 +372,9 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\al{E}{}}
 \mcmd{\al[c]{E}{F}}
 \mcmd[\footnotemark]{\oplus}
-\footnotetext{Le \mintinline{latexmath}?\oplus? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \mintinline{latex}?\let\oldoplus\oplus? avant \mintinline{latex}?\usepackage{al}? puis de faire \mintinline{latex}?\let\oplus\oldoplus? après importation\\Comparaison \LaTeX{} - \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}} avec le plus normal $\oldoplus\oplus+$\\Ce caractère n'est pas modifié avec l'option \color{namecolour}\texttt{nofont}}
+\footnotetext{Le \mintinline{latexmath}?\oplus? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \mintinline{latex}?\let\oplus\oldoplus? après \mintinline{latex}?\usepackage{al}?\\Comparaison \LaTeX{} - \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}} avec le plus normal ${\oldoplus}{\oplus}{+}$\\Ce caractère n'est pas modifié avec l'option \color{namecolour}\texttt{nofont}}
+\mcmd[\footnotemark]{\otimes}
+\footnotetext{Le \mintinline{latexmath}?\otimes? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \mintinline{latex}?\let\otimes\oldotimes? après \mintinline{latex}?\usepackage{al}?\\Comparaison \LaTeX{} - \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}} avec le fois normal ${\oldotimes}{\otimes}{\times}$\\Ce caractère n'est pas modifié avec l'option \color{namecolour}\texttt{nofont}}
 \mcmd{\oldgl}
 \mcmd{\gl{E}}
 \mcmd[\footnotemark]{\olddim}
@@ -400,14 +402,15 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\so{n}}
 \mcmd{\so[n]{\mathbb{R}}}
 \mcmd{\alsym{E}}
+\mcmd{\alsym[+]{E}}
+\pagebreak
+\hrule
 \mcmd{\alant{E}}
 \mcmd{\oldsp}
 \mcmd{\sp{u}}
 \mcmd{\sp[\mathbb{C}]{u}}
 \mcmd{\id}
 \mcmd{\transp{u}}
-\pagebreak
-\hrule
 \mcmd{\discr[\mathcal{B}]{q}}
 \hsection{Analyse.sty}
 Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
