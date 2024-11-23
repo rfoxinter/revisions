@@ -9,7 +9,7 @@ Q/R & R/Q : True
 \frdef{Une personne autiste/une autiste};;\engdef{An autistic person}{An autistic person}\linebreak\emph{countable}
 \frdef{Une personne ayant un TDAH};;\engdef{A person with AD(H)D}{A person with AD(H)D}\linebreak\emph{countable}
 \frdef{Le TDAH};;\engdef{AD(H)D}{AD(H)D}\linebreak\emph{uncountable}
-\frdef{J'ai un TDAH (neutre)/\textsl{Je suis TDAH} (informel)};;\engdef{I have ADHD (neutral)/\textsl{I'm ADHD} (informal)}{I have ADHD (neutral)/\textsl{I'm ADHD} (informal)}
+\frdef{J'ai un TDAH (neutre)\\\textsl{Je suis TDAH} (informel)};;\engdef{I have ADHD (neutral)/\textsl{I'm ADHD} (informal)}{I have ADHD (neutral)/\textsl{I'm ADHD} (informal)}
 \frdef{Une personne sourde/Un sourd};;\engdef{A Deaf person}{A Deaf person}\linebreak\emph{countable}
 \frdef{Une personne malentendante/Un malentendant};;\engdef{A person who is hard-of-hearing\\A HOH person (writing only)}{A person who is hard-of-hearing\\A HOH person (writing only)}\linebreak\emph{countable}
 \frdef{Une personne aveugle/une aveugle};;\engdef{A blind person}{A blind person}\linebreak\emph{countable}
