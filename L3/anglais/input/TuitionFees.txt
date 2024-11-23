@@ -1,0 +1,31 @@
+Anglais B2+ -- Tuition fees
+Shuffle questions : True
+Q/R & R/Q : True
+\usepackage{vocab}\usepackage{tipa}
+!!fstWhere is the stress in ``percent"{?};;On the second syllable: per\emph{cent}
+!!fstWhere is the stress in ``percentage"{?};;On the second syllable: per\emph{cen}tage
+!!fstLa moitié de/de la/du/des;;Half of\linebreak{}[silent `l']
+!!fstA system where the children or family members of alumni get preferential treatment during the selection process;;The legacy system
+!!fstTo hail from\linebreak\emph{formal, slightly archaic};;To come from
+\frdef{Un candidat};;\engdef{An applicant}{An applicant}
+!!fst1/100;;A hundredth\linebreak{}One hundredth\linebreak{}A tiny minority
+!!fst1/10;;A tenth\linebreak{}One tenth\linebreak{}A small minority
+!!fst1/5;;A fifth\linebreak{}One fifth\linebreak{}A large minority\linebreak{}[the second 'f' is silent]
+!!fst1/4;;A quarter\linebreak{}One quarter
+!!fst1/3;;A third\linebreak{}One third
+!!fst2/3;;Two thirds\linebreak{}A majority
+!!fst3/4;;Three quarters\linebreak{}A large majority
+!!fst4/5;;Four fifths\linebreak{}An enormous majority
+!!fst9/10;;Nine tenths\linebreak{}An overwhelming majority
+!!fstA tier;;One of a series of rows or levels
+\frdef{Un système à deux vitesses};;\engdef{A two-tier system}{A two-tier system}
+!!fstWhat are the pronunciation rules for the following suffixes and words{?}\linebreak{}-ate (verb)\linebreak{}-ate (noun)\linebreak{}-age (suffix)\linebreak{}Age (noun/ verb/ adjective);;-ate (verb) = \textipa{/eIt/}\linebreak{}-ate (noun/ adjective) = \textipa{/@t/}\linebreak{}-age (suffix) = \textipa{/IdZ/}\linebreak{}Age (noun/ verb/ adjective) = \textipa{/eIdZ/}
+!!fstPRONUNCIATION\linebreak{}To predominate;;To pre\emph{do}minate\linebreak{}-\textipa{/eIt/}
+!!fstPRONUNCIATION\linebreak{}To approximate;;To a\emph{ppro}ximate\linebreak{}-\textipa{/eIt/}
+!!fstPRONUNCIATION\linebreak{}Approximate\linebreak{}(noun/adjective);;A\emph{ppro}ximate\linebreak{}-\textipa{/@t/}
+!!fstPRONUNCIATION\linebreak{}Proportionate;;Pro\emph{por}tionate\linebreak{}-\textipa{/@t/}
+!!fstPRONUNCIATION\linebreak{}Private;;\emph{Pri}vate\linebreak{}-\textipa{/@t/}
+!!fstPRONUNCIATION\linebreak{}Average;;\emph{Av}erage\linebreak{}-\textipa{/IdZ/}
+!!fstPRONUNCIATION\linebreak{}Advantage;;Ad\emph{van}tage\linebreak{}-\textipa{/IdZ/}
+!!fstPRONUNCIATION\linebreak{}Disadvantage;;Disad\emph{van}tage\linebreak{}-\textipa{/IdZ/}
+!!fstWhat is the rule for pronouncing numbers after a decimal point{?};;Each digit after a decimal point must be pronounced individually.\linebreak{}$15.152$ -- ``fifteen point one five two"
