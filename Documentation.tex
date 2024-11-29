@@ -446,6 +446,27 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \hrule
 \mcmd{\int[][a][b]{f'}}
 \mcmd{\int[x][][][\mu]{f(x)}}
+\mcmd{\altint{\iint}[x,y]{f(x,y)}}
+\vline\hfill
+\begin{minipage}{0.475\linewidth}
+    \begin{center}
+        \vspace{2pt}
+        \mintinline{latexmath}?\altint{\iint}[x,y][][]?\\\mintinline{latexmath}?[\mu\otimes\nu]{f(x,y)}?\footnotemark
+
+        \vspace{2pt}
+    \end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.475\linewidth}
+    \begin{center}
+        \vspace{2pt}
+        \altint{\iint}[x,y][][][\mu\otimes\nu]{f(x,y)}
+        
+        \vspace{2pt}
+    \end{center}
+\end{minipage}
+\hfill\vline\hrule
+\footnotetext{\mintinline{latexmath}?\altint? peut ne pas marcher avec des variables de plusieurs lettres\\Si la commande n'affiche pas le résultat attendu avec des variables de plusieurs lettres, il faut utiliser \mintinline{latex}?\usepackage[dvar]{analyse}?\\Cette option importe automatiquement \texttt{pgffor} (qui est utilisé par \tikzlg{} et \href{https://ctan.org/pkg/pgf}{\color{black}PGF})}
 \mcmd{\eval[{[a,b]}]{f(t)}}
 \mcmd{\eval[a][b]{f(t)}}
 \mcmd[\footnotemark]{\serie{a_n}}
