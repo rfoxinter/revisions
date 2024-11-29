@@ -1,7 +1,9 @@
 Groupe fondamental et revêtement -- Groupe fondamental
 Shuffle questions : True
 Q/R & R/Q : False
-\let\Pi\varPi
+\let\Pi\varPi\let\phi\varphi\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcounter{footnotemarkcounter}\setcounter{footnotemarkcounter}0\newcounter{footnotetextcounter}\setcounter{footnotetextcounter}0\renewcommand{\footnotemark}{\stepcounter{footnotemarkcounter}{\textsuperscript{\textit{\oldstylenums{\thefootnotemarkcounter}}}}}\let\oldfootnotetext\footnotetext\renewcommand{\footnotetext}[1]{{\stepcounter{footnotetextcounter}\def\thefootnote{\textit{\oldstylenums{\thefootnotetextcounter}}}\def\thempfootnote{\textit{\oldstylenums{\thefootnotetextcounter}}}\oldfootnotetext{#1}}}\renewcommand{\footnote}{\footnotemark\footnotetext}
 Espace pointé;;$\l B,b\r$ où $B$ est un espace topologique et $b\in B$ est appelé point base
 $c_1\sim c_2$\linebreak Homotopie de chemins;;Il existe $H\!:\!\left[0,1\right]\times\left[0,1\right]\to B$ continue telle que $H\l0,\cdot\r=c_1$, $H\l1,\cdot\r=c_2$, pour tout $s\in\left[0,1\right]$, $H\l s,0\r=c_1\l0\r=c_2\l0\r$ et $H\l s,1\r=c_1\l1\r=c_2\l1\r$
-$\Pi_1\l B,b\r$;;$\l\left\{\text{classes d'homotopie de lacets basés en $b$}\right\},*\r$\linebreak$*$ désigne la loi de concaténation de chemins
+$\Pi_1\l B,b\r$;;$\l\left\{\text{classes d'homotopie de lacets basés en $b$}\right\},*\r$\linebreak$*$ désigne la loi de concaténation de chemins\linebreak$\Pi_1$ est un foncteur de la catégorie des espaces topologiques dans la catégorie des groupes
+Propriété de $f*\!:\!\Pi_1\l X,x\r\to\Pi_1\l Y,y\r$ lorsque $f\!:\!X\to Y$ est un homéomorphisme;;$f*$ est un isomorphisme de groupes
+Lien entre $\Pi_1\l X,x\r$ et $\Pi_1\l X,y\r$ lorsqu'il existe un chemin $c$ de $x$ à $y$;;$\appl{\phi_c}{\Pi_1\l X,x\r}{\Pi_1\l X,y\r}{\left[\alpha\right]}{\left[c\alpha\overline c\right]}$\footnote{$\overline c$ désigne le chemin inverse de $c$} est un isomorphisme de groupes\linebreak En particulier, si $X$ est connexe par arcs, deux groupes fondamentaux sont isomorphes

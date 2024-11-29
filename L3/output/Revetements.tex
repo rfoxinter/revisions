@@ -1,0 +1,41 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\let\Pi\varPi\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}}\DeclareMathOperator{\pr}{pr}\let\phi\varphi\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[1]{\oldgal\l#1\r}\newcounter{footnotemarkcounter}\setcounter{footnotemarkcounter}0\newcounter{footnotetextcounter}\setcounter{footnotetextcounter}0\renewcommand{\footnotemark}{\stepcounter{footnotemarkcounter}{\textsuperscript{\textit{\oldstylenums{\thefootnotemarkcounter}}}}}\let\oldfootnotetext\footnotetext\renewcommand{\footnotetext}[1]{{\stepcounter{footnotetextcounter}\def\thefootnote{\textit{\oldstylenums{\thefootnotetextcounter}}}\def\thempfootnote{\textit{\oldstylenums{\thefootnotetextcounter}}}\oldfootnotetext{#1}}}\renewcommand{\footnote}{\footnotemark\footnotetext}
+\hypersetup{pdftitle=Groupe fondamental et revêtement -- Revêtements}
+\title{Groupe fondamental et revêtement\\\emph{Revêtements}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Revêtement d'un espace topologique $B$\linebreak Définition avec l'espace discret}{1/14}
+\slider{$p\!:\!X\to B$ continue avec $X$ un espace topologique tel que pour tout $y\in B$, il existe un voisinage ouvert $V$ de $y$, un espace discret $D$ et $h\!:\!V\times D\to p^{-1}\l V\r$ tels que le diagramme suivant commute\linebreak\begin{tikzcd}[column sep=1em,row sep=0.8em,ampersand replacement=\&]V\times D\arrow[dr,"\pr_1",swap]\arrow[rr,"h"]\&\&p^{-1}\l V\r\arrow[dl,"p"]\\\&V\&\end{tikzcd}}{1/14}
+\slideq{Revêtement d'un espace topologique $B$\linebreak Définition avec l'espace discret}{2/14}
+\slider{$p\!:\!X\to B$ continue avec $X$ un espace topologique tel que pour tout $y\in B$, il existe un voisinage ouvert $V$ de $y$, tel que $p^{-1}\l V\r$ est une réunion disjointe d'ouverts de $X$ qui s'envoient chacun homéomorphiquement sur $V$ via $p$}{2/14}
+\slideq{Revêtement associé à une action proprement discontinue}{3/14}
+\slider{Si $G\curvearrowright X$ par homéomorphismes est proprement discontinue, $G$ est discret et $X$ est un espace topologique alors $\pi\!:\!X\to G\backslash X$\footnote{$G\backslash X$ désigne les classes à gauche par l'action $G\curvearrowright X$} est un revêtement dont le groupe de Galois contient $G$}{3/14}
+\slideq{Groupe des automorphismes de $p$}{4/14}
+\slider{$\gal\l p\r:=\left\{\phi\text{ homéomorphismes},p\circ\phi=p\right\}$}{4/14}
+\slideq{CNS pour que $G\curvearrowright X$ soit proprement discontinue}{5/14}
+\slider{$G$ est discret, $X$ est localement compact et $G\curvearrowright X$ est libre et propre}{5/14}
+\slideq{Action propre\linebreak $G\curvearrowright X$}{6/14}
+\slider{Pour tout compact de $X$, $\left\{g\in G,g\l K\r\cap K\neq\varnothing\right\}$ est fini}{6/14}
+\slideq{Morphisme de revêtement}{7/14}
+\slider{$\phi\!:\!X\to X'$ tel que le diagramme suivant commute\linebreak\begin{tikzcd}[column sep=1em,row sep=0.8em,ampersand replacement=\&]X\arrow[dr,"p",swap]\arrow[rr,"\phi"]\&\&X'\arrow[dl,"p'"]\\\&B\&\end{tikzcd}}{7/14}
+\slideq{Action proprement discontinue\linebreak $G\curvearrowright X$}{8/14}
+\slider{Pour tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ tel que pour tout $g\neq1$, $g\l U\r\cap U=\varnothing$}{8/14}
+\slideq{Revêtement galoisien}{9/14}
+\slider{$p$ est galoisien si pour tout $x\in B$, $\gal\l p\r\curvearrowright p^{-1}\l x\r$ transitivement\linebreak Si cette propriété est vérifiée pour un $x\in B$ alors elle est vérifiée pour tout $x\in B$}{9/14}
+\slideq{Propriétés de $\gal p$ si $p\!:\!X\to B$ est un revêtement galoisien et $X$ est connexe}{10/14}
+\slider{$\gal p\curvearrowright X$ est proprement discontinue et $\gal p\backslash p$ et $B$ sont homéomorphes}{10/14}
+\slideq{Revêtement trivial}{11/14}
+\slider{Un revêtement pour lequel $V=B$ convient}{11/14}
+\slideq{Propriété locale d'un revêtement}{12/14}
+\slider{Un revêtement est un homéomorphisme local}{12/14}
+\slideq{Factorisation par un revêtement}{13/14}
+\slider{Si on a le diagramme suivant qui commute\linebreak\begin{tikzcd}[column sep=1em,row sep=0.8em,ampersand replacement=\&]\&X\arrow[dl]\arrow[dr,"p"]\&\\X/p\arrow[rr,"\phi"]\&\&B\end{tikzcd}\linebreak Alors $\phi$ est un homéomorphisme}{13/14}
+\slideq{Terminologie associée aux revêtements}{14/14}
+\slider{$X$: espace total\linebreak$B$: base\linebreak$p$: revêtement\linebreak$V$: voisinage distingé (de $y$) ou assiette\linebreak$h$: trivialisation locale\linebreak$p^{-1}\l y\r$: fibre de $y$ ou pile d'assiettes}{14/14}
+\end{document}

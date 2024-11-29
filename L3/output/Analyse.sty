@@ -49,11 +49,14 @@
 \fi
 \newcommand{\resetpartial}{\let\partial\slantpartial}
 
-\makeatletter
+
 \newcounter{mpdercount}
 \def\mpderden{}
 \newcounter{mpdervarcount}
 \def\prevmpdervar{}
+\newcounter{altintvarindex}
+\def\altintspacevars{}
+\def\altintvars{}
 \if@dvar
     \newcommand{\scanmpderlist}[1]{
         \foreach \i in {#1}{
@@ -76,22 +79,35 @@
         \def\prevmpdervar{}
         \scanmpderlist{#1}
     }
+    \newcommand{\scanaltintlist}[1]{
+        \foreach \i in {#1}{
+            \comparestring{\arabic{altintvarindex}}{0}{\xdef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\intd\noexpand#1}}{\xdef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\dd\noexpand#1}}
+            \xdef\altintvars{\unexpanded\expandafter{\altintvars}\noexpand\dd\noexpand#1}
+            \setcounter{altintvarindex}{1}
+        }
+    }
+    \newcommand{\scanaltint}[1]{
+        \setcounter{altintvarindex}{0}
+        \def\altintspacevars{}
+        \def\altintvars{}
+        \scanaltintlist{#1}
+    }
 \else
     \def\do@scanmpder#1,{%
-    \ifx#1\relax
-        \let\next\relax
-    \else
-        \stepcounter{mpdercount}
-        \comparestring{\prevmpdervar}{#1}{
-            \stepcounter{mpdervarcount}
-        }{
-            \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
-            \edef\mpderden{\unexpanded\expandafter{\mpderden}\noexpand\partial\noexpand#1}
-            \setcounter{mpdervarcount}{1}
-            \def\prevmpdervar{#1}
-        }
-        \let\next\do@scanmpder
-    \fi\next
+        \ifx#1\relax
+            \let\next\relax
+        \else
+            \stepcounter{mpdercount}
+            \comparestring{\prevmpdervar}{#1}{
+                \stepcounter{mpdervarcount}
+            }{
+                \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
+                \edef\mpderden{\unexpanded\expandafter{\mpderden}\noexpand\partial\noexpand#1}
+                \setcounter{mpdervarcount}{1}
+                \def\prevmpdervar{#1}
+            }
+            \let\next\do@scanmpder
+        \fi\next
     }
     \newcommand{\scanmpder}[1]{
         \setcounter{mpdercount}{0}
@@ -101,8 +117,23 @@
         \do@scanmpder#1,\relax,
         \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
     }
+    \def\do@scanaltint#1,{%
+        \ifx#1\relax
+            \let\next\relax
+        \else
+            \comparestring{\arabic{altintvarindex}}{0}{\edef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\intd\noexpand#1}}{\edef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\dd\noexpand#1}}
+            \edef\altintvars{\unexpanded\expandafter{\altintvars}\noexpand\dd\noexpand#1}
+            \setcounter{altintvarindex}{1}
+            \let\next\do@scanaltint
+        \fi\next
+    }
+    \newcommand{\scanaltint}[1]{
+        \setcounter{altintvarindex}{0}
+        \def\altintspacevars{}
+        \def\altintvars{}
+        \do@scanaltint#1,\relax,
+    }
 \fi
-\makeatother
 
 \DeclareMathOperator{\oldd}{d}
 \newcommand{\dd}{{\oldd}}
@@ -137,6 +168,11 @@
 \newcommand{\tmpint}[1][]{\def\intargII{#1}\tmptmpint}
 \newcommand{\tmptmpint}[1][]{\def\intargIII{#1}\tmptmptmpint}
 \newcommand{\tmptmptmpint}[2][]{{\analysedisplay\oldint\analyselimits_{\intargII}^{\intargIII}}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\intargI\else{{}\mathop{#1\l\dd\intvar\r}}\fi}
+\newcommand{\altint}[1]{\def\altintsymb{#1}\tmpaltint}
+\newcommand{\tmpaltint}[1][]{\scanaltint{#1}\tmptmpaltint}
+\newcommand{\tmptmpaltint}[1][]{\def\intargII{#1}\tmptmptmpaltint}
+\newcommand{\tmptmptmpaltint}[1][]{\def\intargIII{#1}\tmptmptmptmpaltint}
+\newcommand{\tmptmptmptmpaltint}[2][]{{\analysedisplay\altintsymb\analyselimits_{\intargII}^{\intargIII}}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\altintspacevars\else{{}\mathop{{\let\oldotimes\otimes\def\otimes{{\oldotimes}}#1}\l\altintvars\r}}\fi}
 \newcommand{\eval}[1][]{\def\evalargI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\evalargI}^{#1}}
 \newcommand{\serie}[1]{\oldsum#1}
