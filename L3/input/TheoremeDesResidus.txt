@@ -1,0 +1,12 @@
+Analyse complexe -- Théorème des résidus
+Shuffle questions : True
+Q/R & R/Q : False
+\DeclareMathOperator{\oldres}{Res}\newcommand{\res}[2]{\oldres\l#1;#2\r}\let\phi\varphi\let\Phi\varPhi\usepackage{analyse}\togglebigoppar\usepackage{complexes,usuelles}%\usepackage{analyse,trigo,complexes}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}
+$\res fz$;;Coefficient $a_{-1}$ du développement en série de Laurent de $f$ en $z$
+Un ouvert $U$ de $\mathbb C$ est élémentaire;;$U$ est non vide, connexe et toute fonction holomorphe sur $U$ admet une primitive sur $U$
+Transfert du caractère élémentaire par un holomorphisme;;Si $\phi\!:\!U_1\to U_2$ est un biholomorphisme et $U_1$ est élémentaire alors $U_2$ est élémentaire
+Stabilité du caractère ouvert par union;;Si $U_1$ et $U_2$ sont élémentaires et $U_1\cap U_2$ est connexe alors $U_1\cup U_2$ est élémentaire\linebreak Si $\l U_n\r$ est une suite croissante d'ouverts élémentaires alors $\bigcup{n\in\mathbb N}{}{U_n}$ est élémentaire
+CNS pour que $U$ soit élémentaire;;$U$ est simplement connexe\linebreak$U=\mathbb C$ ou $U$ est biholomorphe à $D\l 0,1\r$
+Indice du lacet $\gamma\!:\!\left[\alpha,\beta\right]\to\mathbb C$ continu par rapport à $z\in\mathbb C$;;$\Phi\l\beta\r-\Phi\l\alpha\r$ où $\Phi\l t\r$ est continue et vérifie $\phi\l t\r=\exp{2\i\pi\Phi\l t\r}$
+$I\l a,\gamma\r$ pour un lacet $\mathcal C^1$ par morceaux;;$\frac{1}{2\i\pi}{\displaystyle\oldint_\gamma}\frac{\dd z}{z-a}$
+Théorème des résidus;;Si $U$ est un ouvert élémentaire de $\mathbb C$, $F$ un ensemble fini de points de $U$, $f\in H\l U\setminus F\r$ et $\gamma$ un lacet $\mathcal C^1$ par morceaux dans $U\setminus F$ alors $\int[z][\gamma]{f\l z\r}=2\i\pi\sum{a\in F}{}{I\l a\gamma\r\res fa}$

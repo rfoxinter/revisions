@@ -23,6 +23,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20240921135513
 ../L3/flashcards/AnalyseComplexe/FonctionsMeromorphes
 20241114160614
+../L3/flashcards/AnalyseComplexe/TheoremeDesResidus
+20241204074740
 ../L3/flashcards/AnalyseComplexe/TheorieDeCauchy
 20241108164912
 ../L3/flashcards/FractionsContinues/FractionsContinuesFiniesSimples
