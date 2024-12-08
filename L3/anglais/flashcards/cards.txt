@@ -4,11 +4,13 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/anglais/flashcards/AnglaisB2+/ApplicationLetterAndInterview
 20241025224007
 ../L3/anglais/flashcards/AnglaisB2+/Disability
-20241123100517
+20241123100601
 ../L3/anglais/flashcards/AnglaisB2+/HigherEducation
 20241003172210
 ../L3/anglais/flashcards/AnglaisB2+/Internships
 20241005114902
+../L3/anglais/flashcards/AnglaisB2+/Linkers
+20241208212100
 ../L3/anglais/flashcards/AnglaisB2+/PowerDynamics
 20241020154818
 ../L3/anglais/flashcards/AnglaisB2+/Proposal

@@ -1,7 +1,7 @@
 Intégration et théorie de la mesure -- Espaces Lp!!ttleIntégration et théorie de la mesure -- Espaces \textit{L\raisebox{0.5ex}{\textsuperscript{p}}}
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{bigoperators,analyse,topologie}\togglebigoppar\toggleanalysepar\let\bar\overline\newcommand{\lnrm}[2][p]{\anrm[L^{#1}]{#2}}\let\phi\varphi\let\otimes\varotimes
+\usepackage{analyse,topologie}\togglebigoppar\toggleanalysepar\newcommand{\lnrm}[2][p]{\anrm[L^{#1}]{#2}}\let\phi\varphi\let\otimes\varotimes
 $\mathcal L^p\l\mu\r$;;$\left\{f\!:\!X\to\mathbb R\text{ mesurables},\int[\mu]{\left|f\right|^p}<+\infty\right\}$\linebreak$\mathcal L^\infty=\left\{f\!:\!X\to\mathbb R\text{ mesurables},\anrm f<+\infty\right\}$
 $L^p\l\mu\r$;;$\mathcal L^p/{\sim}$ où $f\sim g$ ssi $f=g$ $\mu$-pp
 $\lnrm f$;;$\l\int[\mu][X]{\left|f\right|^p}\r^{\oldfrac1p}$ si $p\in\mathbb N^*$\linebreak$\lnrm[\infty]f=\inf{\left\{c\geqslant0,\left|f\right|\leqslant c\text{ $\mu$-pp}\right\}}$
@@ -10,8 +10,5 @@ Inégalité de Hölder;;Si $p\in\left[1,+\infty\right]$ et $p'=\frac{p}{p-1}$ al
 Inégalité de Minkowski;;Si $f,g\!:\!X\to\mathbb R$ sont mesurables et $p\in\left[1,+\infty\right]$, alors $\lnrm{f+g}\leqslant\lnrm f+\lnrm g$
 Structures des $L^p$;;$L^p$ sont des espaces de Banach\linebreak$L^2$ est un expace de Hilbert avec $\psc fg=\int{fg}$
 Densité des fonctions en escalier dans $L^p$;;Si $p\in\left[1,+\infty\right]$ alors les fonctions en escalier sont dense dans $L^p$
-Densité des fonctions lipschitziennes dans $L^p$;;Si $p\in\left[1,+\infty\right[$ alors les fonctions lipschitziennes de $L^p$ sont dense dans $L^p$
+Densité des fonctions lipschitziennes dans $L^p$;;Si $p\in\left[1,+\infty\right[$  et $\mu$ est extérieurement régulière alors les fonctions lipschitziennes de $L^p$ sont dense dans $L^p$
 Densité des fonctions lipschitziennes à support compact dans $L^p$;;Si $\l X,d\r$ est un espace métrique localement compact (pour tout $x\in X$, il existe $O$ ouvert tel que $x\in O$ et $\overline O$ est compact), séparable et $\mu$ de Radon (finie sur tout compact) et $p\in\left[1,+\infty\right[$ alors les fonctions lipschitziennes à support compact de $L^p$ sont dense dans $L^p$
-$\mathcal A\otimes\mathcal B$;;$\sigma\l\left\{A\times B,\l A,B\r\in\mathcal A\times\mathcal B\right\}\r$\linebreak C'est la plus petite tribu qui rend les fonctions coordonnées mesurables 
-$\mathcal B\l X\times Y\r$;;$\mathcal B\l X\r\otimes\mathcal{B}\l Y\r$ si $X$ et $Y$ sont à base dénombrable d'ouverts
-$\mu\otimes\nu$;;L'unique mesure sur $\mathcal A\otimes\mathcal B$ vérifiant $\mu\otimes\nu\l A\times B\r=\mu\l A\r\times\nu\l B\r$\linebreak$\mu\otimes\nu\l C\r=\int[x][X][][\mu]{\nu\l C_x\r}=\int[y][Y][][\nu]{\mu\l C^y\r}$

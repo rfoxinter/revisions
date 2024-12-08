@@ -128,10 +128,16 @@
         \fi\next
     }
     \newcommand{\scanaltint}[1]{
-        \setcounter{altintvarindex}{0}
-        \def\altintspacevars{}
-        \def\altintvars{}
-        \do@scanaltint#1,\relax,
+        \if\relax\detokenize{#1}\relax
+            \setcounter{altintvarindex}{0}
+            \def\altintspacevars{}
+            \def\altintvars{}
+        \else
+            \setcounter{altintvarindex}{0}
+            \def\altintspacevars{}
+            \def\altintvars{}
+            \do@scanaltint#1,\relax,
+        \fi
     }
 \fi
 
