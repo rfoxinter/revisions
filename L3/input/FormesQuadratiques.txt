@@ -34,6 +34,6 @@ Forme bilinéaire associée à $u\in\al E{}$;;$\appl{\varPhi_u}{E\times E}{\math
 $u\in\al E{}$ est symétrique, $E$ $\mathbb R$-ev;;$\varPhi_u$ est une forme bilinéaire symétrique\linebreak De manière équvalente, $u^*=u$
 $u\in\alsym E$ est positif (resp. défini positif), $E$ $\mathbb R$-ev;;La forme quadratique $q_u$ associée à $\varPhi_u$ est positive (resp. définie positive)
 Propriétés des valeurs propres de $u\in\alsym E$;;$\sp u\subset\mathbb R$
-Théorème spectral;;Si $u\in\alsym E$, $E$ $\mathbb R$-ev, il existe une base orthonormale $\mathcal B$ telle que $\almat u{\mathcal B}{}$ est diagonale
+Théorème spectral (ou théorème de structure);;Si $u\in\alsym E$, $E$ $\mathbb R$-ev, il existe une base orthonormale $\mathcal B$ telle que $\almat u{\mathcal B}{}$ est diagonale
 Racine carrée d'un endomorphisme symétrique;;Si $u\in\alsym[++]E$, $E$ $\mathbb R$-ev, il existe un unique $h\in\alsym[++]E$ tel que $u=h^2$\linebreak De plus, $h\in\mathbb R\left[u\right]$
 Décomposition polaire;;Si $g\in\gl E$, $E$ $\mathbb R$-ev, il existe un unique $\l u,s\r\in\orth E\times\alsym[++]E$ tel que $g=us$\linebreak De plus, $u\in\mathbb{R}\left[g^*g\right]$

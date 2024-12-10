@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\DeclareMathOperator{\oldres}{Res}\newcommand{\res}[2]{\oldres\l#1;#2\r}\let\phi\varphi\let\Phi\varPhi\usepackage{analyse}\togglebigoppar\usepackage{complexes,usuelles}%\usepackage{analyse,trigo,complexes}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}
+\DeclareMathOperator{\oldres}{Res}\newcommand{\res}[2]{\oldres\l#1;#2\r}\let\phi\varphi\let\Phi\varPhi\usepackage{analyse}\togglebigoppar\usepackage{complexes,usuelles}
 \hypersetup{pdftitle=Analyse complexe -- Théorème des résidus}
 \title{Analyse complexe\\\emph{Théorème des résidus}}
 \author{}
@@ -10,20 +10,28 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{CNS pour que $U$ soit élémentaire}{1/8}
-\slider{$U$ est simplement connexe\linebreak$U=\mathbb C$ ou $U$ est biholomorphe à $D\l 0,1\r$}{1/8}
-\slideq{Un ouvert $U$ de $\mathbb C$ est élémentaire}{2/8}
-\slider{$U$ est non vide, connexe et toute fonction holomorphe sur $U$ admet une primitive sur $U$}{2/8}
-\slideq{$I\l a,\gamma\r$ pour un lacet $\mathcal C^1$ par morceaux}{3/8}
-\slider{$\frac{1}{2\i\pi}{\displaystyle\oldint_\gamma}\frac{\dd z}{z-a}$}{3/8}
-\slideq{Transfert du caractère élémentaire par un holomorphisme}{4/8}
-\slider{Si $\phi\!:\!U_1\to U_2$ est un biholomorphisme et $U_1$ est élémentaire alors $U_2$ est élémentaire}{4/8}
-\slideq{$\res fz$}{5/8}
-\slider{Coefficient $a_{-1}$ du développement en série de Laurent de $f$ en $z$}{5/8}
-\slideq{Indice du lacet $\gamma\!:\!\left[\alpha,\beta\right]\to\mathbb C$ continu par rapport à $z\in\mathbb C$}{6/8}
-\slider{$\Phi\l\beta\r-\Phi\l\alpha\r$ où $\Phi\l t\r$ est continue et vérifie $\phi\l t\r=\exp{2\i\pi\Phi\l t\r}$}{6/8}
-\slideq{Stabilité du caractère ouvert par union}{7/8}
-\slider{Si $U_1$ et $U_2$ sont élémentaires et $U_1\cap U_2$ est connexe alors $U_1\cup U_2$ est élémentaire\linebreak Si $\l U_n\r$ est une suite croissante d'ouverts élémentaires alors $\bigcup{n\in\mathbb N}{}{U_n}$ est élémentaire}{7/8}
-\slideq{Théorème des résidus}{8/8}
-\slider{Si $U$ est un ouvert élémentaire de $\mathbb C$, $F$ un ensemble fini de points de $U$, $f\in H\l U\setminus F\r$ et $\gamma$ un lacet $\mathcal C^1$ par morceaux dans $U\setminus F$ alors $\int[z][\gamma]{f\l z\r}=2\i\pi\sum{a\in F}{}{I\l a\gamma\r\res fa}$}{8/8}
+\slideq{$\res fa$ si $a$ est un pôle d'ordre $k\geqslant1$}{1/12}
+\slider{$\frac{1}{\l k-1\r!}\widetilde f^{k-1}\l a\r$ où $\widetilde{f}\l z\r=\l z-a\r^kf\l z\r$}{1/12}
+\slideq{Théorème des résidus}{2/12}
+\slider{Si $U$ est un ouvert élémentaire de $\mathbb C$, $F$ un ensemble fini de points de $U$, $f\in H\l U\setminus F\r$ et $\gamma$ un lacet $\mathcal C^1$ par morceaux dans $U\setminus F$ alors $\int[z][\gamma]{f\l z\r}=2\i\pi\sum{a\in F}{}{I\l a,\gamma\r\res fa}$}{2/12}
+\slideq{CNS pour que $U$ soit élémentaire}{3/12}
+\slider{$U$ est simplement connexe\linebreak\null\linebreak$U=\mathbb C$ ou $U$ est biholomorphe à $D\l 0,1\r$}{3/12}
+\slideq{$\res{\frac{f}{g'}}a$ si $v_a\l f\r\geqslant0$ et $v_a\l g\r=1$}{4/12}
+\slider{$\frac{f\l a\r}{g\l a\r}$}{4/12}
+\slideq{$\res fa$ si $v_a\l f\r\geqslant-1$}{5/12}
+\slider{$\lim[z\to a]{\l z-a\r f\l z\r}$}{5/12}
+\slideq{Un ouvert $U$ de $\mathbb C$ est élémentaire}{6/12}
+\slider{$U$ est non vide, connexe et toute fonction holomorphe sur $U$ admet une primitive sur $U$}{6/12}
+\slideq{Indice du lacet $\gamma\!:\!\left[\alpha,\beta\right]\to\mathbb C$ continu par rapport à $z\in\mathbb C$}{7/12}
+\slider{$\Phi\l\beta\r-\Phi\l\alpha\r$ où $\Phi\l t\r$ est continue et vérifie $\gamma\l t\r=\exp{2\i\pi\Phi\l t\r}$}{7/12}
+\slideq{Stabilité du caractère élémentaire par union}{8/12}
+\slider{Si $U_1$ et $U_2$ sont élémentaires et $U_1\cap U_2$ est connexe alors $U_1\cup U_2$ est élémentaire\linebreak Si $\l U_n\r$ est une suite croissante d'ouverts élémentaires alors $\bigcup{n\in\mathbb N}{}{U_n}$ est élémentaire}{8/12}
+\slideq{$\res fz$}{9/12}
+\slider{Coefficient $a_{-1}$ du développement en série de Laurent de $f$ en $z$}{9/12}
+\slideq{$I\l a,\gamma\r$ pour un lacet $\mathcal C^1$ par morceaux}{10/12}
+\slider{$\frac{1}{2\i\pi}{\displaystyle\oldint_\gamma}\frac{\dd z}{z-a}$}{10/12}
+\slideq{$\res{\frac{f'}{f}}a$ pour $f$ non identiquement nulle}{11/12}
+\slider{$v_a\l f\r$}{11/12}
+\slideq{Transfert du caractère élémentaire par un holomorphisme}{12/12}
+\slider{Si $\phi\!:\!U_1\to U_2$ est un biholomorphisme et $U_1$ est élémentaire alors $U_2$ est élémentaire}{12/12}
 \end{document}
