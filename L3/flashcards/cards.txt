@@ -6,7 +6,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/Algebre1/FormesBilineaires
 20241104094001
 ../L3/flashcards/Algebre1/FormesQuadratiques
-20241115084340
+20241210093127
 ../L3/flashcards/Algebre1/GroupeSymetrique
 20241005183407
 ../L3/flashcards/Algebre1/Groupes
@@ -14,7 +14,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/Algebre1/GroupesDeSylow
 20240929111927
 ../L3/flashcards/Algebre1/ProduitTensoriel
-20241115091650
+20241210093551
 ../L3/flashcards/Algebre1/SommeDirectesEtProduits
 20241006110233
 ../L3/flashcards/AnalyseComplexe/EtudeLocaleDeFonctionsHolomorphes
@@ -24,7 +24,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/AnalyseComplexe/FonctionsMeromorphes
 20241114160614
 ../L3/flashcards/AnalyseComplexe/TheoremeDesResidus
-20241204074740
+20241210083818
 ../L3/flashcards/AnalyseComplexe/TheorieDeCauchy
 20241108164912
 ../L3/flashcards/FractionsContinues/FractionsContinuesFiniesSimples
@@ -39,8 +39,6 @@ https://rfoxinter.github.io/revisions/flashcards/
 20241113201934
 ../L3/flashcards/GroupeFondamentalEtRevetement/Revetements
 20241129185340
-../L3/flashcards/IntegrationEtMesure/MesuresProduitEtChangementsDeVariables
-20241208161259
 ../L3/flashcards/IntegrationEtTheorieDeLaMesure/ConstructionDeMesures
 20241026103118
 ../L3/flashcards/IntegrationEtTheorieDeLaMesure/EspacesLp
