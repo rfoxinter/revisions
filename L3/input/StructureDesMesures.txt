@@ -1,0 +1,13 @@
+Intégration et théorie de la mesure -- Structure des mesures
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}\togglebigoppar\usepackage{usuelles}\usepackage{analyse}\toggleanalysepar
+Mesure signée;;$\nu\!:\!\mathcal A\to\mathbb R$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge absolument
+Mesure complexe;;$\nu\!:\!\mathcal A\to\mathbb C$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge absolument
+Mesure vectorielle;;$\nu\!:\!\mathcal A\to\mathbb R^d$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge normalement
+Mesure positive associée à une mesure $\nu$;;$\left|\nu\right|$ définie par $\left|\nu\right|\l A\r=\sup{\left\{\sum{n=0}{+\infty}{\left|\nu\l A_n\r\right|},A=\bigsqcup{n=0}{+\infty}{A_n}\right\}}$\linebreak C'est la plus petite mesure positive $\mu$ qui vérifie $\left|\nu\l A\r\right|\leqslant\mu\l A\r$
+$\nu$ est absolument continue par rapport à la mesure positive $\mu$\linebreak$\nu\ll\mu$;;$\forall A\in\mathcal A$, $\mu\l A\r=0\Rightarrow\nu\l A\r=0$\linebreak Ou de manière équivalente, $\forall A\in\mathcal A$, $\mu\l A\r=0\Rightarrow\left|\nu\right|\l A\r=0$
+Deux mesures positives $\mu$ et $\widetilde\mu$ sont étrangères\linebreak$\mu\perp\widetilde\mu$;;$\exists A\in\mathcal A$, $\mu\l A\r=0\land\widetilde\mu\l A^\complement\r=0$
+$\nu=f\mu$ avec $f\in L^1$;;$\forall A\in\mathcal A$, $\nu\l A\r=\int[\mu][A]{f}$
+Théorème de Radon-Nikodym;;Si $\l X,\mathcal A\r$ est un espace mesurable, $\mu$ et $\nu$ deux mesures positives $\sigma$-finies, alors $\nu\ll\mu$ si et seulement s'il existe $f\!:\!\l X,\mathcal A\r\to\mathbb R_+$ mesurable telle que $\nu=f\mu$\linebreak Une telle fonction $f$ est unique $\mu$-pp
+Théorème de décomposition de Lebesgue;;Si $\l X,\mathcal A\r$ est un espace mesuré, $\mu$ une mesure positive $\sigma$-finie et $\nu$ une mesure (positive, signée ou complexe) $\sigma$-finie alors il existe un unique couple $\l\nu_a,\nu_s\r$ de mesures (positives, signées ou complexes) telles que $\nu=\nu_a+\nu_s$, $\nu_a\ll\mu$ et $\nu_s\perp\mu$

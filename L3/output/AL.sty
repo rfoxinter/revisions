@@ -8,8 +8,11 @@
     \let\oplus\varoplus
 \fi
 \ifdefined\varotimes
-    \let\oldotimes\otimes
-    \let\otimes\varotimes
+    \ifdefined\oldotimes
+    \else
+        \let\oldotimes\otimes
+        \let\otimes\varotimes
+    \fi
 \fi
 \let\oldgl\relax
 \DeclareMathOperator{\oldgl}{GL}

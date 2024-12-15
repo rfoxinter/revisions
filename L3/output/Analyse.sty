@@ -29,6 +29,18 @@
     \def\analysedisplay{}
 \fi
 
+\if@notnofont
+    \def\intkern@{\mkern-9mu\mathchoice{\mkern-6mu}{}{}{}}
+\fi
+\ifdefined\varotimes
+    \ifdefined\oldotimes
+    \else
+        \let\oldotimes\otimes
+        \let\otimes\varotimes
+    \fi
+\fi
+\newcommand{\derfrac}[2]{{\analysedisplay\oldfrac{#1}{#2}}}
+
 \newcommand{\toggleanalysepar}{\comparestring{\analyseleftp}{}{\def\analyseleftp{\l}\def\analyserightp{\r}}{\def\analyseleftp{}\def\analyserightp{}}}
 \newcommand{\toggleanalyselimits}{\comparestring{\analyselimits}{\limits}{\def\analyselimits{\nolimits}}{\def\analyselimits{\limits}}}
 \newcommand{\autoanalyselimits}{\def\analyselimits{}}
@@ -150,20 +162,20 @@
         \def\derargIII{}
     \else
         \def\derargIII{\analyseleftp{#3}\analyserightp}
-    \fi\frac{\dd^{\derargI}{#2}}{\dd#1^{\derargI}}\derargIII}
+    \fi\derfrac{\dd^{\derargI}{#2}}{\dd#1^{\derargI}}\derargIII}
 \newcommand{\pder}[1][]{\def\pderargI{#1}\tmppder}
 \newcommand{\tmppder}[3][x]{
     \if\relax\detokenize{#3}\relax
         \def\pderargIII{}
     \else
         \def\pderargIII{\analyseleftp{#3}\analyserightp}
-    \fi\frac{\partial^{\pderargI}{#2}}{\partial#1^{\pderargI}}\pderargIII}
+    \fi\derfrac{\partial^{\pderargI}{#2}}{\partial#1^{\pderargI}}\pderargIII}
 \newcommand{\mpder}[3][x]{\scanmpder{#1}
     \if\relax\detokenize{#3}\relax
         \def\mpderargIII{}
     \else
         \def\mpderargIII{\analyseleftp{#3}\analyserightp}
-    \fi\frac{\partial^{\arabic{mpdercount}}{#2}}{\mpderden}\mpderargIII}
+    \fi\derfrac{\partial^{\arabic{mpdercount}}{#2}}{\mpderden}\mpderargIII}
 \let\oldint\int
 \renewcommand{\int}[1][]{\def\intvar{#1}
     \if\relax\detokenize{#1}\relax
