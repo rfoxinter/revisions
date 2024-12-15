@@ -460,13 +460,15 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \begin{minipage}{0.475\linewidth}
     \begin{center}
         \vspace{2pt}
-        \altint{\iint}[x,y][][][\mu\otimes\nu]{f(x,y)}
+        $\altint{\iint}[x,y][][][\mu\otimes\nu]{f(x,y)}$
         
         \vspace{2pt}
     \end{center}
 \end{minipage}
 \hfill\vline\hrule
 \footnotetext{\mintinline{latexmath}?\altint? peut ne pas marcher avec des variables de plusieurs lettres\\Si la commande n'affiche pas le résultat attendu avec des variables de plusieurs lettres, il faut utiliser \mintinline{latex}?\usepackage[dvar]{analyse}?\\Cette option importe automatiquement \texttt{pgffor} (qui est utilisé par \tikzlg{} et \href{https://ctan.org/pkg/pgf}{\color{black}PGF})}
+\mcmd[\footnotemark]{\otimes}
+\footnotetext{Le \mintinline{latexmath}?\otimes? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \mintinline{latex}?\let\otimes\oldotimes? après \mintinline{latex}?\usepackage{al}?\\Comparaison \LaTeX{} - \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}} avec le fois normal ${\oldotimes}{\otimes}{\times}$\\Ce caractère n'est pas modifié avec l'option \color{namecolour}\texttt{nofont}}
 \mcmd{\eval[{[a,b]}]{f(t)}}
 \mcmd{\eval[a][b]{f(t)}}
 \mcmd[\footnotemark]{\serie{a_n}}
@@ -484,7 +486,19 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd{\epi{f}}
 \mcmd{\id}
 \toggleanalysepar\subsection{L'option {\color{namecolour}\texttt{nopar}}}
-Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes comme \mintinline{latexmath}?\der?, \mintinline{latexmath}?\pder?, \mintinline{latexmath}?\mpder?, et \mintinline{latexmath}?\int? n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\der{}{f(x)}? qui produit <<~$\der{}{f(x)}$~>> et \mintinline{latexmath}?\int[x]{f(x)}? qui produit <<~$\int[x]{f(x)}$~>>. Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\toggleanalysepar?.
+Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes comme \mintinline{latexmath}?\der?, \mintinline{latexmath}?\pder?, \mintinline{latexmath}?\mpder?, et \mintinline{latexmath}?\int? n'ont plus de parenthèses automatiques. Avec cette option, \mintinline{latexmath}?\der{}{f(x)}? produit <<~$\der{}{f(x)}$~>>; \mintinline{latexmath}?\int[x]{f(x)}? produit <<~$\int[x]{f(x)}$~>>.
+
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\toggleanalysepar?.
+\toggleanalysepar\toggleanalysedisplay\subsection{L'option {\color{namecolour}\texttt{nodisplay}}}
+Si {\color{namecolour}\texttt{nodisplay}} est utilisé, les commandes ne sont plus affichées en style \mintinline{latexmath}?\displaystyle? mais avec le style par défaut. Avec cette option, \mintinline{latexmath}?\der{}{f(x)}? produit <<~$\der{}{f(x)}$~>> et \mintinline{latexmath}?\int[x]{f(x)}? produit <<~$\int[x]{f(x)}$~>>.
+
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\toggleanalysedisplay?.
+\toggleanalysedisplay\toggleanalyselimits\subsection{L'option {\color{namecolour}\texttt{limits}}}
+Si {\color{namecolour}\texttt{limits}} est utilisé, les indices des commandes se placent comme avec \mintinline{latexmath}?\limits?. Avec cette option, \mintinline{latexmath}?\int[x][X]{f(x)}? produit <<~$\int[x][X]{f(x)}$~>>.
+
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\toggleanalyselimits?.
+\toggleanalyselimits\subsection{La commande {\color{keycolour}\texttt{\textbackslash autoanalyselimits}}}
+Il est possible de remettre le comportement automatiques de \LaTeX{} pour l'affichage des indices avec \mintinline{latex}?\autoanalyselimits?. La commande \mintinline{latex}?\toggleanalyselimits? remettra alors le comportement par défaut du package (donc avec \mintinline{latexmath}?\limits?).
 \hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
@@ -529,17 +543,17 @@ Cette option importe automatiquement le package \texttt{graphics} (disponible su
 \hrule
 \mcmd{b_0+\fracK{n>0}{}{\frac{a_n}{b_n}}}
 \togglebigoppar\subsection{L'option {\color{namecolour}\texttt{nopar}}}
-Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes n'ont plus de parenthèses automatiques. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
+Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes n'ont plus de parenthèses automatiques. Avec cette option, \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
 
-Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\togglebigoppar?.
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\togglebigoppar?.
 \togglebigoppar\togglebigopdisplay\subsection{L'option {\color{namecolour}\texttt{nodisplay}}}
-Si {\color{namecolour}\texttt{nodisplay}} est utilisé, les commandes ne sont plus affichées en mode \mintinline{latexmath}?\displaystyle?. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
+Si {\color{namecolour}\texttt{nodisplay}} est utilisé, les commandes ne sont plus affichées en style \mintinline{latexmath}?\displaystyle? mais avec le style par défaut. Avec cette option, \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
 
-Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\togglebigopdisplay?.
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\togglebigopdisplay?.
 \togglebigopdisplay\togglebigoplimits\subsection{L'option {\color{namecolour}\texttt{nolimits}}}
-Si {\color{namecolour}\texttt{nolimits}} est utilisé, les indices des commandes se placent comme avec \mintinline{latexmath}?\nolimits?. Avec cette option, on a \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? qui produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
+Si {\color{namecolour}\texttt{nolimits}} est utilisé, les indices des commandes se placent comme avec \mintinline{latexmath}?\nolimits?. Avec cette option, \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
 
-Il est possible de changer cette option au milieu du document en utilisant la commande \mintinline{latex}?\togglebigoplimits?.
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\togglebigoplimits?.
 \togglebigoplimits\subsection{La commande {\color{keycolour}\texttt{\textbackslash autobigoplimits}}}
 Il est possible de remettre le comportement automatiques de \LaTeX{} pour l'affichage des indices avec \mintinline{latex}?\autobigoplimits?. La commande \mintinline{latex}?\togglebigoplimits? remettra alors le comportement par défaut du package (donc avec \mintinline{latexmath}?\limits?).
 \hsection{Complexes.sty}
