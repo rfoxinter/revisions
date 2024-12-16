@@ -9,3 +9,6 @@ Théorème de Poincaré;;Si $X$ est compact et $f\!:\!X\to Y$ est bijective et c
 Théorème de Riesz;;La boule unité d'un ev $E$ est compacte si et seulement si $E$ est de dimension finie
 Théorème de Borel-Lebesgue;;L'espace métrique $\l E,d\r$ est compact si et seulement si de tout recouvrement par des ouverts, on peut extraire un sous-recouvrement fini
 Description topologique des espaces compact;;Si $E$ est un espace topologique, $E$ est compact si \emph{$E$ est séparé}\footnote{seulement en français} et tout recouvrement ouvert de $E$ a un sous-recouvrement fini
+Propriété du compact $\l S,d\r$\linebreak $S=\left\{0,1\right\}^{\mathbb N^*}$, $d\l x,y\r=2^{-\min\l\left\{ n\in\mathbb N,x_n\neq y_n\right\}\r}$;;Si $\l K,d'\r$ est un espace compact alors il existe $f\!:\!S\to K$ une surjection continue
+Théorème de Weirstrass;;Si $I=\left[a,b\right]$ alors toute fonction continue sur $I$ est limite uniforme de fonctions polynomiales
+Théorème de Stone;;Si $\l X,d\r$ est un espace métrique compact et si $A$ est une $\mathbb R$-algèbre de fonctions continues qui sépare les points ($\forall x\neq y$, $\exists f\in A$, $f\l x\r\neq f\l y\r$) alors $A$ est dense dans $\mathcal C^0\l X,\mathbb R\r$

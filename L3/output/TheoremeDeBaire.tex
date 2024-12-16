@@ -1,0 +1,23 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{bigoperators}\togglebigoppar\usepackage{topologie}\usepackage{usuelles}
+\hypersetup{pdftitle=Topologie et calcul différentiel -- Théorème de Baire}
+\title{Topologie et calcul différentiel\\\emph{Théorème de Baire}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Théorème du graphe fermé}{1/5}
+\slider{Si $E$ et $F$ sont deux espaces de Banach, et $f\!:\!E\to F$ est linéaire, alors $f$ est continue si et seulement si son graphe ($\left\{\l x,f\l x\r\r,x\in E\right\}$) est fermé dans $E\times F$}{1/5}
+\slideq{Théorème de l'application ouverte}{2/5}
+\slider{Si $E$ et $F$ sont deux espaces de Banach et si $f\!:\!E\to F$ est linéaire, continue et surjective alors il existe $r>0$ tel que $f\l\mathcal B_E\l0,1\r\r\supset\mathcal B_F\l0,r\r$\linebreak En particulier, une telle application est ouverte et $f^{-1}$ est continue}{2/5}
+\slideq{Théorème de Banach-Steinhauss}{3/5}
+\slider{Soient $E$ un espace de Banach, $F$ un evn et $\l f_i\r$ une famille dénombrable d'applications linéaires $f_i\!:\!E\to F$ continues, alors\linebreak Soit il existe $M$ tel que $\nnrm{f_i}\leqslant M$ pour tout $i$\linebreak Soit il existe un $G_\delta$ dense $A$ de $E$ tel que pour tout $x\in A$, $\sup{\left\{\nrm{f\l x\r}\right\}}=+\infty$}{3/5}
+\slideq{Théorème de Baire avec des ouverts}{4/5}
+\slider{Si $\l E,d\r$ est un espace métrique complet et $\l U_n\r_{n\geqslant 1}$ une famille dénombrable d'ouverts denses alors $\bigcap{n=1}{+\infty}{U_n}$ est dense}{4/5}
+\slideq{Théorème de Baire avec des fermés}{5/5}
+\slider{Si $\l E,d\r$ est un espace métrique complet et $\l F_n\r_{n\geqslant 1}$ une famille dénombrable de fermés d'intérieur vide alors $\bigcup{n=1}{+\infty}{F_n}$ est d'intérieur vide}{5/5}
+\end{document}

@@ -1,0 +1,10 @@
+Topologie et calcul différentiel -- Dual d'un espace de Banach
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{topologie}\let\bar\overline\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcommand{\altappl}[5]{\begin{array}{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}
+Théorème de Hahn-Banach;;Si $E$ est un evn, $V$ un sev de $E$ et $f\!:\!V\to\mathbb R$ une application linéaire continue alors $f$ se prolonge en une application continue $\bar f\!:\!E\to\mathbb R$ telle que $\nrm[E^*]{\bar f}=\nrm[V^*]{\bar f}$
+Application duale;;Si $E$ et $F$ sont deux evn et $f\!:\!E\to F$ est linéaire et continue alors $\appl{f^*}{F^*}{E^*}{\mu}{\l x\mapsto\mu\l f\l x\r\r\r}$ vérifie $\nnrm f=\nnrm{f^*}$
+Morphisme canonique $E\to E^{**}$;;$\nappl{E}{E^{**}}{x}{\l\altappl{\delta_x}{E^*}{\mathbb{R}}{f}{f\l x\r}\r}$\linebreak Cette application est une isométrie
+Espace reflexif;;Un espace de Banach est réflexif si l'application $\nappl{E}{E^{**}}{x}{\l\altappl{\delta_x}{E^*}{\mathbb{R}}{f}{f\l x\r}\r}$ est un isomorphisme
+Théorème de représentation de Riesz;;Si $\mu\in E^*$ alors in existe un unique $y\in E$ tel que $\mu=\psc y\bullet$
+Propriétés de $E$ si $E^*$ est séparable;;Si $E$ est un Banach et $E^*$ est séparable alors $E$ l'est\linebreak En particulier, si $E$ est séparable et réflexif alors $E^*$ est séparable
