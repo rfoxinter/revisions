@@ -1,0 +1,16 @@
+Analyse complexe -- Séries de Dirichlet
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{usuelles,complexes,equivalents,matrices,arithmetique}\usepackage[nopar]{bigoperators}\def\sigmaabs{\sigma_\text{abs}}
+Abscisse de convergence d'une série de Dirichlet;;$\inf{\left\{\sigma\in\mathbb C,\sum{n=1}{+\infty}{a_n\sigma^n}\text{ converge}\right\}}$\linebreak Une série de Dirichlet est holomorphe sur $\left\{\pRe z>\sigma\right\}$
+Abscisse de convergence d'une série de Dirichlet;;$\inf{\left\{\sigma\in\mathbb C,\sum{n=1}{+\infty}{a_n\sigma^n}\text{ converge absolument}\right\}}$
+Équivalent de la série de Dirichlet $\sum{n=1}{+\infty}{a_nn^{-s}}$ en $\pRe s\to+\infty$;;$\eq[\pRe s\to+\infty]{\sum{n=1}{+\infty}{a_nn^{-s}}}{a_{n_0}n_0^{-s}}$ où $n_0=\min{\left\{n\in\mathbb N,a_n\neq0\right\}}$
+Valeurs de $\sigma$ et $\sigmaabs$ pour $\l a_n\r$ périodique non nulle;;$\sigmaabs=1$, $\sigma\in\left[0,1\right]$\linebreak$\sigma=\tcase{0\&\text{si $\sum{n=1}{N}{a_n}=0$}\\1\&\text{sinon}\\}$
+Théorème de Landau;;Si $\sum{n=1}{+\infty}{a_nn^{-s}}$ est une série de Dirichlet à termes positifs avec une abscisse de convergence $\sigma\in\mathbb R$, alors $\sum{n=1}{+\infty}{a_nn^{-s}}$ est définie et holomorphe sur le demi-plan $\left\{\pRe z>\sigma\right\}$ et ne se prolonge analytiquement sur aucun voisinage de $\sigma$
+Caractère de Dirichlet modulo $N$;;Morphisme de groupes $\chi\!:\!\l\mathbb Z/n\mathbb Z\r^\times\to\mathbb C^*$\linebreak$\chi$ est étendu à $\mathbb Z$ par $\chi\l n\r=\tcase{\chi\l\bar n\r\&\text{si $n\land N=1$}\\0\&\text{sinon}\\}$
+Développement eulérien d'une série de Dirichlet associé à une fonction multiplicative;;Pour $\pRe z>\sigmaabs$, $\sum{n=1}{+\infty}{a\l n\r n^{-s}}=\prod{p\in\mathbb P}{}{\l\sum{k=0}{+\infty}{a\l p^k\r p^{-ks}}\r}$
+Développement eulérien d'une série de Dirichlet associé à une fonction strictemene multiplicative bornée;;Pour $\pRe z>1$, $\sum{n=1}{+\infty}{a\l n\r n^{-s}}=\prod{p\in\mathbb P}{}{\l1-a\l p\r p\r^{-1}}$\linebreak Le produit infini converge sur tout compact de $\left\{\pRe s>1\right\}$
+Densité analytique;;Soit $\zeta_A\l s\r=\sum{p\in A}{}{p^{-s}}$ (pour $\pRe s>1$)\linebreak$A\subset\mathbb P$ admet une densité analytique $\delta\in\left[0,1\right]$ si $\lim[s\to1^+]{\frac{\zeta_A\l s\r}{\zeta_{\mathbb P}\l s\r}}=\delta$
+Densité naturelle;;$A\subset\mathbb P$ admet une densité analytique $\delta\in\left[0,1\right]$ si $\lim[x\to+\infty]{\frac{\left|\left\{p\in A,p\leqslant x\right\}\right|}{\left|\left\{p\in\mathbb P,p\leqslant x\right\}\right|}}=\delta$
+Théorème de la progression arithmétique de Dirichlet;;En posant $\zeta_{\mathbb P,\alpha}\l s\r=\sum{\substack{p\in\mathbb P\\\cgr p\alpha m}}{}{p^{-s}}$, $\zeta_{\mathbb P,\alpha}\l s\r-\frac{1}{\phi\l m\r}\frac{1}{s-1}$ définie pour $\pRe s>1$ se prolonge en une fonction holomorphe au voisinage de $1$ et $\left\{p\in\mathbb P,\cgr p\alpha m\right\}$ a une densité analytique de $\frac{1}{\phi\l m\r}$
+Théorème des nombres premiers;;$\pi\l x\r=\left|\left\{p\in\mathbb P,p\leqslant x\right\}\right|$\linebreak$\eq[x\to+\infty]{\pi\l x\r}{\frac{x}{\log\l x\r}}$

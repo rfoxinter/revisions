@@ -1,0 +1,37 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{usuelles,complexes,equivalents,matrices,arithmetique}\usepackage[nopar]{bigoperators}\def\sigmaabs{\sigma_\text{abs}}
+\hypersetup{pdftitle=Analyse complexe -- Séries de Dirichlet}
+\title{Analyse complexe\\\emph{Séries de Dirichlet}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Théorème de la progression arithmétique de Dirichlet}{1/12}
+\slider{En posant $\zeta_{\mathbb P,\alpha}\l s\r=\sum{\substack{p\in\mathbb P\\\cgr p\alpha m}}{}{p^{-s}}$, $\zeta_{\mathbb P,\alpha}\l s\r-\frac{1}{\phi\l m\r}\frac{1}{s-1}$ définie pour $\pRe s>1$ se prolonge en une fonction holomorphe au voisinage de $1$ et $\left\{p\in\mathbb P,\cgr p\alpha m\right\}$ a une densité analytique de $\frac{1}{\phi\l m\r}$}{1/12}
+\slideq{Abscisse de convergence d'une série de Dirichlet}{2/12}
+\slider{$\inf{\left\{\sigma\in\mathbb C,\sum{n=1}{+\infty}{a_n\sigma^n}\text{ converge}\right\}}$\linebreak Une série de Dirichlet est holomorphe sur $\left\{\pRe z>\sigma\right\}$}{2/12}
+\slideq{Équivalent de la série de Dirichlet $\sum{n=1}{+\infty}{a_nn^{-s}}$ en $\pRe s\to+\infty$}{3/12}
+\slider{$\eq[\pRe s\to+\infty]{\sum{n=1}{+\infty}{a_nn^{-s}}}{a_{n_0}n_0^{-s}}$ où $n_0=\min{\left\{n\in\mathbb N,a_n\neq0\right\}}$}{3/12}
+\slideq{Caractère de Dirichlet modulo $N$}{4/12}
+\slider{Morphisme de groupes $\chi\!:\!\l\mathbb Z/n\mathbb Z\r^\times\to\mathbb C^*$\linebreak$\chi$ est étendu à $\mathbb Z$ par $\chi\l n\r=\tcase{\chi\l\bar n\r\&\text{si $n\land N=1$}\\0\&\text{sinon}\\}$}{4/12}
+\slideq{Développement eulérien d'une série de Dirichlet associé à une fonction strictemene multiplicative bornée}{5/12}
+\slider{Pour $\pRe z>1$, $\sum{n=1}{+\infty}{a\l n\r n^{-s}}=\prod{p\in\mathbb P}{}{\l1-a\l p\r p\r^{-1}}$\linebreak Le produit infini converge sur tout compact de $\left\{\pRe s>1\right\}$}{5/12}
+\slideq{Valeurs de $\sigma$ et $\sigmaabs$ pour $\l a_n\r$ périodique non nulle}{6/12}
+\slider{$\sigmaabs=1$, $\sigma\in\left[0,1\right]$\linebreak$\sigma=\tcase{0\&\text{si $\sum{n=1}{N}{a_n}=0$}\\1\&\text{sinon}\\}$}{6/12}
+\slideq{Théorème de Landau}{7/12}
+\slider{Si $\sum{n=1}{+\infty}{a_nn^{-s}}$ est une série de Dirichlet à termes positifs avec une abscisse de convergence $\sigma\in\mathbb R$, alors $\sum{n=1}{+\infty}{a_nn^{-s}}$ est définie et holomorphe sur le demi-plan $\left\{\pRe z>\sigma\right\}$ et ne se prolonge analytiquement sur aucun voisinage de $\sigma$}{7/12}
+\slideq{Abscisse de convergence d'une série de Dirichlet}{8/12}
+\slider{$\inf{\left\{\sigma\in\mathbb C,\sum{n=1}{+\infty}{a_n\sigma^n}\text{ converge absolument}\right\}}$}{8/12}
+\slideq{Densité naturelle}{9/12}
+\slider{$A\subset\mathbb P$ admet une densité analytique $\delta\in\left[0,1\right]$ si $\lim[x\to+\infty]{\frac{\left|\left\{p\in A,p\leqslant x\right\}\right|}{\left|\left\{p\in\mathbb P,p\leqslant x\right\}\right|}}=\delta$}{9/12}
+\slideq{Développement eulérien d'une série de Dirichlet associé à une fonction multiplicative}{10/12}
+\slider{Pour $\pRe z>\sigmaabs$, $\sum{n=1}{+\infty}{a\l n\r n^{-s}}=\prod{p\in\mathbb P}{}{\l\sum{k=0}{+\infty}{a\l p^k\r p^{-ks}}\r}$}{10/12}
+\slideq{Théorème des nombres premiers}{11/12}
+\slider{$\pi\l x\r=\left|\left\{p\in\mathbb P,p\leqslant x\right\}\right|$\linebreak$\eq[x\to+\infty]{\pi\l x\r}{\frac{x}{\log\l x\r}}$}{11/12}
+\slideq{Densité analytique}{12/12}
+\slider{Soit $\zeta_A\l s\r=\sum{p\in A}{}{p^{-s}}$ (pour $\pRe s>1$)\linebreak$A\subset\mathbb P$ admet une densité analytique $\delta\in\left[0,1\right]$ si $\lim[s\to1^+]{\frac{\zeta_A\l s\r}{\zeta_{\mathbb P}\l s\r}}=\delta$}{12/12}
+\end{document}
