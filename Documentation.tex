@@ -536,7 +536,7 @@ Il est aussi possible de faire des grands opérateurs avec des symboles quelconq
 Cette option importe automatiquement le package \texttt{graphics} (disponible sur \href{https://ctan.org/pkg/graphics}{CTAN}).
 \vspace{0.5cm}
 \mhd
-\nmcmd{\makebigop[p]{symb}}{Produit un opérateur avec le symbole \texttt{symb} et ajuste sa taille pour qu'elle soit de $p$ fois celle du caractère $\oldsum$}
+\nmcmd{\makebigop[p]{symb}}{Produit un opérateur avec le symbole \texttt{symb} et ajuste sa taille pour qu'elle soit de {\color{namecolour}\texttt{p}} fois celle du caractère <<~$\oldsum$~>>}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\biguplus?}
 \mcmd{\fracKsymb}
 \pagebreak
@@ -882,7 +882,9 @@ Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 \footnotetext{La commande est la même que celle définie dans \hyperlink{section.4}{\texttt{Analyse.sty}}}
 \mcmd{\vala{x}}
 \mcmd{\nrm{X}}
+\mcmd{\nrm[E]{X}}
 \mcmd{\nnrm{M}}
+\mcmd{\nnrm[E^*]{M}}
 \mcmd{\oldfrt}
 \mcmd{\frt{A}}
 \mcmd{\psc{x}{y}}
