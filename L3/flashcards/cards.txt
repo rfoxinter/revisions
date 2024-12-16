@@ -24,7 +24,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/AnalyseComplexe/FonctionsMeromorphes
 20241114160614
 ../L3/flashcards/AnalyseComplexe/SeriesDeDirichlet
-20241216083710
+20241216091635
 ../L3/flashcards/AnalyseComplexe/TheoremeDesResidus
 20241210083818
 ../L3/flashcards/AnalyseComplexe/TheorieDeCauchy

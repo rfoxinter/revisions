@@ -2,8 +2,8 @@ Analyse complexe -- Séries de Dirichlet
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{usuelles,complexes,equivalents,matrices,arithmetique}\usepackage[nopar]{bigoperators}\def\sigmaabs{\sigma_\text{abs}}
-Abscisse de convergence d'une série de Dirichlet;;$\inf{\left\{\sigma\in\mathbb C,\sum{n=1}{+\infty}{a_n\sigma^n}\text{ converge}\right\}}$\linebreak Une série de Dirichlet est holomorphe sur $\left\{\pRe z>\sigma\right\}$
-Abscisse de convergence d'une série de Dirichlet;;$\inf{\left\{\sigma\in\mathbb C,\sum{n=1}{+\infty}{a_n\sigma^n}\text{ converge absolument}\right\}}$
+Abscisse de convergence d'une série de Dirichlet;;$\inf{\left\{s\in\mathbb C,\sum{n=1}{+\infty}{a_nn^{-s}}\text{ converge}\right\}}$\linebreak Une série de Dirichlet est holomorphe sur $\left\{\pRe z>\sigma\right\}$
+Abscisse de convergence d'une série de Dirichlet;;$\inf{\left\{s\in\mathbb C,\sum{n=1}{+\infty}{a_nn^{-s}}\text{ converge absolument}\right\}}$
 Équivalent de la série de Dirichlet $\sum{n=1}{+\infty}{a_nn^{-s}}$ en $\pRe s\to+\infty$;;$\eq[\pRe s\to+\infty]{\sum{n=1}{+\infty}{a_nn^{-s}}}{a_{n_0}n_0^{-s}}$ où $n_0=\min{\left\{n\in\mathbb N,a_n\neq0\right\}}$
 Valeurs de $\sigma$ et $\sigmaabs$ pour $\l a_n\r$ périodique non nulle;;$\sigmaabs=1$, $\sigma\in\left[0,1\right]$\linebreak$\sigma=\tcase{0\&\text{si $\sum{n=1}{N}{a_n}=0$}\\1\&\text{sinon}\\}$
 Théorème de Landau;;Si $\sum{n=1}{+\infty}{a_nn^{-s}}$ est une série de Dirichlet à termes positifs avec une abscisse de convergence $\sigma\in\mathbb R$, alors $\sum{n=1}{+\infty}{a_nn^{-s}}$ est définie et holomorphe sur le demi-plan $\left\{\pRe z>\sigma\right\}$ et ne se prolonge analytiquement sur aucun voisinage de $\sigma$
