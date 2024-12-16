@@ -147,7 +147,7 @@ async function resume_loading(file) {
     document.getElementById('up-button').setAttribute('onclick', '_close()');
 }
 async function fill_card(file) {
-    let res = await loadFile(atob(card));
+    let res = await loadFile(file);
     if (res == 200) {
         document.getElementById('flip').disabled = false;
         document.getElementById('title').innerHTML = title;

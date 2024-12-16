@@ -246,7 +246,8 @@ function loadsv() {
     };
 }
 
-function delsv(messages = true) {
+function delsv(messages = true, _id = "") {
+    if (_id == "") {_id = id;}
     if ((messages && window.confirm("Supprimer la sauvegarde")) || (!messages)) {
         var open = indexedDB.open("flcrdsv");
         open.onsuccess = function(event) {
@@ -254,12 +255,12 @@ function delsv(messages = true) {
             var tx = db.transaction("flcrd", "readwrite");
             var store = tx.objectStore("flcrd");
 
-            var getRequest = store.get(id);
+            var getRequest = store.get(_id);
 
             getRequest.onsuccess = function(event) {
                 var result = event.target.result;
                 if (result) {
-                    store.delete(id);
+                    store.delete(_id);
                     document.getElementById("dropdown").style.display="none";
                     document.getElementById("adv_dropdown").style.display = "none";
                     if (messages) {window.alert("Sauvegarde supprimée");}

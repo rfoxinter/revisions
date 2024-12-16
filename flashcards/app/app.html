@@ -25,7 +25,7 @@
     <script type="text/javascript">var main_xpos = 0;</script>
     <style id="folders_display_style"></style>
 </head>
-<body onload="display_cards();">
+<body onload="display_cards();check_url_src();">
     <div id="downloaded">
         <header class="page-header">
             <h1>Fiches téléchargées</h1>
@@ -52,7 +52,7 @@
             </div>
         </header>
         <main class="main-content">
-            <input type="url" id="file" name="file" placeholder="Url du fichier" style="width: calc(min(50%,20em)); display: inline-block; margin-right: 2em;"></input><button onclick="list_cards()" style="width: calc(min(15ex,50% - 2em)); display: inline-block;">Voir les fiches</button>
+            <input type="url" id="file" name="file" placeholder="Url du fichier" style="width: calc(min(50%,20em)); display: inline-block; margin-right: 2em;"></input><button id="file_btn" onclick="list_cards()" style="width: calc(min(15ex,50% - 2em)); display: inline-block;">Voir les fiches</button>
             <div id="cards_container">
             </div>
         </main>

@@ -3,6 +3,18 @@ const disp_icon = {0:'folder', 1:'folder_open'};
 const text_state = {'none':0, 'block':1};
 const disp_text = {0:'none', 1:'block'};
 
+function check_url_src() {
+    let params = new URLSearchParams(document.location.search.substring(1));
+    let src_file = params.get('file');
+    if (src_file != null) {
+        main_xpos = window.scrollY;
+        document.getElementById('downloaded').style.display = 'none';
+        document.getElementById('download').style.display = 'block';
+        document.getElementById('file').value = src_file;
+        document.getElementById('file_btn').click();
+    }
+}
+
 function folder_click(groupname) {
     document.getElementById(groupname+'_icon').innerHTML=disp_icon[1-icon_state[document.getElementById(groupname+'_icon').innerHTML]];
     const elem = document.getElementsByClassName(groupname+'_elem');
@@ -236,7 +248,7 @@ open.onupgradeneeded = function(event) {
 function delete_card(_url, _name, _confirm = true) {
     return new Promise(function(resolve, reject) {
         if ((!_confirm) || window.confirm("Supprimer la fiche")) {
-            delsv(false);
+            delsv(false, [_url, _name]);
             var open = indexedDB.open("flcrddb");
             open.onsuccess = function(event) {
                 var db = event.target.result;
@@ -251,8 +263,13 @@ function delete_card(_url, _name, _confirm = true) {
                 };
             };
             if (_confirm) {
-                document.getElementsByClassName(_url)[0].removeChild(document.getElementById('[' + _url + ',' + _name + ']'));
-                if (document.getElementsByClassName(_url)[0].children.length <= 1) {
+                let elem = document.getElementById('[' + _url + ',' + _name + ']');
+                let parent = elem.parentElement;
+                elem.parentElement.removeChild(elem);
+                if (parent.children.length <= 1) {
+                    parent.parentElement.removeChild(parent);
+                }
+                if (document.getElementsByClassName(_url)[0].children.length <= 1 || (document.getElementsByClassName(_url)[0].children.length == 2 && document.getElementsByClassName(_url)[0].children[1].children.length == 0)) {
                     document.getElementById('down_cards_container').removeChild(document.getElementsByClassName(_url)[0]);
                 }
             }
@@ -526,8 +543,8 @@ function get_orig_name_close(_url) {
 }
 
 async function set_config_card(_url, _name, card_number, card_name) {
-    let [orig_name, close, group_folder, root] = await get_orig_name_close(_url);
     try {
+        let [orig_name, close, group_folder, root] = await get_orig_name_close(_url);
         if (orig_name) {
             document.getElementById('[' + _url + ',' + _name + ']').getElementsByTagName('span')[0].innerHTML = card_name;
         } else {
