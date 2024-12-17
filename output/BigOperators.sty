@@ -44,7 +44,16 @@
     \usepackage{graphics}
     \DeclareRobustCommand\makebigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}
     \newcommand{\bigop@}[2]{\bigop@@#1#2}
-    \newcommand{\bigop@@}[3]{\vcenter{\sbox\z@{$#1\oldsum$}\hbox{\resizebox{\ifx#1\displaystyle#2\fi\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#3$}}}}
-    \newcommand\fracKsymb{\DOTSB\makebigop{\mathcal{K}}}
-    \newcommand\fracK[3]{{\bigopdisplay\fracKsymb\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
+    \newcommand{\bigop@@}[3]{\vcenter{\sbox\z@{$#1\oldsum$}\hbox{\resizebox{#2\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#3$}}}}
+    \newcommand\makebigopcommand[3][1]{%
+        \expandafter\let\csname #3symb\endcsname\relax
+        \expandafter\let\csname #3\endcsname\relax
+        \expandafter\newcommand\csname #3symb\endcsname{%
+            \DOTSB\makebigop[#1]{#2}%
+        }%
+        \expandafter\newcommand\csname #3\endcsname[3]{%
+            {\bigopdisplay\csname #3symb\endcsname\bigoplimits_{##1}^{##2}}\bigopleftp##3\bigoprightp%
+        }%
+    }
+    \makebigopcommand{\mathcal K}{fracK}
 \fi
