@@ -14,7 +14,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/Algebre1/GroupesDeSylow
 20240929111927
 ../L3/flashcards/Algebre1/ProduitTensoriel
-20241210093551
+20241217091345
 ../L3/flashcards/Algebre1/SommeDirectesEtProduits
 20241006110233
 ../L3/flashcards/AnalyseComplexe/EtudeLocaleDeFonctionsHolomorphes

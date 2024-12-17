@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{al}\DeclareMathOperator{\nlin}{\text{$n$}-Lin}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\let\phi\varphi%\DeclareMathOperator{\nlin}{\text{\usefont{T1}{cmr}{m}{ui}n}-Lin}
+\usepackage{al}\DeclareMathOperator{\nlin}{\text{$n$}-Lin}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\let\phi\varphi\usepackage{structures}\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}\usepackage{matrices}%\DeclareMathOperator{\nlin}{\text{\usefont{T1}{cmr}{m}{ui}n}-Lin}
 \hypersetup{pdftitle=Algèbre 1 -- Produit tensoriel}
 \title{Algèbre 1\\\emph{Produit tensoriel}}
 \author{}
@@ -10,14 +10,42 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Structure de $\nlin$}{1/5}
-\slider{$\Bbbk$-ev}{1/5}
-\slideq{Application linéaire associée à une application $u\in\mathcal E=\nlin\l E_1,\cdots,E_n;F\r$}{2/5}
-\slider{$\appl{\varPhi}{\mathcal E}{F^{I_1\times\cdots\times I_n}}{\phi}{\l\phi\l e_{i_1}^{\l1\r},\cdots,e_{i_n}^{\l n\r}\r\r_{\l i_1,\cdots,i_n\r\in I_1\times\cdots\times I_n}}$\linebreak Où $\l e_i^{\l j\r}\r_{i\in I_j}$ est une base de $E_j$}{2/5}
-\slideq{$\lambda\times\l e_1\otimes\cdots\otimes e_n\r$}{3/5}
-\slider{$\l\lambda e_1\r\otimes e_2\otimes\cdots\otimes e_n$\linebreak$e_1\otimes\cdots\otimes e_{n-1}\otimes\l\lambda e_n\r$}{3/5}
-\slideq{Définition du produit tensoriel de $E_1,\cdots,E_n$ des $\Bbbk$-ev de dimension finie}{4/5}
-\slider{Il existe $\l E_1\otimes\cdots\otimes E_n,\varPi\r$ tel que $E_1\otimes\cdots\otimes E_n$ est un $\Bbbk$-ev et $\varPi\in\nlin\l E_1,\cdots,E_n;E_1\otimes\cdots\otimes E_n\r$ est tel que pour tout $F$ $\Bbbk$-ev, tout $\phi\in\nlin\l E_1,\cdots,E_n;F\r$ se factorise en un unique $\overline\phi$ linéaire vérifiant $\phi=\overline\phi\circ\varPi$\linebreak$\l E_1\otimes\cdots\otimes E_n,\varPi\r$ est unique à unique isomorphisme près}{4/5}
-\slideq{$e_1\otimes\cdots\otimes e_{i-1}\otimes\l e_i+e_i'\r\otimes e_{i+1}\otimes\cdots\otimes e_n$}{5/5}
-\slider{$e_1\otimes\cdots\otimes e_n+e_1\otimes\cdots\otimes e_i'\otimes\cdots\otimes e_n$}{5/5}
+\slideq{Interprétation matricielle du tenseur}{1/19}
+\slider{Si $A=\almat u{\mathcal B_E}{\mathcal B_{E'}}$, $B=\almat v{\mathcal B_F}{\mathcal B_{F'}}$ alors $\almat{u\otimes v}{\mathcal B_{E\otimes F}}{\mathcal B_{E'\otimes F'}}=\tmatrix({a_{1,1}B\&\mdots\&a_{1,m}B\\\vdots\&\plusdots\&\vdots\\a_{n,1}B\&\mdots\&a_{n,m}B\\})$}{1/19}
+\slideq{$e_1\otimes\cdots\otimes e_{i-1}\otimes\l e_i+e_i'\r\otimes e_{i+1}\otimes\cdots\otimes e_n$}{2/19}
+\slider{$e_1\otimes\cdots\otimes e_n+e_1\otimes\cdots\otimes e_i'\otimes\cdots\otimes e_n$}{2/19}
+\slideq{$\l A\otimes B\r\otimes C$}{3/19}
+\slider{$A\otimes\l B\otimes C\r$}{3/19}
+\slideq{$\tr{u\otimes v}$\linebreak$u\in\al E{}$, $v\in\al F{}$}{4/19}
+\slider{$\tr u\tr v$}{4/19}
+\slideq{$\lambda\times\l e_1\otimes\cdots\otimes e_n\r$}{5/19}
+\slider{$\l\lambda e_1\r\otimes e_2\otimes\cdots\otimes e_n$\linebreak$e_1\otimes\cdots\otimes e_{n-1}\otimes\l\lambda e_n\r$}{5/19}
+\slideq{$\det{u\otimes v}$\linebreak$u\in\al E{}$, $v\in\al F{}$}{6/19}
+\slider{$\det u^{\dim F}\det v^{\dim E}$}{6/19}
+\slideq{<<~Associativité~>> du produit tensoriel}{7/19}
+\slider{$\nappl{\l E\otimes F\r\otimes G}{E\otimes\l F\otimes G\r}{\l x\otimes y\r\otimes z}{x\otimes\l y\otimes z\r}$ est un isomorphisme}{7/19}
+\slideq{<<~Commutativité~>> du produit tensoriel}{8/19}
+\slider{$\nappl{E\otimes F}{F\otimes E}{x\otimes y}{y\otimes x}$ est un isomorphisme}{8/19}
+\slideq{Structure canoniquement isomorphe à $\hom{E,F}$}{9/19}
+\slider{$\nappl{E^*\otimes F}{\hom{E,F}}{l\otimes x}{\l y\mapsto l\l x\r y\r}$}{9/19}
+\slideq{Structure de $\nlin$}{10/19}
+\slider{$\Bbbk$-ev}{10/19}
+\slideq{Application linéaire associée à une application $u\in\mathcal E=\nlin\l E_1,\cdots,E_n;F\r$}{11/19}
+\slider{$\appl{\varPhi}{\mathcal E}{F^{I_1\times\cdots\times I_n}}{\phi}{\l\phi\l e_{i_1}^{\l1\r},\cdots,e_{i_n}^{\l n\r}\r\r_{\l i_1,\cdots,i_n\r\in I_1\times\cdots\times I_n}}$\linebreak Où $\l e_i^{\l j\r}\r_{i\in I_j}$ est une base de $E_j$}{11/19}
+\slideq{$\l u'\otimes v'\r\circ\l u\otimes v\r$}{12/19}
+\slider{Pour $u\!:\!E\to E'$, $u'\!:\!E'\to E''$, $v\!:\!F\to F'$ et $v'\!:\!F'\to F''$\linebreak$\l u'\otimes v'\r\circ\l u\otimes v\r=\l u'\circ u\r\otimes\l v'\otimes v\r$}{12/19}
+\slideq{$\rg{u\otimes v}$\linebreak$u\in\al E{}$, $v\in\al F{}$}{13/19}
+\slider{$\rg u\rg v$}{13/19}
+\slideq{Définition du produit tensoriel de $E_1,\cdots,E_n$ des $\Bbbk$-ev de dimension finie}{14/19}
+\slider{Il existe $\l E_1\otimes\cdots\otimes E_n,\varPi\r$ tel que $E_1\otimes\cdots\otimes E_n$ est un $\Bbbk$-ev et $\varPi\in\nlin\l E_1,\cdots,E_n;E_1\otimes\cdots\otimes E_n\r$ est tel que pour tout $F$ $\Bbbk$-ev, tout $\phi\in\nlin\l E_1,\cdots,E_n;F\r$ se factorise en un unique $\overline\phi$ linéaire vérifiant $\phi=\overline\phi\circ\varPi$\linebreak$\l E_1\otimes\cdots\otimes E_n,\varPi\r$ est unique à unique isomorphisme près}{14/19}
+\slideq{Structure canoniquement isomorphe à $\l E_1\oplus E_2\r\otimes F$}{15/19}
+\slider{$\nappl{\l E_1\oplus E_2\r\otimes F}{\l E_1\otimes F\r\oplus\l E_2\otimes F\r}{\l x_1\oplus x_2\r\otimes y}{\l x_1\otimes y\r\oplus\l x_2\otimes y\r}$}{15/19}
+\slideq{$\l A+A'\r\otimes\l B+B'\r$}{16/19}
+\slider{$A\otimes B+A'\otimes B'$}{16/19}
+\slideq{$\l AA'\r\otimes\l BB'\r$}{17/19}
+\slider{$\l A\otimes B\r\times\l A'\otimes B'\r$}{17/19}
+\slideq{Structure canoniquement isomorphe à $E^*\otimes F^*$}{18/19}
+\slider{$\nappl{E^*\otimes F^*}{\l E\otimes F\r^*}{\mu\otimes\nu}{\l x\otimes y\mapsto \mu\l x\r\otimes\nu\l y\r\r}$}{18/19}
+\slideq{Structure canoniquement isomorphe à $\hom{E,E'}\otimes\hom{F,F'}$}{19/19}
+\slider{$\nappl{\l\substack{\textstyle\hom{E,E'}\\\textstyle\otimes\\\textstyle\hom{F,F'}}\r}{\hom{E\otimes F,E\otimes F'}}{u\otimes v}{\l x\otimes y\mapsto u\l x\r\otimes v\l y\r\r}$}{19/19}
 \end{document}
