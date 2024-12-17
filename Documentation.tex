@@ -7,6 +7,7 @@
 \usepackage{xcolor}
 \definecolor{namecolour}{HTML}{0028BA}
 \definecolor{keycolour}{HTML}{0095A0}
+\definecolor{mathcolour}{HTML}{AA50AA}
 \hypersetup{pdftitle=Documentation}
 \newcommand{\tikzlg}{\href{https://ctan.org/pkg/tikz}{\color{black}Ti\textit{k}Z}}
 \newcommand{\amslg}{\href{https://ctan.org/pkg/amsmath}{\color{black}\ensuremath{\mathcal{A}\kern-.1667em\lower.5ex\hbox{\ensuremath{\mathcal{M}}}\kern-.125em\mathcal{S}}}}
@@ -542,6 +543,7 @@ Cette option importe automatiquement le package \texttt{graphics} (disponible su
 \pagebreak
 \hrule
 \mcmd{b_0+\fracK{n>0}{}{\frac{a_n}{b_n}}}
+\nmcmd{\makebigopcommand[p]{symb}{name}}{Produit un opérateur et une commande avec le symbole \texttt{symb} et ajuste sa taille pour qu'elle soit de {\color{namecolour}\texttt{p}} fois celle du caractère <<~$\oldsum$~>>\\Pour obtenir le symbole crée, il faut utiliser \texttt{\color{mathcolour}\textbackslash\textit{name}symb}\\La commande associée est \texttt{\color{mathcolour}\textbackslash\textit{name}}; elle a pour arguments les mêmes que les opérateurs définis plus haut}
 \togglebigoppar\subsection{L'option {\color{namecolour}\texttt{nopar}}}
 Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes n'ont plus de parenthèses automatiques. Avec cette option, \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
 
