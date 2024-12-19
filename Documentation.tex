@@ -193,7 +193,7 @@ Il est possible de redéfinir le $l$ en $\oldl$ avec \mintinline{latex}?\usepack
 
 \pagebreak
 
-Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.19}{\texttt{Usuelles.sty}}} :
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.20}{\texttt{Usuelles.sty}}} :
 \vspace{-\abovedisplayskip}\begin{minted}{latex}
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
@@ -387,7 +387,7 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\tr{u}}
 \mcmd{\oldmat}
 \mcmd[\footnotemark]{\almat{u}{\mathcal{B}}{}}
-\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.10}{\texttt{Matrices.sty}}}
+\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.11}{\texttt{Matrices.sty}}}
 \mcmd{\almat{u}{\mathcal{B}}{\mathcal{C}}}
 \mmcmd[\footnotemark]{\lc}{$\lc\right.$}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left[?}
@@ -543,7 +543,7 @@ Cette option importe automatiquement le package \texttt{graphics} (disponible su
 \pagebreak
 \hrule
 \mcmd{b_0+\fracK{n>0}{}{\frac{a_n}{b_n}}}
-\nmcmd{\makebigopcommand[p]{symb}{name}}{Produit un opérateur et une commande avec le symbole \texttt{symb} et ajuste sa taille pour qu'elle soit de {\color{namecolour}\texttt{p}} fois celle du caractère <<~$\oldsum$~>>\\Pour obtenir le symbole crée, il faut utiliser \texttt{\color{mathcolour}\textbackslash\textit{name}symb}\\La commande associée est \texttt{\color{mathcolour}\textbackslash\textit{name}}; elle a pour arguments les mêmes que les opérateurs définis plus haut}
+\nmcmd{\makebigopcommand[p]{symb}{name}}{Produit un opérateur et une commande avec le symbole \texttt{symb} et ajuste sa taille pour qu'elle soit de {\color{namecolour}\texttt{p}} fois celle du caractère <<~$\oldsum$~>>\\Pour obtenir le symbole crée, il faut utiliser \texttt{\color{mathcolour}\textbackslash\textit{name}\!symb}\\La commande associée est \texttt{\color{mathcolour}\textbackslash\textit{name}}; elle a pour arguments les mêmes que les opérateurs définis plus haut}
 \togglebigoppar\subsection{L'option {\color{namecolour}\texttt{nopar}}}
 Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes n'ont plus de parenthèses automatiques. Avec cette option, \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
 
@@ -618,8 +618,51 @@ Pour utiliser ce package, il suffit de copier les fichiers \texttt{dsrom12.pfb} 
 \mcmd{\eq[n\to+\infty]{u_n}{v_n}}
 \mcmd{\eg{u_n}{v_n+\o{v_n}}}
 \mcmd{\eg[n\to+\infty]{u_n}{v_n+\o{v_n}}}
+\hsection{Footnotes.sty}
+Ce package redéfinit les notes de bas de pages. Les numéros des notes sont mis automatiquement et prennent la première valeur non utilisée dans la diapositive.
+
+\vspace{0.5cm}
+
+\mhd
+\vline\hfill
+\begin{minipage}{0.475\linewidth}
+    \begin{center}
+        \vspace{2pt}
+        \mintinline{latex}?\footnote{Note de bas de page}?\\Compilé avec \texttt{Flashcards.py}
+
+        \vspace{2pt}
+    \end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.475\linewidth}
+    \begin{center}
+        \vspace{2pt}
+        \fbox{\includegraphics[height=4cm]{documentation_res/footnotef}}
+        
+        \vspace{2pt}
+    \end{center}
+\end{minipage}
+\hfill\vline\hrule\vline\hfill
+\begin{minipage}{0.475\linewidth}
+    \begin{center}
+        \vspace{2pt}
+        \mintinline{latex}?\footnote{Note de bas de page}?\\Compilé avec \texttt{Htmlcards.py}
+
+        \vspace{2pt}
+    \end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.475\linewidth}
+    \begin{center}
+        \vspace{2pt}
+        \fbox{\includegraphics[height=1cm]{documentation_res/footnoteh}}
+        
+        \vspace{2pt}
+    \end{center}
+\end{minipage}
+\hfill\vline\hrule
 \hsection{Matrices.sty}
-Le package \hyperlink{section.16}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+Le package \hyperlink{section.17}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
 
 \vspace{0.5cm}
 
