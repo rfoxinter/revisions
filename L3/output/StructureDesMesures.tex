@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{bigoperators}\togglebigoppar\usepackage{usuelles}\usepackage{analyse}\toggleanalysepar
+\usepackage{bigoperators}\togglebigoppar\usepackage{usuelles}\usepackage[nopar]{analyse}\usepackage{footnotes}
 \hypersetup{pdftitle=Intégration et théorie de la mesure -- Structure des mesures}
 \title{Intégration et théorie de la mesure\\\emph{Structure des mesures}}
 \author{}
@@ -10,22 +10,36 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Mesure complexe}{1/9}
-\slider{$\nu\!:\!\mathcal A\to\mathbb C$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge absolument}{1/9}
-\slideq{Mesure positive associée à une mesure $\nu$}{2/9}
-\slider{$\left|\nu\right|$ définie par $\left|\nu\right|\l A\r=\sup{\left\{\sum{n=0}{+\infty}{\left|\nu\l A_n\r\right|},A=\bigsqcup{n=0}{+\infty}{A_n}\right\}}$\linebreak C'est la plus petite mesure positive $\mu$ qui vérifie $\left|\nu\l A\r\right|\leqslant\mu\l A\r$}{2/9}
-\slideq{$\nu$ est absolument continue par rapport à la mesure positive $\mu$\linebreak$\nu\ll\mu$}{3/9}
-\slider{$\forall A\in\mathcal A$, $\mu\l A\r=0\Rightarrow\nu\l A\r=0$\linebreak Ou de manière équivalente, $\forall A\in\mathcal A$, $\mu\l A\r=0\Rightarrow\left|\nu\right|\l A\r=0$}{3/9}
-\slideq{Mesure signée}{4/9}
-\slider{$\nu\!:\!\mathcal A\to\mathbb R$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge absolument}{4/9}
-\slideq{$\nu=f\mu$ avec $f\in L^1$}{5/9}
-\slider{$\forall A\in\mathcal A$, $\nu\l A\r=\int[\mu][A]{f}$}{5/9}
-\slideq{Théorème de Radon-Nikodym}{6/9}
-\slider{Si $\l X,\mathcal A\r$ est un espace mesurable, $\mu$ et $\nu$ deux mesures positives $\sigma$-finies, alors $\nu\ll\mu$ si et seulement s'il existe $f\!:\!\l X,\mathcal A\r\to\mathbb R_+$ mesurable telle que $\nu=f\mu$\linebreak Une telle fonction $f$ est unique $\mu$-pp}{6/9}
-\slideq{Théorème de décomposition de Lebesgue}{7/9}
-\slider{Si $\l X,\mathcal A\r$ est un espace mesuré, $\mu$ une mesure positive $\sigma$-finie et $\nu$ une mesure (positive, signée ou complexe) $\sigma$-finie alors il existe un unique couple $\l\nu_a,\nu_s\r$ de mesures (positives, signées ou complexes) telles que $\nu=\nu_a+\nu_s$, $\nu_a\ll\mu$ et $\nu_s\perp\mu$}{7/9}
-\slideq{Deux mesures positives $\mu$ et $\widetilde\mu$ sont étrangères\linebreak$\mu\perp\widetilde\mu$}{8/9}
-\slider{$\exists A\in\mathcal A$, $\mu\l A\r=0\land\widetilde\mu\l A^\complement\r=0$}{8/9}
-\slideq{Mesure vectorielle}{9/9}
-\slider{$\nu\!:\!\mathcal A\to\mathbb R^d$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge normalement}{9/9}
+\slideq{Théorème de décomposition de Lebesgue}{1/16}
+\slider{Si $\l X,\mathcal A\r$ est un espace mesuré, $\mu$ une mesure positive $\sigma$-finie et $\nu$ une mesure (positive, signée ou complexe) $\sigma$-finie alors il existe un unique couple $\l\nu_a,\nu_s\r$ de mesures (positives, signées ou complexes) telles que $\nu=\nu_a+\nu_s$, $\nu_a\ll\mu$ et $\nu_s\perp\mu$}{1/16}
+\slideq{Théorème de Radon-Nikodym}{2/16}
+\slider{Si $\l X,\mathcal A\r$ est un espace mesurable, $\mu$ et $\nu$ deux mesures positives $\sigma$-finies, alors $\nu\ll\mu$ si et seulement s'il existe $f\!:\!\l X,\mathcal A\r\to\mathbb R_+$ mesurable telle que $\nu=f\mu$\linebreak Une telle fonction $f$ est unique $\mu$-pp}{2/16}
+\slideq{Lien entre absolument continue et à variations bornées}{3/16}
+\slider{Si $f$ est absolument continue alors elle est à variations bornées}{3/16}
+\slideq{Mesure vectorielle}{4/16}
+\slider{$\nu\!:\!\mathcal A\to\mathbb R^d$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge normalement}{4/16}
+\slideq{$f\!:\!\left[0,1\right]\to\mathbb R$ est absolument continue}{5/16}
+\slider{$\forall\varepsilon>0$, $\exists\delta>0$, $\forall0\leqslant a_1\leqslant b_1\leqslant\cdots\leqslant a_n\leqslant b_n\leqslant1$, $\sum{j=1}{n}{b_j-a_j}<\delta\Rightarrow\sum{j=1}{n}{\left|f\l b_j\r-f\l a_j\r\right|}<\varepsilon$}{5/16}
+\slideq{CNS pour $f$ absolument continue}{6/16}
+\slider{$\dd f\ll\lambda$}{6/16}
+\slideq{Deux mesures positives $\mu$ et $\widetilde\mu$ sont étrangères\linebreak$\mu\perp\widetilde\mu$}{7/16}
+\slider{$\exists A\in\mathcal A$, $\mu\l A\r=0\land\widetilde\mu\l A^\complement\r=0$}{7/16}
+\slideq{$\nu=f\mu$ avec $f\in L^1$}{8/16}
+\slider{$\forall A\in\mathcal A$, $\nu\l A\r=\int[\mu][A]{f}$}{8/16}
+\slideq{Théorème de dérivation de Lebesgue}{9/16}
+\slider{Si $f\in L^1\l\mathbb R^d\r$ alors pour tout $x\in\mathbb R^d$, $\left|f\l x\r-\frac{1}{\lambda\l B\l x,R\r\r}\int[y][B\l x,R\r]{f\l y\r}\right|$\linebreak$\leqslant\frac{1}{\lambda\l B\l x,R\r\r}\int[y][B\l x,R\r]{\left|f\l x\r-f\l y\r\right|}\xrightarrow[R\to0]{}0$ $\lambda$-pp}{9/16}
+\slideq{$\nu$ est absolument continue par rapport à la mesure positive $\mu$\linebreak$\nu\ll\mu$}{10/16}
+\slider{$\forall A\in\mathcal A$, $\mu\l A\r=0\Rightarrow\nu\l A\r=0$\linebreak Ou de manière équivalente, $\forall A\in\mathcal A$, $\mu\l A\r=0\Rightarrow\left|\nu\right|\l A\r=0$}{10/16}
+\slideq{Mesure signée}{11/16}
+\slider{$\nu\!:\!\mathcal A\to\mathbb R$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge absolument}{11/16}
+\slideq{Dérivée de $f\in L^1\l\mathbb R^d\r$ selon le théorème de dérivation de Lebesgue}{12/16}
+\slider{Si $f$ est absolument continue et $\dd f=g\dd x$ avec $g\in L^1$ alors $f'\l x\r=\lim[\lambda\l I\r\to0]{\frac{1}{\lambda\l I\r}\int[f][I]{}}=g$ $\lambda$-pp\linebreak On a donc $\dd f=f'\dd x$}{12/16}
+\slideq{Mesure positive associée à une mesure $\nu$}{13/16}
+\slider{$\left|\nu\right|$ définie par $\left|\nu\right|\l A\r=\sup{\left\{\sum{n=0}{+\infty}{\left|\nu\l A_n\r\right|},A=\bigsqcup{n=0}{+\infty}{A_n}\right\}}$\linebreak C'est la plus petite mesure positive $\mu$ qui vérifie $\left|\nu\l A\r\right|\leqslant\mu\l A\r$}{13/16}
+\slideq{Mesure complexe}{14/16}
+\slider{$\nu\!:\!\mathcal A\to\mathbb C$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge absolument}{14/16}
+\slideq{CNS pour $f$ à variations bornées}{15/16}
+\slider{Il existe $g_1$ et $g_2$ càdlàg\footnote{Continue à droite, admettant une limite à gauche} telles que $f=g_1-g_2$\linebreak En particulier, $\dd f=\dd g_1-\dd g_2$}{15/16}
+\slideq{$f\!:\!\left[0,1\right]\to\mathbb R$ est à variations bornées}{16/16}
+\slider{$\oldsup\limits_{\substack{0=x_0\\\leqslant\cdots\leqslant\\x_n=1}}\l\left\{\sum{j=1}{n}{\left|f\l x_j\r-f\l x_{j-1}\r\right|}\right\}\r<+\infty$}{16/16}
 \end{document}

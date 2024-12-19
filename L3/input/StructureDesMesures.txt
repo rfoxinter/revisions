@@ -1,7 +1,7 @@
 Intégration et théorie de la mesure -- Structure des mesures
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{bigoperators}\togglebigoppar\usepackage{usuelles}\usepackage{analyse}\toggleanalysepar
+\usepackage{bigoperators}\togglebigoppar\usepackage{usuelles}\usepackage[nopar]{analyse}\usepackage{footnotes}
 Mesure signée;;$\nu\!:\!\mathcal A\to\mathbb R$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge absolument
 Mesure complexe;;$\nu\!:\!\mathcal A\to\mathbb C$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge absolument
 Mesure vectorielle;;$\nu\!:\!\mathcal A\to\mathbb R^d$ vérifiant\linebreak$\nu\l\varnothing\r=0$\linebreak Pour tout $\l A_n\r\in\mathcal A^{\mathbb N}$ vérifiant $i\neq j\Rightarrow A_i\cap A_j=\varnothing$, $\nu\l\bigcup{n\in\mathbb N}{}{A_n}\r=\sum{n\in\mathbb N}{}{\nu\l A_n\r}$ et cette série converge normalement
@@ -11,3 +11,10 @@ Deux mesures positives $\mu$ et $\widetilde\mu$ sont étrangères\linebreak$\mu\
 $\nu=f\mu$ avec $f\in L^1$;;$\forall A\in\mathcal A$, $\nu\l A\r=\int[\mu][A]{f}$
 Théorème de Radon-Nikodym;;Si $\l X,\mathcal A\r$ est un espace mesurable, $\mu$ et $\nu$ deux mesures positives $\sigma$-finies, alors $\nu\ll\mu$ si et seulement s'il existe $f\!:\!\l X,\mathcal A\r\to\mathbb R_+$ mesurable telle que $\nu=f\mu$\linebreak Une telle fonction $f$ est unique $\mu$-pp
 Théorème de décomposition de Lebesgue;;Si $\l X,\mathcal A\r$ est un espace mesuré, $\mu$ une mesure positive $\sigma$-finie et $\nu$ une mesure (positive, signée ou complexe) $\sigma$-finie alors il existe un unique couple $\l\nu_a,\nu_s\r$ de mesures (positives, signées ou complexes) telles que $\nu=\nu_a+\nu_s$, $\nu_a\ll\mu$ et $\nu_s\perp\mu$
+$f\!:\!\left[0,1\right]\to\mathbb R$ est à variations bornées;;$\oldsup\limits_{\substack{0=x_0\\\leqslant\cdots\leqslant\\x_n=1}}\l\left\{\sum{j=1}{n}{\left|f\l x_j\r-f\l x_{j-1}\r\right|}\right\}\r<+\infty$
+$f\!:\!\left[0,1\right]\to\mathbb R$ est absolument continue;;$\forall\varepsilon>0$, $\exists\delta>0$, $\forall0\leqslant a_1\leqslant b_1\leqslant\cdots\leqslant a_n\leqslant b_n\leqslant1$, $\sum{j=1}{n}{b_j-a_j}<\delta\Rightarrow\sum{j=1}{n}{\left|f\l b_j\r-f\l a_j\r\right|}<\varepsilon$
+Lien entre absolument continue et à variations bornées;;Si $f$ est absolument continue alors elle est à variations bornées
+CNS pour $f$ à variations bornées;;Il existe $g_1$ et $g_2$ càdlàg\footnote{Continue à droite, admettant une limite à gauche} telles que $f=g_1-g_2$\linebreak En particulier, $\dd f=\dd g_1-\dd g_2$
+CNS pour $f$ absolument continue;;$\dd f\ll\lambda$
+Théorème de dérivation de Lebesgue;;Si $f\in L^1\l\mathbb R^d\r$ alors pour tout $x\in\mathbb R^d$, $\left|f\l x\r-\frac{1}{\lambda\l B\l x,R\r\r}\int[y][B\l x,R\r]{f\l y\r}\right|$\linebreak$\leqslant\frac{1}{\lambda\l B\l x,R\r\r}\int[y][B\l x,R\r]{\left|f\l x\r-f\l y\r\right|}\xrightarrow[R\to0]{}0$ $\lambda$-pp
+Dérivée de $f\in L^1\l\mathbb R^d\r$ selon le théorème de dérivation de Lebesgue;;Si $f$ est absolument continue et $\dd f=g\dd x$ avec $g\in L^1$ alors $f'\l x\r=\lim[\lambda\l I\r\to0]{\frac{1}{\lambda\l I\r}\int[f][I]{}}=g$ $\lambda$-pp\linebreak On a donc $\dd f=f'\dd x$
