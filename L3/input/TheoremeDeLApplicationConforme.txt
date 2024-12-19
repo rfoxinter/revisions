@@ -1,0 +1,8 @@
+Analyse complexe -- Théorème de l'application conforme
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{complexes}\usepackage[nopar]{analyse}\usepackage{footnotes}
+CNS pour que l'ouvert $U$ soir simplement connexe;;$U=\mathbb C$ ou $U$ est biholomorphe à $D\l0,1\r$
+Formule de Cauchy;;Si $f\in H\l U\r$, $\gamma$ est un lacet $\mathcal C^1$ par morceaux et $z\in U\setminus\gamma\l\left[0,1\right]\r$ alors $\frac1{2\i\pi}\int[w][\gamma][]{\frac{f\l w\r}{w-z}}=I\l z,\gamma\r f\l z\r$
+Logarithme d'une fonction holomorhe;;Si $U$ est simplement connexe\footnote{Tout lacet est homotope au lacet constant} et $f\!:\!U\to\mathbb C^*$ est holomorphe alors $f$ admet un logarithme holomorphe, ie, il existe $F\in H\l U\r$ telle que $f=\e^F$
+Racine carrée d'une fonction holomorhe;;Si $U$ est simplement connexe\footnote{Tout lacet est homotope au lacet constant} et $f\!:\!U\to\mathbb C^*$ est holomorphe alors $f$ admet une racine carrée, ie, il existe $F\in H\l U\r$ telle que $f=F^2$\footnote{L'existence d'une racine carrée est équivalent au caractère simplement connexe}

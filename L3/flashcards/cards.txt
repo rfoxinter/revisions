@@ -25,6 +25,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20241114160614
 ../L3/flashcards/AnalyseComplexe/SeriesDeDirichlet
 20241216091635
+../L3/flashcards/AnalyseComplexe/TheoremeDeLApplicationConforme
+20241219160436
 ../L3/flashcards/AnalyseComplexe/TheoremeDesResidus
 20241210083818
 ../L3/flashcards/AnalyseComplexe/TheorieDeCauchy

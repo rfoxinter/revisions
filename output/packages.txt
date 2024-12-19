@@ -6,6 +6,7 @@ Complexes.sty
 Dsfont.sty
 Dsft.sty
 Equivalents.sty
+Footnotes.sty
 Graphs.sty
 HTMLPreambule.sty
 Matrices.sty
