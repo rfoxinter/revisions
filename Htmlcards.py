@@ -76,8 +76,9 @@ def latexparse(s0:str) -> str:
                 s0 = s0.replace(subs, "<sub>" + cont + "</sub>")
             else:
                 s0 = s0.replace(subs, "")
-        s0 = sub("{", "", s0)
-        s0 = sub("}", "", s0)
+        s0 = sb("{", "", s0)
+        s0 = sb("}", "", s0)
+        s0 = sb("'", "\u2019", s0)
     return s0
 
 def output_f(files:list) -> list:
