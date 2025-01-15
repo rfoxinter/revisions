@@ -122,7 +122,7 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
 \\usepackage{preambule}
 \\setbeamercolor{structure}{fg=black}
 ''' + defs + '''
-\\hypersetup{pdftitle=''' + t + '''}
+\\hypersetup{pdftitle=''' + sb("'", "\u2019", t) + '''}
 \\title{''' + t2 + '''}
 \\author{}
 \\date{}
