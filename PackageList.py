@@ -8,7 +8,7 @@ c(d(__file__) + '/output')
 f = open('./packages.txt', 'w')
 content = ''
 for file in sorted(l('.')):
-    if not i(file) and not s(file)[1] in ['.tex', '.txt']:
+    if not i(file) and not s(file)[1] in ['.cls', '.tex', '.txt']:
         content += file + '\n'
 f.write(content[0:len(content)-1])
 f.close()
