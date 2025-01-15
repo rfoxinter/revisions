@@ -3,7 +3,6 @@ Analyse.sty
 Arithmetique.sty
 BigOperators.sty
 Complexes.sty
-Dsfont.sty
 Dsft.sty
 Equivalents.sty
 Footnotes.sty
