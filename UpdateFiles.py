@@ -19,7 +19,7 @@ if folder == '':
 c(d(__file__))
 files = [("","CardsList.py"), ("","Flashcards.py"), ("","Htmlcards.py")]
 for file in l('./output'):
-    if s(file)[1] != ".txt":
+    if not s(file)[1] in [".cls", ".tex", ".txt"]:
         files.append(("output/", file))
 for file in l('./edit_svg'):
     if s(file)[1] != ".pyc" and file != "__pycache__":
