@@ -37,12 +37,16 @@ https://rfoxinter.github.io/revisions/flashcards/
 20240929094741
 ../L3/flashcards/FractionsContinues/TransformationDeMobius
 20241012231946
+../L3/flashcards/GroupeFondamentalEtRevetement/CorrespondanceDeGalois
+20250115172911
 ../L3/flashcards/GroupeFondamentalEtRevetement/GroupeFondamental
 20241126083629
 ../L3/flashcards/GroupeFondamentalEtRevetement/Introduction
 20241113201934
 ../L3/flashcards/GroupeFondamentalEtRevetement/Revetements
-20241129185340
+20250115171148
+../L3/flashcards/GroupeFondamentalEtRevetement/TheoremeDeVanKampen
+20250115180051
 ../L3/flashcards/IntegrationEtTheorieDeLaMesure/ConstructionDeMesures
 20241026103118
 ../L3/flashcards/IntegrationEtTheorieDeLaMesure/EspacesLp
@@ -62,7 +66,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/TopologieEtCalculDifferentiel/Completude
 20240921135357
 ../L3/flashcards/TopologieEtCalculDifferentiel/DualDUnEspaceDeBanach
-20241216180942
+20250115163633
 ../L3/flashcards/TopologieEtCalculDifferentiel/EspacesCompacts
 20241216102946
 ../L3/flashcards/TopologieEtCalculDifferentiel/EspacesDeHilbert

@@ -1,0 +1,9 @@
+Algèbre 1 -- Représentations de groupes
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al}\usepackage{footnotes}
+Représentation de groupe;;$\l\rho,V\r$ avec $V$ un $\Bbbk$-ev de dimension finie et $\rho\!:\!G\to\gl V$ un morphisme de groupes
+Degré de $\l\rho,V\r$;;$\dim V$
+$\l\rho,V$ est fidèle;;$\rho$ est injetif
+Sous-Représentation de $\l\rho,V\r$;;$W$ sev de $V$ tel que, pour tout $g\in G$, $g\cdot W\subset W$\footnote{On a en fait $g\cdot W=W$ car $g$ est injectif et $\dim W\leqslant\dim V<+\infty$}
+$\l\rho,V\r$ est irréductible;;La représentation est de degré $\geqslant1$\linebreak Les seules sous-représentations sont $\left\{0\right\}$ et $V$

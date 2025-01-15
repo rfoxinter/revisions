@@ -1,0 +1,7 @@
+Groupe fondamental et revêtement -- Correspondance de Galois
+Shuffle questions : True
+Q/R & R/Q : False
+\let\tilde\widetilde\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[1]{\oldgal\l#1\r}\DeclareMathOperator{\oldrev}{Rev}\newcommand{\rev}[2]{\oldrev\l#1,#2\r}\let\Pi\varPi\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\let\phi\varphi
+Lien entre $\Pi_1^\text{rev}\l B,b\r$, $\tilde B$ et $B$;;L'action $\gal p=\Pi_1^\text{rev}\l B,b\r\curvearrowright\tilde B$ est libre et $\Pi_1^\text{rev}\l B,b\r\backslash\tilde B\cong B$
+Correspondance de Galois\linebreak Par les treillis;;Les treillis de $\rev Bb$ et de $\Delta\l\Pi_1^\text{rev}\l B,b\r\r$ sont isomorphes\linebreak$\Delta\l G\r$ désigne les sous groupes de $G$
+Correspondance de Galois avec les morphismes;;$\appl{\phi}{\Delta\l\Pi_1^\text{rev}\l B,b\r\r}{\rev{B}{b}}{\varGamma}{\varGamma\backslash B}$ et $\appl{\psi}{\rev{B}{b}}{\Delta\l\Pi_1^\text{rev}\l B,b\r\r}{\l Y,y\r}{\Pi_1^\text{rev}\l Y,y\r}$ sont deux bijections décroissantes réciproques\linebreak$\left[\Pi_1^\text{rev}\l B,b\r:\varGamma\right]=d$ ssi $\phi\l\varGamma\r$ est de degré $d$\linebreak$\varGamma\vartriangleleft\Pi_1^\text{rev}\l B,b\r$ ssi $\phi\l\varGamma\r$ est galoisien

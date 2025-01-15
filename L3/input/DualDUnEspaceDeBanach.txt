@@ -6,5 +6,5 @@ Théorème de Hahn-Banach;;Si $E$ est un evn, $V$ un sev de $E$ et $f\!:\!V\to\m
 Application duale;;Si $E$ et $F$ sont deux evn et $f\!:\!E\to F$ est linéaire et continue alors $\appl{f^*}{F^*}{E^*}{\mu}{\l x\mapsto\mu\l f\l x\r\r\r}$ vérifie $\nnrm f=\nnrm{f^*}$
 Morphisme canonique $E\to E^{**}$;;$\nappl{E}{E^{**}}{x}{\l\altappl{\delta_x}{E^*}{\mathbb{R}}{f}{f\l x\r}\r}$\linebreak Cette application est une isométrie
 Espace reflexif;;Un espace de Banach est réflexif si l'application $\nappl{E}{E^{**}}{x}{\l\altappl{\delta_x}{E^*}{\mathbb{R}}{f}{f\l x\r}\r}$ est un isomorphisme
-Théorème de représentation de Riesz;;Si $\mu\in E^*$ alors in existe un unique $y\in E$ tel que $\mu=\psc y\bullet$
+Théorème de représentation de Riesz;;Si $E$ est un Hilbert et $\mu\in E^*$ alors in existe un unique $y\in E$ tel que $\mu=\psc y\cdot$
 Propriétés de $E$ si $E^*$ est séparable;;Si $E$ est un Banach et $E^*$ est séparable alors $E$ l'est\linebreak En particulier, si $E$ est séparable et réflexif alors $E^*$ est séparable

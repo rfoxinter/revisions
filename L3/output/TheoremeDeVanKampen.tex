@@ -1,0 +1,19 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\let\Pi\varPi%\let\tilde\widetilde\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[1]{\oldgal\l#1\r}\DeclareMathOperator{\oldrev}{Rev}\newcommand{\rev}[2]{\oldrev\l#1,#2\r}\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\let\phi\varphi
+\hypersetup{pdftitle=Groupe fondamental et revêtement -- Théorème de van Kampen}
+\title{Groupe fondamental et revêtement\\\emph{Théorème de van Kampen}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Lien entre $\Pi_1^\text{rev}\l B,b\r$ et $\Pi_1^\text{lacet}\l B,b\r$}{1/3}
+\slider{Si $B$ est connexe, localement connexe par arcs, localement trivialisable et semi-localement simplement connexe alors $\Pi_1^\text{rev}\l B,b\r$ et $\Pi_1^\text{lacet}\l B,b\r$ sont isomorphes}{1/3}
+\slideq{Espace semi-localement simplement connexe}{2/3}
+\slider{Tout $x\in X$ admet un voisinage $V$ tel que tout lacet en $x$ dans $V$ est homotope au lacet constant}{2/3}
+\slideq{Théorème de van Kampen}{3/3}
+\slider{Si $X=U_1\cup U_2$ avec $U_1$ et $U_2$ deux ouverts non vides tels que $U_1\cap U_2$ est un ouvert non vide et connexe par arcs, soient $x\in U_1\cap U_2$ et $\psi_i\!:\!\Pi_1^\text{lacet}\l U_1\cup U_2,x\r\to\Pi_1^\text{lacet}\l U_i,x\r\to\Pi_1^\text{lacet}\l X,x\r$ alors\linebreak$\psi\!:\!\Pi_1^\text{lacet}\l U_1\r*\Pi_1^\text{lacet}\l U_2,x\r\to\!\!\!\!\!\to\Pi_1^\text{lacet}\l X,x\r$ est un morphisme de groupes dont le noyau vaut $\left\langle\!\!\left\langle\psi_1\l g\r*\psi_2\l g^{-1}\r,g\in\Pi_1^\text{lacet}\l U_1\cap U_2,x\r\right\rangle\!\!\right\rangle$}{3/3}
+\end{document}
