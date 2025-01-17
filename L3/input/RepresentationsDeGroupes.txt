@@ -1,9 +1,22 @@
 Algèbre 1 -- Représentations de groupes
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al}\usepackage{footnotes}
+\usepackage{al}\usepackage{footnotes}\let\phi\varphi\usepackage{structures}\usepackage{bigoperators}\togglebigoppar\usepackage{dsft}
 Représentation de groupe;;$\l\rho,V\r$ avec $V$ un $\Bbbk$-ev de dimension finie et $\rho\!:\!G\to\gl V$ un morphisme de groupes
 Degré de $\l\rho,V\r$;;$\dim V$
-$\l\rho,V$ est fidèle;;$\rho$ est injetif
-Sous-Représentation de $\l\rho,V\r$;;$W$ sev de $V$ tel que, pour tout $g\in G$, $g\cdot W\subset W$\footnote{On a en fait $g\cdot W=W$ car $g$ est injectif et $\dim W\leqslant\dim V<+\infty$}
+$\l\rho,V\r$ est fidèle;;$\rho$ est injetif
+Sous-représentation de $\l\rho,V\r$;;$W$ sev de $V$ tel que, pour tout $g\in G$, $g\cdot W\subset W$\footnote{On a en fait $g\cdot W=W$ car $g$ est injectif et $\dim W\leqslant\dim V<+\infty$}
 $\l\rho,V\r$ est irréductible;;La représentation est de degré $\geqslant1$\linebreak Les seules sous-représentations sont $\left\{0\right\}$ et $V$
+Morphisme de représentations de $\l\rho,V\r$ vers $\l\sigma,W\r$;;$f\!:\!V\to W$ linéaire tel que pour tout $g\in G$ et tout $v\in V$, $f\l g\cdot v\r=g\cdot f\l v\r$ ie, $f\l\phi\l g\r\l v\r\r=\sigma\l g\r\l f\l v\r\r$
+$\hom[G]{V,W}$;;$\hom{V,W}^G=\left\{f\in\hom{V,W},g\circ f=f\circ g\right\}$
+$\rho\oplus\sigma$\linebreak$\l\rho,V\r$ et $\l\sigma,W\r$ deux représentations de $G$;;$\appl{\rho\oplus\sigma}{G}{\gl{V\oplus W}}{g}{\l v\oplus w\mapsto g\cdot v\oplus g\cdot w\r}$
+Supplémentaire stable;;Si $\l\rho,V\r$ est une représentation de $G$ est $W$ une sous-représentation alors il existe un supplémentaire $W'$ de $W$ qui est une sous-représentation de $G$ et $V=W\oplus W'$
+Théorème de Maschke;;Si $\car\Bbbk=0$ ou $\car\Bbbk\nmid\left|G\right|$ et $\left|G\right|<+\infty$ alors toute représentation de $G$ se décompose en somme directe de sous-représentation irréductibles
+Lemme de Schur;;Si $V$ et $W$ sont deux représentations irréductibles de $G$ alors soit $\hom[G]{V,W}=\left\{0\right\}$ soit $\hom[G]{V,W}\cong\Bbbk$
+Décomposition en comosantes irréductibles d'une représentation;;Si $W$ est une représentation de $G$ est $\Bbbk$ est algébriquement clos tel que $\car\Bbbk=0$ ou $\car\Bbbk\nmid\left|G\right|$ et $\left|G\right|<+\infty$ alors $W=\bigop{V\in\mathcal I_G\l\Bbbk\r}{}{V^{\dim{\hom[G]{V,W}}}}$\linebreak Cette décomposition est unique à isomorphisme près
+Représentation régulière\linebreak$V_G$;;$\appl\rho G{\Bbbk^G}f{\l h\mapsto f\l gh\r\r}$
+Caractérisation des groupes abéliens par les représentations;;Si $G$ est un groupe fini alors $G$ est abélien si et seulement si toutes ses représentations irréductibles sur $\mathbb C$ sont de degré $1$
+$\rho\otimes\sigma$\linebreak$\l\rho,V\r$ et $\l\sigma,W\r$ deux représentations de $G$;;$\appl{\rho\otimes\sigma}{G}{\gl{V\otimes W}}{g}{\l v\otimes w\mapsto g\cdot v\otimes g\cdot w\r}$
+$\phi_{\hom{V,W}}$\linebreak$\l\rho,V\r$ et $\l\sigma,W\r$ deux représentations de $G$;;$\appl{\phi_{\hom{V,W}}}{G}{\gl{\hom{V,W}}}{g}{\l f\mapsto\sigma\l g\r\circ f\circ\rho\l g^{-1}\r\r}$
+Représentation duale de $\l\rho,V\r$;;$\appl{\rho^*}{G}{V^*}{g}{\l f\mapsto f\circ\rho\l g^{-1}\r\r}=\phi_{\hom{V,{\ifpdf\bshft=3.75pt\else\bshft=2.45pt\fi\fakebold{\mathds{1}}}}}$
+Torsion de la représentation $\l\rho,V\r$ par $\l\chi,\Bbbk\r$;;$\l\rho,V\r\otimes\l\chi,\Bbbk\r=\l\nappl{G}{\gl{V}}{g}{\chi\l g\r\rho\l g\r},V\r$

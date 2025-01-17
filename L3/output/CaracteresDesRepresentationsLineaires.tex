@@ -1,0 +1,47 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{bigoperators}\togglebigoppar\usepackage{topologie}\usepackage{al}\usepackage{structures}
+\hypersetup{pdftitle=Algèbre 1 -- Caractères des représentations linéaires}
+\title{Algèbre 1\\\emph{Caractères des représentations linéaires}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\psc{\chi_V}{\chi_W}$}{1/17}
+\slider{$\frac{1}{\left|G\right|}\sum{g\in G}{}{\overline{\chi_V\l g\r}\times\chi_W\l g\r}=\dim{\hom[G]{V,W}}$}{1/17}
+\slideq{Théorème de Frobénius}{2/17}
+\slider{Les $\l\chi_I,I\in\mathcal I_G\l\mathbb C\r\r$ forment une base de $\mathcal R_\mathbb{C}\l G\r$}{2/17}
+\slideq{CNS pour avoir $\chi_V\l g\r=\dim V$}{3/17}
+\slider{$\rho\l g\r=\id_V$}{3/17}
+\slideq{Caractère de $\l\rho,V\r$}{4/17}
+\slider{$\appl{\chi_V}{G}{\mathbb{C}}{g}{\tr{\rho\l g\r}}$}{4/17}
+\slideq{Produit scalaire sur $\mathcal R_G\l\mathbb C\r$}{5/17}
+\slider{Si $\l v,V\r$ et $\l w,W\r$ sont deux représentations complexes de $G$ alors $\psc{\left[u\right]}{\left[v\right]}=\dim{\hom[G]{V,W}}$\linebreak En particulier, sur $\mathcal I_G\l\mathbb C\r$, $\psc{\left[u\right]}{\left[v\right]}=\delta_{\left[u\right],\left[v\right]}$}{5/17}
+\slideq{$\chi_{V\otimes W}$}{6/17}
+\slider{$\chi_V\times\chi_W$}{6/17}
+\slideq{CNS pour $V$ irréductible}{7/17}
+\slider{$\nrm{\chi_V}=1$}{7/17}
+\slideq{$\chi_{V\oplus W}$}{8/17}
+\slider{$\chi_V+\chi_W$}{8/17}
+\slideq{$\chi_{\hom{V,W}}$}{9/17}
+\slider{$\overline{\chi_V}\times\chi_W$}{9/17}
+\slideq{Produit scalaire hermitien sur $V$ invariant par l'action de $G$}{10/17}
+\slider{$\psc xy_G=\frac{1}{\left|G\right|}\sum{g\in G}{}{\psc{gx}{gy}}$}{10/17}
+\slideq{Fonction centrales}{11/17}
+\slider{$f\in\mathcal R_{\mathbb C}\l G\r$ si pour tout $\l g,h\r\in G^2$, $f\l ghg^{-1}\r=f\l h\r$\linebreak$\dim{\mathcal{R}_\mathbb{C}\l G\r}=\vala{\left\{\left\{ghg^{-1},g\in G\right\}, h\in G\right\}}$}{11/17}
+\slideq{$\chi_V\l g^{-1}\r$}{12/17}
+\slider{$\overline{\chi_V\l g\r}$}{12/17}
+\slideq{Propriétés de $f_{V,\alpha}=\frac{1}{\left|G\right|}\sum{g\in G}{}{\overline{\alpha\l g\r}\times\rho\l g\r}$ pour $\alpha$ une fonction centrale}{13/17}
+\slider{$f_{V,\alpha}\in\hom[G]\l V\r$\linebreak Si $V\in\mathcal I_G\l\mathbb C\r$, $f_{V,\alpha}=\frac{\psc\alpha{\chi_V}}{\dim V}\id_V$\linebreak Si $u\in\hom[G]{V,W}$, $u\circ f_{V,\alpha}=f_{W,\alpha}\circ u$}{13/17}
+\slideq{Expression de $\dim{V^G}$ avec $\chi_V$}{14/17}
+\slider{$\frac{1}{\left|G\right|}\sum{g\in G}{}{\chi_V\l g\r}$}{14/17}
+\slideq{$f_{V,\chi_I}=\frac{1}{\left|G\right|}\sum{g\in G}{}{\overline{\chi_I\l g\r}\times\rho\l g\r}$\linebreak$I\in\mathcal I_G\l\mathbb C\r$}{15/17}
+\slider{$\frac{1}{\dim I}p$\linebreak$p$ le projecteur sur $I$ parallèlement aux autres représentations irréductibles}{15/17}
+\slideq{$\chi_{V^*}$}{16/17}
+\slider{$\overline{\chi_V}$}{16/17}
+\slideq{$\sp{\rho\l g\r}$}{17/17}
+\slider{$\sp{\rho\l g\r}\subset\mathbb U_{\left|G\right|}$}{17/17}
+\end{document}

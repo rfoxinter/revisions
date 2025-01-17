@@ -266,8 +266,8 @@
     }{}%
     \if\relax\detokenize{#5}\relax%
     \else%
-    \counterwithin{thms#5counter}{#5}
-        \counterwithin{#1}{section}%
+        \counterwithin{thms#5counter}{#5}
+        \counterwithin{#1}{#5}%
       \fi%
     \setcounter{#1}{0}%
     \expandafter\let\csname #1autorefname\endcsname\relax%
@@ -706,6 +706,7 @@
 \def\@space{ }
 \let\caption\relax
 \newcommand{\caption}[2][]{%
+    \par%
     \@ifundefined{c@\@captype}{%
         \newcounter{\@captype}%
         \setcounter{\@captype}0%
@@ -717,7 +718,7 @@
         \def\argI{#1}%
     \fi%
     \refstepcounter{\@captype}%
-    \label{\@captype\@space\argI}\addcontentsline{\csname ext@\@captype\endcsname}{\@captype}{\protect\numberline{\csname the\@captype\endcsname}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\argI}}}\noexpand\expandafter\noexpand\MakeUppercase\@captype{} \csname the\@captype\endcsname{} -- \textsl{#2}%
+    \label{\@captype\@space\argI}\addcontentsline{\csname ext@\@captype\endcsname}{\@captype}{\protect\numberline{\csname the\@captype\endcsname}{\ignorespaces{\expandafter\MakeUppercase\argI}}}\expandafter\MakeUppercase\@captype{} \csname the\@captype\endcsname{} -- \textsl{#2}%
 }
 \let\subcaption\relax
 \newcommand{\subcaption}[2][]{%
@@ -1515,9 +1516,9 @@ space before arrow={0.2ex},
 \newcommand{\psc}[2]{\left\langle#1,#2\right\rangle}
 %% Structures
 \DeclareMathOperator{\oldhom}{Hom}
-\renewcommand{\hom}[1]{\oldhom\l#1\r}
+\renewcommand{\hom}[2][]{\oldhom_{#1}\l#2\r}
 \DeclareMathOperator{\oldaut}{Aut}
-\newcommand{\aut}[1]{\oldaut\l#1\r}
+\newcommand{\aut}[2][]{\oldaut_{#1}\l#2\r}
 \let\oldker\ker
 \renewcommand{\ker}[1]{\oldker\l#1\r}
 \DeclareMathOperator{\oldim}{im}
@@ -1821,6 +1822,8 @@ space before arrow={0.2ex},
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\olddiscr}{discr}
 \newcommand{\discr}[2][]{\olddiscr_{#1}\l#2\r}
+\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}
+\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}
 %% Analyse
 \def\analyseleftp{\l}
 \def\analyserightp{\r}
@@ -1944,10 +1947,13 @@ space before arrow={0.2ex},
 \DeclareMathOperator{\oldepi}{Epi}
 \newcommand{\epi}[1]{\oldepi\l#1\r}
 %% Dsft
-\def\ds@whichfont{dsrom}
 \let\star\relax
 \let\square\relax
 \let\triangle\relax
+\DeclareFontFamily{U}{dsrom}{}
+\DeclareFontShape{U}{dsrom}{m}{n}{
+    <-> dsrom12
+}{}
 \DeclareSymbolFont{mathds}{U}{dsrom}{m}{n}
 \DeclareMathAlphabet{\mathds}{U}{dsrom}{m}{n}
 \newcommand\ind[1]{\mathds{1}_{#1}}

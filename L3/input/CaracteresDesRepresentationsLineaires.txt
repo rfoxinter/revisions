@@ -1,0 +1,21 @@
+Algèbre 1 -- Caractères des représentations linéaires
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}\togglebigoppar\usepackage{topologie}\usepackage{al}\usepackage{structures}
+Produit scalaire hermitien sur $V$ invariant par l'action de $G$;;$\psc xy_G=\frac{1}{\left|G\right|}\sum{g\in G}{}{\psc{gx}{gy}}$
+Produit scalaire sur $\mathcal R_G\l\mathbb C\r$;;Si $\l v,V\r$ et $\l w,W\r$ sont deux représentations complexes de $G$ alors $\psc{\left[u\right]}{\left[v\right]}=\dim{\hom[G]{V,W}}$\linebreak En particulier, sur $\mathcal I_G\l\mathbb C\r$, $\psc{\left[u\right]}{\left[v\right]}=\delta_{\left[u\right],\left[v\right]}$
+Caractère de $\l\rho,V\r$;;$\appl{\chi_V}{G}{\mathbb{C}}{g}{\tr{\rho\l g\r}}$
+$\sp{\rho\l g\r}$;;$\sp{\rho\l g\r}\subset\mathbb U_{\left|G\right|}$
+$\chi_V\l g^{-1}\r$;;$\overline{\chi_V\l g\r}$
+CNS pour avoir $\chi_V\l g\r=\dim V$;;$\rho\l g\r=\id_V$
+$\chi_{V\oplus W}$;;$\chi_V+\chi_W$
+$\chi_{V\otimes W}$;;$\chi_V\times\chi_W$
+$\chi_{V^*}$;;$\overline{\chi_V}$
+$\chi_{\hom{V,W}}$;;$\overline{\chi_V}\times\chi_W$
+$\psc{\chi_V}{\chi_W}$;;$\frac{1}{\left|G\right|}\sum{g\in G}{}{\overline{\chi_V\l g\r}\times\chi_W\l g\r}=\dim{\hom[G]{V,W}}$
+Expression de $\dim{V^G}$ avec $\chi_V$;;$\frac{1}{\left|G\right|}\sum{g\in G}{}{\chi_V\l g\r}$
+CNS pour $V$ irréductible;;$\nrm{\chi_V}=1$
+Fonction centrales;;$f\in\mathcal R_{\mathbb C}\l G\r$ si pour tout $\l g,h\r\in G^2$, $f\l ghg^{-1}\r=f\l h\r$\linebreak$\dim{\mathcal{R}_\mathbb{C}\l G\r}=\vala{\left\{\left\{ghg^{-1},g\in G\right\}, h\in G\right\}}$
+Théorème de Frobénius;;Les $\l\chi_I,I\in\mathcal I_G\l\mathbb C\r\r$ forment une base de $\mathcal R_\mathbb{C}\l G\r$
+Propriétés de $f_{V,\alpha}=\frac{1}{\left|G\right|}\sum{g\in G}{}{\overline{\alpha\l g\r}\times\rho\l g\r}$ pour $\alpha$ une fonction centrale;;$f_{V,\alpha}\in\hom[G]\l V\r$\linebreak Si $V\in\mathcal I_G\l\mathbb C\r$, $f_{V,\alpha}=\frac{\psc\alpha{\chi_V}}{\dim V}\id_V$\linebreak Si $u\in\hom[G]{V,W}$, $u\circ f_{V,\alpha}=f_{W,\alpha}\circ u$
+$f_{V,\chi_I}=\frac{1}{\left|G\right|}\sum{g\in G}{}{\overline{\chi_I\l g\r}\times\rho\l g\r}$\linebreak$I\in\mathcal I_G\l\mathbb C\r$;;$\frac{1}{\dim I}p$\linebreak$p$ le projecteur sur $I$ parallèlement aux autres représentations irréductibles

@@ -1,0 +1,11 @@
+Algèbre 1 -- Table des caractères
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{dsft}\usepackage{al}\usepackage{bigoperators}\DeclareMathOperator{\diag}{diag}\usepackage{structures}
+Table des caractères du groupe fini $G$;;$M_G\l\chi_i\l C_j\r\r_{\l i,j\r\in\llb1,r\rrb^2}$\linebreak$\left\{C_1,\cdots,C_r\right\}$ les classes d'équivalence avec $C_1=\left\{e\right\}$\linebreak$\left\{\chi_1,\cdots,\chi_r\right\}$ les caractères irréductibles de $G$ dans $\mathbb C$ avec $\chi_1=\mathds1$
+Relations sur la première colonne;;$\left|G\right|=\sum{i=1}{r}{\dim{V_i}^2}$\linebreak$\dim{V_i}\mid\left|G\right|$
+Relations matricielles sur $M_G$;;$M_G\times\diag\l\left|C_1\right|,\cdots,\left|C_r\right|\r\times M_G^*=\left|G\right|I_r$\linebreak$M_G^*M_G=\diag\l\left|C_1\right|,\cdots,\left|C_r\right|\r$\linebreak En particulier, les colonnes sont orthogonales pour le produit scalaire hermitien
+Lien entre les lignes de $M_G$;;Les lignes complexes sont deux à deux conjuguée\linebreak En particulier, si $G$ admet une seule représentation irréductible de degré $1$ alors son caractère est réel
+Propriété des colonnes de $M_G$ en fonction des classes de conjugaison;;Si $C_i=Ci^{-1}$ alors la colonne $i$ de $M_G$ est réelle\linebreak En particulier, si tout élément est conjugué à son inverse alors $M_G$ est réelle
+Irréductibilité d'une torsion;;Si $\chi$ est un caractère irréductible et $\epsilon$ un caractère linéaire alors $\epsilon\chi$ est un caractère irréductible
+Lien entre les sous-groupes distingués et les caractères;;Les sous-groupes distingués de $G$ sont exactement les noyaux des caractères\linebreak$\ker\chi=\left\{g\in G,\chi\l g\r=\chi\l1\r\right\}$

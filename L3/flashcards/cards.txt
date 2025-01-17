@@ -1,6 +1,8 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ../L3/flashcards/Algebre1/ActionsDeGroupes
 20240929150605
+../L3/flashcards/Algebre1/CaracteresDesRepresentationsLineaires
+20250117103904
 ../L3/flashcards/Algebre1/FormeLineaireEtDualite
 20241013114248
 ../L3/flashcards/Algebre1/FormesBilineaires
@@ -15,8 +17,12 @@ https://rfoxinter.github.io/revisions/flashcards/
 20240929111927
 ../L3/flashcards/Algebre1/ProduitTensoriel
 20241217091345
+../L3/flashcards/Algebre1/RepresentationsDeGroupes
+20250116150924
 ../L3/flashcards/Algebre1/SommeDirectesEtProduits
 20241006110233
+../L3/flashcards/Algebre1/TableDesCaracteres
+20250117105856
 ../L3/flashcards/AnalyseComplexe/EtudeLocaleDeFonctionsHolomorphes
 20241108165323
 ../L3/flashcards/AnalyseComplexe/FonctionsHolomorphes

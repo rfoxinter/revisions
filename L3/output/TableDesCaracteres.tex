@@ -1,0 +1,27 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{dsft}\usepackage{al}\usepackage{bigoperators}\DeclareMathOperator{\diag}{diag}\usepackage{structures}
+\hypersetup{pdftitle=Algèbre 1 -- Table des caractères}
+\title{Algèbre 1\\\emph{Table des caractères}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Relations sur la première colonne}{1/7}
+\slider{$\left|G\right|=\sum{i=1}{r}{\dim{V_i}^2}$\linebreak$\dim{V_i}\mid\left|G\right|$}{1/7}
+\slideq{Propriété des colonnes de $M_G$ en fonction des classes de conjugaison}{2/7}
+\slider{Si $C_i=Ci^{-1}$ alors la colonne $i$ de $M_G$ est réelle\linebreak En particulier, si tout élément est conjugué à son inverse alors $M_G$ est réelle}{2/7}
+\slideq{Irréductibilité d'une torsion}{3/7}
+\slider{Si $\chi$ est un caractère irréductible et $\epsilon$ un caractère linéaire alors $\epsilon\chi$ est un caractère irréductible}{3/7}
+\slideq{Table des caractères du groupe fini $G$}{4/7}
+\slider{$M_G\l\chi_i\l C_j\r\r_{\l i,j\r\in\llb1,r\rrb^2}$\linebreak$\left\{C_1,\cdots,C_r\right\}$ les classes d'équivalence avec $C_1=\left\{e\right\}$\linebreak$\left\{\chi_1,\cdots,\chi_r\right\}$ les caractères irréductibles de $G$ dans $\mathbb C$ avec $\chi_1=\mathds1$}{4/7}
+\slideq{Relations matricielles sur $M_G$}{5/7}
+\slider{$M_G\times\diag\l\left|C_1\right|,\cdots,\left|C_r\right|\r\times M_G^*=\left|G\right|I_r$\linebreak$M_G^*M_G=\diag\l\left|C_1\right|,\cdots,\left|C_r\right|\r$\linebreak En particulier, les colonnes sont orthogonales pour le produit scalaire hermitien}{5/7}
+\slideq{Lien entre les lignes de $M_G$}{6/7}
+\slider{Les lignes complexes sont deux à deux conjuguée\linebreak En particulier, si $G$ admet une seule représentation irréductible de degré $1$ alors son caractère est réel}{6/7}
+\slideq{Lien entre les sous-groupes distingués et les caractères}{7/7}
+\slider{Les sous-groupes distingués de $G$ sont exactement les noyaux des caractères\linebreak$\ker\chi=\left\{g\in G,\chi\l g\r=\chi\l1\r\right\}$}{7/7}
+\end{document}
