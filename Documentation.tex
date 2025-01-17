@@ -413,6 +413,8 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\id}
 \mcmd{\transp{u}}
 \mcmd{\discr[\mathcal{B}]{q}}
+\mcmd{\appl{\id}{E}{E}{x}{x}}
+\mcmd{\nappl{E}{\mathbb{R}}{x}{l(x)}}
 \hsection{Analyse.sty}
 Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
 
@@ -486,6 +488,8 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \mcmd{\oldepi}
 \mcmd{\epi{f}}
 \mcmd{\id}
+\mcmd{\appl{\id}{I}{I}{x}{x}}
+\mcmd{\nappl{I}{I}{x}{f(x)}}
 \toggleanalysepar\subsection{L'option {\color{namecolour}\texttt{nopar}}}
 Si {\color{namecolour}\texttt{nopar}} est utilisé, les commandes comme \mintinline{latexmath}?\der?, \mintinline{latexmath}?\pder?, \mintinline{latexmath}?\mpder?, et \mintinline{latexmath}?\int? n'ont plus de parenthèses automatiques. Avec cette option, \mintinline{latexmath}?\der{}{f(x)}? produit <<~$\der{}{f(x)}$~>>; \mintinline{latexmath}?\int[x]{f(x)}? produit <<~$\int[x]{f(x)}$~>>.
 
@@ -858,9 +862,11 @@ Comparaison entre \texttt{cmssp} et \texttt{cmss} :
 \hsection{Structures.sty}
 \mhd
 \mcmd{\oldhom}
-\mcmd{\hom{E}}
+\mcmd{\oldhom}
+\mcmd{\hom[G]{V,W}}
 \mcmd{\oldaut}
 \mcmd{\aut{E}}
+\mcmd{\aut[\mathbb{Q}]{\mathbb{R}}}
 \mcmd[\footnotemark]{\oldker}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\ker?}
 \mcmd{\ker{f}}
