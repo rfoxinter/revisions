@@ -34,6 +34,6 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MPI/flashcards/Analyse/SuitesDeFonctions
 20231228225723
 ../MPI/flashcards/Probabilites/VariablesAleatoiresDiscretes
-20240719190917
+20250120222528
 ../MPI/flashcards/Topolgie/TopologieDesEVN
 20240101223137
