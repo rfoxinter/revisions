@@ -40,7 +40,7 @@
 \let\prvitemize\relax
 \newlist{prvitemize}{itemize}{10}
 \setlist[prvitemize]{topsep=0pt,nosep,leftmargin=*,labelsep=0pt,label=$\to{}$}
-\usepackage{tabularx}
+\usepackage{tabularray}
 \usepackage{hhline}
 \usepackage{tikz}
 \tikzset{every arrow/.append style={line cap=round}}
@@ -1833,7 +1833,8 @@ space before arrow={0.2ex},
 \newcommand{\toggleanalyselimits}{\altarticle@comparestring{\analyselimits}{\limits}{\def\analyselimits{\nolimits}}{\def\analyselimits{\limits}}}
 \newcommand{\autoanalyselimits}{\def\analyselimits{}}
 \newcommand{\toggleanalysedisplay}{\altarticle@comparestring{\analysedisplay}{}{\def\analysedisplay{\displaystyle}}{\def\analysedisplay{}}}
-\newcommand{\derfrac}[2]{{\analysedisplay\oldfrac{#1}{#2}}}
+\let\derfrac\frac
+\newcommand{\derfrac}[2]{{\analysedisplay\derfrac{#1}{#2}}}
 
 \let\slantpartial\partial
 \ifpdf
