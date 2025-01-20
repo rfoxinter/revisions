@@ -4,7 +4,7 @@ function is_numeric(str){
 
 function display() {
     var file = new XMLHttpRequest();
-    file.open('GET', 'https://rfoxinter.github.io/revisions/sitemap.xml');
+    file.open('GET', '../files.txt');
     file.send();
     file.onreadystatechange = function() {
         if (file.readyState === 4) {
@@ -16,13 +16,13 @@ function display() {
 }
 
 function display_files(sitemap){
-    const path = 'https://rfoxinter.github.io/revisions/L3/pdf/';
+    const path = 'https://rfoxinter.github.io/revisions/L3S1/pdf/';
     const extension = '\\.pdf';
 
     var files = [];
 
     while (sitemap.search(path)!=-1) {
-        var idx_start = sitemap.search(path)+45;
+        var idx_start = sitemap.search(path)+47;
         var idx_end = sitemap.search(extension);
         files.push(sitemap.substring(idx_start,idx_end));
         sitemap = sitemap.substring(idx_end+4,sitemap.length);
@@ -66,71 +66,28 @@ function display_files(sitemap){
         if (filename.search(/\.[0-9]/g) == f.length-2) {
             name_tmp = filename.substring(0,f.length-2);
             if (name_tmp != name) {
-                p.innerHTML = name_tmp + '.pdf ';
+                p.innerHTML = name_tmp + ' ';
                 p.setAttribute('id', name_tmp);
-                p.innerHTML += '  ' + f.substring(f.length-1, f.length) + ' ';
                 var a = document.createElement('a');
-                a.setAttribute('href', 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + path + f + '.pdf');
-                a.setAttribute('target', '_blank');
+                a.setAttribute('href', '../../flashcards?file=' + btoa('../L3/flashcards/' + name_tmp).replaceAll('=', ''));
                 span = document.createElement('span');
                 span.setAttribute('class','material-symbols-rounded');
                 span.innerHTML = 'open_in_new';
                 a.appendChild(span);
                 p.appendChild(a);
-                p.innerHTML += ' ';
-                var a2 = document.createElement('a');
-                a2.setAttribute('href', f + '.pdf');
-                span2 = document.createElement('span');
-                span2.setAttribute('class','material-symbols-rounded');
-                span2.innerHTML = 'download';
-                a2.appendChild(span2);
-                a2.setAttribute('download', 'pdf/' + filename + '.pdf');
-                p.appendChild(a2);
-            } else {
-                p = document.getElementById(name_tmp);
-                p.innerHTML += '  ' + f.substring(f.length-1, f.length) + ' ';
-                var a = document.createElement('a');
-                a.setAttribute('href', 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + path + f + '.pdf');
-                a.setAttribute('target', '_blank');
-                span = document.createElement('span');
-                span.setAttribute('class','material-symbols-rounded');
-                span.innerHTML = 'open_in_new';
-                a.appendChild(span);
-                p.appendChild(a);
-                p.innerHTML += ' ';
-                var a2 = document.createElement('a');
-                a2.setAttribute('href', 'pdf/' + f + '.pdf');
-                span2 = document.createElement('span');
-                span2.setAttribute('class','material-symbols-rounded');
-                span2.innerHTML = 'download';
-                a2.appendChild(span2);
-                a2.setAttribute('download', filename + '.pdf');
-                p.appendChild(a2);
-
             }
-            
             name = name_tmp;
         } else {
             p.setAttribute('class',groupname+'_elem');
             name = '';
-            p.innerHTML = filename + '.pdf ';
+            p.innerHTML = filename + ' ';
             var a = document.createElement('a');
-            a.setAttribute('href', 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + path + f + '.pdf');
-            a.setAttribute('target', '_blank');
+            a.setAttribute('href', '../../flashcards?file=' + btoa('../L3/flashcards/' + f).replaceAll('=', ''));
             span = document.createElement('span');
             span.setAttribute('class','material-symbols-rounded');
             span.innerHTML = 'open_in_new';
             a.appendChild(span);
             p.appendChild(a);
-            p.innerHTML += ' ';
-            var a2 = document.createElement('a');
-            a2.setAttribute('href', 'pdf/' + f + '.pdf');
-            span2 = document.createElement('span');
-            span2.setAttribute('class','material-symbols-rounded');
-            span2.innerHTML = 'download';
-            a2.appendChild(span2);
-            a2.setAttribute('download', filename + '.pdf');
-            p.appendChild(a2);
         }
         document.getElementsByClassName(groupname)[0].appendChild(p);
     }

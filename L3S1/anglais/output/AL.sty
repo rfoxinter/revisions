@@ -1,0 +1,36 @@
+\RequirePackage{matrices}
+
+\DeclareMathOperator{\oldvect}{Vect}
+\newcommand{\vect}[1]{\oldvect\l#1\r}
+\newcommand{\al}[3][]{\def\alargII{,#3}\ifx&#3&\def\alargII{}\fi\mathcal{L}_{#1}\l#2\alargII\r}
+\ifdefined\varoplus
+    \let\oldoplus\oplus
+    \let\oplus\varoplus
+\fi
+\let\oldgl\relax
+\DeclareMathOperator{\oldgl}{GL}
+\newcommand{\gl}[1]{\oldgl\l#1\r}
+\let\olddim\dim
+\renewcommand{\dim}[1]{\olddim\l#1\r}
+\DeclareMathOperator{\oldrg}{rg}
+\newcommand{\rg}[1]{\oldrg\l#1\r}
+\DeclareMathOperator{\oldtr}{tr}
+\newcommand{\tr}[1]{\oldtr\l#1\r}
+\DeclareMathOperator{\oldmat}{Mat}
+\newcommand{\almat}[3]{\def\almatargIII{,#3}\ifx&#3&\def\almatargIII{}\fi\oldmat_{#2\almatargIII}\l#1\r}
+\newcommand\lc{\left[}
+\newcommand\rc{\right]}
+\DeclareMathOperator{\oldsl}{SL}
+\renewcommand{\sl}[2][]{\oldsl_{#1}\l#2\r}
+\DeclareMathOperator{\oldorth}{O}
+\newcommand{\orth}[2][]{\oldorth_{#1}\l#2\r}
+\DeclareMathOperator{\oldso}{SO}
+\newcommand{\so}[2][]{\oldso_{#1}\l#2\r}
+\DeclareMathOperator{\oldsym}{S}
+\newcommand{\alsym}[2][]{\oldsym^{#1}\l#2\r}
+\DeclareMathOperator{\oldsp}{sp}
+\renewcommand{\sp}[2][]{\oldsp_{#1}\l#2\r}
+\let\oldid\relax
+\let\id\relax
+\DeclareMathOperator{\oldid}{id}
+\newcommand{\id}{\oldid}

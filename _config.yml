@@ -41,7 +41,7 @@ defaults:
             sitemap: false
     -
         scope:
-            path: L3/anglais/**
+            path: L3S1/**
         values:
             sitemap: false
 

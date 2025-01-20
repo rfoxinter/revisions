@@ -1,0 +1,141 @@
+\RequirePackage{bigoperators}
+\RequirePackage{tools}
+
+\newif\if@dvar\@dvarfalse
+\DeclareOption{dvar}{\@dvartrue}
+\newif\if@nopar\@noparfalse
+\DeclareOption{nopar}{\@nopartrue}
+\DeclareOption*{}
+\ProcessOptions\relax
+\if@dvar
+    \RequirePackage{pgffor}
+\fi
+\def\analyseleftp{\l}
+\def\analyserightp{\r}
+\if@nopar
+    \def\analyseleftp{}
+    \def\analyserightp{}
+\fi
+\newcommand{\toggleanalysepar}{\comparestring{\analyseleftp}{}{\def\analyseleftp{\l}\def\analyserightp{\r}}{\def\analyseleftp{}\def\analyserightp{}}}
+
+\let\slantpartial\partial
+\ifpdf
+    % pdfLaTeX (flashcards)
+    \newsavebox{\partialbox}
+    \newcommand{\displaypartial}{\noexpand{\unslant{\displaystyle\textstyle\slantpartial}}\kern-1.2pt}
+    \newcommand{\normalpartial}{\noexpand{\unslant{\textstyle\slantpartial}}\kern-1.2pt}
+    \newcommand{\scriptpartial}{\noexpand{\unslant{\scriptstyle\slantpartial}}\kern-1.2pt}
+    \newcommand{\scriptscriptpartial}{\noexpand{\unslant{\scriptscriptstyle\slantpartial}}\kern-1.2pt}
+    \renewcommand{\partial}{\mathchoice{\displaypartial}{\normalpartial}{\scriptpartial}{\scriptscriptpartial}}
+\else
+    % LaTeX (htmlcards)
+    \renewcommand{\partial}{\slantpartial\kern-0.8pt}
+\fi
+\newcommand{\resetpartial}{\let\partial\slantpartial}
+
+\makeatletter
+\newcounter{mpdercount}
+\def\mpderden{}
+\newcounter{mpdervarcount}
+\def\prevmpdervar{}
+\if@dvar
+    \newcommand{\scanmpderlist}[1]{
+        \foreach \i in {#1}{
+            \stepcounter{mpdercount}
+            \comparestring{\prevmpdervar}{\i}{
+                \stepcounter{mpdervarcount}
+            }{
+                \comparestring{\arabic{mpdervarcount}}{1}{}{\xdef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
+                \xdef\mpderden{\unexpanded\expandafter{\mpderden}\noexpand\partial\noexpand\i}
+                \setcounter{mpdervarcount}{1}
+                \xdef\prevmpdervar{\i}
+            }
+        }
+        \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
+    }
+    \newcommand{\scanmpder}[1]{
+        \setcounter{mpdercount}{0}
+        \def\mpderden{}
+        \setcounter{mpdervarcount}{1}
+        \def\prevmpdervar{}
+        \scanmpderlist{#1}
+    }
+\else
+    \def\do@scanmpder#1,{%
+    \ifx#1\relax
+        \let\next\relax
+    \else
+        \stepcounter{mpdercount}
+        \comparestring{\prevmpdervar}{#1}{
+            \stepcounter{mpdervarcount}
+        }{
+            \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
+            \edef\mpderden{\unexpanded\expandafter{\mpderden}\noexpand\partial\noexpand#1}
+            \setcounter{mpdervarcount}{1}
+            \def\prevmpdervar{#1}
+        }
+        \let\next\do@scanmpder
+    \fi\next
+    }
+    \newcommand{\scanmpder}[1]{
+        \setcounter{mpdercount}{0}
+        \def\mpderden{}
+        \setcounter{mpdervarcount}{1}
+        \def\prevmpdervar{}
+        \do@scanmpder#1,\relax,
+        \comparestring{\arabic{mpdervarcount}}{1}{}{\edef\mpderden{\unexpanded\expandafter{\mpderden}^{\arabic{mpdervarcount}}}}
+    }
+\fi
+\makeatother
+
+\DeclareMathOperator{\oldd}{d}
+\newcommand{\dd}{{\oldd}}
+\newcommand{\intd}{{{}\oldd}}
+\newcommand{\der}[1][]{\def\derargI{#1}\tmpder}
+\newcommand{\tmpder}[3][x]{
+    \if\relax\detokenize{#3}\relax
+        \def\derargIII{}
+    \else
+        \def\derargIII{\analyseleftp{#3}\analyserightp}
+    \fi\frac{\dd^{\derargI}{#2}}{\dd#1^{\derargI}}\derargIII}
+\newcommand{\pder}[1][]{\def\pderargI{#1}\tmppder}
+\newcommand{\tmppder}[3][x]{
+    \if\relax\detokenize{#3}\relax
+        \def\pderargIII{}
+    \else
+        \def\pderargIII{\analyseleftp{#3}\analyserightp}
+    \fi\frac{\partial^{\pderargI}{#2}}{\partial#1^{\pderargI}}\pderargIII}
+\newcommand{\mpder}[3][x]{\scanmpder{#1}
+    \if\relax\detokenize{#3}\relax
+        \def\mpderargIII{}
+    \else
+        \def\mpderargIII{\analyseleftp{#3}\analyserightp}
+    \fi\frac{\partial^{\arabic{mpdercount}}{#2}}{\mpderden}\mpderargIII}
+\let\oldint\int
+\renewcommand{\int}[1][]{
+    \if\relax\detokenize{#1}\relax
+        \def\intargI{}
+    \else
+        \def\intargI{{{}\oldd}#1}
+    \fi\tmpint}
+\newcommand{\tmpint}[1][]{\def\intargII{#1}\tmptmpint}
+\newcommand{\tmptmpint}[2][]{{\displaystyle\oldint_{\intargII}^{#1}}\analyseleftp{#2}\analyserightp\intargI}
+\newcommand{\eval}[1][]{\def\evalargI{#1}\tmpeval}
+\newcommand{\tmpeval}[2][]{\left[#2\right]_{\evalargI}^{#1}}
+\newcommand{\serie}[1]{\oldsum#1}
+\DeclareMathOperator{\oldesc}{Esc}
+\newcommand{\esc}[2][]{\oldesc_{#1}\l#2\r}
+\DeclareMathOperator{\oldcm}{CM}
+\newcommand{\cm}[2][]{\oldcm_{#1}\l#2\r}
+\DeclareMathOperator{\oldfnint}{Int}
+\newcommand{\fnint}[1]{\oldfnint\l#1\r}
+\let\anrm\relax
+\newcommand{\anrm}[2][\infty]{\left\|#2\right\|_{#1}}
+\DeclareMathOperator{\oldva}{VA}
+\newcommand{\va}[1]{\oldva\l#1\r}
+\DeclareMathOperator{\oldepi}{Epi}
+\newcommand{\epi}[1]{\oldepi\l#1\r}
+\let\oldid\relax
+\let\id\relax
+\DeclareMathOperator{\oldid}{id}
+\newcommand{\id}{\oldid}
