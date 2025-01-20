@@ -1,0 +1,12 @@
+\DeclareMathOperator{\oldhom}{Hom}
+\renewcommand{\hom}[1]{\oldhom\l#1\r}
+\DeclareMathOperator{\oldaut}{Aut}
+\newcommand{\aut}[1]{\oldaut\l#1\r}
+\let\oldker\ker
+\renewcommand{\ker}[1]{\oldker\l#1\r}
+\DeclareMathOperator{\oldim}{im}
+\newcommand{\im}[1]{\oldim\l#1\r}
+\newcommand{\la}{\left\langle}
+\newcommand{\ra}{\right\rangle}
+\DeclareMathOperator{\oldord}{ord}
+\newcommand{\ord}[2][]{\oldord_{#1}\l#2\r}

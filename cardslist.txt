@@ -1,10 +1,12 @@
-Mathématiques L3
-https://rfoxinter.github.io/revisions/flashcards/app/app.html?file=https://rfoxinter.github.io/revisions/L3/flashcards/cards.txt
+Mathématiques L3 – Semestre 2
+https://rfoxinter.github.io/revisions/flashcards/app/app.html?file=https://rfoxinter.github.io/revisions/L3S2/flashcards/cards.txt
+Mathématiques L3 – Semestre 1
+https://rfoxinter.github.io/revisions/flashcards/app/app.html?file=https://rfoxinter.github.io/revisions/L3S1/flashcards/cards.txt
 Mathématiques MPI
 https://rfoxinter.github.io/revisions/flashcards/app/app.html?file=https://rfoxinter.github.io/revisions/MPI/flashcards/cards.txt
 Mathématiques MP2I
 https://rfoxinter.github.io/revisions/flashcards/app/app.html?file=https://rfoxinter.github.io/revisions/MP2I/flashcards/cards.txt
 Anglais L3
-https://rfoxinter.github.io/revisions/flashcards/app/app.html?file=https://rfoxinter.github.io/revisions/L3/anglais/flashcards/cards.txt
+https://rfoxinter.github.io/revisions/flashcards/app/app.html?file=https://rfoxinter.github.io/revisions/L3_anglais/flashcards/cards.txt
 Physique MPI
 https://rfoxinter.github.io/revisions/flashcards/app/app.html?file=https://rfoxinter.github.io/revisions/MPI/physique/flashcards/cards.txt

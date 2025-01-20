@@ -1,0 +1,62 @@
+Anglais B2+ -- Discourse markers
+Shuffle questions : True
+Q/R & R/Q : True
+\usepackage{vocab}
+\frdef{Exactement\\C'est vrai\\Tout à fait\\Tellement \tstring!\\Totalement \tstring!\\Ha oui c'est sur \tstring!};;\engdef{Exactly\\That's so true\tstring!\\Absolutely\tstring!\\Totally\tstring!\\Oh, definitely.}{Exactly\\That's so true\tstring!\\Absolutely\tstring!\\Totally\tstring!\\That's for sure\tstring!}
+\frdef{Je suis d'accord \tstring!\\Tu marques un point.\\T'as raison.\\C'est un argument percutant.\\T'as raison sur ce point.};;\engdef{Agreed\tstring!\\You've got a point.\\You're right.\\That's a compelling argument.\\You've got a point there.}{Agreed\tstring!\\You've got a point.\\You're right.\\That's a compelling argument.\\You've got a point there.}
+\frdef{Ouais, c'est ça.\\Pas faux.};;\engdef{Yeah, that's right.\\True.\\You're not wrong.}{Yeah, that's right.\\True.\\You're not wrong.}
+\frdef{Y'a de l'idée.\\Je te l'accorde.};;\engdef{That makes sense.\\I'll give you that.}{That makes sense.\\I'll give you that.}
+\frdef{C'est clair \tstring!\\M'en parle pas \tstring!};;\engdef{Tell me about it\tstring!}{Tell me about it\tstring!}
+\frdef{Wouah/Ouah \tstring!/Hou la \tstring!/Ha \tstring!\\Non, jure \tstring!/C'est pas vrai \tstring!/Vraiment \tstring?/Pour de vrai \tstring?/Mais non \tstring!\\Tu rigoles \tstring?\tstring!/Serieux \tstring?\tstring!\\Quoi \tstring?\tstring!\\Hein \tstring?};;\engdef{Wow\tstring!/Woah\tstring!/Oh\tstring!/No way\tstring!\\You've got to be kidding (me)./Really\tstring?\tstring!\\There's no way that's true\tstring!/No way\tstring!\\You're joking\tstring!/Seriously\tstring?\tstring!/What\tstring?\tstring!/Huh\tstring?}{Wow\tstring!/Woah\tstring!/Oh\tstring!/No way\tstring!\\You've got to be kidding (me)./Really\tstring?\tstring!\\There's no way that's true\tstring!/No way\tstring!\\You're joking\tstring!/Seriously\tstring?\tstring!/What\tstring?\tstring!/Huh\tstring?}
+\frdef{Pas du tout \tstring!};;\engdef{Absolutely not\tstring! (strong)\\Certainly not\tstring! (formal, old fashioned)}{Absolutely not\tstring! (strong)\\(There's) no way\tstring! (informal)\\Certainly not\tstring! (formal, old fashioned)}
+\frdef{\c Ca marche \tstring!};;\engdef{Yeah, let's do that\tstring!\\Sounds good\tstring!\\That works for me\tstring!}{Yeah, let's do that\tstring!\\Sounds good\tstring!\\That works for me\tstring!}
+\frdef{Bref, \dots{}\\Quoi qu'il en soit, \dots{}\\Sinon, \dots{}\\Du coup, \dots{}\\Et donc, \dots{}};;\engdef{Anyway, \dots{}\\So, \dots{}}{Anyway, \dots{}\\So, \dots{}}
+\frdef{En vrai, \dots{}\\En fait, \dots{}\\Je dirais que \dots{}};;\engdef{Actually, \dots{}\\Actually, I'd say that \dots{}}{Actually, \dots{}\\Actually, I'd say that \dots{}}
+\frdef{Honnêtement, \dots{}\\En vrai de vrai, \dots{}\\Franchement, \dots{}\\Pour être honnête, \dots{}\\Je vais pas te mentir, \dots{}};;\engdef{Honestly, \dots{}/To tell you the truth, \dots{}\\Frankly, \dots{}/To be honest, \dots{}\\(I'm) not gonna lie (to you), \dots{}}{Honestly, \dots{}/To tell you the truth, \dots{}\\Frankly, \dots{}/To be honest, \dots{}\\(I'm) not gonna lie (to you), \dots{}}
+\frdef{Certes, \dots{}\\Soit.};;\engdef{Certainly, \dots{} (formal)}{Certainly, \dots{} (formal)}
+\frdef{Bah \dots{}\\Bien \dots{}\\Enfin \dots{}};;\engdef{Well \dots{}}{Well \dots{}}
+\frdef{D'ailleurs, \dots{}\\À propos de X, \dots{}\\Au fait, \dots{}\\Concernant \dots{} (formal)};;\engdef{By the way, \dots{}\\Speaking of X, \dots{} (neutral)\\When it comes to X, \dots{} (neutral)\\Speaking of which (formal)}{By the way, \dots{}\\Speaking of X, \dots{} (neutral)\\When it comes to X, \dots{} (neutral)\\Speaking of which (formal)}
+\frdef{En soi, \dots{}};;\engdef{Well, \dots{} (+ emphasis on word)}{Well, \dots{} (+ emphasis on word)}
+\frdef{Genre,\\Genre \dots{}};;\engdef{Like,\\I mean \dots{}}{Like,\\I mean \dots{}}
+\frdef{Dans les faits, \dots{}};;\engdef{In actual fact, \dots{}\\What actually happened was, \dots{}\\What actually happens is, \dots{}}{In actual fact, \dots{}\\What actually happened was, \dots{}\\What actually happens is, \dots{}}
+\frdef{Simplement, \dots{}};;\engdef{Tu put it simply, \dots{} (formal)}{Tu put it simply, \dots{} (formal)}
+\frdef{Seulement, \dots{}};;\engdef{But, \dots{}\\The thing is, \dots{}}{But, \dots{}\\The thing is, \dots{}}
+\frdef{Désolé.\\Pardon.};;\engdef{Sorry.}{Sorry.}
+\frdef{En effet, \dots{}};;\engdef{Indeed, \dots{} (formal, old fashioned)}{Indeed, \dots{} (formal, old fashioned)}
+\frdef{Je comprends.\\Je vois ce que tu veux dire.\\Je comprends pas.\\Je vois ce que tu veux dire, mais \dots{}};;\engdef{I understand./I get it.\\I see where you're coming from.\\I don't understand./I don't get it.\\I see where you're coming from, but \dots{}}{I understand./I get it.\\I see where you're coming from.\\I don't understand./I don't get it.\\I see where you're coming from, but \dots{}}
+\frdef{D'après moi, \dots{}};;\engdef{Personally, \dots{}}{Personally, \dots{}}
+\frdef{Je suis partiellement d'accord.\\Je suis pas tout à fait d'accord.\\(Je suis) pas sûr.\\Je pense pas.\\Je crois pas.};;\engdef{I agree (with you) to a certain extent.\\I'm not sure about that.\\Maybe not. (depending on context)\\I don't think so.}{I agree (with you) to a certain extent.\\I'm not sure about that.\\Maybe not. (depending on context)\\I don't think so.}
+\frdef{Laisse moi réfléchir (sur ce point).};;\engdef{Let me think about that.\\Let me think this through.}{Let me think about that.\\Let me think this through.}
+\frdef{J'ai bien peur que \dots{}};;\engdef{I'm afraid that \dots{}}{I'm afraid that \dots{}}
+\frdef{En gros, \dots{}\\En bref, \dots{}\\Pour résumer, \dots{}};;\engdef{Basically, \dots{}\\So, basically, \dots{}}{Basically, \dots{}\\So, basically, \dots{}}
+\frdef{Et voilà.};;\engdef{And that's it. (neutral)\\And there you have it. (formal, heavy)}{And that's it. (neutral)\\And there you have it. (formal, heavy)}
+\frdef{\dots{}, quoi.};;\engdef{\dots{}, y'know.}{\dots{}, y'know.}
+\frdef{Après, \dots{}\\Après, bon, \dots{}\\Par contre, \dots{}\\Quoi que, \dots{}};;\engdef{But then again, \dots{}\\But, \dots{}\\That being said, \dots{}}{But then again, \dots{}\\But, \dots{}\\That being said, \dots{}}
+\frdef{Tout ce que je sais c'est que \dots{}};;\engdef{All I know is that \dots{}}{All I know is that \dots{}}
+\frdef{Passons à \dots{}\\Sans transition, \dots{}};;\engdef{Let's move on to \dots{}\\Moving (swiftly) on, \dots{}}{Let's move on to \dots{}\\Moving (swiftly) on, \dots{}}
+\frdef{Pour le coup, \dots{}};;\engdef{As it happens, \dots{}}{As it happens, \dots{}}
+\frdef{Je vais te la faire courte, \dots{}};;\engdef{Long story short, \dots{}\\To cut a long story short, \dots{}}{Long story short, \dots{}\\To make a long story short, \dots{}}
+\frdef{Enfin, \dots{}\\Finalement, \dots{}};;\engdef{Finally, \dots{} (usually with present perfect)\\Eventually, \dots{} (usually with past simple)}{Finally, \dots{} (usually with present perfect)\\Eventually, \dots{} (usually with past simple)}
+\frdef{Tout d'abord, \dots{}};;\engdef{First, \dots{}\\First of all, \dots{}\\To begin with, \dots{}}{First, \dots{}\\First of all, \dots{}\\To begin with, \dots{}}
+\frdef{Par ailleurs, \dots{}\\Autrement, \dots{}};;\engdef{Beyond that, \dots{}\\Otherwise, \dots{}}{Beyond that, \dots{}\\Otherwise, \dots{}}
+\frdef{D'un côté, \dots{}\\D'un d'autre côté, \dots{}\\D'accord, mais d'un autre côté, \dots{}\\Mais en même temps, \dots{}};;\engdef{On the one hand, \dots{}\\On the other hand, \dots{}\\Right, but on the other hand, \dots{}}{On the one hand, \dots{}\\On the other hand, \dots{}\\Right, but on the other hand, \dots{}}
+\frdef{Et puis, \dots{}};;\engdef{And then, \dots{}}{And then, \dots{}}
+\frdef{En d'autres termes, \dots{}\\Pour le dire autrement, \dots{}\\Pour reformuler, \dots{}/C'est à dire que \dots{}\\Alors, ça veut dire que \dots{}\\Tu veux dire que \dots{} \tstring?\\C'est comme si tu disais que \dots{}\\Pour être sûr qu'on soit sur la même longeur d'ondes, \dots{}};;\engdef{In other words, \dots{}/To put it another way, \dots{}\\That's to say that \dots{}/So, that means that \dots{}\\Do you mean that \dots{} \tstring?\\(Well,) that's (kind of) like saying that \dots{}\\Just to make sure we're on the same page, \dots{}}{In other words, \dots{}/To put it another way, \dots{}\\That's to say that \dots{}/So, that means that \dots{}\\Do you mean that \dots{} \tstring?\\(Well,) that's (kind of) like saying that \dots{}\\Just to make sure we're on the same page, \dots{}}
+\frdef{Tu sais, \dots{}\\Tu vois, \dots{}\\Tu vois ce que je veux dire \tstring?};;\engdef{You know, \dots{}\\You know what I mean\tstring?}{You know, \dots{}\\You know what I mean\tstring?}
+\frdef{Autrement dit, \dots{} (ironique)};;\engdef{So, basically, \dots{} (sarcastic)}{So, basically, \dots{} (sarcastic)}
+\frdef{Si tu veux.\\Si tu le dis.};;\engdef{In a way.\\If you say so. (can be a little aggressive)}{In a way.\\If you say so. (can be a little aggressive)}
+\frdef{Oui, mais en même temps, \dots{}\\Oui, mais je veux dire que \dots{}};;\engdef{Yeah, but still, \dots{}\\Yeah, but I mean that \dots{}}{Yeah, but still, \dots{}\\Yeah, but I mean that \dots{}}
+\frdef{C'est-à-dire que \dots{}\\Ce que je veux dire par là c'est que \dots{}};;\engdef{I mean that \dots{}\\What I mean by that is \dots{}\\My point is \dots{}}{I mean that \dots{}\\What I mean by that is \dots{}\\My point is \dots{}}
+\frdef{Comme je le disais, \dots{}};;\engdef{As I was saying, \dots{}}{As I was saying, \dots{}}
+\frdef{On peut dire que \dots{}};;\engdef{It's arguably true that \dots{}}{It's arguably true that \dots{}}
+\frdef{Admettons que \dots{}\\Disons que \dots{}\\Supposons que \dots{}};;\engdef{Let's say that \dots{}}{Let's say that \dots{}}
+\frdef{À vérifier, mais, \dots{}\\Je ne garanti rien, mais \dots{}\\Je suis pas sûr-e mais \dots{}\\Ca n'engage que moi, mais \dots{}\\C'est à peu près sûr que \dots{}\\J'ai envie de dire que \dots{}\\J'aurais tendance à dire que \dots{}\\ \dots{} mais je ne veux pas m'avancer.\\Je dis ça, je dis rien.};;\engdef{Don't quote me on this, but \dots{}\\I'm not sure but \dots{}\\It's just my opinion, but \dots{}\\I'm 90\% sure that \dots{}\\I want to say that \dots{}\\ \dots{} but I could be wrong.\\But then again, I could be wrong.}{Don't quote me on this, but \dots{}\\I'm not sure but \dots{}\\It's just my opinion, but \dots{}\\I'm 90\% sure that \dots{}\\I want to say that \dots{}\\ \dots{} but I could be wrong.\\But then again, I could be wrong.}
+\frdef{C'est contestable.};;\engdef{That's debatable.}{That's debatable.}
+\frdef{Il semble que \dots{}\\Peut-être que \dots{}};;\engdef{It seems (to me) that \dots{} (neutral)\\You could say that \dots{}. (neutral)\\It would seem that \dots{} (formal)\\One could say that \dots{} (formal)\\Maybe \dots{}/Perhaps \dots{}}{It seems (to me) that \dots{} (neutral)\\You could say that \dots{}. (neutral)\\It would seem that \dots{} (formal)\\One could say that \dots{} (formal)\\Maybe \dots{}/Perhaps \dots{}}
+\frdef{C'est presque comme si \dots{}\\À croire que \dots{}\\On dirait presque que \dots{}};;\engdef{It's almost like \dots{}}{It's almost like \dots{}}
+\frdef{Dans un certain sens, \dots{}};;\engdef{In a way, \dots{}}{In a way, \dots{}}
+\frdef{Certains diront que \dots{}\\Ca serait possible de dire que \dots{}\\Ca peut se discuter.};;\engdef{People do say that \dots{}\\Some people say that \dots{}\\You could say that \dots{}\\You could say that.}{People do say that \dots{}\\Some people say that \dots{}\\You could say that \dots{}\\You could say that.}
+\frdef{Sûrement que \dots{}};;\engdef{Most likely \dots{}}{Most likely \dots{}}
+\frdef{Je dirai plutôt que \dots{}};;\engdef{I'd say that \dots{}}{I'd say that \dots{}}
+\frdef{Simplement, \dots{}\\C'est juste que \dots{}};;\engdef{It's just that \dots{}}{It's just that \dots{}}
+\frdef{Sans rentrer dans les détails, \dots{}};;\engdef{Without going into (too much) detail, \dots{}}{Without going into (too much) detail, \dots{}}

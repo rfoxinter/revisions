@@ -1,0 +1,36 @@
+Anglais B2+ -- Disability
+Shuffle questions : True
+Q/R & R/Q : True
+\usepackage{worldflags}\usepackage{tabularray,makecell}\renewcommand{\cellalign}{cl}\SetTblrInner{rowsep=0pt}\setlength{\tabcolsep}{0pt}\newcommand{\engdef}[2]{\begin{tblr}{Q[c,m]Q[l,m]}\worldflag[framewidth=.2pt,framecolor=black,width=8pt]{GBalt}&\makecell{#1}\\\worldflag[framewidth=.2pt,framecolor=black,width=8pt]{USalt}&\makecell{#2}\end{tblr}}\newcommand{\frdef}[1]{\begin{tblr}{Q[c,m]Q[l,m]}\worldflag[framewidth=.2pt,framecolor=black,width=8pt]{FRalt}&\makecell{#1}\end{tblr}}
+\frdef{L'accessibilité};;\engdef{Accessibility}{Accessibility}\linebreak\emph{uncountable}
+\frdef{Le handicap/un handicap};;\engdef{Disability/A disability}{Disability/A disability}\linebreak\emph{countable and uncountable}
+\frdef{Le validisme};;\engdef{Ableism}{Ableism}\linebreak\emph{uncountable}
+\frdef{L'autisme};;\engdef{Autism}{Autism}\linebreak\emph{uncountable}
+\frdef{Une personne autiste/une autiste};;\engdef{An autistic person}{An autistic person}\linebreak\emph{countable}
+\frdef{Une personne ayant un TDAH};;\engdef{A person with AD(H)D}{A person with AD(H)D}\linebreak\emph{countable}
+\frdef{Le TDAH};;\engdef{AD(H)D}{AD(H)D}\linebreak\emph{uncountable}
+\frdef{J'ai un TDAH (neutre)\\\textsl{Je suis TDAH} (informel)};;\engdef{I have ADHD (neutral)/\textsl{I'm ADHD} (informal)}{I have ADHD (neutral)/\textsl{I'm ADHD} (informal)}
+\frdef{Une personne sourde/Un sourd};;\engdef{A Deaf person}{A Deaf person}\linebreak\emph{countable}
+\frdef{Une personne malentendante/Un malentendant};;\engdef{A person who is hard-of-hearing\\A HOH person (writing only)}{A person who is hard-of-hearing\\A HOH person (writing only)}\linebreak\emph{countable}
+\frdef{Une personne aveugle/une aveugle};;\engdef{A blind person}{A blind person}\linebreak\emph{countable}
+\frdef{Une personne malvoyante/une malvoyante};;\engdef{A person who has impaired vision\\Someone with impaired vision\\Someone with vision problems}{A person who has impaired vision\\Someone with impaired vision\\Someone with vision problems}\linebreak\emph{countable}
+\frdef{Une personne à mobilité réduite};;\engdef{A person with mobility issues}{A person with mobility issues}\linebreak\emph{countable}
+\frdef{Une personne en fauteuil roulant};;\engdef{A wheelchair user}{A wheelchair user}\linebreak\emph{countable}
+\frdef{Une personne non-handicapée};;\engdef{A non-disabled person}{A non-disabled person}\linebreak(depending on the context: an able-bodied person/a mentally healthy person/a person who does not suffer from mental illness)\linebreak\emph{countable}
+\frdef{Un trouble de l'anxiété};;\engdef{Anxiety/An anxiety disorder}{Anxiety/An anxiety disorder}\linebreak\emph{resp. uncountable/countable}
+\frdef{Un trouble dépressif};;\engdef{Depression}{Depression}\linebreak\emph{uncountable}
+\frdef{Je suis angoissée\\J'ai un trouble de l'anxiété};;\engdef{I'm anxious\\I'm feeling anxious\\I'm an anxious person\\I have anxiety}{I'm anxious\\I'm feeling anxious\\I'm an anxious person\\I have anxiety}
+\frdef{Je suis déprimée\\Je suis en dépression\\J'ai un trouble dépressif};;\engdef{I'm feeling down\\I'm feeling depressed\\I have depression}{I'm feeling down\\I'm feeling depressed\\I have depression}
+\frdef{Un trouble de l'apprentissage};;\engdef{A learning difficulty}{A learning difficulty}\linebreak\emph{countable}
+\frdef{La dyslexie};;\engdef{Dyslexia}{Dyslexia}\linebreak\emph{uncountable}
+\frdef{La dyspraxie};;\engdef{Dyspraxia}{Dyspraxia}\linebreak\emph{uncountable}
+\frdef{La dysgraphie};;\engdef{Dysgraphia}{Dysgraphia}
+\frdef{Mobilité réduite};;\engdef{Impaired mobility}{Impaired mobility}\linebreak\emph{uncountable}
+\frdef{Permettre à quelqu'un de faire quelque chose}\linebreak{}(dans le sens rendre la chose possible);;\engdef{To enable someone to do something}{To enable someone to do something}\linebreak\emph{ditransitive}
+\frdef{Divulguer une information};;\engdef{To disclose information}{To disclose information}\linebreak\emph{transitive}
+\frdef{Scolaire}\linebreak{}(dans le sens ayant un rapport à la scolarité);;\engdef{Academic}{Academic}
+\frdef{Avoir droit à quelque chose};;\engdef{To be entitled to something}{To be entitled to something}\linebreak\emph{transitive}
+\frdef{Une tâche/un devoir noté};;\engdef{An assignment}{An assignment}\linebreak\emph{countable}
+\frdef{Un aménagement (pour un examen)};;\engdef{An accommodation (for an exam)}{An accommodation (for an exam)}\linebreak\emph{countable}
+\frdef{Prolonger une date butoir};;\engdef{To extend a deadline}{To extend a deadline}\linebreak\emph{transitive}
+\frdef{Permettre à quelqu'un de faire quelque chose}\linebreak{}(dans le sens donner la permission);;\engdef{To allow someone to do something}{To allow someone to do something}\linebreak\emph{ditransitive}

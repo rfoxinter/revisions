@@ -1,0 +1,31 @@
+Anglais B2+ -- Tuition fees
+Shuffle questions : True
+Q/R & R/Q : True
+\usepackage{vocab}\usepackage{tipa}\usepackage{xfrac,amsmath,amssymb}\DeclareInstance{xfrac}{cmr}{text}{slash-right-kern=-0.35em,slash-left-kern=-0.35em,numerator-top-sep=0pt}\newcommand{\textfrac}[2]{\sfrac{#1}[\large$\scriptstyle\diagup$]{#2}}
+!!fstWhere is the stress in ``percent''\string?;;On the second syllable: per\emph{cent}
+!!fstWhere is the stress in ``percentage''\string?;;On the second syllable: per\emph{cen}tage
+!!fst\frdef{La moitié de/de la/du/des};;\engdef{Half of (silent `l')}{Half of (silent `l')}
+!!fstA system where the children or family members of alumni get preferential treatment during the selection process;;The legacy system
+!!fstTo hail from\linebreak\emph{formal, slightly archaic};;To come from
+\frdef{Un candidat};;\engdef{An applicant}{An applicant}
+!!fst\textfrac1{100};;A hundredth\linebreak{}One hundredth\linebreak{}A tiny minority
+!!fst\textfrac1{10};;A tenth\linebreak{}One tenth\linebreak{}A small minority
+!!fst\textfrac15;;A fifth\linebreak{}One fifth\linebreak{}A large minority
+!!fst\textfrac14;;A quarter\linebreak{}One quarter
+!!fst\textfrac13;;A third\linebreak{}One third
+!!fst\textfrac23;;Two thirds\linebreak{}A majority
+!!fst\textfrac34;;Three quarters\linebreak{}A large majority
+!!fst\textfrac45;;Four fifths\linebreak{}An enormous majority
+!!fst\textfrac9{10};;Nine tenths\linebreak{}An overwhelming majority
+!!fstA tier;;One of a series of rows or levels
+\frdef{Un système à deux vitesses};;\engdef{A two-tier system}{A two-tier system}
+!!fstWhat are the pronunciation rules for the following suffixes and words\string?\linebreak{}-ate (verb)\linebreak{}-ate (noun)\linebreak{}-age (suffix)\linebreak{}Age (noun/verb/adjective);;-ate (verb) = \textipa{/eIt/}\linebreak{}-ate (noun/adjective) = \textipa{/@t/}\linebreak{}-age (suffix) = \textipa{/IdZ/}\linebreak{}Age (noun/verb/adjective) = \textipa{/eIdZ/}
+!!fstTo predominate\linebreak\emph{pronunciation};;To pre\emph{do}minate\linebreak{}-\textipa{/eIt/}
+!!fstTo approximate\linebreak\emph{pronunciation};;To a\emph{ppro}ximate\linebreak{}-\textipa{/eIt/}
+!!fstApproximate (noun/adjective)\linebreak\emph{pronunciation};;A\emph{ppro}ximate\linebreak{}-\textipa{/@t/}
+!!fstProportionate\linebreak\emph{pronunciation};;Pro\emph{por}tionate\linebreak{}-\textipa{/@t/}
+!!fstPrivate\linebreak\emph{pronunciation};;\emph{Pri}vate\linebreak{}-\textipa{/@t/}
+!!fstAverage\linebreak\emph{pronunciation};;\emph{Av}erage\linebreak{}-\textipa{/IdZ/}
+!!fstAdvantage\linebreak\emph{pronunciation};;Ad\emph{van}tage\linebreak{}-\textipa{/IdZ/}
+!!fstDisadvantage\linebreak\emph{pronunciation};;Disad\emph{van}tage\linebreak{}-\textipa{/IdZ/}
+!!fstWhat is the rule for pronouncing numbers after a decimal point\string?;;Each digit after a decimal point must be pronounced individually\linebreak{}$15.152$ -- ``fifteen point one five two''
