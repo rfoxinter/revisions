@@ -7,14 +7,9 @@ from os.path import getmtime as g
 from datetime import datetime as dt
 from argparse import ArgumentParser
 
-p = ArgumentParser()
-p.add_argument('--folder', type = str, help = 'Folder to analyze', default = '')
-args = p.parse_args()
-fld = args.folder if args.folder != '' else input('Folder: ')
-
 c(d(__file__) + '/flashcards')
 f = open('./cards.txt', 'w')
-content = 'https://rfoxinter.github.io/revisions/flashcards/' + ((fld + '/') if fld != '.' else '')
+content = 'https://rfoxinter.github.io/revisions/flashcards/'
 global cards
 cards = []
 def list_f(folder):
@@ -29,8 +24,8 @@ def list_f(folder):
         elif i(folder + '/' + sub_folder):
             list_f(folder + '/' + sub_folder)
     cards = sorted(curr_cards) + cards
-list_f(fld)
-for i in range(len(cards)):
-    content += '\n' + cards[i] + '\n' + dt.fromtimestamp(g(cards[i])).strftime('%Y%m%d%H%M%S')
+list_f('.')
+for c in cards:
+    content += '\n../L3S2/flashcards/' + c.replace('./', '') + '\n' + dt.fromtimestamp(g(c)).strftime('%Y%m%d%H%M%S')
 f.write(content)
 f.close()
