@@ -1,0 +1,18 @@
+\ProcessOptions\relax
+\let\star\relax
+\let\square\relax
+\let\triangle\relax
+
+\DeclareFontFamily{U}{dsrom}{}
+\DeclareFontShape{U}{dsrom}{m}{n}{
+    <-> dsrom12
+}{}
+\DeclareSymbolFont{mathds}{U}{dsrom}{m}{n}
+\DeclareMathAlphabet{\mathds}{U}{dsrom}{m}{n}
+
+\newcommand\1[1]{\mathds{1}_{#1}}
+\DeclareMathSymbol{\square}{\mathbin}{mathds}{"41}
+\DeclareMathSymbol{\star}{\mathbin}{mathds}{"42}
+\DeclareMathSymbol{\triangle}{\mathbin}{mathds}{"43}
+
+\endinput

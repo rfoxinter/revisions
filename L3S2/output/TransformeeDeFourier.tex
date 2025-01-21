@@ -1,0 +1,35 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{analyse}\toggleanalysepar\usepackage{complexes}\def\ff{\mathop{}\!\mathcal F\mkern-2.5mu}\usepackage{matrices,al}\newcommand{\multider}[3]{\frac{\partial^{\left|#3\right|#1}}{\partial#2^{#3}}}\usepackage{equivalents}\usepackage{usuelles}
+\hypersetup{pdftitle=Intégration et probabilités -- Transformée de Fourier}
+\title{Intégration et probabilités\\\emph{Transformée de Fourier}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\lambda_d\l\dd x\r$}{1/11}
+\slider{$\frac{\dd x}{\l2\pi\r^{d/2}}$}{1/11}
+\slideq{Intégrale de Gauss}{2/11}
+\slider{$g_\sigma\l x\r=\frac{1}{\sigma^d}\exp{\frac{\left|x\right|^2}{2\sigma^2}}$\linebreak$\int[x][\mathbb R^d][][\lambda_d]{g_\sigma\l x\r}=1$}{2/11}
+\slideq{$\ff f\l\xi\r$}{3/11}
+\slider{$\int[x][\mathbb R^d][][\lambda_d]{f\l x\r\e^{-\i\xi\cdot x}}$}{3/11}
+\slideq{$\ff\l\e_yf\r$}{4/11}
+\slider{$\tau_y\ff f$}{4/11}
+\slideq{Régularité de $\appl{\mathcal F}{\mathcal L^1}{\mathcal C_0\l\mathbb R^d,\mathbb C\r}{f}{\ff f}$}{5/11}
+\slider{$\mathcal F$ est $1$-lipschitzienne}{5/11}
+\slideq{$\ff g\l\xi\r$\linebreak$f\in\mathcal L^1$, $M\in\matgl d{\mathbb R}$, $g\l x\r=f\l M^{-1}x\r$}{6/11}
+\slider{$\left|\det M\right|\ff f\l M^\top\xi\r$}{6/11}
+\slideq{Théorème d'inversion de Fourier}{7/11}
+\slider{Si $f\in\mathcal L^1$ telle que $\ff f\in\mathcal L^1$ $\lambda_d$ presque partout alors $f\l x\r=\int[\xi][\mathbb R^d][][\lambda_d]{\ff f\l\xi\r\e^{\i\xi\cdot x}}$}{7/11}
+\slideq{$\ff\l f*g\r$}{8/11}
+\slider{$\ff f\times\ff g$}{8/11}
+\slideq{Régulatité de $\ff f$}{9/11}
+\slider{Si $\left|x\right|^kf\in\mathcal L^1$ alors $\ff f\in\mathcal C^k\l\mathbb R^d,\mathbb C\r$ et pour tout $\alpha\in\mathbb N^d$, $\left|\alpha\right|\leqslant k$, $\multider{\ff f}{x}{\alpha}\l\xi\r=\int[x][\mathbb R^d][][\lambda_d]{\l-\i x\r^\alpha f\l x\r\e^{-\i\xi\cdot x}}$\linebreak En particulier, $\ff f\l\xi\r=\o[\left|\xi\right|\to+\infty]{\frac{1}{\left|\xi\right|^k}}$}{9/11}
+\slideq{Limite de $\ff f$}{10/11}
+\slider{$\ff f$ est continue et $\ff f\l\xi\r\xrightarrow[\left|\xi\right|\to+\infty]{}0$}{10/11}
+\slideq{$\ff\l\tau_yf\r$}{11/11}
+\slider{$\e_{-y}\ff f$}{11/11}
+\end{document}

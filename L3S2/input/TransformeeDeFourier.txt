@@ -1,0 +1,15 @@
+Intégration et probabilités -- Transformée de Fourier
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse}\toggleanalysepar\usepackage{complexes}\def\ff{\mathop{}\!\mathcal F\mkern-2.5mu}\usepackage{matrices,al}\newcommand{\multider}[3]{\frac{\partial^{\left|#3\right|#1}}{\partial#2^{#3}}}\usepackage{equivalents}\usepackage{usuelles}
+$\lambda_d\l\dd x\r$;;$\frac{\dd x}{\l2\pi\r^{d/2}}$
+$\ff f\l\xi\r$;;$\int[x][\mathbb R^d][][\lambda_d]{f\l x\r\e^{-\i\xi\cdot x}}$
+$\ff\l\tau_yf\r$;;$\e_{-y}\ff f$
+$\ff\l\e_yf\r$;;$\tau_y\ff f$
+$\ff g\l\xi\r$\linebreak$f\in\mathcal L^1$, $M\in\matgl d{\mathbb R}$, $g\l x\r=f\l M^{-1}x\r$;;$\left|\det M\right|\ff f\l M^\top\xi\r$
+Limite de $\ff f$;;$\ff f$ est continue et $\ff f\l\xi\r\xrightarrow[\left|\xi\right|\to+\infty]{}0$
+Régularité de $\appl{\mathcal F}{\mathcal L^1}{\mathcal C_0\l\mathbb R^d,\mathbb C\r}{f}{\ff f}$;;$\mathcal F$ est $1$-lipschitzienne
+Régulatité de $\ff f$;;Si $\left|x\right|^kf\in\mathcal L^1$ alors $\ff f\in\mathcal C^k\l\mathbb R^d,\mathbb C\r$ et pour tout $\alpha\in\mathbb N^d$, $\left|\alpha\right|\leqslant k$, $\multider{\ff f}{x}{\alpha}\l\xi\r=\int[x][\mathbb R^d][][\lambda_d]{\l-\i x\r^\alpha f\l x\r\e^{-\i\xi\cdot x}}$\linebreak En particulier, $\ff f\l\xi\r=\o[\left|\xi\right|\to+\infty]{\frac{1}{\left|\xi\right|^k}}$
+$\ff\l f*g\r$;;$\ff f\times\ff g$
+Intégrale de Gauss;;$g_\sigma\l x\r=\frac{1}{\sigma^d}\exp{\frac{\left|x\right|^2}{2\sigma^2}}$\linebreak$\int[x][\mathbb R^d][][\lambda_d]{g_\sigma\l x\r}=1$
+Théorème d'inversion de Fourier;;Si $f\in\mathcal L^1$ telle que $\ff f\in\mathcal L^1$ $\lambda_d$ presque partout alors $f\l x\r=\int[\xi][\mathbb R^d][][\lambda_d]{\ff f\l\xi\r\e^{\i\xi\cdot x}}$
