@@ -1,3 +1,5 @@
 https://rfoxinter.github.io/revisions/flashcards/
+../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/EquationsLineairesDOndesEtDeTransport
+20250123161424
 ../L3S2/flashcards/IntegrationEtProbabilites/TransformeeDeFourier
 20250121113739

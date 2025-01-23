@@ -1,0 +1,11 @@
+Analyse et équations aux dérivées partielles -- Équations linéaires d'ondes et de transport
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse}\newcommand{\partd}[1]{\mathop{}\!\partial_{#1}}\toggleanalysepar\newcommand{\loc}{\text{loc}}\let\Omega\varOmega\let\phi\varphi
+Solution de $\partd tu+c\partd xu=0$, $u\l0,x\r=u_0\l x\r\in\mathcal C^1\l\mathbb R\r$, $c\in\mathbb R$;;Si $u_0\in\mathcal C^1\l\mathbb R\r$ alors l'équation possède une unique solution dans $\mathcal C^1\l\mathbb R_+\times\mathbb R\r$ définie par $u\l x,t\r=u_0\l x-ct\r$
+Solution de $\partd tu+c\partd xu=f$, $u\l0,x\r=u_0\l x\r\in\mathcal C^1\l\mathbb R\r$, $c\in\mathbb R$, $f\in\mathcal C^1\l\mathbb R_+\times\mathbb R\r$;;Si $u_0\in\mathcal C^1\l\mathbb R\r$ alors l'équation possède une unique solution dans $\mathcal C^1\l\mathbb R_+\times\mathbb R\r$ définie par $u\l x,t\r=u_0\l x-ct\r+\int[\tau][0][t]{f\l\tau,x-c\l t-\tau\r\r}$
+Équation caractéristique associée à une EDO;;Résoudre pour $X$ où $u$ est constante sur $u\l t,X\l t\r\r$
+$u\in L^1_\loc\l\mathbb R\r$;;$\forall R>0$, $\int[t][-R][R]{\left|u\l t\r\right|}<+\infty$
+Solution faible de $\partd tu+c\partd xu=0$, $u\l0,x\r=u_0\l x\r\in L^1_\loc\l\mathbb R\r$, $c\in\mathbb R$;;$u$ est solution faible si pour tout $\phi\in\mathcal C^\infty_0$\linebreak$\altint{\oldint}[t,x][\mathbb R_+\times\mathbb R]{u\l t,x\r\l\partd t\phi+c\partd x\phi\r\l t,x\r}$\linebreak$+\int[x][\mathbb R]{u_0\l x\r\phi\l0,x\r}=0$\linebreak Si $u_0\in L^1_\loc\l\mathbb R\r$ alors l'équation possède une unique solution dans $L^1_\loc\l\mathbb R_+\times\mathbb R\r$ définie par $u\l x,t\r=u_0\l x-ct\r$
+Propriété de la solution faible de $\partd tu+c\partd xu=0$, $u\l0,x\r=u_0\l x\r\in L^1_\loc\l\mathbb R\r$, $c\in\mathbb R$ pour $u\in\mathcal C^1$;;La solution $u$ est une solution <<~forte~>> et $u_0=u\l0,\cdot\r$
+CNS pour avoir $u\in L^1_\loc\l\Omega\r$ nulle sur $\Omega$ un ouvert;;$\forall\phi\in\mathcal C^\infty_0\l\Omega\r$, $\int[t][\Omega]{u\l t\r\phi\l t\r}=0$
