@@ -1,4 +1,6 @@
 https://rfoxinter.github.io/revisions/flashcards/
+../L3S2/flashcards/Algebre2/Anneaux
+20250127222845
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/EquationsLineairesDOndesEtDeTransport
 20250123161424
 ../L3S2/flashcards/ConcentrationDeLaMesure/InegalitesDeConcentration

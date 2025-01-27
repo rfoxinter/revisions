@@ -1,0 +1,15 @@
+Algèbre 2 -- Anneaux
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{structures}\usepackage{al}
+$a\in A$ est nilpotent;;Il existe $n\in\mathbb N$ tel que $a^n=0$
+$a\in A$ est racine de l'unité;;Il existe $n\in\mathbb N$ tel que $a^n=1$
+$a\in A$ est idempotent;;$a^2=a$
+$a\in A$ est diviseur de $0$;;Il existe $b\in A^\times$ tel que $ab=0$
+$A$ est intègre;;$A$ ne possède pas de diviseurs de $0$
+$a\mid b$;;$\exists c\in A$, $b=ac$
+$a\in A$ est irréductible;;$a\notin A^\times$, $a\neq0$, $a=bc\Rightarrow a\in A^\times\lor c\in A^\times$
+$p\in A$ est premier;;$p\notin A^\times$, $p\neq0$, $p\mid ab\Rightarrow p\mid a\lor p\mid b$
+Lien entre premier et irréductible;;Si $A$ est intègre et $x\in A$ est premier alors $x$ est irréductible
+Lemme de factorisation des morphismes d'anneaux;;Si $f\!:\!A\to B$ est un morphisme d'anneaux alors il existe un unique morphisme d'anneaux $\overline f\!:\!A/\ker f\to B$ tel que $f=\overline f\circ\pi$
+Caractéristique de $A$;;$n$ tel que $\mathbb Z/n\mathbb Z=\ker\phi$\linebreak$\appl{\phi}{\mathbb{Z}}{A}{n}{n\cdot 1_A}$
