@@ -43,7 +43,7 @@
 \usepackage{tabularray}
 \usepackage{hhline}
 \usepackage{tikz}
-\tikzset{every arrow/.append style={line cap=round}}
+%\tikzset{every arrow/.append style={line cap=round}}
 \usepackage{tikz-cd}
 \tikzcdset{every arrow/.append style={line cap=round}}
 \usepackage{pgffor}
