@@ -43,7 +43,7 @@
 \usepackage{tabularray}
 \usepackage{hhline}
 \usepackage{tikz}
-\tikzset{every arrow/.append style={line cap=round}}
+%\tikzset{every arrow/.append style={line cap=round}}
 \usepackage{tikz-cd}
 \tikzcdset{every arrow/.append style={line cap=round}}
 \usepackage{pgffor}
@@ -1833,8 +1833,8 @@ space before arrow={0.2ex},
 \newcommand{\toggleanalyselimits}{\altarticle@comparestring{\analyselimits}{\limits}{\def\analyselimits{\nolimits}}{\def\analyselimits{\limits}}}
 \newcommand{\autoanalyselimits}{\def\analyselimits{}}
 \newcommand{\toggleanalysedisplay}{\altarticle@comparestring{\analysedisplay}{}{\def\analysedisplay{\displaystyle}}{\def\analysedisplay{}}}
-\let\derfrac\frac
-\newcommand{\derfrac}[2]{{\analysedisplay\derfrac{#1}{#2}}}
+\let\oldderfrac\frac
+\newcommand{\derfrac}[2]{{\analysedisplay\oldderfrac{#1}{#2}}}
 
 \let\slantpartial\partial
 \ifpdf
