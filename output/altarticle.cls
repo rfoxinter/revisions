@@ -1611,9 +1611,10 @@ space before arrow={0.2ex},
     ] {#3};
     \tmatargI
 \end{tikzpicture}}
+\let\tcasepicture\tikzpicture
 \newcommand{\tcase}[1][]{\def\tmatargI{#1}\tmptcase}
 \newcommand{\tmptcase}[2][]{
-\begin{tikzpicture}[every left delimiter/.style={xshift=.2em},every right delimiter/.style={xshift=-.125em},baseline={([yshift=-0.5ex]m.center)}]
+\begin{tcasepicture}[every left delimiter/.style={xshift=.2em},every right delimiter/.style={xshift=-.125em},baseline={([yshift=-0.5ex]m.center)}]
 \matrix (m) [
         ampersand replacement=\&,
         nodes={anchor=west, execute at begin node=$\vphantom{1},%
@@ -1632,7 +1633,7 @@ space before arrow={0.2ex},
         #1
     ] {#2};
     \tmatargI
-\end{tikzpicture}}
+\end{tcasepicture}}
 \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
 \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
 \def\oldddots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
