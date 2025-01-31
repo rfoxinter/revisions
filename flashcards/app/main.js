@@ -147,32 +147,33 @@ async function list_cards(downloaded = false) {
 }
 
 async function append_card(src, name, card_number, card_name) {
+    let html_src = src.replaceAll(' ', '')
     let c = document.getElementById('down_cards_container');
-    if (document.getElementsByClassName(src).length == 0) {
+    if (document.getElementsByClassName(html_src).length == 0) {
         d = document.createElement('div');
-        d.setAttribute('class',src);
+        d.setAttribute('class',html_src);
         d.setAttribute('style','margin-left: 2rem;');
         h1 = document.createElement('h1');
         h1.setAttribute('style','margin-bottom:0;margin-left: -2rem; font-size: calc(0.8 * 2em);')
         span = document.createElement('span');
-        span.setAttribute('onclick', 'folder_click(\''+src+'\')');
-        span.setAttribute('id', src+'_icon');
+        span.setAttribute('onclick', 'folder_click(\''+html_src+'\')');
+        span.setAttribute('id', html_src+'_icon');
         span.setAttribute('class','material-symbols-rounded folder');
         span.innerHTML = 'folder_open';
         h1.appendChild(span);
         h1.innerHTML += '\xa0';
         span2 = document.createElement('span');
         if (src !== "Fichiers importés") {
-            span2.setAttribute('onclick', 'document.getElementById("downloaded").style.display = "none"; document.getElementById("download").style.display = "block"; document.getElementById("file").value = "' + src + '"; list_cards(true);');
+            span2.setAttribute('onclick', 'document.getElementById("downloaded").style.display = "none"; document.getElementById("download").style.display = "block"; document.getElementById("file").value = "' + html_src + '"; list_cards(true);');
             span2.style.cursor = 'pointer';
         }
-        span2.setAttribute('id', src+'_text');
+        span2.setAttribute('id', html_src+'_text');
         span2.style.fontSize = 'inherit';
         span2.innerHTML = src;
         h1.appendChild(span2);
         d.appendChild(h1);
         let rootdiv = document.createElement("div");
-        rootdiv.classList.add("["+src+",root]");
+        rootdiv.classList.add("["+html_src+",root]");
         d.appendChild(rootdiv);
         if (src == "Fichiers importés") {
             if (document.getElementById('down_cards_container').children.length > 0) {
@@ -187,16 +188,16 @@ async function append_card(src, name, card_number, card_name) {
             }
             c.appendChild(d);
         }
-        set_config_title(src);
+        set_config_title(html_src);
     }
     p = document.createElement('p');
-    p.setAttribute('class',src+'_elem');
+    p.setAttribute('class',html_src+'_elem');
     span = document.createElement('span');
     span.innerHTML = name;
     p.appendChild(span);
     p.innerHTML += ' ';
     var a = document.createElement('a');
-    a.setAttribute('href', 'javascript:load("'+src+'","'+name+'")');
+    a.setAttribute('href', 'javascript:load("'+html_src+'","'+name+'")');
     span = document.createElement('span');
     span.setAttribute('class','material-symbols-rounded');
     span.innerHTML = 'open_in_new';
@@ -204,7 +205,7 @@ async function append_card(src, name, card_number, card_name) {
     p.appendChild(a);
     p.innerHTML += ' ';
     var a4 = document.createElement('a');
-    a4.setAttribute('href', 'javascript:list_card("'+src+'","'+name+'")');
+    a4.setAttribute('href', 'javascript:list_card("'+html_src+'","'+name+'")');
     a4.style.color = "#E29112";
     span4 = document.createElement('span');
     span4.setAttribute('class','material-symbols-rounded');
@@ -214,7 +215,7 @@ async function append_card(src, name, card_number, card_name) {
     p.innerHTML += ' ';
     var a2 = document.createElement('a');
     if (src !== "Fichiers importés") {
-        a2.setAttribute('href', 'javascript:sync("'+src+'","'+name+'")')
+        a2.setAttribute('href', 'javascript:sync("'+html_src+'","'+name+'")')
     } else {
         a2.setAttribute('href', 'javascript:sync_upload("'+name+'")')
     }
@@ -226,16 +227,16 @@ async function append_card(src, name, card_number, card_name) {
     p.appendChild(a2);
     p.innerHTML += ' ';
     var a3 = document.createElement('a');
-    a3.setAttribute('href', 'javascript:delete_card("'+src+'","'+name+'")');
+    a3.setAttribute('href', 'javascript:delete_card("'+html_src+'","'+name+'")');
     a3.style.color = "#EC7063";
     span3 = document.createElement('span');
     span3.setAttribute('class','material-symbols-rounded');
     span3.innerHTML = 'delete';
     a3.appendChild(span3);
     p.appendChild(a3);
-    p.id = '[' + src + ',' + name + ']';
-    document.getElementsByClassName(src)[0].appendChild(p);
-    set_config_card(src, name, card_number, card_name);
+    p.id = '[' + html_src + ',' + name + ']';
+    document.getElementsByClassName(html_src)[0].appendChild(p);
+    set_config_card(html_src, name, card_number, card_name);
 }
 
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
