@@ -267,15 +267,15 @@ function delete_card(_url, _name, _confirm = true) {
                 };
             };
             if (_confirm) {
-                _url = _url.replaceAll(' ', '')
-                let elem = document.getElementById('[' + _url + ',' + _name + ']');
+                html_url = _url.replaceAll(' ', '')
+                let elem = document.getElementById('[' + html_url + ',' + _name + ']');
                 let parent = elem.parentElement;
                 elem.parentElement.removeChild(elem);
                 if (parent.children.length <= 1) {
                     parent.parentElement.removeChild(parent);
                 }
-                if (document.getElementsByClassName(_url)[0].children.length <= 1 || (document.getElementsByClassName(_url)[0].children.length == 2 && document.getElementsByClassName(_url)[0].children[1].children.length == 0)) {
-                    document.getElementById('down_cards_container').removeChild(document.getElementsByClassName(_url)[0]);
+                if (document.getElementsByClassName(html_url)[0].children.length <= 1 || (document.getElementsByClassName(html_url)[0].children.length == 2 && document.getElementsByClassName(html_url)[0].children[1].children.length == 0)) {
+                    document.getElementById('down_cards_container').removeChild(document.getElementsByClassName(html_url)[0]);
                 }
             }
         }
