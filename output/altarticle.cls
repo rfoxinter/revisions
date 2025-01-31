@@ -1616,7 +1616,7 @@ space before arrow={0.2ex},
 \begin{tikzpicture}[every left delimiter/.style={xshift=.2em},every right delimiter/.style={xshift=-.125em},baseline={([yshift=-0.5ex]m.center)}]
 \matrix (m) [
         ampersand replacement=\&,
-        nodes={anchor=west, execute at begin node=$\vphantom{1},%
+        nodes={anchor=west, execute at begin node=$,%
             execute at end node=$%
         },
         matrix of nodes,
