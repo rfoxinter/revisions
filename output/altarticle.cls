@@ -1594,7 +1594,7 @@ space before arrow={0.2ex},
 \newcommand{\tmatrix}[1][]{\def\tmatargI{#1}\tmptmatrix}
 \newcommand{\tmptmatrix}[4][]{
 \begin{tikzpicture}[baseline={([yshift=-0.5ex]m.center)}]
-\matrix (m) [
+    \matrix (m) [
         ampersand replacement=\&,
         nodes={anchor=center},
         matrix of math nodes,
@@ -1613,10 +1613,10 @@ space before arrow={0.2ex},
 \end{tikzpicture}}
 \newcommand{\tcase}[1][]{\def\tmatargI{#1}\tmptcase}
 \newcommand{\tmptcase}[2][]{
-\begin{tikzpicture}[every left delimiter/.style={xshift=.2em},every right delimiter/.style={xshift=-.125em},baseline={([yshift=-0.5ex]m.center)}]
-\matrix (m) [
+\kern-.2em\begin{tikzpicture}[every left delimiter/.style={xshift=.2em},every right delimiter/.style={xshift=-.125em},baseline={([yshift=-0.5ex]m.center)}]
+    \matrix (m) [
         ampersand replacement=\&,
-        nodes={anchor=west, execute at begin node=$,%
+        nodes={anchor=west, execute at begin node=$\scriptstyle,%
             execute at end node=$%
         },
         matrix of nodes,
@@ -1625,7 +1625,7 @@ space before arrow={0.2ex},
         anchor=center,
         minimum width=0pt,
         minimum height=0pt,
-        row sep=2.5pt,
+        row sep=1pt,
         column sep=1ex,
         inner sep=0pt,
         nodes in empty cells,
