@@ -56,6 +56,9 @@ function display_cards() {
             if (cursor) {
                 var key = cursor.primaryKey;
                 var card_name = cursor.value.card_name;
+                if (card_name === undefined) {
+                    card_name = key[1];
+                }
                 ++ card_nb;
                 let title = card_name.split(" &ndash; ");
                 if (title.length == 1) {
