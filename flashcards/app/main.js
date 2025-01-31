@@ -267,6 +267,7 @@ function delete_card(_url, _name, _confirm = true) {
                 };
             };
             if (_confirm) {
+                _url = _url.replaceAll(' ', '')
                 let elem = document.getElementById('[' + _url + ',' + _name + ']');
                 let parent = elem.parentElement;
                 elem.parentElement.removeChild(elem);
