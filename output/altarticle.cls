@@ -29,18 +29,22 @@
 \let\oldurl\url
 \renewcommand{\url}[1]{{\color{blue}\oldurl{#1}}}
 \usepackage{etoolbox}
+\usepackage{microtype}
+\DisableLigatures{encoding = OML}
 \usepackage{framed}
 \usepackage{graphicx}
 \usepackage{enumitem}
 \let\propenumerate\relax
 \newlist{propenumerate}{enumerate}{10}
-\setlist[propenumerate]{leftmargin=0.075\linewidth,topsep=0pt,nosep,label=(\oldstylenums{\arabic*})}
-\setlist[enumerate]{topsep=0pt,nosep,label=(\oldstylenums{\arabic*})}
+\newcommand{\itemnb}[1]{(\oldstylenums{#1})}
+\setlist[propenumerate]{leftmargin=0.075\linewidth,topsep=0pt,nosep,label=\itemnb{\arabic*}}
+\setlist[enumerate]{topsep=0pt,nosep,label=\itemnb{\arabic*}}
 \setlist[itemize]{topsep=0pt,nosep,label=$\to$}
 \let\prvitemize\relax
 \newlist{prvitemize}{itemize}{10}
 \setlist[prvitemize]{topsep=0pt,nosep,leftmargin=*,labelsep=0pt,label=$\to{}$}
 \usepackage{tabularray}
+\SetTblrInner{rowsep=1pt}
 \usepackage{hhline}
 \usepackage{tikz}
 %\tikzset{every arrow/.append style={line cap=round}}
@@ -77,6 +81,7 @@
 \everymath{\def\underline{\mathunderline}}
 \title{}
 \author{}
+\def\refname{Références\phantomsection}
 
 
 
