@@ -654,8 +654,7 @@
 %% Environment for proofs
 \newcommand\leftbartitleframe[2]{%
     \vbox{\nobreak\vspace{\OuterFrameSep}%
-    \hbox{\hskip\FrameSep\strut%
-        {\textbf{#1}}}%
+    \hbox{\hskip\FrameSep\parbox[t]{\linewidth}{\textbf{#1}}}%
     \nobreak \nointerlineskip%
     \hbox{\hskip\FrameSep\hspace{0.04\linewidth}\vline\hspace{0.01\linewidth}%
         {\small#2}%
