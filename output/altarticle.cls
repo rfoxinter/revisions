@@ -652,9 +652,11 @@
    \sloppy
 }
 %% Environment for proofs
+\newlength\prooftitleline%
+\setlength{\prooftitleline}{\dimexpr\linewidth-\FrameSep-0.5pt\relax}%
 \newcommand\leftbartitleframe[2]{%
     \vbox{\nobreak\vspace{\OuterFrameSep}%
-    \hbox{\hskip\FrameSep\parbox[t]{\linewidth}{\textbf{#1}}}%
+    \hbox to \prooftitleline{\kern-2pt\hskip\FrameSep\hbox{\strut{#1}}\hfil}%
     \nobreak \nointerlineskip%
     \hbox{\hskip\FrameSep\hspace{0.04\linewidth}\vline\hspace{0.01\linewidth}%
         {\small#2}%
