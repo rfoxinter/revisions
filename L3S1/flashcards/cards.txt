@@ -22,7 +22,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S1/flashcards/Algebre1/SommeDirectesEtProduits
 20241006110233
 ../L3S1/flashcards/Algebre1/TableDesCaracteres
-20250117105856
+20250203221354
 ../L3S1/flashcards/AnalyseComplexe/EtudeLocaleDeFonctionsHolomorphes
 20241108165323
 ../L3S1/flashcards/AnalyseComplexe/FonctionsHolomorphes

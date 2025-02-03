@@ -1,4 +1,4 @@
-Analyse et équations aux dérivées partielles -- Équations linéaires d'ondes et de transport
+Analyse et équations aux dérivées partielles -- L'équation de transport linéaire
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{analyse}\newcommand{\partd}[1]{\mathop{}\!\partial_{#1}}\toggleanalysepar\newcommand{\loc}{\text{loc}}\let\Omega\varOmega\let\phi\varphi

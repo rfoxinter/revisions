@@ -1,7 +1,7 @@
 Intégration et probabilités -- Transformée de Fourier
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{analyse}\toggleanalysepar\usepackage{complexes}\def\ff{\mathop{}\!\mathcal F\mkern-2.5mu}\usepackage{matrices,al}\newcommand{\multider}[3]{\frac{\partial^{\left|#3\right|#1}}{\partial#2^{#3}}}\usepackage{equivalents}\usepackage{usuelles}
+\usepackage{analyse}\toggleanalysepar\usepackage{complexes}\def\ff{\mathop{}\!\mathcal F\mkern-2.5mu}\usepackage{matrices,al}\newcommand{\multider}[3]{\frac{\partial^{\left|#3\right|#1}}{\partial#2^{#3}}}\usepackage{equivalents}\usepackage{usuelles}\usepackage{dsft}
 $\lambda_d\l\dd x\r$;;$\frac{\dd x}{\l2\pi\r^{d/2}}$
 $\ff f\l\xi\r$;;$\int[x][\mathbb R^d][][\lambda_d]{f\l x\r\e^{-\i\xi\cdot x}}$
 $\ff\l\tau_yf\r$;;$\e_{-y}\ff f$
@@ -13,3 +13,11 @@ Régulatité de $\ff f$;;Si $\left|x\right|^kf\in\mathcal L^1$ alors $\ff f\in\m
 $\ff\l f*g\r$;;$\ff f\times\ff g$
 Intégrale de Gauss;;$g_\sigma\l x\r=\frac{1}{\sigma^d}\exp{\frac{\left|x\right|^2}{2\sigma^2}}$\linebreak$\int[x][\mathbb R^d][][\lambda_d]{g_\sigma\l x\r}=1$
 Théorème d'inversion de Fourier;;Si $f\in\mathcal L^1$ telle que $\ff f\in\mathcal L^1$ $\lambda_d$ presque partout alors $f\l x\r=\int[\xi][\mathbb R^d][][\lambda_d]{\ff f\l\xi\r\e^{\i\xi\cdot x}}$
+Formule de Fourier-Plancherel;;L'unique application $\varPhi\!:\!L^2\to L^2$ continue telle que $\varPhi_{|L^1\cap L^2}=\mathcal F_{|L^1\cap L^2}$\linebreak$\varPhi$ est une isométrie
+Théorème de Hahn-Jordan;;Si $\mu$ est une mesure signée sur $\l\mathbb R^d,\mathcal B\l\mathbb R^d\r\r$ alors $\mu$ se décompose de manière unique en deux mesures positives $\mu_+$ et $\mu_-$ étrangères telles que $\mu=\mu_+-\mu_-$
+$\ff\mu$;;$\int[x][\mathbb R^d][][\mu]{\e^{-\i\xi\cdot x}}$
+Théorème d'inversion de Fourier pour les mesures;;Soit $\mu$ une mesure signée sur $\mathbb R^d$ telle que $\ff\mu\in\mathcal L^1\l\mathbb R^d\r$ alors $\mu$ admet une densité par rapport à $\mathcal{RF}{\ff}\mu$ $\lambda_d$ presque partout
+Proporété de $\mathcal F\!:\!\mathcal M_s\l\mathbb R^d\r\to\mathcal C\l\mathbb R^d,\mathbb C\r$;;$\mathcal F$ est injective
+$\mu*\nu$;;$\mu*\nu\l A\r=\altint{\oldint}[x,y][\mathbb R^d\times\mathbb R^d][][\mu\otimes\nu]{\1A\l x+y\r}$
+Lemme de réciprocité;;Si $f$ et $g$ sont deux fonctions dans $\mathcal L^1$, $\int[x][\mathbb R^d][][\lambda_d]{\ff f\l x\r g\l x\r}=\int[x][\mathbb R^d][][\lambda_d]{f\l x\r\ff g\l x\r}$
+Lemme de réciprocité pour des mesures;;Si $\mu$ et $\nu$ sont deux mesures signées, $\int[x][\mathbb R^d][][\nu]{\ff \mu\l x\r}=\int[x][\mathbb R^d][][\mu]{\ff \nu\l x\r}$

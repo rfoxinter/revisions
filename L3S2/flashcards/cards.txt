@@ -1,9 +1,13 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ../L3S2/flashcards/Algebre2/Anneaux
 20250127222845
-../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/EquationsLineairesDOndesEtDeTransport
-20250123161424
+../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportLineaire
+20250201183908
+../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportNonLineaire
+20250201190234
+../L3S2/flashcards/CalculDifferentiel/TheoremeDInversionLocale
+20250203222647
 ../L3S2/flashcards/ConcentrationDeLaMesure/InegalitesDeConcentration
 20250123223924
 ../L3S2/flashcards/IntegrationEtProbabilites/TransformeeDeFourier
-20250121113739
+20250203222553

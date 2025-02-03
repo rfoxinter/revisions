@@ -1,0 +1,5 @@
+"Calcul différentiel &ndash; <i>Théorème d’inversion locale</i>"
+1
+0
+[1, 2]
+[0, 0]

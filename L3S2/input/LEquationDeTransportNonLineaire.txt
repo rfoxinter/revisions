@@ -1,0 +1,6 @@
+Analyse et équations aux dérivées partielles -- L'équation de transport non linéaire
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse}\usepackage{usuelles,footnotes}\newcommand{\partd}[1]{\mathop{}\!\partial_{#1}}\toggleanalysepar\newcommand{\loc}{\text{loc}}
+Solutions de $\dot X\l t\r=a\l u\l t,X\l t\r\r\r$, $X\l0\r=x_0$ avec $a$ de classe $\mathcal C^1$ et $u\in\mathcal C^1\l\left[0,T\right[\times\mathbb R\r$;;$X$ admet une unique solution $X\l t\r=x_0+a\l u\l x_0\r\r\times t$ (droite caractéristique de $\partd tu+a\l u\r\partd xu=0$), et $u\l t,X\l t\r\r=u_0\l x_0\r$
+Solutions de $\partd tu+a\l u\r\partd xu=0$, $u_{t=0}=u_0$ avec $a$ et $u_0$ de classe $\mathcal C^1$ et $u\in\mathcal C^1\l\left[0,T\right[\times\mathbb R\r$;;Si $\anrm[L^\infty]{u_0}+\anrm[L^\infty]{u_0'}<+\infty$ et $T$ est tel que $1+T\oldinf\limits_{y\in\mathbb R}\l a'\l u_0\l y\r\r\cdot u_0'\l y\r\r>0$\footnote{$T=\frac12\frac{1}{\anrm[L^\infty]{u_0'}\times\oldmax\limits_{\left|y\right|\leqslant\anrm[L^\infty]{u_0}}\l\left|a\l y\r\right|\r}$ convient\vspace{0pt}} alors l'équation admet une unique solutions dans $\mathcal C^1\l\left[0,T\right]\times\mathbb R\r$
