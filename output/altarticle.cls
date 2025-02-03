@@ -652,10 +652,11 @@
    \sloppy
 }
 %% Environment for proofs
+\newlength\prooftitleline%
+\setlength{\prooftitleline}{\dimexpr\linewidth-\FrameSep-0.5pt\relax}%
 \newcommand\leftbartitleframe[2]{%
     \vbox{\nobreak\vspace{\OuterFrameSep}%
-    \hbox{\hskip\FrameSep\strut%
-        {\textbf{#1}}}%
+    \hbox to \prooftitleline{\kern-2pt\hskip\FrameSep\hbox{\strut{#1}}\hfil}%
     \nobreak \nointerlineskip%
     \hbox{\hskip\FrameSep\hspace{0.04\linewidth}\vline\hspace{0.01\linewidth}%
         {\small#2}%
@@ -1313,6 +1314,7 @@ space before arrow={0.2ex},
 \newcommand{\togglebigoplimits}{\altarticle@comparestring{\bigoplimits}{\limits}{\def\bigoplimits{\nolimits}}{\def\bigoplimits{\limits}}}
 \newcommand{\autobigoplimits}{\def\bigoplimits{}}
 \newcommand{\togglebigopdisplay}{\altarticle@comparestring{\bigopdisplay}{}{\def\bigopdisplay{\displaystyle}}{\def\bigopdisplay{}}}
+\newcommand{\autobigopdisplay}{\def\bigopdisplay{}}
 \let\oldsum\sum\renewcommand\sum[3]{{\bigopdisplay\oldsum\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
 \let\oldprod\prod\renewcommand\prod[3]{{\bigopdisplay\oldprod\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
 \let\oldcap\bigcap\renewcommand\bigcap[3]{{\bigopdisplay\oldcap\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
@@ -1838,6 +1840,7 @@ space before arrow={0.2ex},
 \newcommand{\toggleanalyselimits}{\altarticle@comparestring{\analyselimits}{\limits}{\def\analyselimits{\nolimits}}{\def\analyselimits{\limits}}}
 \newcommand{\autoanalyselimits}{\def\analyselimits{}}
 \newcommand{\toggleanalysedisplay}{\altarticle@comparestring{\analysedisplay}{}{\def\analysedisplay{\displaystyle}}{\def\analysedisplay{}}}
+\newcommand{\autoanalysedisplay}{\def\analysedisplay{}}
 \let\oldderfrac\frac
 \newcommand{\derfrac}[2]{{\analysedisplay\oldderfrac{#1}{#2}}}
 
