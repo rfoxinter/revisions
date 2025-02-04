@@ -1,0 +1,20 @@
+Intégration et probabilités -- Bases des probabilités
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{probas}\usepackage{analyse,equivalents,complexes}\DeclareMathOperator{\oldcor}{cor}\newcommand{\cor}[2]{\oldcor\l#1,#2\r}
+Espace de probabilités;;Espace mesuré $\l\Omega,\mathcal F,\mathbb P\r$ où $\mathbb P$ est une mesure de probabilités\linebreak$\Omega$ est appelé univers 
+Variable aléatoire;;Application mesurable $X\!:\!\l\Omega,\mathbb R\r\to\l E,\mathcal E\r$ où $\l E,\mathcal E\r$ est un espace mesurable
+Loi d'une variable aléatoire $X$;;Mesure image $\mathbb P_X$ de $\mathbb P$ par $X$\linebreak$\forall A\in\mathcal E$, $\p[X]A=\mathbb P\l X^{-1}\l A\r\r:=\p{X\in A}$
+$\esp X$;;$\int[\omega][\Omega][][\mathbb P]{X\l\omega\r}$
+Formule de transfert;;$\esp{f\l X\r}$;;$\int[\omega][\Omega][][\mathbb P]{f\l X\l\omega\r\r}=\int[x][E][][\mathbb P_X]{f\l x\r}$
+Caractérisation de la loi par les espérances;;Si $X$ est une variable aléatoire dans $\l E,\mathcal E\r$ alors la loi de $\mathbb P_X$ ext caractérisé par les $\left\{\esp{f\l X\r},f\!:\!E\to\mathbb R\text{ mesurable}\right\}$ ou plus simplement par les $\left\{\esp{f\l X\r},f\in H\right\}$ où $H$ est un sous-ensemble dense de $\l\mathcal C_c\l\mathbb R,\mathbb R\r,\anrm\r$
+Moment absolu d'ordre $p$;;Si $X$ est une variable aléatoire réelle, son moment absolu d'ordre $p$ est $\esp{\left|X\right|^p}$
+Inégalité de Markov;;$\p{X\geqslant x}\leqslant\frac{\esp X}x$\linebreak De plus, $\p{X\geqslant x}=\o[x\to+\infty]{\frac1x}$
+Inégalité de Markov généralisée pour l'ordre $p$;;Si $X$ admet un moment d'ordre $p$, $\p{X\geqslant x}\leqslant\frac{\esp{X^p}}{x^p}$\linebreak De plus, $\p{X\geqslant x}=\o[x\to+\infty]{\frac1{x^p}}$
+Inégalité de Chernov;;$\p{X\geqslant x}\leqslant\e^{-\lambda x}\esp{\e^{\lambda X}}$
+$\var X$;;$\esp{\l X-\esp{X}\r^2}$
+Inégalité de Bienaymé-Tchebychev;;$\p{\left|X-\esp X\right|\geqslant x}\leqslant\frac{\var X}{x^2}$
+$\cov XY$;;$\esp{\l X-\esp X\r\l Y-\esp Y\r}$
+Corrélation entre $X$ et $Y$;;$\cor XY=\frac{\cov XY}{\sqrt{\var X\var Y}}=\left\langle\frac{X-\esp X}{\anrm[L^2]X},\frac{Y-\esp Y}{\anrm[L^2]Y}\right\rangle_{L^2}$
+Matrice des variances-covariances;;$\l\cov{X_i}{X_j}\r_{\l i,j\r\in\llb1,n\rrb^2}\in\mathcal S_n^+\l\mathbb R\r$
+$\alpha$-quartile;;Si $X$ est une variable aléatoire réelle et $\alpha\in\left]0,1\right[$, un $\alpha$-quartile de la loi de $X$ est un nombre $q\in\mathbb R$ tel que $\p{X\leqslant q}\geqslant\alpha$ et $\p{X\geqslant q}\geqslant1-\alpha$\linebreak Si $\alpha=\tfrac12$, on parle de médiane 

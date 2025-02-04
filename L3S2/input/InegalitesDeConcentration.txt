@@ -3,12 +3,13 @@ Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{probas}\usepackage{usuelles}\usepackage{complexes}\usepackage{bigoperators}
 $f\!:\!\mathbb R^n\to\mathbb R$ vérifie une inégalité de concentration de concentration $\alpha$;;$\exists a\in\mathbb R$, $\forall t\geqslant0$, $\mu\l\left\{x\in\mathbb R^n,\left|f\l x\r-a\right|\geqslant t\right\}\r\leqslant\alpha\l t\r$
-Inégalité de Markov;;$\p{X\geqslant t}\leqslant\frac{\esp X}\lambda$
+Inégalité de Markov;;$\p{X\geqslant t}\leqslant\frac{\esp X}t$
 $\oldinf\limits_{a\in\mathbb R}\l\esp{\left|X-a\right|}\r$;;$\esp{\left|X-m_X\right|}$ avec $m_X$ une médiane de $X$
 $\oldinf\limits_{a\in\mathbb R}\l\esp{\l X-a\r^2}\r$;;$\esp{\left|X-\esp X\right|}=\var X$
 Inégalité de Bienaymé-Tchebychev;;$\forall t>0$, $\p{\left|X-\esp X\right|\geqslant t}\leqslant\frac{\var X}{t^2}$
 Généralisation de l'inégalité de Bienaymé-Tchebychev;;$\forall t>0$, $\forall a\in\mathbb R$, $\p{\left|X-a\right|\geqslant t}\leqslant\frac{\esp{\left|X-a\right|^p}}{t^p}$
+Inégalité de Chernov;;$\forall t>0$, $\p{X\geqslant t}\leqslant\e^{-\lambda t}\esp{\e^{\lambda X}}$
 Transformée log-Laplace de $X$;;$\psi\l\lambda\r=\esp{\e^{\lambda X}}$\linebreak$\psi$ est convexe
 Borne de Chernov;;$\p{X\geqslant t}\leqslant\e^{\psi^*\l t\r}$ où $\psi^*\l t\r=-\oldsup\limits_{\lambda\geqslant0}\l\lambda t-\psi\l\lambda\r\r$
-Inégalité de Hoeffding;;Si $X_1,\cdots,X_n$ sont des varaibles aléatoires indépendantes avec $X_i$ à valeurs dans $\left[a_i,b_i\right]$ et si $S_n=X_1+\cdots+X_n$ alors\linebreak$\p{\left|S_n-\esp{S_n}\right|\geqslant t}\leqslant2\exp{\frac{-2t^2}{\oldsum\limits_{i=1}^{n}\l b_i-a_i\r^2}}$
-Inégalité de Chernov;;Si $X_1,\cdots,X_n$ sont des varaibles de Bernoulli indépendantes avec $X_i$ de paramètre $p_i$ et si $S_n=X_1+\cdots+X_n$ et $\mu=p_1+\cdots+p_n$ alors $\p{S_n\geqslant t}\leqslant\e^{-\mu}\l\frac{\e\mu}{t}\r^t$
+Inégalité de Hoeffding;;Si $X_1,\cdots,X_n$ sont des variables aléatoires indépendantes avec $X_i$ à valeurs dans $\left[a_i,b_i\right]$ et si $S_n=X_1+\cdots+X_n$ alors\linebreak$\p{\left|S_n-\esp{S_n}\right|\geqslant t}\leqslant2\exp{\frac{-2t^2}{\oldsum\limits_{i=1}^{n}\l b_i-a_i\r^2}}$
+Inégalité de Chernov pour des variables de Bernoulli;;Si $X_1,\cdots,X_n$ sont des variables de Bernoulli indépendantes avec $X_i$ de paramètre $p_i$ et si $S_n=X_1+\cdots+X_n$ et $\mu=p_1+\cdots+p_n$ alors $\p{S_n\geqslant t}\leqslant\e^{-\mu}\l\frac{\e\mu}{t}\r^t$

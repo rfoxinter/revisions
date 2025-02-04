@@ -1,0 +1,45 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{probas}\usepackage{analyse,equivalents,complexes}\DeclareMathOperator{\oldcor}{cor}\newcommand{\cor}[2]{\oldcor\l#1,#2\r}
+\hypersetup{pdftitle=Intégration et probabilités -- Bases des probabilités}
+\title{Intégration et probabilités\\\emph{Bases des probabilités}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Variable aléatoire}{1/16}
+\slider{Application mesurable $X\!:\!\l\Omega,\mathbb R\r\to\l E,\mathcal E\r$ où $\l E,\mathcal E\r$ est un espace mesurable}{1/16}
+\slideq{Loi d'une variable aléatoire $X$}{2/16}
+\slider{Mesure image $\mathbb P_X$ de $\mathbb P$ par $X$\linebreak$\forall A\in\mathcal E$, $\p[X]A=\mathbb P\l X^{-1}\l A\r\r:=\p{X\in A}$}{2/16}
+\slideq{Moment absolu d'ordre $p$}{3/16}
+\slider{Si $X$ est une variable aléatoire réelle, son moment absolu d'ordre $p$ est $\esp{\left|X\right|^p}$}{3/16}
+\slideq{Formule de transfert}{4/16}
+\slider{$\esp{f\l X\r}$}{4/16}
+\slideq{$\alpha$-quartile}{5/16}
+\slider{Si $X$ est une variable aléatoire réelle et $\alpha\in\left]0,1\right[$, un $\alpha$-quartile de la loi de $X$ est un nombre $q\in\mathbb R$ tel que $\p{X\leqslant q}\geqslant\alpha$ et $\p{X\geqslant q}\geqslant1-\alpha$\linebreak Si $\alpha=\tfrac12$, on parle de médiane }{5/16}
+\slideq{Matrice des variances-covariances}{6/16}
+\slider{$\l\cov{X_i}{X_j}\r_{\l i,j\r\in\llb1,n\rrb^2}\in\mathcal S_n^+\l\mathbb R\r$}{6/16}
+\slideq{Caractérisation de la loi par les espérances}{7/16}
+\slider{Si $X$ est une variable aléatoire dans $\l E,\mathcal E\r$ alors la loi de $\mathbb P_X$ ext caractérisé par les $\left\{\esp{f\l X\r},f\!:\!E\to\mathbb R\text{ mesurable}\right\}$ ou plus simplement par les $\left\{\esp{f\l X\r},f\in H\right\}$ où $H$ est un sous-ensemble dense de $\l\mathcal C_c\l\mathbb R,\mathbb R\r,\anrm\r$}{7/16}
+\slideq{$\var X$}{8/16}
+\slider{$\esp{\l X-\esp{X}\r^2}$}{8/16}
+\slideq{Espace de probabilités}{9/16}
+\slider{Espace mesuré $\l\Omega,\mathcal F,\mathbb P\r$ où $\mathbb P$ est une mesure de probabilités\linebreak$\Omega$ est appelé univers }{9/16}
+\slideq{Corrélation entre $X$ et $Y$}{10/16}
+\slider{$\cor XY=\frac{\cov XY}{\sqrt{\var X\var Y}}=\left\langle\frac{X-\esp X}{\anrm[L^2]X},\frac{Y-\esp Y}{\anrm[L^2]Y}\right\rangle_{L^2}$}{10/16}
+\slideq{Inégalité de Bienaymé-Tchebychev}{11/16}
+\slider{$\p{\left|X-\esp X\right|\geqslant x}\leqslant\frac{\var X}{x^2}$}{11/16}
+\slideq{Inégalité de Markov généralisée pour l'ordre $p$}{12/16}
+\slider{Si $X$ admet un moment d'ordre $p$, $\p{X\geqslant x}\leqslant\frac{\esp{X^p}}{x^p}$\linebreak De plus, $\p{X\geqslant x}=\o[x\to+\infty]{\frac1{x^p}}$}{12/16}
+\slideq{$\esp X$}{13/16}
+\slider{$\int[\omega][\Omega][][\mathbb P]{X\l\omega\r}$}{13/16}
+\slideq{Inégalité de Markov}{14/16}
+\slider{$\p{X\geqslant x}\leqslant\frac{\esp X}x$\linebreak De plus, $\p{X\geqslant x}=\o[x\to+\infty]{\frac1x}$}{14/16}
+\slideq{$\cov XY$}{15/16}
+\slider{$\esp{\l X-\esp X\r\l Y-\esp Y\r}$}{15/16}
+\slideq{Inégalité de Chernov}{16/16}
+\slider{$\p{X\geqslant x}\leqslant\e^{-\lambda x}\esp{\e^{\lambda X}}$}{16/16}
+\end{document}
