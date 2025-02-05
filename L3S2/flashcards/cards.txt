@@ -8,7 +8,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S2/flashcards/CalculDifferentiel/TheoremeDInversionLocale
 20250203222647
 ../L3S2/flashcards/ConcentrationDeLaMesure/InegalitesDeConcentration
-20250204225452
+20250205224141
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites
 20250204230414
 ../L3S2/flashcards/IntegrationEtProbabilites/TransformeeDeFourier

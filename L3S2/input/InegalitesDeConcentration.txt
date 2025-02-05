@@ -1,7 +1,7 @@
 Concentration de la mesure -- Inégalités de concentration
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{probas}\usepackage{usuelles}\usepackage{complexes}\usepackage{bigoperators}
+\usepackage{probas}\usepackage{usuelles}\usepackage{complexes}\usepackage{bigoperators}\usepackage{analyse}
 $f\!:\!\mathbb R^n\to\mathbb R$ vérifie une inégalité de concentration de concentration $\alpha$;;$\exists a\in\mathbb R$, $\forall t\geqslant0$, $\mu\l\left\{x\in\mathbb R^n,\left|f\l x\r-a\right|\geqslant t\right\}\r\leqslant\alpha\l t\r$
 Inégalité de Markov;;$\p{X\geqslant t}\leqslant\frac{\esp X}t$
 $\oldinf\limits_{a\in\mathbb R}\l\esp{\left|X-a\right|}\r$;;$\esp{\left|X-m_X\right|}$ avec $m_X$ une médiane de $X$
@@ -13,3 +13,10 @@ Transformée log-Laplace de $X$;;$\psi\l\lambda\r=\esp{\e^{\lambda X}}$\linebrea
 Borne de Chernov;;$\p{X\geqslant t}\leqslant\e^{\psi^*\l t\r}$ où $\psi^*\l t\r=-\oldsup\limits_{\lambda\geqslant0}\l\lambda t-\psi\l\lambda\r\r$
 Inégalité de Hoeffding;;Si $X_1,\cdots,X_n$ sont des variables aléatoires indépendantes avec $X_i$ à valeurs dans $\left[a_i,b_i\right]$ et si $S_n=X_1+\cdots+X_n$ alors\linebreak$\p{\left|S_n-\esp{S_n}\right|\geqslant t}\leqslant2\exp{\frac{-2t^2}{\oldsum\limits_{i=1}^{n}\l b_i-a_i\r^2}}$
 Inégalité de Chernov pour des variables de Bernoulli;;Si $X_1,\cdots,X_n$ sont des variables de Bernoulli indépendantes avec $X_i$ de paramètre $p_i$ et si $S_n=X_1+\cdots+X_n$ et $\mu=p_1+\cdots+p_n$ alors $\p{S_n\geqslant t}\leqslant\e^{-\mu}\l\frac{\e\mu}{t}\r^t$
+$X\sim\mathcal N\l0,1\r$;;$\mathbb P_X\l\dd x\r=\frac{\e^{\frac{-x^2}2}}{\sqrt{2\pi}}\intd x$
+Moment d'ordre $p$;;$\esp{\left|X\right|^p}$
+Fonction génératrice des moments\linebreak Transformée de Laplace;;$\esp{\e^{\lambda X}}=\e^{\frac{\lambda^2}{2}}$
+$X$ est  une variable aléatoire réelle sous-gaussienne;;$\exists K_1>0$, $\forall t>0$, $\p{\left|X\right|\geqslant t}\leqslant2\e^{\frac{t^2}{K_1^2}}$\linebreak$\exists K_2>0$, $\forall p\geqslant 1$, $\left\|X\right\|_{L^p}\leqslant\sqrt p$\linebreak$\exists K_3>0$, $\forall\lambda\leqslant\frac{1}{K_3}$, $\esp{\e^{\lambda^2X^2}}\leqslant\e^{K_3^2\lambda^2}$\linebreak$\exists K_4>0$, $\esp{\e^{\frac{X^2}{K_4}}}\leqslant2$\linebreak$\exists K_5>0$, $\forall\lambda\in\mathbb R$, $\esp{\e^{\lambda X}}\leqslant\e^{K_5^2\lambda^2}$ ($\esp X=0$)\linebreak$\exists C>0$, $\forall i\neq j$, $K_i\leqslant CK_j$
+$\anrm[\psi_2]X$;;$\inf{\left\{t>0,\esp{\e^{\frac{X^2}{t^2}}}\leqslant2\right\}}$\linebreak$\anrm[\psi_2]\cdot$ est une norme
+Lien entre $\anrm[\psi_2]X$ et $X-\esp X$;;$\anrm[\psi_2]{X-\esp X}\leqslant C\anrm[\psi_2]X$
+Équivalent de l'inégalité triangulaire pour $\anrm[\psi_2]{\sum{i=1}{n}{X_i}}$;;Si les $X_i$ sont indépendantes, centrées et sous-gaussiennes, $\anrm[\psi_2]{\sum{i=1}{n}{X_i}}\leqslant C\sum{i=1}{n}{\anrm[\psi_2]{X_i}}$

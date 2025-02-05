@@ -37,13 +37,15 @@
 \let\oldright\right
 \renewcommand{\right}{\aftergroup\egroup\oldright}
 \let\oldfrac\frac
-\let\frac\dfrac
-\newcommand{\toggledfrac}{
-    \ifx\frac\dfrac%
-        \let\frac\oldfrac
-    \else
-        \let\frac\dfrac
-    \fi
+\renewcommand{\frac}[2]{\mathchoice{\dfrac{#1}{#2}}{\dfrac{#1}{#2}}{\oldfrac{#1}{#2}}{\oldfrac{#1}{#2}}}
+\newif\ifdfrac
+\dfractrue
+\newcommand{\toggledfrac}{%
+    \ifdfrac%
+        \let\frac\oldfrac%
+    \else%
+        \renewcommand{\frac}[2]{\mathchoice{\dfrac{##1}{##2}}{\dfrac{##1}{##2}}{\oldfrac{##1}{##2}}{\oldfrac{##1}{##2}}}%
+    \fi%
 }
 \let\oldvec\vec
 \renewcommand{\vec}{\overrightarrow}
