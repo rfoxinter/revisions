@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{probas}\usepackage{usuelles}\usepackage{complexes}\usepackage{bigoperators}\usepackage{analyse}
+\usepackage{probas}\usepackage{usuelles}\usepackage{complexes}\usepackage{bigoperators}\usepackage{analyse}\let\vala\relax\newcommand{\vala}[1]{\left|#1\right|}\let\phi\varphi\usepackage{footnotes}
 \hypersetup{pdftitle=Concentration de la mesure -- Inégalités de concentration}
 \title{Concentration de la mesure\\\emph{Inégalités de concentration}}
 \author{}
@@ -10,40 +10,58 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Inégalité de Hoeffding}{1/18}
-\slider{Si $X_1,\cdots,X_n$ sont des variables aléatoires indépendantes avec $X_i$ à valeurs dans $\left[a_i,b_i\right]$ et si $S_n=X_1+\cdots+X_n$ alors\linebreak$\p{\left|S_n-\esp{S_n}\right|\geqslant t}\leqslant2\exp{\frac{-2t^2}{\oldsum\limits_{i=1}^{n}\l b_i-a_i\r^2}}$}{1/18}
-\slideq{$f\!:\!\mathbb R^n\to\mathbb R$ vérifie une inégalité de concentration de concentration $\alpha$}{2/18}
-\slider{$\exists a\in\mathbb R$, $\forall t\geqslant0$, $\mu\l\left\{x\in\mathbb R^n,\left|f\l x\r-a\right|\geqslant t\right\}\r\leqslant\alpha\l t\r$}{2/18}
-\slideq{Fonction génératrice des moments\linebreak Transformée de Laplace}{3/18}
-\slider{$\esp{\e^{\lambda X}}=\e^{\frac{\lambda^2}{2}}$}{3/18}
-\slideq{Lien entre $\anrm[\psi_2]X$ et $X-\esp X$}{4/18}
-\slider{$\anrm[\psi_2]{X-\esp X}\leqslant C\anrm[\psi_2]X$}{4/18}
-\slideq{$\anrm[\psi_2]X$}{5/18}
-\slider{$\inf{\left\{t>0,\esp{\e^{\frac{X^2}{t^2}}}\leqslant2\right\}}$\linebreak$\anrm[\psi_2]\cdot$ est une norme}{5/18}
-\slideq{$\oldinf\limits_{a\in\mathbb R}\l\esp{\l X-a\r^2}\r$}{6/18}
-\slider{$\esp{\left|X-\esp X\right|}=\var X$}{6/18}
-\slideq{Borne de Chernov}{7/18}
-\slider{$\p{X\geqslant t}\leqslant\e^{\psi^*\l t\r}$ où $\psi^*\l t\r=-\oldsup\limits_{\lambda\geqslant0}\l\lambda t-\psi\l\lambda\r\r$}{7/18}
-\slideq{Inégalité de Bienaymé-Tchebychev}{8/18}
-\slider{$\forall t>0$, $\p{\left|X-\esp X\right|\geqslant t}\leqslant\frac{\var X}{t^2}$}{8/18}
-\slideq{$\oldinf\limits_{a\in\mathbb R}\l\esp{\left|X-a\right|}\r$}{9/18}
-\slider{$\esp{\left|X-m_X\right|}$ avec $m_X$ une médiane de $X$}{9/18}
-\slideq{Inégalité de Markov}{10/18}
-\slider{$\p{X\geqslant t}\leqslant\frac{\esp X}t$}{10/18}
-\slideq{Généralisation de l'inégalité de Bienaymé-Tchebychev}{11/18}
-\slider{$\forall t>0$, $\forall a\in\mathbb R$, $\p{\left|X-a\right|\geqslant t}\leqslant\frac{\esp{\left|X-a\right|^p}}{t^p}$}{11/18}
-\slideq{Inégalité de Chernov pour des variables de Bernoulli}{12/18}
-\slider{Si $X_1,\cdots,X_n$ sont des variables de Bernoulli indépendantes avec $X_i$ de paramètre $p_i$ et si $S_n=X_1+\cdots+X_n$ et $\mu=p_1+\cdots+p_n$ alors $\p{S_n\geqslant t}\leqslant\e^{-\mu}\l\frac{\e\mu}{t}\r^t$}{12/18}
-\slideq{Équivalent de l'inégalité triangulaire pour $\anrm[\psi_2]{\sum{i=1}{n}{X_i}}$}{13/18}
-\slider{Si les $X_i$ sont indépendantes, centrées et sous-gaussiennes, $\anrm[\psi_2]{\sum{i=1}{n}{X_i}}\leqslant C\sum{i=1}{n}{\anrm[\psi_2]{X_i}}$}{13/18}
-\slideq{$X\sim\mathcal N\l0,1\r$}{14/18}
-\slider{$\mathbb P_X\l\dd x\r=\frac{\e^{\frac{-x^2}2}}{\sqrt{2\pi}}\intd x$}{14/18}
-\slideq{$X$ est  une variable aléatoire réelle sous-gaussienne}{15/18}
-\slider{$\exists K_1>0$, $\forall t>0$, $\p{\left|X\right|\geqslant t}\leqslant2\e^{\frac{t^2}{K_1^2}}$\linebreak$\exists K_2>0$, $\forall p\geqslant 1$, $\left\|X\right\|_{L^p}\leqslant\sqrt p$\linebreak$\exists K_3>0$, $\forall\lambda\leqslant\frac{1}{K_3}$, $\esp{\e^{\lambda^2X^2}}\leqslant\e^{K_3^2\lambda^2}$\linebreak$\exists K_4>0$, $\esp{\e^{\frac{X^2}{K_4}}}\leqslant2$\linebreak$\exists K_5>0$, $\forall\lambda\in\mathbb R$, $\esp{\e^{\lambda X}}\leqslant\e^{K_5^2\lambda^2}$ ($\esp X=0$)\linebreak$\exists C>0$, $\forall i\neq j$, $K_i\leqslant CK_j$}{15/18}
-\slideq{Moment d'ordre $p$}{16/18}
-\slider{$\esp{\left|X\right|^p}$}{16/18}
-\slideq{Transformée log-Laplace de $X$}{17/18}
-\slider{$\psi\l\lambda\r=\esp{\e^{\lambda X}}$\linebreak$\psi$ est convexe}{17/18}
-\slideq{Inégalité de Chernov}{18/18}
-\slider{$\forall t>0$, $\p{X\geqslant t}\leqslant\e^{-\lambda t}\esp{\e^{\lambda X}}$}{18/18}
+\slideq{Moment d'ordre $p$}{1/27}
+\slider{$\esp{\left|X\right|^p}$}{1/27}
+\slideq{Inégalité de Chernov}{2/27}
+\slider{$\forall t>0$, $\p{X\geqslant t}\leqslant\e^{-\lambda t}\esp{\e^{\lambda X}}$}{2/27}
+\slideq{Théorème de Johnson-Linderstrauss}{3/27}
+\slider{Il existe une constantete $C>0$ telle que pour tout $D$, pour tout $n$, si $A$ est une partie finie de $\mathbb R^D$ de cardinal $\leqslant n$, il existe $d$ et une $\epsilon$-isométrie sur $A$\footnote{$\forall x,y\in A$, $\l1-\varepsilon\r\anrm[]{\phi\l x\r-\phi\l y\r}\leqslant\anrm[]{x-y}\leqslant\l1+\varepsilon\r\anrm[]{\phi\l x\r-\phi\l y\r}$} linéaire $\phi$ dès lors que $d\leqslant\frac{C}{\varepsilon^2}\ln n$}{3/27}
+\slideq{Loi de probabilités d'une variable sous-exponentielle}{4/27}
+\slider{$\mathbb P_X\l\dd x\r=\frac{\e^{-\left|x\right|}}2\intd x$}{4/27}
+\slideq{Lien entre $\anrm[\psi_1]\cdot$ et $\anrm[\psi_2]\cdot$}{5/27}
+\slider{Si $X$ est sous-gaussienne, $\anrm[\psi_1]{X^2}=\anrm[\psi_2]X^2$}{5/27}
+\slideq{Fonction génératrice des moments\linebreak Transformée de Laplace}{6/27}
+\slider{$\esp{\e^{\lambda X}}=\e^{\frac{\lambda^2}{2}}$}{6/27}
+\slideq{$f\!:\!\mathbb R^n\to\mathbb R$ vérifie une inégalité de concentration de concentration $\alpha$}{7/27}
+\slider{$\exists a\in\mathbb R$, $\forall t\geqslant0$, $\mu\l\left\{x\in\mathbb R^n,\left|f\l x\r-a\right|\geqslant t\right\}\r\leqslant\alpha\l t\r$}{7/27}
+\slideq{Majoration de $\anrm[\psi_2]{\anrm[2]X-\sqrt n}$}{8/27}
+\slider{$\anrm[\psi_2]{\anrm[2]X-\sqrt n}\leqslant C\cdot\oldmax_{i\in\llb1,n\rrb}\left\{\anrm[\psi_2]{X_i}^2\right\}$ pour $X=\l X_1,\cdots,X_n\r$ avec les $X_i$ des variables aléatoires sous-gaussiennes centrées réduites}{8/27}
+\slideq{$X$ est  une variable aléatoire réelle sous-exponentielle}{9/27}
+\slider{$\exists K_1>0$, $\forall t>0$, $\p{\left|X\right|\geqslant t}\leqslant2\e^{\frac{-t}{K_1}}$\linebreak$\exists K_2>0$, $\forall p\geqslant 1$, $\left\|X\right\|_{L^p}\leqslant K_2p$\linebreak$\exists K_3>0$, $\forall0\leqslant\lambda\leqslant\tfrac{1}{K_3}$, $\esp{\e^{\lambda\vala X}}\leqslant\e^{K_3\lambda}$\linebreak$\exists K_4>0$, $\esp{\e^{\frac{\vala X}{K_4}}}\leqslant2$\linebreak$\exists K_5{>}0$, $\forall\vala\lambda{\leqslant}\tfrac{1}{K_5}$, $\esp{\e^{\lambda X}}{\leqslant}\e^{K_5^2\lambda^2}$ ($\esp X{=}0$)\linebreak$\exists C>0$, $\forall i\neq j$, $K_i\leqslant CK_j$}{9/27}
+\slideq{Inégalité de Markov}{10/27}
+\slider{$\p{X\geqslant t}\leqslant\frac{\esp X}t$}{10/27}
+\slideq{Propriété de $\anrm[\psi_2]{X\cdot x}$ pour $X=\l X_1,\cdots,X_n\r$ avec les $X_i$ des variables aléatoires sous-gaussiennes centrées réduites}{11/27}
+\slider{$\oldsup\limits_{n\geqslant1}\l\oldsup\limits_{x\in\mathbb S^{n-1}}\l\anrm[\psi_2]{X\cdot x}\r\r<+\infty$}{11/27}
+\slideq{Inégalité de Hoeffding}{12/27}
+\slider{Si $X_1,\cdots,X_n$ sont des variables aléatoires indépendantes avec $X_i$ à valeurs dans $\left[a_i,b_i\right]$ et si $S_n=X_1+\cdots+X_n$ alors\linebreak$\p{\left|S_n-\esp{S_n}\right|\geqslant t}\leqslant2\exp{\frac{-2t^2}{\oldsum\limits_{i=1}^{n}\l b_i-a_i\r^2}}$}{12/27}
+\slideq{$\anrm[\psi_1]X$}{13/27}
+\slider{$\inf{\left\{t>0,\esp{\e^{\frac{\vala X}{t}}}\leqslant2\right\}}$\linebreak$\anrm[\psi_1]\cdot$ est une norme}{13/27}
+\slideq{Généralisation de l'inégalité de Bienaymé-Tchebychev}{14/27}
+\slider{$\forall t>0$, $\forall a\in\mathbb R$, $\p{\left|X-a\right|\geqslant t}\leqslant\frac{\esp{\left|X-a\right|^p}}{t^p}$}{14/27}
+\slideq{$X\sim\mathcal N\l0,1\r$}{15/27}
+\slider{$\mathbb P_X\l\dd x\r=\frac{\e^{\frac{-x^2}2}}{\sqrt{2\pi}}\intd x$}{15/27}
+\slideq{$X$ est  une variable aléatoire réelle sous-gaussienne}{16/27}
+\slider{$\exists K_1>0$, $\forall t>0$, $\p{\left|X\right|\geqslant t}\leqslant2\e^{\frac{-t^2}{K_1^2}}$\linebreak$\exists K_2>0$, $\forall p\geqslant 1$, $\left\|X\right\|_{L^p}\leqslant K_2\sqrt p$\linebreak$\exists K_3>0$, $\forall\vala{\lambda}\leqslant\tfrac{1}{K_3}$, $\esp{\e^{\lambda^2X^2}}\leqslant\e^{K_3^2\lambda^2}$\linebreak$\exists K_4>0$, $\esp{\e^{\frac{X^2}{K_4}}}\leqslant2$\linebreak$\exists K_5>0$, $\forall\lambda\in\mathbb R$, $\esp{\e^{\lambda X}}\leqslant\e^{K_5^2\lambda^2}$ ($\esp X=0$)\linebreak$\exists C>0$, $\forall i\neq j$, $K_i\leqslant CK_j$}{16/27}
+\slideq{Lien entre $\anrm[\psi_2]X$ et $X-\esp X$}{17/27}
+\slider{$\anrm[\psi_2]{X-\esp X}\leqslant C\anrm[\psi_2]X$}{17/27}
+\slideq{Borne de Chernov}{18/27}
+\slider{$\p{X\geqslant t}\leqslant\e^{\psi^*\l t\r}$ où $\psi^*\l t\r=-\oldsup\limits_{\lambda\geqslant0}\l\lambda t-\psi\l\lambda\r\r$}{18/27}
+\slideq{Transformée log-Laplace de $X$}{19/27}
+\slider{$\psi\l\lambda\r=\esp{\e^{\lambda X}}$\linebreak$\psi$ est convexe}{19/27}
+\slideq{$\oldinf\limits_{a\in\mathbb R}\l\esp{\left|X-a\right|}\r$}{20/27}
+\slider{$\esp{\left|X-m_X\right|}$ avec $m_X$ une médiane de $X$}{20/27}
+\slideq{Inégalité de Bienaymé-Tchebychev}{21/27}
+\slider{$\forall t>0$, $\p{\left|X-\esp X\right|\geqslant t}\leqslant\frac{\var X}{t^2}$}{21/27}
+\slideq{Inégalité de Chernov pour des variables de Bernoulli}{22/27}
+\slider{Si $X_1,\cdots,X_n$ sont des variables de Bernoulli indépendantes avec $X_i$ de paramètre $p_i$ et si $S_n=X_1+\cdots+X_n$ et $\mu=p_1+\cdots+p_n$ alors $\p{S_n\geqslant t}\leqslant\e^{-\mu}\l\frac{\e\mu}{t}\r^t$}{22/27}
+\slideq{$\oldinf\limits_{a\in\mathbb R}\l\esp{\l X-a\r^2}\r$}{23/27}
+\slider{$\esp{\left|X-\esp X\right|}=\var X$}{23/27}
+\slideq{$\anrm[\psi_2]X$}{24/27}
+\slider{$\inf{\left\{t>0,\esp{\e^{\frac{X^2}{t^2}}}\leqslant2\right\}}$\linebreak$\anrm[\psi_2]\cdot$ est une norme}{24/27}
+\slideq{Inégalité de Bernstein}{25/27}
+\slider{Si $X_1,\cdots,X_n$ sont des variables aléatoires indépendantes centrées et sous-exponentielles alors $\p{\left|\sum{i=1}{n}{X_i}\right|\geqslant t}$\linebreak${\leqslant}2\exp{-C\min{\frac{t^2}{\oldsum\limits_{i=1}^n\anrm[\psi_1]{X_i}^2},\frac{t}{\oldmax\limits_{i\in\llb1,n\rrb}\anrm[\psi_1]{X_i}}}}$}{25/27}
+\slideq{Équivalent de l'inégalité triangulaire pour $\anrm[\psi_2]{\sum{i=1}{n}{X_i}}^2$}{26/27}
+\slider{Si les $X_i$ sont indépendantes, centrées et sous-gaussiennes, $\anrm[\psi_2]{\sum{i=1}{n}{X_i}}^2\leqslant C\sum{i=1}{n}{\anrm[\psi_2]{X_i}}^2$}{26/27}
+\slideq{$\anrm[\psi_1]{XY}$ pour $X$ et $Y$ sous-gaussiennes}{27/27}
+\slider{$\anrm[\psi_1]{XY}\leqslant\anrm[\psi_2]{X}\anrm[\psi_2]{Y}$}{27/27}
 \end{document}

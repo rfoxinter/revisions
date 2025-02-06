@@ -1,7 +1,7 @@
 Concentration de la mesure -- Inégalités de concentration
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{probas}\usepackage{usuelles}\usepackage{complexes}\usepackage{bigoperators}\usepackage{analyse}
+\usepackage{probas}\usepackage{usuelles}\usepackage{complexes}\usepackage{bigoperators}\usepackage{analyse}\let\vala\relax\newcommand{\vala}[1]{\left|#1\right|}\let\phi\varphi\usepackage{footnotes}
 $f\!:\!\mathbb R^n\to\mathbb R$ vérifie une inégalité de concentration de concentration $\alpha$;;$\exists a\in\mathbb R$, $\forall t\geqslant0$, $\mu\l\left\{x\in\mathbb R^n,\left|f\l x\r-a\right|\geqslant t\right\}\r\leqslant\alpha\l t\r$
 Inégalité de Markov;;$\p{X\geqslant t}\leqslant\frac{\esp X}t$
 $\oldinf\limits_{a\in\mathbb R}\l\esp{\left|X-a\right|}\r$;;$\esp{\left|X-m_X\right|}$ avec $m_X$ une médiane de $X$
@@ -16,7 +16,16 @@ Inégalité de Chernov pour des variables de Bernoulli;;Si $X_1,\cdots,X_n$ sont
 $X\sim\mathcal N\l0,1\r$;;$\mathbb P_X\l\dd x\r=\frac{\e^{\frac{-x^2}2}}{\sqrt{2\pi}}\intd x$
 Moment d'ordre $p$;;$\esp{\left|X\right|^p}$
 Fonction génératrice des moments\linebreak Transformée de Laplace;;$\esp{\e^{\lambda X}}=\e^{\frac{\lambda^2}{2}}$
-$X$ est  une variable aléatoire réelle sous-gaussienne;;$\exists K_1>0$, $\forall t>0$, $\p{\left|X\right|\geqslant t}\leqslant2\e^{\frac{t^2}{K_1^2}}$\linebreak$\exists K_2>0$, $\forall p\geqslant 1$, $\left\|X\right\|_{L^p}\leqslant\sqrt p$\linebreak$\exists K_3>0$, $\forall\lambda\leqslant\frac{1}{K_3}$, $\esp{\e^{\lambda^2X^2}}\leqslant\e^{K_3^2\lambda^2}$\linebreak$\exists K_4>0$, $\esp{\e^{\frac{X^2}{K_4}}}\leqslant2$\linebreak$\exists K_5>0$, $\forall\lambda\in\mathbb R$, $\esp{\e^{\lambda X}}\leqslant\e^{K_5^2\lambda^2}$ ($\esp X=0$)\linebreak$\exists C>0$, $\forall i\neq j$, $K_i\leqslant CK_j$
+$X$ est  une variable aléatoire réelle sous-gaussienne;;$\exists K_1>0$, $\forall t>0$, $\p{\left|X\right|\geqslant t}\leqslant2\e^{\frac{-t^2}{K_1^2}}$\linebreak$\exists K_2>0$, $\forall p\geqslant 1$, $\left\|X\right\|_{L^p}\leqslant K_2\sqrt p$\linebreak$\exists K_3>0$, $\forall\vala{\lambda}\leqslant\tfrac{1}{K_3}$, $\esp{\e^{\lambda^2X^2}}\leqslant\e^{K_3^2\lambda^2}$\linebreak$\exists K_4>0$, $\esp{\e^{\frac{X^2}{K_4}}}\leqslant2$\linebreak$\exists K_5>0$, $\forall\lambda\in\mathbb R$, $\esp{\e^{\lambda X}}\leqslant\e^{K_5^2\lambda^2}$ ($\esp X=0$)\linebreak$\exists C>0$, $\forall i\neq j$, $K_i\leqslant CK_j$
 $\anrm[\psi_2]X$;;$\inf{\left\{t>0,\esp{\e^{\frac{X^2}{t^2}}}\leqslant2\right\}}$\linebreak$\anrm[\psi_2]\cdot$ est une norme
 Lien entre $\anrm[\psi_2]X$ et $X-\esp X$;;$\anrm[\psi_2]{X-\esp X}\leqslant C\anrm[\psi_2]X$
-Équivalent de l'inégalité triangulaire pour $\anrm[\psi_2]{\sum{i=1}{n}{X_i}}$;;Si les $X_i$ sont indépendantes, centrées et sous-gaussiennes, $\anrm[\psi_2]{\sum{i=1}{n}{X_i}}\leqslant C\sum{i=1}{n}{\anrm[\psi_2]{X_i}}$
+Équivalent de l'inégalité triangulaire pour $\anrm[\psi_2]{\sum{i=1}{n}{X_i}}^2$;;Si les $X_i$ sont indépendantes, centrées et sous-gaussiennes, $\anrm[\psi_2]{\sum{i=1}{n}{X_i}}^2\leqslant C\sum{i=1}{n}{\anrm[\psi_2]{X_i}}^2$
+Loi de probabilités d'une variable sous-exponentielle;;$\mathbb P_X\l\dd x\r=\frac{\e^{-\left|x\right|}}2\intd x$
+$X$ est  une variable aléatoire réelle sous-exponentielle;;$\exists K_1>0$, $\forall t>0$, $\p{\left|X\right|\geqslant t}\leqslant2\e^{\frac{-t}{K_1}}$\linebreak$\exists K_2>0$, $\forall p\geqslant 1$, $\left\|X\right\|_{L^p}\leqslant K_2p$\linebreak$\exists K_3>0$, $\forall0\leqslant\lambda\leqslant\tfrac{1}{K_3}$, $\esp{\e^{\lambda\vala X}}\leqslant\e^{K_3\lambda}$\linebreak$\exists K_4>0$, $\esp{\e^{\frac{\vala X}{K_4}}}\leqslant2$\linebreak$\exists K_5{>}0$, $\forall\vala\lambda{\leqslant}\tfrac{1}{K_5}$, $\esp{\e^{\lambda X}}{\leqslant}\e^{K_5^2\lambda^2}$ ($\esp X{=}0$)\linebreak$\exists C>0$, $\forall i\neq j$, $K_i\leqslant CK_j$
+$\anrm[\psi_1]X$;;$\inf{\left\{t>0,\esp{\e^{\frac{\vala X}{t}}}\leqslant2\right\}}$\linebreak$\anrm[\psi_1]\cdot$ est une norme
+Lien entre $\anrm[\psi_1]\cdot$ et $\anrm[\psi_2]\cdot$;;Si $X$ est sous-gaussienne, $\anrm[\psi_1]{X^2}=\anrm[\psi_2]X^2$
+$\anrm[\psi_1]{XY}$ pour $X$ et $Y$ sous-gaussiennes;;$\anrm[\psi_1]{XY}\leqslant\anrm[\psi_2]{X}\anrm[\psi_2]{Y}$
+Inégalité de Bernstein;;Si $X_1,\cdots,X_n$ sont des variables aléatoires indépendantes centrées et sous-exponentielles alors $\p{\left|\sum{i=1}{n}{X_i}\right|\geqslant t}$\linebreak${\leqslant}2\exp{-C\min{\frac{t^2}{\oldsum\limits_{i=1}^n\anrm[\psi_1]{X_i}^2},\frac{t}{\oldmax\limits_{i\in\llb1,n\rrb}\anrm[\psi_1]{X_i}}}}$
+Majoration de $\anrm[\psi_2]{\anrm[2]X-\sqrt n}$;;$\anrm[\psi_2]{\anrm[2]X-\sqrt n}\leqslant C\cdot\oldmax_{i\in\llb1,n\rrb}\left\{\anrm[\psi_2]{X_i}^2\right\}$ pour $X=\l X_1,\cdots,X_n\r$ avec les $X_i$ des variables aléatoires sous-gaussiennes centrées réduites
+Théorème de Johnson-Linderstrauss;;Il existe une constantete $C>0$ telle que pour tout $D$, pour tout $n$, si $A$ est une partie finie de $\mathbb R^D$ de cardinal $\leqslant n$, il existe $d$ et une $\epsilon$-isométrie sur $A$\footnote{$\forall x,y\in A$, $\l1-\varepsilon\r\anrm[]{\phi\l x\r-\phi\l y\r}\leqslant\anrm[]{x-y}\leqslant\l1+\varepsilon\r\anrm[]{\phi\l x\r-\phi\l y\r}$} linéaire $\phi$ dès lors que $d\leqslant\frac{C}{\varepsilon^2}\ln n$
+Propriété de $\anrm[\psi_2]{X\cdot x}$ pour $X=\l X_1,\cdots,X_n\r$ avec les $X_i$ des variables aléatoires sous-gaussiennes centrées réduites;;$\oldsup\limits_{n\geqslant1}\l\oldsup\limits_{x\in\mathbb S^{n-1}}\l\anrm[\psi_2]{X\cdot x}\r\r<+\infty$
