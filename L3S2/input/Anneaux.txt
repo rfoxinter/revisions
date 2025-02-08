@@ -1,7 +1,7 @@
 Algèbre 2 -- Anneaux
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{structures}\usepackage{al}
+\usepackage{structures}\usepackage{al}\usepackage{bigoperators}\togglebigoppar\DeclareMathOperator{\ev}{ev}
 $a\in A$ est nilpotent;;Il existe $n\in\mathbb N$ tel que $a^n=0$
 $a\in A$ est racine de l'unité;;Il existe $n\in\mathbb N$ tel que $a^n=1$
 $a\in A$ est idempotent;;$a^2=a$
@@ -12,4 +12,20 @@ $a\in A$ est irréductible;;$a\notin A^\times$, $a\neq0$, $a=bc\Rightarrow a\in 
 $p\in A$ est premier;;$p\notin A^\times$, $p\neq0$, $p\mid ab\Rightarrow p\mid a\lor p\mid b$
 Lien entre premier et irréductible;;Si $A$ est intègre et $x\in A$ est premier alors $x$ est irréductible
 Lemme de factorisation des morphismes d'anneaux;;Si $f\!:\!A\to B$ est un morphisme d'anneaux alors il existe un unique morphisme d'anneaux $\overline f\!:\!A/\ker f\to B$ tel que $f=\overline f\circ\pi$
-Caractéristique de $A$;;$n$ tel que $\mathbb Z/n\mathbb Z=\ker\phi$\linebreak$\appl{\phi}{\mathbb{Z}}{A}{n}{n\cdot 1_A}$
+Caractéristique de $A$;;$n$ tel que $\mathbb Z/n\mathbb Z=\ker\varphi$\linebreak$\appl{\varphi}{\mathbb{Z}}{A}{n}{n\cdot 1_A}$
+$I\vartriangleleft A$;;$\l I,+\r\leqslant\l A,+\r$ et $\forall a\in A$, $\forall i\in I$, $ai\in I$
+Image d'un idéal par un morphisme d'anneaux;;$f\l I\r$ est un idéal si $f$ est surjectif
+$I+J$\linebreak$I\vartriangleleft A$ et $J\vartriangleleft A$;;$I+J=\l I\cup J\r\vartriangleleft A$
+$I\cdot J$\linebreak$I\vartriangleleft A$ et $J\vartriangleleft A$;;$I\cdot J=\l i\times j, i\in I,j\in J\r\vartriangleleft A$
+$I\cdot J$ pour $I+J=A$;;$I\cap J$
+$I\vartriangleleft A$ et $J\vartriangleleft A$ sont premiers entre eux;;$I+J=A$
+CNS pour $P\vartriangleleft A$ premier;;$A/P$ est intègre
+Conservation de la primalité par morphisme;;$f^{-1}\l P\r$ est premier\linebreak Si $f$ est surjectif alors $f\l A\r$ est premier
+CNS pour $M\vartriangleleft A$ maximal;;$A/M$ est un corps
+PU du produit d'anneaux;;Pour tout anneau $B$ et tout morphisme $f\!:\!B\to A_i$ il existe un unique $f\!:\!B\to\prod{i\in I}{}{A_i}$ tel que $\pi_i\circ f=f_i$
+Théorème chinois;;Si $I_1,\cdots,I_n\vartriangleleft A$ sont deux à deux premiers entre eux, alors on a un isomorphisme d'anneaux $f\!:\!A/\l I_1\cdot\cdots\cdot I_n\r\to\prod{i=1}{n}{A/I_i}$
+PU du $A$-module $A\left[X\right]$;;Pour tout $f\!:\!A\to B$ et $b\in B$, il existe un unique $\appl{\ev_{f,b}}{A\left[X\right]}{B}{\sum{i=0}{n}{a_iX^i}}{\sum{i=1}{n}{a_ib^i}}$
+Propriété de $G\leqslant A^\times$ fini;;Un tel $G$ est cyclique
+$S$ est une partie multiplicative;;$1\in S$\linebreak$\forall\l a,b\r\in S^2$, $ab\in S$
+Théorème de localisation;;Si $S$ est une partie multiplicative de $A$, il existe un anneau $S^{-1}A$ et un morphisme $\varphi_S\!:\!S^{-1}A\to A$ tel que si $B$ est un anneau et $f\!:\!A\to B$ est un morphisme tel que $f\l s\r\in A^\times$ pour tout $s\in S$ alors il existe un unique morphisme $\widetilde f\!:\!S^{-1}A\to B$ tel que $f=\widetilde f\circ\varphi_S$ et de plus, pour tout $s\in S$, $\varphi_S\l s\r\in\l S^{-1}A\r^\times$
+Corps des fractions;;Si $A$ est intègre, le corps des fractions de $A$ est $S^{-1}A$ pour $S=A^*$\linebreak$S^{-1}A$ est alors un corps

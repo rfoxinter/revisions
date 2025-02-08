@@ -1,0 +1,14 @@
+Algèbre 2 -- Anneaux euclidiens et principaux
+Shuffle questions : True
+Q/R & R/Q : False
+
+Anneau principal;;Un anneau est principal s'il est intègre et si tous ses idéaux sont principaux
+Anneau euclidien;;Un anneau $A$ est euclidien s'il est intègre, avec un stathme $N\!:\!A^*\to\mathbb Z$ tel que pour tout $a\in A$ et tout $b\in A^*$, il existe $\l q,r\r\in A^2$ tel que $a=bq+r$ et $r=0$ ou $N\l r\r<N\l b\r$
+Lien entre anneau euclidien et principal;;Tout anneau euclidien est principal
+CNS sur les idéaux pour $a\mid b$;;Pour $A$ intègre, $\l b\r\subset\l a\r$
+CNS sur les idéaux pour $a\in A^\times$;;Pour $A$ intègre, $\l a\r=\l1\r=A$
+CNS sur les idéaux pour $a\mid b\wedge b\mid a$;;Pour $A$ intègre, $\l a\r=\l b\r$\linebreak$\exists u\in A^\times$, $a=bu$
+CNS sur les idéaux pour $a$ et $b$ premiers entre eux;;Pour $A$ intègre, $\l b\r+\l a\r=\l a,b\r=A$
+$a\wedge b$;;Pour $A$ intègre, $a\wedge b$ est tel que $\l a\wedge b\r=\l a,b\r$
+Identité de Bézout;;Si $\l a,b\r\in A^2\setminus\left\{0,0\right\}$, il existe $\l u,b\r\in A^2$ tel que $au+bv=a\wedge b$
+CNS pour $a\neq0$ irréductible dans $A$ principal;;$\l a\r$ est maximal\linebreak De manière équivalente, $a$ est premier

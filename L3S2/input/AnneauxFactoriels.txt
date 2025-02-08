@@ -1,0 +1,17 @@
+Algèbre 2 -- Anneaux factoriels
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}\usepackage{usuelles}
+Anneau factoriel;;$A$ est factoriel si pour tout $a\in A$, il existe $s\in\mathbb N$ et $\l p_1,\cdots,p_n\r\in A^s$ avec les $p_i$ irréductibles tels que $a=p_1\cdots p_s$
+Lien entre anneau factoriel et principal;;Tout anneau principal est factoriel
+Décomposition en facteurs premiers;;Étant donné un système $\mathcal P$ de représentants des nombres premiers, on a $a=u\prod{p\in\mathcal P}{}{p^{\alpha_p}}$ avec $u\in A^\times$ et $\alpha_i\in\mathbb N$\linebreak Seul un nombre fini de $\alpha_i$ sont non nuls
+$\l\prod{p\in\mathcal P}{}{p^{\alpha_p}}\r\vee\l\prod{p\in\mathcal P}{}{p^{\beta_p}}\r$;;$\prod{p\in\mathcal P}{}{p^{\max{\alpha_p,\beta_p}}}$
+$\l\prod{p\in\mathcal P}{}{p^{\alpha_p}}\r\wedge\l\prod{p\in\mathcal P}{}{p^{\beta_p}}\r$;;$\prod{p\in\mathcal P}{}{p^{\min{\alpha_p,\beta_p}}}$
+Lien entre premier et irréductible dans $A$ factoriel;;Tout élement irréductible est premier
+Propriété de $A\left[X\right]$ pour $A$ factoriel;;$A\left[X\right]$ est factoriel
+Contenu;;$c\l\sum{i=0}{n}{a_iX^i}\r=\bigwedge\limits_{i=0}^na_i$ (défini modulo $A^\times$)
+Polynôme primitif;;$c\l P\r\cong1$\linebreak Tout $P$ se décompose $c\l P\r P_1$ avec $P_1$ primitif et cette décomposition est unique à inversible près
+$c\l PQ\r$;;$c\l P\r c\l Q\r\mid c\l PQ\r$
+$c\l aP\r$;;$a\cdot c\l P\r$
+$c\l\frac dP\r$;;Si $d\mid c\l P\r$, $c\l\frac Pd\r\cong\frac{c\l P\r}{d}$
+$c\l PQ\r$;;$c\l P\r c\l Q\r\mid c\l PQ\r$
