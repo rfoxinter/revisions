@@ -9,8 +9,10 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250201183908
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportNonLineaire
 20250201190234
+../L3S2/flashcards/CalculDifferentiel/SousVarietes
+20250209180122
 ../L3S2/flashcards/CalculDifferentiel/TheoremeDInversionLocale
-20250203222647
+20250209172327
 ../L3S2/flashcards/ConcentrationDeLaMesure/InegalitesDeConcentration
 20250206164208
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites
