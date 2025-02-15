@@ -1,7 +1,7 @@
 Intégration et probabilités -- Bases des probabilités
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{probas}\usepackage{analyse,equivalents,complexes}\DeclareMathOperator{\oldcor}{cor}\newcommand{\cor}[2]{\oldcor\l#1,#2\r}
+\usepackage{probas}\usepackage{analyse,equivalents,complexes}\DeclareMathOperator{\oldcor}{cor}\newcommand{\cor}[2]{\oldcor\l#1,#2\r}\let\phi\varphi\def\ff{\mathop{}\!\mathcal F\mkern-2.5mu}\usepackage{dsft}
 Espace de probabilités;;Espace mesuré $\l\Omega,\mathcal F,\mathbb P\r$ où $\mathbb P$ est une mesure de probabilités\linebreak$\Omega$ est appelé univers 
 Variable aléatoire;;Application mesurable $X\!:\!\l\Omega,\mathbb R\r\to\l E,\mathcal E\r$ où $\l E,\mathcal E\r$ est un espace mesurable
 Loi d'une variable aléatoire $X$;;Mesure image $\mathbb P_X$ de $\mathbb P$ par $X$\linebreak$\forall A\in\mathcal E$, $\p[X]A=\mathbb P\l X^{-1}\l A\r\r:=\p{X\in A}$
@@ -17,4 +17,18 @@ Inégalité de Bienaymé-Tchebychev;;$\p{\left|X-\esp X\right|\geqslant x}\leqsl
 $\cov XY$;;$\esp{\l X-\esp X\r\l Y-\esp Y\r}$
 Corrélation entre $X$ et $Y$;;$\cor XY=\frac{\cov XY}{\sqrt{\var X\var Y}}=\left\langle\frac{X-\esp X}{\anrm[L^2]X},\frac{Y-\esp Y}{\anrm[L^2]Y}\right\rangle_{L^2}$
 Matrice des variances-covariances;;$\l\cov{X_i}{X_j}\r_{\l i,j\r\in\llb1,n\rrb^2}\in\mathcal S_n^+\l\mathbb R\r$
-$\alpha$-quartile;;Si $X$ est une variable aléatoire réelle et $\alpha\in\left]0,1\right[$, un $\alpha$-quartile de la loi de $X$ est un nombre $q\in\mathbb R$ tel que $\p{X\leqslant q}\geqslant\alpha$ et $\p{X\geqslant q}\geqslant1-\alpha$\linebreak Si $\alpha=\tfrac12$, on parle de médiane 
+$\alpha$-quartile;;Si $X$ est une variable aléatoire réelle et $\alpha\in\left]0,1\right[$, un $\alpha$-quartile de la loi de $X$ est un nombre $q\in\mathbb R$ tel que $\p{X\leqslant q}\geqslant\alpha$ et $\p{X\geqslant q}\geqslant1-\alpha$\linebreak Si $\alpha=\tfrac12$, on parle de médiane
+Fonction de répartition;;$F_X\l x\r=\mathbb P\l X\leqslant x\r$\linebreak$F_X$ catactérise entièrement la loi de $X$\linebreak$F_X$ est croissante, continue à droite et de limite $0$ en $-\infty$ et $1$ en $+\infty$
+Fonction génératrice;;Si $X$ est à valeurs dans $\mathbb N$, $g_X\l s\r=\sum{n=0}{+\infty}{\p{X=n}s^n}=\esp{s^X}$\linebreak$g_X$ est continue sur $\bar{D\l0,1\r}$ et est holomorphe sur $D\l 0,1\r$\linebreak$\p{X=n}=\frac{g_s^{\l n\r}}{n!}$
+Moment factoriel;;$\esp{X\l X-1\r\cdots\l X-n+1\r}=g_X^{\l n\r}\l1^-\r$
+Fonction caractéristique;;$\phi_X\l\xi\r=\esp{\e^{\i\xi\cdot X}}=\ff\mathbb P_X\l-\xi\r$\linebreak$\phi_X$ caractérise la loi de $X$
+Transformée de Laplace;;$\mathcal L_X\l\lambda\r=\esp{\e^{-\lambda X}}$ pour $\lambda\geqslant0$\linebreak$\mathcal L_X\leqslant1$\linebreak On peut aussi définir $\mathcal L_X\in\mathbb R_+\cup\left\{+\infty\right\}$ pour $\lambda<0$\linebreak$\mathcal L_X$ caractérise la loi de $X$
+$X\sim\unif E$;;$X\l\Omega\r=E$\linebreak$\p{X=e}=\frac1{\left|E\right|}$
+$X\sim\unif{\llb1,n\rrb}$;;$X\l\Omega\r=\llb1,n\rrb$\linebreak$\p{X=k}=\frac1n$\linebreak$\esp X=\frac{n+1}{2}$\linebreak$\var X=\frac{n^2-1}{12}$\linebreak$g_X\l t\r=\frac1n\frac{t^n-1}{t-1}$
+$X\sim\bin p$;;$X\l\Omega\r=\left\{0,1\right\}$\linebreak$\p{X=1}=p$\linebreak$\esp X=p$\linebreak$\var X=pq$\linebreak$g_X\l t\r=pt+q$
+$X\sim\bin[n]p$;;$X\l\Omega\r=\llb0,n\rrb$\linebreak$\p{X=k}=\binom nkp^kq^{n-k}$\linebreak$\esp X=np$\linebreak$\var X=npq$\linebreak$g_X\l t\r=\l pt+q\r^n$
+$X\sim\geom p$;;$X\l\Omega\r=\mathbb N^*$\linebreak$\p{X=k}=pq^{k-1}$\linebreak$\esp X=\frac1p$\linebreak$\var X=\frac{q}{p^2}$\linebreak$g_X\l t\r=\frac{pt}{1-qt}$
+$X\sim\poiss\lambda$;;$X\l\Omega\r=\mathbb N$\linebreak$\p{X=k}=\e^{-\lambda}\frac{\lambda^k}{k!}$\linebreak$\esp X=\lambda$\linebreak$\var X=\lambda$\linebreak$g_X\l t\r=\e^{\lambda\l t-1\r}$
+$X\sim\unif K$;;Loi de densité $\frac{\1 Kx}{\lambda\l K\r}$ par rapport à $\lambda$
+$X\sim\expon\theta$;;Loi de densité $\theta\e^{-\theta x}$ par rapport à $\lambda$\linebreak$\esp X=\frac1\theta$\linebreak$\var X=\frac{1}{\theta^2}$
+$X\sim\normal m\sigma$;;Loi de densité $\frac{\e^{-\oldfrac{\l x-m\r^2}{2\sigma^2}}}{\sqrt{2\pi\sigma^2}}$ par rapport à $\lambda$\linebreak$\esp X=m$\linebreak$\var X=\sigma$

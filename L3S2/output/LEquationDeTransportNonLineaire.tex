@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{analyse}\usepackage{usuelles,footnotes}\newcommand{\partd}[1]{\mathop{}\!\partial_{#1}}\toggleanalysepar\newcommand{\loc}{\text{loc}}
+\usepackage{analyse}\usepackage{usuelles,footnotes}\newcommand{\partd}[1]{\mathop{}\!\partial_{#1}}\toggleanalysepar\newcommand{\loc}{\text{loc}}\let\phi\varphi
 \hypersetup{pdftitle=Analyse et équations aux dérivées partielles -- L’équation de transport non linéaire}
 \title{Analyse et équations aux dérivées partielles\\\emph{L'équation de transport non linéaire}}
 \author{}
@@ -10,8 +10,14 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Solutions de $\partd tu+a\l u\r\partd xu=0$, $u_{t=0}=u_0$ avec $a$ et $u_0$ de classe $\mathcal C^1$ et $u\in\mathcal C^1\l\left[0,T\right[\times\mathbb R\r$}{1/2}
-\slider{Si $\anrm[L^\infty]{u_0}+\anrm[L^\infty]{u_0'}<+\infty$ et $T$ est tel que $1+T\oldinf\limits_{y\in\mathbb R}\l a'\l u_0\l y\r\r\cdot u_0'\l y\r\r>0$\footnote{$T=\frac12\frac{1}{\anrm[L^\infty]{u_0'}\times\oldmax\limits_{\left|y\right|\leqslant\anrm[L^\infty]{u_0}}\l\left|a\l y\r\right|\r}$ convient\vspace{0pt}} alors l'équation admet une unique solutions dans $\mathcal C^1\l\left[0,T\right]\times\mathbb R\r$}{1/2}
-\slideq{Solutions de $\dot X\l t\r=a\l u\l t,X\l t\r\r\r$, $X\l0\r=x_0$ avec $a$ de classe $\mathcal C^1$ et $u\in\mathcal C^1\l\left[0,T\right[\times\mathbb R\r$}{2/2}
-\slider{$X$ admet une unique solution $X\l t\r=x_0+a\l u\l x_0\r\r\times t$ (droite caractéristique de $\partd tu+a\l u\r\partd xu=0$), et $u\l t,X\l t\r\r=u_0\l x_0\r$\footnote{texte}}{2/2}
+\slideq{Solutions de $\partd tu+a\l u\r\partd xu=0$, $u_{|t=0}=u_0$ avec $a$ et $u_0$ de classe $\mathcal C^1$ et $u\in\mathcal C^1\l\left[0,T\right[\times\mathbb R\r$}{1/5}
+\slider{Si $\anrm[L^\infty]{u_0}+\anrm[L^\infty]{u_0'}<+\infty$ et $T$ est tel que $1+T\oldinf\limits_{y\in\mathbb R}\l a'\l u_0\l y\r\r\cdot u_0'\l y\r\r>0$\footnote{$T=\frac12\frac{1}{\anrm[L^\infty]{u_0'}\times\oldmax\limits_{\left|y\right|\leqslant\anrm[L^\infty]{u_0}}\l\left|a\l y\r\right|\r}$ convient\vspace{0pt}} alors l'équation admet une unique solutions dans $\mathcal C^1\l\left[0,T\right]\times\mathbb R\r$}{1/5}
+\slideq{Solutions faibles de $\partd tu+\partd xf\l u\r=0$, $u_{|t=0}=u_0$ avec $f$ de classe $\mathcal C^1$ $u_0\in L^\infty\l\mathbb R\r$}{2/5}
+\slider{$u$ et $f\l u\r$ sont dans $L^1_\loc\l\mathbb R_+\times\mathbb R\r$ et pour tout $\phi\in\mathcal C^1_c\l\mathbb R_+\times\mathbb R\r$, $\altint\oldint[t,x][\mathbb{R}_+\times\mathbb R]{u\partd t\phi{+}f\l u\r\partd x\phi}{+}\int[x][\mathbb R]{u_0\phi\l0,\cdot\r}{=}0$\linebreak La solution n'est pas nécessairement unique\linebreak Si de plus $u\in\mathcal C\l\mathbb R_+,L^1_\loc\l\mathbb R\r\r$ alors $u_0=u\l0,\cdot\r$ presque partout}{2/5}
+\slideq{Solutions de $\dot X\l t\r=a\l u\l t,X\l t\r\r\r$, $X\l0\r=x_0$ avec $a$ de classe $\mathcal C^1$ et $u\in\mathcal C^1\l\left[0,T\right[\times\mathbb R\r$}{3/5}
+\slider{$X$ admet une unique solution $X\l t\r=x_0+a\l u\l x_0\r\r\times t$ (droite caractéristique de $\partd tu+a\l u\r\partd xu=0$), et $u\l t,X\l t\r\r=u_0\l x_0\r$}{3/5}
+\slideq{Théorème de Kruzkov}{4/5}
+\slider{Soit $f\in\mathcal C^1\l\mathbb R\r$ et $u_0\in L^\infty\l\mathbb R\r$, il existe une unique solution entropique à $\partd tu+\partd xf\l u\r=0$, $u_{|t=0}=u_0$ dans la classe $L^\infty\l\mathbb R_+\times\mathbb R\r\cap\mathcal C\l\mathbb R_+\times\mathbb R\r$\linebreak De plus, $\inf{u_0}\leqslant u\leqslant\sup{u_0}$ presque partout dans $\mathbb R_+\times\mathbb R$}{4/5}
+\slideq{Solutions entropiques de $\partd tu+\partd xf\l u\r=0$, $u_{|t=0}=u_0$ avec $f$ de classe $\mathcal C^1$ $u_0\in L^\infty\l\mathbb R\r$}{5/5}
+\slider{Pour tout $\eta\in\mathcal C^2\l\mathbb R_+\times\mathbb R\r$ telle que $\eta''>0$ et $q$ est telle que $q'=\eta'f'$, $\eta\l u\r$ et $q\l u\r$ sont dans $L^1_\loc\l\mathbb R_+\times\mathbb R\r$ et pour tout $\phi\in\mathcal C^1_c\l\mathbb R_+\times\mathbb R\r$, $\altint\oldint[t,x][\mathbb{R}_+\times\mathbb R]{\eta\l u\r\partd t\phi+q\l u\r\partd x\phi}$\linebreak$+\int[x][\mathbb R]{\eta\l u_0\r\phi\l0,\cdot\r}=0$}{5/5}
 \end{document}

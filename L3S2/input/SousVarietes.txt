@@ -1,7 +1,7 @@
 Calcul différentiel -- Sous-variétés
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{analyse,al,structures}\usepackage{footnotes}\let\phi\varphi
+\usepackage{analyse,al,structures}\usepackage{footnotes}\let\phi\varphi\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}}
 Définition par redressement;;Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $x\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$, un voisinage ouvert $V$ de $0$ dans $\mathbb R^n$ et un $\mathcal C^k$-difféomorphisme $f\!:\!U\to V$ tels que $f\l M\cap U\r=V\cap\l\mathbb R^d\times\left\{0\right\}\r$
 Définition par submersion;;Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $x\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$ et une submersion\footnote{$\dd g_x$ est surjective pour tout $x$} $g\!:\!U\to\mathbb R^{n-p}$ de classe $\mathcal C^k$ tels que $M\cap U=g^{-1}\l0_{\mathbb R^{n-p}}\r$\linebreak Il suffit d'avoir la surjectivité sur $M$ car elle se conserve localement
 Définition par paramétrisation;;Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $h\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$, un voisinage ouvert $\varOmega$ de $0$ dans $\mathbb R^p$ et une appication $h\!:\!\varOmega\to\mathbb R^n$ qui soit une immersion\footnote{$\dd h_x$ est injective} et un homéomorphisme de classe $\mathcal C^k$ sur $M\cap U$
@@ -14,3 +14,10 @@ Espace tangent pour une sous-variété définie par un graphe;;$T_xM=\left\{\l h
 $X$ est une variété topologique;;$X$ est un espace séparé tel que pour tout $x\in X$, il existe un voisinage ouvert de $x$ homéomorphe à un ouvert de $\mathbb R^n$
 Carte pour une variété topologique;;$\l U,\phi\r$ avec $U$ un ouvert de $X$ et $\phi\!:\!U\to\phi\l U\r\subset\mathbb R^n$ un homéomorphisme
 Atlas pour une variété topologique;;Famille $\l\l U_i,\phi_i\r\r_{i\in I}$ tel que $X=\bigcup{i\in I}{}{U_i}$
+Deux cartes $\l U_1,\phi_1\r$ et $\l U_2,\phi_2\r$ sont compatibles d'ordre $k$;;$U_1\cap U_2=\varnothing$ ou $\phi_2\circ\phi_1^{-1}\!:\!\phi_1\l U_1\cap U_2\r\to\phi_2\l U_1\cap U_2\r$ est un $\mathcal C^k$-difféomorphisme
+Atlas d'ordre $k$;;Atlas dont deux cartes sont toujours compatibles d'ordre $k$
+Structure différentielle de classe $\mathcal C^k$ de $M$;;Atlas de classe $\mathcal C^k$ maximal, i.e. si une carte est compatible avec toutes celle de l'atlas alors elle appartient à l'atlas
+Variété différentielle de classe $\mathcal C^k$;;Variété topologique munie d'une structure différentielle de classe $\mathcal C^k$
+$f\!:\!M\to N$ continue est de classe $\mathcal C^k$ en $a$\linebreak$M$ et $N$ sont deux variétés de classe $\mathcal C^k$;;$f\l a\r\in N$ et il existe $\l U,\phi\r$ et $\l V,\psi\r$ deux cartes de $M$ et $N$ telles que $\psi\circ f\circ\phi^{-1}\!:\!\phi\l f^{-1}\l V\r\cap U\r\to\psi\l V\r$ est $\mathcal C^k$\linebreak\begin{tikzcd}[column sep=4em,row sep=0.8em,ampersand replacement=\&]U\arrow[d,"\phi"]\arrow[r,"f",swap]\&V\arrow[d,"\psi",swap]\\\phi\l U\r\arrow[d,"\id",hook]\&\psi\l V\r\arrow[d,"\id",hook',swap]\\\phi\l f^{-1}\l V\r\cap U\r\arrow[r,"\psi\circ f\circ\phi^{-1}",hook,two heads]\&\psi\l V\r\end{tikzcd}
+$f\!:\!M\to N$ est numérique;;$f$ est de classe $\mathcal C^k$ et $N=\mathbb R$
+Théorème de Whitney (version forte);;Toute variété différentielle compacte de dimension $n$ se plonge dans $\mathbb R^{2n}$ comme une sous-variété de dimension $n$\linebreak Ce résultat est optimal car la bouteille de Klein est de dimension $2$ mais n'est pas une sous-variété différentielle de dimension $2$ de $\mathbb R^3$

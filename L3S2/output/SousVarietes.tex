@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{analyse,al,structures}\usepackage{footnotes}\let\phi\varphi
+\usepackage{analyse,al,structures}\usepackage{footnotes}\let\phi\varphi\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}}
 \hypersetup{pdftitle=Calcul différentiel -- Sous-variétés}
 \title{Calcul différentiel\\\emph{Sous-variétés}}
 \author{}
@@ -10,28 +10,42 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Définition par redressement}{1/12}
-\slider{Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $x\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$, un voisinage ouvert $V$ de $0$ dans $\mathbb R^n$ et un $\mathcal C^k$-difféomorphisme $f\!:\!U\to V$ tels que $f\l M\cap U\r=V\cap\l\mathbb R^d\times\left\{0\right\}\r$}{1/12}
-\slideq{Carte pour une variété topologique}{2/12}
-\slider{$\l U,\phi\r$ avec $U$ un ouvert de $X$ et $\phi\!:\!U\to\phi\l U\r\subset\mathbb R^n$ un homéomorphisme}{2/12}
-\slideq{Espace tangent pour une sous-variété définie par un graphe}{3/12}
-\slider{$T_xM=\left\{\l h,\dd\phi_x\l h\r\r,h\in\mathbb R^d\right\}$\linebreak Pour $M=\left\{\l x,\phi\l x\r\r,x\in U\right\}$, $U$ un ouvert de $\mathbb R^d$ et $\phi\!:\!U\to\mathbb R^{n-d}$}{3/12}
-\slideq{Espace tangent pour une sous-variété définie par paramétrisation}{4/12}
-\slider{$T_xM=\im{\dd h_0}$}{4/12}
-\slideq{Définition par les graphes}{5/12}
-\slider{Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $x\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$ tel que $M\cap U$ soit le graphe d'une application $f$ de classe $\mathcal C^k$ d'un ouvert de $\mathbb R^d\cong\mathbb R^d\times\left\{0\right\}$ dans $\mathbb R^{n-d}\cong\left\{0\right\}\times\mathbb R^{n-d}$}{5/12}
-\slideq{Définition par submersion}{6/12}
-\slider{Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $x\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$ et une submersion\footnote{$\dd g_x$ est surjective pour tout $x$} $g\!:\!U\to\mathbb R^{n-p}$ de classe $\mathcal C^k$ tels que $M\cap U=g^{-1}\l0_{\mathbb R^{n-p}}\r$\linebreak Il suffit d'avoir la surjectivité sur $M$ car elle se conserve localement}{6/12}
-\slideq{$T_xM$}{7/12}
-\slider{$\left\{v\in\mathbb R^n,\exists\gamma\!:\!\left]-\varepsilon,\varepsilon\right[{\to}M,\gamma\l0\r{=}x\wedge\gamma'\l0\r{=}v\right\}$\linebreak C'est un espace vectoriel de $\mathbb R^n$ de dimension $\dim M$}{7/12}
-\slideq{Fibré tangent}{8/12}
-\slider{$\left\{\l x,v\r,x\in M,v\in T_xM\right\}$}{8/12}
-\slideq{$X$ est une variété topologique}{9/12}
-\slider{$X$ est un espace séparé tel que pour tout $x\in X$, il existe un voisinage ouvert de $x$ homéomorphe à un ouvert de $\mathbb R^n$}{9/12}
-\slideq{Atlas pour une variété topologique}{10/12}
-\slider{Famille $\l\l U_i,\phi_i\r\r_{i\in I}$ tel que $X=\bigcup{i\in I}{}{U_i}$}{10/12}
-\slideq{Définition par paramétrisation}{11/12}
-\slider{Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $h\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$, un voisinage ouvert $\varOmega$ de $0$ dans $\mathbb R^p$ et une appication $h\!:\!\varOmega\to\mathbb R^n$ qui soit une immersion\footnote{$\dd h_x$ est injective} et un homéomorphisme de classe $\mathcal C^k$ sur $M\cap U$}{11/12}
-\slideq{Espace tangent pour une sous-variété définie par submersion}{12/12}
-\slider{$T_xM=\bigcap{i=1}{n-d}{\ker{\dd\l g_i\r_x}}$}{12/12}
+\slideq{Carte pour une variété topologique}{1/19}
+\slider{$\l U,\phi\r$ avec $U$ un ouvert de $X$ et $\phi\!:\!U\to\phi\l U\r\subset\mathbb R^n$ un homéomorphisme}{1/19}
+\slideq{Deux cartes $\l U_1,\phi_1\r$ et $\l U_2,\phi_2\r$ sont compatibles d'ordre $k$}{2/19}
+\slider{$U_1\cap U_2=\varnothing$ ou $\phi_2\circ\phi_1^{-1}\!:\!\phi_1\l U_1\cap U_2\r\to\phi_2\l U_1\cap U_2\r$ est un $\mathcal C^k$-difféomorphisme}{2/19}
+\slideq{Atlas d'ordre $k$}{3/19}
+\slider{Atlas dont deux cartes sont toujours compatibles d'ordre $k$}{3/19}
+\slideq{Variété différentielle de classe $\mathcal C^k$}{4/19}
+\slider{Variété topologique munie d'une structure différentielle de classe $\mathcal C^k$}{4/19}
+\slideq{Espace tangent pour une sous-variété définie par paramétrisation}{5/19}
+\slider{$T_xM=\im{\dd h_0}$}{5/19}
+\slideq{Définition par submersion}{6/19}
+\slider{Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $x\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$ et une submersion\footnote{$\dd g_x$ est surjective pour tout $x$} $g\!:\!U\to\mathbb R^{n-p}$ de classe $\mathcal C^k$ tels que $M\cap U=g^{-1}\l0_{\mathbb R^{n-p}}\r$\linebreak Il suffit d'avoir la surjectivité sur $M$ car elle se conserve localement}{6/19}
+\slideq{Théorème de Whitney (version forte)}{7/19}
+\slider{Toute variété différentielle compacte de dimension $n$ se plonge dans $\mathbb R^{2n}$ comme une sous-variété de dimension $n$\linebreak Ce résultat est optimal car la bouteille de Klein est de dimension $2$ mais n'est pas une sous-variété différentielle de dimension $2$ de $\mathbb R^3$}{7/19}
+\slideq{Atlas pour une variété topologique}{8/19}
+\slider{Famille $\l\l U_i,\phi_i\r\r_{i\in I}$ tel que $X=\bigcup{i\in I}{}{U_i}$}{8/19}
+\slideq{$X$ est une variété topologique}{9/19}
+\slider{$X$ est un espace séparé tel que pour tout $x\in X$, il existe un voisinage ouvert de $x$ homéomorphe à un ouvert de $\mathbb R^n$}{9/19}
+\slideq{Structure différentielle de classe $\mathcal C^k$ de $M$}{10/19}
+\slider{Atlas de classe $\mathcal C^k$ maximal, i.e. si une carte est compatible avec toutes celle de l'atlas alors elle appartient à l'atlas}{10/19}
+\slideq{Définition par redressement}{11/19}
+\slider{Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $x\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$, un voisinage ouvert $V$ de $0$ dans $\mathbb R^n$ et un $\mathcal C^k$-difféomorphisme $f\!:\!U\to V$ tels que $f\l M\cap U\r=V\cap\l\mathbb R^d\times\left\{0\right\}\r$}{11/19}
+\slideq{$T_xM$}{12/19}
+\slider{$\left\{v\in\mathbb R^n,\exists\gamma\!:\!\left]-\varepsilon,\varepsilon\right[{\to}M,\gamma\l0\r{=}x\wedge\gamma'\l0\r{=}v\right\}$\linebreak C'est un espace vectoriel de $\mathbb R^n$ de dimension $\dim M$}{12/19}
+\slideq{Espace tangent pour une sous-variété définie par un graphe}{13/19}
+\slider{$T_xM=\left\{\l h,\dd\phi_x\l h\r\r,h\in\mathbb R^d\right\}$\linebreak Pour $M=\left\{\l x,\phi\l x\r\r,x\in U\right\}$, $U$ un ouvert de $\mathbb R^d$ et $\phi\!:\!U\to\mathbb R^{n-d}$}{13/19}
+\slideq{Définition par les graphes}{14/19}
+\slider{Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $x\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$ tel que $M\cap U$ soit le graphe d'une application $f$ de classe $\mathcal C^k$ d'un ouvert de $\mathbb R^d\cong\mathbb R^d\times\left\{0\right\}$ dans $\mathbb R^{n-d}\cong\left\{0\right\}\times\mathbb R^{n-d}$}{14/19}
+\slideq{Espace tangent pour une sous-variété définie par submersion}{15/19}
+\slider{$T_xM=\bigcap{i=1}{n-d}{\ker{\dd\l g_i\r_x}}$}{15/19}
+\slideq{$f\!:\!M\to N$ continue est de classe $\mathcal C^k$ en $a$\linebreak$M$ et $N$ sont deux variétés de classe $\mathcal C^k$}{16/19}
+\slider{$f\l a\r\in N$ et il existe $\l U,\phi\r$ et $\l V,\psi\r$ deux cartes de $M$ et $N$ telles que $\psi\circ f\circ\phi^{-1}\!:\!\phi\l f^{-1}\l V\r\cap U\r\to\psi\l V\r$ est $\mathcal C^k$\linebreak\begin{tikzcd}[column sep=4em,row sep=0.8em,ampersand replacement=\&]U\arrow[d,"\phi"]\arrow[r,"f",swap]\&V\arrow[d,"\psi",swap]\\\phi\l U\r\arrow[d,"\id",hook]\&\psi\l V\r\arrow[d,"\id",hook',swap]\\\phi\l f^{-1}\l V\r\cap U\r\arrow[r,"\psi\circ f\circ\phi^{-1}",hook,two heads]\&\psi\l V\r\end{tikzcd}}{16/19}
+\slideq{Définition par paramétrisation}{17/19}
+\slider{Une partie non vide $M$ de $\mathbb R^n$ est une sous-variété de classe $\mathcal C^k$ de dimension $p$ si pour tout $h\in M$, il existe un voisinage ouvert $U$ de $x$ dans $\mathbb R^n$, un voisinage ouvert $\varOmega$ de $0$ dans $\mathbb R^p$ et une appication $h\!:\!\varOmega\to\mathbb R^n$ qui soit une immersion\footnote{$\dd h_x$ est injective} et un homéomorphisme de classe $\mathcal C^k$ sur $M\cap U$}{17/19}
+\slideq{Fibré tangent}{18/19}
+\slider{$\left\{\l x,v\r,x\in M,v\in T_xM\right\}$}{18/19}
+\slideq{$f\!:\!M\to N$ est numérique}{19/19}
+\slider{$f$ est de classe $\mathcal C^k$ et $N=\mathbb R$}{19/19}
 \end{document}
