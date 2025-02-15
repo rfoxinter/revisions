@@ -1452,7 +1452,8 @@ space before arrow={0.2ex},
 \newcommand{\nbin}[2]{\mathcal J\l#1,#2\r}
 \newcommand{\hypg}[3]{\mathcal H\l#1,#2,#3\r}
 \newcommand{\poiss}[1]{\mathcal P\l#1\r}
-\newcommand{\norm}[2]{\mathcal N\l#1,#2\r}
+\newcommand{\expon}[1]{\mathcal E\l#1\r}
+\newcommand{\normal}[2]{\mathcal N\l#1,#2\r}
 %% Trigo
 \let\oldcos\cos
 \renewcommand\cos[2][]{\oldcos#1\l#2\r}
