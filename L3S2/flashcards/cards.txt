@@ -4,7 +4,9 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S2/flashcards/Algebre2/AnneauxEuclidiensEtPrincipaux
 20250208183315
 ../L3S2/flashcards/Algebre2/AnneauxFactoriels
-20250208184932
+20250216111303
+../L3S2/flashcards/Algebre2/AnneauxNoetheriens
+20250216111838
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportLineaire
 20250201183908
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportNonLineaire
@@ -14,7 +16,9 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S2/flashcards/CalculDifferentiel/TheoremeDInversionLocale
 20250209172327
 ../L3S2/flashcards/ConcentrationDeLaMesure/InegalitesDeConcentration
-20250206164208
+20250216120629
+../L3S2/flashcards/ConcentrationDeLaMesure/IsoperimetrieEtConcentration
+20250216120946
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites
 20250215190134
 ../L3S2/flashcards/IntegrationEtProbabilites/TransformeeDeFourier

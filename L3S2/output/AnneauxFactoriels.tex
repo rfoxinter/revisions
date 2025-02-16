@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{bigoperators}\usepackage{usuelles}
+\usepackage{bigoperators}\usepackage{usuelles,polynomes}\DeclareMathOperator{\frack}{frac}
 \hypersetup{pdftitle=Algèbre 2 -- Anneaux factoriels}
 \title{Algèbre 2\\\emph{Anneaux factoriels}}
 \author{}
@@ -10,30 +10,36 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Polynôme primitif}{1/13}
-\slider{$c\l P\r\cong1$\linebreak Tout $P$ se décompose $c\l P\r P_1$ avec $P_1$ primitif et cette décomposition est unique à inversible près}{1/13}
-\slideq{$c\l PQ\r$}{2/13}
-\slider{$c\l P\r c\l Q\r\mid c\l PQ\r$}{2/13}
-\slideq{$c\l PQ\r$}{3/13}
-\slider{$c\l P\r c\l Q\r\mid c\l PQ\r$}{3/13}
-\slideq{Contenu}{4/13}
-\slider{$c\l\sum{i=0}{n}{a_iX^i}\r=\bigwedge\limits_{i=0}^na_i$ (défini modulo $A^\times$)}{4/13}
-\slideq{$c\l\frac dP\r$}{5/13}
-\slider{Si $d\mid c\l P\r$, $c\l\frac Pd\r\cong\frac{c\l P\r}{d}$}{5/13}
-\slideq{$c\l aP\r$}{6/13}
-\slider{$a\cdot c\l P\r$}{6/13}
-\slideq{Lien entre premier et irréductible dans $A$ factoriel}{7/13}
-\slider{Tout élement irréductible est premier}{7/13}
-\slideq{Décomposition en facteurs premiers}{8/13}
-\slider{Étant donné un système $\mathcal P$ de représentants des nombres premiers, on a $a=u\prod{p\in\mathcal P}{}{p^{\alpha_p}}$ avec $u\in A^\times$ et $\alpha_i\in\mathbb N$\linebreak Seul un nombre fini de $\alpha_i$ sont non nuls}{8/13}
-\slideq{$\l\prod{p\in\mathcal P}{}{p^{\alpha_p}}\r\vee\l\prod{p\in\mathcal P}{}{p^{\beta_p}}\r$}{9/13}
-\slider{$\prod{p\in\mathcal P}{}{p^{\max{\alpha_p,\beta_p}}}$}{9/13}
-\slideq{Lien entre anneau factoriel et principal}{10/13}
-\slider{Tout anneau principal est factoriel}{10/13}
-\slideq{Propriété de $A\left[X\right]$ pour $A$ factoriel}{11/13}
-\slider{$A\left[X\right]$ est factoriel}{11/13}
-\slideq{Anneau factoriel}{12/13}
-\slider{$A$ est factoriel si pour tout $a\in A$, il existe $s\in\mathbb N$ et $\l p_1,\cdots,p_n\r\in A^s$ avec les $p_i$ irréductibles tels que $a=p_1\cdots p_s$}{12/13}
-\slideq{$\l\prod{p\in\mathcal P}{}{p^{\alpha_p}}\r\wedge\l\prod{p\in\mathcal P}{}{p^{\beta_p}}\r$}{13/13}
-\slider{$\prod{p\in\mathcal P}{}{p^{\min{\alpha_p,\beta_p}}}$}{13/13}
+\slideq{Propriété sur $P$ et $Q$ si $AP\in A\left[X\right]$ et $A$ est factoriel}{1/16}
+\slider{Si $P$ et $Q$ sont unitaires alors $\l P,Q\r\in A\left[X\right]^2$}{1/16}
+\slideq{Critère d'Eisenstein}{2/16}
+\slider{Si $A$ est factoriel, $\mathbb K=\frack A$ et  $P=a_0+\cdots+a_{n-1}X^{n-1}+X^n$ est tel qu'il existe $p$ premier dans $A$ tel que $p\mid a_k$ pour $k<n$ et $p^2\nmid a_0$ alors $P$ est irréductible dans $A\left[X\right]$ et dans $\pol KX$}{2/16}
+\slideq{Critère d'irréductibilité en lien avec les idéaux premiers}{3/16}
+\slider{Si $I\vartriangleleft A$ est premier et $P=a_0+\cdots+a_nX^n$ est tel que $\frac{a_n}{c\l P\r}\notin I$ (i.e., $\deg P=\deg{\overline P}$), et si $\overline P\in A/I\left[X\right]$ est irréductible alors $P$ est irréductible dans $\pol KX$}{3/16}
+\slideq{Contenu}{4/16}
+\slider{$c\l\sum{i=0}{n}{a_iX^i}\r=\bigwedge\limits_{i=0}^na_i$ (défini modulo $A^\times$)}{4/16}
+\slideq{Irréductibilité dans $A\left[X\right]$ pour $A$ factoriel\linebreak$\mathbb K=\frack A$}{5/16}
+\slider{$P$ est irréductible dans $A\left[X\right]$ si et seulement s'il l'est dans $\pol KX$ et $c\l P\r=1$\linebreak Si $P=QS$ avec $\l Q,S\r\in\pol KX\setminus\mathbb K$ alors $P=\l c\l P\r Q_1\r S_1$\linebreak En particulier, si $A$ est factoriel alors $A\left[X\right]$ et $A\left[X_1,\cdots,X_n\right]$ sont factoriels}{5/16}
+\slideq{Propriété de $A\left[X\right]$ pour $A$ factoriel}{6/16}
+\slider{$A\left[X\right]$ est factoriel}{6/16}
+\slideq{Lemme de Gauss}{7/16}
+\slider{Si $\l P,Q\r\in\pol KX^2$ et $A$ est factoriel alors $c\l PQ\r\cong c\l P\r c\l Q\r$ et $\l PQ\r_1=P_1Q_1$}{7/16}
+\slideq{$\l\prod{p\in\mathcal P}{}{p^{\alpha_p}}\r\vee\l\prod{p\in\mathcal P}{}{p^{\beta_p}}\r$}{8/16}
+\slider{$\prod{p\in\mathcal P}{}{p^{\max{\alpha_p,\beta_p}}}$}{8/16}
+\slideq{Polynôme primitif}{9/16}
+\slider{$c\l P\r\cong1$\linebreak Tout $P$ se décompose $c\l P\r P_1$ avec $P_1\in A\left[X\right]$ primitif et cette décomposition est unique à inversible près}{9/16}
+\slideq{Lien entre anneau factoriel et principal}{10/16}
+\slider{Tout anneau principal est factoriel}{10/16}
+\slideq{$c\l aP\r$}{11/16}
+\slider{$a\cdot c\l P\r$}{11/16}
+\slideq{$\l\prod{p\in\mathcal P}{}{p^{\alpha_p}}\r\wedge\l\prod{p\in\mathcal P}{}{p^{\beta_p}}\r$}{12/16}
+\slider{$\prod{p\in\mathcal P}{}{p^{\min{\alpha_p,\beta_p}}}$}{12/16}
+\slideq{Lien entre premier et irréductible dans $A$ factoriel}{13/16}
+\slider{Tout élement irréductible est premier}{13/16}
+\slideq{Décomposition en facteurs premiers}{14/16}
+\slider{Étant donné un système $\mathcal P$ de représentants des nombres premiers, on a $a=u\prod{p\in\mathcal P}{}{p^{\alpha_p}}$ avec $u\in A^\times$ et $\alpha_i\in\mathbb N$\linebreak Seul un nombre fini de $\alpha_i$ sont non nuls}{14/16}
+\slideq{Anneau factoriel}{15/16}
+\slider{$A$ est factoriel si pour tout $a\in A$, il existe $s\in\mathbb N$ et $\l p_1,\cdots,p_s\r\in A^s$ avec les $p_i$ irréductibles tels que $a=p_1\cdots p_s$}{15/16}
+\slideq{$c\l\frac Pd\r$}{16/16}
+\slider{Si $d\mid c\l P\r$, $c\l\frac Pd\r\cong\frac{c\l P\r}{d}$}{16/16}
 \end{document}

@@ -1,0 +1,10 @@
+Algèbre 2 -- Anneaux noethériens
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}\usepackage{usuelles,polynomes}
+Anneau noethérien;;$A$ est noethérien si toute soute croissante d'idéaux de $A$ est stationnaire\linebreak$A$ est noethérien si tout idéal de $A$ est de type fini
+Propriété de $A/I$;;Si $A$ est noethérien et $I\vartriangleleft A$ alors $A/I$ est noethérien
+Théorème de la base de Hilbert;;Si $A$ est noethérien alors $A\left[X_1,\cdots,X_n\right]$ est noethérien
+Algèbre de type fini;;$B$ est une $A$-algèbre de type fini s'il existe $\l b_1,\cdots,b_n\r\in B^n$ tel que pour tout $b\in B$, il existe $P\in A\left[X_1,\cdots,X_n\right]$ tel que $b=P\l b_1,\cdots,b_n\r$
+Propriétés des algèbres de type fini pour $A$ noethérien;;Une sous-algèbre de type fini d'un anneau noethérien est noethérien
+Théorème de Krull;;Si $A$ est commutatif alors $A$ admet un idéal maximal propre

@@ -1,8 +1,8 @@
 Algèbre 2 -- Anneaux factoriels
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{bigoperators}\usepackage{usuelles}
-Anneau factoriel;;$A$ est factoriel si pour tout $a\in A$, il existe $s\in\mathbb N$ et $\l p_1,\cdots,p_n\r\in A^s$ avec les $p_i$ irréductibles tels que $a=p_1\cdots p_s$
+\usepackage{bigoperators}\usepackage{usuelles,polynomes}\DeclareMathOperator{\frack}{frac}
+Anneau factoriel;;$A$ est factoriel si pour tout $a\in A$, il existe $s\in\mathbb N$ et $\l p_1,\cdots,p_s\r\in A^s$ avec les $p_i$ irréductibles tels que $a=p_1\cdots p_s$
 Lien entre anneau factoriel et principal;;Tout anneau principal est factoriel
 Décomposition en facteurs premiers;;Étant donné un système $\mathcal P$ de représentants des nombres premiers, on a $a=u\prod{p\in\mathcal P}{}{p^{\alpha_p}}$ avec $u\in A^\times$ et $\alpha_i\in\mathbb N$\linebreak Seul un nombre fini de $\alpha_i$ sont non nuls
 $\l\prod{p\in\mathcal P}{}{p^{\alpha_p}}\r\vee\l\prod{p\in\mathcal P}{}{p^{\beta_p}}\r$;;$\prod{p\in\mathcal P}{}{p^{\max{\alpha_p,\beta_p}}}$
@@ -10,8 +10,11 @@ $\l\prod{p\in\mathcal P}{}{p^{\alpha_p}}\r\wedge\l\prod{p\in\mathcal P}{}{p^{\be
 Lien entre premier et irréductible dans $A$ factoriel;;Tout élement irréductible est premier
 Propriété de $A\left[X\right]$ pour $A$ factoriel;;$A\left[X\right]$ est factoriel
 Contenu;;$c\l\sum{i=0}{n}{a_iX^i}\r=\bigwedge\limits_{i=0}^na_i$ (défini modulo $A^\times$)
-Polynôme primitif;;$c\l P\r\cong1$\linebreak Tout $P$ se décompose $c\l P\r P_1$ avec $P_1$ primitif et cette décomposition est unique à inversible près
-$c\l PQ\r$;;$c\l P\r c\l Q\r\mid c\l PQ\r$
+Polynôme primitif;;$c\l P\r\cong1$\linebreak Tout $P$ se décompose $c\l P\r P_1$ avec $P_1\in A\left[X\right]$ primitif et cette décomposition est unique à inversible près
 $c\l aP\r$;;$a\cdot c\l P\r$
-$c\l\frac dP\r$;;Si $d\mid c\l P\r$, $c\l\frac Pd\r\cong\frac{c\l P\r}{d}$
-$c\l PQ\r$;;$c\l P\r c\l Q\r\mid c\l PQ\r$
+$c\l\frac Pd\r$;;Si $d\mid c\l P\r$, $c\l\frac Pd\r\cong\frac{c\l P\r}{d}$
+Lemme de Gauss;;Si $\l P,Q\r\in\pol KX^2$ et $A$ est factoriel alors $c\l PQ\r\cong c\l P\r c\l Q\r$ et $\l PQ\r_1=P_1Q_1$
+Propriété sur $P$ et $Q$ si $AP\in A\left[X\right]$ et $A$ est factoriel;;Si $P$ et $Q$ sont unitaires alors $\l P,Q\r\in A\left[X\right]^2$
+Irréductibilité dans $A\left[X\right]$ pour $A$ factoriel\linebreak$\mathbb K=\frack A$;;$P$ est irréductible dans $A\left[X\right]$ si et seulement s'il l'est dans $\pol KX$ et $c\l P\r=1$\linebreak Si $P=QS$ avec $\l Q,S\r\in\pol KX\setminus\mathbb K$ alors $P=\l c\l P\r Q_1\r S_1$\linebreak En particulier, si $A$ est factoriel alors $A\left[X\right]$ et $A\left[X_1,\cdots,X_n\right]$ sont factoriels
+Critère d'Eisenstein;;Si $A$ est factoriel, $\mathbb K=\frack A$ et  $P=a_0+\cdots+a_{n-1}X^{n-1}+X^n$ est tel qu'il existe $p$ premier dans $A$ tel que $p\mid a_k$ pour $k<n$ et $p^2\nmid a_0$ alors $P$ est irréductible dans $A\left[X\right]$ et dans $\pol KX$
+Critère d'irréductibilité en lien avec les idéaux premiers;;Si $I\vartriangleleft A$ est premier et $P=a_0+\cdots+a_nX^n$ est tel que $\frac{a_n}{c\l P\r}\notin I$ (i.e., $\deg P=\deg{\overline P}$), et si $\overline P\in A/I\left[X\right]$ est irréductible alors $P$ est irréductible dans $\pol KX$
