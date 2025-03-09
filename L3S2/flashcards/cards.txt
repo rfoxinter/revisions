@@ -21,5 +21,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250216120946
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites
 20250215190134
+../L3S2/flashcards/IntegrationEtProbabilites/Independance
+20250309180556
 ../L3S2/flashcards/IntegrationEtProbabilites/TransformeeDeFourier
 20250203222553

@@ -1,0 +1,51 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{probas}\usepackage{bigoperators}\togglebigoppar\newcommand{\ff}{\mathcal F}\usepackage{complexes}
+\hypersetup{pdftitle=Intégration et probabilités -- Indépendance}
+\title{Intégration et probabilités\\\emph{Indépendance}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Variables aléatoires indépendantes\linebreak Caractérisation par les espérances avec des images au plus dénombrables}{1/19}
+\slider{Les $\l X_i\r_{i_\in\llb1,n\rrb}$ sont indépendantes si et seulement si pour tout $x_i\in E_i$, $\P{X_1=x_1,\cdots,X_n=x_n}=\prod{i=1}{n}{\p{X_i=x_i}}$}{1/19}
+\slideq{Variables aléatoires indépendantes\linebreak Caractérisation par les lois}{2/19}
+\slider{Les $\l X_i\r_{i_\in\llb1,n\rrb}$ sont indépendantes si et seulement si la loi du produit sur $\l E_1\times\cdots\times E_n,\mathcal E_1\varotimes\cdots\varotimes\mathcal E_n\r$ est la loi produit ie $\mathbb P_{\l X_1,\cdots,X_n\r}=\mathbb P_{X_1}\varotimes\cdots\varotimes\mathbb P_{X_n}$}{2/19}
+\slideq{Variables aléatoires indépendantes\linebreak Caractérisation par les tribus engendrées}{3/19}
+\slider{Les $\l X_i\r_{i_\in I}$ sont indépendantes si et seulement si les $\l\sigma\l X_i\r\r_{i_\in I}$ le sont}{3/19}
+\slideq{Variables aléatoires indépendantes\linebreak Caractérisation par les espérances}{4/19}
+\slider{Les $\l X_i\r_{i_\in\llb1,n\rrb}$ sont indépendantes si et seulement si pour toutes fonctions mesurables $f_i\!:\!E_i\to\mathbb R_+$, $\esp{f_1\l X_1\r\cdots f_n\l X_n\r}=\prod{i=1}{n}{\esp{f_i\l X_i\r}}$}{4/19}
+\slideq{Loi de $X_1+\cdots+x_n$}{5/19}
+\slider{Si les $X_i$ sont indépendantes, $\mathbb P_{X_1+\cdots+X_n}=\mathbb P_{X_1}*\cdots*\mathbb P_{X_n}$}{5/19}
+\slideq{Variables aléatoires indépendantes\linebreak Caractérisation par les fonctions de répartition}{6/19}
+\slider{Les $\l X_i\r_{i_\in\llb1,n\rrb}$ à valeurs dans $\mathbb R$ sont indépendantes si et seulement si pour tous $x_i\in\mathbb R$, $\p{X_i\leqslant x_i,i\in\llb1,n\rrb}=\prod{i=1}{n}{F_{X_i}\l x_i\r}$}{6/19}
+\slideq{$\l \ff_1,\cdots,\ff_n\r$ sont indépendants}{7/19}
+\slider{Pour tout $\l A_1,\cdots,A_n\r\in\ff_1\times\cdots\times\ff_n$, $\p{\bigcap{i=1}{n}{A_i}}=\prod{i=1}{n}{\p{A_i}}$}{7/19}
+\slideq{Densité d'une loi marginale}{8/19}
+\slider{Si $X$ est une variable aléatoire dans $\mathbb R^d$ admettant une densité $\prod{i=1}{d}{f_i}$ alors il existe $c_i\in\left]0,+\infty\right[$ pour lequel $X_i$ admet $c_if_i$}{8/19}
+\slideq{$\l\ff_i\r_{i\in I}$ sont indépendantes}{9/19}
+\slider{Pour tout $J\subset I$ fini, les $\l\ff_j\r_{j\in J}$ sont indépendantes}{9/19}
+\slideq{$\l A_1,\cdots,A_n\r$ sont indépendants}{10/19}
+\slider{Pour tout $I\subset\llb1,n\rrb$, $\p{\bigcap{i\in I}{}{A_i}}=\prod{i\in I}{}{\p{A_i}}$}{10/19}
+\slideq{Tribu engendrée par une variable aléatoire}{11/19}
+\slider{$\sigma\l X\r=\left\{X^{-1}\l A\r,A\in\mathcal E\right\}$ avec $X\!:\!\l\varOmega,\ff,\mathbb P\r\to\l E,\mathcal E\r$}{11/19}
+\slideq{$A$ et $B$ sont indépendants}{12/19}
+\slider{$\p{A\sq B}=\p A$\linebreak$\p{A\cap B}=\p A\p B$}{12/19}
+\slideq{Variables aléatoires indépendantes\linebreak Caractérisation par les tranformées de Fourier}{13/19}
+\slider{Les $\l X_i\r_{i_\in\llb1,n\rrb}$ à valeurs dans $\mathbb R^{d_i}$ sont indépendantes si et seulement si pour tout $\xi\in\mathbb R^d$, $\varphi_{\l X_1,\cdots, X_n\r}\l\xi\r=\esp{\e^{\i\xi\cdot\l X_1,\cdots, X_n\r}}=\prod{i=1}{n}{\varphi_{X_i}{\xi_i}}$}{13/19}
+\slideq{$\p{A\sq B}$}{14/19}
+\slider{$\p{A\cap B}\p B$}{14/19}
+\slideq{Loi faible des grands nombres dans $L^2$}{15/19}
+\slider{Si les $\l X_n\r_{n\in\mathbb N^*}$ sont des variables aléatoires iid d'espérance $m$ alors $\frac{S_n}{n}\xrightarrow[n\to+\infty]{L^2}m$}{15/19}
+\slideq{Lemmes de Borel-Cantelli}{16/19}
+\slider{Si $\oldsum\p{A_n}$ converge alors $\p{\bigcap{n=0}{+\infty}{\bigcup{n=k}{+\infty}{A_k}}}=0$\linebreak Si $\oldsum\p{A_n}$ diverge avec les $\l A_n\r$ mutuellement indépendants alors $\p{\bigcap{n=0}{+\infty}{\bigcup{n=k}{+\infty}{A_k}}}=1$}{16/19}
+\slideq{Lemme des classes monotones pour l'Indépendance de tribus}{17/19}
+\slider{Si $\l \ff_1,\cdots,\ff_n\r$ sont des sous-tribus de $\ff$ et $\mathcal C_i$ des parties de $\ff_i$ stables par intersection et telles que $\sigma\l\mathcal C_i\r=\ff_i$\linebreak Si pour tout $C_i\in\mathcal C_i$, $\p{\bigcap{i=1}{n}{C_i}}=\prod{i=1}{n}{\p{C_i}}$ alors les $\ff_i$ sont indépendantes}{17/19}
+\slideq{Loi du $0$-$1$ de Kolmogorov}{18/19}
+\slider{Si $\l\ff_n\r_{n\in\mathbb N^*}$ est une suite de sous-$\sigma$-algèbres de $\ff$ indépendantes, si $\mathcal G_n={\displaystyle\bigvee\limits_{k>n}}\ff_k$ et $\mathcal G_\infty=\bigcap{n=0}{+\infty}{\mathcal G_n}$ est triviale, dans le sens où pour tout $A\in\mathcal G_\infty$, $\p A\in\left\{0,1\right\}$}{18/19}
+\slideq{Trasnformée de Fourier de $X_1+\cdots+x_n$}{19/19}
+\slider{Si les $X_i$ sont indépendantes, $\varphi\l{X_1+\cdots+X_n}\r=\prod{i=1}{n}{\varphi\l{X_1}\r}$}{19/19}
+\end{document}

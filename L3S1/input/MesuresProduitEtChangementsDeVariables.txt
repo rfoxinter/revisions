@@ -1,7 +1,7 @@
 Intégration et théorie de la mesure -- Mesures produit et changements de variables
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{analyse}\togglebigoppar\toggleanalysepar\let\otimes\varotimes\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\makeatletter\def\intkern@{\mkern-9mu\mathchoice{\mkern-6mu}{}{}{}}\makeatother\newcommand{\lnrm}[2]{\anrm[L^#1]{#2}}\let\phi\varphi
+\usepackage{analyse}\togglebigoppar\toggleanalysepar\let\otimes\varotimes\renewcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}\makeatletter\def\intkern@{\mkern-9mu\mathchoice{\mkern-6mu}{}{}{}}\makeatother\newcommand{\lnrm}[2]{\anrm[L^#1]{#2}}\let\phi\varphi
 $\mathcal A\otimes\mathcal B$;;$\sigma\l\left\{A\times B,\l A,B\r\in\mathcal A\times\mathcal B\right\}\r$\linebreak C'est la plus petite tribu qui rend les fonctions coordonnées mesurables 
 $\mathcal B\l X\times Y\r$;;$\mathcal B\l X\r\otimes\mathcal{B}\l Y\r$ si $X$ et $Y$ sont à base dénombrable d'ouverts
 $\mu\otimes\nu$;;L'unique mesure sur $\mathcal A\otimes\mathcal B$ vérifiant $\mu\otimes\nu\l A\times B\r=\mu\l A\r\times\nu\l B\r$\linebreak$\mu\otimes\nu\l C\r=\int[x][X][][\mu]{\nu\l C_x\r}=\int[y][Y][][\nu]{\mu\l C^y\r}$
@@ -13,6 +13,6 @@ Porpriétés de $\l f*g\r\l x\r$ pour $f\in L^1\l\mathbb R^d\r$, $g\in\mathcal C
 $\l\phi_n\r$ est une approximation de l'unité;;Pour tout $n\in\mathbb N$, $\int[][X]{\phi_n}=1$\linebreak Pour tout $R>0$, $\int[][B\l0,R\r^\complement]{\phi_n}\xrightarrow[n\to+\infty]{}=0$
 Porpriétés de $\phi_n*f$ où $\l\phi_n\r$ est une approximation de l'unité;;Si $f\in\mathcal C^0_b\l\mathbb R^d\r$ alors $\phi_n*f\xrightarrow[n\to+\infty]{\text{CVU}}f$\linebreak Si $f\in L^p\l\mathbb R^d\r$ alors $\phi_n*f\xrightarrow[n\to+\infty]{L^p}f$
 Densité des fonctions $\mathcal C^\infty_c\l\mathbb R^d\r$ dans $L^p$;;Si $p\in\left[1,+\infty\right[$ alors $\mathcal C^\infty_c\l\mathbb R^d\r$ est dense dans $L^p\l\mathbb R^d\r$
-Formule de changements de variables;;Si $U$ et $V$ sont deux ouverts de $\mathbb R^d$ et $\phi\!:\!U\to V$ est un $\mathcal C^1$-difféomorphisme et $f\!:\!V\to\mathbb R$ mesurable, alors $\int[x][V]{f\l x\r}=\int[y][V]{f\circ\phi\l y\r\times J_\phi\l y\r}$\linebreak où $J_\phi\l y\r=\left|\det\l\nabla\phi\l y\r\r\right|$
+Formule de changements de variables;;Si $U$ et $V$ sont deux ouverts de $\mathbb R^d$ et $\phi\!:\!U\to V$ est un $\mathcal C^1$-difféomorphisme et $f\!:\!V\to\mathbb R$ mesurable, alors $\int[x][V]{f\l x\r}=\int[y][U]{f\circ\phi\l y\r\times J_\phi\l y\r}$\linebreak où $J_\phi\l y\r=\left|\det\l\nabla\phi\l y\r\r\right|$
 Changement de variable polaire en dimension $2$;;$\altint\iint[x,y][\mathbb R^2]{f\l x,y\r}=\altint\iint[][{\mathbb R_+\times\left]-\pi,\pi\right[}]{\widetilde f\l r,\theta\r{{}\mathop{r}}\dd r\dd\theta}$
 Changement de variable polaire en dimension $>2$;;$\int[x][\mathbb R^d]{f\l x\r}=\altint\iint[][{\mathbb R_+\times\mathbb S^{d-1}}]{f\l ru\r{{}\mathop{r^{d-1}}}\dd r\sigma\l\dd u\r}$\linebreak$\sigma\l A\r=d\cdot\lambda\l\left\{ru,r\in\left[0,1\right],u\in A\right\}\r$, $A\subset\mathbb S^{d-1}$

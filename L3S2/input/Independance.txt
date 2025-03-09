@@ -1,0 +1,23 @@
+Intégration et probabilités -- Indépendance
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{probas}\usepackage{bigoperators}\togglebigoppar\newcommand{\ff}{\mathcal F}\usepackage{complexes}
+$\p{A\sq B}$;;$\p{A\cap B}\p B$
+$A$ et $B$ sont indépendants;;$\p{A\sq B}=\p A$\linebreak$\p{A\cap B}=\p A\p B$
+$\l A_1,\cdots,A_n\r$ sont indépendants;;Pour tout $I\subset\llb1,n\rrb$, $\p{\bigcap{i\in I}{}{A_i}}=\prod{i\in I}{}{\p{A_i}}$
+$\l \ff_1,\cdots,\ff_n\r$ sont indépendants;;Pour tout $\l A_1,\cdots,A_n\r\in\ff_1\times\cdots\times\ff_n$, $\p{\bigcap{i=1}{n}{A_i}}=\prod{i=1}{n}{\p{A_i}}$
+Lemme des classes monotones pour l'Indépendance de tribus;;Si $\l \ff_1,\cdots,\ff_n\r$ sont des sous-tribus de $\ff$ et $\mathcal C_i$ des parties de $\ff_i$ stables par intersection et telles que $\sigma\l\mathcal C_i\r=\ff_i$\linebreak Si pour tout $C_i\in\mathcal C_i$, $\p{\bigcap{i=1}{n}{C_i}}=\prod{i=1}{n}{\p{C_i}}$ alors les $\ff_i$ sont indépendantes
+$\l\ff_i\r_{i\in I}$ sont indépendantes;;Pour tout $J\subset I$ fini, les $\l\ff_j\r_{j\in J}$ sont indépendantes
+Tribu engendrée par une variable aléatoire;;$\sigma\l X\r=\left\{X^{-1}\l A\r,A\in\mathcal E\right\}$ avec $X\!:\!\l\varOmega,\ff,\mathbb P\r\to\l E,\mathcal E\r$
+Variables aléatoires indépendantes\linebreak Caractérisation par les tribus engendrées;;Les $\l X_i\r_{i_\in I}$ sont indépendantes si et seulement si les $\l\sigma\l X_i\r\r_{i_\in I}$ le sont
+Variables aléatoires indépendantes\linebreak Caractérisation par les lois;;Les $\l X_i\r_{i_\in\llb1,n\rrb}$ sont indépendantes si et seulement si la loi du produit sur $\l E_1\times\cdots\times E_n,\mathcal E_1\varotimes\cdots\varotimes\mathcal E_n\r$ est la loi produit ie $\mathbb P_{\l X_1,\cdots,X_n\r}=\mathbb P_{X_1}\varotimes\cdots\varotimes\mathbb P_{X_n}$
+Variables aléatoires indépendantes\linebreak Caractérisation par les espérances;;Les $\l X_i\r_{i_\in\llb1,n\rrb}$ sont indépendantes si et seulement si pour toutes fonctions mesurables $f_i\!:\!E_i\to\mathbb R_+$, $\esp{f_1\l X_1\r\cdots f_n\l X_n\r}=\prod{i=1}{n}{\esp{f_i\l X_i\r}}$
+Variables aléatoires indépendantes\linebreak Caractérisation par les espérances avec des images au plus dénombrables;;Les $\l X_i\r_{i_\in\llb1,n\rrb}$ sont indépendantes si et seulement si pour tout $x_i\in E_i$, $\P{X_1=x_1,\cdots,X_n=x_n}=\prod{i=1}{n}{\p{X_i=x_i}}$
+Variables aléatoires indépendantes\linebreak Caractérisation par les fonctions de répartition;;Les $\l X_i\r_{i_\in\llb1,n\rrb}$ à valeurs dans $\mathbb R$ sont indépendantes si et seulement si pour tous $x_i\in\mathbb R$, $\p{X_i\leqslant x_i,i\in\llb1,n\rrb}=\prod{i=1}{n}{F_{X_i}\l x_i\r}$
+Variables aléatoires indépendantes\linebreak Caractérisation par les tranformées de Fourier;;Les $\l X_i\r_{i_\in\llb1,n\rrb}$ à valeurs dans $\mathbb R^{d_i}$ sont indépendantes si et seulement si pour tout $\xi\in\mathbb R^d$, $\varphi_{\l X_1,\cdots, X_n\r}\l\xi\r=\esp{\e^{\i\xi\cdot\l X_1,\cdots, X_n\r}}=\prod{i=1}{n}{\varphi_{X_i}{\xi_i}}$
+Densité d'une loi marginale;;Si $X$ est une variable aléatoire dans $\mathbb R^d$ admettant une densité $\prod{i=1}{d}{f_i}$ alors il existe $c_i\in\left]0,+\infty\right[$ pour lequel $X_i$ admet $c_if_i$
+Loi de $X_1+\cdots+x_n$;;Si les $X_i$ sont indépendantes, $\mathbb P_{X_1+\cdots+X_n}=\mathbb P_{X_1}*\cdots*\mathbb P_{X_n}$
+Trasnformée de Fourier de $X_1+\cdots+x_n$;;Si les $X_i$ sont indépendantes, $\varphi\l{X_1+\cdots+X_n}\r=\prod{i=1}{n}{\varphi\l{X_1}\r}$
+Loi faible des grands nombres dans $L^2$;;Si les $\l X_n\r_{n\in\mathbb N^*}$ sont des variables aléatoires iid d'espérance $m$ alors $\frac{S_n}{n}\xrightarrow[n\to+\infty]{L^2}m$
+Lemmes de Borel-Cantelli;;Si $\oldsum\p{A_n}$ converge alors $\p{\bigcap{n=0}{+\infty}{\bigcup{n=k}{+\infty}{A_k}}}=0$\linebreak Si $\oldsum\p{A_n}$ diverge avec les $\l A_n\r$ mutuellement indépendants alors $\p{\bigcap{n=0}{+\infty}{\bigcup{n=k}{+\infty}{A_k}}}=1$
+Loi du $0$-$1$ de Kolmogorov;;Si $\l\ff_n\r_{n\in\mathbb N^*}$ est une suite de sous-$\sigma$-algèbres de $\ff$ indépendantes, si $\mathcal G_n={\displaystyle\bigvee\limits_{k>n}}\ff_k$ et $\mathcal G_\infty=\bigcap{n=0}{+\infty}{\mathcal G_n}$ est triviale, dans le sens où pour tout $A\in\mathcal G_\infty$, $\p A\in\left\{0,1\right\}$

@@ -7,7 +7,7 @@ $\p{X=n}$ avec $G_X\l t\r$;;$\frac{G_X^{\l n\r}\l1\r}{n!}$
 $\esp{X}$ avec $G_X\l t\r$;;$G_X'\l1\r$
 $\var{X}$ avec $G_X\l t\r$;;$G_X''\l1\r+G_X'\l1\r-G_X'\l1\r^2$
 $X\indep Y$\linebreak$G_{X+Y}$;;$G_XG_Y$
-Lemmes de Borel-Cantelli;;Si $\serie\p{A_n}$ converge alors $\p{\bigcap{n=0}{+\infty}{\bigcup{n=k}{+\infty}{A_k}}}=0$\linebreak Si $\serie\p{A_n}$ diverge avec les $\l A_n\r$ mutuellement indépendants alors $\p{\bigcup{n=0}{+\infty}{\bigcap{n=k}{+\infty}{A_k}}}=1$
+Lemmes de Borel-Cantelli;;Si $\serie\p{A_n}$ converge alors $\p{\bigcap{n=0}{+\infty}{\bigcup{n=k}{+\infty}{A_k}}}=0$\linebreak Si $\serie\p{A_n}$ diverge avec les $\l A_n\r$ mutuellement indépendants alors $\p{\bigcap{n=0}{+\infty}{\bigcup{n=k}{+\infty}{A_k}}}=1$
 $X\sim\unif n$;;$X\l\Omega\r=\llb1,n\rrb$\linebreak$\p{X=k}=\frac1n$\linebreak$\esp X=\frac{n+1}{2}$\linebreak$\var X=\frac{n^2-1}{12}$\linebreak$G_X\l t\r=\frac1n\frac{t^n-1}{t-1}$
 $X\sim\bin p$;;$X\l\Omega\r=\left\{0,1\right\}$\linebreak$\p{X=1}=p$\linebreak$\esp X=p$\linebreak$\var X=pq$\linebreak$G_X\l t\r=pt+q$
 $X\sim\bin[n]p$;;$X\l\Omega\r=\llb0,n\rrb$\linebreak$\p{X=k}=\binom nkp^kq^{n-k}$\linebreak$\esp X=np$\linebreak$\var X=npq$\linebreak$G_X\l t\r=\l pt+q\r^n$
