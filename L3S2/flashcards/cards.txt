@@ -19,6 +19,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250216120629
 ../L3S2/flashcards/ConcentrationDeLaMesure/IsoperimetrieEtConcentration
 20250216120946
+../L3S2/flashcards/ConcentrationDeLaMesure/MethodesEntropiques
+20250315102428
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites
 20250215190134
 ../L3S2/flashcards/IntegrationEtProbabilites/Independance

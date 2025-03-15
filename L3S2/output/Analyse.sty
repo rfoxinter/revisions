@@ -93,7 +93,7 @@
     }
     \newcommand{\scanaltintlist}[1]{
         \foreach \i in {#1}{
-            \comparestring{\arabic{altintvarindex}}{0}{\xdef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\intd\noexpand#1}}{\xdef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\dd\noexpand#1}}
+            \comparestring{\arabic{altintvarindex}}{0}{\xdef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\intd\noexpand#1}}{\ifx#1\cdots\relax\xdef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand#1}\else\xdef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\dd\noexpand#1}\fi}
             \xdef\altintvars{\unexpanded\expandafter{\altintvars}\noexpand\dd\noexpand#1}
             \setcounter{altintvarindex}{1}
         }
@@ -133,7 +133,7 @@
         \ifx#1\relax
             \let\next\relax
         \else
-            \comparestring{\arabic{altintvarindex}}{0}{\edef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\intd\noexpand#1}}{\edef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\dd\noexpand#1}}
+            \comparestring{\arabic{altintvarindex}}{0}{\edef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\intd\noexpand#1}}{\ifx#1\cdots\relax\edef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand#1}\else\edef\altintspacevars{\unexpanded\expandafter{\altintspacevars}\noexpand\dd\noexpand#1}\fi}
             \edef\altintvars{\unexpanded\expandafter{\altintvars}\noexpand\dd\noexpand#1}
             \setcounter{altintvarindex}{1}
             \let\next\do@scanaltint
