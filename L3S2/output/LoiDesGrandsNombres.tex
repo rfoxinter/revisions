@@ -1,0 +1,31 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{usuelles,topologie}\usepackage{probas}
+\hypersetup{pdftitle=Intégration et probabilités -- Loi des grands nombres}
+\title{Intégration et probabilités\\\emph{Loi des grands nombres}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Convergence en probabilités}{1/9}
+\slider{$\l X_n\r$ à valeurs dans $\l E,d\r$ converge en probabilités vers $X$ si\linebreak$\forall\varepsilon>0,\p{d\l X_n,X\r>\varepsilon}\xrightarrow[n\to+\infty]{}0$\linebreak ou de manière équivalente si\linebreak$\forall\varepsilon>0,\forall\eta>0,\exists N>0,\forall n\geqslant N,$\linebreak$\p{d\l X_n,X\r>\varepsilon}\leqslant\eta$}{1/9}
+\slideq{Convergence presque sûre}{2/9}
+\slider{$\l X_n\r$ à valeurs dans $\l E,d\r$ converge presque sûrement vers $X$ si l'événement $\left\{\lim{X_n}=X\right\}$ est presque sûr\linebreak Soit, $\p{\left\{\limsup\limits_{n\to+\infty}\l d\l X_n,X\r\r=0\right\}}$}{2/9}
+\slideq{Convergence dans $L^p$, $p\geqslant1$}{3/9}
+\slider{$\l X_n\r$ converge dans $L^p$ vers $X\in L^p$ si $\lim[n\to+\infty]{\nrm[L^p]{X_n-X}}=0$}{3/9}
+\slideq{Loi forte des grands nombres}{4/9}
+\slider{Si les $\l X_i\r$ sont des variables aléatoires intégrables indépendantes et de même loi alors $\frac{X_1+\cdots+X_n}{n}\xrightarrow[n\to+\infty]{\text{\textsc{p.s.}}}\esp{X_1}$\linebreak Sous ces mêmes hypothèses, on a également $\frac{X_1+\cdots+X_n}{n}\xrightarrow[n\to+\infty]{L^1}\esp{X_1}$}{4/9}
+\slideq{Lien entre les convergence dans les $L^p$, $p\geqslant1$}{5/9}
+\slider{Si $+\infty\geqslant q\geqslant p\geqslant1$ et $\l X_n\r$ converge vers $X$ dans $L^q$ alors $X$ converge vers $X$ dans $L^p$}{5/9}
+\slideq{Liens entre la convergence dans $L^\infty$ et la convergence presque sûre}{6/9}
+\slider{Si $\l X_n\r$ converge vers $X$ dans $L^\infty$ alors $\l X_n\r$ converge vers $X$ presque sûrement}{6/9}
+\slideq{Liens entre la convergence presque sûre et la convergence en probabilités}{7/9}
+\slider{Si $\l X_n\r$ converge vers $X$ en probabilités alors à extraction près, $\l X_n\r$ converge vers $X$ presque sûrement\linebreak Si $\l X_n\r$ converge vers $X$ presque sûrement alors $\l X_n\r$ converge vers $X$ en probabilités}{7/9}
+\slideq{Liens entre la convergence dans $L^p$, $\infty>p\geqslant1$ et la convergence presque sûre}{8/9}
+\slider{Si $\l X_n\r$ converge vers $X$ dans $L^p$ alors à extraction près, $\l X_n\r$ converge vers $X$ presque sûrement\linebreak Si $\l X_n\r$ converge vers $X$ presque sûrement alors avec une hypothèse de domination, $\l X_n\r$ converge dans $L^p$}{8/9}
+\slideq{Liens entre la convergence dans $L^p$, $\infty>p\geqslant1$ et la convergence en probabilités}{9/9}
+\slider{Si $\l X_n\r$ converge vers $X$ dans $L^p$ alors $\l X_n\r$ converge vers $X$ en probabilités\linebreak Si $\l X_n\r$ converge vers $X$ en probabilités alors si le moment d'ordre $p$ des $X_n$ sont bornés alors $\l X_n\r$ converge dans $L^p$}{9/9}
+\end{document}

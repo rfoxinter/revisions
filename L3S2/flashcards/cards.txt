@@ -7,10 +7,12 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250216111303
 ../L3S2/flashcards/Algebre2/AnneauxNoetheriens
 20250216111838
+../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeLaChaleur
+20250324103429
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportLineaire
 20250201183908
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportNonLineaire
-20250215182847
+20250324102131
 ../L3S2/flashcards/CalculDifferentiel/SousVarietes
 20250215222134
 ../L3S2/flashcards/CalculDifferentiel/TheoremeDInversionLocale
@@ -25,5 +27,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250215190134
 ../L3S2/flashcards/IntegrationEtProbabilites/Independance
 20250309180556
+../L3S2/flashcards/IntegrationEtProbabilites/LoiDesGrandsNombres
+20250323211514
 ../L3S2/flashcards/IntegrationEtProbabilites/TransformeeDeFourier
 20250203222553

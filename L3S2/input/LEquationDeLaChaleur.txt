@@ -1,0 +1,5 @@
+Analyse et équations aux dérivées partielles -- L'équation de la chaleur
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse,complexes}\newcommand{\partd}[1]{\mathop{}\!\partial_{#1}}\toggleanalysepar
+Noyau de la chaleur;;$K\l t,x\r=\frac1{\sqrt{4\pi t}}\e^{-\oldfrac{x^2}{4t}}$\linebreak$K\in\mathcal C^\infty\l\mathbb R_+\times\mathbb R\r$\linebreak$\int[x][\mathbb R]{K\l t,x\r}=1$ pour tout $t>0$\linebreak$\partd tK\l t,x\r=\partd x^2K\l t,x\r$ pour tout $t,x\in\mathbb R_+^*\times \mathbb R$
