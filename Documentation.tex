@@ -185,7 +185,7 @@ Lors de l'utilisation de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc
 
 Il est possibles de changer les polices de caractères/symboles en important des packages avant \mintinline{latex}?\usepackage{preambule}? (ou \texttt{htmlpreambule} et les options décrites après sont disponibles avec les deux sauf indication du contraire). Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
 
-Il n'est pas possible d'utiliser en simultané le package \texttt{Dsfont.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\texttt{Dsft.sty}} décrit ci-dessous. De plus, la commande \mintinline{latexmath}?\1? ne sera pas modifiée si un package définissant \mintinline{latexmath}?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \mintinline{latex}?\newcommand\1[1]{\mathbb{1}_{#1}}? (si \hyperlink{section.8}{\texttt{Dsft.sty}} n'est pas importé) ou \mintinline{latex}?\renewcommand\1[1]{\mathbb{1}_{#1}}?.
+Il n'est pas possible d'utiliser en simultané le package \texttt{Dsfont.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\texttt{Dsft.sty}} décrit ci-dessous. De plus, la commande \mintinline{latexmath}?\1? ne sera pas modifiée si un package définissant \mintinline{latexmath}?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \mintinline{latex}?\newcommand{\1}[1]{\mathbb{1}_{#1}}? (si \hyperlink{section.8}{\texttt{Dsft.sty}} n'est pas importé) ou \mintinline{latex}?\renewcommand{\1}[1]{\mathbb{1}_{#1}}?.
 
 \vspace{0.5cm}
 
@@ -605,6 +605,13 @@ Ce package remplace le $\mathds 1$ du package \texttt{Dsfonts.sty} disponible su
 \mcmd{\square}
 \mcmd{\star}
 \mcmd{\triangle}
+\mcmd[\footnotemark]{\filledstar{0}}
+\footnotetext{Correspond à la commande \mintinline{latexmath}?\star?}
+\mcmd{\filledstar{1}}
+\mcmd{\filledstar{2}}
+\mcmd{\filledstar{3}}
+\mcmd{\filledstar{4}}
+\mcmd{\filledstar{5}}
 \subsection{\href{https://rfoxinter.github.io/revisions/output/dsrom12.pfb}{\color{black}\texttt{dsrom12.pfb}} et \href{https://rfoxinter.github.io/revisions/output/dsrom12.tfm}{\color{black}\texttt{dsrom12.tfm}}}
 
 Pour utiliser ce package, il suffit de copier les fichiers \texttt{dsrom12.pfb} et \texttt{dsrom12.tfm} dans le dossier \texttt{output}. Si cela ne marche pas, il faut les copier dans les dossiers où ils sont actuellement avec \texttt{dsfonts} (et éventuellement créer une copie des anciens fichiers).
@@ -815,7 +822,7 @@ $\left\lfloor\frac{n}{2}\right\rfloor=\tcase{
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\middle|?\\Doit être utilisé entre \mintinline{latexmath}?\left? et \mintinline{latexmath}?\right?, ou dans la commande \mintinline{latexmath}?\p?: $\p{A\sq\bigcap{k=1}{n}{B_i}}$}
 \mcmd[\footnotemark]{\bor}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\mathcal{B}?}
-\mcmd{\esp{X}}
+\mcmd{\esp[Y]{X}}
 \mcmd{\var{X}}
 \mcmd{\ect{X}}
 \mcmd{\oldcov}
