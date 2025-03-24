@@ -1971,3 +1971,20 @@ space before arrow={0.2ex},
 \DeclareMathSymbol{\square}{\mathbin}{mathds}{"41}
 \DeclareMathSymbol{\star}{\mathbin}{mathds}{"42}
 \DeclareMathSymbol{\triangle}{\mathbin}{mathds}{"43}
+\newcommand{\filledstar}[1]{%
+    \ifcase#1\relax%
+        \ensuremath{\mathds{B}}%
+    \or\relax%
+        \ensuremath{\mathds{D}}%
+    \or\relax%
+        \ensuremath{\mathds{E}}%
+    \or\relax%
+        \ensuremath{\mathds{F}}%
+    \or\relax%
+        \ensuremath{\mathds{G}}%
+    \or\relax%
+        \ensuremath{\mathds{H}}%
+    \else%
+        \hphantom{\ensuremath{\mathds{1}}}
+    \fi%
+}
