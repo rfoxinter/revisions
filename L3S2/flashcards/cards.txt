@@ -25,6 +25,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250315102428
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites
 20250215190134
+../L3S2/flashcards/IntegrationEtProbabilites/ConvergenceEnLoiEtTheoremeCentralLimite
+20250324190415
 ../L3S2/flashcards/IntegrationEtProbabilites/Independance
 20250309180556
 ../L3S2/flashcards/IntegrationEtProbabilites/LoiDesGrandsNombres

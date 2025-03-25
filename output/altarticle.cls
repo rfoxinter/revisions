@@ -1988,3 +1988,5 @@ space before arrow={0.2ex},
         \hphantom{\ensuremath{\mathds{1}}}
     \fi%
 }
+\newcommand{\rmbeta}{\ensuremath{\mathds{b}}}
+\newcommand{\rmmu}{\ensuremath{\mathds{m}}}
