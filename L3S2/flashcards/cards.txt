@@ -7,6 +7,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250216111303
 ../L3S2/flashcards/Algebre2/AnneauxNoetheriens
 20250216111838
+../L3S2/flashcards/Algebre2/ExtensionsDeCorps
+20250331205344
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeLaChaleur
 20250324103429
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportLineaire
@@ -26,7 +28,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites
 20250215190134
 ../L3S2/flashcards/IntegrationEtProbabilites/ConvergenceEnLoiEtTheoremeCentralLimite
-20250324190415
+20250331190935
 ../L3S2/flashcards/IntegrationEtProbabilites/Independance
 20250309180556
 ../L3S2/flashcards/IntegrationEtProbabilites/LoiDesGrandsNombres

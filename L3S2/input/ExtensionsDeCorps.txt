@@ -1,0 +1,22 @@
+Algèbre 2 -- Extensions de corps
+Shuffle questions : True
+Q/R & R/Q : False
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\mm{\mathbb M}\newcommand\edeg[2]{\left[#1{:}#2\right]}\DeclareMathOperator{\ev}{ev}\usepackage{polynomes,structures}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}
+$\mathbb K$-algèbre;;Anneau $A$ et morphisme d'anneau $\sigma\!:\!\mathbb K\to A$
+$\ll/\kk$ est une extension de corps;;Morphisme d'anneau $\kk\to\ll$\linebreak$\ll$ est une $\kk$-algèbre
+$\edeg\ll\kk$;;$\dim_\kk\l\ll\r$
+Extension finie;;$\edeg\ll\kk<+\infty$
+Théorème de la base télescopique;;Si $\mm/\ll/\kk$ sont deux extensions finies, $\l\beta_j\r_{j\in J}$ une $\ll$-base de $\mm$ et $\l\alpha_i\r_{i\in I}$ une $\kk$-base de $\ll$ alors $\l\alpha_i\beta_j\r_{\l i,j\r\in I\times J}$ est une $\kk$-base de $\mm$
+$\pol K\alpha$;;$\pol K\alpha\cong\pol KX/\ker{\ev_\alpha}$\linebreak Si $\ker{\ev_\alpha}=\l0\r$, $\alpha$ est transcendant et $\fr K\alpha\cong\fr KX$, sinon, $\alpha$ est algébrique et $\fr K\alpha=\pol K\alpha$ et $\edeg{\pol K\alpha}\kk<\infty$
+Tranfert d'algébricité;;Si $\alpha$ est algébrique sur $\kk$ et $\beta$ est algébrique sur $\pol K\alpha$ alors $\beta$ est algébrique sur $\kk$
+$\kk^{\text{alg},\ll}$;;$\left\{l\in\ll,l\text{ est algébrique sur }\kk\right\}$\linebreak C'est une extension intermédiaire entre $\kk$ et $\ll$
+Propriété de $\edeg{\pol K\alpha}\kk$ si $\edeg\ll\kk=n<+\infty$ et $\alpha\in\ll$;;$\edeg{\pol K\alpha}\kk\mid n$
+Compositum $\mathbb E_1\cdot\mathbb E_2$;;Plus petit corps contenant $\mathbb E_1$ et $\mathbb E_2$
+Propriété de $\edeg{\mathbb E_1\mathbb E_2}\kk$;;Si les deux extensions sont algébriques, $\edeg{\mathbb E_1\mathbb E_2}\kk\leqslant\edeg{\mathbb E_1}\kk\edeg{\mathbb E_2}\kk$\linebreak Si $\edeg{\mathbb E_1}\kk\wedge\edeg{\mathbb E_2}\kk=1$ alors on a égalité
+Corps de rupture;;Si $P\in\pol KX$, un corps de rupture de $P$ est une extension algébrique de $\kk$ sur laquelle $P$ admet une racine\linebreak Si $Q$ est un facteur irréductible de $P$ alors $\pol KX/\l Q\r$ est un corps de rupture de $P$ sur $\kk$
+Corps de décomposition;;Si $P\in\pol KX$, un corps de rupture de $P$ est une extension algébrique de $\kk$ sur laquelle $P$ est scindé
+Corps algébriquement clos;;$\kk$ est algébriquement clos si tout $P\in\pol KX$ admet une racine dans $\kk$
+Clôture algébrique;;Une clôture algébrique de $\kk$ est une extension algébrique de $\kk$ qui est algébriquement close
+Théorème de Steiniz;;Tout corps admet une clôture algébrique\linebreak Cette clôture est unique à isomorphisme près
+Prolongement d'un morphisme $\sigma\!:\!\mm'\to\ll$;;Si $\ll/\kk$ est algébriquement clos et $\mm/\mm'/\kk$ des extensions algébriques alors $\sigma$ se prolonge en $\widetilde\sigma\!:\!\mm\to\ll$\linebreak Si $\mm$ est une clôture algébrique de $\kk$, c'est un isomorphisme
+Images des racines d'un polynôme par un morphisme $\sigma\!:\!\kk\to\kk^\text{a}$;;Si $P\in\pol KX$ et $\alpha\in\rac P$ alors $\sigma\l\alpha\r\in\rac P$ et $\sigma$ définit une bijection de $\rac P$\linebreak En particulier, si $P$ est irréductible, alors l'action $\gal{\kk^\text{a}}\kk\curvearrowright\rac P$ est transitive
