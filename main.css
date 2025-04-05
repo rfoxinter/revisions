@@ -1,5 +1,6 @@
 .folder {
     cursor: pointer;
+    display: inline;
 }
 
 ptr {
