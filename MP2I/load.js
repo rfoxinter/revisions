@@ -56,7 +56,7 @@ function display_files(sitemap){
             span.setAttribute('class','material-symbols-rounded folder');
             span.innerHTML = 'folder_open';
             h1.appendChild(span);
-            h1.innerHTML += ' ' + groupname;
+            h1.innerHTML += '&nbsp;' + groupname;
             d.appendChild(h1);
             hr = document.createElement('hr');
             c.appendChild(hr)
