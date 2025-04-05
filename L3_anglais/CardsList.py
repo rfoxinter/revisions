@@ -25,6 +25,6 @@ def list_f(folder):
     cards = sorted(curr_cards) + cards
 list_f('.')
 for c in cards:
-    content += '\n../L3S1/anglais/flashcards/' + c.replace('./', '') + '\n' + dt.fromtimestamp(g(c)).strftime('%Y%m%d%H%M%S')
+    content += '\n../L3_anglais/flashcards/' + c.replace('./', '') + '\n' + dt.fromtimestamp(g(c)).strftime('%Y%m%d%H%M%S')
 f.write(content)
 f.close()

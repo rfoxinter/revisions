@@ -1,6 +1,0 @@
-#!/bin/bash
-
-echo "htmlcards"
-python3 ./Htmlcards.py --file=$1 $2 --open=True
-echo "cardslist"
-python3 ./CardsList.py --folder=.
