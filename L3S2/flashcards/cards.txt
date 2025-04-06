@@ -25,12 +25,12 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250216120946
 ../L3S2/flashcards/ConcentrationDeLaMesure/MethodesEntropiques
 20250315102428
+../L3S2/flashcards/GroupesLocalementCompacts/GroupesLocalementCompacts
+20250406160631
 ../L3S2/flashcards/GroupesLocalementCompacts/GroupesTopologiques
 20250406134957
 ../L3S2/flashcards/GroupesLocalementCompacts/Prerequis
 20250406102204
-../L3S2/flashcards/GroupesLocalementsCompacts/GroupesLocalementCompacts
-20250406160010
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites
 20250215190134
 ../L3S2/flashcards/IntegrationEtProbabilites/ConvergenceEnLoiEtTheoremeCentralLimite

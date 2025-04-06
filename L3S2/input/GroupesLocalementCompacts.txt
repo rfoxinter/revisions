@@ -1,4 +1,4 @@
-Groupes localements compacts -- Groupes localement compacts
+Groupes localement compacts -- Groupes localement compacts
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{bigoperators}\togglebigoppar\DeclareMathOperator{\oldco}{Co}\newcommand{\Co}[2][]{\oldco_{#1}\l#2\r}
