@@ -1,0 +1,19 @@
+Groupes localement compacts -- Groupes topologiques
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}
+Groupe topologique;;Un groupe est topologique s'il est muni d'une topologie telle que $m\!:\!\l g,h\r\mapsto gh$ et $i\!:\!g\mapsto g^{-1}$ sont continues
+Propriétés de $G=\prod{i\in F}{}{F_i}$ où les $F_i$ sont finis;;Si $G$ est muni des opérations coordonnée par coordonnée et de la topologie produit où chaque $F_i$ est minu de la topologie discrète alors $G$ est un groupe topologique compact et totalement discontinu
+Propriétés des sous-groupe d'un groupe topologique $G$;;Tout sous-groupe ouvert de $G$ est fermé\linebreak Un sous-groupe de $G$ est ouvert si et seulement s'il contient un voisinage ouvert de $1$\linebreak Un sous-groupe fermé d'indice fini de $G$ est ouvert
+CNS pour avoir un groupe séparé;;$\left\{1\right\}$ est fermé
+Propriétés des voisinages de $1$ d'un groupe topologique\linebreak$\mathcal F=\left\{V\text{ voisinage ouvert de }1\right\}$;;Pour tout $U\in\mathcal F$, il existe $V\in\mathcal F$ tel que $V^2\subset U$\linebreak Pour tout $U\in\mathcal F$, il existe $V\in\mathcal F$ tel que $V^{-1}\subset U$\linebreak Pour tout $U\in\mathcal F$ et tout $g\in G$, il existe $V\in\mathcal F$ tel que $gVg^{-1}\subset U$
+Propriétés du quotient d'un groupe topologique $G$ par $H$;;$\pi\!:\!G\to G/H$ est ouverte\linebreak$H$ est fermé si et seulement si $G/H$ est séparé\linebreak Si $H\vartriangleleft G$ alors $G/H$ est un groupe topologique
+Générateur d'un groupe topologique connexe;;Si $U$ est un voisinage de $1$ alors $G=\left\langle U\right\rangle$
+$G^0$;;Si $G$ est un groupe topologique, $G^0$ désigne la composante connexe de $1$ dans $G$
+Propriétés de $G^0$;;$G^0$ est un sous-groupe connexe, fermé et distingué dans $G$\linebreak$G/G^0$ est totalement discontinu
+$d\!:\!X\times X\to\mathbb R_+$ est une pseudo-métrique;;Symétrie: $d\l x,y\r=d\l y,x\r$\linebreak Inégalité triangulaire: $d\l x,y\r\leqslant d\l x,z\r+d\l z,y\r$\linebreak$d\l x,x\r=0$
+Métrique compatible;;Une métrique sur un expace topologie est compatible si elle induit la topologie
+$d\!:\!G\times G\to\mathbb R_+$ pseudo-distance est $G$-invariante;;$d\l gh,gk\r=d\l h,k\r$ pour tout $\l g,h,k\r\in G^3$
+$l\!:\!G\to\mathbb R_+$ est une fonction de longueur;;$l\l g\r=l\l g^{-1}\r$\linebreak$l\l gh\r\leqslant l\l g\r+l\l h\r$\linebreak$l\l1\r=0$
+Lien entre pseudo-distance et longueur;;$d\l g,h\r=l\l g^{-1}h\r$ définit une pseudo-métrique $G$-invariante, c'est une métrique si et seulement si $l\l g\r=0\Leftrightarrow g=1$\linebreak Si $d$ est une pseudo-métrique $G$-invariante alors $l\l g\r=d\l g,1\r$ définit une longueur
+Théorème de Birkoff-Kakutani;;Si $G$ est un groupe topologique séparé alors il y a équivalence entre:\linebreak$1$ admet une base de voisinages dénombrable\linebreak$G$ est métrisable\linebreak Il existe une métrique compatible $G$-invariante sur $G$

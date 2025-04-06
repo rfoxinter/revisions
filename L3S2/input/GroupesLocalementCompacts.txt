@@ -1,0 +1,13 @@
+Groupes localements compacts -- Groupes localement compacts
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}\togglebigoppar\DeclareMathOperator{\oldco}{Co}\newcommand{\Co}[2][]{\oldco_{#1}\l#2\r}
+Groupe localement compact;;Groupe dont la topologie associée est localement compacte
+Propriétés d'un sous-groupe fermé d'un groupe localement compact;;Si $G$ est localement compact et $H\leqslant G$ est fermé alors $H$ et $G/H$ sont localement compacts\linebreak En particulier, si $H$ est dintingué dans $G$ alors $G/H$ est un groupe localement compact
+Propriétés d'un sous-groupe fermé d'un groupe localement compact;;Si $G$ est localement compact et $H\leqslant G$ est ouvert alors $H$ est d'indice fini
+Espace $\sigma$-compact;;Espace $X$ tel que $X=\bigcup{n\in\mathbb N}{}{K_n}$ avec les $K_n$ compacts
+Propriétés des sous-groupes d'un groupe localement compact et $\sigma$-compact;;Si $H$ est un sous-groupe ouvert de $G$ alors $H$ st d'indice au plus dénombrable\linebreak Si $H$ est un sous-groupe fermé de $G$ alors $H$ est ouvert
+Théorème de van Dantzig;;Si $G$ est un groupe localement compact totalement discontinu alors pour tout voisinage $U$ de $1$ dans $G$, il existe un sous-groupe $V$ compact et ouvert de $G$ et tel que $V\subset U$
+Groupe profini;;$G$ est profini s'il est isomorphe à un sous-groupe fermé d'un produit de groupes finis\linebreak Il existe $\l F_i\r_{i\in I}$ finis et un morphisme $\varphi\!:\!G\to\prod{i\in I}{}{F_i}$ injectif et continu tel que $\varphi\l G\r$ soit un sous-groupe fermé de $\prod{i\in I}{}{F_i}$ et $\varphi\!:\!G\to\varphi\l G\r$ soit un homéomorphisme
+CNG pour avoir un groupe profini;;$G$ est compact et totalement discontinu
+Propriété de $\Co[G]H=\bigcap{g\in G}{}{gHg^{-1}}$;;$\Co[G]H$ est d'indice fini dans $G$ et $\Co[G]H\leqslant H$
