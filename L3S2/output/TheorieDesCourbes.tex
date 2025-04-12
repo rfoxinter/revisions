@@ -1,0 +1,27 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{al}\usepackage{analyse}\usepackage[arc]{complexes}
+\hypersetup{pdftitle=Calcul différentiel -- Théorie des courbes}
+\title{Calcul différentiel\\\emph{Théorie des courbes}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Paramétrage de la longueur d'arc}{1/7}
+\slider{$g=\varphi\circ\theta^{-1}$ pour $\varphi$ régulière, défini sur $\theta\l I\r$\linebreak$g'\l s\r=\frac{\varphi'\circ\theta\l s\r}{\anrm[\null]{\varphi'\circ\theta}}$\linebreak$\anrm[\null]{g'\l s\r}=1$}{1/7}
+\slideq{Abscisse curviligne de $\phi$}{2/7}
+\slider{$\theta\l t\r=\int[s][t_0][t]{\anrm[\null]{\varphi'\l s\r}}$\linebreak C'est la longueur algébrique de l'arc $\arc{\varphi\l t_0\r\varphi\l t\r}$}{2/7}
+\slideq{$T_{x_0}M$}{3/7}
+\slider{$\vect{\phi'\l t_0\r}$}{3/7}
+\slideq{Point régulier\linebreak Point singulier}{4/7}
+\slider{$t_o\in I$ est régulier pour $\varphi$ si $\phi'\l t\r\neq0$ et singulier sinon}{4/7}
+\slideq{Vecteurs tangent et normal}{5/7}
+\slider{Le vecteur tangent est $\tau\l s\r=f'\l s\r$ unitaire avec $f'$ le paramétrage de la longueur d'arc et le vecteur normal est $n\l s\r$ unitaire tel que $\l\tau\l s\r,n\l s\r\r$ soit une base orhtonormée directe}{5/7}
+\slideq{Courbe paramétrée}{6/7}
+\slider{Application $\varphi\!:\!I\to\mathbb R^n$ différentiable de classe $\mathcal C^k$ avec $I$ un intervalle ouvert de $\mathbb R$}{6/7}
+\slideq{Courbure algébrique}{7/7}
+\slider{$K\!:\!I\to\mathbb R$ tel que $\tau'\l s\r=K\l s\r n\l s\r$}{7/7}
+\end{document}

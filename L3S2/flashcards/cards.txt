@@ -15,10 +15,14 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250201183908
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportNonLineaire
 20250324102131
+../L3S2/flashcards/CalculDifferentiel/EquationsDifferentielles
+20250412114854
 ../L3S2/flashcards/CalculDifferentiel/SousVarietes
-20250215222134
+20250412095011
 ../L3S2/flashcards/CalculDifferentiel/TheoremeDInversionLocale
 20250209172327
+../L3S2/flashcards/CalculDifferentiel/TheorieDesCourbes
+20250412120925
 ../L3S2/flashcards/ConcentrationDeLaMesure/InegalitesDeConcentration
 20250216120629
 ../L3S2/flashcards/ConcentrationDeLaMesure/IsoperimetrieEtConcentration
