@@ -1,0 +1,5 @@
+"Algèbre 2 &ndash; <i>Extensions normales</i>"
+1
+0
+[1, 2, 3, 4]
+[0, 0, 0, 0]

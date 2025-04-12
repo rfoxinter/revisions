@@ -1,0 +1,8 @@
+Algèbre 2 -- Corps finis
+Shuffle questions : True
+Q/R & R/Q : False
+\newcommand\kk{\mathbb K}\newcommand\ff{\mathbb F}\usepackage{structures}\DeclareMathOperator{\oldfrob}{frob}\newcommand{\frob}[1]{\oldfrob_#1}\DeclareMathOperator{\id}{id}
+$\left|\kk\right|$ pour $\kk$ un corps fini;;$\car\kk^n$ pour $n\in\mathbb N^*$\linebreak$\kk$ est un $\ff_p$-ev de dimension $n$ finie
+Propriétés de $\frob p\!:\!\kk\to\kk$\linebreak$\left|\kk\right|=p^n$;;$\frob p$ est un morphisme de corps $\ff_p$ linéaire\linebreak$\l\frob p\r^n=\id_\kk$
+Propriété des corps de cardinal $p^n$;;Il existe un unique sous-corps de $\overline{\ff_p}$ de cardinal $p^n$ à isomorphisme près, c'est le corps de décomposition de $X^{p^n}-X$\linebreak On le note $\ff_q$, $q=p^n$
+CNS pour $\ff_q\subset\ff_{q'}$;;$n'=dn$ avec $q=p^n$ et $q'=p^{n'}$

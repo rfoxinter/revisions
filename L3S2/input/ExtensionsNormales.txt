@@ -1,0 +1,8 @@
+Algèbre 2 -- Extensions normales
+Shuffle questions : True
+Q/R & R/Q : False
+\newcommand\deco{\mathbb D}\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\usepackage{polynomes,structures}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}
+Corps de décomposition d'une famille de polynômes $\mathcal F\subset\pol KX$;;Extension $\deco/\kk$ telle que pour tout $P\in\mathcal F$, $P$ se décompose en facteurs de degré $1$ sur $\deco$ et $\deco$ est engendré sur $\kk$ par les racines des $P\in\mathcal F$
+Extension normale\linebreak Définition par les $\kk$-morphismes;;$\ll/\kk$ est normale si et seulement si $\sigma\l\ll\r=\ll$ pour tout $\sigma\in\gal{\kk^\text{a}}\kk$\linebreak De manière équivalente, $\ll/\kk$ est normale si pour tout $\kk$-plongement $\ll\hookrightarrow\kk^\text{a}$, $\sigma\l\ll\r=\ll$
+Extension normale\linebreak Définition par les polynômes;;$\ll/\kk$ est normale si et seulement si $\ll$ est le corps de décomposition d'une famille de polynômes sur $\kk$
+Extension normale\linebreak Définition par les $\kk$-conjugués;;$\ll/\kk$ est normale si et seulement si pour tout $x\in\ll$ et tout $\sigma\in\gal{\kk^\text{a}}\kk$, $\sigma\l x\r\in\ll$

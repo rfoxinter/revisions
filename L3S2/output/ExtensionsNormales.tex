@@ -1,0 +1,21 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\newcommand\deco{\mathbb D}\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\usepackage{polynomes,structures}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}
+\hypersetup{pdftitle=Algèbre 2 -- Extensions normales}
+\title{Algèbre 2\\\emph{Extensions normales}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Extension normale\linebreak Définition par les polynômes}{1/4}
+\slider{$\ll/\kk$ est normale si et seulement si $\ll$ est le corps de décomposition d'une famille de polynômes sur $\kk$}{1/4}
+\slideq{Extension normale\linebreak Définition par les $\kk$-conjugués}{2/4}
+\slider{$\ll/\kk$ est normale si et seulement si pour tout $x\in\ll$ et tout $\sigma\in\gal{\kk^\text{a}}\kk$, $\sigma\l x\r\in\ll$}{2/4}
+\slideq{Corps de décomposition d'une famille de polynômes $\mathcal F\subset\pol KX$}{3/4}
+\slider{Extension $\deco/\kk$ telle que pour tout $P\in\mathcal F$, $P$ se décompose en facteurs de degré $1$ sur $\deco$ et $\deco$ est engendré sur $\kk$ par les racines des $P\in\mathcal F$}{3/4}
+\slideq{Extension normale\linebreak Définition par les $\kk$-morphismes}{4/4}
+\slider{$\ll/\kk$ est normale si et seulement si $\sigma\l\ll\r=\ll$ pour tout $\sigma\in\gal{\kk^\text{a}}\kk$\linebreak De manière équivalente, $\ll/\kk$ est normale si pour tout $\kk$-plongement $\ll\hookrightarrow\kk^\text{a}$, $\sigma\l\ll\r=\ll$}{4/4}
+\end{document}

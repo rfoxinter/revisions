@@ -7,8 +7,14 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250216111303
 ../L3S2/flashcards/Algebre2/AnneauxNoetheriens
 20250216111838
+../L3S2/flashcards/Algebre2/CorpsFinis
+20250412150456
 ../L3S2/flashcards/Algebre2/ExtensionsDeCorps
-20250331205344
+20250412135130
+../L3S2/flashcards/Algebre2/ExtensionsNormales
+20250412144759
+../L3S2/flashcards/Algebre2/ExtensionsSeparables
+20250412164722
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeLaChaleur
 20250324103429
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportLineaire
