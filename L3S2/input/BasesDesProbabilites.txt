@@ -6,7 +6,7 @@ Espace de probabilités;;Espace mesuré $\l\Omega,\mathcal F,\mathbb P\r$ où $\
 Variable aléatoire;;Application mesurable $X\!:\!\l\Omega,\mathbb R\r\to\l E,\mathcal E\r$ où $\l E,\mathcal E\r$ est un espace mesurable
 Loi d'une variable aléatoire $X$;;Mesure image $\mathbb P_X$ de $\mathbb P$ par $X$\linebreak$\forall A\in\mathcal E$, $\p[X]A=\mathbb P\l X^{-1}\l A\r\r:=\p{X\in A}$
 $\esp X$;;$\int[\omega][\Omega][][\mathbb P]{X\l\omega\r}$
-Formule de transfert;;$\esp{f\l X\r}$;;$\int[\omega][\Omega][][\mathbb P]{f\l X\l\omega\r\r}=\int[x][E][][\mathbb P_X]{f\l x\r}$
+Formule de transfert;;$\esp{f\l X\r}=\int[\omega][\Omega][][\mathbb P]{f\l X\l\omega\r\r}=\int[x][E][][\mathbb P_X]{f\l x\r}$
 Caractérisation de la loi par les espérances;;Si $X$ est une variable aléatoire dans $\l E,\mathcal E\r$ alors la loi de $\mathbb P_X$ ext caractérisé par les $\left\{\esp{f\l X\r},f\!:\!E\to\mathbb R\text{ mesurable}\right\}$ ou plus simplement par les $\left\{\esp{f\l X\r},f\in H\right\}$ où $H$ est un sous-ensemble dense de $\l\mathcal C_c\l\mathbb R,\mathbb R\r,\anrm\r$
 Moment absolu d'ordre $p$;;Si $X$ est une variable aléatoire réelle, son moment absolu d'ordre $p$ est $\esp{\left|X\right|^p}$
 Inégalité de Markov;;$\p{X\geqslant x}\leqslant\frac{\esp X}x$\linebreak De plus, $\p{X\geqslant x}=\o[x\to+\infty]{\frac1x}$

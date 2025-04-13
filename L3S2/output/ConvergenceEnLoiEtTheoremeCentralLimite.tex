@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{analyse}\toggleanalysepar\usepackage{probas}
+\usepackage{analyse}\toggleanalysepar\usepackage{probas}\usepackage{usuelles}
 \hypersetup{pdftitle=Intégration et probabilités -- Convergence en loi et théorème central limite}
 \title{Intégration et probabilités\\\emph{Convergence en loi et théorème central limite}}
 \author{}
@@ -10,14 +10,30 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Convergence en loi}{1/5}
-\slider{$\l X_n\r$ une suite de variables aléatoires dans $\l E,d\r$ converge en loi vers $X$ si $\mathbb P_{X_n}$ converge étroitement vers $\mathbb P_X$\linebreak De manière équivalente, si pour toute $f$ continue et bornée, $\esp{f\l X_n\r}\xrightarrow[n\to+\infty]{}\esp{f\l X\r}$}{1/5}
-\slideq{Lemme de Scheffé}{2/5}
-\slider{Si les $\l f_n\r_{n\in\llb1,+\infty\rrb}$ sont des densités de mesures de probabilités et si pour $\lambda$ presque tout $x\in\mathbb R^d$, $f_n\l x\r\xrightarrow[n\to+\infty]{}f_\infty\l x\r$ alors, pour $\l X_n\r$ tel que $\mathbb P_{X_n}\l\dd x\r=f_n\l x\r\dd x$, alors $X_n\xrightarrow[n\to+\infty]{\text{loi}}X_\infty$}{2/5}
-\slideq{Convergence étroite}{3/5}
-\slider{$\l\mu_n\r_{n\in\llb1,+\infty\rrb}$ une suite de mesures de probabilités sur un espace métrique $\l E,d\r$ converge étroitement vers $\mu_\infty$ si pour toute $f$ continue et bornée alors $\int[x][E][][\mu_n]{f\l x\r}\xrightarrow[n\to+\infty]{}\int[x][E][][\mu_\infty]{f\l x\r}$}{3/5}
-\slideq{Convergence étroite pour des variables aléatoires à valeurs dans $\mathbb N$}{4/5}
-\slider{Si $\l X_n\r_{n\in\llb1,+\infty\rrb}$ sont des variables aléatoires à valeurs dans $\mathbb N$ alors $X_n\xrightarrow[n\to+\infty]{\text{loi}}X_\infty$ si et seulement si, pour tout $x\in\mathbb N$, $\p{X_n=k}\xrightarrow[n\to+\infty]{}\p{X_\infty=k}$}{4/5}
-\slideq{Lien entre convergence en probabilités et convergence en loi}{5/5}
-\slider{Si $\l X_n\r$ converge en probabilités vers $X$ sur $\l E,d\r$ alors $\l X_n\r$ converge en loi vers $X$\linebreak Si $\l X_n\r$ converge en loi vers une constante alors $\l X_n\r$ converge en probabilités vers cette constante}{5/5}
+\slideq{Caractérisation de la convergence en loi par la fonction de répartition}{1/13}
+\slider{Si $\l X_n\r_{n\in\mathbb N}$ et $X$ sont des variables aléatoires réelles, alors $X_n\xrightarrow[n\to+\infty]{\text{loi}}X$ si et seulement si pour tout $x$ tel que $F_X$ est continue en $x$, $F_{X_n}\l x\r\xrightarrow[n\to+\infty]{}F_X\l x\r$}{1/13}
+\slideq{Convergence en loi}{2/13}
+\slider{$\l X_n\r$ une suite de variables aléatoires dans $\l E,d\r$ converge en loi vers $X$ si $\mathbb P_{X_n}$ converge étroitement vers $\mathbb P_X$\linebreak De manière équivalente, si pour toute $f$ continue et bornée, $\esp{f\l X_n\r}\xrightarrow[n\to+\infty]{}\esp{f\l X\r}$}{2/13}
+\slideq{Théorème de convergence de Lévy\linebreak Version forte}{3/13}
+\slider{Si $\l X_n\r$ est une suite de variables aléatoires à valeurs dans $\mathbb R^d$ telle que $\varphi_{X_n}\l\xi\r\xrightarrow[n\to+\infty]{}\psi\l x\r$ continue en $0$ alors il existe une variable aléatoire $X$ telle que $\psi=\varphi_X$ et $X_n\xrightarrow[n\to+\infty]{\text{loi}}X$\linebreak Réciproquement, si $X_n\xrightarrow[n\to+\infty]{\text{loi}}X$ alors $\varphi_{X_n}\l\xi\r\xrightarrow[n\to+\infty]{}\varphi\l\xi\r$ pour tout $\xi\in\mathbb R^d$}{3/13}
+\slideq{Convergence étroite pour des variables aléatoires à valeurs dans $\mathbb N$}{4/13}
+\slider{Si $\l X_n\r_{n\in\llb1,+\infty\rrb}$ sont des variables aléatoires à valeurs dans $\mathbb N$ alors $X_n\xrightarrow[n\to+\infty]{\text{loi}}X_\infty$ si et seulement si, pour tout $x\in\mathbb N$, $\p{X_n=k}\xrightarrow[n\to+\infty]{}\p{X_\infty=k}$}{4/13}
+\slideq{Conséquence du théorème de Helly pour la convergence en probabilités}{5/13}
+\slider{Si $\l X_n\r$ est une suite de variables aléatoires à valeurs dans $\mathbb R$ (ou $\mathbb R^d$), si $\sup{\p{\left|X_n\right|>K}}\xrightarrow[K\to+\infty]{}0$ alors il existe $\l X_{n_k}\r$ qui converge en loi vers $X$}{5/13}
+\slideq{Théorème de convergence de Lévy\linebreak Version faible}{6/13}
+\slider{Si $\l X_n\r$ est une suite de variables aléatoires à valeurs dans $\mathbb R^d$ telle que $\varphi_{X_n}\l\xi\r\xrightarrow[n\to+\infty]{}\varphi_X\l x\r$ alors $X_n\xrightarrow[n\to+\infty]{\text{loi}}X$\linebreak Réciproquement, si $X_n\xrightarrow[n\to+\infty]{\text{loi}}X$ alors $\varphi_{X_n}\l\xi\r\xrightarrow[n\to+\infty]{}\varphi\l\xi\r$ pour tout $\xi\in\mathbb R^d$}{6/13}
+\slideq{Stabilité de la convergence en loi}{7/13}
+\slider{Si $X_n\xrightarrow[n\to+\infty]{\text{loi}}X_\infty$ et $f\in\mathcal C_b\l E,F\r$ avec $F$ un espace métrique alors $f\l X_n\r\xrightarrow[n\to+\infty]{\text{loi}}f\l X_\infty\r$}{7/13}
+\slideq{Restriction des fonctions test pour la convergence en probabilités sur $\mathbb R^d$}{8/13}
+\slider{Si $H$ est un ensemble de fonctions mesurables $\mathbb R^d\to\mathbb R$ dont l'adhérence pour $\anrm\cdot$ contient $\mathcal C_c\l\mathbb R^d,\mathbb R\r$ alors si $\l X_n\r_{n\in\mathbb N}$ et $X$ sont des variables aléatoires dans $\mathbb R^d$, si $\esp{f\l X_n\r}\xrightarrow[n\to+\infty]{}\esp{f\l X\r}$ pour tout $f\in H$ alors $X_n\xrightarrow[n\to+\infty]{\text{loi}}X$}{8/13}
+\slideq{Théorème de Portemanteau}{9/13}
+\slider{{\normalsize Si $\l X_n\r_{n\in\mathbb N}$ et $X$ sont des variables à valeurs dans $\l E,d\r$ métrique, il y a équivalence entre\linebreak$X_n\xrightarrow[n\to+\infty]{\text{loi}}X$\linebreak$\forall f\!:\!E\to\mathbb R$, $1$-lipschitzienne bornée, $\esp{f\l X_n\r}\xrightarrow[n\to+\infty]{}\esp{f\l X\r}$\linebreak$\forall O\subset E$ ouvert, $\limi[n\to+\infty]{\p{X_n\in O}}\geqslant\p{X\in O}$\linebreak$\forall F\subset E$ fermé, $\lims[n\to+\infty]{\p{X_n\in F}}\leqslant\p{X\in F}$\linebreak$\forall A\in\mathcal B\l E\r$, $\p{X\in\partial A}=0\Rightarrow\lim[n\to+\infty]{\p{X_n\in A}}=\p{X\in A}$\linebreak$\forall f\!:\!E\to\mathbb R$ bornée, continue $\mathbb P_X$-pp, $\esp{f\l X_n\r}\xrightarrow[n\to+\infty]{}\esp{f\l X\r}$}}{9/13}
+\slideq{Lien entre convergence en probabilités et convergence en loi}{10/13}
+\slider{Si $\l X_n\r$ converge en probabilités vers $X$ sur $\l E,d\r$ alors $\l X_n\r$ converge en loi vers $X$\linebreak Si $\l X_n\r$ converge en loi vers une constante alors $\l X_n\r$ converge en probabilités vers cette constante}{10/13}
+\slideq{Lemme de Scheffé}{11/13}
+\slider{Si les $\l f_n\r_{n\in\llb1,+\infty\rrb}$ sont des densités de mesures de probabilités et si pour $\lambda$ presque tout $x\in\mathbb R^d$, $f_n\l x\r\xrightarrow[n\to+\infty]{}f_\infty\l x\r$ alors, pour $\l X_n\r$ tel que $\mathbb P_{X_n}\l\dd x\r=f_n\l x\r\dd x$, alors $X_n\xrightarrow[n\to+\infty]{\text{loi}}X_\infty$}{11/13}
+\slideq{Convergence étroite}{12/13}
+\slider{$\l\mu_n\r_{n\in\llb1,+\infty\rrb}$ une suite de mesures de probabilités sur un espace métrique $\l E,d\r$ converge étroitement vers $\mu_\infty$ si pour toute $f$ continue et bornée alors $\int[x][E][][\mu_n]{f\l x\r}\xrightarrow[n\to+\infty]{}\int[x][E][][\mu_\infty]{f\l x\r}$}{12/13}
+\slideq{Théorème de sélection de Helly}{13/13}
+\slider{Si $\l F_n\r$ est une suite de fonctions de répartition alors il existe $\l F_{n_k}\r$ qui converge simplement vers $F$ croissante, continue à droite et à valeurs dans $\left[0,1\right]$ tel que pour tout $x$ tel que $F_X$ est continue en $x$, $F_{X_n}\l x\r\xrightarrow[n\to+\infty]{}F_X\l x\r$}{13/13}
 \end{document}
