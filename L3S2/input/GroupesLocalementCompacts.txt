@@ -8,6 +8,9 @@ Propriétés d'un sous-groupe fermé d'un groupe localement compact;;Si $G$ est 
 Espace $\sigma$-compact;;Espace $X$ tel que $X=\bigcup{n\in\mathbb N}{}{K_n}$ avec les $K_n$ compacts
 Propriétés des sous-groupes d'un groupe localement compact et $\sigma$-compact;;Si $H$ est un sous-groupe ouvert de $G$ alors $H$ st d'indice au plus dénombrable\linebreak Si $H$ est un sous-groupe fermé de $G$ alors $H$ est ouvert
 Théorème de van Dantzig;;Si $G$ est un groupe localement compact totalement discontinu alors pour tout voisinage $U$ de $1$ dans $G$, il existe un sous-groupe $V$ compact et ouvert de $G$ et tel que $V\subset U$
-Groupe profini;;$G$ est profini s'il est isomorphe à un sous-groupe fermé d'un produit de groupes finis\linebreak Il existe $\l F_i\r_{i\in I}$ finis et un morphisme $\varphi\!:\!G\to\prod{i\in I}{}{F_i}$ injectif et continu tel que $\varphi\l G\r$ soit un sous-groupe fermé de $\prod{i\in I}{}{F_i}$ et $\varphi\!:\!G\to\varphi\l G\r$ soit un homéomorphisme
+Isomorphisme de groupes topologiques;;$G_1$ et $G_2$ sont isomorphes s'il existe $\varphi\!:\!G_1\to G_2$ qui est morphisme de groupes et un homéomorphisme
+Groupe profini;;$G$ est profini s'il est isomorphe (en tant que groupe topologique) à un sous-groupe fermé d'un produit de groupes finis
 CNG pour avoir un groupe profini;;$G$ est compact et totalement discontinu
 Propriété de $\Co[G]H=\bigcap{g\in G}{}{gHg^{-1}}$;;$\Co[G]H$ est d'indice fini dans $G$ et $\Co[G]H\leqslant H$
+CNS de $X$ séparable si $X$ est métrisable et localement compact;;$X$ admet une base dénombrable d'ouverts\linebreak$X$ est $\sigma$-compact
+Théorème de Kakutani-Kodaira;;Soit $G$ un groupe localement compact et $\sigma$-compact, alors pour tout voisinage $U$ de $1$, il existe un sous-groupe normal dans $G$ tel que $K\subset U$ et $G/K$ est métrisable (et $G/K$ est donc séparable)

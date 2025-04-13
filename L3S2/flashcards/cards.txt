@@ -36,9 +36,11 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S2/flashcards/ConcentrationDeLaMesure/MethodesEntropiques
 20250315102428
 ../L3S2/flashcards/GroupesLocalementCompacts/GroupesLocalementCompacts
-20250406160631
+20250413143517
 ../L3S2/flashcards/GroupesLocalementCompacts/GroupesTopologiques
 20250406134957
+../L3S2/flashcards/GroupesLocalementCompacts/NombresPAdiques
+20250413152020
 ../L3S2/flashcards/GroupesLocalementCompacts/Prerequis
 20250406102204
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites

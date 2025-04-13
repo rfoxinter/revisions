@@ -1,0 +1,13 @@
+Groupes localement compacts -- Nombres p-adiques!!ttleGroupes localement compacts -- Nombres \textit{p}-adiques
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators,arithmetique,analyse,usuelles}\newcommand{\zz}[1][p]{\mathbb Z_{#1}}
+$\zz$;;$\left\{\l x_n\r\in\prod{n\geqslant1}{}{\mathbb Z/p^n\mathbb Z},\forall n\in\mathbb N^*,\cgr{x_{n+1}}{x_n}{p^n}\right\}$\linebreak C'est un anneau intègre pour les opérations coordonnée par coordonnée\linebreak Le morphisme d'anneau $\appl{i}{\mathbb Z}{\zz}{x}{\l x\bmod p^n\r}$ est injectif
+Unités $p$-adiques;;$\zz^*$\linebreak$\zz^*=\left\{\l x_n\r\in\zz,x_1\neq0\right\}$
+Décoposition classique d'un élément de $\zz$;;$u\times p^n$ où $u\in\zz^*$
+Valuation $p$-adique;;$v_p\l x\r$ est le plus petit $n\in\mathbb N$ pour lequel $x=u\times p^n$ avec $u\in\zz^*$\linebreak$v_p\l0\r=0$\linebreak$v_p\l xy\r=v_p\l x\r +v_p\l y\r$\linebreak$v_p\l x+y\r\geqslant\min{v_p\l x\r,v_p\l y\r}$
+Distance sur $\zz$;;$\appl{d}{\zz\times\zz}{\mathbb{R}_+}{\l x,y\r}{\left|x-y\right|_p=p^{-v_p\l x-y\r}}$\linebreak C'est une distance ultramétrique invariante par translation
+$\mathcal B_F\l x,p^n\r$;;$x+p^n\zz$
+$\mathcal B_O\l x,r\r$;;$\mathcal B_F\l x,p^{-m}\r$ où $m=\min{\left\{n\in\mathbb N,p^{-n}\leqslant r\right\}}$
+Propriétés topologiques de $\mathcal B_F\l x,r\r$ et $\mathcal B_O\l x,r\r$;;Ce sont des ouverts-fermés
+Propriété de la topologie induite sur $\zz$ par sa distance;;C'est la topologie induite par $\prod{n\geqslant1}{}{\mathbb Z/p^n\mathbb Z}$\linebreak En particulier, $\zz$ est compact
