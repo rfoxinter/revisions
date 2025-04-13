@@ -40,7 +40,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S2/flashcards/GroupesLocalementCompacts/GroupesTopologiques
 20250406134957
 ../L3S2/flashcards/GroupesLocalementCompacts/NombresPAdiques
-20250413152020
+20250413180028
 ../L3S2/flashcards/GroupesLocalementCompacts/Prerequis
 20250406102204
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites

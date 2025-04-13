@@ -53,6 +53,7 @@ def remove_special_chars(s:str) -> str:
 
 def latexparse(s0:str) -> str:
     if importregex:
+        s0 = sb("'", "\u2019", s0)
         pattern = r"\\.*?({([^{}]*+(?:(?1)[^{}]*)*+)})"
         strings = [s0]
         extracted = []
@@ -78,7 +79,6 @@ def latexparse(s0:str) -> str:
                 s0 = s0.replace(subs, "")
         s0 = sb("{", "", s0)
         s0 = sb("}", "", s0)
-        s0 = sb("'", "\u2019", s0)
     return s0
 
 def output_f(files:list) -> list:
