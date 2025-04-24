@@ -37,7 +37,7 @@
 \let\propenumerate\relax
 \newlist{propenumerate}{enumerate}{10}
 \newcommand{\itemnb}[1]{(\oldstylenums{#1})}
-\setlist[propenumerate]{leftmargin=0.075\linewidth,topsep=0pt,nosep,label=\itemnb{\arabic*}}
+\setlist[propenumerate]{leftmargin=0.075\linewidth,topsep=0pt,nosep,label=\itemnb{\arabic*},beginpenalty=999}
 \setlist[enumerate]{topsep=0pt,nosep,label=\itemnb{\arabic*}}
 \setlist[itemize]{topsep=0pt,nosep,label=$\to$}
 \let\prvitemize\relax
