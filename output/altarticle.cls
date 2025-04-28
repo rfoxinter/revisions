@@ -729,7 +729,7 @@
 \let\subcaption\relax
 \newcommand{\subcaption}[2][]{%
     \@ifundefined{l@sub\@captype}{%
-        \expandafter\newcommand*\csname l@sub\@captype\endcsname{\@dottedtocline{2}{3.8em}{3.2em}}%
+        \def\l@sub\@captype{\@dottedtocline{2}{3.8em}{3.2em}}%
     }{}%
     \@ifundefined{c@sub\@captype}{%
         \newcounter{sub\@captype}%
@@ -743,7 +743,8 @@
         \def\argI{#1}%
     \fi%
     \addtocounter{\@captype}{1}%
-    \label{\@captype{} \argI}\addcontentsline{\csname ext@\@captype\endcsname}{sub\@captype}{\protect\numberline{\csname the\@captype\endcsname}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\argI}}}\noexpand\expandafter\noexpand\MakeUppercase\@captype{} \thesubfigure{} -- \textsl{#2}%
+    \refstepcounter{sub\@captype}%
+    \label{\@captype{} \argI}\addcontentsline{\csname ext@\@captype\endcsname}{sub\@captype}{\protect\numberline{\csname the\@captype\endcsname}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\argI}}}\expandafter\MakeUppercase\@captype{} \csname thesub\@captype\endcsname{} -- \textsl{#2}%
     \addtocounter{\@captype}{-1}%
 }
 
