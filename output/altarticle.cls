@@ -735,8 +735,8 @@
         \newcounter{sub\@captype}%
         \counterwithin{sub\@captype}{\@captype}%
         \setcounter{sub\@captype}0%
+        \global\expandafter\edef\csname sub\@captype autorefname\endcsname{\@captype}%
     }{}%
-    \global\expandafter\edef\csname \@captype autorefname\endcsname{\@captype}%
     \if\relax\detokenize{#1}\relax%
         \def\argI{#2}%
     \else%
@@ -744,7 +744,7 @@
     \fi%
     \addtocounter{\@captype}{1}%
     \refstepcounter{sub\@captype}%
-    \label{\@captype{} \argI}\addcontentsline{\csname ext@\@captype\endcsname}{sub\@captype}{\protect\numberline{\csname the\@captype\endcsname}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\argI}}}\expandafter\MakeUppercase\@captype{} \csname thesub\@captype\endcsname{} -- \textsl{#2}%
+    \label{\@captype \argI}\addcontentsline{\csname ext@\@captype\endcsname}{sub\@captype}{\protect\numberline{\csname the\@captype\endcsname}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\argI}}}\expandafter\MakeUppercase\@captype{} \csname thesub\@captype\endcsname{} -- \textsl{#2}%
     \addtocounter{\@captype}{-1}%
 }
 
