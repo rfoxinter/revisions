@@ -1334,7 +1334,7 @@ space before arrow={0.2ex},
         \DOTSB\makebigop[#1]{#2}%
     }%
     \expandafter\newcommand\csname #3\endcsname[3]{%
-        {\bigopdisplay\csname #3symb\endcsname\bigoplimits_{##1}^{##2}}\bigopleftp##3\bigoprightp%
+        {\bigopdisplay\csname #3symb\endcsname\bigoplimits_{##1}^{##2}{}}\bigopleftp##3\bigoprightp%
     }%
 }
 \makebigopcommand{\mathcal K}{fracK}
