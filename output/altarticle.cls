@@ -1316,13 +1316,13 @@ space before arrow={0.2ex},
 \newcommand{\autobigoplimits}{\def\bigoplimits{}}
 \newcommand{\togglebigopdisplay}{\altarticle@comparestring{\bigopdisplay}{}{\def\bigopdisplay{\displaystyle}}{\def\bigopdisplay{}}}
 \newcommand{\autobigopdisplay}{\def\bigopdisplay{}}
-\let\oldsum\sum\renewcommand\sum[3]{{\bigopdisplay\oldsum\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
-\let\oldprod\prod\renewcommand\prod[3]{{\bigopdisplay\oldprod\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
-\let\oldcap\bigcap\renewcommand\bigcap[3]{{\bigopdisplay\oldcap\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
-\let\oldcup\bigcup\renewcommand\bigcup[3]{{\bigopdisplay\oldcup\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
-\let\oldbigsqcup\bigsqcup\renewcommand\bigsqcup[3]{{\bigopdisplay\oldbigsqcup\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
-\let\olduplus\biguplus\renewcommand\biguplus[3]{{\bigopdisplay\olduplus\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
-\newcommand\bigop[3]{{\bigopdisplay\bigoplus\bigoplimits_{#1}^{#2}}\bigopleftp#3\bigoprightp}
+\let\oldsum\sum\renewcommand\sum[3]{{\bigopdisplay\oldsum\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
+\let\oldprod\prod\renewcommand\prod[3]{{\bigopdisplay\oldprod\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
+\let\oldcap\bigcap\renewcommand\bigcap[3]{{\bigopdisplay\oldcap\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
+\let\oldcup\bigcup\renewcommand\bigcup[3]{{\bigopdisplay\oldcup\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
+\let\oldbigsqcup\bigsqcup\renewcommand\bigsqcup[3]{{\bigopdisplay\oldbigsqcup\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
+\let\olduplus\biguplus\renewcommand\biguplus[3]{{\bigopdisplay\olduplus\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
+\newcommand\bigop[3]{{\bigopdisplay\bigoplus\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
 
 \DeclareRobustCommand\makebigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}
 \newcommand{\bigop@}[2]{\bigop@@#1#2}
