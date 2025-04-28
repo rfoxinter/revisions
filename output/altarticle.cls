@@ -738,13 +738,13 @@
         \global\expandafter\edef\csname sub\@captype autorefname\endcsname{\@captype}%
     }{}%
     \if\relax\detokenize{#1}\relax%
-        \def\argI{#2}%
+        \def\argI{ #2}%
     \else%
-        \def\argI{#1}%
+        \def\argI{ #1}%
     \fi%
     \addtocounter{\@captype}{1}%
     \refstepcounter{sub\@captype}%
-    \label{\@captype \argI}\addcontentsline{\csname ext@\@captype\endcsname}{sub\@captype}{\protect\numberline{\csname the\@captype\endcsname}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\argI}}}\expandafter\MakeUppercase\@captype{} \csname thesub\@captype\endcsname{} -- \textsl{#2}%
+    \label{sub\@captype\argI}\addcontentsline{\csname ext@\@captype\endcsname}{sub\@captype}{\protect\numberline{\csname the\@captype\endcsname}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\argI}}}\expandafter\MakeUppercase\@captype{} \csname thesub\@captype\endcsname{} -- \textsl{#2}%
     \addtocounter{\@captype}{-1}%
 }
 
