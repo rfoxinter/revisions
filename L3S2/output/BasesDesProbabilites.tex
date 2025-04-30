@@ -10,64 +10,64 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Inégalité de Bienaymé-Tchebychev}{1/30}
-\slider{$\p{\left|X-\esp X\right|\geqslant x}\leqslant\frac{\var X}{x^2}$}{1/30}
-\slideq{$\var X$}{2/30}
-\slider{$\esp{\l X-\esp{X}\r^2}$}{2/30}
-\slideq{Transformée de Laplace}{3/30}
-\slider{$\mathcal L_X\l\lambda\r=\esp{\e^{-\lambda X}}$ pour $\lambda\geqslant0$\linebreak$\mathcal L_X\leqslant1$\linebreak On peut aussi définir $\mathcal L_X\in\mathbb R_+\cup\left\{+\infty\right\}$ pour $\lambda<0$\linebreak$\mathcal L_X$ caractérise la loi de $X$}{3/30}
-\slideq{Fonction caractéristique}{4/30}
-\slider{$\phi_X\l\xi\r=\esp{\e^{\i\xi\cdot X}}=\ff\mathbb P_X\l-\xi\r$\linebreak$\phi_X$ caractérise la loi de $X$}{4/30}
-\slideq{Inégalité de Markov}{5/30}
-\slider{$\p{X\geqslant x}\leqslant\frac{\esp X}x$\linebreak De plus, $\p{X\geqslant x}=\o[x\to+\infty]{\frac1x}$}{5/30}
-\slideq{Corrélation entre $X$ et $Y$}{6/30}
-\slider{$\cor XY=\frac{\cov XY}{\sqrt{\var X\var Y}}=\left\langle\frac{X-\esp X}{\anrm[L^2]X},\frac{Y-\esp Y}{\anrm[L^2]Y}\right\rangle_{L^2}$}{6/30}
-\slideq{Fonction génératrice}{7/30}
-\slider{Si $X$ est à valeurs dans $\mathbb N$, $g_X\l s\r=\sum{n=0}{+\infty}{\p{X=n}s^n}=\esp{s^X}$\linebreak$g_X$ est continue sur $\bar{D\l0,1\r}$ et est holomorphe sur $D\l 0,1\r$\linebreak$\p{X=n}=\frac{g_s^{\l n\r}}{n!}$}{7/30}
-\slideq{$X\sim\bin[n]p$}{8/30}
-\slider{$X\l\Omega\r=\llb0,n\rrb$\linebreak$\p{X=k}=\binom nkp^kq^{n-k}$\linebreak$\esp X=np$\linebreak$\var X=npq$\linebreak$g_X\l t\r=\l pt+q\r^n$}{8/30}
-\slideq{Caractérisation de la loi par les espérances}{9/30}
-\slider{Si $X$ est une variable aléatoire dans $\l E,\mathcal E\r$ alors la loi de $\mathbb P_X$ ext caractérisé par les $\left\{\esp{f\l X\r},f\!:\!E\to\mathbb R\text{ mesurable}\right\}$ ou plus simplement par les $\left\{\esp{f\l X\r},f\in H\right\}$ où $H$ est un sous-ensemble dense de $\l\mathcal C_c\l\mathbb R,\mathbb R\r,\anrm\r$}{9/30}
-\slideq{Espace de probabilités}{10/30}
-\slider{Espace mesuré $\l\Omega,\mathcal F,\mathbb P\r$ où $\mathbb P$ est une mesure de probabilités\linebreak$\Omega$ est appelé univers }{10/30}
-\slideq{Inégalité de Chernov}{11/30}
-\slider{$\p{X\geqslant x}\leqslant\e^{-\lambda x}\esp{\e^{\lambda X}}$}{11/30}
-\slideq{$\cov XY$}{12/30}
-\slider{$\esp{\l X-\esp X\r\l Y-\esp Y\r}$}{12/30}
-\slideq{$X\sim\normal m\sigma$}{13/30}
-\slider{Loi de densité $\frac{\e^{-\oldfrac{\l x-m\r^2}{2\sigma^2}}}{\sqrt{2\pi\sigma^2}}$ par rapport à $\lambda$\linebreak$\esp X=m$\linebreak$\var X=\sigma$}{13/30}
-\slideq{$X\sim\unif{\llb1,n\rrb}$}{14/30}
-\slider{$X\l\Omega\r=\llb1,n\rrb$\linebreak$\p{X=k}=\frac1n$\linebreak$\esp X=\frac{n+1}{2}$\linebreak$\var X=\frac{n^2-1}{12}$\linebreak$g_X\l t\r=\frac1n\frac{t^n-1}{t-1}$}{14/30}
-\slideq{Matrice des variances-covariances}{15/30}
-\slider{$\l\cov{X_i}{X_j}\r_{\l i,j\r\in\llb1,n\rrb^2}\in\mathcal S_n^+\l\mathbb R\r$}{15/30}
-\slideq{$X\sim\expon\theta$}{16/30}
-\slider{Loi de densité $\theta\e^{-\theta x}$ par rapport à $\lambda$\linebreak$\esp X=\frac1\theta$\linebreak$\var X=\frac{1}{\theta^2}$}{16/30}
-\slideq{$X\sim\unif K$}{17/30}
-\slider{Loi de densité $\frac{\1 Kx}{\lambda\l K\r}$ par rapport à $\lambda$}{17/30}
-\slideq{$\esp X$}{18/30}
-\slider{$\int[\omega][\Omega][][\mathbb P]{X\l\omega\r}$}{18/30}
-\slideq{Fonction de répartition}{19/30}
-\slider{$F_X\l x\r=\mathbb P\l X\leqslant x\r$\linebreak$F_X$ catactérise entièrement la loi de $X$\linebreak$F_X$ est croissante, continue à droite et de limite $0$ en $-\infty$ et $1$ en $+\infty$}{19/30}
-\slideq{Moment factoriel}{20/30}
-\slider{$\esp{X\l X-1\r\cdots\l X-n+1\r}=g_X^{\l n\r}\l1^-\r$}{20/30}
-\slideq{$X\sim\unif E$}{21/30}
-\slider{$X\l\Omega\r=E$\linebreak$\p{X=e}=\frac1{\left|E\right|}$}{21/30}
-\slideq{$\alpha$-quartile}{22/30}
-\slider{Si $X$ est une variable aléatoire réelle et $\alpha\in\left]0,1\right[$, un $\alpha$-quartile de la loi de $X$ est un nombre $q\in\mathbb R$ tel que $\p{X\leqslant q}\geqslant\alpha$ et $\p{X\geqslant q}\geqslant1-\alpha$\linebreak Si $\alpha=\tfrac12$, on parle de médiane}{22/30}
-\slideq{Variable aléatoire}{23/30}
-\slider{Application mesurable $X\!:\!\l\Omega,\mathbb R\r\to\l E,\mathcal E\r$ où $\l E,\mathcal E\r$ est un espace mesurable}{23/30}
-\slideq{$X\sim\bin p$}{24/30}
-\slider{$X\l\Omega\r=\left\{0,1\right\}$\linebreak$\p{X=1}=p$\linebreak$\esp X=p$\linebreak$\var X=pq$\linebreak$g_X\l t\r=pt+q$}{24/30}
-\slideq{Inégalité de Markov généralisée pour l'ordre $p$}{25/30}
-\slider{Si $X$ admet un moment d'ordre $p$, $\p{X\geqslant x}\leqslant\frac{\esp{X^p}}{x^p}$\linebreak De plus, $\p{X\geqslant x}=\o[x\to+\infty]{\frac1{x^p}}$}{25/30}
-\slideq{Moment absolu d'ordre $p$}{26/30}
-\slider{Si $X$ est une variable aléatoire réelle, son moment absolu d'ordre $p$ est $\esp{\left|X\right|^p}$}{26/30}
-\slideq{$X\sim\poiss\lambda$}{27/30}
-\slider{$X\l\Omega\r=\mathbb N$\linebreak$\p{X=k}=\e^{-\lambda}\frac{\lambda^k}{k!}$\linebreak$\esp X=\lambda$\linebreak$\var X=\lambda$\linebreak$g_X\l t\r=\e^{\lambda\l t-1\r}$}{27/30}
-\slideq{Formule de transfert}{28/30}
-\slider{$\esp{f\l X\r}=\int[\omega][\Omega][][\mathbb P]{f\l X\l\omega\r\r}=\int[x][E][][\mathbb P_X]{f\l x\r}$}{28/30}
-\slideq{$X\sim\geom p$}{29/30}
-\slider{$X\l\Omega\r=\mathbb N^*$\linebreak$\p{X=k}=pq^{k-1}$\linebreak$\esp X=\frac1p$\linebreak$\var X=\frac{q}{p^2}$\linebreak$g_X\l t\r=\frac{pt}{1-qt}$}{29/30}
-\slideq{Loi d'une variable aléatoire $X$}{30/30}
-\slider{Mesure image $\mathbb P_X$ de $\mathbb P$ par $X$\linebreak$\forall A\in\mathcal E$, $\p[X]A=\mathbb P\l X^{-1}\l A\r\r:=\p{X\in A}$}{30/30}
+\slideq{$X\sim\poiss\lambda$}{1/30}
+\slider{$X\l\Omega\r=\mathbb N$\linebreak$\p{X=k}=\e^{-\lambda}\frac{\lambda^k}{k!}$\linebreak$\esp X=\lambda$\linebreak$\var X=\lambda$\linebreak$g_X\l t\r=\e^{\lambda\l t-1\r}$}{1/30}
+\slideq{$X\sim\expon\theta$}{2/30}
+\slider{Loi de densité $\theta\e^{-\theta x}$ par rapport à $\lambda$\linebreak$\esp X=\frac1\theta$\linebreak$\var X=\frac{1}{\theta^2}$}{2/30}
+\slideq{$X\sim\unif E$}{3/30}
+\slider{$X\l\Omega\r=E$\linebreak$\p{X=e}=\frac1{\left|E\right|}$}{3/30}
+\slideq{Formule de transfert}{4/30}
+\slider{$\esp{f\l X\r}=\int[\omega][\Omega][][\mathbb P]{f\l X\l\omega\r\r}=\int[x][E][][\mathbb P_X]{f\l x\r}$}{4/30}
+\slideq{Fonction caractéristique}{5/30}
+\slider{$\phi_X\l\xi\r=\esp{\e^{\i\xi\cdot X}}=\mathcal F\mathbb P_X\l-\xi\r$\linebreak$\phi_X$ caractérise la loi de $X$}{5/30}
+\slideq{Caractérisation de la loi par les espérances}{6/30}
+\slider{Si $X$ est une variable aléatoire dans $\l E,\mathcal E\r$ alors la loi de $\mathbb P_X$ ext caractérisé par les $\left\{\esp{f\l X\r},f\!:\!E\to\mathbb R\text{ mesurable}\right\}$ ou plus simplement par les $\left\{\esp{f\l X\r},f\in H\right\}$ où $H$ est un sous-ensemble dense de $\l\mathcal C_c\l\mathbb R,\mathbb R\r,\anrm\r$}{6/30}
+\slideq{Loi d'une variable aléatoire $X$}{7/30}
+\slider{Mesure image $\mathbb P_X$ de $\mathbb P$ par $X$\linebreak$\forall A\in\mathcal E$, $\p[X]A=\mathbb P\l X^{-1}\l A\r\r:=\p{X\in A}$}{7/30}
+\slideq{$\cov XY$}{8/30}
+\slider{$\esp{\l X-\esp X\r\l Y-\esp Y\r}$}{8/30}
+\slideq{Variable aléatoire}{9/30}
+\slider{Application mesurable $X\!:\!\l\Omega,\mathbb R\r\to\l E,\mathcal E\r$ où $\l E,\mathcal E\r$ est un espace mesurable}{9/30}
+\slideq{$X\sim\bin p$}{10/30}
+\slider{$X\l\Omega\r=\left\{0,1\right\}$\linebreak$\p{X=1}=p$\linebreak$\esp X=p$\linebreak$\var X=pq$\linebreak$g_X\l t\r=pt+q$}{10/30}
+\slideq{Fonction de répartition}{11/30}
+\slider{$F_X\l x\r=\mathbb P\l X\leqslant x\r$\linebreak$F_X$ catactérise entièrement la loi de $X$\linebreak$F_X$ est croissante, continue à droite et de limite $0$ en $-\infty$ et $1$ en $+\infty$}{11/30}
+\slideq{$X\sim\normal m\sigma$}{12/30}
+\slider{Loi de densité $\frac{\e^{-\oldfrac{\l x-m\r^2}{2\sigma^2}}}{\sqrt{2\pi\sigma^2}}$ par rapport à $\lambda$\linebreak$\esp X=m$\linebreak$\var X=\sigma$}{12/30}
+\slideq{Inégalité de Markov}{13/30}
+\slider{$\p{X\geqslant x}\leqslant\frac{\esp X}x$\linebreak De plus, $\p{X\geqslant x}=\o[x\to+\infty]{\frac1x}$}{13/30}
+\slideq{$X\sim\unif K$}{14/30}
+\slider{Loi de densité $\frac{\1 Kx}{\lambda\l K\r}$ par rapport à $\lambda$}{14/30}
+\slideq{Moment absolu d'ordre $p$}{15/30}
+\slider{Si $X$ est une variable aléatoire réelle, son moment absolu d'ordre $p$ est $\esp{\left|X\right|^p}$}{15/30}
+\slideq{$X\sim\geom p$}{16/30}
+\slider{$X\l\Omega\r=\mathbb N^*$\linebreak$\p{X=k}=pq^{k-1}$\linebreak$\esp X=\frac1p$\linebreak$\var X=\frac{q}{p^2}$\linebreak$g_X\l t\r=\frac{pt}{1-qt}$}{16/30}
+\slideq{Inégalité de Chernov}{17/30}
+\slider{$\p{X\geqslant x}\leqslant\e^{-\lambda x}\esp{\e^{\lambda X}}$}{17/30}
+\slideq{Inégalité de Bienaymé-Tchebychev}{18/30}
+\slider{$\p{\left|X-\esp X\right|\geqslant x}\leqslant\frac{\var X}{x^2}$}{18/30}
+\slideq{Inégalité de Markov généralisée pour l'ordre $p$}{19/30}
+\slider{Si $X$ admet un moment d'ordre $p$, $\p{X\geqslant x}\leqslant\frac{\esp{X^p}}{x^p}$\linebreak De plus, $\p{X\geqslant x}=\o[x\to+\infty]{\frac1{x^p}}$}{19/30}
+\slideq{$X\sim\bin[n]p$}{20/30}
+\slider{$X\l\Omega\r=\llb0,n\rrb$\linebreak$\p{X=k}=\binom nkp^kq^{n-k}$\linebreak$\esp X=np$\linebreak$\var X=npq$\linebreak$g_X\l t\r=\l pt+q\r^n$}{20/30}
+\slideq{Espace de probabilités}{21/30}
+\slider{Espace mesuré $\l\Omega,\mathcal F,\mathbb P\r$ où $\mathbb P$ est une mesure de probabilités\linebreak$\Omega$ est appelé univers }{21/30}
+\slideq{Corrélation entre $X$ et $Y$}{22/30}
+\slider{$\cor XY=\frac{\cov XY}{\sqrt{\var X\var Y}}=\left\langle\frac{X-\esp X}{\anrm[L^2]X},\frac{Y-\esp Y}{\anrm[L^2]Y}\right\rangle_{L^2}$}{22/30}
+\slideq{$\alpha$-quartile}{23/30}
+\slider{Si $X$ est une variable aléatoire réelle et $\alpha\in\left]0,1\right[$, un $\alpha$-quartile de la loi de $X$ est un nombre $q\in\mathbb R$ tel que $\p{X\leqslant q}\geqslant\alpha$ et $\p{X\geqslant q}\geqslant1-\alpha$\linebreak Si $\alpha=\tfrac12$, on parle de médiane}{23/30}
+\slideq{Transformée de Laplace}{24/30}
+\slider{$\mathcal L_X\l\lambda\r=\esp{\e^{-\lambda X}}$ pour $\lambda\geqslant0$\linebreak$\mathcal L_X\leqslant1$\linebreak On peut aussi définir $\mathcal L_X\in\mathbb R_+\cup\left\{+\infty\right\}$ pour $\lambda<0$\linebreak$\mathcal L_X$ caractérise la loi de $X$}{24/30}
+\slideq{Fonction génératrice}{25/30}
+\slider{Si $X$ est à valeurs dans $\mathbb N$, $g_X\l s\r=\sum{n=0}{+\infty}{\p{X=n}s^n}=\esp{s^X}$\linebreak$g_X$ est continue sur $\bar{D\l0,1\r}$ et est holomorphe sur $D\l 0,1\r$\linebreak$\p{X=n}=\frac{g_s^{\l n\r}}{n!}$}{25/30}
+\slideq{$\esp X$}{26/30}
+\slider{$\int[\omega][\Omega][][\mathbb P]{X\l\omega\r}$}{26/30}
+\slideq{$\var X$}{27/30}
+\slider{$\esp{\l X-\esp{X}\r^2}$}{27/30}
+\slideq{$X\sim\unif{\llb1,n\rrb}$}{28/30}
+\slider{$X\l\Omega\r=\llb1,n\rrb$\linebreak$\p{X=k}=\frac1n$\linebreak$\esp X=\frac{n+1}{2}$\linebreak$\var X=\frac{n^2-1}{12}$\linebreak$g_X\l t\r=\frac1n\frac{t^n-1}{t-1}$}{28/30}
+\slideq{Moment factoriel}{29/30}
+\slider{$\esp{X\l X-1\r\cdots\l X-n+1\r}=g_X^{\l n\r}\l1^-\r$}{29/30}
+\slideq{Matrice des variances-covariances}{30/30}
+\slider{$\l\cov{X_i}{X_j}\r_{\l i,j\r\in\llb1,n\rrb^2}\in\mathcal S_n^+\l\mathbb R\r$}{30/30}
 \end{document}

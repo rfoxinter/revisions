@@ -21,7 +21,7 @@ $\alpha$-quartile;;Si $X$ est une variable aléatoire réelle et $\alpha\in\left
 Fonction de répartition;;$F_X\l x\r=\mathbb P\l X\leqslant x\r$\linebreak$F_X$ catactérise entièrement la loi de $X$\linebreak$F_X$ est croissante, continue à droite et de limite $0$ en $-\infty$ et $1$ en $+\infty$
 Fonction génératrice;;Si $X$ est à valeurs dans $\mathbb N$, $g_X\l s\r=\sum{n=0}{+\infty}{\p{X=n}s^n}=\esp{s^X}$\linebreak$g_X$ est continue sur $\bar{D\l0,1\r}$ et est holomorphe sur $D\l 0,1\r$\linebreak$\p{X=n}=\frac{g_s^{\l n\r}}{n!}$
 Moment factoriel;;$\esp{X\l X-1\r\cdots\l X-n+1\r}=g_X^{\l n\r}\l1^-\r$
-Fonction caractéristique;;$\phi_X\l\xi\r=\esp{\e^{\i\xi\cdot X}}=\ff\mathbb P_X\l-\xi\r$\linebreak$\phi_X$ caractérise la loi de $X$
+Fonction caractéristique;;$\phi_X\l\xi\r=\esp{\e^{\i\xi\cdot X}}=\mathcal F\mathbb P_X\l-\xi\r$\linebreak$\phi_X$ caractérise la loi de $X$
 Transformée de Laplace;;$\mathcal L_X\l\lambda\r=\esp{\e^{-\lambda X}}$ pour $\lambda\geqslant0$\linebreak$\mathcal L_X\leqslant1$\linebreak On peut aussi définir $\mathcal L_X\in\mathbb R_+\cup\left\{+\infty\right\}$ pour $\lambda<0$\linebreak$\mathcal L_X$ caractérise la loi de $X$
 $X\sim\unif E$;;$X\l\Omega\r=E$\linebreak$\p{X=e}=\frac1{\left|E\right|}$
 $X\sim\unif{\llb1,n\rrb}$;;$X\l\Omega\r=\llb1,n\rrb$\linebreak$\p{X=k}=\frac1n$\linebreak$\esp X=\frac{n+1}{2}$\linebreak$\var X=\frac{n^2-1}{12}$\linebreak$g_X\l t\r=\frac1n\frac{t^n-1}{t-1}$

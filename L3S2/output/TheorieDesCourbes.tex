@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{al}\usepackage{analyse}\usepackage[arc]{complexes}
+\usepackage{al}\usepackage{analyse}\usepackage[arc]{complexes}\usepackage{trigo}\usepackage{matrices}
 \hypersetup{pdftitle=Calcul différentiel -- Théorie des courbes}
 \title{Calcul différentiel\\\emph{Théorie des courbes}}
 \author{}
@@ -10,18 +10,40 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Paramétrage de la longueur d'arc}{1/7}
-\slider{$g=\varphi\circ\theta^{-1}$ pour $\varphi$ régulière, défini sur $\theta\l I\r$\linebreak$g'\l s\r=\frac{\varphi'\circ\theta\l s\r}{\anrm[\null]{\varphi'\circ\theta}}$\linebreak$\anrm[\null]{g'\l s\r}=1$}{1/7}
-\slideq{Abscisse curviligne de $\phi$}{2/7}
-\slider{$\theta\l t\r=\int[s][t_0][t]{\anrm[\null]{\varphi'\l s\r}}$\linebreak C'est la longueur algébrique de l'arc $\arc{\varphi\l t_0\r\varphi\l t\r}$}{2/7}
-\slideq{$T_{x_0}M$}{3/7}
-\slider{$\vect{\phi'\l t_0\r}$}{3/7}
-\slideq{Point régulier\linebreak Point singulier}{4/7}
-\slider{$t_o\in I$ est régulier pour $\varphi$ si $\phi'\l t\r\neq0$ et singulier sinon}{4/7}
-\slideq{Vecteurs tangent et normal}{5/7}
-\slider{Le vecteur tangent est $\tau\l s\r=f'\l s\r$ unitaire avec $f'$ le paramétrage de la longueur d'arc et le vecteur normal est $n\l s\r$ unitaire tel que $\l\tau\l s\r,n\l s\r\r$ soit une base orhtonormée directe}{5/7}
-\slideq{Courbe paramétrée}{6/7}
-\slider{Application $\varphi\!:\!I\to\mathbb R^n$ différentiable de classe $\mathcal C^k$ avec $I$ un intervalle ouvert de $\mathbb R$}{6/7}
-\slideq{Courbure algébrique}{7/7}
-\slider{$K\!:\!I\to\mathbb R$ tel que $\tau'\l s\r=K\l s\r n\l s\r$}{7/7}
+\slideq{Torsion pour une courbe $\phi$ birégulière de classe $\mathcal C^3$}{1/18}
+\slider{$\tau=\frac{\det{\phi'\middle|\phi''\middle|\phi'''}}{\anrm[]{\phi'\wedge\phi''}^2}$}{1/18}
+\slideq{Abscisse curviligne de $\phi$}{2/18}
+\slider{$\theta\l t\r=\int[s][t_0][t]{\anrm[\null]{\varphi'\l s\r}}$\linebreak C'est la longueur algébrique de l'arc $\arc{\varphi\l t_0\r\varphi\l t\r}$}{2/18}
+\slideq{Centre de courbure}{3/18}
+\slider{$C\l s\r=f\l s\r+\rho\l s\r n\l s\r$ où $f$ est la paramétrisation par la longueur d'arc}{3/18}
+\slideq{Expression de $N\l t\r$ en fonction de $T\l t\r$}{4/18}
+\slider{$\frac{T'\l s\r}{T\l s\r}$}{4/18}
+\slideq{Expression de la courbure $\kappa\l r\r$ en fonction de $T\l r\r$}{5/18}
+\slider{$\kappa\l t\r$ est le réel tel que $T'\l s\r=\kappa\l s\r N\l s\r$}{5/18}
+\slideq{Courbure algébrique}{6/18}
+\slider{$K\!:\!I\to\mathbb R$ tel que $\tau'\l s\r=K\l s\r n\l s\r$}{6/18}
+\slideq{Courbure pour une courbe $\phi$ régulière de classe $\mathcal C^2$}{7/18}
+\slider{$\kappa=\frac{\anrm[\null]{\phi'\wedge\phi}}{\anrm[]{\phi'}^3}$}{7/18}
+\slideq{Vecteurs tangent et normal}{8/18}
+\slider{Le vecteur tangent est $\tau\l s\r=f'\l s\r$ unitaire avec $f'$ le paramétrage de la longueur d'arc et le vecteur normal est $n\l s\r$ unitaire tel que $\l\tau\l s\r,n\l s\r\r$ soit une base orhtonormée directe}{8/18}
+\slideq{Point régulier\linebreak Point singulier}{9/18}
+\slider{$t_o\in I$ est régulier pour $\varphi$ si $\phi'\l t\r\neq0$ et singulier sinon}{9/18}
+\slideq{Équation différentielle vérifiée par \tmatrix({T\\N\\B\\})}{10/18}
+\slider{$\tmatrix({T\\N\\B\\})'=\tmatrix({0\&\kappa\&0\\-\kappa\&0\&\tau\\0\&-\tau\&0\\})\tmatrix({T\\N\\B\\})$\linebreak$\tau=\left\langle N',B\right\rangle$ est la torsion}{10/18}
+\slideq{Courbure algébrique en fonction de $\l x\l t\r,y\l t\r\r$}{11/18}
+\slider{Si $t\mapsto\l x\l t\r,y\l t\r\r$ est une fonction de classe $\mathcal C^2$, $K\l t\r=\frac{x'\l t\r y''\l t\r-x''\l t\r y'\l t\r}{\l x'\l t\r^2+y'\l t\r^2\r^{\oldfrac32}}$}{11/18}
+\slideq{Repère binormal}{12/18}
+\slider{$B\l s\r=T\l s\r\wedge N\l s\r$ est le vecteur binormal\linebreak C'est le vecteur tel que $\l\phi\l s\r,T\l s\r,N\l s\r,B\l s\r\r$ est une base orhtonormée directe}{12/18}
+\slideq{Détermination angulaire}{13/18}
+\slider{$\alpha\!:\!I\to\mathbb R$ tel que $\vec T\l t\r=\cos{\alpha\l t\r}\vec\imath+\sin{\alpha\l t\r}\vec\jmath$ où $T$ est le vecteur tangent unitaire\linebreak$K=\der[][s]\alpha{}$}{13/18}
+\slideq{$T_{x_0}M$}{14/18}
+\slider{$\vect{\phi'\l t_0\r}$}{14/18}
+\slideq{Courbe paramétrée}{15/18}
+\slider{Application $\varphi\!:\!I\to\mathbb R^n$ différentiable de classe $\mathcal C^k$ avec $I$ un intervalle ouvert de $\mathbb R$}{15/18}
+\slideq{Rayon de courbure}{16/18}
+\slider{$\rho\l s\r=\frac1{K\l s\r}$}{16/18}
+\slideq{Paramétrage de la longueur d'arc}{17/18}
+\slider{$g=\varphi\circ\theta^{-1}$ pour $\varphi$ régulière, défini sur $\theta\l I\r$\linebreak$g'\l s\r=\frac{\varphi'\circ\theta\l s\r}{\anrm[\null]{\varphi'\circ\theta}}$\linebreak$\anrm[\null]{g'\l s\r}=1$}{17/18}
+\slideq{Courbe birégulière}{18/18}
+\slider{$\phi$ de classe $\mathcal C^2$ est birégulière si $\phi\l t\r$ et $\phi'\l t\r$ sont linéairement indépendants pour tout $t$}{18/18}
 \end{document}

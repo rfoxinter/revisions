@@ -1,7 +1,7 @@
 Calcul différentiel -- Théorie des courbes
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al}\usepackage{analyse}\usepackage[arc]{complexes}
+\usepackage{al}\usepackage{analyse}\usepackage[arc]{complexes}\usepackage{trigo}\usepackage{matrices}
 Courbe paramétrée;;Application $\varphi\!:\!I\to\mathbb R^n$ différentiable de classe $\mathcal C^k$ avec $I$ un intervalle ouvert de $\mathbb R$
 Point régulier\linebreak Point singulier;;$t_o\in I$ est régulier pour $\varphi$ si $\phi'\l t\r\neq0$ et singulier sinon
 $T_{x_0}M$;;$\vect{\phi'\l t_0\r}$
@@ -9,3 +9,14 @@ Abscisse curviligne de $\phi$;;$\theta\l t\r=\int[s][t_0][t]{\anrm[\null]{\varph
 Paramétrage de la longueur d'arc;;$g=\varphi\circ\theta^{-1}$ pour $\varphi$ régulière, défini sur $\theta\l I\r$\linebreak$g'\l s\r=\frac{\varphi'\circ\theta\l s\r}{\anrm[\null]{\varphi'\circ\theta}}$\linebreak$\anrm[\null]{g'\l s\r}=1$
 Vecteurs tangent et normal;;Le vecteur tangent est $\tau\l s\r=f'\l s\r$ unitaire avec $f'$ le paramétrage de la longueur d'arc et le vecteur normal est $n\l s\r$ unitaire tel que $\l\tau\l s\r,n\l s\r\r$ soit une base orhtonormée directe
 Courbure algébrique;;$K\!:\!I\to\mathbb R$ tel que $\tau'\l s\r=K\l s\r n\l s\r$
+Rayon de courbure;;$\rho\l s\r=\frac1{K\l s\r}$
+Centre de courbure;;$C\l s\r=f\l s\r+\rho\l s\r n\l s\r$ où $f$ est la paramétrisation par la longueur d'arc
+Courbure algébrique en fonction de $\l x\l t\r,y\l t\r\r$;;Si $t\mapsto\l x\l t\r,y\l t\r\r$ est une fonction de classe $\mathcal C^2$, $K\l t\r=\frac{x'\l t\r y''\l t\r-x''\l t\r y'\l t\r}{\l x'\l t\r^2+y'\l t\r^2\r^{\oldfrac32}}$
+Détermination angulaire;;$\alpha\!:\!I\to\mathbb R$ tel que $\vec T\l t\r=\cos{\alpha\l t\r}\vec\imath+\sin{\alpha\l t\r}\vec\jmath$ où $T$ est le vecteur tangent unitaire\linebreak$K=\der[][s]\alpha{}$
+Expression de $N\l t\r$ en fonction de $T\l t\r$;;$\frac{T'\l s\r}{T\l s\r}$
+Expression de la courbure $\kappa\l r\r$ en fonction de $T\l r\r$;;$\kappa\l t\r$ est le réel tel que $T'\l s\r=\kappa\l s\r N\l s\r$
+Repère binormal;;$B\l s\r=T\l s\r\wedge N\l s\r$ est le vecteur binormal\linebreak C'est le vecteur tel que $\l\phi\l s\r,T\l s\r,N\l s\r,B\l s\r\r$ est une base orhtonormée directe
+Équation différentielle vérifiée par \tmatrix({T\\N\\B\\});;$\tmatrix({T\\N\\B\\})'=\tmatrix({0\&\kappa\&0\\-\kappa\&0\&\tau\\0\&-\tau\&0\\})\tmatrix({T\\N\\B\\})$\linebreak$\tau=\left\langle N',B\right\rangle$ est la torsion
+Courbure pour une courbe $\phi$ régulière de classe $\mathcal C^2$;;$\kappa=\frac{\anrm[\null]{\phi'\wedge\phi}}{\anrm[]{\phi'}^3}$
+Courbe birégulière;;$\phi$ de classe $\mathcal C^2$ est birégulière si $\phi\l t\r$ et $\phi'\l t\r$ sont linéairement indépendants pour tout $t$
+Torsion pour une courbe $\phi$ birégulière de classe $\mathcal C^3$;;$\tau=\frac{\det{\phi'\middle|\phi''\middle|\phi'''}}{\anrm[]{\phi'\wedge\phi''}^2}$

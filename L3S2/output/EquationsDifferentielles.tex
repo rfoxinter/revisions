@@ -10,34 +10,34 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Résolvante}{1/15}
-\slider{Si $\appl{R}{I\times I\times E}{E}{\l t,t_0,x_0\r}{x\l t\r}$ où $x$ est l'unique solution telle que $x\l t_0\r=x_0$\linebreak$\appl{R\l s,t\r}{E}{E}{x}{R\l s,t,x\r}$ est appelé résolvante de l'application $x'=ax+b$}{1/15}
-\slideq{Équilibre stable}{2/15}
-\slider{L'équilibre $x_0$ de $x'=f\l x\r$ est asymptotiquement stable s'il existe $\varepsilon>0$ tel que pour tout $y\in\mathcal B\l x_0,\varepsilon\r$, la solution définie par $x\l 0\r=y$ sur $\mathbb R_+$ converge vers $x_0$\linebreak$\mathcal B\l x_0,\varepsilon\r$ est appelé bassin d'attraction}{2/15}
-\slideq{Régularité du flot}{3/15}
-\slider{Si $f$ est de classe $\mathcal C^k$ et toutes les solutions sont globales, le flot est défini pour $\l t,t_0,y_0\r\in\mathbb R\times\mathbb R\times\mathbb R^d$ et $\varphi_f\!:\!\l t,t_0,y_0\r\to\varphi_f^{t,t_0}\l y_0\r$ est de classe $\mathcal C^k$}{3/15}
-\slideq{Wronskien}{4/15}
-\slider{$W\l t\r=\det{R\l t,t_0\r}$ est le wronskien de $X'=AX$\linebreak Les colonnes de $R\l t,t_0\r$ forment une base des solutions}{4/15}
-\slideq{Propriété de semi-groupe du flot}{5/15}
-\slider{$\varphi^{t_2,t_1}\circ\varphi^{t_1,t_0}=\varphi^{t_2,t_0}$\linebreak$\varphi^{t_0,t_0}=\id$}{5/15}
-\slideq{Théorème de Cauchy-Lipschitz linéaire}{6/15}
-\slider{Soit $I$ un intervalle ouvert de $\mathbb R$, $x\!:\!I\to E$, $A\in\mathcal C\l I,\mathcal L\l E\r\r$, $B\in\mathcal C\l I,E\r$, pour toute condition initiale $\l t_0,x_0\r\in I\times E$, il existe une unique solution particulière globale $x\!:\!I\to E$ telle que $x\l t_0\r=x_0$}{6/15}
-\slideq{Solutions à $x'=F\l x\r$ pour $F\!:\!E\to E$, $k$-lipschitzienne}{7/15}
-\slider{Soient $T>0$ et $x_0\in E$, alors l'équation $x'=F\l x\r$ admet une unique solution telle que $x\l 0\r=x_0$ et $x\in\mathcal C^1\l\left[0,T\right],E\r$\linebreak Une telle solution se prolonge en une solution $x\in\mathcal C^1\l\mathbb R,E\r$}{7/15}
-\slideq{Théorème de Cauchy-Lipschitz non-linéaire}{8/15}
-\slider{Soit $I$ un intervalle ouvert de $\mathbb R$ et $U$ un ouvert de $E$ un Banach, $x\!:\!I\to E$, $f\in\mathcal C\l I\times U,E\r$ localement lipschitzienne par rapport à sa deuxième variable\footnote{$\forall\l t_0,x_0\r\in I\times U,\exists c>0,\exists V\subset I\times U\text{ voisinage de }\l t_0,x_0\r,\forall\l\l t,x\r,\l t,y\r\r\in V^2,$ $\anrm[\null]{f\l t,x\r-f\l t,y\r}\leqslant c\anrm[\null]{x-y}$}, pour toute condition initiale $\l t_0,x_0\r\in I\times E$, il existe une unique solution particulière locale $x\!:\!I\to E$ à l'équation $x'=f\l t,x\r$, $x\l t_0\r=x_0$}{8/15}
-\slideq{Propriétés de $R\l s,t\r$}{9/15}
-\slider{\toggleanalysedisplay\toggleanalysepar$R\l s,t\r\in\mathcal L\l E\r$\qquad$R\l t,t\r=\id_{\mathcal L\l E\r}$\linebreak$R\l r,s\r\circ R\l s,t\r=R\l r,t\r$\linebreak$r\!:\!s\mapsto R\l s,t\r\in\mathcal C^1\l I,\mathcal L\l E\r\r$ est l'unique solution au problème de Cauchy $\der[][s]{r}{s}=A\l s\r\circ r\l s\r$, $r\l t\r=\id_{\mathcal L\l E\r}$\linebreak$\l s,t\r\mapsto R\l s,t\r$ est continuement dérivable et $\pder[][t]{R}{s,t}=A\l s\r\circ R\l s,t\r$ et $\pder[][s]{R}{s,t}=-R\l s,t\r\circ A\l t\r$\toggleanalysedisplay\toggleanalysepar}{9/15}
-\slideq{Flot de l'équation $y'=f\l t,y\r$}{10/15}
-\slider{$\varphi^{t,t_0}_f\l y_0\r$ est la valeur $\gamma\l t\r$ où $\gamma\!:\!I_f\l t_0,y_0\r\to E$ la solution maximale du problème de Cauchy avec $\gamma\l t_0\r=y_0$\linebreak Le flot est défini sur $D_f\l t_0,t\r=\left\{y_0\in U,\l t_0,y_0\r\in I\times U\wedge t\in I_f\l t_0,y_0\r\right\}$\linebreak Dans le cas autonome, on prend $t_0=0$}{10/15}
-\slideq{Point d'équilibre stable}{11/15}
-\slider{$x_0$ est un point d'équilibre stable si pour tout $\varepsilon>0$, il existe $h>0$ tel que pour tout $y\in\mathcal B\l x_0,h\r$, $\varphi^t\l y\r\in\mathcal B\l x_0,h\r$}{11/15}
-\slideq{Solution maximale}{12/15}
-\slider{La solution au problème de Cauchy $y'=f\l t,y\r$, $y\l t_0\r=y_0$ et maximale si son intervalle de définition est maximal pour l'inclusion\linebreak La solution maximale est unique}{12/15}
-\slideq{Théorème de Liouville sur le Wronskien}{13/15}
-\slider{$W$ est dérivable et $W'\l t\r=\tr{A\l t\r}W\l t\r$\linebreak$W\l t\r=W\l t_0\r\exp{\int[s][t_0][t]{\tr{A\l s\r}}}$}{13/15}
-\slideq{Point d'équilibre}{14/15}
-\slider{$x_0$ est un point d'équilibre de l'équation autonome $x'=f\l x\r$ si $f\l x_0\r=0$, et donc si $\gamma\!:\!t\mapsto x_0$ est une solution particulière}{14/15}
-\slideq{Formule de Duhamel}{15/15}
-\slider{La solution de $x'=Ax+B$ est donnée par\linebreak$x\l t\r=R\l t,t_0\r x_0+\int[s][t_0][t]{R\l t,s\r b\l s\r}$}{15/15}
+\slideq{Point d'équilibre}{1/15}
+\slider{$x_0$ est un point d'équilibre de l'équation autonome $x'=f\l x\r$ si $f\l x_0\r=0$, et donc si $\gamma\!:\!t\mapsto x_0$ est une solution particulière}{1/15}
+\slideq{Flot de l'équation $y'=f\l t,y\r$}{2/15}
+\slider{$\varphi^{t,t_0}_f\l y_0\r$ est la valeur $\gamma\l t\r$ où $\gamma\!:\!I_f\l t_0,y_0\r\to E$ la solution maximale du problème de Cauchy avec $\gamma\l t_0\r=y_0$\linebreak Le flot est défini sur $D_f\l t_0,t\r=\left\{y_0\in U,\l t_0,y_0\r\in I\times U\wedge t\in I_f\l t_0,y_0\r\right\}$\linebreak Dans le cas autonome, on prend $t_0=0$}{2/15}
+\slideq{Propriétés de $R\l s,t\r$}{3/15}
+\slider{\toggleanalysedisplay\toggleanalysepar$R\l s,t\r\in\mathcal L\l E\r$\qquad$R\l t,t\r=\id_{\mathcal L\l E\r}$\linebreak$R\l r,s\r\circ R\l s,t\r=R\l r,t\r$\linebreak$r\!:\!s\mapsto R\l s,t\r\in\mathcal C^1\l I,\mathcal L\l E\r\r$ est l'unique solution au problème de Cauchy $\der[][s]{r}{s}=A\l s\r\circ r\l s\r$, $r\l t\r=\id_{\mathcal L\l E\r}$\linebreak$\l s,t\r\mapsto R\l s,t\r$ est continuement dérivable et $\pder[][t]{R}{s,t}=A\l s\r\circ R\l s,t\r$ et $\pder[][s]{R}{s,t}=-R\l s,t\r\circ A\l t\r$\toggleanalysedisplay\toggleanalysepar}{3/15}
+\slideq{Théorème de Cauchy-Lipschitz non-linéaire}{4/15}
+\slider{Soit $I$ un intervalle ouvert de $\mathbb R$ et $U$ un ouvert de $E$ un Banach, $x\!:\!I\to E$, $f\in\mathcal C\l I\times U,E\r$ localement lipschitzienne par rapport à sa deuxième variable\footnote{$\forall\l t_0,x_0\r\in I\times U,\exists c>0,\exists V\subset I\times U\text{ voisinage de }\l t_0,x_0\r,\forall\l\l t,x\r,\l t,y\r\r\in V^2,$ $\anrm[\null]{f\l t,x\r-f\l t,y\r}\leqslant c\anrm[\null]{x-y}$}, pour toute condition initiale $\l t_0,x_0\r\in I\times E$, il existe une unique solution particulière locale $x\!:\!I\to E$ à l'équation $x'=f\l t,x\r$, $x\l t_0\r=x_0$}{4/15}
+\slideq{Résolvante}{5/15}
+\slider{Si $\appl{R}{I\times I\times E}{E}{\l t,t_0,x_0\r}{x\l t\r}$ où $x$ est l'unique solution telle que $x\l t_0\r=x_0$\linebreak$\appl{R\l s,t\r}{E}{E}{x}{R\l s,t,x\r}$ est appelé résolvante de l'application $x'=ax+b$}{5/15}
+\slideq{Théorème de Liouville sur le Wronskien}{6/15}
+\slider{$W$ est dérivable et $W'\l t\r=\tr{A\l t\r}W\l t\r$\linebreak$W\l t\r=W\l t_0\r\exp{\int[s][t_0][t]{\tr{A\l s\r}}}$}{6/15}
+\slideq{Théorème de Cauchy-Lipschitz linéaire}{7/15}
+\slider{Soit $I$ un intervalle ouvert de $\mathbb R$, $x\!:\!I\to E$, $A\in\mathcal C\l I,\mathcal L\l E\r\r$, $B\in\mathcal C\l I,E\r$, pour toute condition initiale $\l t_0,x_0\r\in I\times E$, il existe une unique solution particulière globale $x\!:\!I\to E$ telle que $x\l t_0\r=x_0$}{7/15}
+\slideq{Équilibre stable}{8/15}
+\slider{L'équilibre $x_0$ de $x'=f\l x\r$ est asymptotiquement stable s'il existe $\varepsilon>0$ tel que pour tout $y\in\mathcal B\l x_0,\varepsilon\r$, la solution définie par $x\l 0\r=y$ sur $\mathbb R_+$ converge vers $x_0$\linebreak$\mathcal B\l x_0,\varepsilon\r$ est appelé bassin d'attraction}{8/15}
+\slideq{Point d'équilibre stable}{9/15}
+\slider{$x_0$ est un point d'équilibre stable si pour tout $\varepsilon>0$, il existe $h>0$ tel que pour tout $y\in\mathcal B\l x_0,h\r$, $\varphi^t\l y\r\in\mathcal B\l x_0,h\r$}{9/15}
+\slideq{Solutions à $x'=F\l x\r$ pour $F\!:\!E\to E$, $k$-lipschitzienne}{10/15}
+\slider{Soient $T>0$ et $x_0\in E$, alors l'équation $x'=F\l x\r$ admet une unique solution telle que $x\l 0\r=x_0$ et $x\in\mathcal C^1\l\left[0,T\right],E\r$\linebreak Une telle solution se prolonge en une solution $x\in\mathcal C^1\l\mathbb R,E\r$}{10/15}
+\slideq{Propriété de semi-groupe du flot}{11/15}
+\slider{$\varphi^{t_2,t_1}\circ\varphi^{t_1,t_0}=\varphi^{t_2,t_0}$\linebreak$\varphi^{t_0,t_0}=\id$}{11/15}
+\slideq{Wronskien}{12/15}
+\slider{$W\l t\r=\det{R\l t,t_0\r}$ est le wronskien de $X'=AX$\linebreak Les colonnes de $R\l t,t_0\r$ forment une base des solutions}{12/15}
+\slideq{Formule de Duhamel}{13/15}
+\slider{La solution de $x'=Ax+B$ est donnée par\linebreak$x\l t\r=R\l t,t_0\r x_0+\int[s][t_0][t]{R\l t,s\r b\l s\r}$}{13/15}
+\slideq{Solution maximale}{14/15}
+\slider{La solution au problème de Cauchy $y'=f\l t,y\r$, $y\l t_0\r=y_0$ et maximale si son intervalle de définition est maximal pour l'inclusion\linebreak La solution maximale est unique}{14/15}
+\slideq{Régularité du flot}{15/15}
+\slider{Si $f$ est de classe $\mathcal C^k$ et toutes les solutions sont globales, le flot est défini pour $\l t,t_0,y_0\r\in\mathbb R\times\mathbb R\times\mathbb R^d$ et $\varphi_f\!:\!\l t,t_0,y_0\r\to\varphi_f^{t,t_0}\l y_0\r$ est de classe $\mathcal C^k$}{15/15}
 \end{document}

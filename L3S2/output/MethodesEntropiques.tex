@@ -12,34 +12,34 @@
 \end{frame}
 \slideq{Entropie de Shannon de $X$}{1/16}
 \slider{$H\l X\r=-\sum{x\in E}{}{p\l x\r\ln{p\l x\r}}$\linebreak$H\l x\r\geqslant0$ avec égalité ssi $X$ est constant}{1/16}
-\slideq{Théorème d'Efron-Stein}{2/16}
-\slider{Si $\l X_1,\cdots,X_n\r$ sont des variables aléatoires indépendantes, $f\in L^2$ et $Z=f\l X_1,\cdots, X_n\r$ alors $\var Z\leqslant\sum{i=1}{n}{\esp{\l Z-\mathbb E^{\l i\r}\l Z\r\r^2}}$}{2/16}
-\slideq{$\mathbb E^{\l i\r}\l g\l X_1,\cdots,X_n\r\r$}{3/16}
-\slider{$\int[{\p[X_i]{x_i}}][E]{g\l X_1,\cdots,x_i,\cdots,X_n\r}$}{3/16}
-\slideq{Inégalité de concentration sur $\mathcal H_n$}{4/16}
-\slider{Si $X$ est une variable aléatoire sur $\mathcal H_n$ et $f\!:\!\mathcal H_n\to\mathbb R$, si $\nu\in\mathbb R_+$ est telle que $\sum{i=1}{n}{{\l f\l x\r-f\l\bar x^{\l i\r}\r\r_+}^2}\leqslant\nu$ pour tout $x\in\mathcal H_n$ alors $\p{f\l X\r-\esp{f\l X\r}\geqslant t}\leqslant\e^{-\oldfrac{t^2}\nu}$}{4/16}
-\slideq{Inégalité de Sobolev logarithmique}{5/16}
-\slider{Si $\mathcal H_n$ est l'hypercube de dimension $n$ et $f\!:\!\mathcal H_n\to\mathbb R$, $\ent{f\l X\r^2}\leqslant2\mathcal E\l f\r$}{5/16}
-\slideq{Entropie relative de $P$ par rapport à $Q$\linebreak Divergence de Kullback-Leibler}{6/16}
-\slider{\togglebigopdisplay$D\l P\middle\|Q\r=\tcase{\sum{\substack{x\in E\\q\l x\r>0}}{}{p\l x\r\ln{\frac{p\l x\r}{q\l x\r}}}\&\text{si }P\ll Q\\\null\&\null\\+\infty\&\text{sinon}\\}$\linebreak$D\l P\middle\|Q\r\geqslant0$ avec égalité ssi $P=Q$\togglebigopdisplay}{6/16}
-\slideq{$\esp[i]{g\l X_1,\cdots,X_n\r}$}{7/16}
-\slider{${\analysedisplay\oldint_{E^{n-i}}}g\l X_1,{\cdots},X_i,x_{i+1},{\cdots},x_n\r$\hfill\null\linebreak\null\hfill$\dd\p[X_{i+1}]{x_{i+1}}\cdots\dd\p[X_n]{x_n}$}{7/16}
-\slideq{Majorant de $H\l X\r$}{8/16}
-\slider{$H\l X\r\leqslant\ln{\left|E\right|}$ avec égalité si et seulement si $X$ suit une loi uniforme sur $E$}{8/16}
-\slideq{Majorants alternatifs dans l'inégalité d'Efron-Stein}{9/16}
-\slider{\togglebigopdisplay$\sum{i=1}{n}{\esp{\l Z-\mathbb E^{\l i\r}\l Z\r\r^2}}$; $\sum{i=1}{n}{\var{\l Z-\widetilde Z^{\l i\r}\r_\pm}}$\linebreak$\sum{i=1}{n}{\var{Z-\widetilde Z^{\l i\r}}}$ où $\widetilde Z^{\l i\r}=f\l X_1,\crampeddots,X'_i,\crampeddots,X_n\r$ avec $X_i'$ suivant la même loi que $X_i$ et indépendante des autres variables\linebreak$\inf{\left\{\sum{i=1}{n}{\esp{Z-Z^{\l i\r}}},Z^{\l i\r}\text{ fonction des }\l X_j\r\right\}}$\togglebigopdisplay}{9/16}
-\slideq{$\mathcal E\l f\r$}{10/16}
-\slider{\togglebigopdisplay$\frac12\esp{\sum{i=1}{n}{\l f\l X\r-f\l\widetilde X^{\l i\r}\r\r^2}}$ où $\widetilde X^{\l i\r}=f\l X_1,\crampeddots,X'_i,\crampeddots,X_n\r$ avec $X_i'$ suivant la même loi que $X_i$ et indépendante des autres\linebreak$\frac14\esp{\sum{i=1}{n}{\l f\l X\r-f\l\bar X^{\l i\r}\r\r^2}}=\frac14\esp{\left\|\nabla f\right\|^2}$ où $\bar X^{\l i\r}=f\l X_1,\crampeddots,-X_i,\crampeddots,X_n\r$\togglebigopdisplay}{10/16}
-\slideq{Inégalité de McDiarmid}{11/16}
-\slider{Si $\l X_1,\cdots,X_n\r$ sont des variables aléatoires indépendantes dans $E$ et $f\!:\!E^n\to\mathbb R$ vérifie $f\l x_1,\cdots,x_n\r-f\l x_1,\cdots,x_i',\cdots,x_n\r\leqslant c_i$ pour tout $\l x_1,\cdots,x_n,x_i'\r\in E^{n+1}$, alors $\p{f\l X\r-\esp{f\l X\r}\geqslant t}\leqslant\exp{-\frac{t^2}{2\oldsum\limits_{i=1}^nc_i^2}}$}{11/16}
-\slideq{$\ent X$}{12/16}
-\slider{$\esp{\phi\l X\r}-\phi\l\esp X\r\in\left[0,+\infty\right]$\linebreak$\phi\l x\r=x\ln x$}{12/16}
-\slideq{Inégalité de Han}{13/16}
-\slider{Si $\l X_1,\cdots,X_n\r$ sont des variables aléatoires discrètes et $n\geqslant2$ alors $H\l X_1,\cdots,X_n\r\leqslant\frac{1}{n+1}\sum{i=1}{n}{H\l X_1,\cdots,X_{i-1},X_{i+1},\cdots,X_n\r}$}{13/16}
-\slideq{Formule de dualité (ou variationnelle) pour l'entropie $\oldent$}{14/16}
-\slider{$\ent Y$\linebreak$=\sup{\left\{\esp{UY},U\text{ va réelle},\esp{\e^U}=1\right\}}$\linebreak$=\oldsup\l\left\{\esp{Y\ln V}-\ln{\esp V}\vphantom{V\text{ va positive},\esp{V}>0}\right.\right.$\hfill\null\linebreak\null\hfill$\left.\left.\vphantom{\esp{Y\ln V}-\ln{\esp V}}V\text{ va positive},\esp{V}>0\right\}\r$}{14/16}
-\slideq{Entropie conditionnelle}{15/16}
-\slider{$H\l X\middle|Y\r=H\l X,Y\r-H\l Y\r\geqslant H\l X\r$ avec égalité si et seulement si $X$ est presque sûrement constant}{15/16}
-\slideq{$\mathbb E_i\circ\mathbb E_j$}{16/16}
-\slider{$\mathbb E_{\min{i,j}}$}{16/16}
+\slideq{Entropie relative de $P$ par rapport à $Q$\linebreak Divergence de Kullback-Leibler}{2/16}
+\slider{\togglebigopdisplay$D\l P\middle\|Q\r=\tcase{\sum{\substack{x\in E\\q\l x\r>0}}{}{p\l x\r\ln{\frac{p\l x\r}{q\l x\r}}}\&\text{si }P\ll Q\\\null\&\null\\+\infty\&\text{sinon}\\}$\linebreak$D\l P\middle\|Q\r\geqslant0$ avec égalité ssi $P=Q$\togglebigopdisplay}{2/16}
+\slideq{$\mathcal E\l f\r$}{3/16}
+\slider{\togglebigopdisplay$\frac12\esp{\sum{i=1}{n}{\l f\l X\r-f\l\widetilde X^{\l i\r}\r\r^2}}$ où $\widetilde X^{\l i\r}=f\l X_1,\crampeddots,X'_i,\crampeddots,X_n\r$ avec $X_i'$ suivant la même loi que $X_i$ et indépendante des autres\linebreak$\frac14\esp{\sum{i=1}{n}{\l f\l X\r-f\l\bar X^{\l i\r}\r\r^2}}=\frac14\esp{\left\|\nabla f\right\|^2}$ où $\bar X^{\l i\r}=f\l X_1,\crampeddots,-X_i,\crampeddots,X_n\r$\togglebigopdisplay}{3/16}
+\slideq{$\esp[i]{g\l X_1,\cdots,X_n\r}$}{4/16}
+\slider{${\analysedisplay\oldint_{E^{n-i}}}g\l X_1,{\cdots},X_i,x_{i+1},{\cdots},x_n\r$\hfill\null\linebreak\null\hfill$\dd\p[X_{i+1}]{x_{i+1}}\cdots\dd\p[X_n]{x_n}$}{4/16}
+\slideq{Entropie conditionnelle}{5/16}
+\slider{$H\l X\middle|Y\r=H\l X,Y\r-H\l Y\r\geqslant H\l X\r$ avec égalité si et seulement si $X$ est presque sûrement constant}{5/16}
+\slideq{Majorant de $H\l X\r$}{6/16}
+\slider{$H\l X\r\leqslant\ln{\left|E\right|}$ avec égalité si et seulement si $X$ suit une loi uniforme sur $E$}{6/16}
+\slideq{Formule de dualité (ou variationnelle) pour l'entropie $\oldent$}{7/16}
+\slider{$\ent Y$\linebreak$=\sup{\left\{\esp{UY},U\text{ va réelle},\esp{\e^U}=1\right\}}$\linebreak$=\oldsup\l\left\{\esp{Y\ln V}-\ln{\esp V}\vphantom{V\text{ va positive},\esp{V}>0}\right.\right.$\hfill\null\linebreak\null\hfill$\left.\left.\vphantom{\esp{Y\ln V}-\ln{\esp V}}V\text{ va positive},\esp{V}>0\right\}\r$}{7/16}
+\slideq{Inégalité de Sobolev logarithmique}{8/16}
+\slider{Si $\mathcal H_n$ est l'hypercube de dimension $n$ et $f\!:\!\mathcal H_n\to\mathbb R$, $\ent{f\l X\r^2}\leqslant2\mathcal E\l f\r$}{8/16}
+\slideq{Inégalité de concentration sur $\mathcal H_n$}{9/16}
+\slider{Si $X$ est une variable aléatoire sur $\mathcal H_n$ et $f\!:\!\mathcal H_n\to\mathbb R$, si $\nu\in\mathbb R_+$ est telle que $\sum{i=1}{n}{{\l f\l x\r-f\l\bar x^{\l i\r}\r\r_+}^2}\leqslant\nu$ pour tout $x\in\mathcal H_n$ alors $\p{f\l X\r-\esp{f\l X\r}\geqslant t}\leqslant\e^{-\oldfrac{t^2}\nu}$}{9/16}
+\slideq{Théorème d'Efron-Stein}{10/16}
+\slider{Si $\l X_1,\cdots,X_n\r$ sont des variables aléatoires indépendantes, $f\in L^2$ et $Z=f\l X_1,\cdots, X_n\r$ alors $\var Z\leqslant\sum{i=1}{n}{\esp{\l Z-\mathbb E^{\l i\r}\l Z\r\r^2}}$}{10/16}
+\slideq{Inégalité de Han}{11/16}
+\slider{Si $\l X_1,\cdots,X_n\r$ sont des variables aléatoires discrètes et $n\geqslant2$ alors $H\l X_1,\cdots,X_n\r\leqslant\frac{1}{n+1}\sum{i=1}{n}{H\l X_1,\cdots,X_{i-1},X_{i+1},\cdots,X_n\r}$}{11/16}
+\slideq{$\mathbb E_i\circ\mathbb E_j$}{12/16}
+\slider{$\mathbb E_{\min{i,j}}$}{12/16}
+\slideq{Inégalité de McDiarmid}{13/16}
+\slider{Si $\l X_1,\cdots,X_n\r$ sont des variables aléatoires indépendantes dans $E$ et $f\!:\!E^n\to\mathbb R$ vérifie $f\l x_1,\cdots,x_n\r-f\l x_1,\cdots,x_i',\cdots,x_n\r\leqslant c_i$ pour tout $\l x_1,\cdots,x_n,x_i'\r\in E^{n+1}$, alors $\p{f\l X\r-\esp{f\l X\r}\geqslant t}\leqslant\exp{-\frac{t^2}{2\oldsum\limits_{i=1}^nc_i^2}}$}{13/16}
+\slideq{$\ent X$}{14/16}
+\slider{$\esp{\phi\l X\r}-\phi\l\esp X\r\in\left[0,+\infty\right]$\linebreak$\phi\l x\r=x\ln x$}{14/16}
+\slideq{Majorants alternatifs dans l'inégalité d'Efron-Stein}{15/16}
+\slider{\togglebigopdisplay$\sum{i=1}{n}{\esp{\l Z-\mathbb E^{\l i\r}\l Z\r\r^2}}$; $\sum{i=1}{n}{\var{\l Z-\widetilde Z^{\l i\r}\r_\pm}}$\linebreak$\sum{i=1}{n}{\var{Z-\widetilde Z^{\l i\r}}}$ où $\widetilde Z^{\l i\r}=f\l X_1,\crampeddots,X'_i,\crampeddots,X_n\r$ avec $X_i'$ suivant la même loi que $X_i$ et indépendante des autres variables\linebreak$\inf{\left\{\sum{i=1}{n}{\esp{Z-Z^{\l i\r}}},Z^{\l i\r}\text{ fonction des }\l X_j\r\right\}}$\togglebigopdisplay}{15/16}
+\slideq{$\mathbb E^{\l i\r}\l g\l X_1,\cdots,X_n\r\r$}{16/16}
+\slider{$\int[{\p[X_i]{x_i}}][E]{g\l X_1,\cdots,x_i,\cdots,X_n\r}$}{16/16}
 \end{document}
