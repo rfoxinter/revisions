@@ -29,6 +29,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250430114311
 ../L3S2/flashcards/CalculDifferentiel/TheorieDesCourbes
 20250430134006
+../L3S2/flashcards/CalculDifferentiel/TheorieDesSurfaces
+20250502093613
 ../L3S2/flashcards/ConcentrationDeLaMesure/InegalitesDeConcentration
 20250430113628
 ../L3S2/flashcards/ConcentrationDeLaMesure/IsoperimetrieEtConcentration

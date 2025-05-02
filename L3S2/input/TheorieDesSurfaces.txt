@@ -1,0 +1,18 @@
+Calcul différentiel -- Théorie des surfaces
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse}\usepackage{structures}\usepackage{topologie}\usepackage{matrices,al}
+Surface paramétrée;;Immersion différentiable $f\!:\!U\to\mathbb R^3$ avec $U$ un ouvert de $\mathbb R^2$
+Espace tangent en $\l u_0,v_0\r$;;$\varPi_0=\im{\dd f_{\l u_0,v_0\r}}=\partial_u f\l u_0,v_0\r\mathbb R+\partial_v f\l u_0,v_0\r\mathbb R$
+Plan tangent affine en $\l u_0,v_0\r$;;$\varPi_0+f\l u_0,v_0\r$
+Première forme fondamentale\linebreak$X=\l u,v\r\in U$, $M=f\l X\r$, $\varSigma=f\l U\r$, $\varPi_0=T_M\varSigma$;;Forme bilinéaire symétrique définie par $\appl{g_X}{T_M\varSigma\times T_M\varSigma}{\mathbb{R}}{\l x,y\r}{\psc{x}{y}}$\linebreak$g_X=\dd s^2=E\dd u^2+2F\dd u\dd v+G\dd v^2$
+Matrice de Gauss de la famille $\l\partial_1f,\partial_2f\r$;;Matrice $G\l X\r$ de l'application $g_X$\linebreak$G\l X\r=\l\psc{\partial_if}{\partial_jf}\r_{\l i,j\r\in\llb1,2\rrb^2}$\linebreak$G\l X\r=\tmatrix({E\&F\\F\&G\\})$
+Champ normal d'une surface $\varSigma$;;Ensemble des vecteurs $n\l X\r=\frac{\partial_u f\wedge\partial_v f}{\anrm[\null]{\partial_uf\wedge\partial_vf}}\l X\r$\linebreak$\l\partial_uf,\partial_vf,n\r$ s'appelle repère de Gauss
+Application de Gauss;;$\appl{n}{U}{\mathbb{R}^3}{\l u,v\r}{n\l u,v\r}$\linebreak$\im{\dd n_X}\subset T_M\varSigma$
+Deuxième forme fondamentale;;$h_X\l x,y\r=-\psc{\dd n_X\l{\dd f_X}^-1\l x\r\r}{y}$ avec $\l x,y\r\in T_M\varSigma^2$
+Matrice de la deuxième forme fondamentale dans la base $\l\partial_uf,\partial_vf\r$;;$H=\l\psc{n}{\partial_{ij}f}\r_{\l i,j\r\in\llb1,2\rrb^2}=\l\psc{\partial_in}{\partial_{j}f}\r_{\l i,j\r\in\llb1,2\rrb^2}$\linebreak$H\l X\r=\tmatrix({L\&M\\M\&N\\})$\linebreak$h_X=L\dd u^2+2M\dd u\dd v+N\dd v^2$
+Endomorphisme de Weingarten;;$\appl{W_X}{T_M\varSigma}{T_M\varSigma}{\l u,v\r}{-\dd n_X\circ{\dd f_X}^{-1}\l\l u,v\r\r}$
+Valeurs et vecteurs propres de l'endomorphisme de Weingarten;;$K_1$ et $K_2$ sont les courbures principales au point $M$\linebreak$K=K_1K_2$ est la courbure de Gauss\linebreak$\frac{K_1+K_2}{2}$ est la courbure moyenne\linebreak Les directions des vecteurs propres de $W_X$ sont appelées directions propres de la courbure
+Nature d'un point selon la courbure de Gauss;;Si $K<0$, on a un point hyperbolique\linebreak Si $K>0$, on a un point elliptique\linebreak Si $K=0$, on a un point parabolique
+Lien entre formes fondamentales et endomorphisme de Weingarten;;$\tmatrix({L\&M\\M\&N\\})=\almat{W_X}{\l\partial_uf,\partial_vf\r}{}\tmatrix({E\&F\\F\&G\\})$
+Classification des surfaces quadratiques de $\mathbb R^3$;;Ellispoïde: $\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$\linebreak Hyperboloïde: $\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$\linebreak Paraboloïde: $z=\frac{x^2}{a^2}+\frac{y^2}{b^2}$
