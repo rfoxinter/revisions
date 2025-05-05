@@ -1,8 +1,17 @@
 plugins:
     - jekyll-sitemap
 exclude:
-    - informatique/
     - documentation_res/
+    - edit_svg/
+    - informatique/
+    - output/
+    - "*.tex"
+    - "*.sty"
+    - "*.tfm"
+    - "*.pfb"
+    - "*.md"
+    - L3_Anglais/input/
+    - L3_Anglais/localcards
 defaults:
     -
           scope:
