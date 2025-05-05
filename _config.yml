@@ -2,7 +2,6 @@ plugins:
     - jekyll-sitemap
 exclude:
     - documentation_res/
-    - edit_svg/
     - informatique/
     - output/
     - "*.tex"
@@ -12,6 +11,16 @@ exclude:
     - "*.md"
     - L3_Anglais/input/
     - L3_Anglais/localcards
+    - L3S1/input/
+    - L3S1/localcards
+    - L3S2/input/
+    - L3S2/localcards
+    - MP2I/input/
+    - MP2I/localcards
+    - MPI/input/
+    - MPI/localcards
+    - MPI/physique/input/
+    - MPI/physique/localcards
 defaults:
     -
           scope:
