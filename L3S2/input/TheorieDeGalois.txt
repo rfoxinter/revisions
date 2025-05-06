@@ -8,3 +8,7 @@ Proprété de $\gal\ll\kk$ sur les racines de $P$ tel que $\ll=\dec_\kk\l P\r$;;
 $\ff^{\oldgal}$\linebreak$\ff/\kk$ séparable et $\ff\subset\kk^\text{alg}$;;Plus petite extension galoisienne de $\kk$ contenant $\ff$\linebreak C'est l'extension de $\kk$ engendrée par $\left\{\sigma\l\ff\r,\sigma\in\gal{\kk^\text{alg}}\kk\right\}$\linebreak Si $\ff/\kk$ est finie alors $\ff^{\oldgal}/\kk$ est finie et $\edeg{\ff^{\oldgal}}\kk\leqslant\edeg\ff\kk!$
 Théorème de correspondance de Galois;;Si $\ll/\kk$ est une extension galoisienne finie et $G=\gal\ll\kk$ alors il y a une bijection décroissante entre les extensions intermédiaires $\mathcal E$ de $\ll/\kk$ et les sous groupes $\mathcal G$ de $G$ donnée par \aappl{\mathcal{E}}{\mathcal{G}}{\ff}{\gal\ll\ff} et \aappl{\mathcal{G}}{\mathcal{E}}{H}{L^H}\linebreak $\ff/\kk$ est normale si et seulement si $\gal\ll\ff\vartriangleleft\gal\ll\kk$
 Correspondance de Galois appliquée à des compositums et intersections;;Si $\ff_1$ et $\ff_2$ sont associés à $H_1$ et $H_2$ alors $\ff_1\cap\ff_2$ est associé à $\left\langle H_1,H_2\right\rangle$ et $\ff_1\cdot\ff_2$ est associé à $H_1\cap H_2$
+$\ll/\kk$ est abélienne;;$\ll/\kk$ est galoisienne et $\gal\ll\kk$ est abélien
+$\ll/\kk$ est cyclique;;$\ll/\kk$ est abélienne et $\gal\ll\kk\cong\mathbb Z/n\mathbb Z$
+$\ll/\kk$ est radicielle;;$\ll=\fr K\alpha$ avec $\alpha$ racine de $X^n-a$, $a\in\kk$
+$\ll/\kk$ est kummérienne;;$\ll/\kk$ est radicielle avec $\ll=\fr K\alpha$, $\alpha^n\in\kk$, $n\wedge\car\kk=1$, $\kk$ contient toutes les racines $n$\textsuperscript{ièmes} de $1$

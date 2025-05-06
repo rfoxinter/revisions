@@ -1,0 +1,25 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\usepackage{polynomes}\DeclareMathOperator{\dec}{D}\usepackage{structures}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}\usepackage{analyse}\newcommand\edeg[2]{\left[#1{:}#2\right]}\togglebigoppar
+\hypersetup{pdftitle=Algèbre 2 -- Cyclotomie}
+\title{Algèbre 2\\\emph{Cyclotomie}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\dec_\kk\l X^n-1\r$}{1/6}
+\slider{$\kk\l\zeta_n\r$ avec $\zeta_n$ une racine primitive $n$\textsuperscript{ième} de l'unité\linebreak Par le morphisme de Frobénius, si $\car\kk=p$, $\zeta_{np^m}=\zeta_n$, en particulier, $1$ est la seule racine de $X^{p^m}-1$}{1/6}
+\slideq{Structure de $\gal\ll\kk$ avec $\ll=\fr K{\zeta_n}$}{2/6}
+\slider{$\gal\ll\kk$ est un sous-groupe de $\l\mathbb Z/n\mathbb Z\r^\times$ et un morphisme est donné par le caractère cyclotomique}{2/6}
+\slideq{Caractère cyclotomique}{3/6}
+\slider{$\appl{\chi}{\gal\ll\kk}{\l\mathbb Z/n\mathbb Z\r^\times}{\sigma}{\chi\l\sigma\r}$ où $\chi\l\sigma\r$ est tel que $\sigma\l\zeta_n\r=\zeta_n^{\chi\l\sigma\r}$\linebreak$\chi$ est injectif}{3/6}
+\slideq{Stucture de $\hom{\mu_n,\l\kk^\text{alg},\times\r}$}{4/6}
+\slider{$\hom{\mu_n,\kk^\text{alg}}\cong\mathbb Z/n\mathbb Z$ et un isomorhisme est donné par $\nappl{\mathbb{Z}/n\mathbb{Z}}{\hom{\mu_n,\kk^\text{alg}}}{k}{\l\zeta_n\mapsto\zeta_n^k\r}$}{4/6}
+\slideq{Propriété de $\dec_\kk\l X^n-1\r/\kk$}{5/6}
+\slider{Si $\car\kk=0$ ou $n\wedge\car\kk=1$ alors $X^n-1$ est séparable sur $\kk$ donc $\dec_\kk\l X^n-1\r/\kk$ est galoisienne}{5/6}
+\slideq{Propriétés de $\varPhi_n$}{6/6}
+\slider{$\varPhi_n\in\pol ZX$ est unitaire et irréductible sur $\mathbb Z$ et sur $\mathbb Q$\linebreak En particulier, $\edeg{\fr Q{\zeta_n}}{\mathbb Q}=\varphi\l n\r$ et $\gal{\fr Q{\zeta_n}{\mathbb Q}}\cong\l\mathbb Z/n\mathbb Z\r^\times$\linebreak$X^n-1=\prod{d\mid n}{}{\varPhi_d\l X\r}$}{6/6}
+\end{document}

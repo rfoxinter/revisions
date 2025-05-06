@@ -9,6 +9,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250430112446
 ../L3S2/flashcards/Algebre2/CorpsFinis
 20250430112836
+../L3S2/flashcards/Algebre2/Cyclotomie
+20250506183645
 ../L3S2/flashcards/Algebre2/ExensionsSeparablesEtPurementInseparables
 20250505182723
 ../L3S2/flashcards/Algebre2/ExtensionsDeCorps
@@ -22,7 +24,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S2/flashcards/Algebre2/RacinesDesPolynomesMinimaux
 20250505142629
 ../L3S2/flashcards/Algebre2/TheorieDeGalois
-20250505185351
+20250506175019
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeLaChaleur
 20250430113700
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportLineaire

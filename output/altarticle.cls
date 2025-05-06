@@ -1833,7 +1833,7 @@ space before arrow={0.2ex},
 \DeclareMathOperator{\olddiscr}{discr}
 \newcommand{\discr}[2][]{\olddiscr_{#1}\l#2\r}
 \newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}
-\newcommand{\nappl}[4]{\begin{array}{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}
+\newcommand{\nappl}[4]{\begin{array}[t]{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}
 %% Analyse
 \def\analyseleftp{\l}
 \def\analyserightp{\r}
