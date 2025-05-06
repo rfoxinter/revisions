@@ -1,9 +1,9 @@
 Algèbre 2 -- Extensions séparables
 Shuffle questions : True
 Q/R & R/Q : False
-\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\mm{\mathbb M}\newcommand\edeg[2]{\left[#1{:}#2\right]}\usepackage{polynomes,structures}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}\DeclareMathOperator{\oldfrob}{frob}\newcommand{\frob}[1]{\oldfrob_#1}
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\mm{\mathbb M}\newcommand\edeg[2]{\left[#1{:}#2\right]}\usepackage{polynomes,structures}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}\DeclareMathOperator{\oldfrob}{frob}\newcommand{\frob}[1]{\oldfrob_#1}\usepackage{bigoperators}\usepackage{footnotes}
 CNS pour $P'=0$ pour $P\in\pol KX$, $\car K=0$;;Il existe $S\in\pol KX$ tel que $P\l X\r=S\l X^p\r$\linebreak Il existe $Q\in\mathbb K^\text{a}\left[X\right]$ tel que $P=Q^p$, c'est vrai pour $Q$ tel que $Q^\sigma=S$ où $\l\sum{i=1}{n}{c_iX^i}\r^\sigma=\sum{i=1}{n}{c_i^pX^i}$
-Polynôme séparable\linebreak Polynôme inséparable\linebreak Polynôme totalement inséparable;;$P$ est séparable si $P'\neq0$\linebreak$P$ est inséparable si $P'=0$\linebreak$P$ est pûrement inséparable si $P=\l X_a\r^{p^n}$ avec $a\in\kk^\text{a}$
+Polynôme séparable\linebreak Polynôme inséparable\linebreak Polynôme totalement inséparable;;$P$ est un polynôme irréductible\footnote{Pour une définition générale, voir \textsl{racines des polynômes minimaux}}\linebreak$P$ est séparable si $P'\neq0$\linebreak$P$ est inséparable si $P'=0$\linebreak$P$ est pûrement inséparable si $P=\l X_a\r^{p^n}$ avec $a\in\kk^\text{a}$
 $a\in\kk^\text{a}$ est séparable\linebreak$a\in\kk^\text{a}$ est inséparable\linebreak$a\in\kk^\text{a}$ est totalement inséparable;;$P_{\alpha,\kk}$ l'est
 $\kk$ est parfait;;$\kk^\text{a}/\kk$ est séparable\linebreak Tout corps de caractéristique nulle est séparable
 CNS pour $\kk$ parfait\linebreak$\car\kk=p>0$;;$\frob p$ est surjectif\linebreak En particulier, si $\kk=\kk^\text{a}$ ou $\kk$ est fini, $\kk$ est parfait

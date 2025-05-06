@@ -1,0 +1,25 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\ff{\mathbb F}\usepackage{polynomes}\DeclareMathOperator{\dec}{D}\DeclareMathOperator{\olddegsep}{deg\,sep}\newcommand{\degsep}[2][]{\olddegsep_{#1}\l#2\r}\usepackage{structures}\newcommand\edeg[2]{\left[#1{:}#2\right]}\newcommand\sdeg[2]{\left[#1{:}#2\right]_s}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}\newcommand{\aappl}[4]{\begin{array}[t]{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}
+\hypersetup{pdftitle=Algèbre 2 -- Théorie de Galois}
+\title{Algèbre 2\\\emph{Théorie de Galois}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\ff^{\oldgal}$\linebreak$\ff/\kk$ séparable et $\ff\subset\kk^\text{alg}$}{1/6}
+\slider{Plus petite extension galoisienne de $\kk$ contenant $\ff$\linebreak C'est l'extension de $\kk$ engendrée par $\left\{\sigma\l\ff\r,\sigma\in\gal{\kk^\text{alg}}\kk\right\}$\linebreak Si $\ff/\kk$ est finie alors $\ff^{\oldgal}/\kk$ est finie et $\edeg{\ff^{\oldgal}}\kk\leqslant\edeg\ff\kk!$}{1/6}
+\slideq{Théorème de correspondance de Galois}{2/6}
+\slider{Si $\ll/\kk$ est une extension galoisienne finie et $G=\gal\ll\kk$ alors il y a une bijection décroissante entre les extensions intermédiaires $\mathcal E$ de $\ll/\kk$ et les sous groupes $\mathcal G$ de $G$ donnée par \aappl{\mathcal{E}}{\mathcal{G}}{\ff}{\gal\ll\ff} et \aappl{\mathcal{G}}{\mathcal{E}}{H}{L^H}\linebreak $\ff/\kk$ est normale si et seulement si $\gal\ll\ff\vartriangleleft\gal\ll\kk$}{2/6}
+\slideq{Construnction de $\ll/\kk$ galoisienne comme corps de décomposition}{3/6}
+\slider{Si $\ll/\kk$ est galoisienne si et seulement s'il existe un polynôme $P$ séparable sur $\kk$ tel que $\ll=\dec_\kk\l P\r$}{3/6}
+\slideq{Correspondance de Galois appliquée à des compositums et intersections}{4/6}
+\slider{Si $\ff_1$ et $\ff_2$ sont associés à $H_1$ et $H_2$ alors $\ff_1\cap\ff_2$ est associé à $\left\langle H_1,H_2\right\rangle$ et $\ff_1\cdot\ff_2$ est associé à $H_1\cap H_2$}{4/6}
+\slideq{Proprété de $\gal\ll\kk$ sur les racines de $P$ tel que $\ll=\dec_\kk\l P\r$}{5/6}
+\slider{$\gal\ll\kk\hookrightarrow\mathfrak S\l\rac P\r\cong\mathfrak S_n$\linebreak Si de plus $P$ est irréductible alors l'action sur les racines est transitive}{5/6}
+\slideq{Extension galoisienne}{6/6}
+\slider{Extension algébrique, normale et séparable}{6/6}
+\end{document}

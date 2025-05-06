@@ -3,7 +3,7 @@
 \let\olddeg\deg
 \renewcommand{\deg}[1]{\olddeg\l#1\r}
 \DeclareMathOperator{\oldval}{val}
-\newcommand{\val}[1]{\oldval\l#1\r}
+\newcommand{\val}[2][]{\oldval_{#1}\l#2\r}
 \let\oldcar\relax
 \DeclareMathOperator{\oldcar}{car}
 \let\car\relax

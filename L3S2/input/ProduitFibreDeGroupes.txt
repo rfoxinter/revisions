@@ -1,0 +1,8 @@
+Algèbre 2 -- Produit fibré de groupes
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}}\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\ee{\mathbb E}\newcommand\edeg[2]{\left[#1{:}#2\right]}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}
+$G_1\times_HG_2$\linebreak$\pi_i\!:\!G_i\to H$;;$\left\{\l g_1,g_2\r,\pi_1\l g_1\r=\pi_2\l g_2\r\right\}$
+Propriété universelle du produit fibré;;\begin{tikzcd}[ampersand replacement=\&]G\arrow[drr, bend left, "q_1"]\arrow[ddr, bend right, "q_2"]\arrow[dr, dashed, "q"] \& \& \\\& G_1 \times_H G_2 \arrow[r, "p_1"] \arrow[d, "p_2"] \& G_1 \arrow[d, "\pi_1"] \\\& G_2 \arrow[r, "\pi_2"]\& H\end{tikzcd}
+$\left|G_1\times_HG_2\right|$;;Si $\pi_1$ et $\pi_2$ sont surjectives, $\frac{\left|G_1\right|\cdot\left|G_2\right|}{\left|H\right|}$
+Propriétés de $\ll\cdot\ee/\ee$\linebreak$\ll/\kk$ galoisienne;;$\ll\cdot\ee/\ee$ est galoisienne et $\gal{\ll\cdot\ee}\ee\cong\gal\ll{\ll\cap\ee}$\linebreak Si $\ll/\kk$ est finie alors $\edeg{\ll\cdot\ee}\ll=\edeg\ll{\ll\cap\ee}$\linebreak Si $\ee/\kk$ est aussi galoisienne alors $\gal{\ll\cdot\ee}\kk\cong\gal\ll\kk\times_{\gal{\ll\cap\ee}\kk}\gal\ee\kk$

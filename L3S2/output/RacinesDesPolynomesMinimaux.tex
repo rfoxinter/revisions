@@ -1,0 +1,29 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\mm{\mathbb M}\usepackage{polynomes}\DeclareMathOperator{\dec}{D}\DeclareMathOperator{\olddegsep}{deg\,sep}\newcommand{\degsep}[2][]{\olddegsep_{#1}\l#2\r}\usepackage{structures}\newcommand\edeg[2]{\left[#1{:}#2\right]}\newcommand\sdeg[2]{\left[#1{:}#2\right]_s}
+\hypersetup{pdftitle=Algèbre 2 -- Racines des polynômes minimaux}
+\title{Algèbre 2\\\emph{Racines des polynômes minimaux}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Caractérisation de la séparabilité via $\hom[\sigma]{\fr K\alpha,\mm^\text{alg}}$}{1/8}
+\slider{$\alpha$ est séparable si et seulement si $\left|\hom[\sigma]{\fr K\alpha,\mm^\text{alg}}\right|=\edeg{\fr K\alpha}\kk$\linebreak$\alpha$ est inséparable si et seulement si $\left|\hom[\sigma]{\fr K\alpha,\mm^\text{alg}}\right|=\frac{\edeg{\fr K\alpha}\kk}{p^n}$, $n\geqslant1$\linebreak En particulier, si $\alpha$ est séparable sur $\kk$ et $\beta\in\fr K\alpha$ alors $\beta$ est séparable sur $\kk$}{1/8}
+\slideq{$\alpha$ est séparable sur $\kk$}{2/8}
+\slider{$P_{\alpha,\kk}$ n'a que des racines simples}{2/8}
+\slideq{$\degsep[\kk]\alpha$}{3/8}
+\slider{$\deg{S_\alpha}$}{3/8}
+\slideq{Séparabilité dans les tours d'extensions}{4/8}
+\slider{Si $\ll/\mathbb F/\kk$ sont des extensions algèbriques et $\alpha\in\ll$ est séparable sur $\kk$ alors $\alpha$ est séparable sur $\mathbb F$}{4/8}
+\slideq{$\degsep[\kk]\alpha$}{5/8}
+\slider{$\sdeg{\fr K\alpha}\kk=\left|\hom[\sigma]{\fr K\alpha,\mm^\text{alg}}\right|=\deg{S_\alpha}$\linebreak$\edeg{\fr K\alpha}\kk=p^n\sdeg{\fr K\alpha}\kk$}{5/8}
+\slideq{Multiplicativité des degrés de séparabilité}{6/8}
+\slider{Si $\alpha$ est algébrique sur $\kk$ et $\beta\in\fr K\alpha$\linebreak$\sdeg{\fr K\alpha}\kk=\sdeg{\fr K\alpha}{\fr K\beta}\times\sdeg{\fr K\beta}\kk$\linebreak En particulier, si $\alpha$ est séparable sur $\kk$ alors $\beta$ est séparable sur $\kk$ et si $\alpha$ est pûrement inséparable sur $\kk$ alors $\beta$ est pûrement inséparable sur $\kk$}{6/8}
+\slideq{Caractérisation de la séparabilité via $P_{\alpha,\kk}$}{7/8}
+\slider{$\alpha$ est séparable si et seulement si $P_{\alpha,\kk}$ est séparable sur $\kk$\linebreak$\alpha$ est inséparable si et seulement si $P_{\alpha,\kk}$ est inséparable sur $\kk$\linebreak$\alpha$ est pûrement inséparable si et seulement si $P_{\alpha,\kk}$ est pûrement inséparable sur $\kk$}{7/8}
+\slideq{$\alpha$ est inséparable sur $\kk$}{8/8}
+\slider{Il existe $Z_\alpha\in\pol KX$ irréductible tel que $P_{\alpha,\kk}=S_\alpha\l X^{p^n}\r$\linebreak$\rac[\ll]{P_{\alpha,\kk}}\hookrightarrow\rac[\ll]{S_\alpha}$ et c'est une bijection si et seulement si $\dec_\kk\l P\r\subset\ll$\linebreak$\alpha^{p^n}$ est séparable avec $P_{\alpha^{p^n},\kk}=S_\alpha$\linebreak$\val[\alpha]{P_{\alpha,\kk}}=p^n$}{8/8}
+\end{document}

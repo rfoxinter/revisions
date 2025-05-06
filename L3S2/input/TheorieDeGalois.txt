@@ -1,0 +1,10 @@
+Algèbre 2 -- Théorie de Galois
+Shuffle questions : True
+Q/R & R/Q : False
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\ff{\mathbb F}\usepackage{polynomes}\DeclareMathOperator{\dec}{D}\DeclareMathOperator{\olddegsep}{deg\,sep}\newcommand{\degsep}[2][]{\olddegsep_{#1}\l#2\r}\usepackage{structures}\newcommand\edeg[2]{\left[#1{:}#2\right]}\newcommand\sdeg[2]{\left[#1{:}#2\right]_s}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}\newcommand{\aappl}[4]{\begin{array}[t]{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}
+Extension galoisienne;;Extension algébrique, normale et séparable
+Construnction de $\ll/\kk$ galoisienne comme corps de décomposition;;Si $\ll/\kk$ est galoisienne si et seulement s'il existe un polynôme $P$ séparable sur $\kk$ tel que $\ll=\dec_\kk\l P\r$
+Proprété de $\gal\ll\kk$ sur les racines de $P$ tel que $\ll=\dec_\kk\l P\r$;;$\gal\ll\kk\hookrightarrow\mathfrak S\l\rac P\r\cong\mathfrak S_n$\linebreak Si de plus $P$ est irréductible alors l'action sur les racines est transitive
+$\ff^{\oldgal}$\linebreak$\ff/\kk$ séparable et $\ff\subset\kk^\text{alg}$;;Plus petite extension galoisienne de $\kk$ contenant $\ff$\linebreak C'est l'extension de $\kk$ engendrée par $\left\{\sigma\l\ff\r,\sigma\in\gal{\kk^\text{alg}}\kk\right\}$\linebreak Si $\ff/\kk$ est finie alors $\ff^{\oldgal}/\kk$ est finie et $\edeg{\ff^{\oldgal}}\kk\leqslant\edeg\ff\kk!$
+Théorème de correspondance de Galois;;Si $\ll/\kk$ est une extension galoisienne finie et $G=\gal\ll\kk$ alors il y a une bijection décroissante entre les extensions intermédiaires $\mathcal E$ de $\ll/\kk$ et les sous groupes $\mathcal G$ de $G$ donnée par \aappl{\mathcal{E}}{\mathcal{G}}{\ff}{\gal\ll\ff} et \aappl{\mathcal{G}}{\mathcal{E}}{H}{L^H}\linebreak $\ff/\kk$ est normale si et seulement si $\gal\ll\ff\vartriangleleft\gal\ll\kk$
+Correspondance de Galois appliquée à des compositums et intersections;;Si $\ff_1$ et $\ff_2$ sont associés à $H_1$ et $H_2$ alors $\ff_1\cap\ff_2$ est associé à $\left\langle H_1,H_2\right\rangle$ et $\ff_1\cdot\ff_2$ est associé à $H_1\cap H_2$

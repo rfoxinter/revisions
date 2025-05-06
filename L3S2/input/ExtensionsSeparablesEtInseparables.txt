@@ -1,0 +1,19 @@
+Algèbre 2 -- Exensions séparables et pûrement inséparables
+Shuffle questions : True
+Q/R & R/Q : False
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\mm{\mathbb M}\usepackage{polynomes}\DeclareMathOperator{\dec}{D}\DeclareMathOperator{\olddegsep}{deg\,sep}\newcommand{\degsep}[2][]{\olddegsep_{#1}\l#2\r}\usepackage{structures}\newcommand\edeg[2]{\left[#1{:}#2\right]}\newcommand\sdeg[2]{\left[#1{:}#2\right]_s}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}
+$\ll/\kk$ est séparable;;Tout $x\in L$ est séparable sur $\kk$
+$\ll/\kk$ est inséparable;;Il existe $x\in L$ qui n'est pas séparable sur $\kk$
+$\ll/\kk$ est pûrement inséparable;;Tout $x\in L$ est pûrement inséparable sur $\kk$
+Lien entre $\edeg\ll\kk$ et $\sdeg\ll\kk$;;$\edeg\ll\kk=p^n\sdeg\ll\kk$\linebreak En particulier, $\ll/\kk$ est séparable si et seulement si $n=1$
+$\sdeg\mm\ll\sdeg\ll\kk$;;$\sdeg\mm\kk$
+$\fr K{\alpha_1,\cdots,\alpha_r}/\kk$ est séparable;;Pour tout $i\in\llb1,r\rrb$, $\alpha_i$ est séparable sur $\kk$
+$\kk^{\text{sep},\ll}$;;$\left\{x\in\ll,x\text{ est séparable sur }\kk\right\}$\linebreak C'est un corps qui correspond à la réunion de toute les extensions séparables de $\kk$
+$\kk^{\text{pi},\ll}$;;$\left\{x\in\ll,x\text{ est pûrement inséparable sur }\kk\right\}$\linebreak C'est un corps qui correspond à la réunion de toute les extensions pûrement inséparables de $\kk$
+Lien entre une extension intermédiaire $\ll/\mathbb F/\kk$ et $\kk^{\bullet,\ll}$;;Si $\mathbb F/\kk$ est $\bullet$ alors $\mathbb F\subset\kk^{\bullet,\ll}$
+Transfert du caractère $\bullet$;;Si $x\in\ll$ est $\bullet$ sur $\mathbb F$ et $\mathbb F$ est $\bullet$ sur $\kk$ alors $x$ est $\bullet$ sur $\kk$\linebreak En particulier, si $x\in\ll$ est $\bullet$ sur $\kk^{\bullet,\ll}$ alors $x$ est $\bullet$ sur $\kk$\linebreak Si $\ll$ est $\bullet$ sur $\mathbb F$ et $\mathbb F$ est $\bullet$ sur $\kk$ alors $\ll$ est $\bullet$ sur $\kk$
+Transfert du caractère $\bullet$ par composition;;La composée d'extensions $\bullet$ est $\bullet$
+Propriétés de $\ll^\text{pl}=\left\{x\in\ll,\forall\sigma\text{-plongements }\sigma',\sigma'',\sigma'\l x\r=\sigma''\l x\r\right\}$;;$\ll^\text{pl}=\kk^{\text{pi},\ll}$\linebreak En particulier, si $\ll/\kk$ est séparable, $\ll^\text{pl}=\kk$; si $\ll/\kk$ est normale, $\ll^\text{pl}=\ll^{\gal\ll\kk}$; si $\ll/\kk$ est galoisienne, $\ll^{\gal\ll\kk}=\kk$
+Théorème de l'élément primitif;;Toute extension séparable finie est monogène
+Lemme d'Artin;;Si $\Bbbk$ est un corps et $H$ est un sous-groupe fini des automorphismes de $\Bbbk$ alors $C$ est séparable sur $\Bbbk^H$, $\left|H\right|=\left|\gal\Bbbk{\Bbbk^H}\right|$ et $H=\gal\Bbbk{\Bbbk^H}$
+Conséquences du lemme d'Artin pour une extension normale;;$\ll/\ll^{\gal\ll\kk}$ est galoisienne\linebreak Si $\ll/\kk$ est finie, $\edeg\ll\kk=\left|\gal\ll\kk\right|$\linebreak$\ll^{\gal\ll\kk}=\kk^{\text{pi},\ll}$\linebreak$\kk=\kk^{\text{sep},\ll}\cap\kk^{\text{pi},\ll}$\linebreak$\ll=\kk^{\text{sep},\ll}\cdot\kk^{\text{pi},\ll}$

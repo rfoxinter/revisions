@@ -1,0 +1,12 @@
+Algèbre 2 -- Racines des polynômes minimaux
+Shuffle questions : True
+Q/R & R/Q : False
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\mm{\mathbb M}\usepackage{polynomes}\DeclareMathOperator{\dec}{D}\DeclareMathOperator{\olddegsep}{deg\,sep}\newcommand{\degsep}[2][]{\olddegsep_{#1}\l#2\r}\usepackage{structures}\newcommand\edeg[2]{\left[#1{:}#2\right]}\newcommand\sdeg[2]{\left[#1{:}#2\right]_s}
+$\alpha$ est séparable sur $\kk$;;$P_{\alpha,\kk}$ n'a que des racines simples
+$\alpha$ est inséparable sur $\kk$;;Il existe $Z_\alpha\in\pol KX$ irréductible tel que $P_{\alpha,\kk}=S_\alpha\l X^{p^n}\r$\linebreak$\rac[\ll]{P_{\alpha,\kk}}\hookrightarrow\rac[\ll]{S_\alpha}$ et c'est une bijection si et seulement si $\dec_\kk\l P\r\subset\ll$\linebreak$\alpha^{p^n}$ est séparable avec $P_{\alpha^{p^n},\kk}=S_\alpha$\linebreak$\val[\alpha]{P_{\alpha,\kk}}=p^n$
+Séparabilité dans les tours d'extensions;;Si $\ll/\mathbb F/\kk$ sont des extensions algèbriques et $\alpha\in\ll$ est séparable sur $\kk$ alors $\alpha$ est séparable sur $\mathbb F$
+$\degsep[\kk]\alpha$;;$\deg{S_\alpha}$
+Caractérisation de la séparabilité via $\hom[\sigma]{\fr K\alpha,\mm^\text{alg}}$;;$\alpha$ est séparable si et seulement si $\left|\hom[\sigma]{\fr K\alpha,\mm^\text{alg}}\right|=\edeg{\fr K\alpha}\kk$\linebreak$\alpha$ est inséparable si et seulement si $\left|\hom[\sigma]{\fr K\alpha,\mm^\text{alg}}\right|=\frac{\edeg{\fr K\alpha}\kk}{p^n}$, $n\geqslant1$\linebreak En particulier, si $\alpha$ est séparable sur $\kk$ et $\beta\in\fr K\alpha$ alors $\beta$ est séparable sur $\kk$
+Caractérisation de la séparabilité via $P_{\alpha,\kk}$;;$\alpha$ est séparable si et seulement si $P_{\alpha,\kk}$ est séparable sur $\kk$\linebreak$\alpha$ est inséparable si et seulement si $P_{\alpha,\kk}$ est inséparable sur $\kk$\linebreak$\alpha$ est pûrement inséparable si et seulement si $P_{\alpha,\kk}$ est pûrement inséparable sur $\kk$
+$\degsep[\kk]\alpha$;;$\sdeg{\fr K\alpha}\kk=\left|\hom[\sigma]{\fr K\alpha,\mm^\text{alg}}\right|=\deg{S_\alpha}$\linebreak$\edeg{\fr K\alpha}\kk=p^n\sdeg{\fr K\alpha}\kk$
+Multiplicativité des degrés de séparabilité;;Si $\alpha$ est algébrique sur $\kk$ et $\beta\in\fr K\alpha$\linebreak$\sdeg{\fr K\alpha}\kk=\sdeg{\fr K\alpha}{\fr K\beta}\times\sdeg{\fr K\beta}\kk$\linebreak En particulier, si $\alpha$ est séparable sur $\kk$ alors $\beta$ est séparable sur $\kk$ et si $\alpha$ est pûrement inséparable sur $\kk$ alors $\beta$ est pûrement inséparable sur $\kk$

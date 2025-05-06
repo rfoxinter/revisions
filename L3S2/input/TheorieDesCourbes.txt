@@ -1,7 +1,7 @@
 Calcul différentiel -- Théorie des courbes
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al}\usepackage{analyse}\usepackage[arc]{complexes}\usepackage{trigo}\usepackage{matrices}
+\usepackage{al}\usepackage{analyse}\toggleanalysepar\usepackage[arc]{complexes}\usepackage{trigo}\usepackage{matrices}\let\phi\varphi
 Courbe paramétrée;;Application $\varphi\!:\!I\to\mathbb R^n$ différentiable de classe $\mathcal C^k$ avec $I$ un intervalle ouvert de $\mathbb R$
 Point régulier\linebreak Point singulier;;$t_o\in I$ est régulier pour $\varphi$ si $\phi'\l t\r\neq0$ et singulier sinon
 $T_{x_0}M$;;$\vect{\phi'\l t_0\r}$
