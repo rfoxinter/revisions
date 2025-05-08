@@ -1,0 +1,17 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\usepackage{polynomes,matrices,al}\DeclareMathOperator{\dec}{D}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}
+\hypersetup{pdftitle=Algèbre 2 -- Extensions radicielles}
+\title{Algèbre 2\\\emph{Extensions radicielles}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Lien entre $\gal\ll\kk$ et $\matgl2{\mathbb Z/n\mathbb Z}$\linebreak$\ll=\dec_\kk\l X^n-a\r$}{1/2}
+\slider{$\appl{\rho}{\gal{\ll}{\kk}}{\matgl{2}{\mathbb Z/n\mathbb Z}}{\sigma}{\tmatrix({\chi_{\ll/\kk}\l\sigma\r\& c\l\sigma\r\\0\&1\\})}$\linebreak$c\l\sigma\r$ est l'entier tel que $\sigma\l\zeta_n\r=\zeta_n^{c\l\sigma\r}$}{1/2}
+\slideq{Caractère cyclotomique $\chi_{\ll/\kk}$\linebreak$\ll=\dec_\kk\l X^n-a\r$}{2/2}
+\slider{Application $\chi_{\kk/\ll}\!:\!\gal\ll\kk\to\l\mathbb Z/n\mathbb Z\r^\times$ vu comme composition du morphisme cyclotomique sur l'extension kummérienne $\fr K{\zeta_n}/\kk$ et du morphisme de restriction $\gal\ll\kk\to\gal{\fr K{\zeta_n}}\kk$}{2/2}
+\end{document}

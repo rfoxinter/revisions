@@ -1,0 +1,23 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\ff{\mathbb F}\usepackage{polynomes}\DeclareMathOperator{\dec}{D}\usepackage{structures}\newcommand\edeg[2]{\left[#1{:}#2\right]}\newcommand\sdeg[2]{\left[#1{:}#2\right]_s}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}\usepackage{al,topologie,usuelles}\let\bar\overline\DeclareMathOperator{\ppcm}{ppcm}
+\hypersetup{pdftitle=Algèbre 2 -- Extensions kummériennes}
+\title{Algèbre 2\\\emph{Extensions kummériennes}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Propriété de $\ll/\kk$ galoisienne avec $\gal\ll\kk\cong\mathbb Z/n\mathbb Z$\linebreak$\mu_n\subset\kk$}{1/5}
+\slider{Il existe $\alpha\in\ll$ tel que $\ll=\fr K\alpha$ et $\alpha^n\in\kk$\linebreak On a donc $\ll/\kk$ kummérienne}{1/5}
+\slideq{Propriété de $\ll/\kk$ abélienne en lien avec les extensions kummériennes}{2/5}
+\slider{Il existe $B$ un sous-groupe de $\kk^\times$ contenant $\l\kk^\times\r^n$ tel que $\ll=\kk_B=\dec_\kk\l\left\{X^n-b,b\in B\right\}\r$}{2/5}
+\slideq{Indépendance linéaire des caractères}{3/5}
+\slider{Si $\l\sigma_1,\cdots,\sigma_n\r$ sont des morphismes de corps de $\ff$ deux à deux distincts, alors c'est une famille libre des $\mathbb Z$-endomorphismes de $\ff$}{3/5}
+\slideq{Propriétés de $\kk_B=\dec_\kk\l\left\{X^n-b,b\in B\right\}\r$\linebreak$\bar B\subset\kk^\times/\l\kk^\times\r^n$, $B$ le relevé de $\bar B$ dans $\kk$}{4/5}
+\slider{$\kk_B/\kk$ est abélienne\linebreak L'exposant de $G$\footnote{$\ppcm\l\ord g,g\in G\r$} divise $n$\linebreak L'extension est finie si et seulement si $\bar B$ est fini et dans ce cas, $\edeg{\kk_B}\kk=\left|\bar B\right|$ et $\bar B\cong G^*$ (le dual de $G$ dans $\l\kk^\text{alg}\r^\times$)}{4/5}
+\slideq{Propriétés de $\gal{\kk_b}\kk$}{5/5}
+\slider{$\appl{\psc{\bullet}{b}}{\gal{\kk_b}{\kk}}{\mu_n}{\sigma}{\frac{\sigma\l\alpha\r}{\alpha}}$\linebreak$\alpha$ racine de $X^n-b$\linebreak C'est un morphisme injectif indépendant de la racine de $b$\linebreak$\gal{\kk_b}\kk$ est cyclique d'ordre $s\mid n$ et $s=\min{\left\{k\geqslant1,b^k\in\l\kk^\times\r^n\right\}}$}{5/5}
+\end{document}

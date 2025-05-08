@@ -1,0 +1,19 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\newcommand\qq{\mathbb Q}\usepackage{polynomes}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}\DeclareMathOperator{\dec}{D}\let\bar\overline\newcommand\edeg[2]{\left[#1{:}#2\right]}\DeclareMathOperator{\frob}{frob}
+\hypersetup{pdftitle=Algèbre 2 -- Calculs de groupes de Galois}
+\title{Algèbre 2\\\emph{Calculs de groupes de Galois}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\gal{\dec_\qq\l f\r}\qq$ pour $f$ irréductible de degré $p$ ayant exactement deux racines non réelles}{1/3}
+\slider{$\mathfrak S_p$\linebreak La conjugaison complexe induit une transposition et par le théorème de Cauchy, on a un $p$-cycle}{1/3}
+\slideq{Méthode de la réduction modulo $p$}{2/3}
+\slider{Si $f\in\pol ZX$ est unitaire, $\bar f$ la réduction de $f$ dans $\mathbb F_p\left[X\right]$, si $\bar f$ n'a que des racines simples dans $\mathbb F_p^\text{alg}$ alors il existe une application de <<~réduction modulo $p$~>> qui identifie les zéros de $f$ et de $\bar f$ et il existe un morphisme de groupes injectif $\widetilde\cdot\!:\!\gal{\dec_\qq\l f\r}\qq\hookrightarrow\gal{\dec_{\mathbb F_p}\l\bar f\r}{\mathbb F_p}$ compatible avec les actions sur les racines et tel que $\sigma\l\bar\alpha\r=\widetilde\sigma\l\alpha\r$}{2/3}
+\slideq{Propriétés de $\gal{\dec_{\mathbb F_q}\l\bar f\r}{\mathbb F_q}$ pour $q=p^s$ et $f$ irréductible de degré $d$}{3/3}
+\slider{Si $k=\edeg{\dec_{\mathbb F_q}\l\bar f\r}{\mathbb F_q}$ alors $\gal{\dec_{\mathbb F_q}\l\bar f\r}{\mathbb F_q}\cong\left\langle\frob_p\right\rangle\cong\mathbb Z/p\mathbb Z$ et l'inclusion $\gal{\dec_{\mathbb F_q}\l\bar f\r}{\mathbb F_q}\hookrightarrow\mathfrak S_d$ identifie $\frob_p$ à un cycle de longueur $d$}{3/3}
+\end{document}

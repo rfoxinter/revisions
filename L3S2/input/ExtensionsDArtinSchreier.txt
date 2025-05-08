@@ -1,0 +1,6 @@
+Algèbre 2 -- Extensions d'Artin-Schreier
+Shuffle questions : True
+Q/R & R/Q : False
+\newcommand\kk{\mathbb K}\newcommand\ff{\mathbb F}\usepackage{polynomes}\DeclareMathOperator{\dec}{D}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}
+Théorème d'Artin-Schreier pour $X^p-X-a$\linebreak$\car\kk=p$;;$X^p-X-a$ est soit irréductible soit scindé sur $\kk$ et si $\alpha$ est une racines de ce polynôme alors les autres sont données par $\alpha+k$, $k\in\ff_p$\linebreak $\fr K\alpha/\kk$ est abélienne et si $\alpha\notin\kk$, $\gal{\fr K\alpha}\kk\cong\mathbb Z/p\mathbb Z$
+Théorème d'Artin-Schreier pour une extension d'ordre $p$\linebreak$\car\kk=p$;;Toute extension galoisienne d'ordre $p$ est de cette forme $\dec_\kk\l X^p-X-a\r$, $a\in\kk$

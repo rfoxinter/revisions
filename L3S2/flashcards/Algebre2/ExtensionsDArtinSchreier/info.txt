@@ -1,0 +1,5 @@
+"Algèbre 2 &ndash; <i>Extensions d’Artin-Schreier</i>"
+1
+0
+[1, 2]
+[0, 0]

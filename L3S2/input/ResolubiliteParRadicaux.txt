@@ -1,0 +1,14 @@
+Algèbre 2 -- Résolubilité par radicaux
+Shuffle questions : True
+Q/R & R/Q : False
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\mm{\mathbb M}\newcommand\ff{\mathbb F}\usepackage{structures}\DeclareMathOperator{\oldgal}{Gal}\newcommand{\gal}[2]{\oldgal\l#1/#2\r}
+$\ll/\kk$ est radicale;;Il existe une tour d'extensions $\kk=\ll_0\subset\ll_1\subset\cdots\subset\ll_n=\ll$ avec $\ll_{i+1}/\ll_i$ radicielle
+Transfert du caractère radical;;Si $\ll/\kk$, $\ll'/\kk$ et $\mm/\ll$ sont radicales et $\ff/\kk$ est finie alors $\mm/\kk$ est radicale, $\ll\cdot\ll'/\kk$ est radicale, $\ll\cdot\ff/\ff$ est radicale\linebreak Si $\mm/\kk$ est radicale et $\ll$ est une extension intermédiaire alors $\mm/\kk$ est radicale
+Transfert du caractère résoluble par radicaux;;Si $\ll/\kk$, $\ll'/\kk$ sont résolubles par radicaux si et seulement si $\ll\cdot\ll'/\kk$ est résoluble par radicaux\linebreak Si $\mm/\kk$ est radicale et $\ll$ est une extension intermédiaire alors $\mm/\kk$ est résoluble par radicaux
+Suite de composition pour $G$ fini;;Suite de groupes $\left\{0\right\}=G_r\subset G_{r-1}\subset\cdots\subset G_0=0$ telle que $G_{i+1}\vartriangleleft G_i$
+Relations sur les suites de composition;;$\varSigma_1\subset\varSigma_2$ si $\varSigma_1$ s'obtient en supprimant des termes de $\varSigma_2$\linebreak$\varSigma_1\sim\varSigma_2$ s'il existe $\sigma\in\mathfrak S_n$ telle que $G_i/G_{i+1}\cong H_{\sigma\l i\r}/H_{\sigma\l i\r+1}$
+Théorème de Jordan-Hölder;;Deux suites de composition maximales sont équivalentes et la suite non ordonnée et avec multiplicité des constituants simples $G_i/G_{i+1}$ est intrinsèque au groupe $G$
+$G$ est résoluble;;Les constituants simples $G_i/G_{i+1}$ de sa suite de composition maximale sont abéliens
+Transfert du caractère résoluble;;Si $G$ est résoluble alors $H\leqslant G$ est résoluble\linebreak$G$ est résoluble si et seulement si $H$ et $G/H$ sont résolubles pour $H\vartriangleleft G$
+CNS pour avoir $\ll/\kk$ résoluble par radicaux;;Si $\car\kk=0$, $\ll/\kk$ résoluble par radicaux si et seulement si $\gal{\ll^\text{gal}}\kk$ est résoluble
+Exemples de groupes résolubles, non résolubles;;$G$ abélien fini est résoluble\linebreak Si $\left|G\right|<60$ alors $G$ est résoluble\linebreak$\mathfrak S_n$ et $\mathfrak A_n$ ne sont par résolubles pour $n\geqslant5$
