@@ -253,6 +253,8 @@
 \newcommand{\thmnameref}[1]{{\def\@displaythmname{true}\ifcsdef{r@t@#1}{\textref{#1}}{\autoref{#1}}}}
 \def\@displaythmname{}
 \robustify{\@displaythmname}
+\newif\ifthmname
+\thmnametrue
 
 \newcommand{\incrementcounter}[2]{%
     \altarticle@comparestring{\arabic{#1}}{\arabic{#2}}{\relax}{\refstepcounter{#2}\incrementcounter{#1}{#2}}%
@@ -327,9 +329,9 @@
             \textbf{\boldmath#2 \csname the#1\endcsname{}~:}\ifdefempty{\argI}{}{\label{#3 \argI}}{} %
         \else%
             \altarticle@comparestring{##1}{true}{%
-                \textbf{\boldmath#2 \csname the#1\endcsname{} (\textsl{##2})~:}\ifdefempty{\argI}{}{\label{#3 \argI}}{} %
+                \textbf{\boldmath#2 \csname the#1\endcsname{}\ifthmname{} (\textsl{##2})\fi~:}\ifdefempty{\argI}{}{\label{#3 \argI}}{} %
             }{%
-                \textbf{\boldmath#2 \csname the#1\endcsname{} (\textsl{##2})~:}\ifdefempty{\argI}{}{\label{#3 \argI}\def\@currentlabel{\altarticle@comparestring{\@displaythmname}{true}{#4 }{}\thmoptargII\argII}\label{t@#3 \argI}}\addcontentsline{to#1}{thm}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\thmoptargII\tocargII}}{} %
+                \textbf{\boldmath#2 \csname the#1\endcsname{}\ifthmname{} (\textsl{##2})\fi~:}\ifdefempty{\argI}{}{\label{#3 \argI}\def\@currentlabel{\altarticle@comparestring{\@displaythmname}{true}{#4 }{}\thmoptargII\argII}\label{t@#3 \argI}}\addcontentsline{to#1}{thm}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\thmoptargII\tocargII}}{} %
             }%
         \fi%
     }%
@@ -364,9 +366,9 @@
             \textbf{\boldmath#2~:}{} %
         \else%
             \altarticle@comparestring{##1}{true}{%
-                \textbf{\boldmath#2 (\textsl{##2})~:}{} %
+                \textbf{\boldmath#2\ifthmname{} (\textsl{##2})\fi~:}{} %
             }{%
-                \textbf{\boldmath#2 (\textsl{##2})~:}\ifdefempty{\argI}{}{\def\@currentlabel{\thmoptargII\argII}\label{t@#3 \argI}}{}\addcontentsline{to#1}{thm}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\thmoptargII\tocargII}}{} %
+                \textbf{\boldmath#2\ifthmname{} (\textsl{##2})\fi~:}\ifdefempty{\argI}{}{\def\@currentlabel{\thmoptargII\argII}\label{t@#3 \argI}}{}\addcontentsline{to#1}{thm}{\ignorespaces{\noexpand\expandafter\noexpand\MakeUppercase\thmoptargII\tocargII}}{} %
             }%
         \fi%
     }%
