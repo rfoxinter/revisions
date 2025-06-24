@@ -45,7 +45,11 @@
 \setlist[prvitemize]{topsep=0pt,nosep,leftmargin=*,labelsep=0pt,label=$\to{}$}
 \usepackage{tabularray}
 \SetTblrInner{rowsep=1pt}
-\usepackage{hhline}
+\DefTblrTemplate{caption-tag}{default}{}
+\DefTblrTemplate{caption-sep}{default}{}
+\DefTblrTemplate{caption-text}{default}{}
+\DefTblrTemplate{contfoot-text}{default}{}
+\DefTblrTemplate{conthead-text}{default}{}
 \usepackage{tikz}
 %\tikzset{every arrow/.append style={line cap=round}}
 \usepackage{tikz-cd}
@@ -170,13 +174,16 @@
 \DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
 \lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
 \endgroup
-%% Delimiters spacing
+%% Delimiters & delimiters spacing
 \let\l\relax
 \newcommand\l{\left(}
 \let\r\relax
 \newcommand\r{\right)}
 \newcommand{\llb}{\left\llbracket}
 \newcommand{\rrb}{\right\rrbracket}
+\def\lc{\left[}
+\def\rc{\right]}
+\def\set#1{\left\{#1\right\}}
 \let\oldleft\left
 \renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
 \let\oldright\right
@@ -1348,7 +1355,28 @@ space before arrow={0.2ex},
 }
 \makebigopcommand{\mathcal K}{fracK}
 %% Arithmetique
-\newcommand{\cgr}[3]{#1\equiv#2\ \left[#3\right]}
+\def\mmod#1{\mathchoice{\ }{\ }{}{}\lc#1\rc}
+\newcommand{\cgr}[3]{#1\equiv#2\mmod{#3\right}}
+\def\legendre@dash#1#2{\hb@xt@#1{%
+  \kern-#2\p@
+  \cleaders\hbox{\kern.5\p@
+    \vrule\@height.2\p@\@depth.2\p@\@width\p@
+    \kern.5\p@}\hfil
+  \kern-#2\p@
+  }}
+\def\@legendre#1#2#3#4#5{\mathopen{}\left(\kern-1.5pt
+  \sbox\z@{$\genfrac{}{}{0pt}{#1}{#3#4}{#3#5}$}%
+  \dimen@=\wd\z@
+  \kern-\p@\vcenter{\box0}\kern-\dimen@\vcenter{\legendre@dash\dimen@{#2}}\kern-\p@
+  \kern-1.5pt\right)\mathclose{}}
+\newcommand\legendre[2]{\mathchoice
+  {\@legendre{0}{1}{}{#1}{#2}}
+  {\@legendre{2}{0}{\vphantom{1}}{#1}{#2}}
+  {\@legendre{2}{0}{\vphantom{1}}{#1}{#2}}
+  {\@legendre{3}{0}{\vphantom{1}}{#1}{#2}}
+}
+\def\dlegendre{\@legendre{0}{1}{}}
+\def\tlegendre{\@legendre{1}{0.5}{\vphantom{1}}}
 %% Equivalents
 \newcommand{\equivo}[2][]{
     \if\relax\detokenize{#1}\relax
@@ -1400,6 +1428,16 @@ space before arrow={0.2ex},
         \hbox{\hspace{-0.05\wd0}\resizebox{1.1\wd0}{\height}{$\frown$}}
         \nointerlineskip
         \vspace{-1pt}
+        \box0
+    }
+}
+\renewcommand{\hat}[1]{\mathpalette\hat@hat{#1}\sbox0{$\m@th#1$}\hspace{-0.375\wd0}}
+\newcommand{\hat@hat}[2]{
+    \sbox0{$\m@th#1#2$}
+    \vbox{
+        \hbox{\hspace{-0.375\wd0}\resizebox{1.75\wd0}{\height}{$\string^$}}
+        \nointerlineskip
+        \vspace{-5pt}
         \box0
     }
 }
@@ -1580,7 +1618,7 @@ space before arrow={0.2ex},
         }
     }
 }
-%% Matrix
+%% Matrices
 \newcommand{\mat}[3]{\def\matargII{,#2}\if\relax\detokenize{#2}\relax\def\matargII{}\fi\mathcal{M}_{#1\matargII}\l#3\r}
 \newcommand{\sym}[3][]{\mathcal{S}_{#2}^{#1}\l#3\r}
 \newcommand{\ant}[2]{\mathcal{A}_{#1}\l#2\r}
@@ -1630,6 +1668,8 @@ space before arrow={0.2ex},
     ] {#3};
     \tmatargI
 \end{tikzpicture}}
+\def\smalltmatrix{\tmatrix[][minimum height = 0ex, row sep = .5ex, minimum width = 0ex, column sep = 1ex, inner sep = 0ex, nodes={anchor=base, execute at begin node=\scriptstyle},]}
+\def\altsmalltmatrix{\tmatrix[][minimum height = 0ex, row sep = .5ex, minimum width = 0ex, column sep = 1ex, inner sep = 0ex, nodes={anchor=base},]}
 \newcommand{\tcase}[1][]{\def\tmatargI{#1}\tmptcase}
 \newcommand{\tmptcase}[2][]{
 \kern-.2em\begin{tikzpicture}[every left delimiter/.style={xshift=.2em},every right delimiter/.style={xshift=-.125em},baseline={([yshift=-0.5ex]m.center)}]
