@@ -1964,12 +1964,14 @@ space before arrow={0.2ex},
 \let\star\relax
 \let\square\relax
 \let\triangle\relax
-\DeclareFontFamily{U}{dsrom}{}
-\DeclareFontShape{U}{dsrom}{m}{n}{
-    <-> dsrom12
+\pdfmapfile{+dsrm/dsrm.map}
+\newfont{\dsft}{dsrm/dsrm12}
+\DeclareFontFamily{U}{dsrm}{}
+\DeclareFontShape{U}{dsrm}{m}{n}{
+    <-> dsrm/dsrm12
 }{}
-\DeclareSymbolFont{mathds}{U}{dsrom}{m}{n}
-\DeclareMathAlphabet{\mathds}{U}{dsrom}{m}{n}
+\DeclareSymbolFont{mathds}{U}{dsrm}{m}{n}
+\DeclareMathAlphabet{\mathds}{U}{dsrm}{m}{n}
 \newcommand\ind[1]{\mathds{1}_{#1}}
 \DeclareMathSymbol{\square}{\mathbin}{mathds}{"41}
 \DeclareMathSymbol{\star}{\mathbin}{mathds}{"42}
