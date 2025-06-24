@@ -177,6 +177,7 @@
         \def\mpderargIII{\analyseleftp{#3}\analyserightp}
     \fi\derfrac{\partial^{\arabic{mpdercount}}{#2}}{\mpderden}\mpderargIII}
 \let\oldint\int
+\newcommand{\inint}{\mkern-3mu{\analysedisplay\mathchoice{\mkern-4mu}{\mkern-2mu}{}{}}\int}
 \renewcommand{\int}[1][]{\def\intvar{#1}
     \if\relax\detokenize{#1}\relax
         \def\intargI{}
@@ -185,12 +186,12 @@
     \fi\tmpint}
 \newcommand{\tmpint}[1][]{\def\intargII{#1}\tmptmpint}
 \newcommand{\tmptmpint}[1][]{\def\intargIII{#1}\tmptmptmpint}
-\newcommand{\tmptmptmpint}[2][]{{\analysedisplay\oldint\analyselimits_{\intargII}^{\intargIII}}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\intargI\else{{}\mathop{#1\l\dd\intvar\r}}\fi}
+\newcommand{\tmptmptmpint}[2][]{{\analysedisplay\oldint\analyselimits_{\intargII}^{\intargIII}}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\intargI\else{{}\mathop{#1\l\dd\intvar\r}}\fi}
 \newcommand{\altint}[1]{\def\altintsymb{#1}\tmpaltint}
 \newcommand{\tmpaltint}[1][]{\scanaltint{#1}\tmptmpaltint}
 \newcommand{\tmptmpaltint}[1][]{\def\intargII{#1}\tmptmptmpaltint}
 \newcommand{\tmptmptmpaltint}[1][]{\def\intargIII{#1}\tmptmptmptmpaltint}
-\newcommand{\tmptmptmptmpaltint}[2][]{{\analysedisplay\altintsymb\analyselimits_{\intargII}^{\intargIII}}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\altintspacevars\else{{}\mathop{{\let\oldotimes\otimes\def\otimes{{\oldotimes}}#1}\l\altintvars\r}}\fi}
+\newcommand{\tmptmptmptmpaltint}[2][]{{\analysedisplay\altintsymb\analyselimits_{\intargII}^{\intargIII}}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\altintspacevars\else{{}\mathop{{\let\oldotimes\otimes\def\otimes{{\oldotimes}}#1}\l\altintvars\r}}\fi}
 \newcommand{\eval}[1][]{\def\evalargI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\evalargI}^{#1}}
 \newcommand{\serie}[1]{\oldsum#1}

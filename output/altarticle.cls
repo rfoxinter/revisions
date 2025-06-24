@@ -170,7 +170,7 @@
 \DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
 \lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
 \endgroup
-%% Delimiters
+%% Delimiters spacing
 \let\l\relax
 \newcommand\l{\left(}
 \let\r\relax
@@ -181,6 +181,9 @@
 \renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
 \let\oldright\right
 \renewcommand{\right}{\aftergroup\egroup\oldright}
+%% Square root spacing
+\let\oldsqrt\sqrt
+\renewcommand{\sqrt}[2][\mkern8mu]{\mkern-4mu\mathop{\oldsqrt[#1]{#2}}{}\mkern-3mu}
 %% Fakebold
 \newlength\bshft
 \bshft=.18pt\relax
@@ -244,6 +247,10 @@
 \let\le\leqslant
 \let\geq\geqslant
 \let\ge\geqslant
+%% Textstyle align
+\newenvironment{tflalign*}
+    {\let\olddisplaystyle\displaystyle\let\displaystyle\textstyle\csname flalign*\endcsname}
+    {\endflalign}
 
 
 
@@ -1318,13 +1325,13 @@ space before arrow={0.2ex},
 \newcommand{\autobigoplimits}{\def\bigoplimits{}}
 \newcommand{\togglebigopdisplay}{\altarticle@comparestring{\bigopdisplay}{}{\def\bigopdisplay{\displaystyle}}{\def\bigopdisplay{}}}
 \newcommand{\autobigopdisplay}{\def\bigopdisplay{}}
-\let\oldsum\sum\renewcommand\sum[3]{{\bigopdisplay\oldsum\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
-\let\oldprod\prod\renewcommand\prod[3]{{\bigopdisplay\oldprod\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
-\let\oldcap\bigcap\renewcommand\bigcap[3]{{\bigopdisplay\oldcap\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
-\let\oldcup\bigcup\renewcommand\bigcup[3]{{\bigopdisplay\oldcup\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
-\let\oldbigsqcup\bigsqcup\renewcommand\bigsqcup[3]{{\bigopdisplay\oldbigsqcup\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
-\let\olduplus\biguplus\renewcommand\biguplus[3]{{\bigopdisplay\olduplus\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
-\newcommand\bigop[3]{{\bigopdisplay\bigoplus\bigoplimits_{#1}^{#2}{}}\bigopleftp#3\bigoprightp}
+\let\oldsum\sum\renewcommand\sum[3]{{\bigopdisplay\oldsum\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\oldprod\prod\renewcommand\prod[3]{{\bigopdisplay\oldprod\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\oldcap\bigcap\renewcommand\bigcap[3]{{\bigopdisplay\oldcap\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\oldcup\bigcup\renewcommand\bigcup[3]{{\bigopdisplay\oldcup\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\oldbigsqcup\bigsqcup\renewcommand\bigsqcup[3]{{\bigopdisplay\oldbigsqcup\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\olduplus\biguplus\renewcommand\biguplus[3]{{\bigopdisplay\olduplus\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\newcommand\bigop[3]{{\bigopdisplay\bigoplus\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 
 \DeclareRobustCommand\makebigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}
 \newcommand{\bigop@}[2]{\bigop@@#1#2}
@@ -1336,7 +1343,7 @@ space before arrow={0.2ex},
         \DOTSB\makebigop[#1]{#2}%
     }%
     \expandafter\newcommand\csname #3\endcsname[3]{%
-        {\bigopdisplay\csname #3symb\endcsname\bigoplimits_{##1}^{##2}{}}\bigopleftp##3\bigoprightp%
+        {\bigopdisplay\csname #3symb\endcsname\bigoplimits_{##1}^{##2}}\mkern-3mu{}\mathop{}\bigopleftp##3\bigoprightp%
     }%
 }
 \makebigopcommand{\mathcal K}{fracK}
@@ -1931,6 +1938,7 @@ space before arrow={0.2ex},
         \def\mpderargIII{\analyseleftp{#3}\analyserightp}
     \fi\derfrac{\partial^{\arabic{mpdercount}}{#2}}{\mpderden}\mpderargIII}
 \let\oldint\int
+\newcommand{\inint}{\mkern-3mu{\analysedisplay\mathchoice{\mkern-4mu}{\mkern-2mu}{}{}}\int}
 \renewcommand{\int}[1][]{\def\intvar{#1}
     \if\relax\detokenize{#1}\relax
         \def\intargI{}

@@ -45,6 +45,8 @@
 \renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
 \let\oldright\right
 \renewcommand{\right}{\aftergroup\egroup\oldright}
+\let\oldsqrt\sqrt
+\renewcommand{\sqrt}[2][\mkern8mu]{\mkern-4mu\mathop{\oldsqrt[#1]{#2}}{}\mkern-3mu}
 \newcommand{\slideq}[2]{\begin{frame}[c]{\textcolor{blue}{\Large\sffamily\bfseries Question #2}}\begin{center}\Large#1\end{center}\end{frame}}
 \newcommand{\slider}[2]{\begin{frame}[c]{\textcolor{cyan}{\Large\sffamily\bfseries Réponse #2}}\begin{center}\Large#1\end{center}\end{frame}}
 \let\oldfrac\frac

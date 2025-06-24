@@ -36,6 +36,8 @@
 \renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
 \let\oldright\right
 \renewcommand{\right}{\aftergroup\egroup\oldright}
+\let\oldsqrt\sqrt
+\renewcommand{\sqrt}[2][\mkern8mu]{\mkern-4mu\mathop{\oldsqrt[#1]{#2}}{}\mkern-3mu}
 \let\oldfrac\frac
 \renewcommand{\frac}[2]{\mathchoice{\dfrac{#1}{#2}}{\dfrac{#1}{#2}}{\oldfrac{#1}{#2}}{\oldfrac{#1}{#2}}}
 \newif\ifdfrac
