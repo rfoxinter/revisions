@@ -1866,8 +1866,6 @@ space before arrow={0.2ex},
 \newcommand{\tr}[1]{\oldtr\l#1\r}
 \DeclareMathOperator{\oldmat}{Mat}
 \newcommand{\almat}[3]{\def\almatargIII{,#3}\if\relax\detokenize{#3}\relax\def\almatargIII{}\fi\oldmat_{#2\almatargIII}\l#1\r}
-\newcommand\lc{\left[}
-\newcommand\rc{\right]}
 \DeclareMathOperator{\oldsl}{SL}
 \renewcommand{\sl}[2][]{\oldsl_{#1}\l#2\r}
 \DeclareMathOperator{\oldorth}{O}
