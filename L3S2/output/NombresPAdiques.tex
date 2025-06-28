@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{bigoperators,arithmetique,analyse,usuelles}\newcommand{\zz}[1][p]{\mathbb Z_{#1}}
+\usepackage{bigoperators,arithmetique,analyse,usuelles}\def\vala#1{\left|#1\right|}\def\nrm{\anrm[\null]}\newcommand{\zz}[1][p]{\mathbb Z_{#1}}\newcommand{\qq}[1][p]{\mathbb Q_{#1}}\DeclareMathOperator{\gl}{GL}
 \hypersetup{pdftitle=Groupes localement compacts -- Nombres \textit{p}-adiques}
 \title{Groupes localement compacts\\\emph{Nombres \textit{p}-adiques}}
 \author{}
@@ -10,22 +10,68 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$\zz$}{1/9}
-\slider{$\left\{\l x_n\r\in\prod{n\geqslant1}{}{\mathbb Z/p^n\mathbb Z},\forall n\in\mathbb N^*,\cgr{x_{n+1}}{x_n}{p^n}\right\}$\linebreak C'est un anneau intègre pour les opérations coordonnée par coordonnée\linebreak Le morphisme d'anneau $\appl{i}{\mathbb Z}{\zz}{x}{\l x\bmod p^n\r}$ est injectif}{1/9}
-\slideq{Valuation $p$-adique}{2/9}
-\slider{$v_p\l x\r$ est le plus petit $n\in\mathbb N$ pour lequel $x=u\times p^n$ avec $u\in\zz^*$\linebreak$v_p\l0\r=0$\linebreak$v_p\l xy\r=v_p\l x\r +v_p\l y\r$\linebreak$v_p\l x+y\r\geqslant\min{v_p\l x\r,v_p\l y\r}$}{2/9}
-\slideq{Distance sur $\zz$}{3/9}
-\slider{$\appl{d}{\zz\times\zz}{\mathbb{R}_+}{\l x,y\r}{\left|x-y\right|_p=p^{-v_p\l x-y\r}}$\linebreak C'est une distance ultramétrique invariante par translation}{3/9}
-\slideq{$\mathcal B_F\l x,p^n\r$}{4/9}
-\slider{$x+p^n\zz$}{4/9}
-\slideq{Propriétés topologiques de $\mathcal B_F\l x,r\r$ et $\mathcal B_O\l x,r\r$}{5/9}
-\slider{Ce sont des ouverts-fermés}{5/9}
-\slideq{Unités $p$-adiques}{6/9}
-\slider{$\zz^*$\linebreak$\zz^*=\left\{\l x_n\r\in\zz,x_1\neq0\right\}$}{6/9}
-\slideq{$\mathcal B_O\l x,r\r$}{7/9}
-\slider{$\mathcal B_F\l x,p^{-m}\r$ où $m=\min{\left\{n\in\mathbb N,p^{-n}\leqslant r\right\}}$}{7/9}
-\slideq{Propriété de la topologie induite sur $\zz$ par sa distance}{8/9}
-\slider{C'est la topologie induite par $\prod{n\geqslant1}{}{\mathbb Z/p^n\mathbb Z}$\linebreak En particulier, $\zz$ est compact}{8/9}
-\slideq{Décoposition classique d'un élément de $\zz$}{9/9}
-\slider{$u\times p^n$ où $u\in\zz^*$}{9/9}
+\slideq{Unités $p$-adiques}{1/32}
+\slider{$\zz^\times$\linebreak$\zz^\times=\left\{\l x_n\r\in\zz,x_1\neq0\right\}$}{1/32}
+\slideq{Valuation $p$-adique sur $\qq$}{2/32}
+\slider{$v_p\l x\r$ est l'entier $n\in\mathbb Z$ pour lequel $x=u\times p^n$ avec $u\in\zz^\times$\linebreak$v_p\l0\r=0$\linebreak$v_p\l xy\r=v_p\l x\r +v_p\l y\r$\linebreak$v_p\l x+y\r\geqslant\min{v_p\l x\r,v_p\l y\r}$}{2/32}
+\slideq{Corps résiduel d'un corps $\mathbb K$ ultramétrique}{3/32}
+\slider{$\Bbbk=A/M$\linebreak Si $\mathbb K$ est localement compact alors $\Bbbk$ est fini, et on a alors $\theta\in\left]0,1\right[$ tel que $\vala{\mathbb K^\times}=\theta^{\mathbb Z}$ et il existe $\pi\in A$ tel que $M=\pi A$}{3/32}
+\slideq{Propriété de valeurs absolues sur les extensions finies de $\qq$}{4/32}
+\slider{Il existe au plus une valeur absolue sur chaque extension qui étend celle sur $\qq$\linebreak Cette norme est donnée par $x\mapsto\vala{\det\l m_x\r}^{\frac1d}$ où $m_x\!:\!y\mapsto xy$ et $d$ est le degré de l'extension}{4/32}
+\slideq{$\mathcal B_O\l x,r\r$}{5/32}
+\slider{$\mathcal B_F\l x,p^{-m}\r$ où $m=\min{\left\{n\in\mathbb N,p^{-n}\leqslant r\right\}}$}{5/32}
+\slideq{Générateurs d'extensions totalement ramifiées de $\qq$}{6/32}
+\slider{Si $\mathbb K$ est une extension totalement ramifiée de $\qq$, alors si $\pi\in A$ est tel que $M=\pi A$ alors $\mathbb K=\qq\l\pi\r$}{6/32}
+\slideq{Propriété de la topologie induite sur $\zz$ par sa distance}{7/32}
+\slider{C'est la topologie induite par $\prod{n\geqslant1}{}{\mathbb Z/p^n\mathbb Z}$\linebreak En particulier, $\zz$ est compact}{7/32}
+\slideq{Valeur absolue sur un corps}{8/32}
+\slider{$\vala x=0\Leftrightarrow x=0$\linebreak$\vala{xy}=\vala x\vala y$\linebreak$\vala{x+y}\leqslant\vala x+\vala y$\linebreak La valeur absolue est ultramétrique si de plus $\vala{x+y}\leqslant\max{\vala x,\vala y}$\linebreak Un corps muni d'une valeur absolue est topologique pour la métrique associée}{8/32}
+\slideq{Lien entre degré résiduel et indice de ramification}{9/32}
+\slider{$ef=\left[\mathbb K{:}\qq\right]$}{9/32}
+\slideq{Norme $p$-adique sur $\qq$}{10/32}
+\slider{$\vala x_p=p^{-v_p\l x\r}$\linebreak C'est une valeur absolue ultramétrique}{10/32}
+\slideq{Propriétés des normes sur des $\qq$-ev de dimension finie}{11/32}
+\slider{Toutes les normes sont équivalentes}{11/32}
+\slideq{$\qq$}{12/32}
+\slider{Corps des fractions de $\zz$\linebreak En particulier, $\mathbb Q$ est dense dans $\qq$}{12/32}
+\slideq{Valuation $p$-adique sur $\zz$}{13/32}
+\slider{$v_p\l x\r$ est le plus petit $n\in\mathbb N$ pour lequel $x=u\times p^n$ avec $u\in\zz^\times$\linebreak$v_p\l0\r=0$\linebreak$v_p\l xy\r=v_p\l x\r +v_p\l y\r$\linebreak$v_p\l x+y\r\geqslant\min{v_p\l x\r,v_p\l y\r}$}{13/32}
+\slideq{Sous-groupes fermés de $\zz$}{14/32}
+\slider{$\left\{0\right\}$ et $p^n\zz$}{14/32}
+\slideq{Mesure ultramétrique sur un $\qq$-ev}{15/32}
+\slider{$\nrm x=0\Leftrightarrow x=0$\linebreak$\nrm{\lambda x}=\vala\lambda_p\nrm x$ pour $\lambda\in\qq$\linebreak$\vala{x+y}\leqslant\max{\vala x+\vala y}$}{15/32}
+\slideq{Distance sur $\zz$}{16/32}
+\slider{$\appl{d}{\zz\times\zz}{\mathbb{R}_+}{\l x,y\r}{\left|x-y\right|_p=p^{-v_p\l x-y\r}}$\linebreak C'est une distance ultramétrique invariante par translation}{16/32}
+\slideq{Théorème de classification des corps locaux}{17/32}
+\slider{Si $\mathbb L$ est un corps local alors $\mathbb L$ est isomorphe à $\mathbb R$, $\mathbb C$ ou à une extension finie de $\qq$ ou $\mathbb F_p\llparenthesis t\rrparenthesis$}{17/32}
+\slideq{Propriétés de $A=\left\{x\in\mathbb K,\vala x\leqslant1\right\}$ et $M=\left\{x\in\mathbb K,\vala x<1\right\}$ dans un corps $\mathbb K$ ultramétrique}{18/32}
+\slider{$A$ est un sous-anneau de $\mathbb K$\linebreak$A=A^\times\sqcup M$\linebreak$M$ est l'unique anneau maximal de $A$}{18/32}
+\slideq{Propriétés de $\gl_n\l\mathbb K\r$ pour $\mathbb K$ un corps local}{19/32}
+\slider{$\gl_n\l\mathbb K\r$ est un groupe localement compact no discret\linebreak Si de plus $\mathbb K$ est une extension finie de $\mathbb Q_p$ alors $\gl_n\l\mathbb K\r$ est totalement discontinu et $\gl_n\l A\r$ en est un sous-groupe compact ouvert}{19/32}
+\slideq{Polynôme d'Eisenstein}{20/32}
+\slider{$f=a_0+\cdots+X^d\in\zz$ tel que $p\mid a_k$ pour $k\in\llb1,d-1\rrb$, $p^2\nmid a_0$\linebreak Un polynôme d'Eisenstein est irréductible sur $\qq$}{20/32}
+\slideq{Degré résiduel d'un corps $\mathbb K$ localement compact ultramétrique}{21/32}
+\slider{Degré du corps résiduel $\Bbbk$ sur $\mathbb Z/p\mathbb Z$}{21/32}
+\slideq{Indice de ramificatio d'un corps $\mathbb K$ localement compact ultramétrique}{22/32}
+\slider{$e=\left[\mathbb K^\times{:}p^{\mathbb Z}\right]$\linebreak$e$ est caractérisé par $\theta^e=\frac1p$\linebreak$\mathbb K/\qq$ est non ramifiée si $e=1$ et totalement ramifiée si $e=\left[\mathbb K{:}\qq\right]$}{22/32}
+\slideq{Distance sur $\qq$}{23/32}
+\slider{$d\l x,y\r=\vala{x-y}_p$\linebreak$\zz$ est la boule fermée autour de $0$ ppur cette métrique}{23/32}
+\slideq{Décoposition classique d'un élément de $\qq$}{24/32}
+\slider{$u\times p^n$ où $u\in\zz^\times$ et $n\in\mathbb Z$}{24/32}
+\slideq{Corps local}{25/32}
+\slider{Corps localement compact non discret}{25/32}
+\slideq{Propriétés topologiques de $\mathcal B_F\l x,r\r$ et $\mathcal B_O\l x,r\r$}{26/32}
+\slider{Ce sont des ouverts-fermés}{26/32}
+\slideq{$\zz$}{27/32}
+\slider{$\left\{\l x_n\r\in\prod{n\geqslant1}{}{\mathbb Z/p^n\mathbb Z},\forall n\in\mathbb N^*,\cgr{x_{n+1}}{x_n}{p^n}\right\}$\linebreak C'est un anneau intègre pour les opérations coordonnée par coordonnée\linebreak Le morphisme d'anneau $\appl{i}{\mathbb Z}{\zz}{x}{\l x\bmod p^n\r}$ est injectif et d'image dense}{27/32}
+\slideq{CNS de $\vala\cdot$ est une valeur absolue ultramétrique sur $\mathbb K$}{28/32}
+\slider{$\forall n\geqslant1$, $\vala n\leqslant1$\linebreak$\exists M>0$, $\forall n\geqslant1$, $\vala n\leqslant M$}{28/32}
+\slideq{$\mathcal B_F\l x,p^n\r$}{29/32}
+\slider{$x+p^n\zz$}{29/32}
+\slideq{Décoposition classique d'un élément de $\zz$}{30/32}
+\slider{$u\times p^n$ où $u\in\zz^\times$}{30/32}
+\slideq{Propriété de $+$ et $\times$ sur $\zz$}{31/32}
+\slider{Ce sont des applications continues}{31/32}
+\slideq{Corps topologique}{32/32}
+\slider{Corps dont les opérations $+$, $\times$ et ${}^{-1}$ sont continues}{32/32}
 \end{document}

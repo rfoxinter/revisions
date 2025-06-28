@@ -36,7 +36,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S1/flashcards/AnalyseComplexe/TheoremeDesResidus
 20241210083818
 ../L3S1/flashcards/AnalyseComplexe/TheorieDeCauchy
-20241108164912
+20250628073506
 ../L3S1/flashcards/FractionsContinues/FractionsContinuesFiniesSimples
 20240921102759
 ../L3S1/flashcards/FractionsContinues/FractionsContinuesSimplesInfinies

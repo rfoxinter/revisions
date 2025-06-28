@@ -12,7 +12,7 @@ Conservation de la continuité par passage à la limite uniforme;;Si $\forall n\
 Théorème de la double limite;;Si $\forall n\in\mathbb N$, $u_n\l x\r\cv{x\to a}l_n\in\mathbb C$ et $u_n\cv[CVU]{n\to+\infty}u$ alors $\l l_n\r$ converge vers $l\in\mathbb C$ et $u\l x\r\cv{x\to a}l$
 Primitivation d'une limite uniforme;;Si $\forall n\in\mathbb N$, $u_n$ est continue sur un intervalle $I$ et $u_n\cv[CVU]{n\to+\infty}u$ sur $I$, alors $\int[t][a][x]{u_n\l t\r}\cv[CVU]{n\to+\infty}\int[t][a][x]{u\l t\r}$
 Convergence uniforme à partir des dérivées;;Si $\forall n\in\mathbb N$, $u_n$ est $\mathcal C^k$ sur un intervalle $I$\linebreak$\forall j\in\llb0,k-1\rrb$, $u_n^{\l j\r}\cv[CVS]{n\to+\infty}v_j$ sur $I$\linebreak$u_n^{\l k\r}\cv[CVU]{n\to+\infty}v_k$\linebreak alors $v_0$ est de classe $\mathcal C^k$\linebreak$\forall j\in\llb0,k\rrb$, $v_0^{\l j\r}=v_j$\linebreak$\forall j\in\llb0,k-1\rrb$, $u_n^{\l j\r}\cv[CVU]{n\to+\infty}v_j$
-Théorème de Weirstrass;;Toute fonction continue sur un segment y est limite uniforme d'une suite de fonctions polynomiales
+Théorème de Weierstrass;;Toute fonction continue sur un segment y est limite uniforme d'une suite de fonctions polynomiales
 Polynôme trigonométrique complexe;;$\vect{\left\{\e^{\i nt},n\in\mathbb Z\right\}}$
 Polynôme trigonométrique réel;;$\vect{\left\{\cos{nt},n\in\mathbb N\right\}\uplus\left\{\sin{nt},n\in\mathbb N^*\right\}}$
-Théorème de Weirstrass trigonométrique;;Toute fonction complexe (ou réelle), continue et $2\pi$-périodique est limite uniforme sur $\mathbb R$ d'une suite de polynômes trigonométriques complexes (ou réels)
+Théorème de Weierstrass trigonométrique;;Toute fonction complexe (ou réelle), continue et $2\pi$-périodique est limite uniforme sur $\mathbb R$ d'une suite de polynômes trigonométriques complexes (ou réels)

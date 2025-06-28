@@ -1,13 +1,36 @@
 Groupes localement compacts -- Nombres p-adiques!!ttleGroupes localement compacts -- Nombres \textit{p}-adiques
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{bigoperators,arithmetique,analyse,usuelles}\newcommand{\zz}[1][p]{\mathbb Z_{#1}}
-$\zz$;;$\left\{\l x_n\r\in\prod{n\geqslant1}{}{\mathbb Z/p^n\mathbb Z},\forall n\in\mathbb N^*,\cgr{x_{n+1}}{x_n}{p^n}\right\}$\linebreak C'est un anneau intègre pour les opérations coordonnée par coordonnée\linebreak Le morphisme d'anneau $\appl{i}{\mathbb Z}{\zz}{x}{\l x\bmod p^n\r}$ est injectif
-Unités $p$-adiques;;$\zz^*$\linebreak$\zz^*=\left\{\l x_n\r\in\zz,x_1\neq0\right\}$
-Décoposition classique d'un élément de $\zz$;;$u\times p^n$ où $u\in\zz^*$
-Valuation $p$-adique;;$v_p\l x\r$ est le plus petit $n\in\mathbb N$ pour lequel $x=u\times p^n$ avec $u\in\zz^*$\linebreak$v_p\l0\r=0$\linebreak$v_p\l xy\r=v_p\l x\r +v_p\l y\r$\linebreak$v_p\l x+y\r\geqslant\min{v_p\l x\r,v_p\l y\r}$
+\usepackage{bigoperators,arithmetique,analyse,usuelles}\def\vala#1{\left|#1\right|}\def\nrm{\anrm[\null]}\newcommand{\zz}[1][p]{\mathbb Z_{#1}}\newcommand{\qq}[1][p]{\mathbb Q_{#1}}\DeclareMathOperator{\gl}{GL}
+$\zz$;;$\left\{\l x_n\r\in\prod{n\geqslant1}{}{\mathbb Z/p^n\mathbb Z},\forall n\in\mathbb N^*,\cgr{x_{n+1}}{x_n}{p^n}\right\}$\linebreak C'est un anneau intègre pour les opérations coordonnée par coordonnée\linebreak Le morphisme d'anneau $\appl{i}{\mathbb Z}{\zz}{x}{\l x\bmod p^n\r}$ est injectif et d'image dense
+Unités $p$-adiques;;$\zz^\times$\linebreak$\zz^\times=\left\{\l x_n\r\in\zz,x_1\neq0\right\}$
+Décoposition classique d'un élément de $\zz$;;$u\times p^n$ où $u\in\zz^\times$
+Valuation $p$-adique sur $\zz$;;$v_p\l x\r$ est le plus petit $n\in\mathbb N$ pour lequel $x=u\times p^n$ avec $u\in\zz^\times$\linebreak$v_p\l0\r=0$\linebreak$v_p\l xy\r=v_p\l x\r +v_p\l y\r$\linebreak$v_p\l x+y\r\geqslant\min{v_p\l x\r,v_p\l y\r}$
 Distance sur $\zz$;;$\appl{d}{\zz\times\zz}{\mathbb{R}_+}{\l x,y\r}{\left|x-y\right|_p=p^{-v_p\l x-y\r}}$\linebreak C'est une distance ultramétrique invariante par translation
 $\mathcal B_F\l x,p^n\r$;;$x+p^n\zz$
 $\mathcal B_O\l x,r\r$;;$\mathcal B_F\l x,p^{-m}\r$ où $m=\min{\left\{n\in\mathbb N,p^{-n}\leqslant r\right\}}$
 Propriétés topologiques de $\mathcal B_F\l x,r\r$ et $\mathcal B_O\l x,r\r$;;Ce sont des ouverts-fermés
 Propriété de la topologie induite sur $\zz$ par sa distance;;C'est la topologie induite par $\prod{n\geqslant1}{}{\mathbb Z/p^n\mathbb Z}$\linebreak En particulier, $\zz$ est compact
+Propriété de $+$ et $\times$ sur $\zz$;;Ce sont des applications continues
+Sous-groupes fermés de $\zz$;;$\left\{0\right\}$ et $p^n\zz$
+$\qq$;;Corps des fractions de $\zz$\linebreak En particulier, $\mathbb Q$ est dense dans $\qq$
+Décoposition classique d'un élément de $\qq$;;$u\times p^n$ où $u\in\zz^\times$ et $n\in\mathbb Z$
+Valuation $p$-adique sur $\qq$;;$v_p\l x\r$ est l'entier $n\in\mathbb Z$ pour lequel $x=u\times p^n$ avec $u\in\zz^\times$\linebreak$v_p\l0\r=0$\linebreak$v_p\l xy\r=v_p\l x\r +v_p\l y\r$\linebreak$v_p\l x+y\r\geqslant\min{v_p\l x\r,v_p\l y\r}$
+Norme $p$-adique sur $\qq$;;$\vala x_p=p^{-v_p\l x\r}$\linebreak C'est une valeur absolue ultramétrique
+Distance sur $\qq$;;$d\l x,y\r=\vala{x-y}_p$\linebreak$\zz$ est la boule fermée autour de $0$ ppur cette métrique
+Corps topologique;;Corps dont les opérations $+$, $\times$ et ${}^{-1}$ sont continues
+Valeur absolue sur un corps;;$\vala x=0\Leftrightarrow x=0$\linebreak$\vala{xy}=\vala x\vala y$\linebreak$\vala{x+y}\leqslant\vala x+\vala y$\linebreak La valeur absolue est ultramétrique si de plus $\vala{x+y}\leqslant\max{\vala x,\vala y}$\linebreak Un corps muni d'une valeur absolue est topologique pour la métrique associée
+Propriétés de $A=\left\{x\in\mathbb K,\vala x\leqslant1\right\}$ et $M=\left\{x\in\mathbb K,\vala x<1\right\}$ dans un corps $\mathbb K$ ultramétrique;;$A$ est un sous-anneau de $\mathbb K$\linebreak$A=A^\times\sqcup M$\linebreak$M$ est l'unique anneau maximal de $A$
+Corps résiduel d'un corps $\mathbb K$ ultramétrique;;$\Bbbk=A/M$\linebreak Si $\mathbb K$ est localement compact alors $\Bbbk$ est fini, et on a alors $\theta\in\left]0,1\right[$ tel que $\vala{\mathbb K^\times}=\theta^{\mathbb Z}$ et il existe $\pi\in A$ tel que $M=\pi A$
+CNS de $\vala\cdot$ est une valeur absolue ultramétrique sur $\mathbb K$;;$\forall n\geqslant1$, $\vala n\leqslant1$\linebreak$\exists M>0$, $\forall n\geqslant1$, $\vala n\leqslant M$
+Mesure ultramétrique sur un $\qq$-ev;;$\nrm x=0\Leftrightarrow x=0$\linebreak$\nrm{\lambda x}=\vala\lambda_p\nrm x$ pour $\lambda\in\qq$\linebreak$\vala{x+y}\leqslant\max{\vala x+\vala y}$
+Propriétés des normes sur des $\qq$-ev de dimension finie;;Toutes les normes sont équivalentes
+Propriété de valeurs absolues sur les extensions finies de $\qq$;;Il existe au plus une valeur absolue sur chaque extension qui étend celle sur $\qq$\linebreak Cette norme est donnée par $x\mapsto\vala{\det\l m_x\r}^{\frac1d}$ où $m_x\!:\!y\mapsto xy$ et $d$ est le degré de l'extension
+Degré résiduel d'un corps $\mathbb K$ localement compact ultramétrique;;Degré du corps résiduel $\Bbbk$ sur $\mathbb Z/p\mathbb Z$
+Indice de ramificatio d'un corps $\mathbb K$ localement compact ultramétrique;;$e=\left[\mathbb K^\times{:}p^{\mathbb Z}\right]$\linebreak$e$ est caractérisé par $\theta^e=\frac1p$\linebreak$\mathbb K/\qq$ est non ramifiée si $e=1$ et totalement ramifiée si $e=\left[\mathbb K{:}\qq\right]$
+Lien entre degré résiduel et indice de ramification;;$ef=\left[\mathbb K{:}\qq\right]$
+Polynôme d'Eisenstein;;$f=a_0+\cdots+X^d\in\zz$ tel que $p\mid a_k$ pour $k\in\llb1,d-1\rrb$, $p^2\nmid a_0$\linebreak Un polynôme d'Eisenstein est irréductible sur $\qq$
+Générateurs d'extensions totalement ramifiées de $\qq$;;Si $\mathbb K$ est une extension totalement ramifiée de $\qq$, alors si $\pi\in A$ est tel que $M=\pi A$ alors $\mathbb K=\qq\l\pi\r$
+Corps local;;Corps localement compact non discret
+Théorème de classification des corps locaux;;Si $\mathbb L$ est un corps local alors $\mathbb L$ est isomorphe à $\mathbb R$, $\mathbb C$ ou à une extension finie de $\qq$ ou $\mathbb F_p\llparenthesis t\rrparenthesis$
+Propriétés de $\gl_n\l\mathbb K\r$ pour $\mathbb K$ un corps local;;$\gl_n\l\mathbb K\r$ est un groupe localement compact no discret\linebreak Si de plus $\mathbb K$ est une extension finie de $\mathbb Q_p$ alors $\gl_n\l\mathbb K\r$ est totalement discontinu et $\gl_n\l A\r$ en est un sous-groupe compact ouvert

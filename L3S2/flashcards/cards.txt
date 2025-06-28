@@ -35,6 +35,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250508111350
 ../L3S2/flashcards/Algebre2/TheorieDeGalois
 20250506175019
+../L3S2/flashcards/Algebre2/TraceEtNorme
+20250509082915
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeLaChaleur
 20250430113700
 ../L3S2/flashcards/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeTransportLineaire
@@ -61,8 +63,10 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250430113221
 ../L3S2/flashcards/GroupesLocalementCompacts/GroupesTopologiques
 20250430113321
+../L3S2/flashcards/GroupesLocalementCompacts/MesureDeHaar
+20250628153532
 ../L3S2/flashcards/GroupesLocalementCompacts/NombresPAdiques
-20250430114026
+20250628144630
 ../L3S2/flashcards/GroupesLocalementCompacts/Prerequis
 20250430114046
 ../L3S2/flashcards/IntegrationEtProbabilites/BasesDesProbabilites

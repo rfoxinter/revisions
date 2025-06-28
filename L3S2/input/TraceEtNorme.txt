@@ -1,0 +1,19 @@
+Algèbre 2 -- Trace et norme
+Shuffle questions : True
+Q/R & R/Q : False
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\ff{\mathbb F}\usepackage{polynomes}\usepackage{al,matrices,bigoperators}\togglebigoppar\newcommand\edeg[2]{\left[#1{:}#2\right]}\newcommand\ideg[2]{\left[#1{:}#2\right]_i}\DeclareMathOperator{\oldnrm}{nrm}\newcommand\nrm[3]{\oldnrm_{#1/#2}\l#3\r}\let\altr\tr\let\tr\relax\newcommand\tr[3]{\oldtr_{#1/#2}\l#3\r}\DeclareMathOperator{\oldpl}{Pl}\newcommand{\pl}[2]{\oldpl\l#1/#2\r}
+!!fst$m_\alpha$;;$\appl{m_\alpha}{\ll}{\ll}{l}{\alpha l}$\linebreak$\alpha\in\ll$ et $\ll/\kk$ algébrique
+$\pi_{m_\alpha}$;;$P_{\alpha,\kk}$
+$\tr\ll\kk\alpha$;;$\altr{m_\alpha}$
+$\nrm\ll\kk\alpha$;;$\det{m_\alpha}$
+$\tr\ll\kk{\alpha+\beta}$;;$\tr\ll\kk\alpha+\tr\ll\kk\beta$
+$\nrm\ll\kk{\alpha\beta}$;;$\nrm\ll\kk\alpha\times\nrm\ll\kk\beta$
+$\tr{\fr Kx}\kk{Q\l x\r}$\linebreak$Q\in\pol KX$;;$\sum{i=1}{n}{Q\l\lambda_i\r}$\linebreak$\lambda_i$ valeur propre de $m_\alpha$
+$\nrm{\fr Kx}\kk{Q\l x\r}$\linebreak$Q\in\pol KX$;;$\prod{i=1}{n}{Q\l\lambda_i\r}$\linebreak$\lambda_i$ valeur propre de $m_\alpha$
+Lien entre $\tr\ll\kk\alpha$ et $\tr\ff\kk\alpha$, $\alpha\in\ff$\linebreak$\ll/\ff/\kk$ tour d'extensions;;$\tr\ll\kk\alpha=\edeg\ll\ff\tr\ff\kk\alpha$\linebreak En particulier, si $\ll/\kk$ est inséparable alors $\oldtr_{\ll/\kk}\equiv0$
+Lien entre $\nrm\ll\kk\alpha$ et $\nrm\ff\kk\alpha$, $\alpha\in\ff$\linebreak$\ll/\ff/\kk$ tour d'extensions;;$\nrm\ll\kk\alpha=\nrm\ff\kk\alpha^{\edeg\ll\ff}$
+Lien entre trace, norme et plongements de $\ll$ dans $\kk^\text{alg}$ pour $\ll/\kk$ séparable;;$\tr\ll\kk\alpha=\sum{\sigma\in\pl\ll\kk}{}{\sigma\l\alpha\r}$\linebreak$\nrm\ll\kk\alpha=\prod{\sigma\in\pl\ll\kk}{}{\sigma\l\alpha\r}$
+Lien entre norme et plongements de $\ll$ dans $\kk^\text{alg}$ pour $\ll/\kk$ inséparable\linebreak$p^s=\ideg\ll\kk$, $\beta=\alpha^{p^s}$;;$\nrm\ll\kk\alpha=\l\prod{\sigma\in\pl\ll\kk}{}{\sigma\l\beta\r}\r^{\oldfrac1{p^s}}$\linebreak$\hphantom{\nrm\ll\kk\alpha}{}=\l\prod{\sigma\in\pl{\kk^{\text{sep},\ll}}\kk}{}{\sigma\l\beta\r}\r^{\oldfrac1{p^s}}$
+Expression de $\oldtr_{\ll/\kk}$ pour $\ll/\ff/\kk$ une tour d'extensions;;$\oldtr_{\ll/\kk}=\oldtr_{\ff/\kk}\circ\oldtr_{\ll/\ff}$
+Expression de $\oldnrm_{\ll/\kk}$ pour $\ll/\ff/\kk$ une tour d'extensions;;$\oldnrm_{\ll/\kk}=\oldnrm_{\ff/\kk}\circ\oldnrm_{\ll/\ff}$
+Forme bilinéaire trace;;$\appl{\left\langle\cdot,\cdot\right\rangle}{\ll\times\ll}{\kk}{\l x,y\r}{\tr\ll\kk{xy}}$ est une forme bilinéaire qui est non dégénérée si et seulement si $\ll/\kk$ est séparable

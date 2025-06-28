@@ -1,0 +1,43 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\newcommand\kk{\mathbb K}\renewcommand\ll{\mathbb L}\newcommand\ff{\mathbb F}\usepackage{polynomes}\usepackage{al,matrices,bigoperators}\togglebigoppar\newcommand\edeg[2]{\left[#1{:}#2\right]}\newcommand\ideg[2]{\left[#1{:}#2\right]_i}\DeclareMathOperator{\oldnrm}{nrm}\newcommand\nrm[3]{\oldnrm_{#1/#2}\l#3\r}\let\altr\tr\let\tr\relax\newcommand\tr[3]{\oldtr_{#1/#2}\l#3\r}\DeclareMathOperator{\oldpl}{Pl}\newcommand{\pl}[2]{\oldpl\l#1/#2\r}
+\hypersetup{pdftitle=Algèbre 2 -- Trace et norme}
+\title{Algèbre 2\\\emph{Trace et norme}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\nrm\ll\kk\alpha$}{1/15}
+\slider{$\det{m_\alpha}$}{1/15}
+\slideq{Expression de $\oldtr_{\ll/\kk}$ pour $\ll/\ff/\kk$ une tour d'extensions}{2/15}
+\slider{$\oldtr_{\ll/\kk}=\oldtr_{\ff/\kk}\circ\oldtr_{\ll/\ff}$}{2/15}
+\slideq{Lien entre norme et plongements de $\ll$ dans $\kk^\text{alg}$ pour $\ll/\kk$ inséparable\linebreak$p^s=\ideg\ll\kk$, $\beta=\alpha^{p^s}$}{3/15}
+\slider{$\nrm\ll\kk\alpha=\l\prod{\sigma\in\pl\ll\kk}{}{\sigma\l\beta\r}\r^{\oldfrac1{p^s}}$\linebreak$\hphantom{\nrm\ll\kk\alpha}{}=\l\prod{\sigma\in\pl{\kk^{\text{sep},\ll}}\kk}{}{\sigma\l\beta\r}\r^{\oldfrac1{p^s}}$}{3/15}
+\slideq{$\tr\ll\kk{\alpha+\beta}$}{4/15}
+\slider{$\tr\ll\kk\alpha+\tr\ll\kk\beta$}{4/15}
+\slideq{$\tr{\fr Kx}\kk{Q\l x\r}$\linebreak$Q\in\pol KX$}{5/15}
+\slider{$\sum{i=1}{n}{Q\l\lambda_i\r}$\linebreak$\lambda_i$ valeur propre de $m_\alpha$}{5/15}
+\slideq{Lien entre $\nrm\ll\kk\alpha$ et $\nrm\ff\kk\alpha$, $\alpha\in\ff$\linebreak$\ll/\ff/\kk$ tour d'extensions}{6/15}
+\slider{$\nrm\ll\kk\alpha=\nrm\ff\kk\alpha^{\edeg\ll\ff}$}{6/15}
+\slideq{Expression de $\oldnrm_{\ll/\kk}$ pour $\ll/\ff/\kk$ une tour d'extensions}{7/15}
+\slider{$\oldnrm_{\ll/\kk}=\oldnrm_{\ff/\kk}\circ\oldnrm_{\ll/\ff}$}{7/15}
+\slideq{$m_\alpha$}{8/15}
+\slider{$\appl{m_\alpha}{\ll}{\ll}{l}{\alpha l}$\linebreak$\alpha\in\ll$ et $\ll/\kk$ algébrique}{8/15}
+\slideq{$\tr\ll\kk\alpha$}{9/15}
+\slider{$\altr{m_\alpha}$}{9/15}
+\slideq{$\pi_{m_\alpha}$}{10/15}
+\slider{$P_{\alpha,\kk}$}{10/15}
+\slideq{Lien entre $\tr\ll\kk\alpha$ et $\tr\ff\kk\alpha$, $\alpha\in\ff$\linebreak$\ll/\ff/\kk$ tour d'extensions}{11/15}
+\slider{$\tr\ll\kk\alpha=\edeg\ll\ff\tr\ff\kk\alpha$\linebreak En particulier, si $\ll/\kk$ est inséparable alors $\oldtr_{\ll/\kk}\equiv0$}{11/15}
+\slideq{Forme bilinéaire trace}{12/15}
+\slider{$\appl{\left\langle\cdot,\cdot\right\rangle}{\ll\times\ll}{\kk}{\l x,y\r}{\tr\ll\kk{xy}}$ est une forme bilinéaire qui est non dégénérée si et seulement si $\ll/\kk$ est séparable}{12/15}
+\slideq{$\nrm{\fr Kx}\kk{Q\l x\r}$\linebreak$Q\in\pol KX$}{13/15}
+\slider{$\prod{i=1}{n}{Q\l\lambda_i\r}$\linebreak$\lambda_i$ valeur propre de $m_\alpha$}{13/15}
+\slideq{Lien entre trace, norme et plongements de $\ll$ dans $\kk^\text{alg}$ pour $\ll/\kk$ séparable}{14/15}
+\slider{$\tr\ll\kk\alpha=\sum{\sigma\in\pl\ll\kk}{}{\sigma\l\alpha\r}$\linebreak$\nrm\ll\kk\alpha=\prod{\sigma\in\pl\ll\kk}{}{\sigma\l\alpha\r}$}{14/15}
+\slideq{$\nrm\ll\kk{\alpha\beta}$}{15/15}
+\slider{$\nrm\ll\kk\alpha\times\nrm\ll\kk\beta$}{15/15}
+\end{document}

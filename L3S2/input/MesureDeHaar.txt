@@ -1,0 +1,16 @@
+Groupes localement compacts -- Mesure de Haar
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analyse}\toggleanalysepar\DeclareMathOperator{\gl}{GL}\DeclareMathOperator{\orth}{O}
+Mesure de Radon sur un espace $X$ localement compact;;Mesure borélienne $\mu\!:\!\left[0,+\infty\right]$ qui est finie sur tout compact, et intérieurement et extérieurement régulière
+Théorème de Riesz;;Pour toute forme linéaire positive $I\!:\!\mathcal C_c\l X\r\to\mathbb R$, il existe une unique mesure de Radon $\mu$ telle que $I=I_\mu$ où $I_\mu\l f\r=\int[x][X][][\mu]{f\l x\r}$
+Mesure de Radon invariante à gauche;;Mesure de Radon vérifiant $\mu\l gE\r=\mu\l E\r$
+Mesure de Radon bi-invariante;;Mesure de Radon invariante à gauche et à droite
+Mesure de Haar sur $G$;;Mesure de Radon non nulle et invariante à gauche sur $G$
+Caractérisation de l'invariance d'une mesure de Radon par les intégrales;;$\mu$ est invariante à gauche si et seulement si, pour tout $f\in\mathcal C_c\l G\r$ et tout $g\in G$, $\int[x][G][][\mu]{f\l x\r}=\int[x][G][][\mu]{f\l gx\r}$
+Théorème de Haar;;Si $G$ est un groupe localement compact alors il existe une mesure de Haar sur $G$ et deux mesures de Haar sont proportionnelles
+Mesure de Haar d'un ouvert;;La mesure de Haar d'un ouvert est finie
+Lien entre $\mu\l U\r$ et $\mu\l V\r$ pour $\mu$ une mesure de Haar sur $G$ et $U$ et $V$ deux compacts-ouverts de $G$;;$\frac{\mu\l U\r}{\mu\l V\r}=\frac{\left[U{:}U\cap V\right]}{\left[V{:}U\cap V\right]}$
+Caractérisation de la compacité par la mesure de Haar;;$G$ est compact si et seulement si $\mu\l G\r<+\infty$
+Fonction modulaire;;Morphisme de groupes $\varDelta\!:\!G\to\mathbb R_+^*$ tel que $\mu\l\cdot g^{-1}\r=\varDelta\l g\r\mu\l\cdot\r$ pour $\mu$ une mesure de Haar sur $G$\linebreak C'est un morphisme continu
+Sous-groupes compacts de $\gl_n\l\mathbb R\r$;;Tout sous-groupe compact de $\gl_n\l\mathbb R\r$ est conjugué à un sous-groupe de $\orth_n\l\mathbb R\r$

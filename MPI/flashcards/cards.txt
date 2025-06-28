@@ -32,7 +32,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../MPI/flashcards/Analyse/SeriesNumeriques
 20240213230003
 ../MPI/flashcards/Analyse/SuitesDeFonctions
-20231228225723
+20250628073235
 ../MPI/flashcards/Probabilites/VariablesAleatoiresDiscretes
 20250309175908
 ../MPI/flashcards/Topolgie/TopologieDesEVN
