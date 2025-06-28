@@ -1,0 +1,8 @@
+Algèbre 2 -- Théorème de la base normale
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}\def\kk{\mathbb K}\def\ll{\mathbb L}\DeclareMathOperator{\oldgal}{Gal}\def\gal#1#2{\oldgal\l#1/#2\r}
+$\mathbb K\left[G\right]$;;$\left\{\sum{g\in G}{}{a_gg}, a_g\in\mathbb K\right\}$
+Théorème de la base normale\linebreak Morphisme;;Si $\ll/\kk$ est une extension galoisienne finie alors on dispose d'un isomorphisme qui commute avec l'action de $\gal\ll\kk$ donné par $\kk\left[\gal\ll\kk\right]\cong\ll$, $\sum{g\in\gal\ll\kk}{}{a_gg}\mapsto\sum{g\in\gal\ll\kk}{}{a_gb_g}$ où $\left\{b_g,g\in\gal\ll\kk\right\}$ est une $\kk$-base de $\ll$
+Base normale de $\ll/\kk$;;Base de la forme $\left\{g\l h\r,g\in\gal\ll\kk\right\}$ pour un certain $h\in\kk$
+Théorème de la base normale\linebreak Existence;;Si $\ll/\kk$ est une extension galoisienne finie alors il existe une base normale de $\ll/\kk$

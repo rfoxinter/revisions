@@ -15,6 +15,7 @@ https://rfoxinter.github.io/revisions/L3S2/pdf/Algebre2/ExtensionsSeparables.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/Algebre2/ProduitFibreDeGroupes.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/Algebre2/RacinesDesPolynomesMinimaux.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/Algebre2/ResolubiliteParRadicaux.pdf
+https://rfoxinter.github.io/revisions/L3S2/pdf/Algebre2/TheoremeDeLaBaseNormale.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/Algebre2/TheorieDeGalois.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/Algebre2/TraceEtNorme.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/AnalyseEtEquationsAuxDeriveesPartielles/LEquationDeLaChaleur.pdf

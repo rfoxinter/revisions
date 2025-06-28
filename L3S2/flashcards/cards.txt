@@ -33,6 +33,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250505142629
 ../L3S2/flashcards/Algebre2/ResolubiliteParRadicaux
 20250508111350
+../L3S2/flashcards/Algebre2/TheoremeDeLaBaseNormale
+20250628193123
 ../L3S2/flashcards/Algebre2/TheorieDeGalois
 20250506175019
 ../L3S2/flashcards/Algebre2/TraceEtNorme
