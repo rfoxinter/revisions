@@ -4,7 +4,7 @@ function is_numeric(str){
 
 function display() {
     var file = new XMLHttpRequest();
-    file.open('GET', 'https://rfoxinter.github.io/revisions/sitemap.xml');
+    file.open('GET', './files.txt');
     file.send();
     file.onreadystatechange = function() {
         if (file.readyState === 4) {

@@ -67,4 +67,9 @@ defaults:
             path: L3S1/**
         values:
             sitemap: false
+    -
+        scope:
+            path: L3S2/**
+        values:
+            sitemap: false
 
