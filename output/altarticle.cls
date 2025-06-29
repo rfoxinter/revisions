@@ -1628,7 +1628,7 @@ space before arrow={0.2ex},
 \let\olddet\det
 \renewcommand{\det}[2][]{\olddet_{#1}\l#2\r}
 \DeclareMathOperator{\oldgl}{GL}
-\newcommand{\matgl}[2]{\oldgl_{#1}\l#2\r}
+\newcommand{\matgl}[3][]{\oldgl_{#2}^{#1}\l#3\r}
 \DeclareMathOperator{\oldcom}{Com}
 \newcommand{\com}[1]{\oldcom\l#1\r}
 \newcommand{\transp}[1]{{\vphantom{#1}^t}{#1}}
