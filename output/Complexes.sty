@@ -1,32 +1,3 @@
-\newif\if@arc\@arcfalse
-\DeclareOption{arc}{\@arctrue}
-\DeclareOption*{}
-\ProcessOptions\relax
-
-\if@arc
-    \RequirePackage{graphics}
-    \newcommand{\arc}[1]{\mathpalette\arc@arc{#1}\!}
-    \newcommand{\arc@arc}[2]{
-        \sbox0{$\m@th#1#2\ \!$}
-        \vbox{
-            \hbox{\hspace{-0.05\wd0}\resizebox{1.1\wd0}{\height}{$\frown$}}
-            \nointerlineskip
-            \vspace{-1pt}
-            \box0
-        }
-    }
-    \renewcommand{\hat}[1]{\mathpalette\hat@hat{#1}\sbox0{$\m@th#1$}\hspace{-0.375\wd0}}
-    \newcommand{\hat@hat}[2]{
-        \sbox0{$\m@th#1#2$}
-        \vbox{
-            \hbox{\hspace{-0.375\wd0}\resizebox{1.75\wd0}{\height}{$\string^$}}
-            \nointerlineskip
-            \vspace{-5pt}
-            \box0
-        }
-    }
-\fi
-
 \let\oldbar\bar
 \renewcommand{\bar}{\overline}
 \DeclareMathOperator{\olde}{e}

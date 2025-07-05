@@ -31,7 +31,7 @@
 \newcommand{\autobigoplimits}{\def\bigoplimits{}}
 \newcommand{\togglebigopdisplay}{\comparestring{\bigopdisplay}{}{\def\bigopdisplay{\displaystyle}}{\def\bigopdisplay{}}}
 
-\let\oldsum\sum\renewcommand\sum[3]{{\bigopdisplay\oldsum\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\@ifundefined{oldsum}{\let\oldsum\sum}{}\renewcommand\sum[3]{{\bigopdisplay\oldsum\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldprod\prod\renewcommand\prod[3]{{\bigopdisplay\oldprod\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldcap\bigcap\renewcommand\bigcap[3]{{\bigopdisplay\oldcap\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldcup\bigcup\renewcommand\bigcup[3]{{\bigopdisplay\oldcup\bigoplimits_{#1}^{#2}}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}

@@ -194,6 +194,7 @@
 \newcommand{\tmptmptmptmpaltint}[2][]{{\analysedisplay\altintsymb\analyselimits_{\intargII}^{\intargIII}}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\altintspacevars\else{{}\mathop{{\let\oldotimes\otimes\def\otimes{{\oldotimes}}#1}\l\altintvars\r}}\fi}
 \newcommand{\eval}[1][]{\def\evalargI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\evalargI}^{#1}}
+\@ifundefined{oldsum}{\let\oldsum\sum}{}
 \newcommand{\serie}[1]{\oldsum#1}
 \DeclareMathOperator{\oldesc}{Esc}
 \newcommand{\esc}[2][]{\oldesc_{#1}\l#2\r}

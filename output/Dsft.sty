@@ -9,42 +9,42 @@
 \DeclareFontShape{U}{dsrm}{m}{n}{
     <-> dsrm/dsrm12
 }{}
-\DeclareSymbolFont{mathds}{U}{dsrm}{m}{n}
-\DeclareMathAlphabet{\mathds}{U}{dsrm}{m}{n}
+\DeclareSymbolFont{mathdds}{U}{dsrm}{m}{n}
+\DeclareMathAlphabet{\mathdds}{U}{dsrm}{m}{n}
 
-\newcommand\1[1]{\mathds{1}_{#1}}
-\DeclareMathSymbol{\square}{\mathbin}{mathds}{"41}
-\DeclareMathSymbol{\star}{\mathbin}{mathds}{"42}
-\DeclareMathSymbol{\triangle}{\mathbin}{mathds}{"43}
+\newcommand\1[1]{\mathdds{1}_{#1}}
+\DeclareMathSymbol{\square}{\mathbin}{mathdds}{"41}
+\DeclareMathSymbol{\star}{\mathbin}{mathdds}{"42}
+\DeclareMathSymbol{\triangle}{\mathbin}{mathdds}{"43}
 \newcommand{\filledstar}[1]{%
     \ifcase#1\relax%
-        \ensuremath{\mathds{B}}%
+        \ensuremath{\mathdds{B}}%
     \or\relax%
-        \ensuremath{\mathds{D}}%
+        \ensuremath{\mathdds{D}}%
     \or\relax%
-        \ensuremath{\mathds{E}}%
+        \ensuremath{\mathdds{E}}%
     \or\relax%
-        \ensuremath{\mathds{F}}%
+        \ensuremath{\mathdds{F}}%
     \or\relax%
-        \ensuremath{\mathds{G}}%
+        \ensuremath{\mathdds{G}}%
     \or\relax%
-        \ensuremath{\mathds{H}}%
+        \ensuremath{\mathdds{H}}%
     \else%
-        \hphantom{\ensuremath{\mathds{1}}}
+        \hphantom{\ensuremath{\mathdds{1}}}
     \fi%
 }
-\newcommand{\rmbeta}{\ensuremath{\mathds{b}}}
-\newcommand{\rmepsilon}{\ensuremath{\mathds{e}}}
-\newcommand{\rmphi}{\ensuremath{\mathds{f}}}
-\newcommand{\rmgamma}{\ensuremath{\mathds{g}}}
-\newcommand{\rmiota}{\ensuremath{\mathds{i}}}
-\newcommand{\rmkappa}{\ensuremath{\mathds{k}}}
-\newcommand{\rmmu}{\ensuremath{\mathds{m}}}
-\newcommand{\rmnu}{\ensuremath{\mathds{n}}}
-\newcommand{\rmomicron}{\ensuremath{\mathds{o}}}
-\newcommand{\rmpi}{\ensuremath{\mathds{p}}}
-\newcommand{\rmrho}{\ensuremath{\mathds{r}}}
-\newcommand{\rmtau}{\ensuremath{\mathds{t}}}
-\newcommand{\rmvarsigma}{\ensuremath{\mathds{v}}}
+\newcommand{\rmbeta}{\ensuremath{\mathdds{b}}}
+\newcommand{\rmepsilon}{\ensuremath{\mathdds{e}}}
+\newcommand{\rmphi}{\ensuremath{\mathdds{f}}}
+\newcommand{\rmgamma}{\ensuremath{\mathdds{g}}}
+\newcommand{\rmiota}{\ensuremath{\mathdds{i}}}
+\newcommand{\rmkappa}{\ensuremath{\mathdds{k}}}
+\newcommand{\rmmu}{\ensuremath{\mathdds{m}}}
+\newcommand{\rmnu}{\ensuremath{\mathdds{n}}}
+\newcommand{\rmomicron}{\ensuremath{\mathdds{o}}}
+\newcommand{\rmpi}{\ensuremath{\mathdds{p}}}
+\newcommand{\rmrho}{\ensuremath{\mathdds{r}}}
+\newcommand{\rmtau}{\ensuremath{\mathdds{t}}}
+\newcommand{\rmvarsigma}{\ensuremath{\mathdds{v}}}
 
 \endinput

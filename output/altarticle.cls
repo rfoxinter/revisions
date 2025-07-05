@@ -1421,6 +1421,26 @@ space before arrow={0.2ex},
     \fi{#2}\egargI#3
 }
 %% Complexes
+\renewcommand{\bar}{\overline}
+\DeclareMathOperator{\olde}{e}
+\newcommand{\e}{{\olde}}
+\DeclareMathOperator{\oldi}{i}
+\newcommand{\ii}{{\oldi}}
+\DeclareMathSymbol{\tmpiii}{\mathalpha}{letters}{"10}
+\DeclareMathOperator{\oldii}{\tmpiii}
+\newcommand{\iii}{{\oldii}}
+\DeclareMathOperator{\oldj}{j}
+\newcommand{\jj}{{\oldj}}
+\DeclareMathSymbol{\tmpjjj}{\mathalpha}{letters}{"11}
+\DeclareMathOperator{\oldjj}{\tmpjjj}
+\newcommand{\jjj}{{\oldjj}}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\newcommand{\pIm}[1]{\Im\l#1\r}
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\newcommand{\pRe}[1]{\Re\l#1\r}
+%% Hats
 \newcommand{\arc}[1]{\mathpalette\arc@arc{#1}\!}
 \newcommand{\arc@arc}[2]{
     \sbox0{$\m@th#1#2\ \!$}
@@ -1441,26 +1461,7 @@ space before arrow={0.2ex},
         \box0
     }
 }
-\renewcommand{\bar}{\overline}
-\DeclareMathOperator{\olde}{e}
-\newcommand{\e}{{\olde}}
-\DeclareMathOperator{\oldi}{i}
-\newcommand{\ii}{{\oldi}}
-\DeclareMathSymbol{\tmpiii}{\mathalpha}{letters}{"10}
-\DeclareMathOperator{\oldii}{\tmpiii}
-\newcommand{\iii}{{\oldii}}
-\DeclareMathOperator{\oldj}{j}
-\newcommand{\jj}{{\oldj}}
-\DeclareMathSymbol{\tmpjjj}{\mathalpha}{letters}{"11}
-\DeclareMathOperator{\oldjj}{\tmpjjj}
-\newcommand{\jjj}{{\oldjj}}
-\let\Im\relax
-\DeclareMathOperator{\Im}{Im}
-\newcommand{\pIm}[1]{\Im\l#1\r}
-\let\Re\relax
-\DeclareMathOperator{\Re}{Re}
-\newcommand{\pRe}[1]{\Re\l#1\r}
-%% Polynômes
+%% Polynomes
 \newcommand{\pol}[2]{\mathbb{#1}\left[#2\right]}
 \newcommand{\fr}[2]{\mathbb{#1}\l#2\r}
 \let\olddeg\deg
@@ -1669,7 +1670,7 @@ space before arrow={0.2ex},
     \tmatargI
 \end{tikzpicture}}
 \def\smalltmatrix{\tmatrix[][minimum height = 0ex, row sep = .5ex, minimum width = 0ex, column sep = 1ex, inner sep = 0ex, nodes={anchor=base, execute at begin node=\scriptstyle},]}
-\def\altsmalltmatrix{\tmatrix[][minimum height = 0ex, row sep = .5ex, minimum width = 0ex, column sep = 1ex, inner sep = 0ex, nodes={anchor=base},]}
+\def\crampedtmatrix{\tmatrix[][minimum height = 0ex, row sep = .5ex, minimum width = 0ex, column sep = 1ex, inner sep = 0ex, nodes={anchor=base},]}
 \newcommand{\tcase}[1][]{\def\tmatargI{#1}\tmptcase}
 \newcommand{\tmptcase}[2][]{
 \kern-.2em\begin{tikzpicture}[every left delimiter/.style={xshift=.2em},every right delimiter/.style={xshift=-.125em},baseline={([yshift=-0.5ex]m.center)}]

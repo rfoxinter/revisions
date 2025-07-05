@@ -8,6 +8,7 @@ Equivalents.sty
 Footnotes.sty
 Graphs.sty
 HTMLPreambule.sty
+Hats.sty
 Matrices.sty
 Polynomes.sty
 Preambule.sty
@@ -19,5 +20,6 @@ Tools.sty
 Topologie.sty
 Trigo.sty
 Usuelles.sty
-dsrom12.pfb
-dsrom12.tfm
+dsrm/dsrm.map
+dsrm/dsrm12.pfb
+dsrm/dsrm12.tfm
