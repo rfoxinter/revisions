@@ -15,12 +15,11 @@
 \usepackage{output/tools}
 \usepackage[bigopsymb]{output/bigoperators}
 \usepackage{output/analyse}
-\usepackage{output/sffont,output/matrices,output/al,output/arithmetique,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
-\usepackage[arc]{output/complexes}
+\usepackage{output/sffont,output/matrices,output/al,output/hats,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
 \makeatother
-\usepackage{minted}
+\usepackage{minted2}
 \usemintedstyle{perso}
 \setlength{\parindent}{0pt}
 \setlength{\fboxsep}{0pt}
@@ -28,7 +27,7 @@
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{1}
 \let\oldsection\section
-\newcommand{\hsection}[1]{\clearpage\oldsection[#1]{\href{https://rfoxinter.github.io/revisions/output/#1}{\color{black}#1}}}
+\newcommand{\hsection}[1]{\clearpage\oldsection[#1]{\href{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/#1}{\color{black}#1}}}
 \newcommand{\ssection}[2][]{\clearpage\oldsection[#1]{#2}}
 \title{\href{https://rfoxinter.github.io/revisions/Documentation.pdf}{\color{black}Documentation}\phantomsection\addcontentsline{toc}{section}{\protect\numberline{0}Documentation}}
 \author{}
@@ -185,15 +184,13 @@ Lors de l'utilisation de \href{https://ctan.org/pkg/beamer}{\color{black}\textsc
 
 Il est possibles de changer les polices de caractères/symboles en important des packages avant \mintinline{latex}?\usepackage{preambule}? (ou \texttt{htmlpreambule} et les options décrites après sont disponibles avec les deux sauf indication du contraire). Il peut être nécessaire de placer l'importation avant d'imorter les autres modules décrit ci-dessous.
 
-Il n'est pas possible d'utiliser en simultané le package \texttt{Dsfont.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\texttt{Dsft.sty}} décrit ci-dessous. De plus, la commande \mintinline{latexmath}?\1? ne sera pas modifiée si un package définissant \mintinline{latexmath}?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \mintinline{latex}?\newcommand{\1}[1]{\mathbb{1}_{#1}}? (si \hyperlink{section.8}{\texttt{Dsft.sty}} n'est pas importé) ou \mintinline{latex}?\renewcommand{\1}[1]{\mathbb{1}_{#1}}?.
+% Il n'est pas possible d'utiliser en simultané le package \texttt{Dsfont.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et \hyperlink{section.8}{\texttt{Dsft.sty}} décrit ci-dessous. De plus, la commande \mintinline{latexmath}?\1? ne sera pas modifiée si un package définissant \mintinline{latexmath}?\mathbb{1}? est importé. Il est alors possible de redéfinir la commande en utilisant \mintinline{latex}?\newcommand{\1}[1]{\mathbb{1}_{#1}}? (si \hyperlink{section.8}{\texttt{Dsft.sty}} n'est pas importé) ou \mintinline{latex}?\renewcommand{\1}[1]{\mathbb{1}_{#1}}?.
 
 \vspace{0.5cm}
 
 Il est possible de redéfinir le $l$ en $\oldl$ avec \mintinline{latex}?\usepackage[noell]{premabule}?.
 
-\pagebreak
-
-Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de faire\footnote{Cette commande est déjà définie dans \hyperlink{section.20}{\texttt{Usuelles.sty}}} :
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de placer dans le préambule\footnote{Cette commande est déjà définie dans \hyperlink{section.21}{\texttt{Usuelles.sty}}}:
 \vspace{-\abovedisplayskip}\begin{minted}{latex}
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
@@ -207,7 +204,7 @@ La commande \mintinline{latex}?$\sup{\left\{x\in\mathbb{Q}\;\middle|\;x^2<2\righ
 
 L'ensembles des titres des sections (et sous-sections si le fichier n'est pas déjà dans une section) de ce document sont des liens qui pointent vers les fichiers en ligne pour un téléchargement direct.
 
-Il est possible de télécharger tous les packages automatiquement en exécutant le script \href{https://rfoxinter.github.io/revisions/DownloadPackages.py}{\texttt{DownloadPackages.py}} depuis la racine du dossier.
+Il est possible de télécharger tous les packages automatiquement en exécutant le script \href{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/DownloadPackages.py}{\texttt{DownloadPackages.py}} depuis la racine du dossier.
 
 Il est aussi possible de télécharger la version la plus récente de ce fichier en cliquant sur le titre en \hyperlink{section*.1}{page 1}.
 \setcounter{pagenb}{\thepage}
@@ -218,15 +215,15 @@ Il est aussi possible de télécharger la version la plus récente de ce fichier
 \null\newpage
 \pagenumbering{arabic}
 \setcounter{page}{\thepagenb}
-\ssection[Flashcards.py et Htmlcards.py]{\href{https://rfoxinter.github.io/revisions/Flashcards.py}{\color{black}Flashcards.py} et \href{https://rfoxinter.github.io/revisions/Htmlcards.py}{\color{black}Htmlcards.py}}
+\ssection[Flashcards.py et Htmlcards.py]{\href{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/Flashcards.py}{\color{black}Flashcards.py} et \href{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/Htmlcards.py}{\color{black}Htmlcards.py}}
 Les fichiers \texttt{Flashcards.py} et \texttt{Htmlcards.py} permettent d'exporter facilement des flashcards en \texttt{.pdf} et \texttt{.svg} (pour affichage dans le navigateur).
 
 Pour pouvoir créer des fiches de révision, il faut mettre un fichier \texttt{.txt} (décrit plus bas) dans un dossier \texttt{input} et mettre les fichiers \texttt{.sty} nécessaires dans un dossier \texttt{output}.
-\subsection[Flashcards.py]{\href{https://rfoxinter.github.io/revisions/Flashcards.py}{\color{black}Flashcards.py}}
+\subsection[Flashcards.py]{\href{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/Flashcards.py}{\color{black}Flashcards.py}}
 Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelleil est possible de rajouter les paramètres optionnels \texttt{-{}-n=nombre} (avec le nombre d'exemplaires), \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
 
 Il est nécessaire d'avoir \LaTeX{} d'installé pour pouvoir lancer le script.
-\subsection[Htmlcards.py]{\href{https://rfoxinter.github.io/revisions/Htmlcards.py}{\color{black}Htmlcards.py}}
+\subsection[Htmlcards.py]{\href{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/Htmlcards.py}{\color{black}Htmlcards.py}}
 Pour exporter la fiche \texttt{fiche.txt}, il faut soit lancer le fichier python et entrer le nom du fichier (\texttt{fiche}), soit utiliser la commande \texttt{python Flashcards.py -{}-file=fiche} (ou \texttt{python3}), à laquelle il est possible de rajouter les paramètres optionnels \texttt{-{}-dest=dossier} (avec le dossier où il faut mettre le \texttt{.pdf} produit) et \texttt{-{}-open=True/False} (pour ouvrir le dossier où le \texttt{.pdf} est produit).
 
 Modifier la valeur de \texttt{-{}-dest} peut rendre inutilisable certaines fonctions liées au site pour visualiser les fiches.
@@ -234,11 +231,11 @@ Modifier la valeur de \texttt{-{}-dest} peut rendre inutilisable certaines fonct
 Il est nécessaire d'avoir \LaTeX{} et \href{https://ctan.org/pkg/dvisvgm/}{\color{black}\textsl{dvisvgm}} d'installés pour pouvoir lancer le script.
 
 \subsection{Compilation en ligne}
+\href{https://www.swiftlatex.com}{\color{black}Swift\LaTeX}, sur lequel repose le compilateur en ligne ne semble plus opérationnel et la compilation en ligne ne peut donc plus se faire. Il reste cependant possible de générer le fichier \LaTeX{} avec le site, puis de le compiler séparément.
+
 Il est possible de compiler les fiches de révisions avec \texttt{Flashcards.py} ou \texttt{Htmlcards.py} avec le site \href{https://rfoxinter.github.io/revisions/flashcards/compilateur/}{\texttt{https://rfoxinter.github.io/revisions/flashcards/compilateur/}}.
 
-\textsl{Le site est actuellement en développement et il peut être nécessaire de rafraîchir la page si la compilation ne se lance pas.}
-
-Cependant, sur ce site, le package \hyperlink{section.8}{\texttt{Dsft.sty}} ne marche pas. Pour compiler des fiches avec \texttt{Flashcards.py}, il est nécessaire de générer le fichier \LaTeX{} avec le site puis le charger dans un compilateur \LaTeX{} en ligne (comme \href{https://www.overleaf.com/}{overleaf}) avec les packages nécessaires. La compilation avec \texttt{Htmlcards.py} étant plus complexe, il n'est actuellement pas possible de télécharger les fichiers \LaTeX{} générés par ce dernier.
+Pour compiler des fiches avec \texttt{Flashcards.py}, il est nécessaire de générer le fichier \LaTeX{} avec le site puis le charger dans un compilateur \LaTeX{} en ligne (comme \href{https://www.overleaf.com/}{overleaf}) avec les packages nécessaires. La compilation avec \texttt{Htmlcards.py} étant plus complexe, il n'est actuellement pas possible de télécharger les fichiers \LaTeX{} générés par ce dernier.
 \subsection{Les options spéciales}
 Il est possible de compiler l'ensemble des fichiers \texttt{.txt} du dossier \texttt{input} en mettant \texttt{\_\_compile\_all\_\_} comme nom de fichier.
 
@@ -295,20 +292,26 @@ Il est possible de faire en sorte que les cartes téléchargées puissent être 
 
 Ce fichier doit contenir en première ligne la racine à partir de laquelle sont données les url des Htmlcards (si l'url n'est pas absolue), puis plusieurs lignes (2 pour chacune des Htmlcards) contenant en premier le chemin vers la Htmlcard (relatif ou absolu, sachant que la racine est \texttt{https://rfoxinter.github.io/revisions/flashcards/}), suivi de la date de dernière mise à jour du dossier de la Htmlcard concernée (au format \texttt{\%YYYY\%MM\%dd\%hh\%mm\%ss} (année, mois, jour, heure, minutes, secondes)).
 
-Exemple : \href{https://rfoxinter.github.io/revisions/L3/flashcards/cards.txt}{\texttt{https://rfoxinter.github.io/revisions/L3/flashcards/cards.txt}}.
+Exemple : \href{https://rfoxinter.github.io/revisions/L3S2/flashcards/cards.txt}{\texttt{https://rfoxinter.github.io/revisions/L3S2/flashcards/cards.txt}}.
 
-Un exemple de fichier python générant un tel fichier est disponible à l'adresse suivante : \href{https://rfoxinter.github.io/revisions/CardsList.py}{\texttt{https://rfoxinter.github.io/revisions/CardsList.py}}.
-\ssection[Preambule.sty et HTMLPreambule.sty]{\href{https://rfoxinter.github.io/revisions/output/Preambule.sty}{\color{black}Preambule.sty} et \href{https://rfoxinter.github.io/revisions/output/HTMLPreambule.sty}{\color{black}HTMLPreambule.sty}}
+Un exemple de fichier python générant un tel fichier est disponible à l'adresse suivante : \href{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/CardsList.py}{\texttt{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/}}\\\null\hfill\href{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/CardsList.py}{\texttt{output/CardsList.py}}.
+\ssection[Preambule.sty et HTMLPreambule.sty]{\href{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/output/Preambule.sty}{\color{black}Preambule.sty} et \href{https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/output/HTMLPreambule.sty}{\color{black}HTMLPreambule.sty}}
 \subsection{Commandes communes}
 \mhd
 \mmcmd[\footnotemark]{\l}{$\l\right.$}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left(?}
 \mmcmd[\footnotemark]{\r}{$\left.\r$}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right)?}
+\mmcmd[\footnotemark]{\lc}{$\lc\right.$}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left[?}
+\mmcmd[\footnotemark]{\rc}{$\left.\rc$}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right]?}
 \mmcmd[\footnotemark]{\llb}{$\llb\right.$}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left\llbracket?\\Ce caractère n'est pas modifié avec l'option {\color{namecolour}\texttt{nofont}}}
 \mmcmd[\footnotemark]{\rrb}{$\left.\rrb$}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right\rrbracket?\\Ce caractère n'est pas modifié avec l'option {\color{namecolour}\texttt{nofont}}}
+\mcmd[\footnotemark]{\set{x}}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left\{\right\}?}
 \mcmd[\footnotemark]{\oldfrac{a}{b}}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\frac?}
 \mcmd[\footnotemark]{\frac{a}{b}}
@@ -387,12 +390,8 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\tr{u}}
 \mcmd{\oldmat}
 \mcmd[\footnotemark]{\almat{u}{\mathcal{B}}{}}
-\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.11}{\texttt{Matrices.sty}}}
+\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.12}{\texttt{Matrices.sty}}}
 \mcmd{\almat{u}{\mathcal{B}}{\mathcal{C}}}
-\mmcmd[\footnotemark]{\lc}{$\lc\right.$}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\left[?}
-\mmcmd[\footnotemark]{\rc}{$\left.\rc$}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\right]?}
 \mcmd{\oldsl}
 \mcmd{\sl{E}}
 \mcmd{\sl[n]{\mathbb{K}}}
@@ -404,19 +403,19 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\so[n]{\mathbb{R}}}
 \mcmd{\alsym{E}}
 \mcmd{\alsym[+]{E}}
-\pagebreak
-\hrule
 \mcmd{\alant{E}}
 \mcmd{\oldsp}
 \mcmd{\sp{u}}
 \mcmd{\sp[\mathbb{C}]{u}}
+\pagebreak
+\hrule
 \mcmd{\id}
 \mcmd{\transp{u}}
 \mcmd{\discr[\mathcal{B}]{q}}
 \mcmd{\appl{\id}{E}{E}{x}{x}}
 \mcmd{\nappl{E}{\mathbb{R}}{x}{l(x)}}
 \hsection{Analyse.sty}
-Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
+Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
 
 \vspace{0.5cm}
 
@@ -449,6 +448,8 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \hrule
 \mcmd{\int[][a][b]{f'}}
 \mcmd{\int[x][][][\mu]{f(x)}}
+\toggleanalysepar\mcmd[\footnotemark]{\int[y][Y]{\inint[x][X]{f(x,y)}}}\toggleanalysepar
+\footnotetext{Correspond à la commande \mintinline{latexmath}?\int? avec un espacement rectifié}
 \mcmd{\altint{\iint}[x,y]{f(x,y)}}
 \vline\hfill
 \begin{minipage}{0.475\linewidth}
@@ -474,8 +475,7 @@ Le package \hyperlink{section.6}{\texttt{BigOperators.sty}} sera importé automa
 \footnotetext{Le \mintinline{latexmath}?\otimes? utilisé est celui de \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}}\\Pour récupérer celui de \LaTeX, il est possible d'utiliser la commande \mintinline{latex}?\let\otimes\oldotimes? après \mintinline{latex}?\usepackage{al}?\\Comparaison \LaTeX{} - \href{https://ctan.org/pkg/stmaryrd}{\color{black}\texttt{stmaryrd}} avec le fois normal ${\oldotimes}{\otimes}{\times}$\\Ce caractère n'est pas modifié avec l'option \color{namecolour}\texttt{nofont}}
 \mcmd{\eval[{[a,b]}]{f(t)}}
 \mcmd{\eval[a][b]{f(t)}}
-\mcmd[\footnotemark]{\serie{a_n}}
-\footnotetext{Comme \hyperlink{section.6}{\texttt{BigOperators.sty}} est chargé, la commande \mintinline{latexmath}?\sum? est remplacée et il est nécessaire de taper \mintinline{latexmath}?\oldsum? pour obtenir $\oldsum$}
+\mcmd{\serie{a_n}}
 \mcmd{\oldesc}
 \mcmd{\esc{\left[a,b\right]}}
 \mcmd{\esc[+]{f}}
@@ -502,20 +502,28 @@ Il est possible de changer cette option au cours du document en utilisant la com
 Si {\color{namecolour}\texttt{limits}} est utilisé, les indices des commandes se placent comme avec \mintinline{latexmath}?\limits?. Avec cette option, \mintinline{latexmath}?\int[x][X]{f(x)}? produit <<~$\int[x][X]{f(x)}$~>>.
 
 Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\toggleanalyselimits?.
-\toggleanalyselimits\subsection{La commande {\color{keycolour}\texttt{\textbackslash autoanalyselimits}}}
-Il est possible de remettre le comportement automatiques de \LaTeX{} pour l'affichage des indices avec \mintinline{latex}?\autoanalyselimits?. La commande \mintinline{latex}?\toggleanalyselimits? remettra alors le comportement par défaut du package (donc avec \mintinline{latexmath}?\limits?).
+\toggleanalyselimits\subsection{L'option {\color{namecolour}\texttt{autolimits}}}
+Si {\color{namecolour}\texttt{autolimits}} est utilisé, le comportement automatiques de \LaTeX{} pour l'affichage des indices sera utilisé. La commande \mintinline{latex}?\toggleanalyselimits? remettra alors le comportement par défaut du package (donc avec \mintinline{latexmath}?\limits?).
+
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\autoanalyselimits?.
 \hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\div?}
 \mcmd[\footnotemark]{\div}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\mid?}
+\mcmd{\mmod{n}}
 \mcmd{\cgr{a}{b}{n}}
 \mcmd[\footnotemark]{\oldphi}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\phi?}
 \mcmd[\footnotemark]{\phi}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\varphi?}
+\mcmd{\legendre{-1}{p}}
 \hsection{BigOperators.sty}
+Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+
+\vspace{0.5cm}
+
 \mhd
 \mcmd[\footnotemark]{\oldsum}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\sum?}
@@ -538,7 +546,7 @@ Il est possible de remettre le comportement automatiques de \LaTeX{} pour l'affi
 \subsection{Grands opérateurs avec des symboles quelconques}
 Il est aussi possible de faire des grands opérateurs avec des symboles quelconques en important le package \texttt{BigOperators.sty} avec l'option {\color{namecolour}\texttt{bigopsymb}}.
 
-Cette option importe automatiquement le package \texttt{graphics} (disponible sur \href{https://ctan.org/pkg/graphics}{CTAN}).
+Cette option importe automatiquement le package \href{https://ctan.org/pkg/graphics}{\color{black}\texttt{graphics}}.
 \vspace{0.5cm}
 \mhd
 \nmcmd{\makebigop[p]{symb}}{Produit un opérateur avec le symbole \texttt{symb} et ajuste sa taille pour qu'elle soit de {\color{namecolour}\texttt{p}} fois celle du caractère <<~$\oldsum$~>>}
@@ -560,8 +568,10 @@ Il est possible de changer cette option au cours du document en utilisant la com
 Si {\color{namecolour}\texttt{nolimits}} est utilisé, les indices des commandes se placent comme avec \mintinline{latexmath}?\nolimits?. Avec cette option, \mintinline{latexmath}?\sum{n=0}{+\infty}{u_n}? produit <<~$\sum{n=0}{+\infty}{u_n}$~>>.
 
 Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\togglebigoplimits?.
-\togglebigoplimits\subsection{La commande {\color{keycolour}\texttt{\textbackslash autobigoplimits}}}
-Il est possible de remettre le comportement automatiques de \LaTeX{} pour l'affichage des indices avec \mintinline{latex}?\autobigoplimits?. La commande \mintinline{latex}?\togglebigoplimits? remettra alors le comportement par défaut du package (donc avec \mintinline{latexmath}?\limits?).
+\togglebigoplimits\subsection{L'option {\color{namecolour}\texttt{autolimits}}}
+Si {\color{namecolour}\texttt{autolimits}} est utilisé, le comportement automatiques de \LaTeX{} pour l'affichage des indices sera utilisé. La commande \mintinline{latex}?\togglebigoplimits? remettra alors le comportement par défaut du package (donc avec \mintinline{latexmath}?\limits?).
+
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\autobigoplimits?.
 \hsection{Complexes.sty}
 \mhd
 \mcmd[\footnotemark]{\oldbar{z}}
@@ -586,21 +596,13 @@ Il est possible de remettre le comportement automatiques de \LaTeX{} pour l'affi
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\Re?}
 \mcmd{\Re}
 \mcmd{\pRe{x}}
-\subsection{Dessiner des arcs}
-Il est aussi possible de faire des arcs en important le package \texttt{Complexes.sty} avec l'option {\color{namecolour}\texttt{arc}}, en utilisant \mintinline{latex}?\usepackage[arc]{complexes}? au lieu de \mintinline{latex}?\usepackage{complexes}?.
-
-Cette option importe automatiquement le package \texttt{graphics} (disponible sur \href{https://ctan.org/pkg/graphics}{CTAN}).
-\vspace{0.5cm}
-\mhd
-\mcmd{\arc{AB}}
-\mcmd{\arc{ABCDEFFGH}}
 \hsection{Dsft.sty}
-Ce package remplace le $\mathds 1$ du package \texttt{Dsfonts.sty} disponible sur \href{https://www.ctan.org/pkg/doublestroke}{CTAN} et introduit quelques symboles.
+Ce package remplace le $\mathdds 1$ du package \href{https://www.ctan.org/pkg/doublestroke}{\color{black}\texttt{doublestroke}} et introduit quelques symboles.
 
 \vspace{0.5cm}
 
 \mhd
-\mcmd{\mathds{1}}
+\mcmd{\mathdds{1}}
 \mcmd{\1{E}(x)}
 \mcmd{\square}
 \mcmd{\star}
@@ -625,9 +627,6 @@ Ce package remplace le $\mathds 1$ du package \texttt{Dsfonts.sty} disponible su
 \mcmd{\rmrho}
 \mcmd{\rmtau}
 \mcmd{\rmvarsigma}
-\subsection{\href{https://rfoxinter.github.io/revisions/output/dsrom12.pfb}{\color{black}\texttt{dsrom12.pfb}} et \href{https://rfoxinter.github.io/revisions/output/dsrom12.tfm}{\color{black}\texttt{dsrom12.tfm}}}
-
-Pour utiliser ce package, il suffit de copier les fichiers \texttt{dsrom12.pfb} et \texttt{dsrom12.tfm} dans le dossier \texttt{output}. Si cela ne marche pas, il faut les copier dans les dossiers où ils sont actuellement avec \texttt{dsfonts} (et éventuellement créer une copie des anciens fichiers).
 \hsection{Equivalents.sty}
 \mhd
 \mcmd{\o{x}}
@@ -685,8 +684,16 @@ Ce package redéfinit les notes de bas de pages. Les numéros des notes sont mis
     \end{center}
 \end{minipage}
 \hfill\vline\hrule
+\hsection{Hats.sty}
+Ce package importe automatiquement le package \href{https://ctan.org/pkg/graphics}{\color{black}\texttt{graphics}}.
+\vspace{0.5cm}
+\mhd
+\mcmd{\arc{AB}}
+\mcmd{\arc{ABCDEFFGH}}
+\mcmd{\hhat{AB}}
+\mcmd{\hhat{ABCDEFFGH}}
 \hsection{Matrices.sty}
-Le package \hyperlink{section.17}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
 
 \vspace{0.5cm}
 
@@ -704,6 +711,7 @@ Le package \hyperlink{section.17}{\texttt{Tools.sty}} sera importé automatiquem
 \mcmd{\det[\mathcal{B}]{\mathcal{B}'}}
 \mcmd{\oldgl}
 \mcmd{\matgl{n}{\mathbb{K}}}
+\mcmd{\matgl[+]{n}{\mathbb{Q}}}
 \mcmd{\oldcom}
 \mcmd{\com{M}}
 \mcmd{\transp{M}}
@@ -715,6 +723,8 @@ Le package \hyperlink{section.17}{\texttt{Tools.sty}} sera importé automatiquem
 \mmcmd{\plusdots}{$\oldplusdots$}
 \mcmd[\footnotemark]{\tmatrix({1\&0\\0\&1\\})}
 \footnotetext{Les caractères \mintinline{latex}?\&? sont utilisés au lieu du \mintinline{latex}?&? utilisé habituellement avec \tikzlg{} pour des raisons de compatibilité avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}\\Il n'est pas nécessaire de mettre la \mintinline{latex}?\tmatrix? dans une équation et les cellules sont par défaut des équations}
+\mcmd{\smalltmatrix({1\&0\\0\&1\\})}
+\mcmd{\crampedtmatrix({1\&0\\0\&1\\})}
 \subsection{\boldmath Ne pas importer les commandes avec $\mcdot$}
 Il est possible de ne pas modifier les commandes usuelles en utilisant l'option {\color{namecolour}\texttt{nodots}} de ce package. Il faut alors importer le package avec \mintinline{latex}?\usepackage[nodots]{matrices}?.
 
@@ -952,8 +962,8 @@ Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 \footnotetext{\mintinline{latex}?\footnotemark? nécessite d'importer \texttt{pgffor} (qui est utilisé par \tikzlg{} et \href{https://ctan.org/pkg/pgf}{\color{black}PGF})\\Pour ne pas importer \texttt{pgffor}, il est possible d'utiliser \mintinline{latex}?\usepackage[nopgffor]{tools}?}
 \hsection{Topologie.sty}
 \mhd
-\mcmd[\footnotemark]{\anrm{f}}
-\footnotetext{La commande est la même que celle définie dans \hyperlink{section.4}{\texttt{Analyse.sty}}}
+\mcmd{\anrm{f}}
+\mcmd{\anrm[2]{g}}
 \mcmd{\vala{x}}
 \mcmd{\nrm{X}}
 \mcmd{\nrm[E]{X}}
@@ -1005,6 +1015,10 @@ Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 \mcmd{\ath{x}}
 \mcmd{\ath[']{x}}
 \hsection{Usuelles.sty}
+Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+
+\vspace{0.5cm}
+
 \mhd
 \mcmd[\footnotemark]{\oldmin}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\min?}
@@ -1038,4 +1052,20 @@ Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\sup?}
 \mcmd{\sup{\varnothing}}
 \mcmd{\sup[\bar{\mathbb{R}}]{\{u_n\}}}
+\subsection{L'option {\color{namecolour}\texttt{bornelimits}}}
+Si {\color{namecolour}\texttt{bornelimits}} est utilisé, les indices des commandes \mintinline{latexmath}?\min?, \mintinline{latexmath}?\max?, \mintinline{latexmath}?\inf? et \mintinline{latexmath}?\sup? se placent comme avec \mintinline{latexmath}?\limits?.
+
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\togglebornelimits?.
+\togglebigoplimits\subsection{L'option {\color{namecolour}\texttt{autobornelimits}}}
+Si {\color{namecolour}\texttt{autobornelimits}} est utilisé, le comportement automatiques de \LaTeX{} pour l'affichage des indices sera utilisé pour les commandes \mintinline{latexmath}?\min?, \mintinline{latexmath}?\max?, \mintinline{latexmath}?\inf? et \mintinline{latexmath}?\sup?. La commande \mintinline{latex}?\togglebornelimits? remettra alors le comportement par défaut du package (donc avec \mintinline{latexmath}?\nolimits?).
+
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\autobornelimits?.
+\subsection{L'option {\color{namecolour}\texttt{limlimits}}}
+Si {\color{namecolour}\texttt{limlimits}} est utilisé, les indices des commandes \mintinline{latexmath}?\lim?, \mintinline{latexmath}?\limi? et \mintinline{latexmath}?\lims? se placent comme avec \mintinline{latexmath}?\limits?.
+
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\togglelimlimits?.
+\togglebigoplimits\subsection{L'option {\color{namecolour}\texttt{autolimlimits}}}
+Si {\color{namecolour}\texttt{autolimlimits}} est utilisé, le comportement automatiques de \LaTeX{} pour l'affichage\linebreak{}des indices sera utilisé pour les commandes \mintinline{latexmath}?\lim?, \mintinline{latexmath}?\limi? et \mintinline{latexmath}?\lims?. La commande\linebreak\mintinline{latex}?\togglelimlimits? remettra alors le comportement par défaut du package (donc avec \mintinline{latexmath}?\limits?).
+
+Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\autolimlimits?.
 \end{document}
