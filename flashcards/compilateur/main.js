@@ -259,7 +259,7 @@ async function compile(content, list, index = NaN) {
     let packages_file = await fetch('https://rfoxinter.github.io/revisions/output/packages.txt');
     var additional_files = (await packages_file.text()).split('\n');
     for (const filename of additional_files) {
-        await add_file(engine, "https://rfoxinter.github.io/revisions/output/", filename);
+        await add_file(engine, "https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/", filename);
     }
     engine.writeMemFSFile("main.tex", content);
     engine.setEngineMainFile("main.tex");
