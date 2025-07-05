@@ -256,7 +256,7 @@ function add_file(engine, rooturl, filename) {
 async function compile(content, list, index = NaN) {
     const engine = new PdfTeXEngine();
     await engine.loadEngine();
-    let packages_file = await fetch('https://rfoxinter.github.io/revisions/output/packages.txt');
+    let packages_file = await fetch('https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/packages.txt');
     var additional_files = (await packages_file.text()).split('\n');
     for (const filename of additional_files) {
         await add_file(engine, "https://raw.githubusercontent.com/rfoxinter/revisions/refs/heads/main/output/", filename);
