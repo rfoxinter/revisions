@@ -1,34 +1,90 @@
+\RequirePackage{tools}
+
+\newif\if@bornelimits\@bornelimitstrue
+\DeclareOption{bornelimits}{\@bornelimitsfalse}
+\newif\if@autobornelimits\@autobornelimitstrue
+\DeclareOption{autobornelimits}{\@autobornelimitsfalse}
+\newif\if@nolimlimits\@nolimlimitsfalse
+\DeclareOption{nolimlimits}{\@nolimlimitstrue}
+\newif\if@autolimlimits\@autolimlimitsfalse
+\DeclareOption{autolimlimits}{\@autolimlimitstrue}
+\DeclareOption*{}
+\ProcessOptions\relax
+\def\bornelimits{\nolimits}
+\if@bornelimits
+    \def\bornelimits{\limits}
+\fi
+\if@autobornelimits
+    \def\bornelimits{\nolimits}
+\fi
+\def\limlimits{\limits}
+\if@nolimlimits
+    \def\limlimits{\nolimits}
+\fi
+\if@autolimlimits
+    \def\limlimits{}
+\fi
+
+\newcommand{\togglebornelimits}{\comparestring{\bornelimits}{\limits}{\def\bornelimits{\nolimits}}{\def\bornelimits{\limits}}}
+\newcommand{\autobornelimits}{\def\bornelimits{}}
+\newcommand{\togglelimlimits}{\comparestring{\limlimits}{\limits}{\def\limlimits{\nolimits}}{\def\limlimits{\limits}}}
+\newcommand{\autolimlimits}{\def\limlimits{}}
+
 \let\oldmin\min
-\renewcommand\min[2][]{\oldmin_{#1}\l#2\r}
+\renewcommand\min[2][]{
+    \ifx&#1&
+        \def\minargI{\oldmin}
+    \else
+        \def\minargI{\oldmin\bornelimits_{#1}}
+    \fi\minargI\l#2\r
+}
 \let\oldmax\max
-\renewcommand\max[2][]{\oldmax_{#1}\l#2\r}
+\renewcommand\max[2][]{
+    \ifx&#1&
+        \def\maxargI{\oldmax}
+    \else
+        \def\maxargI{\oldmax\bornelimits_{#1}}
+    \fi\maxargI\l#2\r
+}
 \let\oldlim\lim
 \renewcommand\lim[2][]{
     \ifx&#1&
         \def\limargI{\oldlim}
     \else
-        \def\limargI{\oldlim\limits_{#1}}
+        \def\limargI{\oldlim\limlimits_{#1}}
     \fi\limargI\l#2\r
 }
 \newcommand\limi[2][]{
     \ifx&#1&
         \def\limiargI{\liminf}
     \else
-        \def\limiargI{\liminf\limits_{#1}}
+        \def\limiargI{\liminf\limlimits_{#1}}
     \fi\limiargI\l#2\r
 }
 \newcommand\lims[2][]{
     \ifx&#1&
         \def\limsargI{\limsup}
     \else
-        \def\limsargI{\limsup\limits_{#1}}
+        \def\limsargI{\limsup\limlimits_{#1}}
     \fi\limsargI\l#2\r
 }
 \let\oldexp\exp
 \renewcommand\exp[2][]{\oldexp#1\l#2\r}
 \let\oldln\ln
 \renewcommand\ln[2][]{\oldln#1\l#2\r}
-\let\oldsup\sup
-\renewcommand\sup[2][]{\oldsup_{#1}\l#2\r}
 \let\oldinf\inf
-\renewcommand\inf[2][]{\oldinf_{#1}\l#2\r}
+\renewcommand\inf[2][]{
+    \ifx&#1&
+        \def\infargI{\oldinf}
+    \else
+        \def\infargI{\oldinf\bornelimits_{#1}}
+    \fi\infargI\l#2\r
+}
+\let\oldsup\sup
+\renewcommand\sup[2][]{
+    \ifx&#1&
+        \def\supargI{\oldsup}
+    \else
+        \def\supargI{\oldsup\bornelimits_{#1}}
+    \fi\supargI\l#2\r
+}

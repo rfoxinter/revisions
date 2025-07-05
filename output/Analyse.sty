@@ -3,12 +3,14 @@
 
 \newif\if@dvar\@dvarfalse
 \DeclareOption{dvar}{\@dvartrue}
-\newif\if@nopar\@noparfalse
-\DeclareOption{nopar}{\@nopartrue}
-\newif\if@limits\@limitsfalse
-\DeclareOption{limits}{\@limitstrue}
-\newif\if@nodisplay\@nodisplayfalse
-\DeclareOption{nodisplay}{\@nodisplaytrue}
+\newif\if@noanalysepar\@noanalyseparfalse
+\DeclareOption{nopar}{\@noanalysepartrue}
+\newif\if@analyselimits\@analyselimitsfalse
+\DeclareOption{limits}{\@analyselimitstrue}
+\newif\if@autoanalyselimits\@autoanalyselimitsfalse
+\DeclareOption{autolimits}{\@autoanalyselimitstrue}
+\newif\if@noanalysedisplay\@noanalysedisplayfalse
+\DeclareOption{nodisplay}{\@noanalysedisplaytrue}
 \DeclareOption*{}
 \ProcessOptions\relax
 \if@dvar
@@ -16,16 +18,19 @@
 \fi
 \def\analyseleftp{\l}
 \def\analyserightp{\r}
-\if@nopar
+\if@noanalysepar
     \def\analyseleftp{}
     \def\analyserightp{}
 \fi
 \def\analyselimits{\nolimits}
-\if@limits
+\if@analyselimits
     \def\analyselimits{\limits}
 \fi
+\if@autoanalyselimits
+    \def\analyselimits{}
+\fi
 \def\analysedisplay{\displaystyle}
-\if@nodisplay
+\if@noanalysedisplay
     \def\analysedisplay{}
 \fi
 
@@ -183,15 +188,40 @@
         \def\intargI{}
     \else
         \def\intargI{{{}\oldd}#1}
-    \fi\tmpint}
-\newcommand{\tmpint}[1][]{\def\intargII{#1}\tmptmpint}
-\newcommand{\tmptmpint}[1][]{\def\intargIII{#1}\tmptmptmpint}
-\newcommand{\tmptmptmpint}[2][]{{\analysedisplay\oldint\analyselimits_{\intargII}^{\intargIII}}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\intargI\else{{}\mathop{#1\l\dd\intvar\r}}\fi}
+    \fi\tmpint
+}
+\newcommand{\tmpint}[1][]{
+    \ifx&#1&
+        \def\intargII{}
+    \else
+        \def\intargII{\analyselimits_{#1}}
+    \fi\tmptmpint
+}
+\newcommand{\tmptmpint}[1][]{
+    \ifx&#1&
+        \def\intargIII{}
+    \else
+        \def\intargIII{\analyselimits^#1}
+    \fi\tmptmptmpint
+}
+\newcommand{\tmptmptmpint}[2][]{{\analysedisplay\oldint\intargII\intargIII}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\intargI\else{{}\mathop{#1\l\dd\intvar\r}}\fi}
 \newcommand{\altint}[1]{\def\altintsymb{#1}\tmpaltint}
 \newcommand{\tmpaltint}[1][]{\scanaltint{#1}\tmptmpaltint}
-\newcommand{\tmptmpaltint}[1][]{\def\intargII{#1}\tmptmptmpaltint}
-\newcommand{\tmptmptmpaltint}[1][]{\def\intargIII{#1}\tmptmptmptmpaltint}
-\newcommand{\tmptmptmptmpaltint}[2][]{{\analysedisplay\altintsymb\analyselimits_{\intargII}^{\intargIII}}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\altintspacevars\else{{}\mathop{{\let\oldotimes\otimes\def\otimes{{\oldotimes}}#1}\l\altintvars\r}}\fi}
+\newcommand{\tmptmpaltint}[1][]{
+    \ifx&#1&
+        \def\intargII{}
+    \else
+        \def\intargII{\analyselimits_{#1}}
+    \fi\tmptmptmpaltint
+}
+\newcommand{\tmptmptmpaltint}[1][]{
+    \ifx&#1&
+        \def\intargIII{}
+    \else
+        \def\intargIII{\analyselimits^#1}
+    \fi\tmptmptmptmpaltint
+}
+\newcommand{\tmptmptmptmpaltint}[2][]{{\analysedisplay\altintsymb\intargII\intargIII}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\altintspacevars\else{{}\mathop{{\let\oldotimes\otimes\def\otimes{{\oldotimes}}#1}\l\altintvars\r}}\fi}
 \newcommand{\eval}[1][]{\def\evalargI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\evalargI}^{#1}}
 \@ifundefined{oldsum}{\let\oldsum\sum}{}
