@@ -8,6 +8,7 @@
 \DeclareStringOption[french]{babellanguage}
 \DeclareBoolOption{unslantgreek}
 \DeclareBoolOption{defaulttheorems}
+\DeclareBoolOption[false]{bibliography}
 \DeclareDefaultOption{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessKeyvalOptions*
 \PassOptionsToPackage{\altarticle@babellanguage}{babel}
@@ -33,6 +34,7 @@
 \DisableLigatures{encoding = OML}
 \usepackage{framed}
 \usepackage{graphicx}
+\usepackage{csquotes}
 \usepackage{enumitem}
 \let\propenumerate\relax
 \newlist{propenumerate}{enumerate}{10}
@@ -65,6 +67,61 @@
 \tikzset{arrow style/.style={->=latex,shorten >=2pt, shorten <=2pt}}
 \setcounter{tocdepth}{6}
 \renewcommand{\ttdefault}{cmtl}
+
+
+
+%%% Bibliography
+\ifaltarticle@bibliography
+    \usepackage[backend=biber, style=resources/unsrt, sorting=none, maxcitenames=50]{biblatex}
+    \setlength{\bibitemsep}{0pt}
+    \setlength{\biblabelsep}{0pt}
+    \setlength{\labelnumberwidth}{0pt}
+    \setlength{\biblabelsep}{2.125em}
+    \newsavebox{\altarticle@biblbox}
+    \newsavebox{\altarticle@bibbox}
+    \newsavebox{\altarticle@spacebox}
+    \savebox{\altarticle@spacebox}{~}
+    \defbibenvironment{bibliography}
+    {\list
+        {\savebox{\altarticle@bibbox}{\printtext[labelnumberwidth]{%
+            \printfield{labelprefix}%
+            \printfield{labelnumber}}}%
+            \usebox{\altarticle@bibbox}%
+            \ifdim\wd\altarticle@bibbox<\dimexpr\biblabelsep-\the\wd\altarticle@spacebox-\the\wd\altarticle@spacebox\relax%
+            \kern-\wd\altarticle@bibbox%
+            \else%
+            \kern-\biblabelsep~~%
+            \fi%
+        }
+        {\setlength{\labelwidth}{\labelnumberwidth}%
+        \setlength{\leftmargin}{\labelwidth}%
+        \setlength{\labelsep}{\biblabelsep}%
+        \addtolength{\leftmargin}{\labelsep}%
+        \setlength{\itemsep}{\bibitemsep}%
+        \setlength{\parsep}{\bibparsep}}%
+        \renewcommand*{\makelabel}[1]{\hss##1}}
+    {\endlist}
+    {\item}
+    \defbibenvironment{shorthand}
+    {\list
+        {\savebox{\altarticle@bibbox}{\printfield[shorthandwidth]{shorthand}}%
+            \usebox{\altarticle@bibbox}%
+            \ifdim\wd\altarticle@bibbox<\dimexpr\biblabelsep-\the\wd\altarticle@spacebox-\the\wd\altarticle@spacebox\relax%
+            \kern-\wd\altarticle@bibbox%
+            \else%
+            \kern-\biblabelsep~~%
+            \fi%
+        }
+        {\setlength{\labelwidth}{\shorthandwidth}%
+        \setlength{\leftmargin}{\labelwidth}%
+        \setlength{\labelsep}{\biblabelsep}%
+        \addtolength{\leftmargin}{\labelsep}%
+        \setlength{\itemsep}{\bibitemsep}%
+        \setlength{\parsep}{\bibparsep}%
+        \renewcommand*{\makelabel}[1]{##1\hss}}}
+    {\endlist}
+    {\item}
+\fi
 
 
 
