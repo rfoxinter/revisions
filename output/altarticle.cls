@@ -1485,96 +1485,96 @@ space before arrow={0.2ex},
 \newcommand{\togglebigopdisplay}{\altarticle@comparestring{\bigopdisplay}{}{\def\bigopdisplay{\displaystyle}}{\def\bigopdisplay{}}}
 \newcommand{\autobigopdisplay}{\def\bigopdisplay{}}
 \let\oldsum\sum
-\renewcommand\sum[3]{
-    \ifx&#1&
+\renewcommand\sum[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
-    {\bigopdisplay\oldsum\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp
-}
+    {\bigopdisplay\oldsum\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldprod\prod
-\renewcommand\prod[3]{
-    \ifx&#1&
+\renewcommand\prod[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\oldprod\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldcap\bigcap
-\renewcommand\bigcap[3]{
-    \ifx&#1&
+\renewcommand\bigcap[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\oldcap\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldcup\bigcup
-\renewcommand\bigcup[3]{
-    \ifx&#1&
+\renewcommand\bigcup[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\oldcup\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldbigsqcup\bigsqcup
-\renewcommand\bigsqcup[3]{
-    \ifx&#1&
+\renewcommand\bigsqcup[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\oldbigsqcup\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\olduplus\biguplus
-\renewcommand\biguplus[3]{
-    \ifx&#1&
+\renewcommand\biguplus[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\olduplus\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
-\newcommand\bigop[3]{
-    \ifx&#1&
+\let\oldbigoplus\bigoplus
+\renewcommand\bigoplus[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
-    {\bigopdisplay\bigoplus\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+    {\bigopdisplay\oldbigoplus\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \DeclareRobustCommand\makebigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}
 \newcommand{\bigop@}[2]{\bigop@@#1#2}
 \newcommand{\bigop@@}[3]{\vcenter{\sbox\z@{$#1\oldsum$}\hbox{\resizebox{#2\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#3$}}}}
@@ -1584,13 +1584,13 @@ space before arrow={0.2ex},
     \expandafter\newcommand\csname #3symb\endcsname{%
         \DOTSB\makebigop[#1]{#2}%
     }%
-    \expandafter\newcommand\csname #3\endcsname[3]{%
-        \ifx&##1&
+    \expandafter\newcommand\csname #3\endcsname[3]{\mathop{}\mkern-3mu%
+        \if\relax\detokenize{##1}\relax
             \def\opbelow{}
         \else
             \def\opbelow{\bigoplimits_{##1}}
         \fi
-        \ifx&##2&
+        \if\relax\detokenize{##2}\relax
             \def\opabove{}
         \else
             \def\opabove{\bigoplimits^{##2}}
@@ -1775,13 +1775,13 @@ space before arrow={0.2ex},
 %% Usuelles
 \def\bornelimits{\nolimits}
 \def\limlimits{\limits}
-\newcommand{\togglebornelimits}{\comparestring{\bornelimits}{\limits}{\def\bornelimits{\nolimits}}{\def\bornelimits{\limits}}}
+\newcommand{\togglebornelimits}{\altarticle@comparestring{\bornelimits}{\limits}{\def\bornelimits{\nolimits}}{\def\bornelimits{\limits}}}
 \newcommand{\autobornelimits}{\def\bornelimits{}}
-\newcommand{\togglelimlimits}{\comparestring{\limlimits}{\limits}{\def\limlimits{\nolimits}}{\def\limlimits{\limits}}}
+\newcommand{\togglelimlimits}{\altarticle@comparestring{\limlimits}{\limits}{\def\limlimits{\nolimits}}{\def\limlimits{\limits}}}
 \newcommand{\autolimlimits}{\def\limlimits{}}
 \let\oldmin\min
 \renewcommand\min[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\minargI{\oldmin}
     \else
         \def\minargI{\oldmin\bornelimits_{#1}}
@@ -1789,7 +1789,7 @@ space before arrow={0.2ex},
 }
 \let\oldmax\max
 \renewcommand\max[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\maxargI{\oldmax}
     \else
         \def\maxargI{\oldmax\bornelimits_{#1}}
@@ -1797,21 +1797,21 @@ space before arrow={0.2ex},
 }
 \let\oldlim\lim
 \renewcommand\lim[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\limargI{\oldlim}
     \else
         \def\limargI{\oldlim\limlimits_{#1}}
     \fi\limargI\l#2\r
 }
 \newcommand\limi[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\limiargI{\liminf}
     \else
         \def\limiargI{\liminf\limlimits_{#1}}
     \fi\limiargI\l#2\r
 }
 \newcommand\lims[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\limsargI{\limsup}
     \else
         \def\limsargI{\limsup\limlimits_{#1}}
@@ -1823,7 +1823,7 @@ space before arrow={0.2ex},
 \renewcommand\ln[2][]{\oldln#1\l#2\r}
 \let\oldinf\inf
 \renewcommand\inf[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\infargI{\oldinf}
     \else
         \def\infargI{\oldinf\bornelimits_{#1}}
@@ -1831,7 +1831,7 @@ space before arrow={0.2ex},
 }
 \let\oldsup\sup
 \renewcommand\sup[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\supargI{\oldsup}
     \else
         \def\supargI{\oldsup\bornelimits_{#1}}
@@ -1921,6 +1921,7 @@ space before arrow={0.2ex},
     \setlength{\matsep}{3.5pt}
     \setlength{\matmin}{15pt}
 }
+\newcommand{\amp}{\detokenize{&}}
 \newcommand{\tmatrix}[1][]{\def\tmatargI{#1}\tmptmatrix}
 \newcommand{\tmptmatrix}[4][]{
 \begin{tikzpicture}[baseline={([yshift=-0.5ex]m.center)}]
@@ -2258,37 +2259,37 @@ space before arrow={0.2ex},
     \fi\tmpint
 }
 \newcommand{\tmpint}[1][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\intargII{}
     \else
         \def\intargII{\analyselimits_{#1}}
     \fi\tmptmpint
 }
 \newcommand{\tmptmpint}[1][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\intargIII{}
     \else
-        \def\intargIII{\analyselimits^#1}
+        \def\intargIII{\analyselimits^{#1}}
     \fi\tmptmptmpint
 }
-\newcommand{\tmptmptmpint}[2][]{{\analysedisplay\oldint\intargII\intargIII}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\intargI\else{{}\mathop{#1\l\dd\intvar\r}}\fi}
+\newcommand{\tmptmptmpint}[2][]{\mathop{}\mkern-3mu{\analysedisplay\oldint\intargII\intargIII}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\intargI\else{{}\mathop{#1\l\dd\intvar\r}}\fi}
 \newcommand{\altint}[1]{\def\altintsymb{#1}\tmpaltint}
 \newcommand{\tmpaltint}[1][]{\scanaltint{#1}\tmptmpaltint}
 \newcommand{\tmptmpaltint}[1][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\intargII{}
     \else
         \def\intargII{\analyselimits_{#1}}
     \fi\tmptmptmpaltint
 }
 \newcommand{\tmptmptmpaltint}[1][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\intargIII{}
     \else
-        \def\intargIII{\analyselimits^#1}
+        \def\intargIII{\analyselimits^{#1}}
     \fi\tmptmptmptmpaltint
 }
-\newcommand{\tmptmptmptmpaltint}[2][]{{\analysedisplay\altintsymb\intargII\intargIII}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\altintspacevars\else{{}\mathop{{\let\oldotimes\otimes\def\otimes{{\oldotimes}}#1}\l\altintvars\r}}\fi}
+\newcommand{\tmptmptmptmpaltint}[2][]{\mathop{}\mkern-3mu{\analysedisplay\altintsymb\intargII\intargIII}\mkern-3mu{}\mathop{}\analyseleftp{#2}\analyserightp\if\relax\detokenize{#1}\relax\altintspacevars\else{{}\mathop{{\let\oldotimes\otimes\def\otimes{{\oldotimes}}#1}\l\altintvars\r}}\fi}
 \newcommand{\eval}[1][]{\def\evalargI{#1}\tmpeval}
 \newcommand{\tmpeval}[2][]{\left[#2\right]_{\evalargI}^{#1}}
 \newcommand{\serie}[1]{\oldsum#1}
@@ -2305,48 +2306,49 @@ space before arrow={0.2ex},
 \DeclareMathOperator{\oldepi}{Epi}
 \newcommand{\epi}[1]{\oldepi\l#1\r}
 %% Dsft
-\let\star\relax
-\let\square\relax
-\let\triangle\relax
-\pdfmapfile{+dsrm/dsrm.map}
-\newfont{\dsft}{dsrm/dsrm12}
-\DeclareFontFamily{U}{dsrm}{}
-\DeclareFontShape{U}{dsrm}{m}{n}{
-    <-> dsrm/dsrm12
-}{}
-\DeclareSymbolFont{mathds}{U}{dsrm}{m}{n}
-\DeclareMathAlphabet{\mathds}{U}{dsrm}{m}{n}
-\newcommand\ind[1]{\mathds{1}_{#1}}
-\DeclareMathSymbol{\square}{\mathbin}{mathds}{"41}
-\DeclareMathSymbol{\star}{\mathbin}{mathds}{"42}
-\DeclareMathSymbol{\triangle}{\mathbin}{mathds}{"43}
-\newcommand{\filledstar}[1]{%
-    \ifcase#1\relax%
-        \ensuremath{\mathds{B}}%
-    \or\relax%
-        \ensuremath{\mathds{D}}%
-    \or\relax%
-        \ensuremath{\mathds{E}}%
-    \or\relax%
-        \ensuremath{\mathds{F}}%
-    \or\relax%
-        \ensuremath{\mathds{G}}%
-    \or\relax%
-        \ensuremath{\mathds{H}}%
-    \else%
-        \hphantom{\ensuremath{\mathds{1}}}
-    \fi%
-}
-\newcommand{\rmbeta}{\ensuremath{\mathds{b}}}
-\newcommand{\rmepsilon}{\ensuremath{\mathds{e}}}
-\newcommand{\rmphi}{\ensuremath{\mathds{f}}}
-\newcommand{\rmgamma}{\ensuremath{\mathds{g}}}
-\newcommand{\rmiota}{\ensuremath{\mathds{i}}}
-\newcommand{\rmkappa}{\ensuremath{\mathds{k}}}
-\newcommand{\rmmu}{\ensuremath{\mathds{m}}}
-\newcommand{\rmnu}{\ensuremath{\mathds{n}}}
-\newcommand{\rmomicron}{\ensuremath{\mathds{o}}}
-\newcommand{\rmpi}{\ensuremath{\mathds{p}}}
-\newcommand{\rmrho}{\ensuremath{\mathds{r}}}
-\newcommand{\rmtau}{\ensuremath{\mathds{t}}}
-\newcommand{\rmvarsigma}{\ensuremath{\mathds{v}}}
+\usepackage{dsft}
+% \let\star\relax
+% \let\square\relax
+% \let\triangle\relax
+% \pdfmapfile{+dsrm/dsrm.map}
+% \newfont{\dsft}{dsrm/dsrm12}
+% \DeclareFontFamily{U}{dsrm}{}
+% \DeclareFontShape{U}{dsrm}{m}{n}{
+%     <-> dsrm/dsrm12
+% }{}
+% \DeclareSymbolFont{mathds}{U}{dsrm}{m}{n}
+% \DeclareMathAlphabet{\mathds}{U}{dsrm}{m}{n}
+% \newcommand\ind[1]{\mathds{1}_{#1}}
+% \DeclareMathSymbol{\square}{\mathbin}{mathds}{"41}
+% \DeclareMathSymbol{\star}{\mathbin}{mathds}{"42}
+% \DeclareMathSymbol{\triangle}{\mathbin}{mathds}{"43}
+% \newcommand{\filledstar}[1]{%
+%     \ifcase#1\relax%
+%         \ensuremath{\mathds{B}}%
+%     \or\relax%
+%         \ensuremath{\mathds{D}}%
+%     \or\relax%
+%         \ensuremath{\mathds{E}}%
+%     \or\relax%
+%         \ensuremath{\mathds{F}}%
+%     \or\relax%
+%         \ensuremath{\mathds{G}}%
+%     \or\relax%
+%         \ensuremath{\mathds{H}}%
+%     \else%
+%         \hphantom{\ensuremath{\mathds{1}}}
+%     \fi%
+% }
+% \newcommand{\rmbeta}{\ensuremath{\mathds{b}}}
+% \newcommand{\rmepsilon}{\ensuremath{\mathds{e}}}
+% \newcommand{\rmphi}{\ensuremath{\mathds{f}}}
+% \newcommand{\rmgamma}{\ensuremath{\mathds{g}}}
+% \newcommand{\rmiota}{\ensuremath{\mathds{i}}}
+% \newcommand{\rmkappa}{\ensuremath{\mathds{k}}}
+% \newcommand{\rmmu}{\ensuremath{\mathds{m}}}
+% \newcommand{\rmnu}{\ensuremath{\mathds{n}}}
+% \newcommand{\rmomicron}{\ensuremath{\mathds{o}}}
+% \newcommand{\rmpi}{\ensuremath{\mathds{p}}}
+% \newcommand{\rmrho}{\ensuremath{\mathds{r}}}
+% \newcommand{\rmtau}{\ensuremath{\mathds{t}}}
+% \newcommand{\rmvarsigma}{\ensuremath{\mathds{v}}}

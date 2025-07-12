@@ -37,96 +37,96 @@
 \newcommand{\togglebigopdisplay}{\comparestring{\bigopdisplay}{}{\def\bigopdisplay{\displaystyle}}{\def\bigopdisplay{}}}
 
 \@ifundefined{oldsum}{\let\oldsum\sum}{}
-\renewcommand\sum[3]{
-    \ifx&#1&
+\renewcommand\sum[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
-    {\bigopdisplay\oldsum\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp
-}
+    {\bigopdisplay\oldsum\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldprod\prod
-\renewcommand\prod[3]{
-    \ifx&#1&
+\renewcommand\prod[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\oldprod\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldcap\bigcap
-\renewcommand\bigcap[3]{
-    \ifx&#1&
+\renewcommand\bigcap[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\oldcap\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldcup\bigcup
-\renewcommand\bigcup[3]{
-    \ifx&#1&
+\renewcommand\bigcup[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\oldcup\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldbigsqcup\bigsqcup
-\renewcommand\bigsqcup[3]{
-    \ifx&#1&
+\renewcommand\bigsqcup[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\oldbigsqcup\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\olduplus\biguplus
-\renewcommand\biguplus[3]{
-    \ifx&#1&
+\renewcommand\biguplus[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\olduplus\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
-\newcommand\bigop[3]{
-    \ifx&#1&
+\let\oldbigoplus\bigoplus
+\renewcommand\bigoplus[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
         \def\opbelow{}
     \else
         \def\opbelow{\bigoplimits_{#1}}
     \fi
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\opabove{}
     \else
         \def\opabove{\bigoplimits^{#2}}
     \fi
-    {\bigopdisplay\bigoplus\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+    {\bigopdisplay\oldbigoplus\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 
 
 \if@bigopsymb
@@ -140,13 +140,13 @@
         \expandafter\newcommand\csname #3symb\endcsname{%
             \DOTSB\makebigop[#1]{#2}%
         }%
-        \expandafter\newcommand\csname #3\endcsname[3]{%
-            \ifx&##1&
+        \expandafter\newcommand\csname #3\endcsname[3]{\mathop{}\mkern-3mu%
+            \if\relax\detokenize{##1}\relax
                 \def\opbelow{}
             \else
                 \def\opbelow{\bigoplimits_{##1}}
             \fi
-            \ifx&##2&
+            \if\relax\detokenize{##2}\relax
                 \def\opabove{}
             \else
                 \def\opabove{\bigoplimits^{##2}}

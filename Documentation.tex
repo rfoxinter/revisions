@@ -415,7 +415,7 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\appl{\id}{E}{E}{x}{x}}
 \mcmd{\nappl{E}{\mathbb{R}}{x}{l(x)}}
 \hsection{Analyse.sty}
-Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
 
 \vspace{0.5cm}
 
@@ -520,7 +520,7 @@ Il est possible de changer cette option au cours du document en utilisant la com
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\varphi?}
 \mcmd{\legendre{-1}{p}}
 \hsection{BigOperators.sty}
-Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{BigOperators.sty}.
 
 \vspace{0.5cm}
 
@@ -541,19 +541,19 @@ Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquem
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\bigsqcup?}
 \mcmd{\bigsqcup{n=0}{+\infty}{A_n}}
 \mcmd[\footnotemark]{\olduplus}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\biguplus?}
 \mcmd{\biguplus{n=0}{+\infty}{A_n}}
-\mcmd{\bigop{n=0}{+\infty}{E_n}}
+\mcmd[\footnotemark]{\oldbigoplus}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\bigoplus?}
+\mcmd{\bigoplus{n=0}{+\infty}{E_n}}
 \subsection{Grands opérateurs avec des symboles quelconques}
 Il est aussi possible de faire des grands opérateurs avec des symboles quelconques en important le package \texttt{BigOperators.sty} avec l'option {\color{namecolour}\texttt{bigopsymb}}.
 
 Cette option importe automatiquement le package \href{https://ctan.org/pkg/graphics}{\color{black}\texttt{graphics}}.
-\vspace{0.5cm}
+\pagebreak
 \mhd
 \nmcmd{\makebigop[p]{symb}}{Produit un opérateur avec le symbole \texttt{symb} et ajuste sa taille pour qu'elle soit de {\color{namecolour}\texttt{p}} fois celle du caractère <<~$\oldsum$~>>}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\biguplus?}
 \mcmd{\fracKsymb}
-\pagebreak
-\hrule
 \mcmd{b_0+\fracK{n>0}{}{\frac{a_n}{b_n}}}
 \nmcmd{\makebigopcommand[p]{symb}{name}}{Produit un opérateur et une commande avec le symbole \texttt{symb} et ajuste sa taille pour qu'elle soit de {\color{namecolour}\texttt{p}} fois celle du caractère <<~$\oldsum$~>>\\Pour obtenir le symbole crée, il faut utiliser \texttt{\color{mathcolour}\textbackslash\textit{name}\!symb}\\La commande associée est \texttt{\color{mathcolour}\textbackslash\textit{name}}; elle a pour arguments les mêmes que les opérateurs définis plus haut}
 \togglebigoppar\subsection{L'option {\color{namecolour}\texttt{nopar}}}
@@ -629,18 +629,36 @@ Ce package remplace le $\mathdds 1$ du package \href{https://www.ctan.org/pkg/do
 \mcmd{\rmvarsigma}
 \hsection{Equivalents.sty}
 \mhd
-\mcmd{\o{x}}
-\mcmd{\o[x\to0]{x}}
-\mcmd{\O{x}}
-\mcmd{\O[x\to0]{x}}
-\mcmd{\Th{x}}
-\mcmd{\Th[x\to0]{x}}
-\mcmd{\Om{x}}
-\mcmd{\Om[x\to0]{x}}
-\mcmd{\eq{u_n}{v_n}}
-\mcmd{\eq[n\to+\infty]{u_n}{v_n}}
-\mcmd{\eg{u_n}{v_n+\o{v_n}}}
-\mcmd{\eg[n\to+\infty]{u_n}{v_n+\o{v_n}}}
+\mcmd{\equivo{x}}
+\mcmd{\equivo[x\to0]{x}}
+\mcmd{\equivO{x}}
+\mcmd{\equivO[x\to0]{x}}
+\mcmd{\equivTh{x}}
+\mcmd{\equivTh[x\to0]{x}}
+\mcmd{\equivOm{x}}
+\mcmd{\equivOm[x\to0]{x}}
+\mcmd{\equiveq{u_n}{v_n}}
+\mcmd{\equiveq[n\to+\infty]{u_n}{v_n}}
+\mcmd{\equiveg{u_n}{v_n+\equivo{v_n}}}
+\vline\hfill
+\begin{minipage}{0.475\linewidth}
+    \begin{center}
+        \vspace{2pt}
+        \mintinline{latexmath}?\equiveg[n\to+\infty]{u_n}?\\\mintinline{latexmath}?{v_n+\equivo{v_n}}?
+
+        \vspace{2pt}
+    \end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.475\linewidth}
+    \begin{center}
+        \vspace{2pt}
+        $\equiveg[n\to+\infty]{u_n}{v_n+\equivo{v_n}}$
+        
+        \vspace{2pt}
+    \end{center}
+\end{minipage}
+\hfill\vline\hrule
 \hsection{Footnotes.sty}
 Ce package redéfinit les notes de bas de pages. Les numéros des notes sont mis automatiquement et prennent la première valeur non utilisée dans la diapositive.
 
@@ -721,6 +739,8 @@ Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquem
 \mmcmd{\vdots}{$\oldvdots$}
 \mmcmd{\xdots}{$\oldxdots$}
 \mmcmd{\plusdots}{$\oldplusdots$}
+\mcmd[\footnotemark]{\amp}
+\footnotetext{Cette commande permet de placer le symbole <<~\&~>> dans les matrices}
 \mcmd[\footnotemark]{\tmatrix({1\&0\\0\&1\\})}
 \footnotetext{Les caractères \mintinline{latex}?\&? sont utilisés au lieu du \mintinline{latex}?&? utilisé habituellement avec \tikzlg{} pour des raisons de compatibilité avec \href{https://ctan.org/pkg/beamer}{\color{black}\textsc{beamer}}\\Il n'est pas nécessaire de mettre la \mintinline{latex}?\tmatrix? dans une équation et les cellules sont par défaut des équations}
 \mcmd{\smalltmatrix({1\&0\\0\&1\\})}
@@ -1015,7 +1035,7 @@ Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 \mcmd{\ath{x}}
 \mcmd{\ath[']{x}}
 \hsection{Usuelles.sty}
-Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Usuelles.sty}.
 
 \vspace{0.5cm}
 

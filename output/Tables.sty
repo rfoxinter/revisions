@@ -3,13 +3,13 @@
 \newlength\tblw
 \newlength\tblh
 \newcommand{\setcolrow}[1][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \setlength\tblw{10cm}
     \else
         \setlength\tblw{#1}
     \fi\tmpsetcolrow}
 \newcommand{\tmpsetcolrow}[3][]{ %\setcolrow{n°col}{n°row}
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \setlength\tblh{6.5cm}
     \else
         \setlength\tblh{#1}

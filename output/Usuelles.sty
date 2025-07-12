@@ -32,7 +32,7 @@
 
 \let\oldmin\min
 \renewcommand\min[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\minargI{\oldmin}
     \else
         \def\minargI{\oldmin\bornelimits_{#1}}
@@ -40,7 +40,7 @@
 }
 \let\oldmax\max
 \renewcommand\max[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\maxargI{\oldmax}
     \else
         \def\maxargI{\oldmax\bornelimits_{#1}}
@@ -48,21 +48,21 @@
 }
 \let\oldlim\lim
 \renewcommand\lim[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\limargI{\oldlim}
     \else
         \def\limargI{\oldlim\limlimits_{#1}}
     \fi\limargI\l#2\r
 }
 \newcommand\limi[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\limiargI{\liminf}
     \else
         \def\limiargI{\liminf\limlimits_{#1}}
     \fi\limiargI\l#2\r
 }
 \newcommand\lims[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\limsargI{\limsup}
     \else
         \def\limsargI{\limsup\limlimits_{#1}}
@@ -74,7 +74,7 @@
 \renewcommand\ln[2][]{\oldln#1\l#2\r}
 \let\oldinf\inf
 \renewcommand\inf[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\infargI{\oldinf}
     \else
         \def\infargI{\oldinf\bornelimits_{#1}}
@@ -82,7 +82,7 @@
 }
 \let\oldsup\sup
 \renewcommand\sup[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\supargI{\oldsup}
     \else
         \def\supargI{\oldsup\bornelimits_{#1}}

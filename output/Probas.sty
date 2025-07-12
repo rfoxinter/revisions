@@ -1,5 +1,5 @@
 \newcommand\p[2][]{
-    \ifx&#2&
+    \if\relax\detokenize{#2}\relax
         \def\pargII{}
     \else
         \def\pargII{\l#2\r}
@@ -16,7 +16,7 @@
 \newcommand{\indep}{\perp\!\!\!\perp}
 \newcommand{\unif}[1]{\mathcal U\l#1\r}
 \newcommand{\bin}[2][]{
-    \ifx&#1&
+    \if\relax\detokenize{#1}\relax
         \def\binargI{}
     \else
         \def\binargI{#1,}
