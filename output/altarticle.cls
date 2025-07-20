@@ -72,99 +72,103 @@
 
 %%% Bibliography
 \ifaltarticle@bibliography
-    \begin{filecontents}{unsrt.bbx}
-\ProvidesFile{unsrt.bbx}[2025/02/02 Unsorted French Bibliography Style]
+    \IfFileExists{unsrt.bbx}{}{
+        \begin{filecontents}{unsrt.bbx}
+            \ProvidesFile{unsrt.bbx}[2025/02/02 Unsorted French Bibliography Style]
 
-\RequireBibliographyStyle{numeric}
+            \RequireBibliographyStyle{numeric}
 
-\DeclareBibliographyOption[boolean]{ordrecitation}[true]{% Option to enforce citation order
-  \ifstrequal{#1}{true}
-    {\ExecuteBibliographyOptions{sorting=none}}
-    {}}
+            \DeclareBibliographyOption[boolean]{ordrecitation}[true]{% Option to enforce citation order
+            \ifstrequal{#1}{true}
+                {\ExecuteBibliographyOptions{sorting=none}}
+                {}}
 
-% French localization
-\DefineBibliographyStrings{french}{
-  urlseen = {Consulté le},
-  pages = {p.},
-  editor = {dir.},
-  editors = {dirs.},
-  byeditor = {sous la direction de},
-  edition = {édition},
-  volume = {volume},
-  number = {n	extdegree},
-  in = {Dans},
-}
+            % French localization
+            \DefineBibliographyStrings{french}{
+            urlseen = {Consulté le},
+            pages = {p.},
+            editor = {dir.},
+            editors = {dirs.},
+            byeditor = {sous la direction de},
+            edition = {édition},
+            volume = {volume},
+            number = {n	extdegree},
+            in = {Dans},
+            }
 
-% Adjust citation label format to remove brackets
-\DeclareFieldFormat{labelnumber}{#1}
+            % Adjust citation label format to remove brackets
+            \DeclareFieldFormat{labelnumber}{#1}
 
-% Order of bibliography fields
-\DeclareBibliographyDriver{book}{%
-  \usebibmacro{bibindex}%
-  \usebibmacro{begentry}%
-  \printnames{author}%
-  \setunit{\addcolon\space}%
-  \newblock
-  \printfield{title}%
-  \setunit{\addcomma\space}%
-  \printfield{edition}%
-  \setunit{\addcomma\space}%
-  \printfield{series}%
-  \setunit{\addcomma\space}%
-  \printlist{publisher}%
-  \setunit{\addcomma\space}%
-  \printfield{year}%
-  \setunit{\addperiod}%
-  \finentry
-}
+            % Order of bibliography fields
+            \DeclareBibliographyDriver{book}{%
+            \usebibmacro{bibindex}%
+            \usebibmacro{begentry}%
+            \printnames{author}%
+            \setunit{\addcolon\space}%
+            \newblock
+            \printfield{title}%
+            \setunit{\addcomma\space}%
+            \printfield{edition}%
+            \setunit{\addcomma\space}%
+            \printfield{series}%
+            \setunit{\addcomma\space}%
+            \printlist{publisher}%
+            \setunit{\addcomma\space}%
+            \printfield{year}%
+            \setunit{\addperiod}%
+            \finentry
+            }
 
-\DeclareBibliographyDriver{article}{%
-  \usebibmacro{bibindex}%
-  \usebibmacro{begentry}%
-  \printnames{author}%
-  \setunit{\addspace}%
-  \newblock
-  \printfield{title}%
-  \setunit{\addperiod\space}%
-  \printfield{journaltitle}%
-  \setunit{\addcomma\space}%
-  \printfield{volume}%
-  \setunit{\addcomma\space}%
-  \printfield{number}%
-  \setunit{\addcomma\space}%
-  \printfield{pages}%
-  \setunit{\addcomma\space}%
-  \printfield{year}%
-  \setunit{\addperiod}%
-  \finentry
-}
+            \DeclareBibliographyDriver{article}{%
+            \usebibmacro{bibindex}%
+            \usebibmacro{begentry}%
+            \printnames{author}%
+            \setunit{\addspace}%
+            \newblock
+            \printfield{title}%
+            \setunit{\addperiod\space}%
+            \printfield{journaltitle}%
+            \setunit{\addcomma\space}%
+            \printfield{volume}%
+            \setunit{\addcomma\space}%
+            \printfield{number}%
+            \setunit{\addcomma\space}%
+            \printfield{pages}%
+            \setunit{\addcomma\space}%
+            \printfield{year}%
+            \setunit{\addperiod}%
+            \finentry
+            }
 
-\DeclareBibliographyDriver{misc}{%
-  \usebibmacro{bibindex}%
-  \usebibmacro{begentry}%
-  \printnames{author}%
-  \setunit{\addcolon\space}%
-  \newblock
-  \printfield{title}%
-  \setunit{\addcomma\space}%
-  \printfield{howpublished}%
-  \setunit{\addcomma\space}%
-  \printfield{note}%
-  \setunit{\addcomma\space}%
-  \printfield{url}%
-  \setunit{\addcomma\space}%
-  \printfield{year}%
-  \setunit{\addperiod}%
-  \finentry
-}
-    \end{filecontents}
-    \begin{filecontents}{unsrt.cbx}
-\ProvidesFile{unsrt.cbx}[2024/06/05 v0.1 Foad's citation style]
+            \DeclareBibliographyDriver{misc}{%
+            \usebibmacro{bibindex}%
+            \usebibmacro{begentry}%
+            \printnames{author}%
+            \setunit{\addcolon\space}%
+            \newblock
+            \printfield{title}%
+            \setunit{\addcomma\space}%
+            \printfield{howpublished}%
+            \setunit{\addcomma\space}%
+            \printfield{note}%
+            \setunit{\addcomma\space}%
+            \printfield{url}%
+            \setunit{\addcomma\space}%
+            \printfield{year}%
+            \setunit{\addperiod}%
+            \finentry
+            }
+        \end{filecontents}
+    }
+    \IfFileExists{unsrt.cbx}{}{
+        \begin{filecontents}{unsrt.cbx}
+            \ProvidesFile{unsrt.cbx}[2024/06/05 v0.1 Foad's citation style]
 
-\RequireCitationStyle{numeric}
+            \RequireCitationStyle{numeric}
 
-\endinput
-    \end{filecontents}
+            \endinput
+        \end{filecontents}
+    }
     \usepackage[backend=biber, style=unsrt, sorting=none, maxcitenames=50]{biblatex}
     \setlength{\bibitemsep}{0pt}
     \setlength{\biblabelsep}{0pt}
