@@ -1684,11 +1684,14 @@ space before arrow={0.2ex},
 \DeclareMathOperator{\oldjj}{\tmpjjj}
 \newcommand{\jjj}{{\oldjj}}
 \let\Im\relax
-\DeclareMathOperator{\Im}{Im}
-\newcommand{\pIm}[1]{\Im\l#1\r}
-\let\Re\relax
-\DeclareMathOperator{\Re}{Re}
-\newcommand{\pRe}[1]{\Re\l#1\r}
+\let\altoldIm\Im
+\newcommand{\altIm}[1]{\altoldIm\l#1\r}
+\DeclareMathOperator{\oldIm}{Im}
+\newcommand{\Im}[1]{\oldIm\l#1\r}
+\let\altoldRe\Re
+\newcommand{\altRe}[1]{\altoldRe\l#1\r}
+\DeclareMathOperator{\oldRe}{Re}
+\renewcommand{\Re}[1]{\oldRe\l#1\r}
 %% Hats
 \newcommand{\arc}[1]{\mathpalette\arc@arc{#1}\!}
 \newcommand{\arc@arc}[2]{
