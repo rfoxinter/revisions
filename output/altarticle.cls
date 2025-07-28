@@ -1683,9 +1683,8 @@ space before arrow={0.2ex},
 \DeclareMathSymbol{\tmpjjj}{\mathalpha}{letters}{"11}
 \DeclareMathOperator{\oldjj}{\tmpjjj}
 \newcommand{\jjj}{{\oldjj}}
-\let\Im\relax
 \let\altoldIm\Im
-\newcommand{\altIm}[1]{\altoldIm\l#1\r}
+\renewcommand{\altIm}[1]{\altoldIm\l#1\r}
 \DeclareMathOperator{\oldIm}{Im}
 \newcommand{\Im}[1]{\oldIm\l#1\r}
 \let\altoldRe\Re
