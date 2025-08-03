@@ -72,7 +72,9 @@
 
 %%% Bibliography
 \ifaltarticle@bibliography
-    \IfFileExists{unsrt.bbx}{}{
+    \newif\ifaltarticle@bibliographyfiles
+    \IfFileExists{unsrt.bbx}{\altarticle@bibliographyfilesfalse}{\altarticle@bibliographyfilestrue}
+    \ifaltarticle@bibliographyfiles
         \begin{filecontents}{unsrt.bbx}
             \ProvidesFile{unsrt.bbx}[2025/02/02 Unsorted French Bibliography Style]
 
@@ -159,8 +161,9 @@
             \finentry
             }
         \end{filecontents}
-    }
-    \IfFileExists{unsrt.cbx}{}{
+    \fi
+    \IfFileExists{unsrt.cbx}{\altarticle@bibliographyfilesfalse}{\altarticle@bibliographyfilestrue}
+    \ifaltarticle@bibliographyfiles
         \begin{filecontents}{unsrt.cbx}
             \ProvidesFile{unsrt.cbx}[2024/06/05 v0.1 Foad's citation style]
 
@@ -168,7 +171,7 @@
 
             \endinput
         \end{filecontents}
-    }
+    \fi
     \usepackage[backend=biber, style=unsrt, sorting=none, maxcitenames=50]{biblatex}
     \setlength{\bibitemsep}{0pt}
     \setlength{\biblabelsep}{0pt}
@@ -1684,9 +1687,9 @@ space before arrow={0.2ex},
 \DeclareMathOperator{\oldjj}{\tmpjjj}
 \newcommand{\jjj}{{\oldjj}}
 \let\altoldIm\Im
-\renewcommand{\altIm}[1]{\altoldIm\l#1\r}
+\newcommand{\altIm}[1]{\altoldIm\l#1\r}
 \DeclareMathOperator{\oldIm}{Im}
-\newcommand{\Im}[1]{\oldIm\l#1\r}
+\renewcommand{\Im}[1]{\oldIm\l#1\r}
 \let\altoldRe\Re
 \newcommand{\altRe}[1]{\altoldRe\l#1\r}
 \DeclareMathOperator{\oldRe}{Re}
