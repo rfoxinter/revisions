@@ -1836,11 +1836,13 @@ space before arrow={0.2ex},
 \newcommand\edeg[2]{\left[#1{:}#2\right]}
 \newcommand\sdeg[2]{\left[#1{:}#2\right]_{\text{s}}}
 \newcommand\ideg[2]{\left[#1{:}#2\right]_{\text{i}}}
-\newcommand\ideg[2]{\left[#1{:}#2\right]_{\text{pi}}}
+\newcommand\pideg[2]{\left[#1{:}#2\right]_{\text{pi}}}
 \DeclareMathOperator{\olddegsep}{deg\,sep}
 \newcommand{\degsep}[2][]{\olddegsep_{#1}\l#2\r}
 \DeclareMathOperator{\olddegins}{deg\,ins}
-\newcommand{\degsep}[2][]{\olddegins_{#1}\l#2\r}
+\newcommand{\degins}[2][]{\olddegins_{#1}\l#2\r}
+\DeclareMathOperator{\olddegpi}{deg\,p{.}i{.}}
+\newcommand{\degpi}[2][]{\olddegpi_{#1}\l#2\r}
 %% Hats
 \newcommand{\arc}[1]{\mathpalette\arc@arc{#1}\!}
 \newcommand{\arc@arc}[2]{
