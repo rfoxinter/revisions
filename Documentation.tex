@@ -14,8 +14,7 @@
 \usepackage{output/htmlpreambule}
 \usepackage{output/tools}
 \usepackage[bigopsymb]{output/bigoperators}
-\usepackage{output/analyse}
-\usepackage{output/sffont,output/matrices,output/al,output/hats,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/polynomes,output/probas,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
+\usepackage{output/matrices,output/al,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/galois,output/hats,output/polynomes,output/probas,output/sffont,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
 \makeatother
@@ -190,7 +189,7 @@ Il est possibles de changer les polices de caractères/symboles en important des
 
 Il est possible de redéfinir le $l$ en $\oldl$ avec \mintinline{latex}?\usepackage[noell]{premabule}?.
 
-Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de placer dans le préambule\footnote{Cette commande est déjà définie dans \hyperlink{section.21}{\texttt{Usuelles.sty}}}:
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de placer dans le préambule\footnote{Cette commande est déjà définie dans \hyperlink{section.22}{\texttt{Usuelles.sty}}}:
 \vspace{-\abovedisplayskip}\begin{minted}{latex}
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
@@ -390,7 +389,7 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\tr{u}}
 \mcmd{\oldmat}
 \mcmd[\footnotemark]{\almat{u}{\mathcal{B}}{}}
-\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.12}{\texttt{Matrices.sty}}}
+\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.13}{\texttt{Matrices.sty}}}
 \mcmd{\almat{u}{\mathcal{B}}{\mathcal{C}}}
 \mcmd{\oldsl}
 \mcmd{\sl{E}}
@@ -415,7 +414,7 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\appl{\id}{E}{E}{x}{x}}
 \mcmd{\nappl{E}{\mathbb{R}}{x}{l(x)}}
 \hsection{Analyse.sty}
-Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
+Le package \hyperlink{section.19}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
 
 \vspace{0.5cm}
 
@@ -520,7 +519,7 @@ Il est possible de changer cette option au cours du document en utilisant la com
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\varphi?}
 \mcmd{\legendre{-1}{p}}
 \hsection{BigOperators.sty}
-Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{BigOperators.sty}.
+Le package \hyperlink{section.19}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{BigOperators.sty}.
 
 \vspace{0.5cm}
 
@@ -701,6 +700,21 @@ Ce package redéfinit les notes de bas de pages. Les numéros des notes sont mis
     \end{center}
 \end{minipage}
 \hfill\vline\hrule
+\hsection{Galois.sty}
+\mhd
+\mcmd{\oldgal}
+\mcmd{\gal{\mathbb{L}}{\mathbb{K}}}
+\mcmd{\dec_{\mathbb{K}}(P)}
+\mcmd{\edeg{\mathbb{L}}{\mathbb{K}}}
+\mcmd{\sdeg{\mathbb{L}}{\mathbb{K}}}
+\mcmd{\ideg{\mathbb{L}}{\mathbb{K}}}
+\mcmd{\pideg{\mathbb{L}}{\mathbb{K}}}
+\mcmd{\olddegsep}
+\mcmd{\degsep[\mathbb{K}]{\alpha}}
+\mcmd{\olddegins}
+\mcmd{\degins[\mathbb{K}]{\alpha}}
+\mcmd{\olddegpi}
+\mcmd{\degpi[\mathbb{K}]{\alpha}}
 \hsection{Hats.sty}
 Ce package importe automatiquement le package \href{https://ctan.org/pkg/graphics}{\color{black}\texttt{graphics}}.
 \vspace{0.5cm}
@@ -710,7 +724,7 @@ Ce package importe automatiquement le package \href{https://ctan.org/pkg/graphic
 \mcmd{\hhat{AB}}
 \mcmd{\hhat{ABCDEFFGH}}
 \hsection{Matrices.sty}
-Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+Le package \hyperlink{section.19}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
 
 \vspace{0.5cm}
 
@@ -1034,7 +1048,7 @@ Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 \mcmd{\ath{x}}
 \mcmd{\ath[']{x}}
 \hsection{Usuelles.sty}
-Le package \hyperlink{section.18}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Usuelles.sty}.
+Le package \hyperlink{section.19}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Usuelles.sty}.
 
 \vspace{0.5cm}
 
