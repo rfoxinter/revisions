@@ -8,7 +8,7 @@
 \DeclareStringOption[french]{babellanguage}
 \DeclareBoolOption{unslantgreek}
 \DeclareBoolOption{defaulttheorems}
-\DeclareBoolOption[false]{bibliography}
+\DeclareBoolOption{bibliography}
 \DeclareDefaultOption{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessKeyvalOptions*
 \PassOptionsToPackage{\altarticle@babellanguage}{babel}
@@ -71,107 +71,108 @@
 
 
 %%% Bibliography
+\newif\ifaltarticle@bibliographyfiles
+\altarticle@bibliographyfilesfalse
+\ifaltarticle@bibliography\IfFileExists{unsrt.bbx}{\altarticle@bibliographyfilesfalse}{\altarticle@bibliographyfilestrue}\fi
+\ifaltarticle@bibliographyfiles
+    \begin{filecontents}{unsrt.bbx}
+        \ProvidesFile{unsrt.bbx}[2025/02/02 Unsorted French Bibliography Style]
+
+        \RequireBibliographyStyle{numeric}
+
+        \DeclareBibliographyOption[boolean]{ordrecitation}[true]{% Option to enforce citation order
+        \ifstrequal{#1}{true}
+            {\ExecuteBibliographyOptions{sorting=none}}
+            {}}
+
+        % French localization
+        \DefineBibliographyStrings{french}{
+        urlseen = {Consulté le},
+        pages = {p.},
+        editor = {dir.},
+        editors = {dirs.},
+        byeditor = {sous la direction de},
+        edition = {édition},
+        volume = {volume},
+        number = {n	extdegree},
+        in = {Dans},
+        }
+
+        % Adjust citation label format to remove brackets
+        \DeclareFieldFormat{labelnumber}{#1}
+
+        % Order of bibliography fields
+        \DeclareBibliographyDriver{book}{%
+        \usebibmacro{bibindex}%
+        \usebibmacro{begentry}%
+        \printnames{author}%
+        \setunit{\addcolon\space}%
+        \newblock
+        \printfield{title}%
+        \setunit{\addcomma\space}%
+        \printfield{edition}%
+        \setunit{\addcomma\space}%
+        \printfield{series}%
+        \setunit{\addcomma\space}%
+        \printlist{publisher}%
+        \setunit{\addcomma\space}%
+        \printfield{year}%
+        \setunit{\addperiod}%
+        \finentry
+        }
+
+        \DeclareBibliographyDriver{article}{%
+        \usebibmacro{bibindex}%
+        \usebibmacro{begentry}%
+        \printnames{author}%
+        \setunit{\addspace}%
+        \newblock
+        \printfield{title}%
+        \setunit{\addperiod\space}%
+        \printfield{journaltitle}%
+        \setunit{\addcomma\space}%
+        \printfield{volume}%
+        \setunit{\addcomma\space}%
+        \printfield{number}%
+        \setunit{\addcomma\space}%
+        \printfield{pages}%
+        \setunit{\addcomma\space}%
+        \printfield{year}%
+        \setunit{\addperiod}%
+        \finentry
+        }
+
+        \DeclareBibliographyDriver{misc}{%
+        \usebibmacro{bibindex}%
+        \usebibmacro{begentry}%
+        \printnames{author}%
+        \setunit{\addcolon\space}%
+        \newblock
+        \printfield{title}%
+        \setunit{\addcomma\space}%
+        \printfield{howpublished}%
+        \setunit{\addcomma\space}%
+        \printfield{note}%
+        \setunit{\addcomma\space}%
+        \printfield{url}%
+        \setunit{\addcomma\space}%
+        \printfield{year}%
+        \setunit{\addperiod}%
+        \finentry
+        }
+    \end{filecontents}
+\fi
+\ifaltarticle@bibliography\IfFileExists{unsrt.cbx}{\altarticle@bibliographyfilesfalse}{\altarticle@bibliographyfilestrue}\fi
+\ifaltarticle@bibliographyfiles
+    \begin{filecontents}{unsrt.cbx}
+        \ProvidesFile{unsrt.cbx}[2024/06/05 v0.1 Foad's citation style]
+
+        \RequireCitationStyle{numeric}
+
+        \endinput
+    \end{filecontents}
+\fi
 \ifaltarticle@bibliography
-    \newif\ifaltarticle@bibliographyfiles
-    \IfFileExists{unsrt.bbx}{\altarticle@bibliographyfilesfalse}{\altarticle@bibliographyfilestrue}
-    \ifaltarticle@bibliographyfiles
-        \begin{filecontents}{unsrt.bbx}
-            \ProvidesFile{unsrt.bbx}[2025/02/02 Unsorted French Bibliography Style]
-
-            \RequireBibliographyStyle{numeric}
-
-            \DeclareBibliographyOption[boolean]{ordrecitation}[true]{% Option to enforce citation order
-            \ifstrequal{#1}{true}
-                {\ExecuteBibliographyOptions{sorting=none}}
-                {}}
-
-            % French localization
-            \DefineBibliographyStrings{french}{
-            urlseen = {Consulté le},
-            pages = {p.},
-            editor = {dir.},
-            editors = {dirs.},
-            byeditor = {sous la direction de},
-            edition = {édition},
-            volume = {volume},
-            number = {n	extdegree},
-            in = {Dans},
-            }
-
-            % Adjust citation label format to remove brackets
-            \DeclareFieldFormat{labelnumber}{#1}
-
-            % Order of bibliography fields
-            \DeclareBibliographyDriver{book}{%
-            \usebibmacro{bibindex}%
-            \usebibmacro{begentry}%
-            \printnames{author}%
-            \setunit{\addcolon\space}%
-            \newblock
-            \printfield{title}%
-            \setunit{\addcomma\space}%
-            \printfield{edition}%
-            \setunit{\addcomma\space}%
-            \printfield{series}%
-            \setunit{\addcomma\space}%
-            \printlist{publisher}%
-            \setunit{\addcomma\space}%
-            \printfield{year}%
-            \setunit{\addperiod}%
-            \finentry
-            }
-
-            \DeclareBibliographyDriver{article}{%
-            \usebibmacro{bibindex}%
-            \usebibmacro{begentry}%
-            \printnames{author}%
-            \setunit{\addspace}%
-            \newblock
-            \printfield{title}%
-            \setunit{\addperiod\space}%
-            \printfield{journaltitle}%
-            \setunit{\addcomma\space}%
-            \printfield{volume}%
-            \setunit{\addcomma\space}%
-            \printfield{number}%
-            \setunit{\addcomma\space}%
-            \printfield{pages}%
-            \setunit{\addcomma\space}%
-            \printfield{year}%
-            \setunit{\addperiod}%
-            \finentry
-            }
-
-            \DeclareBibliographyDriver{misc}{%
-            \usebibmacro{bibindex}%
-            \usebibmacro{begentry}%
-            \printnames{author}%
-            \setunit{\addcolon\space}%
-            \newblock
-            \printfield{title}%
-            \setunit{\addcomma\space}%
-            \printfield{howpublished}%
-            \setunit{\addcomma\space}%
-            \printfield{note}%
-            \setunit{\addcomma\space}%
-            \printfield{url}%
-            \setunit{\addcomma\space}%
-            \printfield{year}%
-            \setunit{\addperiod}%
-            \finentry
-            }
-        \end{filecontents}
-    \fi
-    \IfFileExists{unsrt.cbx}{\altarticle@bibliographyfilesfalse}{\altarticle@bibliographyfilestrue}
-    \ifaltarticle@bibliographyfiles
-        \begin{filecontents}{unsrt.cbx}
-            \ProvidesFile{unsrt.cbx}[2024/06/05 v0.1 Foad's citation style]
-
-            \RequireCitationStyle{numeric}
-
-            \endinput
-        \end{filecontents}
-    \fi
     \usepackage[backend=biber, style=unsrt, sorting=none, maxcitenames=50]{biblatex}
     \setlength{\bibitemsep}{0pt}
     \setlength{\biblabelsep}{0pt}
@@ -325,7 +326,7 @@
 
 
 
-%%% Math redefinitions
+%%% Math (re)definitions
 %% Define l to \ell
 \mathcode`l="8000
 \begingroup
@@ -402,7 +403,7 @@
 \let\phi\varphi
 \let\varphi\oldphi
 \let\oldphi\relax
-%% O operators
+%% Circled operators
 \let\oplus\varoplus
 \let\otimes\varotimes
 %% Under/Overbrace
@@ -417,6 +418,140 @@
 \newenvironment{tflalign*}
     {\let\olddisplaystyle\displaystyle\let\displaystyle\textstyle\csname flalign*\endcsname}
     {\endflalign}
+%% Letter styles
+% mathbb
+\def\bbA{\mathbb{A}}
+\def\bbB{\mathbb{B}}
+\def\bbC{\mathbb{C}}
+\def\bbD{\mathbb{D}}
+\def\bbE{\mathbb{E}}
+\def\bbF{\mathbb{F}}
+\def\bbG{\mathbb{G}}
+\def\bbH{\mathbb{H}}
+\def\bbI{\mathbb{I}}
+\def\bbJ{\mathbb{J}}
+\def\bbK{\mathbb{K}}
+\def\bbL{\mathbb{L}}
+\def\bbM{\mathbb{M}}
+\def\bbN{\mathbb{N}}
+\def\bbO{\mathbb{O}}
+\def\bbP{\mathbb{P}}
+\def\bbQ{\mathbb{Q}}
+\def\bbR{\mathbb{R}}
+\def\bbS{\mathbb{S}}
+\def\bbT{\mathbb{T}}
+\def\bbU{\mathbb{U}}
+\def\bbV{\mathbb{V}}
+\def\bbW{\mathbb{W}}
+\def\bbX{\mathbb{X}}
+\def\bbY{\mathbb{Y}}
+\def\bbZ{\mathbb{Z}}
+\def\bba{\mathbb{a}}
+\def\bbb{\mathbb{b}}
+\def\bbc{\mathbb{c}}
+\def\bbd{\mathbb{d}}
+\def\bbe{\mathbb{e}}
+\def\bbf{\mathbb{f}}
+\def\bbg{\mathbb{g}}
+\def\bbh{\mathbb{h}}
+\def\bbi{\mathbb{i}}
+\def\bbj{\mathbb{j}}
+\def\bbk{\mathbb{k}}
+\def\bbl{\mathbb{l}}
+\def\bbm{\mathbb{m}}
+\def\bbn{\mathbb{n}}
+\def\bbo{\mathbb{o}}
+\def\bbp{\mathbb{p}}
+\def\bbq{\mathbb{q}}
+\def\bbr{\mathbb{r}}
+\def\bbs{\mathbb{s}}
+\def\bbt{\mathbb{t}}
+\def\bbu{\mathbb{u}}
+\def\bbv{\mathbb{v}}
+\def\bbw{\mathbb{w}}
+\def\bbx{\mathbb{x}}
+\def\bby{\mathbb{y}}
+\def\bbz{\mathbb{z}}
+% mathcal
+\def\calA{\mathcal{A}}
+\def\calB{\mathcal{B}}
+\def\calC{\mathcal{C}}
+\def\calD{\mathcal{D}}
+\def\calE{\mathcal{E}}
+\def\calF{\mathcal{F}}
+\def\calG{\mathcal{G}}
+\def\calH{\mathcal{H}}
+\def\calI{\mathcal{I}}
+\def\calJ{\mathcal{J}}
+\def\calK{\mathcal{K}}
+\def\calL{\mathcal{L}}
+\def\calM{\mathcal{M}}
+\def\calN{\mathcal{N}}
+\def\calO{\mathcal{O}}
+\def\calP{\mathcal{P}}
+\def\calQ{\mathcal{Q}}
+\def\calR{\mathcal{R}}
+\def\calS{\mathcal{S}}
+\def\calT{\mathcal{T}}
+\def\calU{\mathcal{U}}
+\def\calV{\mathcal{V}}
+\def\calW{\mathcal{W}}
+\def\calX{\mathcal{X}}
+\def\calY{\mathcal{Y}}
+\def\calZ{\mathcal{Z}}
+% mathfrak
+\def\frakA{\mathfrak{A}}
+\def\frakB{\mathfrak{B}}
+\def\frakC{\mathfrak{C}}
+\def\frakD{\mathfrak{D}}
+\def\frakE{\mathfrak{E}}
+\def\frakF{\mathfrak{F}}
+\def\frakG{\mathfrak{G}}
+\def\frakH{\mathfrak{H}}
+\def\frakI{\mathfrak{I}}
+\def\frakJ{\mathfrak{J}}
+\def\frakK{\mathfrak{K}}
+\def\frakL{\mathfrak{L}}
+\def\frakM{\mathfrak{M}}
+\def\frakN{\mathfrak{N}}
+\def\frakO{\mathfrak{O}}
+\def\frakP{\mathfrak{P}}
+\def\frakQ{\mathfrak{Q}}
+\def\frakR{\mathfrak{R}}
+\def\frakS{\mathfrak{S}}
+\def\frakT{\mathfrak{T}}
+\def\frakU{\mathfrak{U}}
+\def\frakV{\mathfrak{V}}
+\def\frakW{\mathfrak{W}}
+\def\frakX{\mathfrak{X}}
+\def\frakY{\mathfrak{Y}}
+\def\frakZ{\mathfrak{Z}}
+\def\fraka{\mathfrak{a}}
+\def\frakb{\mathfrak{b}}
+\def\frakc{\mathfrak{c}}
+\def\frakd{\mathfrak{d}}
+\def\frake{\mathfrak{e}}
+\def\frakf{\mathfrak{f}}
+\def\frakg{\mathfrak{g}}
+\def\frakh{\mathfrak{h}}
+\def\fraki{\mathfrak{i}}
+\def\frakj{\mathfrak{j}}
+\def\frakk{\mathfrak{k}}
+\def\frakl{\mathfrak{l}}
+\def\frakm{\mathfrak{m}}
+\def\frakn{\mathfrak{n}}
+\def\frako{\mathfrak{o}}
+\def\frakp{\mathfrak{p}}
+\def\frakq{\mathfrak{q}}
+\def\frakr{\mathfrak{r}}
+\def\fraks{\mathfrak{s}}
+\def\frakt{\mathfrak{t}}
+\def\fraku{\mathfrak{u}}
+\def\frakv{\mathfrak{v}}
+\def\frakw{\mathfrak{w}}
+\def\frakx{\mathfrak{x}}
+\def\fraky{\mathfrak{y}}
+\def\frakz{\mathfrak{z}}
 
 
 
@@ -1694,6 +1829,18 @@ space before arrow={0.2ex},
 \newcommand{\altRe}[1]{\altoldRe\l#1\r}
 \DeclareMathOperator{\oldRe}{Re}
 \renewcommand{\Re}[1]{\oldRe\l#1\r}
+%% Galois
+\DeclareMathOperator{\oldgal}{Gal}
+\newcommand{\gal}[2]{\oldgal\l#1/#2\r}
+\DeclareMathOperator{\dec}{D}
+\overline\newcommand\edeg[2]{\left[#1{:}#2\right]}
+\newcommand\sdeg[2]{\left[#1{:}#2\right]_{\text{s}}}
+\newcommand\ideg[2]{\left[#1{:}#2\right]_{\text{i}}}
+\newcommand\ideg[2]{\left[#1{:}#2\right]_{\text{pi}}}
+\DeclareMathOperator{\olddegsep}{deg\,sep}
+\newcommand{\degsep}[2][]{\olddegsep_{#1}\l#2\r}
+\DeclareMathOperator{\olddegins}{deg\,ins}
+\newcommand{\degsep}[2][]{\olddegins_{#1}\l#2\r}
 %% Hats
 \newcommand{\arc}[1]{\mathpalette\arc@arc{#1}\!}
 \newcommand{\arc@arc}[2]{
