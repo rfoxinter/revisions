@@ -1833,7 +1833,7 @@ space before arrow={0.2ex},
 \DeclareMathOperator{\oldgal}{Gal}
 \newcommand{\gal}[2]{\oldgal\l#1/#2\r}
 \DeclareMathOperator{\dec}{D}
-\overline\newcommand\edeg[2]{\left[#1{:}#2\right]}
+\newcommand\edeg[2]{\left[#1{:}#2\right]}
 \newcommand\sdeg[2]{\left[#1{:}#2\right]_{\text{s}}}
 \newcommand\ideg[2]{\left[#1{:}#2\right]_{\text{i}}}
 \newcommand\ideg[2]{\left[#1{:}#2\right]_{\text{pi}}}
