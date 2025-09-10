@@ -11,10 +11,15 @@
 \hypersetup{pdftitle=Documentation}
 \newcommand{\tikzlg}{\href{https://ctan.org/pkg/tikz}{\color{black}Ti\textit{k}Z}}
 \newcommand{\amslg}{\href{https://ctan.org/pkg/amsmath}{\color{black}\ensuremath{\mathcal{A}\kern-.1667em\lower.5ex\hbox{\ensuremath{\mathcal{M}}}\kern-.125em\mathcal{S}}}}
-\usepackage{output/htmlpreambule}
+\usepackage{dsfont}
+\makeatletter
+\DeclareMathAlphabet{\mathdds}{U}{\ds@whichfont}{m}{n}
+\makeatother
+\usepackage[amsbb]{output/htmlpreambule}
+\usepackage{dsft,bbmt}
 \usepackage{output/tools}
 \usepackage[bigopsymb]{output/bigoperators}
-\usepackage{output/matrices,output/al,output/analyse,output/arithmetique,output/complexes,output/dsft,output/equivalents,output/galois,output/hats,output/polynomes,output/probas,output/sffont,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
+\usepackage{output/matrices,output/al,output/analyse,output/arithmetique,output/complexes,output/equivalents,output/galois,output/hats,output/polynomes,output/probas,output/sffont,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
 \makeatother
@@ -323,10 +328,24 @@ Un exemple de fichier python générant un tel fichier est disponible à l'adres
 \mcmd[\footnotemark]{\overrightarrow{AB}}
 \footnotetext{Le résultat est le même qu'avec \mintinline{latexmath}?\vec?}
 \mmcmd[\footnotemark]{\fakebold}{Permet de produire des caractères mathématiques en gras}
-\footnotetext{Il est par exemple possible de produire $\fakebold{\mathbb{R}}$ avec \mintinline{latex}?$\fakebold{\mathbb{R}}$?\\Il est recommandé de n'utiliser cette commande que lorsque les caractères en gras ne sont pas disponibles avec \mintinline{latex}?\boldmath?\\Exemple de comparaison \mintinline{latex}?\boldmath? - \mintinline{latexmath}?\fakebold? avec le caractère normal: {\boldmath$\mathcal M$}$\fakebold{\mathcal M}$$\mathcal M$}
+\footnotetext{Il est par exemple possible de produire $\fakebold{\amsbb{R}}$ avec \mintinline{latex}?$\fakebold{\amsbb{R}}$?\\Il est recommandé de n'utiliser cette commande que lorsque les caractères en gras ne sont pas disponibles avec \mintinline{latex}?\boldmath?\\Exemples de comparaison \mintinline{latex}?\boldmath? - \mintinline{latexmath}?\fakebold? avec le caractère normal: {\boldmath$\mathcal M$}$\fakebold{\mathcal M}$$\mathcal M$; {\boldmath$\mathbb R$}$\fakebold{\mathbb R}$$\mathbb R$}
+\mmcmd[\footnotemark]{\mathbb{CQRhkl1}}{$\mathbbm{CQRhkl1}$}
+\footnotetext{Correspond à une version en type 1 de la police \texttt{bbm}\\La version de l'\amslg{} peut être rétablie avec \mintinline{latex}?\usepackage[amsbb]{premabule}?}
+\mcmd[\footnotemark]{\amsbb{CQR}\Bbbk}
+\footnotetext{Correspond à la version de l'\amslg{} de la commande \mintinline{latexmath}?\mathbb?\\Cette commande n'est plus disponible avec \mintinline{latex}?\usepackage[amsbb]{premabule}?}
+\mcmd[\footnotemark]{\varphi}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\phi?}
+\mcmd[\footnotemark]{\phi}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\varphi?}
+\pagebreak
+\hrule
+\mcmd[\footnotemark]{\varepsilon}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\epsilon?}
+\mcmd[\footnotemark]{\epsilon}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\varepsilon?}
 \subsection{L'option {\color{namecolour}\texttt{nofont}}}
 Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n'a pas de commande \mintinline{latexmath}?\llbracket? et\linebreak\mintinline{latexmath}?\rrbracket?, il faut mettre les commandes \mintinline{latex}?\newcommand{\llbracket}{\commandellb}? et \mintinline{latex}?\newcommand{\rrbracket}{\commanderrb}? avant \mintinline{latex}?\usepackage{preambule}?. Dans ces commandes, \mintinline{latex}?\commandellb? correspond à la commande pour obtenir $\llbracket$ et \mintinline{latex}?\commanderrb? correspond à la commande pour obtenir $\rrbracket$. Ces deux commandes doivent être remplacées par << \texttt{.} >> si la police utilisée n'a pas ce caractère : \mintinline{latex}?\newcommand{\llbracket}{.}? (idem pour {\color{keycolour}\texttt{\textbackslash llbracket}}).
-\pagebreak\subsection{Commandes de \texttt{Preambule.sty}}
+\subsection{Commandes de \texttt{Preambule.sty}}
 \mhd
 \vline\hfill
 \begin{minipage}{0.475\linewidth}
@@ -513,10 +532,6 @@ Il est possible de changer cette option au cours du document en utilisant la com
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\mid?}
 \mcmd{\mmod{n}}
 \mcmd{\cgr{a}{b}{n}}
-\mcmd[\footnotemark]{\oldphi}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\phi?}
-\mcmd[\footnotemark]{\phi}
-\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\varphi?}
 \mcmd{\legendre{-1}{p}}
 \hsection{BigOperators.sty}
 Le package \hyperlink{section.19}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{BigOperators.sty}.
@@ -595,13 +610,17 @@ Il est possible de changer cette option au cours du document en utilisant la com
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\Re?}
 \mcmd{\altRe{z}}
 \hsection{Dsft.sty}
+
+\textcolor{red}{Ce package n'est plus disponible dans ce dépôt.}
+
 Ce package remplace le $\mathdds 1$ du package \href{https://www.ctan.org/pkg/doublestroke}{\color{black}\texttt{doublestroke}} et introduit quelques symboles.
+
+\textcolor{red}{Il est recommandé d'utiliser \mintinline{latexmath}?\mathbb{1}? pour obtenir $\mathbb 1$.}
 
 \vspace{0.5cm}
 
 \mhd
-\mcmd{\mathdds{1}}
-\mcmd{\1{E}(x)}
+\mcmd{\mathds{1}}
 \mcmd{\square}
 \mcmd{\star}
 \mcmd{\triangle}
@@ -945,7 +964,7 @@ Comparaison entre \texttt{cmssp} et \texttt{cmss} :
 \mcmd{\oldord}
 \mcmd{\ord{x}}
 \mcmd{\ord[G]{x}}
-\mcmd{\car{\Bbbk}}
+\mcmd{\car{\mathbb{k}}}
 \hsection{Tables.sty}
 Ce package sert à mettre en forme des tables en latex grâce à \tikzlg{}.
 

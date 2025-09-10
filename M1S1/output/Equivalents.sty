@@ -1,0 +1,42 @@
+\newcommand{\equivo}[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\oargI{\operatorname{o}}
+    \else
+    \def\oargI{{\underset{\scriptscriptstyle{#1}}{\operatorname{o}}}}
+    \fi\oargI\l#2\r
+}
+\newcommand{\equivO}[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\OargI{\operatorname{O}}
+    \else
+    \def\OargI{{\underset{\scriptscriptstyle{#1}}{\operatorname{O}}}}
+    \fi\OargI\l#2\r
+}
+\newcommand{\equivTh}[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\ThargI{\operatorname{\oldTheta}}
+    \else
+    \def\ThargI{{\underset{\scriptscriptstyle{#1}}{\operatorname{\oldTheta}}}}
+    \fi\ThargI\l#2\r
+}
+\newcommand{\equivOm}[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\OmargI{\operatorname{\oldOmega}}
+    \else
+    \def\OmargI{{\underset{\scriptscriptstyle{#1}}{\operatorname{\oldOmega}}}}
+    \fi\OmargI\l#2\r
+}
+\newcommand{\equiveq}[3][]{
+    \if\relax\detokenize{#1}\relax
+        \def\eqargI{\sim}
+    \else
+    \def\eqargI{\underset{\scriptscriptstyle{#1}}{\sim}}
+    \fi{#2}\eqargI#3
+}
+\newcommand{\equiveg}[3][]{
+    \if\relax\detokenize{#1}\relax
+        \def\egargI{=}
+    \else
+    \def\egargI{\underset{\scriptscriptstyle{#1}}{=}}
+    \fi{#2}\egargI#3
+}

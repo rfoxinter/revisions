@@ -23,6 +23,11 @@
 \usepackage{fix-cm}
 \usepackage{geometry}
 \usepackage{amsmath, amsfonts, amssymb, stmaryrd}
+\let\@BeginDoc\AtBeginDocument
+\def\AtBeginDocument#1{\relax#1\relax}
+\usepackage[limits]{cmupint}
+\let\upilimits@\relax
+\let\AtBeginDocument\@BeginDoc
 \SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
 \PassOptionsToPackage{obeyspaces,hyphens}{url}
 \usepackage{hyperref}

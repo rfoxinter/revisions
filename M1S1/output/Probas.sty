@@ -1,0 +1,31 @@
+\newcommand\p[2][]{
+    \if\relax\detokenize{#2}\relax
+        \def\pargII{}
+    \else
+        \def\pargII{\l#2\r}
+    \fi\mathbb P_{#1}\pargII
+}
+\let\Omega\varOmega
+\newcommand{\sq}{\;\middle|\;}
+\newcommand\bor{\mathcal B}
+\newcommand{\esp}[2][]{\mathbb E_{#1}\l#2\r}
+\newcommand{\var}[1]{\mathbb V\l#1\r}
+\newcommand{\ect}[1]{\sigma\l#1\r}
+\DeclareMathOperator{\oldcov}{cov}
+\newcommand{\cov}[2]{\oldcov\l#1,#2\r}
+\newcommand{\indep}{\perp\!\!\!\perp}
+\newcommand{\unif}[1]{\mathcal U\l#1\r}
+\newcommand{\bin}[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\binargI{}
+    \else
+        \def\binargI{#1,}
+    \fi\mathcal B\l\binargI#2\r
+}
+\newcommand{\geom}[1]{\mathcal G\l#1\r}
+\newcommand{\pasc}[2]{\mathcal P\l#1,#2\r}
+\newcommand{\nbin}[2]{\mathcal J\l#1,#2\r}
+\newcommand{\hypg}[3]{\mathcal H\l#1,#2,#3\r}
+\newcommand{\poiss}[1]{\mathcal P\l#1\r}
+\newcommand{\expon}[1]{\mathcal E\l#1\r}
+\newcommand{\normal}[2]{\mathcal N\l#1,#2\r}

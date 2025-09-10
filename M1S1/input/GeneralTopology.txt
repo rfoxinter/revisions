@@ -1,0 +1,19 @@
+Analyse anancée -- General topology
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al,bigoperators}\togglebigoppar
+$\l X,\mathcal T\r$ is a topological vector space;;$X$ is a vector space such that $\nappl{X\times X}X{\l x,y\r}{x+y}$ and $\nappl{\mathbb K\times X}X{\l \lambda,x\r}{\lambda x}$ are continuous and all singletons are closed
+$A$ is a neighbourhood of $u\in X$;;There exists an open set $U$ such that $u\in U\subset A$
+Neighbourhood basis of $u\in X$;;$\mathcal B_u\subset\mathcal T$ such that for all neighbourhood $A$ of $u$, there exists $U\in\mathcal B_u$ such that $U\subset A$
+Basis for $X$;;$\bigcup{x\in X}{}{\mathcal B_x}$ with $\mathcal B_x$ a neighbourhood basis of $x$
+$\mathcal T$ is finer than $\mathcal S$\linebreak$\mathcal S$ is coarser than $\mathcal T$;;$\mathcal S\subset\mathcal T$
+$p$ is positively homogeneous;;$\forall t\in\mathbb R_+$, $p\l tu\r=tp\l u\r$
+$p$ is sub-additive;;$p\l u+v\r\leqslant p\l u\r+p\l v\r$
+$p$ is homogeneous;;$\forall t\in\mathbb K$, $p\l tu\r=\left|t\right|p\l u\r$
+$p$ is a semi-norm;;$p$ is positive, sub-additive and homogeneous
+$p$ is a norm;;$p$ is positive, sub-additive and homogeneous and $p\l u\r=0$ iff $u=0$
+Topology induced by a family semi-norms;;$\varnothing\in\mathcal T$, $X\in\mathcal T$ and $U\in\mathcal T$ if for all $u\in U$, there exists $n_1,\cdots,n_k$ and $r>0$ such that $u\in\bigcap{i=1}{k}{B_{p_{n_i}}\l u,r\r}\subset U$\linebreak\linebreak If each $p_n$ is separating then $\l X,\mathcal T\r$ is metrizable
+Initial topology on a non-empty set $X$ associated to $\l Y_i,\mathcal T_i,\phi_i\!:\!X\to Y_i\r$;;The coarsest topology on $X$ such that all of the $\phi_i$ are continuous
+Final topology on a non-empty set $X$ associated to $\l Z_i,\mathcal T_i,\phi_i\!:\!Z_i\to X\r$;;The finest topology on $X$ such that all of the $\phi_i$ are continuous
+Neighbourhood basis for a topology $\mathcal T$;;$\mathcal B\subset\mathcal P\l X\r$ such that for all $U\in\mathcal T\setminus\set\varnothing$, there exists $V\in\mathcal B$ such that $u\in V\subset U$\linebreak In particular, for each $u\in X$, there exists $V\in\mathcal B$ such that $u\in V$ and for all $V,V'\in\mathcal B$, if $u\in V\cap V'$, then there exists $W\in\mathcal B$ such that $u\in W\subset V\cap V'$\linebreak Conversly, if $\mathcal T\subset\mathcal P\l X\r$ and $\mathcal B$ and $\mathcal T$ verify the three previous properties, $\mathcal T$ is a topology
+Link between dense sets and neighbourhood bases;;If $X$ has a countable dense set then $X$ has a countable neighbourhood basis

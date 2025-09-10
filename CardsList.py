@@ -30,7 +30,7 @@ def list_f(folder):
             list_f(folder + '/' + sub_folder)
     cards = sorted(curr_cards) + cards
 list_f(fld)
-for i in range(len(cards)):
-    content += '\n' + cards[i] + '\n' + dt.fromtimestamp(g(cards[i])).strftime('%Y%m%d%H%M%S')
+for c in cards:
+    content += '\n./' + c.replace('./', '') + '\n' + dt.fromtimestamp(g(c)).strftime('%Y%m%d%H%M%S')
 f.write(content)
 f.close()

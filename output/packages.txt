@@ -3,9 +3,9 @@ Analyse.sty
 Arithmetique.sty
 BigOperators.sty
 Complexes.sty
-Dsft.sty
 Equivalents.sty
 Footnotes.sty
+Galois.sty
 Graphs.sty
 HTMLPreambule.sty
 Hats.sty
@@ -20,6 +20,3 @@ Tools.sty
 Topologie.sty
 Trigo.sty
 Usuelles.sty
-dsrm/dsrm.map
-dsrm/dsrm12.pfb
-dsrm/dsrm12.tfm

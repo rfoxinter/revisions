@@ -1,0 +1,90 @@
+\RequirePackage{tools}
+
+\newif\if@bornelimits\@bornelimitstrue
+\DeclareOption{bornelimits}{\@bornelimitsfalse}
+\newif\if@autobornelimits\@autobornelimitstrue
+\DeclareOption{autobornelimits}{\@autobornelimitsfalse}
+\newif\if@nolimlimits\@nolimlimitsfalse
+\DeclareOption{nolimlimits}{\@nolimlimitstrue}
+\newif\if@autolimlimits\@autolimlimitsfalse
+\DeclareOption{autolimlimits}{\@autolimlimitstrue}
+\DeclareOption*{}
+\ProcessOptions\relax
+\def\bornelimits{\nolimits}
+\if@bornelimits
+    \def\bornelimits{\limits}
+\fi
+\if@autobornelimits
+    \def\bornelimits{\nolimits}
+\fi
+\def\limlimits{\limits}
+\if@nolimlimits
+    \def\limlimits{\nolimits}
+\fi
+\if@autolimlimits
+    \def\limlimits{}
+\fi
+
+\newcommand{\togglebornelimits}{\comparestring{\bornelimits}{\limits}{\def\bornelimits{\nolimits}}{\def\bornelimits{\limits}}}
+\newcommand{\autobornelimits}{\def\bornelimits{}}
+\newcommand{\togglelimlimits}{\comparestring{\limlimits}{\limits}{\def\limlimits{\nolimits}}{\def\limlimits{\limits}}}
+\newcommand{\autolimlimits}{\def\limlimits{}}
+
+\let\oldmin\min
+\renewcommand\min[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\minargI{\oldmin}
+    \else
+        \def\minargI{\oldmin\bornelimits_{#1}}
+    \fi\minargI\l#2\r
+}
+\let\oldmax\max
+\renewcommand\max[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\maxargI{\oldmax}
+    \else
+        \def\maxargI{\oldmax\bornelimits_{#1}}
+    \fi\maxargI\l#2\r
+}
+\let\oldlim\lim
+\renewcommand\lim[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\limargI{\oldlim}
+    \else
+        \def\limargI{\oldlim\limlimits_{#1}}
+    \fi\limargI\l#2\r
+}
+\newcommand\limi[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\limiargI{\liminf}
+    \else
+        \def\limiargI{\liminf\limlimits_{#1}}
+    \fi\limiargI\l#2\r
+}
+\newcommand\lims[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\limsargI{\limsup}
+    \else
+        \def\limsargI{\limsup\limlimits_{#1}}
+    \fi\limsargI\l#2\r
+}
+\let\oldexp\exp
+\renewcommand\exp[2][]{\oldexp#1\l#2\r}
+\let\oldln\ln
+\renewcommand\ln[2][]{\oldln#1\l#2\r}
+\let\oldinf\inf
+\renewcommand\inf[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\infargI{\oldinf}
+    \else
+        \def\infargI{\oldinf\bornelimits_{#1}}
+    \fi\infargI\l#2\r
+}
+\let\oldsup\sup
+\renewcommand\sup[2][]{
+    \if\relax\detokenize{#1}\relax
+        \def\supargI{\oldsup}
+    \else
+        \def\supargI{\oldsup\bornelimits_{#1}}
+    \fi\supargI\l#2\r
+}

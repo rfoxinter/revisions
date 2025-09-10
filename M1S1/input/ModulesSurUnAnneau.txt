@@ -1,0 +1,15 @@
+Algèbre avancée -- Modules sur un anneau
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{structures,al,matrices,bigoperators}\togglebigoppar
+$A$-module;;Groupe abélien $\l M,+\r$ muni d'une application $A\times M\to M$ telle que\linebreak$a\l m+m'\r=am+am'$\linebreak$\l a+a'\r m=am+a'm$\linebreak$\l aa'\r m=a\l a'm\r$\linebreak$1_Am=m$
+Application linéaire entre $A$-modules;;$f\!:\!M\to N$ telle que\linebreak$f\l am\r=af\l m\r$\linebreak$f\l n+m\r=f\l n\r+f\l m\r$
+Structure de $\hom[A]{M,N}$;;$A$-module en posant $\l f+g\r\l m\r=f\l m\r+g\l m\r$
+Isomorphisme de $A$-modules;;$f\in\hom[A]{M,N}$ pour laquelle il existe $g\in\hom[A]{N,M}$ telle que $f\circ g=\id_M$ et $g\circ f=\id_N$
+Structure isomorphe à $\hom[A]{A^m,A^n}$;;$\mat nmA$ via l'image de la <<~base canonique~>>
+Sous-module;;Sous-groupe stable par l'action de l'anneau
+Module $M/N$;;Le groupe quotient d'un $A$-module par un sous-module peut être muni d'une unique structure de $A$-module qui rend $\pi\!:\!M\to M/N$ $A$-linéaire
+PU du quotient;;Si $M$ et $P$ sont deux modules, et $N$ est un sous-module de $M$, soit $f\!:\!M\to P$ une application $A$-linéaire telle que $N\subset\ker f$ alors il existe une unique application $A$-linéaire $\overline f$ telle que $f=\overline f\circ\pi$
+Premier théorème d'isomorphisme;;$\overline f\!:\!M/\ker f\to\im f$ est un isomorphisme de $A$-modules
+$f\!:\!M\to N$\linebreak$\coker f$;;$N/\im f$
+PU de la somme directe de $A$-modules;;Si $\l M_i\r_{i\in I}$ est une famille de $A$-modules et $N$ est un $A$-module et $f_i\!:\!M_i\to N$ est une famille de $A$-modules alors il existe une unique application linéaire $f\!:\!\bigoplus{i\in I}{}{M_i}\to N$ telle que $f_{|M_i}=f_i$
