@@ -49,6 +49,7 @@ function display_cards() {
         var tx = db.transaction("flcrd", "readonly");
         var store = tx.objectStore("flcrd");
         var request = store.openCursor();
+        var parsed_cards = 0;
 
         request.onsuccess = function(event) {
             var cursor = event.target.result;
@@ -71,6 +72,7 @@ function display_cards() {
                     first_of_folder.set((key[0], folder), card_nb);
                 }
                 append_card(key[0], key[1], card_nb, card_name);
+                ++parsed_cards;
                 prev_url = key[0];
                 cursor.continue();
             }
@@ -78,6 +80,34 @@ function display_cards() {
 
         tx.oncomplete = function() {
             db.close();
+            function sort_folders() {
+                if (displayed_cards < parsed_cards) {
+                    window.setTimeout(sort_folders, 100);
+                } else {
+                    let lists = document.getElementsByClassName('cards container');
+                    for (let l = 0; l < lists.length; ++l) {
+                        const list = lists[l];
+                        var items = list.childNodes;
+                        var itemsArr = [];
+                        for (var i in items) {
+                            if (items[i].nodeType == 1) {
+                                itemsArr.push(items[i]);
+                            }
+                        }
+                        itemsArr.sort(function(a, b) {
+                            if (a.nodeName != 'P') return -1;
+                            if (b.nodeName != 'P') return 1;
+                            return a.innerText == b.innerText
+                                    ? 0
+                                    : (a.innerText > b.innerText ? 1 : -1);
+                        });
+                        for (i = 0; i < itemsArr.length; ++i) {
+                            list.appendChild(itemsArr[i]);
+                        }
+                    }
+                }
+            }
+            sort_folders()
         }
     };
 }
@@ -146,12 +176,14 @@ async function list_cards(downloaded = false) {
     } else {window.alert('Impossible de rafraîchir le fichier.');}
 }
 
+var displayed_cards = 0;
 async function append_card(src, name, card_number, card_name) {
     let html_src = src.replaceAll(' ', '')
     let c = document.getElementById('down_cards_container');
     if (document.getElementsByClassName(html_src).length == 0) {
         d = document.createElement('div');
         d.setAttribute('class',html_src);
+        d.classList.add('cards_container');
         d.setAttribute('style','margin-left: 2rem;');
         h1 = document.createElement('h1');
         h1.setAttribute('style','margin-bottom:0;margin-left: -2rem; font-size: calc(0.8 * 2em);')
@@ -173,7 +205,8 @@ async function append_card(src, name, card_number, card_name) {
         h1.appendChild(span2);
         d.appendChild(h1);
         let rootdiv = document.createElement("div");
-        rootdiv.classList.add("["+html_src+",root]");
+        rootdiv.classList.add('['+html_src+',root]');
+        rootdiv.classList.add('cards_container');
         d.appendChild(rootdiv);
         if (src == "Fichiers importés") {
             if (document.getElementById('down_cards_container').children.length > 0) {
@@ -237,6 +270,7 @@ async function append_card(src, name, card_number, card_name) {
     p.id = '[' + html_src + ',' + name + ']';
     document.getElementsByClassName(html_src)[0].appendChild(p);
     set_config_card(html_src, name, card_number, card_name);
+    ++displayed_cards;
 }
 
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
