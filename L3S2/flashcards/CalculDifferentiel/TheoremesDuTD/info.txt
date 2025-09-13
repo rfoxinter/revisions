@@ -1,0 +1,5 @@
+"Calcul différentiel &ndash; <i>Théorèmes du TD</i>"
+1
+0
+[1, 2, 3]
+[0, 0, 0]

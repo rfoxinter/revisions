@@ -18,7 +18,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S1/flashcards/Algebre1/ProduitTensoriel
 20241217091345
 ../L3S1/flashcards/Algebre1/RepresentationsDeGroupes
-20250116150924
+20250913142925
 ../L3S1/flashcards/Algebre1/SommeDirectesEtProduits
 20241006110233
 ../L3S1/flashcards/Algebre1/TableDesCaracteres
@@ -50,7 +50,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../L3S1/flashcards/GroupeFondamentalEtRevetement/Introduction
 20241113201934
 ../L3S1/flashcards/GroupeFondamentalEtRevetement/Revetements
-20250115171148
+20250913143625
 ../L3S1/flashcards/GroupeFondamentalEtRevetement/TheoremeDeVanKampen
 20250115180051
 ../L3S1/flashcards/IntegrationEtTheorieDeLaMesure/ConstructionDeMesures

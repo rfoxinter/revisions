@@ -51,6 +51,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20250430114303
 ../L3S2/flashcards/CalculDifferentiel/TheoremeDInversionLocale
 20250430114311
+../L3S2/flashcards/CalculDifferentiel/TheoremesDuTD
+20250913154504
 ../L3S2/flashcards/CalculDifferentiel/TheorieDesCourbes
 20250504122931
 ../L3S2/flashcards/CalculDifferentiel/TheorieDesSurfaces

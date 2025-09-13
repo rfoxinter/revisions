@@ -24,6 +24,7 @@ https://rfoxinter.github.io/revisions/L3S2/pdf/AnalyseEtEquationsAuxDeriveesPart
 https://rfoxinter.github.io/revisions/L3S2/pdf/CalculDifferentiel/EquationsDifferentielles.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/CalculDifferentiel/SousVarietes.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/CalculDifferentiel/TheoremeDInversionLocale.pdf
+https://rfoxinter.github.io/revisions/L3S2/pdf/CalculDifferentiel/TheoremesDuTD.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/CalculDifferentiel/TheorieDesCourbes.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/CalculDifferentiel/TheorieDesSurfaces.pdf
 https://rfoxinter.github.io/revisions/L3S2/pdf/ConcentrationDeLaMesure/InegalitesDeConcentration.pdf
