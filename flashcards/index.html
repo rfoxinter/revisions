@@ -23,8 +23,11 @@
             width: unset !important;
             vertical-align: middle;
         }
-        path:not([stroke],[fill]) {
+        path:not([fill]), path:is([fill=none]) {
             stroke: #606c71;
+        }
+        path:not([stroke]), path:is([stroke=none]) {
+            fill: #606c71;
         }
         button {
             display: inline-block;
