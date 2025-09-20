@@ -1,0 +1,14 @@
+Analyse anancée -- Locally convex spaces
+Shuffle questions : True
+Q/R & R/Q : False
+\let\bar\overline\usepackage{analyse,usuelles}
+Properties of $A+U$ with $A\subset X$ and $U\subset X$ open;;$A+U$ is open
+Existence of symmetric neighbourhoods;;If $W$ is a neighbourhood of $0$ then there exists a neighbourhood $V$ of $0$ such as $V=-V$ and $V+V\subset W$
+Link between $\bar A$, $\bar B$ and $\bar{A+B}$;;$\bar A+\bar B\subset\bar{A+B}$
+Separation of compac and closed sets in a TVS;;If $X$ is a TVS, $K$ is a compact subset of $X$ and $F$ a closed subset of $X$ then there exists a neighbourhood $V$ of $0$ such that $\l K+V\r\cap\l F+V\r=\varnothing$
+Properties of $K+F$ with $K\subset X$ compact and $F\subset X$ closed;;$K+F$ is closed
+$A\subset X$ is convex;;$tA+\l1-t\r A\subset A$ for all $t\in\lc0,1\rc$
+Properties of $\bar A$ and $\mathring A$ when $A$ is convex;;$\bar A$ and $\mathring{A}$ are convex\linebreak If $\mathring{A}\neq\varnothing$ then $\bar{\mathring A}=\bar A$
+$A\subset X$ is absorbing;;$\forall u\in X,\exists t>0,tu\in A$
+$A\subset X$ is balanced;;$\forall\left|\lambda\right|\leqslant1,\lambda A\subset A$
+Properties of $\appl{p_A}{X}{\mathbb R_+}{u}{\inf{\set{t>0,u\in tA}}}$ for $A\subset X$ absorbing;;$p_A$ is well defined and positively homogeneous, $p_A\l0\r=0$ and $p_A$ is sub-additive\linebreak If $A$ is convex, $\set{p_A\l x\r{<}1}\subset A\subset\set{p_A\l x\r{\leqslant}1}$ and if $A$ is open then $A=\set{p_A\l x\r<1}$\linebreak If $A$ is convex and balanced, $p_A$ is a semi-norm\linebreak If $X$ is a normed space and $A$ is a neighourhood of the origin then there exists $K\geqslant0$ such that $p_A\l u\r\leqslant K\left\|u\right\|_X$

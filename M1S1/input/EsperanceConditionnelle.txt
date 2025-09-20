@@ -1,0 +1,11 @@
+Probabilités avancée -- Espérance conditionnelle
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{probas,analyse}\def\ind#1{\mathbb 1_{#1}}\toggleanalysepar
+$\esp{X\sq\mathcal G}$ $X$ une variable aléatoire intégrable et $\mathcal G$ une sous-tribu de $\mathcal F$;;L'unique variable aléatoire intégrable et $\mathcal G$-mesurable $Y$ telle que, pour tout $A\in\mathcal G$, $\esp{X\ind A}=\esp{Y\ind A}$
+$\esp{aX+bY\sq\mathcal G}$;;$a\esp{X\sq\mathcal G}+b\esp{Y\sq\mathcal G}$
+Positivité de $\esp{{\cdot}\sq\mathcal G}$;;Si $X\geqslant Y$ $\mathbb P$-presque partout alors $\esp{X\sq\mathcal G}\geqslant\esp{Y\sq\mathcal G}$
+$\esp{\esp{X\sq\mathcal G}\sq\mathcal H}$ pour $\mathcal H\subset\mathcal G\subset\mathcal F$;;$\esp{X\sq\mathcal H}$
+$\esp{XY\sq\mathcal G}$ pour $Y$ une variable aléatoire $\mathcal G$-mesurable;;$Y\esp{X\sq\mathcal G}$
+$\esp{Y\esp{X\sq G}}$;;$\esp{XY}$
+Valeur de $\esp{g\l X,Y\r\sq\mathcal G}$ pour $X$ et $Y$ des variables aléatoires à valeurs dans $\l E,\mathcal E\r$ et $\l F,\mathcal F\r$ et $g\!:\!E\times F\to\mathbb R$ mesurable telle que $g\l X,Y\r$ est intégrable et $X\indep\mathcal G$;;$\esp{g\l X,Y\r\sq\mathcal G}=h\l Y\r$ où $h\l y\r=\int[\mathbb P_X]{f\l x,y\r}$

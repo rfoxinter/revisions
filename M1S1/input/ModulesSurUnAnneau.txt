@@ -1,7 +1,7 @@
 Algèbre avancée -- Modules sur un anneau
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{structures,al,matrices,bigoperators}\togglebigoppar
+\usepackage{structures,al,matrices,bigoperators}\togglebigoppar\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}
 $A$-module;;Groupe abélien $\l M,+\r$ muni d'une application $A\times M\to M$ telle que\linebreak$a\l m+m'\r=am+am'$\linebreak$\l a+a'\r m=am+a'm$\linebreak$\l aa'\r m=a\l a'm\r$\linebreak$1_Am=m$
 Application linéaire entre $A$-modules;;$f\!:\!M\to N$ telle que\linebreak$f\l am\r=af\l m\r$\linebreak$f\l n+m\r=f\l n\r+f\l m\r$
 Structure de $\hom[A]{M,N}$;;$A$-module en posant $\l f+g\r\l m\r=f\l m\r+g\l m\r$
@@ -13,3 +13,20 @@ PU du quotient;;Si $M$ et $P$ sont deux modules, et $N$ est un sous-module de $M
 Premier théorème d'isomorphisme;;$\overline f\!:\!M/\ker f\to\im f$ est un isomorphisme de $A$-modules
 $f\!:\!M\to N$\linebreak$\coker f$;;$N/\im f$
 PU de la somme directe de $A$-modules;;Si $\l M_i\r_{i\in I}$ est une famille de $A$-modules et $N$ est un $A$-module et $f_i\!:\!M_i\to N$ est une famille de $A$-modules alors il existe une unique application linéaire $f\!:\!\bigoplus{i\in I}{}{M_i}\to N$ telle que $f_{|M_i}=f_i$
+$M=\bigoplus{i\in I}{}{M_i}$ pour $M_i\subset M$;;$f\!:\!\bigoplus{i\in I}{}{M_i}\to M$ est un isomorphisme\linebreak Dans le cas où $I=\llb1,n\rrb$, $M=\bigoplus{i=1}{n}{M_i}$ si et seulement si pour tout $m\in M$, il existe d'uniques $m_i\in M_i$ tels que $m=\sum{i=1}{n}{m_i}$
+Suite de $A$-modules;;Diagramme de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]M_1\ar[r,"u_1"]\&M_2\ar[r,"u_2"]\&\cdots\ar[r,"u_{n-1}"]\&M_n\end{tikzcd}\linebreak avec $u_i$ des morphismes de $A$-modules
+Complexe de $A$-modules;;Suite \begin{tikzcd}[ampersand replacement=\&]M_1\ar[r,"u_1"]\&M_2\ar[r,"u_2"]\&\cdots\ar[r,"u_{n-1}"]\&M_n\end{tikzcd} telle que $\im{u_i}\subset\ker{u_{i+1}}$
+Suite exacte de $A$-modules;;Suite \begin{tikzcd}[ampersand replacement=\&]M_1\ar[r,"u_1"]\&M_2\ar[r,"u_2"]\&\cdots\ar[r,"u_{n-1}"]\&M_n\end{tikzcd} telle que $\im{u_i}=\ker{u_{i+1}}$
+Suite exacte courte;;Suite exacte de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd}
+Suite exacte courte scindée;;Suite exacte telle qu'il existe un isomorphisme de $A$-modules $\theta\!:\!M_2\to M_1\oplus M_3$\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\ar[d,"\id"]\&M_2\ar[r,"v"]\ar[d,"\theta"]\&M_3\ar[r]\ar[d,"\id"]\&0\\0\ar[r]\&M_1\ar[r,"\iota_1"]\&M_1\oplus M_3\ar[r,"\pi_3"]\&M_3\ar[r]\&0\end{tikzcd}
+CNS pour avoir une suite scindée;;La suite exacte courte\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd}\linebreak est scindée si et seulement si $v$ admet une section $s\!:\!M_1\to M_2$, vérifiant $v\circ s=\id_{M_3}$
+Sous-module de $M$ engendré par les $\l m_i\r_{i\in I}$;;$\set{\sum{i\in I}{}{a_im_i},\l a_i\r_{i\in I}\in A^{\l I\r}}$\linebreak C'est un générateur de $M$ si $M$ est engendré par ces combinaisons
+$\l m_i\r_{i\in I}$ est libre;;Si $\sum{i\in I}{}{a_im_i}=0$,$\l a_i\r_{i\in I}\in A^{\l I\r}$ alors pour tout $i\in I$, $a_i=0$
+Base de $M$;;Famille libre et génératrice de $M$
+$M$ est un $A$-module de type fini;;$M$ admet une famille génératrice finie
+$M$ est un $A$-module libre;;$M$ admet une base\linebreak Un tel module est isomorphe à $A^{\l I\r}$
+$M$ est un $A$-module libre de rang fini;;$M$ admet une base finie\linebreak Le cardinal de toute base est le même, c'est le rang de $M$
+Propriété de $\hom[A]{M,N}$ pour $M$ libre;;Si $\l m_i\r_{i\in I}$ est une base de $M$ alors $\appl{\varphi}{\hom[A]{M,N}}{N^I}{u}{\l u\l m_i\r\r_{i\in I}}$ est un isomorphisme de $A$-modules
+Propriétés des quotients d'un module de type fini;;Ils sont de type fini
+Présentation de $M$;;Suite exacte de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]A^{\l J\r}\ar[r,"\varphi'"]\&A^{\l I\r}\ar[r,"\varphi"]\&M\ar[r]\&0\end{tikzcd}\linebreak C'est une description par générateurs et relations
+$M$ est de présentation finie;;Il existe une présentation de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]A^{\l J\r}\ar[r,"\varphi'"]\&A^{\l I\r}\ar[r,"\varphi"]\&M\ar[r]\&0\end{tikzcd} avec $I$ et $J$ finis

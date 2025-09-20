@@ -1,0 +1,27 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{probas,analyse}\def\ind#1{\mathbb 1_{#1}}\toggleanalysepar
+\hypersetup{pdftitle=Probabilités avancée -- Espérance conditionnelle}
+\title{Probabilités avancée\\\emph{Espérance conditionnelle}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\esp{\esp{X\sq\mathcal G}\sq\mathcal H}$ pour $\mathcal H\subset\mathcal G\subset\mathcal F$}{1/7}
+\slider{$\esp{X\sq\mathcal H}$}{1/7}
+\slideq{$\esp{aX+bY\sq\mathcal G}$}{2/7}
+\slider{$a\esp{X\sq\mathcal G}+b\esp{Y\sq\mathcal G}$}{2/7}
+\slideq{$\esp{XY\sq\mathcal G}$ pour $Y$ une variable aléatoire $\mathcal G$-mesurable}{3/7}
+\slider{$Y\esp{X\sq\mathcal G}$}{3/7}
+\slideq{$\esp{X\sq\mathcal G}$ $X$ une variable aléatoire intégrable et $\mathcal G$ une sous-tribu de $\mathcal F$}{4/7}
+\slider{L'unique variable aléatoire intégrable et $\mathcal G$-mesurable $Y$ telle que, pour tout $A\in\mathcal G$, $\esp{X\ind A}=\esp{Y\ind A}$}{4/7}
+\slideq{$\esp{Y\esp{X\sq G}}$}{5/7}
+\slider{$\esp{XY}$}{5/7}
+\slideq{Positivité de $\esp{{\cdot}\sq\mathcal G}$}{6/7}
+\slider{Si $X\geqslant Y$ $\mathbb P$-presque partout alors $\esp{X\sq\mathcal G}\geqslant\esp{Y\sq\mathcal G}$}{6/7}
+\slideq{Valeur de $\esp{g\l X,Y\r\sq\mathcal G}$ pour $X$ et $Y$ des variables aléatoires à valeurs dans $\l E,\mathcal E\r$ et $\l F,\mathcal F\r$ et $g\!:\!E\times F\to\mathbb R$ mesurable telle que $g\l X,Y\r$ est intégrable et $X\indep\mathcal G$}{7/7}
+\slider{$\esp{g\l X,Y\r\sq\mathcal G}=h\l Y\r$ où $h\l y\r=\int[\mathbb P_X]{f\l x,y\r}$}{7/7}
+\end{document}

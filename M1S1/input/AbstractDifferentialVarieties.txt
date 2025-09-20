@@ -1,0 +1,21 @@
+Géométrie avancée -- Abstract differential varieties
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{bigoperators}
+Topological variety of dimension $n$;;Hausdorff topological space such that every points admits an open neighbourhood that is homeomorphic to an open subset of $\mathbb R^n$
+Chart of a topological variety $X$ of dimension $n$;;$\l U,\phi\r$ where $U\subset X$ is open and $\phi\!:\!U\overset{\sim}{\longrightarrow}V\subset\mathbb R^n$
+Atlas of a topological variety $X$;;Family of charts $\l U_i,\phi_i\r_{i\in I}$ such that $X=\bigcup{i\in I}{}{U_i}$
+Coordinates centered at $x$;;$\phi\l x\r=0$
+$X$ is a second countable topological space;;There exists a compact countable covering of $X$
+$\l A_\alpha\r_\alpha$ is locally finite;;$\forall x\in X,\exists U\ni x,\left|\set{\alpha,A_\alpha\cap U\neq\varnothing}\right|<+\infty$
+Sub-covering of $\l U_i\r_{i\in I}$;;$\l V_j\r_{j\in J}$ such that, for all $j\in J$, there exists $i\in I$ such that $V_j\subset U_i$
+$X$ is paracompact;;Every covering of $X$ admits a sub-covering which is locally finite
+$\l U_1,\phi_1\r$ and $\l U_2,\phi_2\r$ are compatible charts;;$U_1\cap U_2=\varnothing$ or $\phi_2\circ\phi_1^{-1}\!:\!\phi_1\l U_1\cap U_2\r\to\phi_2\l U_1\cap U_2\r$ is a diffeomorphism
+Differential atlas of a topological variety $X$\linebreak Maximal differential atlas;;An atlas such that any two maps are always compatible\linebreak It is said to be maximal if any chart that is compatible with all charts in the atlas is in the atlas
+Differential $n$-variety;;Topological variety endowed with a maximal differential atlas
+$M\subset X$ is a sub-variety with $X$ a differential varieties of dimension $p$;;For all $x\in M$, there exists a chart $\l U\ni x,\phi\r$ such that $\phi\l U\cap M\r$ is a sub-variety of $\mathbb R^p$
+$f\!:\!M\to N$ continuous is smooth with $M$ and $N$ two differential varieties;;For all $a\in M$, there exists a chart $\l U\ni a,\phi\r$ of $M$ and a chart $\l V\ni f\l a\r,\psi\r$ such that $\psi\circ f\circ\phi^{-1}\!:\!\phi\l U\cap f^{-1}\l V\r\r\to\psi\l V\r$ is smooth
+Lie group;;Group that is a differential variety and in which the product and inverse are smooth
+$f\!:\!M\to N$ smooth is a diffeomorphism;;$f$ is bijective and $f^{-1}$ is smooth
+Partition of the unity on a differential variety $M$;;Family of smooth functions $\phi_i\!:\!M\to\mathbb R_+$ such that $\operatorname{supp}\l\phi_i\r$ is locally finite and $\sum{}{}{\phi_i}\equiv1$\linebreak Such a family always exists
+The partition of unity $\l\phi_i\r_{i\in I}$ is subordinate to the cover $\l U_\alpha\r_{\alpha\in A}$\linebreak The partition of unity $\l\phi_i\r_{i\in I}$ is subordinate with same index to the cover $\l U_\alpha\r_{\alpha\in A}$;;For all $i\in I$, there exists $\alpha\in A$ such that $\operatorname{supp}\l\phi\r\subset U_\alpha$\linebreak It is subordinate with same index if $I=A$ and $\operatorname{supp}\l\phi_i\r\subset U_i$
