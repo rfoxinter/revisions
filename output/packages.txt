@@ -1,6 +1,7 @@
 AL.sty
 Analyse.sty
 Arithmetique.sty
+Arrows.sty
 BigOperators.sty
 Complexes.sty
 Equivalents.sty

@@ -30,3 +30,11 @@ Propriété de $\hom[A]{M,N}$ pour $M$ libre;;Si $\l m_i\r_{i\in I}$ est une bas
 Propriétés des quotients d'un module de type fini;;Ils sont de type fini
 Présentation de $M$;;Suite exacte de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]A^{\l J\r}\ar[r,"\varphi'"]\&A^{\l I\r}\ar[r,"\varphi"]\&M\ar[r]\&0\end{tikzcd}\linebreak C'est une description par générateurs et relations
 $M$ est de présentation finie;;Il existe une présentation de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]A^{\l J\r}\ar[r,"\varphi'"]\&A^{\l I\r}\ar[r,"\varphi"]\&M\ar[r]\&0\end{tikzcd} avec $I$ et $J$ finis
+$M$ est un $A$-module noethérien;;Tous les sous-modules de $M$ sont de type fini
+Stabilité des modules noethérien;;Sous sous-module et tout quotient d'un module noethérien est noethérien
+Caractère noethérien dans une suite exacte courte;;Dans la suite exacte courte\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd}\linebreak$M_2$ est noethérien si et seulement si $M_1$ et $M_3$ le sont\linebreak En particulier, $M\oplus M'$ est noethérien ssi $M$ et $M'$ le sont
+Propriétés des modules d'un anneau noethérien;;Si $A$ est un anneau noethérien et $M$ est un $A$-module de type fini alors $M$ est noethérien et de présentation finie
+$\almat{u}{\mathcal B}{\mathcal C}$\linebreak$\mathcal B=\l e_1,\cdots,e_m\r$ une base de $M$ et $\mathcal C=\l f_1,\cdots,f_n\r$ une base de $N$;;$\l a_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,m\rrb}$ où $u\l e_j\r=\sum{i=1}{n}{a_{i,j}f_i}$\linebreak$\nappl{\hom[A]{M,N}}{\mat nmA}{u}{\almat u{\mathcal B}{\mathcal C}}$ est un isomorphisme de $A$-modules
+CNS pour le caractère injectif et surjectif de $u\in\operatorname{End}_A\l M\r$;;$u$ est surjectif si et seulement si $u$ est un isomorphisme si et seulement si $\det u\in A^\times$\linebreak$u$ est injectif si et seulement si $\det u$ n'est pas un diviseur de $0$
+Théorème de Cayley-Hamilton;;$\chi_M\l M\r=0$ pour tout $M\in\mat n{}A$
+$\almat{u}{\mathcal B}{\mathcal C}$\linebreak$\mathcal B=\l e_1,\cdots,e_m\r$ une famille génératrice de $M$ et $\mathcal C=\l f_1,\cdots,f_n\r$ une famille génératrice de $N$;;$\l a_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,m\rrb}$ où $u\l e_j\r=\sum{i=1}{n}{a_{i,j}f_i}$\linebreak Une telle matrice n'est pas unique

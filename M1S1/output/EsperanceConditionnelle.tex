@@ -1,27 +1,49 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{probas,analyse}\def\ind#1{\mathbb 1_{#1}}\toggleanalysepar
-\hypersetup{pdftitle=Probabilités avancée -- Espérance conditionnelle}
-\title{Probabilités avancée\\\emph{Espérance conditionnelle}}
+\usepackage{probas,analyse,usuelles}\def\ind#1{\mathbb 1_{#1}}\toggleanalysepar
+\hypersetup{pdftitle=Probabilités avancées -- Espérance conditionnelle}
+\title{Probabilités avancées\\\emph{Espérance conditionnelle}}
 \author{}
 \date{}
 \begin{document}
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$\esp{\esp{X\sq\mathcal G}\sq\mathcal H}$ pour $\mathcal H\subset\mathcal G\subset\mathcal F$}{1/7}
-\slider{$\esp{X\sq\mathcal H}$}{1/7}
-\slideq{$\esp{aX+bY\sq\mathcal G}$}{2/7}
-\slider{$a\esp{X\sq\mathcal G}+b\esp{Y\sq\mathcal G}$}{2/7}
-\slideq{$\esp{XY\sq\mathcal G}$ pour $Y$ une variable aléatoire $\mathcal G$-mesurable}{3/7}
-\slider{$Y\esp{X\sq\mathcal G}$}{3/7}
-\slideq{$\esp{X\sq\mathcal G}$ $X$ une variable aléatoire intégrable et $\mathcal G$ une sous-tribu de $\mathcal F$}{4/7}
-\slider{L'unique variable aléatoire intégrable et $\mathcal G$-mesurable $Y$ telle que, pour tout $A\in\mathcal G$, $\esp{X\ind A}=\esp{Y\ind A}$}{4/7}
-\slideq{$\esp{Y\esp{X\sq G}}$}{5/7}
-\slider{$\esp{XY}$}{5/7}
-\slideq{Positivité de $\esp{{\cdot}\sq\mathcal G}$}{6/7}
-\slider{Si $X\geqslant Y$ $\mathbb P$-presque partout alors $\esp{X\sq\mathcal G}\geqslant\esp{Y\sq\mathcal G}$}{6/7}
-\slideq{Valeur de $\esp{g\l X,Y\r\sq\mathcal G}$ pour $X$ et $Y$ des variables aléatoires à valeurs dans $\l E,\mathcal E\r$ et $\l F,\mathcal F\r$ et $g\!:\!E\times F\to\mathbb R$ mesurable telle que $g\l X,Y\r$ est intégrable et $X\indep\mathcal G$}{7/7}
-\slider{$\esp{g\l X,Y\r\sq\mathcal G}=h\l Y\r$ où $h\l y\r=\int[\mathbb P_X]{f\l x,y\r}$}{7/7}
+\slideq{$\esp{X\sq\mathcal G}$ $X$ une variable aléatoire intégrable et $\mathcal G$ une sous-tribu de $\mathcal F$}{1/18}
+\slider{L'unique variable aléatoire intégrable et $\mathcal G$-mesurable $Y$ telle que, pour tout $A\in\mathcal G$, $\esp{X\ind A}=\esp{Y\ind A}$}{1/18}
+\slideq{$\esp{X\sq Y}$}{2/18}
+\slider{$\esp{X\sq\sigma\l Y\r}$}{2/18}
+\slideq{Théorème de projection orthogonale pour les espérances conditionnelles}{3/18}
+\slider{Si $X$ est une variable aléatoire de $\in L^2$ alors $\esp{X\sq\mathcal G}\in L^2$\linebreak C'est le projeté orthigonal de $X$ sur $L^2\l\Omega,\mathcal F,\mathbb P\r$}{3/18}
+\slideq{$\esp{X\sq\mathcal G}$ pour $X$ une variable aléatoire à valeurs dans $\lc0,+\infty\rc$}{4/18}
+\slider{$\lim[n\to+\infty]{\esp{\min{X,n}\sq\mathcal G}}$\linebreak C'est l'unique variable $Y$ dans $\lc0,+\infty\rc$ qui est $\mathcal G$-mesurable et telle que, pour tout $A\in\mathcal G$, $\esp{X\ind A}=\esp{Y\ind A}$}{4/18}
+\slideq{Valeur de $\esp{g\l X,Y\r\sq\mathcal G}$ pour $X$ et $Y$ des variables aléatoires à valeurs dans $\l E,\mathcal E\r$ et $\l F,\mathcal F\r$ et $g\!:\!E\times F\to\mathbb R$ mesurable telle que $g\l X,Y\r$ est intégrable et $X\indep\mathcal G$}{5/18}
+\slider{$\esp{g\l X,Y\r\sq\mathcal G}=h\l Y\r$ où $h\l y\r=\int[\mathbb P_X]{f\l x,y\r}$}{5/18}
+\slideq{$\esp{aX+bY\sq\mathcal G}$}{6/18}
+\slider{$a\esp{X\sq\mathcal G}+b\esp{Y\sq\mathcal G}$}{6/18}
+\slideq{Densité de $X$ sanchat que $Z=z$ pour $\l X,Z\r$ de densité $f$}{7/18}
+\slider{$\frac1{\int[x][\mathbb R]{f\l x,z\r}}f\l x,z\r$}{7/18}
+\slideq{$\esp{XY\sq\mathcal G}$ pour $Y$ une variable aléatoire $\mathcal G$-mesurable}{8/18}
+\slider{$Y\esp{X\sq\mathcal G}$}{8/18}
+\slideq{$\esp{Y\esp{X\sq G}}$}{9/18}
+\slider{$\esp{XY}$}{9/18}
+\slideq{Théorème de convergence dominée pour l'espérance conditionnelle}{10/18}
+\slider{Si $\l X_n\r$ est une suite de variables aléatoires, $Z$ une variable aléatoire intégrable telle que $\left|X_n\right|\leqslant Z$ presque sûrement et telle que $X_n\to X$ presque sûrement alors $X$ est intégrable et $\esp{\left|X_n-X\right|\sq\mathcal G}\to0$\linebreak On a donc $\esp{X_n\sq\mathcal G}\to0\to\esp{X\sq\mathcal G}\to0$}{10/18}
+\slideq{Inégalité de Jensen pour l'espérance conditionnelle}{11/18}
+\slider{Si $X$ est un variable aléatoire réelle et $\phi\!:\!\mathbb R\to\mathbb R$ convexe alors $\phi\l\esp{X\sq\mathcal G}\r\le\esp{\phi\l X\r\sq\mathcal G}$}{11/18}
+\slideq{Lien entre $\esp{X\sq Z}$ et $\esp{Y\sq Z}$ en fonction des lois de probabilités}{12/18}
+\slider{Si $\mathbb P_{\l X,Z\r}=\mathbb P_{\l Y,Z\r}$ alors $\esp{X\sq Z}=\esp{Y\sq Z}$}{12/18}
+\slideq{Lemme de Doob}{13/18}
+\slider{Soient $\Omega_1$ et $\Omega_2$ deux ensembles, $X\!:\!\Omega_1\to\l\Omega_2,\mathcal F_2\r$. Soient $\mathcal F_1=\sigma\l X\r$, $\l E,\mathcal B\r$ un espace polonais (métrique séparable) muni de ses boréliens, les fonctions $\l\Omega_1,\mathcal F_1\r$--$\l E,\mathcal B\r$ mesurables sont celles de la forme $Y=f\l X\r$ avec $f\!:\!\l\Omega_2,\mathcal F_2\r\to\l E,\mathcal B\r$ mesurables}{13/18}
+\slideq{$\esp{X\sq  Z_1+\cdots+Z_n}$\linebreak$\l X,Z_1,\cdots,Z_n\r$ un vecteur gaussien}{14/18}
+\slider{$\esp{X\sq Z_1+\cdots+Z_n}=\esp X+\sum{i=1}{n}{a_i\l Z_i-\esp{Z_i}\r}$\linebreak pour un certain $\l a_1,\cdots,a_n\r\in\mathbb R^n$\linebreak En particulier, $\esp{X\sq Z_1+\cdots+Z_n}$ est une variable aléatoire gaussienne}{14/18}
+\slideq{Lemme de Fatou pour l'espérance conditionnelle}{15/18}
+\slider{Si $\l X_n\r$ est une suite de variables aléatoires positives alors $\esp{\limi[n\to+\infty]{X_n}\sq\mathcal G}\leqslant\limi[n\to+\infty]{\esp{X_n\sq\mathcal G}}$}{15/18}
+\slideq{Positivité de $\esp{{\cdot}\sq\mathcal G}$}{16/18}
+\slider{Si $X\geqslant Y$ $\mathbb P$-presque partout alors $\esp{X\sq\mathcal G}\geqslant\esp{Y\sq\mathcal G}$}{16/18}
+\slideq{Théorème de convergence monotone pour l'espérance conditionnelle}{17/18}
+\slider{Si $\l X_n\r$ est une suite croissante de variables aléatoires positives alors $\esp{\lim[n\to+\infty]{X_n}\sq\mathcal G}=\lim[n\to+\infty]{\esp{X_n\sq\mathcal G}}$}{17/18}
+\slideq{$\esp{\esp{X\sq\mathcal G}\sq\mathcal H}$ pour $\mathcal H\subset\mathcal G\subset\mathcal F$}{18/18}
+\slider{$\esp{X\sq\mathcal H}$}{18/18}
 \end{document}

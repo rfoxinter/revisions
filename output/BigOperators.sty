@@ -62,6 +62,19 @@
         \def\opabove{\bigoplimits^{#2}}
     \fi
     {\bigopdisplay\oldprod\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+    \let\oldcoprod\coprod
+\renewcommand\coprod[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
+        \def\opbelow{}
+    \else
+        \def\opbelow{\bigoplimits_{#1}}
+    \fi
+    \if\relax\detokenize{#2}\relax
+        \def\opabove{}
+    \else
+        \def\opabove{\bigoplimits^{#2}}
+    \fi
+    {\bigopdisplay\oldcoprod\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
 \let\oldcap\bigcap
 \renewcommand\bigcap[3]{\mathop{}\mkern-3mu
     \if\relax\detokenize{#1}\relax

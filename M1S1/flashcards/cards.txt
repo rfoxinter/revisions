@@ -1,11 +1,11 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ../M1S1/flashcards/AlgebreAvancee/ModulesSurUnAnneau
-20250920122809
+20250927071946
 ../M1S1/flashcards/AnalyseAnancee/GeneralTopology
 20250910180220
 ../M1S1/flashcards/AnalyseAnancee/LocallyConvexSpaces
-20250920111234
+20250927151104
 ../M1S1/flashcards/GeometrieAvancee/AbstractDifferentialVarieties
-20250920144750
-../M1S1/flashcards/ProbabilitesAvancee/EsperanceConditionnelle
-20250920123203
+20250928105515
+../M1S1/flashcards/ProbabilitesAvancees/EsperanceConditionnelle
+20250927100339
