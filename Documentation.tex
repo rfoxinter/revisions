@@ -19,7 +19,7 @@
 \usepackage{dsft,bbmt}
 \usepackage{output/tools}
 \usepackage[bigopsymb]{output/bigoperators}
-\usepackage{output/matrices,output/al,output/analyse,output/arithmetique,output/complexes,output/equivalents,output/galois,output/hats,output/polynomes,output/probas,output/sffont,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
+\usepackage{output/matrices,output/al,output/analyse,output/arithmetique,output/arrows,output/complexes,output/equivalents,output/galois,output/hats,output/polynomes,output/probas,output/sffont,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
 \makeatother
@@ -194,7 +194,7 @@ Il est possibles de changer les polices de caractères/symboles en important des
 
 Il est possible de redéfinir le $l$ en $\oldl$ avec \mintinline{latex}?\usepackage[noell]{premabule}?.
 
-Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de placer dans le préambule\footnote{Cette commande est déjà définie dans \hyperlink{section.22}{\texttt{Usuelles.sty}}}:
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de placer dans le préambule\footnote{Cette commande est déjà définie dans \hyperlink{section.23}{\texttt{Usuelles.sty}}}:
 \vspace{-\abovedisplayskip}\begin{minted}{latex}
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
@@ -408,7 +408,7 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\tr{u}}
 \mcmd{\oldmat}
 \mcmd[\footnotemark]{\almat{u}{\mathcal{B}}{}}
-\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.13}{\texttt{Matrices.sty}}}
+\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.14}{\texttt{Matrices.sty}}}
 \mcmd{\almat{u}{\mathcal{B}}{\mathcal{C}}}
 \mcmd{\oldsl}
 \mcmd{\sl{E}}
@@ -433,7 +433,7 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\appl{\id}{E}{E}{x}{x}}
 \mcmd{\nappl{E}{\mathbb{R}}{x}{l(x)}}
 \hsection{Analyse.sty}
-Le package \hyperlink{section.19}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
+Le package \hyperlink{section.20}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
 
 \vspace{0.5cm}
 
@@ -533,8 +533,11 @@ Il est possible de changer cette option au cours du document en utilisant la com
 \mcmd{\mmod{n}}
 \mcmd{\cgr{a}{b}{n}}
 \mcmd{\legendre{-1}{p}}
+\hsection{Arrows.sty}
+\mhd
+\mcmd{G\acts X}
 \hsection{BigOperators.sty}
-Le package \hyperlink{section.19}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{BigOperators.sty}.
+Le package \hyperlink{section.20}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{BigOperators.sty}.
 
 \vspace{0.5cm}
 
@@ -545,6 +548,9 @@ Le package \hyperlink{section.19}{\texttt{Tools.sty}} sera importé automatiquem
 \mcmd[\footnotemark]{\oldprod}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\prod?}
 \mcmd{\prod{n=0}{+\infty}{u_n}}
+\mcmd[\footnotemark]{\oldcoprod}
+\footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\coprod?}
+\mcmd{\coprod{\alpha\in A}{}{V_\alpha}}
 \mcmd[\footnotemark]{\oldcap}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\bigcap?}
 \mcmd{\bigcap{n=0}{+\infty}{A_n}}
@@ -743,7 +749,7 @@ Ce package importe automatiquement le package \href{https://ctan.org/pkg/graphic
 \mcmd{\hhat{AB}}
 \mcmd{\hhat{ABCDEFFGH}}
 \hsection{Matrices.sty}
-Le package \hyperlink{section.19}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+Le package \hyperlink{section.20}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
 
 \vspace{0.5cm}
 
@@ -1067,7 +1073,7 @@ Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 \mcmd{\ath{x}}
 \mcmd{\ath[']{x}}
 \hsection{Usuelles.sty}
-Le package \hyperlink{section.19}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Usuelles.sty}.
+Le package \hyperlink{section.20}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Usuelles.sty}.
 
 \vspace{0.5cm}
 
