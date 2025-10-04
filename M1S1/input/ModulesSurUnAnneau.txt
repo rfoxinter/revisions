@@ -1,7 +1,7 @@
 Algèbre avancée -- Modules sur un anneau
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{structures,al,matrices,bigoperators}\togglebigoppar\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}
+\usepackage{structures,al,matrices,bigoperators}\togglebigoppar\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}\newsavebox\ttobox\newsavebox\relskipbok\newlength\ttolength\newlength\relskiplength\newcommand{\doublehead}{\savebox\ttobox{$\to$}\savebox\relskipbok{${}\mathrel{\null}$}\settowidth{\ttolength}{\ttobox}\settowidth{\relskiplength}{\relskipbok}{}\kern-\relskiplength\kern-.6\ttolength{\usebox{\ttobox}}\mkern2mu\kern.6\ttolength\kern-\relskiplength{}\mathrel{}}
 $A$-module;;Groupe abélien $\l M,+\r$ muni d'une application $A\times M\to M$ telle que\linebreak$a\l m+m'\r=am+am'$\linebreak$\l a+a'\r m=am+a'm$\linebreak$\l aa'\r m=a\l a'm\r$\linebreak$1_Am=m$
 Application linéaire entre $A$-modules;;$f\!:\!M\to N$ telle que\linebreak$f\l am\r=af\l m\r$\linebreak$f\l n+m\r=f\l n\r+f\l m\r$
 Structure de $\hom[A]{M,N}$;;$A$-module en posant $\l f+g\r\l m\r=f\l m\r+g\l m\r$
@@ -38,3 +38,8 @@ $\almat{u}{\mathcal B}{\mathcal C}$\linebreak$\mathcal B=\l e_1,\cdots,e_m\r$ un
 CNS pour le caractère injectif et surjectif de $u\in\operatorname{End}_A\l M\r$;;$u$ est surjectif si et seulement si $u$ est un isomorphisme si et seulement si $\det u\in A^\times$\linebreak$u$ est injectif si et seulement si $\det u$ n'est pas un diviseur de $0$
 Théorème de Cayley-Hamilton;;$\chi_M\l M\r=0$ pour tout $M\in\mat n{}A$
 $\almat{u}{\mathcal B}{\mathcal C}$\linebreak$\mathcal B=\l e_1,\cdots,e_m\r$ une famille génératrice de $M$ et $\mathcal C=\l f_1,\cdots,f_n\r$ une famille génératrice de $N$;;$\l a_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,m\rrb}$ où $u\l e_j\r=\sum{i=1}{n}{a_{i,j}f_i}$\linebreak Une telle matrice n'est pas unique
+Astuce du déterminant;;Si $P$ est une matrice de $u\in\hom{M,M}$ avec $M$ finiment engendré alors $\chi_P\l u\r=0$
+Propriétés des endomorphismes surjectifs de $M$ un $A$-module de type fini;;C'est un isomorphisme
+Un module $P$ est projectif;;Le foncteur $\hom[A]{\cdot,P}$ préserve les suites exactes courtes
+CNS pour que $P$ soit projectif;;Pour toute surjection linéaire $\pi\!:\!N\to\doublehead N'$ et toute application linéaire $f\!:\!P\to N'$, il existe $g\in\hom[A]{P,N}$ tel que $f=\pi\circ g$\linebreak Toute suite exacte courte de la forme \begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M\ar[r,"u"]\&N\ar[r,"v"]\&P\ar[r]\&0\end{tikzcd} est scindée\linebreak Il existe un $A$-module $Q$ tel que $P\oplus Q$ soit libre
+Modules steblement finis;;$M$ est stablement fini s'il existe $n\in\mathbb N$ tel que $M\oplus A^n$ est libre\linebreak\textsl{Un module tel que $M\oplus A^n=A^m$ n'est pas nécessairement de la forme $A^{m-n}$}

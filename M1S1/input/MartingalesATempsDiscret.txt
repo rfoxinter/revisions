@@ -1,0 +1,13 @@
+Probabilités avancées -- Martingales à temps discret
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{probas,usuelles,bigoperators}\togglebigoppar\def\none{\ensuremath{\emptyset}}\def\ssn{sous/sur/\none}
+Filtration;;$\l\mathcal F_n\r$ une suite croissante de sous-tribus de $\mathcal F$
+Processus adapté à une filtration $\l\mathcal F_n\r$;;$\l X_n\r$ une suite de variables aléatoires avec $X_n$ qui est $\mathcal F_n$-mesurable
+Martingale;;$\l X_n\r$ est une martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}=X_n$
+Sous-martingale;;$\l X_n\r$ est une sous-martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}\geqslant X_n$
+Sur-martingale;;$\l X_n\r$ est une sur-martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}\leqslant X_n$
+Stabilités des sous/sur/\none-martingales;;Si $\l X_n\r$ et $\l Y_n\r$ sont deux \ssn-martingales alors $\l X_n+Y_n\r$ aussi\linebreak Si $\l X_n\r$ et $\l Y_n\r$ sont des sous-martingales (resp. sur-martingale) alors $\l\max{X_n,Y_n}\r$ (resp. $\l\min{X_n,Y_n}\r$) aussi\linebreak Si $\l X_n\r$ est une martingale et $\phi$ est convexe telle que $\esp{\left|\phi\l X_n\r\right|}<+\infty$ alors $\l\phi\l X_n\r\r$ est une sous-martingale
+Processus prévisible;;$\l H_n\r_{n\in\mathbb N^*}$ est un processus prévisible par rapport à $\l X_n\r_{n\in\mathbb N}$ adapté à $\mathcal F_n$ si $H_n$ est $\mathcal F_{n-1}$-mesurable
+Intégrale stochastique (discrète);;Soit $\l X_n\r$ un processus adapté à $\mathcal F_n$ et $\l H_n\r$ un processus prévisible, l'intégrale stochastique de $\l H_n\r$ par rapport à $\l X_n\r$ est $\l H\cdot X\r_n=\sum{k=1}{n}{H_k\l X_k-X_{k-1}\r}$
+Intégrales stochastiques de \ssn-martingales;;Si $\l X_n\r$ est une martingale et $\l H_n\r$ est un processus prévisible de $L^\infty$ alors $\l\l H\cdot X\r_n\r$ est une martingale\linebreak Si $\l X_n\r$ est une sous/sur-martingale et $\l H_n\r$ est un processus prévisible positif de $L^\infty$ alors $\l\l H\cdot X\r_n\r$ est une sous/sur-martingale\linebreak Si $\l X_n\r$ est dans $L^2$ alors on peut avoir $\l H_n\r$ dans $L^2$

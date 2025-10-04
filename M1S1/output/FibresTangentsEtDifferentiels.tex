@@ -1,0 +1,31 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\usepackage{al}\usepackage[nopar]{bigoperators}\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}
+\hypersetup{pdftitle=Géométrie avancée -- Fibrés tangents et différentiels}
+\title{Géométrie avancée\\\emph{Fibrés tangents et différentiels}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\tg M$}{1/9}
+\slider{$\coprod{x\in M}{}{\tg_xM}$}{1/9}
+\slideq{Germes de courbes passant par $x$}{2/9}
+\slider{L'ensemble $\mathcal C_x$ des $\gamma\!:\!I\to M$ lisses avec $I$ un voisinage de $x$ quotientés par la relation d'équivalence <<~avoir la même valeur sur un voisinage ouvert de $x$~>>}{2/9}
+\slideq{Fibré tangent de $M$}{3/9}
+\slider{La variété $\tg M$ muni de l'atlas $\l\tg U_i,\varPhi_{\phi_i}\r$, qui est de dimension $\dim{\tg M}=2\dim M$}{3/9}
+\slideq{Un fibré $p\!:\!E\to B$ est vectoriel de rang $k$}{4/9}
+\slider{Les fibres sont des $\mathbb R$-ev de dimension $k$\linebreak La fibre type est $\mathbb R^k$\linebreak Si on se donne deux trivialisations \begin{tikzcd}[ampersand replacement=\&, row sep=small]p^{-1}\l U\r\ar[r,"\phi"']\ar[d,"p"]\&U\times\mathbb R^k\ar[d,"\operatorname{pr}_1"']\\U\ar[r,"\id"]\&U\end{tikzcd} et \begin{tikzcd}[ampersand replacement=\&, row sep=small]p^{-1}\l V\r\ar[r,"\psi"']\ar[d,"p"]\&V\times\mathbb R^k\ar[d,"\operatorname{pr}_1"']\\V\ar[r,"\id"]\&V\end{tikzcd}, $\appl{\psi\circ\phi^{-1}}{\l U\cap V\r\times\mathbb R^k}{\l U\cap V\r\times\mathbb R^k}{\l x,v\r}{\l x,\phi_x\l v\r\r}$ est tel que $\phi_x\in\gl{\mathbb R^k}$ pour tout $x\in U\cap V$}{4/9}
+\slideq{$\tg U$}{5/9}
+\slider{$\coprod{x\in U}{}{\tg_xM}$\linebreak On a une application bijective $\appl{\varPhi_\phi}{\tg U}{\phi\l U\r\times\mathbb R^{\dim M}}{\l x,\lc\gamma\rc\r}{\l\phi\l x\r,\l\phi\circ\gamma\r'\l0\r\r}$}{5/9}
+\slideq{Un fibré $E\to B$ est vectoriel}{6/9}
+\slider{Les fibres sont des $\mathbb R$-ev et leur structure est cohérente avec celle de la fibration}{6/9}
+\slideq{Définition et structure de $\tg_xM$}{7/9}
+\slider{$\mathcal C_x/{\sim}$ où $\gamma_1\sim\gamma_2$ ei et seulement si $\gamma_1$ et $\gamma_2$ ont la même vitesse en $x$\linebreak$\tg xM$ a une structure naturelle d'espace vectoriel via l'isomorphisme $\appl{\theta_\phi}{\tg_xM}{\mathbb R^{\dim M}}{\lc\gamma\rc}{\l\phi\circ\gamma\r'\l0\r}$}{7/9}
+\slideq{Deux germes courbes de $\mathcal C_x$ ont la même vitesse en $x$}{8/9}
+\slider{$\l\phi\circ\gamma_1\r'\l0\r=\l\phi\circ\gamma_2\r'\l0\r$}{8/9}
+\slideq{Ouverts de $\tg M$ pour $M$ une variété topologique ou différentielle}{9/9}
+\slider{On impose que les $\tg U_i$ soient ouverts et que les $\varPhi_{\phi_i}$ soient des homéomorphismes\linebreak$\varOmega\subset M$ est ouvert si et seulement si pour tout $i$, $\varPhi_{\phi_i}\l\varOmega\cap\tg U_i\r$ est ouvert\linebreak$\tg M$ est dénombrable à l'infini et un atlas est donné par $\l\tg U_i,\varPhi_{\phi_i}\r$\linebreak Dans le cas d'une variété différentielle, c'est aussi un atlas différentiel}{9/9}
+\end{document}

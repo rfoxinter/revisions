@@ -1,7 +1,7 @@
 Analyse anancée -- Locally convex spaces
 Shuffle questions : True
 Q/R & R/Q : False
-\let\bar\overline\usepackage{analyse,usuelles}
+\let\bar\overline\usepackage{analyse,usuelles,topologie}\usepackage{bigoperators}\togglebigoppar
 Properties of $A+U$ with $A\subset X$ and $U\subset X$ open;;$A+U$ is open
 Existence of symmetric neighbourhoods;;If $W$ is a neighbourhood of $0$ then there exists a neighbourhood $V$ of $0$ such as $V=-V$ and $V+V\subset W$
 Link between $\bar A$, $\bar B$ and $\bar{A+B}$;;$\bar A+\bar B\subset\bar{A+B}$
@@ -21,3 +21,11 @@ Link between bounded and continuous linear maps;;A continuous linear map is boun
 Linear functional;;Linear map $X\to\mathbb K$ with $X$ a $\mathbb K$-vector space
 Hyperplane;;Kernel of a non-trivial linear map\linebreak It has dimension $1$ (the converse holds)
 Topological properties of hyperplanes;;Hyperplanes are dense or closed\linebreak Dense iff the associated linear map is continuous
+Topologies on a finite-dimensional TVS;;A finite TVS has a unique topology, associated to the final topology of $\varPhi\!:\!\mathbb K^d\to X$, $\l a_i\r\to\sum{i=1}{k}{a_iw_i}$
+Properties of a linear map $T\!:\!X\to Y$ with $X$ a finite-dimensional TVS;;$T$ is continuous
+Properties finite-dimensional subspace $Y$ of a TVS $X$;;$Y$ is closed
+Properties of a non-trivial linear functional $\phi\!:\!X\to\mathbb K$;;$\phi$ is open
+Properties of a surjective linear map $T\!:\!X\to Y$;;$T$ is open\linebreak If moreover $\ker T$ is closed the $T$ is continuous
+Analytic Hahn-Banach theorem for functionals in $\mathbb R$;;If $p\!:\!X\to\mathbb R$ is a positively homogeneous and sub-additive, if $Y$ is a subspace of $X$ and $\phi\!:\!Y\to\mathbb R$ is a functional such that $\phi\leqslant p$ on $Y$ then $\phi$ can be extended to a linear functional on $X$ still dominated by $p$
+Analytic Hahn-Banach theorem for functionals in $\mathbb K=\mathbb R$ or $\mathbb K=\mathbb C$;;If $p\!:\!X\to\mathbb R$ is a semi-norm, if $Y$ is a subspace of $X$ and $\phi\!:\!Y\to\mathbb K$ is a functional such that $\left|\phi\right|\leqslant p$ on $Y$ then $\phi$ can be extended to a linear functional on $X$ with its modulus still dominated by $p$
+Corollary of Hahn-Banach theorem in $\mathbb K=\mathbb R$ or $\mathbb K=\mathbb C$ on the existence of specific functionals on a TVS $X$;;If $Y$ is a closed subspace and $v\notin Y$ then there exists a functional $\phi\in X^*$ such that $\phi\equiv0$ on $Y$, $\phi\l v\r=d\l v,Y\r>0$ and $\nrm[X^*]\phi=1$\linebreak If $u\in X$, there exists $\phi\in X^*$ such that $\nrm[X^*]\phi=1$ and $\phi\l u\r=\nrm[X]u$\linebreak$J\!:\!u\mapsto\operatorname{ev}_u$ is a isometry on its image

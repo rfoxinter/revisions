@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{structures,al,matrices,bigoperators}\togglebigoppar\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}
+\usepackage{structures,al,matrices,bigoperators}\togglebigoppar\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}\newsavebox\ttobox\newsavebox\relskipbok\newlength\ttolength\newlength\relskiplength\newcommand{\doublehead}{\savebox\ttobox{$\to$}\savebox\relskipbok{${}\mathrel{\null}$}\settowidth{\ttolength}{\ttobox}\settowidth{\relskiplength}{\relskipbok}{}\kern-\relskiplength\kern-.6\ttolength{\usebox{\ttobox}}\mkern2mu\kern.6\ttolength\kern-\relskiplength{}\mathrel{}}
 \hypersetup{pdftitle=Algèbre avancée -- Modules sur un anneau}
 \title{Algèbre avancée\\\emph{Modules sur un anneau}}
 \author{}
@@ -10,76 +10,86 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$f\!:\!M\to N$\linebreak$\coker f$}{1/36}
-\slider{$N/\im f$}{1/36}
-\slideq{$A$-module}{2/36}
-\slider{Groupe abélien $\l M,+\r$ muni d'une application $A\times M\to M$ telle que\linebreak$a\l m+m'\r=am+am'$\linebreak$\l a+a'\r m=am+a'm$\linebreak$\l aa'\r m=a\l a'm\r$\linebreak$1_Am=m$}{2/36}
-\slideq{$M$ est un $A$-module libre}{3/36}
-\slider{$M$ admet une base\linebreak Un tel module est isomorphe à $A^{\l I\r}$}{3/36}
-\slideq{Propriété de $\hom[A]{M,N}$ pour $M$ libre}{4/36}
-\slider{Si $\l m_i\r_{i\in I}$ est une base de $M$ alors $\appl{\varphi}{\hom[A]{M,N}}{N^I}{u}{\l u\l m_i\r\r_{i\in I}}$ est un isomorphisme de $A$-modules}{4/36}
-\slideq{Propriétés des modules d'un anneau noethérien}{5/36}
-\slider{Si $A$ est un anneau noethérien et $M$ est un $A$-module de type fini alors $M$ est noethérien et de présentation finie}{5/36}
-\slideq{Base de $M$}{6/36}
-\slider{Famille libre et génératrice de $M$}{6/36}
-\slideq{PU du quotient}{7/36}
-\slider{Si $M$ et $P$ sont deux modules, et $N$ est un sous-module de $M$, soit $f\!:\!M\to P$ une application $A$-linéaire telle que $N\subset\ker f$ alors il existe une unique application $A$-linéaire $\overline f$ telle que $f=\overline f\circ\pi$}{7/36}
-\slideq{Complexe de $A$-modules}{8/36}
-\slider{Suite \begin{tikzcd}[ampersand replacement=\&]M_1\ar[r,"u_1"]\&M_2\ar[r,"u_2"]\&\cdots\ar[r,"u_{n-1}"]\&M_n\end{tikzcd} telle que $\im{u_i}\subset\ker{u_{i+1}}$}{8/36}
-\slideq{Sous-module de $M$ engendré par les $\l m_i\r_{i\in I}$}{9/36}
-\slider{$\set{\sum{i\in I}{}{a_im_i},\l a_i\r_{i\in I}\in A^{\l I\r}}$\linebreak C'est un générateur de $M$ si $M$ est engendré par ces combinaisons}{9/36}
-\slideq{Structure isomorphe à $\hom[A]{A^m,A^n}$}{10/36}
-\slider{$\mat nmA$ via l'image de la <<~base canonique~>>}{10/36}
-\slideq{Suite exacte de $A$-modules}{11/36}
-\slider{Suite \begin{tikzcd}[ampersand replacement=\&]M_1\ar[r,"u_1"]\&M_2\ar[r,"u_2"]\&\cdots\ar[r,"u_{n-1}"]\&M_n\end{tikzcd} telle que $\im{u_i}=\ker{u_{i+1}}$}{11/36}
-\slideq{Suite de $A$-modules}{12/36}
-\slider{Diagramme de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]M_1\ar[r,"u_1"]\&M_2\ar[r,"u_2"]\&\cdots\ar[r,"u_{n-1}"]\&M_n\end{tikzcd}\linebreak avec $u_i$ des morphismes de $A$-modules}{12/36}
-\slideq{$M$ est un $A$-module noethérien}{13/36}
-\slider{Tous les sous-modules de $M$ sont de type fini}{13/36}
-\slideq{Suite exacte courte}{14/36}
-\slider{Suite exacte de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd}}{14/36}
-\slideq{$M=\bigoplus{i\in I}{}{M_i}$ pour $M_i\subset M$}{15/36}
-\slider{$f\!:\!\bigoplus{i\in I}{}{M_i}\to M$ est un isomorphisme\linebreak Dans le cas où $I=\llb1,n\rrb$, $M=\bigoplus{i=1}{n}{M_i}$ si et seulement si pour tout $m\in M$, il existe d'uniques $m_i\in M_i$ tels que $m=\sum{i=1}{n}{m_i}$}{15/36}
-\slideq{Propriétés des quotients d'un module de type fini}{16/36}
-\slider{Ils sont de type fini}{16/36}
-\slideq{Théorème de Cayley-Hamilton}{17/36}
-\slider{$\chi_M\l M\r=0$ pour tout $M\in\mat n{}A$}{17/36}
-\slideq{$\l m_i\r_{i\in I}$ est libre}{18/36}
-\slider{Si $\sum{i\in I}{}{a_im_i}=0$,$\l a_i\r_{i\in I}\in A^{\l I\r}$ alors pour tout $i\in I$, $a_i=0$}{18/36}
-\slideq{Isomorphisme de $A$-modules}{19/36}
-\slider{$f\in\hom[A]{M,N}$ pour laquelle il existe $g\in\hom[A]{N,M}$ telle que $f\circ g=\id_M$ et $g\circ f=\id_N$}{19/36}
-\slideq{PU de la somme directe de $A$-modules}{20/36}
-\slider{Si $\l M_i\r_{i\in I}$ est une famille de $A$-modules et $N$ est un $A$-module et $f_i\!:\!M_i\to N$ est une famille de $A$-modules alors il existe une unique application linéaire $f\!:\!\bigoplus{i\in I}{}{M_i}\to N$ telle que $f_{|M_i}=f_i$}{20/36}
-\slideq{$M$ est un $A$-module de type fini}{21/36}
-\slider{$M$ admet une famille génératrice finie}{21/36}
-\slideq{CNS pour avoir une suite scindée}{22/36}
-\slider{La suite exacte courte\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd}\linebreak est scindée si et seulement si $v$ admet une section $s\!:\!M_1\to M_2$, vérifiant $v\circ s=\id_{M_3}$}{22/36}
-\slideq{$\almat{u}{\mathcal B}{\mathcal C}$\linebreak$\mathcal B=\l e_1,\cdots,e_m\r$ une famille génératrice de $M$ et $\mathcal C=\l f_1,\cdots,f_n\r$ une famille génératrice de $N$}{23/36}
-\slider{$\l a_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,m\rrb}$ où $u\l e_j\r=\sum{i=1}{n}{a_{i,j}f_i}$\linebreak Une telle matrice n'est pas unique}{23/36}
-\slideq{Caractère noethérien dans une suite exacte courte}{24/36}
-\slider{Dans la suite exacte courte\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd}\linebreak$M_2$ est noethérien si et seulement si $M_1$ et $M_3$ le sont\linebreak En particulier, $M\oplus M'$ est noethérien ssi $M$ et $M'$ le sont}{24/36}
-\slideq{CNS pour le caractère injectif et surjectif de $u\in\operatorname{End}_A\l M\r$}{25/36}
-\slider{$u$ est surjectif si et seulement si $u$ est un isomorphisme si et seulement si $\det u\in A^\times$\linebreak$u$ est injectif si et seulement si $\det u$ n'est pas un diviseur de $0$}{25/36}
-\slideq{Stabilité des modules noethérien}{26/36}
-\slider{Sous sous-module et tout quotient d'un module noethérien est noethérien}{26/36}
-\slideq{$M$ est de présentation finie}{27/36}
-\slider{Il existe une présentation de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]A^{\l J\r}\ar[r,"\varphi'"]\&A^{\l I\r}\ar[r,"\varphi"]\&M\ar[r]\&0\end{tikzcd} avec $I$ et $J$ finis}{27/36}
-\slideq{Sous-module}{28/36}
-\slider{Sous-groupe stable par l'action de l'anneau}{28/36}
-\slideq{$M$ est un $A$-module libre de rang fini}{29/36}
-\slider{$M$ admet une base finie\linebreak Le cardinal de toute base est le même, c'est le rang de $M$}{29/36}
-\slideq{$\almat{u}{\mathcal B}{\mathcal C}$\linebreak$\mathcal B=\l e_1,\cdots,e_m\r$ une base de $M$ et $\mathcal C=\l f_1,\cdots,f_n\r$ une base de $N$}{30/36}
-\slider{$\l a_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,m\rrb}$ où $u\l e_j\r=\sum{i=1}{n}{a_{i,j}f_i}$\linebreak$\nappl{\hom[A]{M,N}}{\mat nmA}{u}{\almat u{\mathcal B}{\mathcal C}}$ est un isomorphisme de $A$-modules}{30/36}
-\slideq{Suite exacte courte scindée}{31/36}
-\slider{Suite exacte telle qu'il existe un isomorphisme de $A$-modules $\theta\!:\!M_2\to M_1\oplus M_3$\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\ar[d,"\id"]\&M_2\ar[r,"v"]\ar[d,"\theta"]\&M_3\ar[r]\ar[d,"\id"]\&0\\0\ar[r]\&M_1\ar[r,"\iota_1"]\&M_1\oplus M_3\ar[r,"\pi_3"]\&M_3\ar[r]\&0\end{tikzcd}}{31/36}
-\slideq{Premier théorème d'isomorphisme}{32/36}
-\slider{$\overline f\!:\!M/\ker f\to\im f$ est un isomorphisme de $A$-modules}{32/36}
-\slideq{Application linéaire entre $A$-modules}{33/36}
-\slider{$f\!:\!M\to N$ telle que\linebreak$f\l am\r=af\l m\r$\linebreak$f\l n+m\r=f\l n\r+f\l m\r$}{33/36}
-\slideq{Structure de $\hom[A]{M,N}$}{34/36}
-\slider{$A$-module en posant $\l f+g\r\l m\r=f\l m\r+g\l m\r$}{34/36}
-\slideq{Module $M/N$}{35/36}
-\slider{Le groupe quotient d'un $A$-module par un sous-module peut être muni d'une unique structure de $A$-module qui rend $\pi\!:\!M\to M/N$ $A$-linéaire}{35/36}
-\slideq{Présentation de $M$}{36/36}
-\slider{Suite exacte de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]A^{\l J\r}\ar[r,"\varphi'"]\&A^{\l I\r}\ar[r,"\varphi"]\&M\ar[r]\&0\end{tikzcd}\linebreak C'est une description par générateurs et relations}{36/36}
+\slideq{Propriétés des endomorphismes surjectifs de $M$ un $A$-module de type fini}{1/41}
+\slider{C'est un isomorphisme}{1/41}
+\slideq{Suite exacte de $A$-modules}{2/41}
+\slider{Suite \begin{tikzcd}[ampersand replacement=\&]M_1\ar[r,"u_1"]\&M_2\ar[r,"u_2"]\&\cdots\ar[r,"u_{n-1}"]\&M_n\end{tikzcd} telle que $\im{u_i}=\ker{u_{i+1}}$}{2/41}
+\slideq{Propriétés des modules d'un anneau noethérien}{3/41}
+\slider{Si $A$ est un anneau noethérien et $M$ est un $A$-module de type fini alors $M$ est noethérien et de présentation finie}{3/41}
+\slideq{$M$ est un $A$-module libre}{4/41}
+\slider{$M$ admet une base\linebreak Un tel module est isomorphe à $A^{\l I\r}$}{4/41}
+\slideq{Sous-module de $M$ engendré par les $\l m_i\r_{i\in I}$}{5/41}
+\slider{$\set{\sum{i\in I}{}{a_im_i},\l a_i\r_{i\in I}\in A^{\l I\r}}$\linebreak C'est un générateur de $M$ si $M$ est engendré par ces combinaisons}{5/41}
+\slideq{Complexe de $A$-modules}{6/41}
+\slider{Suite \begin{tikzcd}[ampersand replacement=\&]M_1\ar[r,"u_1"]\&M_2\ar[r,"u_2"]\&\cdots\ar[r,"u_{n-1}"]\&M_n\end{tikzcd} telle que $\im{u_i}\subset\ker{u_{i+1}}$}{6/41}
+\slideq{Modules steblement finis}{7/41}
+\slider{$M$ est stablement fini s'il existe $n\in\mathbb N$ tel que $M\oplus A^n$ est libre\linebreak\textsl{Un module tel que $M\oplus A^n=A^m$ n'est pas nécessairement de la forme $A^{m-n}$}}{7/41}
+\slideq{Premier théorème d'isomorphisme}{8/41}
+\slider{$\overline f\!:\!M/\ker f\to\im f$ est un isomorphisme de $A$-modules}{8/41}
+\slideq{Présentation de $M$}{9/41}
+\slider{Suite exacte de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]A^{\l J\r}\ar[r,"\varphi'"]\&A^{\l I\r}\ar[r,"\varphi"]\&M\ar[r]\&0\end{tikzcd}\linebreak C'est une description par générateurs et relations}{9/41}
+\slideq{CNS pour avoir une suite scindée}{10/41}
+\slider{La suite exacte courte\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd}\linebreak est scindée si et seulement si $v$ admet une section $s\!:\!M_1\to M_2$, vérifiant $v\circ s=\id_{M_3}$}{10/41}
+\slideq{Un module $P$ est projectif}{11/41}
+\slider{Le foncteur $\hom[A]{\cdot,P}$ préserve les suites exactes courtes}{11/41}
+\slideq{Théorème de Cayley-Hamilton}{12/41}
+\slider{$\chi_M\l M\r=0$ pour tout $M\in\mat n{}A$}{12/41}
+\slideq{Propriété de $\hom[A]{M,N}$ pour $M$ libre}{13/41}
+\slider{Si $\l m_i\r_{i\in I}$ est une base de $M$ alors $\appl{\varphi}{\hom[A]{M,N}}{N^I}{u}{\l u\l m_i\r\r_{i\in I}}$ est un isomorphisme de $A$-modules}{13/41}
+\slideq{$\almat{u}{\mathcal B}{\mathcal C}$\linebreak$\mathcal B=\l e_1,\cdots,e_m\r$ une base de $M$ et $\mathcal C=\l f_1,\cdots,f_n\r$ une base de $N$}{14/41}
+\slider{$\l a_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,m\rrb}$ où $u\l e_j\r=\sum{i=1}{n}{a_{i,j}f_i}$\linebreak$\nappl{\hom[A]{M,N}}{\mat nmA}{u}{\almat u{\mathcal B}{\mathcal C}}$ est un isomorphisme de $A$-modules}{14/41}
+\slideq{Base de $M$}{15/41}
+\slider{Famille libre et génératrice de $M$}{15/41}
+\slideq{Suite de $A$-modules}{16/41}
+\slider{Diagramme de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]M_1\ar[r,"u_1"]\&M_2\ar[r,"u_2"]\&\cdots\ar[r,"u_{n-1}"]\&M_n\end{tikzcd}\linebreak avec $u_i$ des morphismes de $A$-modules}{16/41}
+\slideq{Application linéaire entre $A$-modules}{17/41}
+\slider{$f\!:\!M\to N$ telle que\linebreak$f\l am\r=af\l m\r$\linebreak$f\l n+m\r=f\l n\r+f\l m\r$}{17/41}
+\slideq{$M$ est un $A$-module noethérien}{18/41}
+\slider{Tous les sous-modules de $M$ sont de type fini}{18/41}
+\slideq{Structure de $\hom[A]{M,N}$}{19/41}
+\slider{$A$-module en posant $\l f+g\r\l m\r=f\l m\r+g\l m\r$}{19/41}
+\slideq{Stabilité des modules noethérien}{20/41}
+\slider{Sous sous-module et tout quotient d'un module noethérien est noethérien}{20/41}
+\slideq{Structure isomorphe à $\hom[A]{A^m,A^n}$}{21/41}
+\slider{$\mat nmA$ via l'image de la <<~base canonique~>>}{21/41}
+\slideq{Astuce du déterminant}{22/41}
+\slider{Si $P$ est une matrice de $u\in\hom{M,M}$ avec $M$ finiment engendré alors $\chi_P\l u\r=0$}{22/41}
+\slideq{$M$ est un $A$-module libre de rang fini}{23/41}
+\slider{$M$ admet une base finie\linebreak Le cardinal de toute base est le même, c'est le rang de $M$}{23/41}
+\slideq{Isomorphisme de $A$-modules}{24/41}
+\slider{$f\in\hom[A]{M,N}$ pour laquelle il existe $g\in\hom[A]{N,M}$ telle que $f\circ g=\id_M$ et $g\circ f=\id_N$}{24/41}
+\slideq{$M=\bigoplus{i\in I}{}{M_i}$ pour $M_i\subset M$}{25/41}
+\slider{$f\!:\!\bigoplus{i\in I}{}{M_i}\to M$ est un isomorphisme\linebreak Dans le cas où $I=\llb1,n\rrb$, $M=\bigoplus{i=1}{n}{M_i}$ si et seulement si pour tout $m\in M$, il existe d'uniques $m_i\in M_i$ tels que $m=\sum{i=1}{n}{m_i}$}{25/41}
+\slideq{Suite exacte courte}{26/41}
+\slider{Suite exacte de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd}}{26/41}
+\slideq{CNS pour que $P$ soit projectif}{27/41}
+\slider{Pour toute surjection linéaire $\pi\!:\!N\to\doublehead N'$ et toute application linéaire $f\!:\!P\to N'$, il existe $g\in\hom[A]{P,N}$ tel que $f=\pi\circ g$\linebreak Toute suite exacte courte de la forme \begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M\ar[r,"u"]\&N\ar[r,"v"]\&P\ar[r]\&0\end{tikzcd} est scindée\linebreak Il existe un $A$-module $Q$ tel que $P\oplus Q$ soit libre}{27/41}
+\slideq{PU du quotient}{28/41}
+\slider{Si $M$ et $P$ sont deux modules, et $N$ est un sous-module de $M$, soit $f\!:\!M\to P$ une application $A$-linéaire telle que $N\subset\ker f$ alors il existe une unique application $A$-linéaire $\overline f$ telle que $f=\overline f\circ\pi$}{28/41}
+\slideq{Propriétés des quotients d'un module de type fini}{29/41}
+\slider{Ils sont de type fini}{29/41}
+\slideq{$A$-module}{30/41}
+\slider{Groupe abélien $\l M,+\r$ muni d'une application $A\times M\to M$ telle que\linebreak$a\l m+m'\r=am+am'$\linebreak$\l a+a'\r m=am+a'm$\linebreak$\l aa'\r m=a\l a'm\r$\linebreak$1_Am=m$}{30/41}
+\slideq{Sous-module}{31/41}
+\slider{Sous-groupe stable par l'action de l'anneau}{31/41}
+\slideq{$\almat{u}{\mathcal B}{\mathcal C}$\linebreak$\mathcal B=\l e_1,\cdots,e_m\r$ une famille génératrice de $M$ et $\mathcal C=\l f_1,\cdots,f_n\r$ une famille génératrice de $N$}{32/41}
+\slider{$\l a_{i,j}\r_{\l i,j\r\in\llb1,n\rrb\times\llb1,m\rrb}$ où $u\l e_j\r=\sum{i=1}{n}{a_{i,j}f_i}$\linebreak Une telle matrice n'est pas unique}{32/41}
+\slideq{$f\!:\!M\to N$\linebreak$\coker f$}{33/41}
+\slider{$N/\im f$}{33/41}
+\slideq{CNS pour le caractère injectif et surjectif de $u\in\operatorname{End}_A\l M\r$}{34/41}
+\slider{$u$ est surjectif si et seulement si $u$ est un isomorphisme si et seulement si $\det u\in A^\times$\linebreak$u$ est injectif si et seulement si $\det u$ n'est pas un diviseur de $0$}{34/41}
+\slideq{PU de la somme directe de $A$-modules}{35/41}
+\slider{Si $\l M_i\r_{i\in I}$ est une famille de $A$-modules et $N$ est un $A$-module et $f_i\!:\!M_i\to N$ est une famille de $A$-modules alors il existe une unique application linéaire $f\!:\!\bigoplus{i\in I}{}{M_i}\to N$ telle que $f_{|M_i}=f_i$}{35/41}
+\slideq{Module $M/N$}{36/41}
+\slider{Le groupe quotient d'un $A$-module par un sous-module peut être muni d'une unique structure de $A$-module qui rend $\pi\!:\!M\to M/N$ $A$-linéaire}{36/41}
+\slideq{$\l m_i\r_{i\in I}$ est libre}{37/41}
+\slider{Si $\sum{i\in I}{}{a_im_i}=0$,$\l a_i\r_{i\in I}\in A^{\l I\r}$ alors pour tout $i\in I$, $a_i=0$}{37/41}
+\slideq{$M$ est de présentation finie}{38/41}
+\slider{Il existe une présentation de la forme\linebreak\begin{tikzcd}[ampersand replacement=\&]A^{\l J\r}\ar[r,"\varphi'"]\&A^{\l I\r}\ar[r,"\varphi"]\&M\ar[r]\&0\end{tikzcd} avec $I$ et $J$ finis}{38/41}
+\slideq{Caractère noethérien dans une suite exacte courte}{39/41}
+\slider{Dans la suite exacte courte\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd}\linebreak$M_2$ est noethérien si et seulement si $M_1$ et $M_3$ le sont\linebreak En particulier, $M\oplus M'$ est noethérien ssi $M$ et $M'$ le sont}{39/41}
+\slideq{$M$ est un $A$-module de type fini}{40/41}
+\slider{$M$ admet une famille génératrice finie}{40/41}
+\slideq{Suite exacte courte scindée}{41/41}
+\slider{Suite exacte telle qu'il existe un isomorphisme de $A$-modules $\theta\!:\!M_2\to M_1\oplus M_3$\linebreak\begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M_1\ar[r,"u"]\ar[d,"\id"]\&M_2\ar[r,"v"]\ar[d,"\theta"]\&M_3\ar[r]\ar[d,"\id"]\&0\\0\ar[r]\&M_1\ar[r,"\iota_1"]\&M_1\oplus M_3\ar[r,"\pi_3"]\&M_3\ar[r]\&0\end{tikzcd}}{41/41}
 \end{document}
