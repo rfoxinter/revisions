@@ -1,7 +1,7 @@
 Analyse anancée -- Locally convex spaces
 Shuffle questions : True
 Q/R & R/Q : False
-\let\bar\overline\usepackage{analyse,usuelles,topologie}\usepackage{bigoperators}\togglebigoppar
+\usepackage{analyse,usuelles,topologie,complexes,structures}\usepackage[nopar]{bigoperators}
 Properties of $A+U$ with $A\subset X$ and $U\subset X$ open;;$A+U$ is open
 Existence of symmetric neighbourhoods;;If $W$ is a neighbourhood of $0$ then there exists a neighbourhood $V$ of $0$ such as $V=-V$ and $V+V\subset W$
 Link between $\bar A$, $\bar B$ and $\bar{A+B}$;;$\bar A+\bar B\subset\bar{A+B}$
@@ -27,5 +27,13 @@ Properties finite-dimensional subspace $Y$ of a TVS $X$;;$Y$ is closed
 Properties of a non-trivial linear functional $\phi\!:\!X\to\mathbb K$;;$\phi$ is open
 Properties of a surjective linear map $T\!:\!X\to Y$;;$T$ is open\linebreak If moreover $\ker T$ is closed the $T$ is continuous
 Analytic Hahn-Banach theorem for functionals in $\mathbb R$;;If $p\!:\!X\to\mathbb R$ is a positively homogeneous and sub-additive, if $Y$ is a subspace of $X$ and $\phi\!:\!Y\to\mathbb R$ is a functional such that $\phi\leqslant p$ on $Y$ then $\phi$ can be extended to a linear functional on $X$ still dominated by $p$
-Analytic Hahn-Banach theorem for functionals in $\mathbb K=\mathbb R$ or $\mathbb K=\mathbb C$;;If $p\!:\!X\to\mathbb R$ is a semi-norm, if $Y$ is a subspace of $X$ and $\phi\!:\!Y\to\mathbb K$ is a functional such that $\left|\phi\right|\leqslant p$ on $Y$ then $\phi$ can be extended to a linear functional on $X$ with its modulus still dominated by $p$
+Analytic Hahn-Banach theorems for functionals in $\mathbb K=\mathbb R$ or $\mathbb K=\mathbb C$;;If $p\!:\!X\to\mathbb R$ is a semi-norm, if $Y$ is a subspace of $X$ and $\phi\!:\!Y\to\mathbb K$ is a functional such that $\left|\phi\right|\leqslant p$ on $Y$ then $\phi$ can be extended to a linear functional on $X$ with its modulus still dominated by $p$
 Corollary of Hahn-Banach theorem in $\mathbb K=\mathbb R$ or $\mathbb K=\mathbb C$ on the existence of specific functionals on a TVS $X$;;If $Y$ is a closed subspace and $v\notin Y$ then there exists a functional $\phi\in X^*$ such that $\phi\equiv0$ on $Y$, $\phi\l v\r=d\l v,Y\r>0$ and $\nrm[X^*]\phi=1$\linebreak If $u\in X$, there exists $\phi\in X^*$ such that $\nrm[X^*]\phi=1$ and $\phi\l u\r=\nrm[X]u$\linebreak$J\!:\!u\mapsto\operatorname{ev}_u$ is a isometry on its image
+Structure of complex-valued linear functionals on a TVS $X$;;A linear functional $\phi\!:\!X\to\mathbb C$ is of the form $\psi\l\cdot\r-\ii\psi\l\ii\cdot\r$ for $\psi\!:\!X\to\mathbb R$ a linear functional\linebreak Conversely, any function of this form defines a linear functional $X\to\mathbb C$
+Geometric Hahn-Banach theorems;;If $X$ is a TVS and $A$ and $B$ are two convex disjoint subsets of $X$ then, if $A$ is open, there exists a continuous functional $\phi$ on $X$ and $\gamma\in\mathbb R$ such that $\Re{\phi\l u\r}<\gamma\leqslant\Re{\phi\l v\r}$ for all $u\in A$, $v\in B$\linebreak If $X$ is an LCTVS, $A$ is closed and and $B$ compact then there exists $\gamma_1<\gamma_2\in\mathbb R$ such that $\Re{\phi\l u\r}<\gamma_1<\gamma_2<\Re{\phi\l v\r}$ for all $u\in A$, $v\in B$
+Weak topology on $X$;;$\sigma\l X,X^*\r$ the initial topology on $X$ associated to its topological dual
+Properties of $\l X,\sigma\l X,M\r\r$ for $X$ a TVS over $\mathbb K$ and $M\subset\mathcal L\l X,\mathbb K\r$ that separates points;;It is an LCTVS\linebreak Its topological dual is $M$\linebreak A neighbourhood basis of the origin is given by $V_{\phi,\epsilon}=\set{u\in X,\vala{\phi\l u\r}<\epsilon}$
+Properties of $X^*$ when $X$ is an LCTVS;;$X^*$ separates points
+CNS for $\exists\lambda_1,\cdots,\lambda_n$, $\phi=\lambda_1\phi_1+\cdots+\lambda_n\phi_n$;;$\ker\phi\subset\bigcap{i=1}n{\ker\phi_i}$
+Weak topology;;$\sigma\l X,X^*\r$ topology
+Link between closed and weakly closed sets;;If $A$ is weakly closed then it is closed\linebreak If $A$ is closed and convex then $A$ is weakly closed

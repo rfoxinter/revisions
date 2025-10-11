@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\usepackage{al}\usepackage[nopar]{bigoperators}\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}
+\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\usepackage{al,analyse,structures}\usepackage[nopar]{bigoperators}\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}\DeclareMathOperator{\oldcrit}{crit}\def\crit#1{\oldcrit\l#1\r}
 \hypersetup{pdftitle=Géométrie avancée -- Fibrés tangents et différentiels}
 \title{Géométrie avancée\\\emph{Fibrés tangents et différentiels}}
 \author{}
@@ -10,22 +10,50 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$\tg M$}{1/9}
-\slider{$\coprod{x\in M}{}{\tg_xM}$}{1/9}
-\slideq{Germes de courbes passant par $x$}{2/9}
-\slider{L'ensemble $\mathcal C_x$ des $\gamma\!:\!I\to M$ lisses avec $I$ un voisinage de $x$ quotientés par la relation d'équivalence <<~avoir la même valeur sur un voisinage ouvert de $x$~>>}{2/9}
-\slideq{Fibré tangent de $M$}{3/9}
-\slider{La variété $\tg M$ muni de l'atlas $\l\tg U_i,\varPhi_{\phi_i}\r$, qui est de dimension $\dim{\tg M}=2\dim M$}{3/9}
-\slideq{Un fibré $p\!:\!E\to B$ est vectoriel de rang $k$}{4/9}
-\slider{Les fibres sont des $\mathbb R$-ev de dimension $k$\linebreak La fibre type est $\mathbb R^k$\linebreak Si on se donne deux trivialisations \begin{tikzcd}[ampersand replacement=\&, row sep=small]p^{-1}\l U\r\ar[r,"\phi"']\ar[d,"p"]\&U\times\mathbb R^k\ar[d,"\operatorname{pr}_1"']\\U\ar[r,"\id"]\&U\end{tikzcd} et \begin{tikzcd}[ampersand replacement=\&, row sep=small]p^{-1}\l V\r\ar[r,"\psi"']\ar[d,"p"]\&V\times\mathbb R^k\ar[d,"\operatorname{pr}_1"']\\V\ar[r,"\id"]\&V\end{tikzcd}, $\appl{\psi\circ\phi^{-1}}{\l U\cap V\r\times\mathbb R^k}{\l U\cap V\r\times\mathbb R^k}{\l x,v\r}{\l x,\phi_x\l v\r\r}$ est tel que $\phi_x\in\gl{\mathbb R^k}$ pour tout $x\in U\cap V$}{4/9}
-\slideq{$\tg U$}{5/9}
-\slider{$\coprod{x\in U}{}{\tg_xM}$\linebreak On a une application bijective $\appl{\varPhi_\phi}{\tg U}{\phi\l U\r\times\mathbb R^{\dim M}}{\l x,\lc\gamma\rc\r}{\l\phi\l x\r,\l\phi\circ\gamma\r'\l0\r\r}$}{5/9}
-\slideq{Un fibré $E\to B$ est vectoriel}{6/9}
-\slider{Les fibres sont des $\mathbb R$-ev et leur structure est cohérente avec celle de la fibration}{6/9}
-\slideq{Définition et structure de $\tg_xM$}{7/9}
-\slider{$\mathcal C_x/{\sim}$ où $\gamma_1\sim\gamma_2$ ei et seulement si $\gamma_1$ et $\gamma_2$ ont la même vitesse en $x$\linebreak$\tg xM$ a une structure naturelle d'espace vectoriel via l'isomorphisme $\appl{\theta_\phi}{\tg_xM}{\mathbb R^{\dim M}}{\lc\gamma\rc}{\l\phi\circ\gamma\r'\l0\r}$}{7/9}
-\slideq{Deux germes courbes de $\mathcal C_x$ ont la même vitesse en $x$}{8/9}
-\slider{$\l\phi\circ\gamma_1\r'\l0\r=\l\phi\circ\gamma_2\r'\l0\r$}{8/9}
-\slideq{Ouverts de $\tg M$ pour $M$ une variété topologique ou différentielle}{9/9}
-\slider{On impose que les $\tg U_i$ soient ouverts et que les $\varPhi_{\phi_i}$ soient des homéomorphismes\linebreak$\varOmega\subset M$ est ouvert si et seulement si pour tout $i$, $\varPhi_{\phi_i}\l\varOmega\cap\tg U_i\r$ est ouvert\linebreak$\tg M$ est dénombrable à l'infini et un atlas est donné par $\l\tg U_i,\varPhi_{\phi_i}\r$\linebreak Dans le cas d'une variété différentielle, c'est aussi un atlas différentiel}{9/9}
+\slideq{Fibré tangent de $M$}{1/23}
+\slider{La variété $\tg M$ muni de l'atlas $\l\tg U_i,\varPhi_{\phi_i}\r$, qui est de dimension $\dim{\tg M}=2\dim M$\linebreak C'est un fibré vectoriel de rang $\dim M$}{1/23}
+\slideq{Un fibré $E\to B$ est vectoriel}{2/23}
+\slider{Les fibres sont des $\mathbb R$-ev et leur structure est cohérente avec celle de la fibration}{2/23}
+\slideq{$X$ est transverse à $Z$ via $f\!:\!X\to Y$ lisse\linebreak$X\pitchfork_fZ$}{3/23}
+\slider{Pour tout $x\in X$ tel que $f\l x\r\in Z$, $\tg_{f\l x\r}Y=\im{\dd f_x}+\tg_{f\l x\r}Z$\linebreak En particulier si $Z=\set y$ alors $X\pitchfork_fZ$ si et seulement si $f$ est une submersion le long de $f^{-1}\l\set y\r$}{3/23}
+\slideq{$f$ est une submersion en $x$}{4/23}
+\slider{$\dd f_x$ est surjective}{4/23}
+\slideq{$f$ est un plongement}{5/23}
+\slider{$f$ est une immersion qui réalise un homéomorphisme sur son image}{5/23}
+\slideq{Théorème du rang constant}{6/23}
+\slider{Si $M$ et $N$ sont deux variétés différentielles de dimensions $m$ et $n$ avec $f\!:\!M\to N$ lisse et si $x\mapsto\rg{\dd f_x}$ est constante au voisinage de $x_0$ alors il existe $\phi\!:\!U_{x_0}\ni x_0\to\mathbb R^m$ et $\psi\!:\!V_{f\l x_0\r}\ni f\l x_0\r\to\mathbb R^n$ telles que $\appl{\psi{\circ}f{\circ}\phi^{-1}}{\mathbb R^m}{\mathbb R^n}{\l x_1,{\cdot}{\cdot}{\cdot},x_m\r}{\l x_1,{\cdot}{\cdot}{\cdot},x_r,0,{\cdot}{\cdot}{\cdot},0\r}$}{6/23}
+\slideq{$\tg M$}{7/23}
+\slider{$\coprod{x\in M}{}{\tg_xM}$}{7/23}
+\slideq{Morphisme de fibrés lisse $E_1\to B$ et $E_2\to B$}{8/23}
+\slider{\begin{tikzcd}[ampersand replacement=\&, row sep=small]E_1\ar[r,"f"']\ar[d,"p_1"]\&E_2\ar[d,"p_2"']\\B\ar[r,"\id"]\&B\end{tikzcd} tel que $f$ soit lisse et $f_{|\l E_1\r_x}\!:\!\l E_1\r_x\to\l E_2\r_x$ soit linéaire}{8/23}
+\slideq{Deux germes courbes de $\mathcal C_x$ ont la même vitesse en $x$}{9/23}
+\slider{$\l\phi\circ\gamma_1\r'\l0\r=\l\phi\circ\gamma_2\r'\l0\r$}{9/23}
+\slideq{Isomorphisme de fibrés vectoriels}{10/23}
+\slider{Difféomorphisme de fibrés vectoriels}{10/23}
+\slideq{Un fibré $p\!:\!E\to B$ est vectoriel de rang $k$}{11/23}
+\slider{Les fibres sont des $\mathbb R$-ev de dimension $k$\linebreak La fibre type est $\mathbb R^k$\linebreak Si on se donne une trivialisation \begin{tikzcd}[ampersand replacement=\&, row sep=small]p^{-1}\l U\r\ar[r,"\phi"']\ar[d,"p"]\&U\times\mathbb R^k\ar[d,"\operatorname{pr}_1"']\\U\ar[r,"\id"]\&U\end{tikzcd} $\phi_{|E_x}\!:\!E_x\to\mathbb R^k$ est un isomorphisme de $\mathbb R$-ev}{11/23}
+\slideq{Ouverts de $\tg M$ pour $M$ une variété topologique ou différentielle}{12/23}
+\slider{On impose que les $\tg U_i$ soient ouverts et que les $\varPhi_{\phi_i}$ soient des homéomorphismes\linebreak$\varOmega\subset M$ est ouvert si et seulement si pour tout $i$, $\varPhi_{\phi_i}\l\varOmega\cap\tg U_i\r$ est ouvert\linebreak$\tg M$ est dénombrable à l'infini et un atlas est donné par $\l\tg U_i,\varPhi_{\phi_i}\r$\linebreak Dans le cas d'une variété différentielle, c'est aussi un atlas différentiel}{12/23}
+\slideq{$M$ est parallélisable}{13/23}
+\slider{$\tg M$ est trivial}{13/23}
+\slideq{Théorème de Sard}{14/23}
+\slider{Si $f\!:\!M\to N$ est lisse alors $f\l\crit f\r$ est négligeable dans $N$, dans le sens où l'image de $f\l\crit f\r$ par toute carte est de mesure nulle pour la mesure de Lebesgue}{14/23}
+\slideq{Définition et structure de $\tg_xM$}{15/23}
+\slider{$\mathcal C_x/{\sim}$ où $\gamma_1\sim\gamma_2$ ei et seulement si $\gamma_1$ et $\gamma_2$ ont la même vitesse en $x$\linebreak$\tg xM$ a une structure naturelle d'espace vectoriel via l'isomorphisme $\appl{\theta_\phi}{\tg_xM}{\mathbb R^{\dim M}}{\lc\gamma\rc}{\l\phi\circ\gamma\r'\l0\r}$}{15/23}
+\slideq{$f\!:\!M\to N$ lisse entre deux variétés\linebreak$\dd f_x$}{16/23}
+\slider{$\appl{\dd f_x}{\tg_xM}{\tg_{f\l x\r}N}{\lc\gamma\rc}{\lc f\circ\gamma\rc}$\linebreak C'est bien défini et linéaire}{16/23}
+\slideq{$f$ est une immersion en $x$}{17/23}
+\slider{$\dd f_x$ est injective}{17/23}
+\slideq{Section d'un fibré vectoriel $p\!:\!E\to B$ d'une variété différentielle}{18/23}
+\slider{Application $s\!:\!B\to E$ telle que $p\circ s=\operatorname{id}_B$}{18/23}
+\slideq{Germes de courbes passant par $x$}{19/23}
+\slider{L'ensemble $\mathcal C_x$ des $\gamma\!:\!I\to M$ lisses avec $I$ un voisinage de $x$ quotientés par la relation d'équivalence <<~avoir la même valeur sur un voisinage ouvert de $x$~>>}{19/23}
+\slideq{Théorème de transversalité}{20/23}
+\slider{Soit $f\!:\!X\to Y$ lisse et $Z\subset Y$ une sous-veriété telle que $X\pitchfork_fZ$ alors $f^{-1}\l Z\r$ est une sous-vériété de $X$ et si $f^{-1}\l Z\r$ est non vide alors $\operatorname{codim}\l f^{-1}\l Z\r\r=\operatorname{codim}\l Z\r$}{20/23}
+\slideq{Point critique et valeur critique de $f\!:\!M\to N$ lisse}{21/23}
+\slider{$x\in M$ est point critique si $\dd f_x$ n'est pas surjective\linebreak$y\in N$ est valeur critique s'il existe $x\in M$ point critique tel que $f\l x\r=y$\linebreak Si $\dim M<\dim N$ alors tous les points sont critiques\linebreak$\crit f$ désigne l'ensemble des points critiques de $f$}{21/23}
+\slideq{$E\to B$ est trivial de rang $k$}{22/23}
+\slider{Le fibré est isomorphe à $\operatorname{pr}_1\!:\!B\times\mathbb R^k\to B$}{22/23}
+\slideq{$\tg U$}{23/23}
+\slider{$\coprod{x\in U}{}{\tg_xM}$\linebreak On a une application bijective $\appl{\varPhi_\phi}{\tg U}{\phi\l U\r\times\mathbb R^{\dim M}}{\l x,\lc\gamma\rc\r}{\l\phi\l x\r,\l\phi\circ\gamma\r'\l0\r\r}$}{23/23}
 \end{document}

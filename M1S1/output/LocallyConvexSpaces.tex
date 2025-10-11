@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\let\bar\overline\usepackage{analyse,usuelles,topologie}\usepackage{bigoperators}\togglebigoppar
+\usepackage{analyse,usuelles,topologie,complexes,structures}\usepackage[nopar]{bigoperators}
 \hypersetup{pdftitle=Analyse anancée -- Locally convex spaces}
 \title{Analyse anancée\\\emph{Locally convex spaces}}
 \author{}
@@ -10,58 +10,74 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Topological properties of hyperplanes}{1/27}
-\slider{Hyperplanes are dense or closed\linebreak Dense iff the associated linear map is continuous}{1/27}
-\slideq{Linear functional}{2/27}
-\slider{Linear map $X\to\mathbb K$ with $X$ a $\mathbb K$-vector space}{2/27}
-\slideq{$A\subset X$ is balanced}{3/27}
-\slider{$\forall\left|\lambda\right|\leqslant1,\lambda A\subset A$}{3/27}
-\slideq{Properties of $\appl{p_A}{X}{\mathbb R_+}{u}{\inf{\set{t>0,u\in tA}}}$ for $A\subset X$ absorbing}{4/27}
-\slider{$p_A$ is well defined and positively homogeneous, $p_A\l0\r=0$ and $p_A$ is sub-additive\linebreak If $A$ is convex, $\set{p_A\l x\r{<}1}\subset A\subset\set{p_A\l x\r{\leqslant}1}$ and if $A$ is open then $A=\set{p_A\l x\r<1}$\linebreak If $A$ is convex and balanced, $p_A$ is a semi-norm\linebreak If $X$ is a normed space and $A$ is a neighbourhood of the origin then there exists $K\geqslant0$ such that $p_A\l u\r\leqslant K\left\|u\right\|_X$}{4/27}
-\slideq{Properties of a linear map $T\!:\!X\to Y$ with $X$ a finite-dimensional TVS}{5/27}
-\slider{$T$ is continuous}{5/27}
-\slideq{Properties of $A+U$ with $A\subset X$ and $U\subset X$ open}{6/27}
-\slider{$A+U$ is open}{6/27}
-\slideq{Topologies on a finite-dimensional TVS}{7/27}
-\slider{A finite TVS has a unique topology, associated to the final topology of $\varPhi\!:\!\mathbb K^d\to X$, $\l a_i\r\to\sum{i=1}{k}{a_iw_i}$}{7/27}
-\slideq{Properties of $K+F$ with $K\subset X$ compact and $F\subset X$ closed}{8/27}
-\slider{$K+F$ is closed}{8/27}
-\slideq{Hyperplane}{9/27}
-\slider{Kernel of a non-trivial linear map\linebreak It has dimension $1$ (the converse holds)}{9/27}
-\slideq{$A\subset X$ is absorbing}{10/27}
-\slider{$\forall u\in X,\exists t>0,tu\in A$}{10/27}
-\slideq{Separation of compac and closed sets in a TVS}{11/27}
-\slider{If $X$ is a TVS, $K$ is a compact subset of $X$ and $F$ a closed subset of $X$ then there exists a neighbourhood $V$ of $0$ such that $\l K+V\r\cap\l F+V\r=\varnothing$}{11/27}
-\slideq{Properties of $\bar A$ and $\mathring A$ when $A$ is convex}{12/27}
-\slider{$\bar A$ and $\mathring{A}$ are convex\linebreak If $\mathring{A}\neq\varnothing$ then $\bar{\mathring A}=\bar A$}{12/27}
-\slideq{Fréchet space}{13/27}
-\slider{Topological vector space with a compatible metric, that is invariant by translation and with which the space is complete}{13/27}
-\slideq{$A\subset X$ is convex}{14/27}
-\slider{$tA+\l1-t\r A\subset A$ for all $t\in\lc0,1\rc$}{14/27}
-\slideq{Properties finite-dimensional subspace $Y$ of a TVS $X$}{15/27}
-\slider{$Y$ is closed}{15/27}
-\slideq{Necessary condition for $X$ to be a Fréchet space}{16/27}
-\slider{If $X$ is endowed with a family of separating semi-norms for which the space is complete then $X$ is a Fréchet space}{16/27}
-\slideq{Bounded set}{17/27}
-\slider{$A$ is bounded if for all neighbourhood $V$ of $0$, there exists $t_0>0$ such that, for all $t\geqslant t_0$, $A\subset tV$\linebreak$A$ is bounded if for all neighbourhood $V$ of $0$, there exists $t>0$ such that $A\subset tV$}{17/27}
-\slideq{Analytic Hahn-Banach theorem for functionals in $\mathbb R$}{18/27}
-\slider{If $p\!:\!X\to\mathbb R$ is a positively homogeneous and sub-additive, if $Y$ is a subspace of $X$ and $\phi\!:\!Y\to\mathbb R$ is a functional such that $\phi\leqslant p$ on $Y$ then $\phi$ can be extended to a linear functional on $X$ still dominated by $p$}{18/27}
-\slideq{Basic properties/example of bounded sets}{19/27}
-\slider{A subset of a normed space is bounded iff it is contained in $B\l0,R\r$ for $R>0$\linebreak$\set{u_n,n\in\mathbb N}$ for $\l u_n\r$ convergent is bounded\linebreak A finite union/sum of bounded sets is bounded\linebreak A compact set is bounded\linebreak A subset $A$ of a Fréchet space of semi-norms $\l p_n\r$ is bounded iff there exists $\l M_n\r$ such that for all $u\in A$, $p_n\l a\r\leqslant M_n$}{19/27}
-\slideq{Link between bounded and continuous linear maps}{20/27}
-\slider{A continuous linear map is bounde\linebreak A bounded linear map of a normed vector space is bounded\linebreak In a space with a compatible metric invariant by translation, a bounded linear map is continuous iff it is sequentially continuous at $0$}{20/27}
-\slideq{Link between $\bar A$, $\bar B$ and $\bar{A+B}$}{21/27}
-\slider{$\bar A+\bar B\subset\bar{A+B}$}{21/27}
-\slideq{Corollary of Hahn-Banach theorem in $\mathbb K=\mathbb R$ or $\mathbb K=\mathbb C$ on the existence of specific functionals on a TVS $X$}{22/27}
-\slider{If $Y$ is a closed subspace and $v\notin Y$ then there exists a functional $\phi\in X^*$ such that $\phi\equiv0$ on $Y$, $\phi\l v\r=d\l v,Y\r>0$ and $\nrm[X^*]\phi=1$\linebreak If $u\in X$, there exists $\phi\in X^*$ such that $\nrm[X^*]\phi=1$ and $\phi\l u\r=\nrm[X]u$\linebreak$J\!:\!u\mapsto\operatorname{ev}_u$ is a isometry on its image}{22/27}
-\slideq{Properties of a surjective linear map $T\!:\!X\to Y$}{23/27}
-\slider{$T$ is open\linebreak If moreover $\ker T$ is closed the $T$ is continuous}{23/27}
-\slideq{Properties of a non-trivial linear functional $\phi\!:\!X\to\mathbb K$}{24/27}
-\slider{$\phi$ is open}{24/27}
-\slideq{Bounded map}{25/27}
-\slider{A map is bounded if it maps bounded sets to bounded sets}{25/27}
-\slideq{Analytic Hahn-Banach theorem for functionals in $\mathbb K=\mathbb R$ or $\mathbb K=\mathbb C$}{26/27}
-\slider{If $p\!:\!X\to\mathbb R$ is a semi-norm, if $Y$ is a subspace of $X$ and $\phi\!:\!Y\to\mathbb K$ is a functional such that $\left|\phi\right|\leqslant p$ on $Y$ then $\phi$ can be extended to a linear functional on $X$ with its modulus still dominated by $p$}{26/27}
-\slideq{Existence of symmetric neighbourhoods}{27/27}
-\slider{If $W$ is a neighbourhood of $0$ then there exists a neighbourhood $V$ of $0$ such as $V=-V$ and $V+V\subset W$}{27/27}
+\slideq{Weak topology}{1/35}
+\slider{$\sigma\l X,X^*\r$ topology}{1/35}
+\slideq{Topological properties of hyperplanes}{2/35}
+\slider{Hyperplanes are dense or closed\linebreak Dense iff the associated linear map is continuous}{2/35}
+\slideq{Necessary condition for $X$ to be a Fréchet space}{3/35}
+\slider{If $X$ is endowed with a family of separating semi-norms for which the space is complete then $X$ is a Fréchet space}{3/35}
+\slideq{Properties of $\appl{p_A}{X}{\mathbb R_+}{u}{\inf{\set{t>0,u\in tA}}}$ for $A\subset X$ absorbing}{4/35}
+\slider{$p_A$ is well defined and positively homogeneous, $p_A\l0\r=0$ and $p_A$ is sub-additive\linebreak If $A$ is convex, $\set{p_A\l x\r{<}1}\subset A\subset\set{p_A\l x\r{\leqslant}1}$ and if $A$ is open then $A=\set{p_A\l x\r<1}$\linebreak If $A$ is convex and balanced, $p_A$ is a semi-norm\linebreak If $X$ is a normed space and $A$ is a neighbourhood of the origin then there exists $K\geqslant0$ such that $p_A\l u\r\leqslant K\left\|u\right\|_X$}{4/35}
+\slideq{$A\subset X$ is absorbing}{5/35}
+\slider{$\forall u\in X,\exists t>0,tu\in A$}{5/35}
+\slideq{Link between closed and weakly closed sets}{6/35}
+\slider{If $A$ is weakly closed then it is closed\linebreak If $A$ is closed and convex then $A$ is weakly closed}{6/35}
+\slideq{$A\subset X$ is balanced}{7/35}
+\slider{$\forall\left|\lambda\right|\leqslant1,\lambda A\subset A$}{7/35}
+\slideq{Properties of a non-trivial linear functional $\phi\!:\!X\to\mathbb K$}{8/35}
+\slider{$\phi$ is open}{8/35}
+\slideq{Properties of $X^*$ when $X$ is an LCTVS}{9/35}
+\slider{$X^*$ separates points}{9/35}
+\slideq{Hyperplane}{10/35}
+\slider{Kernel of a non-trivial linear map\linebreak It has dimension $1$ (the converse holds)}{10/35}
+\slideq{Properties of a linear map $T\!:\!X\to Y$ with $X$ a finite-dimensional TVS}{11/35}
+\slider{$T$ is continuous}{11/35}
+\slideq{Properties of $A+U$ with $A\subset X$ and $U\subset X$ open}{12/35}
+\slider{$A+U$ is open}{12/35}
+\slideq{Bounded set}{13/35}
+\slider{$A$ is bounded if for all neighbourhood $V$ of $0$, there exists $t_0>0$ such that, for all $t\geqslant t_0$, $A\subset tV$\linebreak$A$ is bounded if for all neighbourhood $V$ of $0$, there exists $t>0$ such that $A\subset tV$}{13/35}
+\slideq{Link between $\bar A$, $\bar B$ and $\bar{A+B}$}{14/35}
+\slider{$\bar A+\bar B\subset\bar{A+B}$}{14/35}
+\slideq{Properties finite-dimensional subspace $Y$ of a TVS $X$}{15/35}
+\slider{$Y$ is closed}{15/35}
+\slideq{Properties of $K+F$ with $K\subset X$ compact and $F\subset X$ closed}{16/35}
+\slider{$K+F$ is closed}{16/35}
+\slideq{Fréchet space}{17/35}
+\slider{Topological vector space with a compatible metric, that is invariant by translation and with which the space is complete}{17/35}
+\slideq{Existence of symmetric neighbourhoods}{18/35}
+\slider{If $W$ is a neighbourhood of $0$ then there exists a neighbourhood $V$ of $0$ such as $V=-V$ and $V+V\subset W$}{18/35}
+\slideq{Properties of $\l X,\sigma\l X,M\r\r$ for $X$ a TVS over $\mathbb K$ and $M\subset\mathcal L\l X,\mathbb K\r$ that separates points}{19/35}
+\slider{It is an LCTVS\linebreak Its topological dual is $M$\linebreak A neighbourhood basis of the origin is given by $V_{\phi,\epsilon}=\set{u\in X,\vala{\phi\l u\r}<\epsilon}$}{19/35}
+\slideq{Structure of complex-valued linear functionals on a TVS $X$}{20/35}
+\slider{A linear functional $\phi\!:\!X\to\mathbb C$ is of the form $\psi\l\cdot\r-\ii\psi\l\ii\cdot\r$ for $\psi\!:\!X\to\mathbb R$ a linear functional\linebreak Conversely, any function of this form defines a linear functional $X\to\mathbb C$}{20/35}
+\slideq{Basic properties/example of bounded sets}{21/35}
+\slider{A subset of a normed space is bounded iff it is contained in $B\l0,R\r$ for $R>0$\linebreak$\set{u_n,n\in\mathbb N}$ for $\l u_n\r$ convergent is bounded\linebreak A finite union/sum of bounded sets is bounded\linebreak A compact set is bounded\linebreak A subset $A$ of a Fréchet space of semi-norms $\l p_n\r$ is bounded iff there exists $\l M_n\r$ such that for all $u\in A$, $p_n\l a\r\leqslant M_n$}{21/35}
+\slideq{Corollary of Hahn-Banach theorem in $\mathbb K=\mathbb R$ or $\mathbb K=\mathbb C$ on the existence of specific functionals on a TVS $X$}{22/35}
+\slider{If $Y$ is a closed subspace and $v\notin Y$ then there exists a functional $\phi\in X^*$ such that $\phi\equiv0$ on $Y$, $\phi\l v\r=d\l v,Y\r>0$ and $\nrm[X^*]\phi=1$\linebreak If $u\in X$, there exists $\phi\in X^*$ such that $\nrm[X^*]\phi=1$ and $\phi\l u\r=\nrm[X]u$\linebreak$J\!:\!u\mapsto\operatorname{ev}_u$ is a isometry on its image}{22/35}
+\slideq{Link between bounded and continuous linear maps}{23/35}
+\slider{A continuous linear map is bounde\linebreak A bounded linear map of a normed vector space is bounded\linebreak In a space with a compatible metric invariant by translation, a bounded linear map is continuous iff it is sequentially continuous at $0$}{23/35}
+\slideq{Weak topology on $X$}{24/35}
+\slider{$\sigma\l X,X^*\r$ the initial topology on $X$ associated to its topological dual}{24/35}
+\slideq{Topologies on a finite-dimensional TVS}{25/35}
+\slider{A finite TVS has a unique topology, associated to the final topology of $\varPhi\!:\!\mathbb K^d\to X$, $\l a_i\r\to\sum{i=1}{k}{a_iw_i}$}{25/35}
+\slideq{Analytic Hahn-Banach theorem for functionals in $\mathbb R$}{26/35}
+\slider{If $p\!:\!X\to\mathbb R$ is a positively homogeneous and sub-additive, if $Y$ is a subspace of $X$ and $\phi\!:\!Y\to\mathbb R$ is a functional such that $\phi\leqslant p$ on $Y$ then $\phi$ can be extended to a linear functional on $X$ still dominated by $p$}{26/35}
+\slideq{Separation of compac and closed sets in a TVS}{27/35}
+\slider{If $X$ is a TVS, $K$ is a compact subset of $X$ and $F$ a closed subset of $X$ then there exists a neighbourhood $V$ of $0$ such that $\l K+V\r\cap\l F+V\r=\varnothing$}{27/35}
+\slideq{CNS for $\exists\lambda_1,\cdots,\lambda_n$, $\phi=\lambda_1\phi_1+\cdots+\lambda_n\phi_n$}{28/35}
+\slider{$\ker\phi\subset\bigcap{i=1}n{\ker\phi_i}$}{28/35}
+\slideq{Analytic Hahn-Banach theorems for functionals in $\mathbb K=\mathbb R$ or $\mathbb K=\mathbb C$}{29/35}
+\slider{If $p\!:\!X\to\mathbb R$ is a semi-norm, if $Y$ is a subspace of $X$ and $\phi\!:\!Y\to\mathbb K$ is a functional such that $\left|\phi\right|\leqslant p$ on $Y$ then $\phi$ can be extended to a linear functional on $X$ with its modulus still dominated by $p$}{29/35}
+\slideq{Properties of a surjective linear map $T\!:\!X\to Y$}{30/35}
+\slider{$T$ is open\linebreak If moreover $\ker T$ is closed the $T$ is continuous}{30/35}
+\slideq{Properties of $\bar A$ and $\mathring A$ when $A$ is convex}{31/35}
+\slider{$\bar A$ and $\mathring{A}$ are convex\linebreak If $\mathring{A}\neq\varnothing$ then $\bar{\mathring A}=\bar A$}{31/35}
+\slideq{Geometric Hahn-Banach theorems}{32/35}
+\slider{If $X$ is a TVS and $A$ and $B$ are two convex disjoint subsets of $X$ then, if $A$ is open, there exists a continuous functional $\phi$ on $X$ and $\gamma\in\mathbb R$ such that $\Re{\phi\l u\r}<\gamma\leqslant\Re{\phi\l v\r}$ for all $u\in A$, $v\in B$\linebreak If $X$ is an LCTVS, $A$ is closed and and $B$ compact then there exists $\gamma_1<\gamma_2\in\mathbb R$ such that $\Re{\phi\l u\r}<\gamma_1<\gamma_2<\Re{\phi\l v\r}$ for all $u\in A$, $v\in B$}{32/35}
+\slideq{$A\subset X$ is convex}{33/35}
+\slider{$tA+\l1-t\r A\subset A$ for all $t\in\lc0,1\rc$}{33/35}
+\slideq{Linear functional}{34/35}
+\slider{Linear map $X\to\mathbb K$ with $X$ a $\mathbb K$-vector space}{34/35}
+\slideq{Bounded map}{35/35}
+\slider{A map is bounded if it maps bounded sets to bounded sets}{35/35}
 \end{document}

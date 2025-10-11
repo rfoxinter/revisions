@@ -30,7 +30,7 @@ $G$ agit sur $X$ proprement (et de manière continue);;$X$ est localement compac
 Propriétés de $E/G$ pour $E$ une variété topologique localement compact, $G$ discret et $G\acts E$ cotinue;;$E/G$ est localement compact et $\pi\!:\!E\to E/G$ est ouverte
 $X$ est une variété différentielle, $G$ un groupe discret\linebreak$G\acts X$ de manière lisse;;$\forall g,x\mapsto g\cdot x$ est un difféomorphisme
 $G\acts X$ est libre;;Pour tout $g\in G\setminus\set 1$, $\set{x\in X,g\cdot x=x}=\varnothing$
-Propriétés de $X/G$ pour $X$ une variété différentielle, $G$ discret et $G\acts X$ de manière lisse, propre et libre;;$X/G$ a une unique structure de variété différentielle telle que $\pi\!:\!X\to X/G$ est lisse\linebreak$\pi$ est alors un revêtement de $X/G$\linebreak En particulier $f\!:\!X/G\to Y$ est lisse  si et seulement si $f\circ\pi\!:\!X\to Y$ est lisse
+Propriétés de $X/G$ pour $X$ une variété différentielle, $G$ discret et $G\acts X$ de manière lisse, propre et libre;;$X/G$ a une unique structure de variété différentielle telle que $\pi\!:\!X\to X/G$ est un revêtement (lisse)\linebreak$\pi$ est alors un revêtement de $X/G$\linebreak En particulier $f\!:\!X/G\to Y$ est lisse  si et seulement si $f\circ\pi\!:\!X\to Y$ est lisse
 Une variété $M$ est muni d'un atlas d'orientation $\l U_i,\phi_i\r$;;Pour tout $i,j$, $\det{\dd_x\l\phi_i\circ\phi_j^{-1}\r}>0$
 $M$ est orientable;;$M$ admet un atlas d'orientation\linebreak Dans le cas où $M$ est connexe et orientable alors elle possède exactement $2$ orientation
 Deux atlas d'orientation $\l U_i,\phi_i\r$ et $\l V_j,\psi_j\r$ sont compatibles;;Pour tout $i,j$, $\det{\dd_x\l\phi_i\circ\psi_j^{-1}\r}>0$

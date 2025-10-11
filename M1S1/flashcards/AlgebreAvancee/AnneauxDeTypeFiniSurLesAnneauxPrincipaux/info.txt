@@ -1,0 +1,5 @@
+"Algèbre avancée &ndash; <i>Anneaux de type fini sur les anneaux principaux</i>"
+1
+0
+[1, 2, 3]
+[0, 0, 0]

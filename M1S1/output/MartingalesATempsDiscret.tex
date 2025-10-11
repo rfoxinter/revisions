@@ -10,22 +10,38 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Martingale}{1/9}
-\slider{$\l X_n\r$ est une martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}=X_n$}{1/9}
-\slideq{Stabilités des sous/sur/\none-martingales}{2/9}
-\slider{Si $\l X_n\r$ et $\l Y_n\r$ sont deux \ssn-martingales alors $\l X_n+Y_n\r$ aussi\linebreak Si $\l X_n\r$ et $\l Y_n\r$ sont des sous-martingales (resp. sur-martingale) alors $\l\max{X_n,Y_n}\r$ (resp. $\l\min{X_n,Y_n}\r$) aussi\linebreak Si $\l X_n\r$ est une martingale et $\phi$ est convexe telle que $\esp{\left|\phi\l X_n\r\right|}<+\infty$ alors $\l\phi\l X_n\r\r$ est une sous-martingale}{2/9}
-\slideq{Processus adapté à une filtration $\l\mathcal F_n\r$}{3/9}
-\slider{$\l X_n\r$ une suite de variables aléatoires avec $X_n$ qui est $\mathcal F_n$-mesurable}{3/9}
-\slideq{Filtration}{4/9}
-\slider{$\l\mathcal F_n\r$ une suite croissante de sous-tribus de $\mathcal F$}{4/9}
-\slideq{Sous-martingale}{5/9}
-\slider{$\l X_n\r$ est une sous-martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}\geqslant X_n$}{5/9}
-\slideq{Processus prévisible}{6/9}
-\slider{$\l H_n\r_{n\in\mathbb N^*}$ est un processus prévisible par rapport à $\l X_n\r_{n\in\mathbb N}$ adapté à $\mathcal F_n$ si $H_n$ est $\mathcal F_{n-1}$-mesurable}{6/9}
-\slideq{Sur-martingale}{7/9}
-\slider{$\l X_n\r$ est une sur-martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}\leqslant X_n$}{7/9}
-\slideq{Intégrales stochastiques de \ssn-martingales}{8/9}
-\slider{Si $\l X_n\r$ est une martingale et $\l H_n\r$ est un processus prévisible de $L^\infty$ alors $\l\l H\cdot X\r_n\r$ est une martingale\linebreak Si $\l X_n\r$ est une sous/sur-martingale et $\l H_n\r$ est un processus prévisible positif de $L^\infty$ alors $\l\l H\cdot X\r_n\r$ est une sous/sur-martingale\linebreak Si $\l X_n\r$ est dans $L^2$ alors on peut avoir $\l H_n\r$ dans $L^2$}{8/9}
-\slideq{Intégrale stochastique (discrète)}{9/9}
-\slider{Soit $\l X_n\r$ un processus adapté à $\mathcal F_n$ et $\l H_n\r$ un processus prévisible, l'intégrale stochastique de $\l H_n\r$ par rapport à $\l X_n\r$ est $\l H\cdot X\r_n=\sum{k=1}{n}{H_k\l X_k-X_{k-1}\r}$}{9/9}
+\slideq{Processus arrêté pour le jeu aléatoire $\l X_n\r$ adapté à la filtration $\l\mathcal F_n\r$ et le temps d'arrêt $T$}{1/17}
+\slider{$X_n^T=X_{n\wedge T}$}{1/17}
+\slideq{Convergence presque-sûre de martingales}{2/17}
+\slider{Si $\l X_n\r$ est une sous/sur-martingale et $\sup{\esp{X_n^{-/+}}}<+\infty$ alors il existe une variable aléatoire $X_\infty$ intégrable telle que $X_n\to X_\infty$ presque-sûrement\linebreak Si $\l X_n\r$ est une \ssn-martingale et $\sup{\left|X_n\right|}<+\infty$ alors il existe une variable aléatoire $X_\infty$ intégrable telle que $X_n\to X_\infty$ presque-sûrement}{2/17}
+\slideq{Filtration}{3/17}
+\slider{$\l\mathcal F_n\r$ une suite croissante de sous-tribus de $\mathcal F$}{3/17}
+\slideq{Théorème d'arrêt de Doobs}{4/17}
+\slider{Si $S\leqslant T$ sont deux temps d'arrêt bornés et $\l X_n\r$ est une \ssn-martingale alors $\esp{X_T\sq\mathcal F_S}=X_S$ et en particulier, $\esp{X_T}=\esp{X_S}=\esp{X_0}$ (resp. $\geqslant$/$\leqslant$)\linebreak Si $T$ est borné, ou $T$ est intégrable et $\left|X_{n+1}-X_n\right|\leqslant M$ p.s. ou $T$ est p.s. fini et $\left|X_{n\wedge T}\right|\leqslant M$ alors $X_T$ est intégrable et $\esp{X_T}=\esp{X_0}$ (resp. $\geqslant$/$\leqslant$)}{4/17}
+\slideq{Théorème de la martingale arrêtée}{5/17}
+\slider{Si $\l X_n\r$ est une \ssn-martingale alors $\l X_{n\wedge T}\r$ aussi}{5/17}
+\slideq{Tribu engendrée par un temps d'arrêt}{6/17}
+\slider{$\mathcal F_T=\set{A\in\mathcal F_\infty,\forall n\in\mathbb N,A\cap\set{T=n}\in\mathcal F_n}$}{6/17}
+\slideq{Combinaisons possibles sur les temps d'arrêt}{7/17}
+\slider{Si $S$ et $T$ sont deux temps d'arrêt, $T\wedge S$, $T\vee S$, $T+S$ sont des temps d'arrêt}{7/17}
+\slideq{Intégrale stochastique (discrète)}{8/17}
+\slider{Soit $\l X_n\r$ un processus adapté à $\mathcal F_n$ et $\l H_n\r$ un processus prévisible, l'intégrale stochastique de $\l H_n\r$ par rapport à $\l X_n\r$ est $\l H\cdot X\r_n=\sum{k=1}{n}{H_k\l X_k-X_{k-1}\r}$}{8/17}
+\slideq{Sur-martingale}{9/17}
+\slider{$\l X_n\r$ est une sur-martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}\leqslant X_n$}{9/17}
+\slideq{Processus adapté à une filtration $\l\mathcal F_n\r$}{10/17}
+\slider{$\l X_n\r$ une suite de variables aléatoires avec $X_n$ qui est $\mathcal F_n$-mesurable}{10/17}
+\slideq{Stabilités des sous/sur/\none-martingales}{11/17}
+\slider{Si $\l X_n\r$ et $\l Y_n\r$ sont deux \ssn-martingales alors $\l X_n+Y_n\r$ aussi\linebreak Si $\l X_n\r$ et $\l Y_n\r$ sont des sous-martingales (resp. sur-martingale) alors $\l\max{X_n,Y_n}\r$ (resp. $\l\min{X_n,Y_n}\r$) aussi\linebreak Si $\l X_n\r$ est une martingale et $\phi$ est convexe telle que $\esp{\left|\phi\l X_n\r\right|}<+\infty$ alors $\l\phi\l X_n\r\r$ est une sous-martingale}{11/17}
+\slideq{Martingale}{12/17}
+\slider{$\l X_n\r$ est une martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}=X_n$}{12/17}
+\slideq{Lien entre tribus de temps d'arrêt}{13/17}
+\slider{Si $S\leqslant T$ alors $\mathcal F_S\subset\mathcal F_T$}{13/17}
+\slideq{Processus prévisible}{14/17}
+\slider{$\l H_n\r_{n\in\mathbb N^*}$ est un processus prévisible par rapport à $\l X_n\r_{n\in\mathbb N}$ adapté à $\mathcal F_n$ si $H_n$ est $\mathcal F_{n-1}$-mesurable}{14/17}
+\slideq{Temps d'arrêt pour le jeu aléatoire $\l X_n\r$ adapté à la filtration $\l\mathcal F_n\r$}{15/17}
+\slider{Variable aléatoire $T\!:\!\varOmega\to\mathbb N\cup\set{+\infty}$ telle que $\set{T=n}$ (ou de manière équivalente $\set{T\leqslant n}$) est $\mathcal F_n$-mesurable}{15/17}
+\slideq{Intégrales stochastiques de \ssn-martingales}{16/17}
+\slider{Si $\l X_n\r$ est une martingale et $\l H_n\r$ est un processus prévisible de $L^\infty$ alors $\l\l H\cdot X\r_n\r$ est une martingale\linebreak Si $\l X_n\r$ est une sous/sur-martingale et $\l H_n\r$ est un processus prévisible positif de $L^\infty$ alors $\l\l H\cdot X\r_n\r$ est une sous/sur-martingale\linebreak Si $\l X_n\r$ est dans $L^2$ alors on peut avoir $\l H_n\r$ dans $L^2$}{16/17}
+\slideq{Sous-martingale}{17/17}
+\slider{$\l X_n\r$ est une sous-martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}\geqslant X_n$}{17/17}
 \end{document}

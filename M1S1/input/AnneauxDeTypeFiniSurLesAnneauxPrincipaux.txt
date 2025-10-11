@@ -1,0 +1,7 @@
+Algèbre avancée -- Anneaux de type fini sur les anneaux principaux
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{matrices,al}\usepackage[nopar]{bigoperators}\makeatletter\@ifclassloaded{beamer}{\setlength{\matsep}{3.5pt}\setlength{\matmin}{15pt}}{\setlength{\matsep}{2.5pt}\setlength{\matmin}{12.5pt}}\makeatother
+Sous-modules de $A$-modules libres;;Un sous-module d'un $A$ module de rang $n$ est libre de rang au plus $n$\linebreak En particulier, tout sous-module d'un module de type fini est de type fini, et même de présentation finie
+Théorème de la forme normale de Smith;;Si $M$ est une matrice de $\mat mnA$ alors il existe $P\in\matgl mA$ et $Q\in\matgl nA$ telles que $PMQ$ est de la forme $\tmatrix[\mtxvline{line width = 0.05em}{3}\mtxhline{line width = 0.05em}{3}]({d_1\&\&\&0\\\&\ddots\&\&\vdots\\\&\&d_r\&0\\0\&\mdots\&0\&0\\})$ avec $d_1\mid\cdots\mid d_r$ non nuls
+Théorème de structure des $A$-modules de type fini;;Si $V$ est un $A$-module de type fini alors $V\cong A^s\oplus\bigoplus{i=1}{r}{A/\l d_i\r}$ avec $d_1\mid\cdots\mid d_r$ non nuls
