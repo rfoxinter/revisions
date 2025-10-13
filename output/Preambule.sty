@@ -16,6 +16,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{ifpdf}
+\usepackage{graphics}
 
 \if@notnofont
     \usepackage{amsfonts, amssymb}
@@ -83,15 +84,12 @@
 \newlength\bshft
 \bshft=.18pt\relax
 \def\fakebold#1{\setbox0=\hbox{$#1$}#1\kern-\wd0\kern\bshft#1\kern-\wd0\kern\bshft#1}
-\newsavebox{\foobox}
-\newcommand{\slantbox}[2][0]{\mbox{%
-    \sbox{\foobox}{#2}%
-    \hskip\wd\foobox
-    \pdfsave
-    \pdfsetmatrix{1 0 #1 1}%
-    \llap{\usebox{\foobox}}%
-    \pdfrestore
-}}
+\newcommand{\slantbox}[2][0]{%
+    \begingroup%
+        \edef\angle{\the\numexpr atan(#1/2)*180/3.14159\relax}%
+        \rotatebox{\angle}{\scalebox{1}[1]{\rotatebox{-\angle}{#2}}}%
+    \endgroup%
+}
 \newcommand{\unslant}[2][-.25]{\slantbox[#1]{$#2$}}
 \let\oldOmega\Omega
 \let\oldTheta\Theta
