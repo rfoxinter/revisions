@@ -16,7 +16,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{ifpdf}
-\usepackage{graphics}
+\usepackage{tikz}
 
 \if@notnofont
     \usepackage{amsfonts, amssymb}
@@ -84,11 +84,12 @@
 \newlength\bshft
 \bshft=.18pt\relax
 \def\fakebold#1{\setbox0=\hbox{$#1$}#1\kern-\wd0\kern\bshft#1\kern-\wd0\kern\bshft#1}
-\newcommand{\slantbox}[2][0]{%
-    \begingroup%
-        \edef\angle{\the\numexpr atan(#1/2)*180/3.14159\relax}%
-        \rotatebox{\angle}{\scalebox{1}[1]{\rotatebox{-\angle}{#2}}}%
-    \endgroup%
+\newcommand{\slantbox}[2][-.25]{\kern-2pt%
+    \begin{tikzpicture}[outer sep=0, inner sep=0]%
+    \begin{scope}[cm={1,0,-.25,1,(0,0)},baseline=0,outer sep=0, inner sep=0]
+    \node[transform shape] at (0,0) {#2};%
+    \end{scope}%
+    \end{tikzpicture}%
 }
 \newcommand{\unslant}[2][-.25]{\slantbox[#1]{$#2$}}
 \let\oldOmega\Omega
