@@ -82,11 +82,9 @@ text.f9 {font-family:cmr12;font-size:11.955168px}
 <text class='f7' x='84.573596' y='13.524965' transform='matrix(1.000001 0 0 1 -.000099 0)'>1</text>
 <text class='f9' x='89.305911' y='11.731702' transform='matrix(1.000001 0 0 1 -.000099 0)'>)</text>
 <text class='f3' x='97.179066' y='11.731702' transform='matrix(1.000001 0 0 1 -.000099 0)'>↦→</text>
-<text class='f5' x='115.861072' y='6.475883'  transform='matrix(1 0 0.25 1 -1.61907 0.0)'>∂</text>
-<text class='f5' x='115.861072' y='6.475883' transform='matrix(1.000001 0 0 1 -.000099 0)'><tspan x='120.493755'>f</tspan></text>
+<text class='f5' x='115.861072' y='6.475883' transform='matrix(1.000001 0 0 1 -.000099 0)'>∂<tspan x='120.493755'>f</tspan></text>
 <rect x='113.650612' y='8.503816' height='.478187' width='14.000355' transform='matrix(1.000001 0 0 1 -.000099 0)'/>
-<text class='f5' x='113.650612' y='15.854334'  transform='matrix(1 0 0.25 1 -3.963682 0.0)'>∂</text>
-<text class='f5' x='113.650612' y='15.854334' transform='matrix(1.000001 0 0 1 -.000099 0)'><tspan x='117.785162'>x</tspan></text>
+<text class='f5' x='113.650612' y='15.854334' transform='matrix(1.000001 0 0 1 -.000099 0)'>∂<tspan x='117.785162'>x</tspan></text>
 <text class='f4' x='122.552061' y='17.846862' transform='matrix(1.000001 0 0 1 -.000099 0)'>n</text>
 <text class='f9' x='128.84648' y='11.731702' transform='matrix(1.000001 0 0 1 -.000099 0)'>(</text>
 <text class='f6' x='133.398806' y='11.731702' transform='matrix(1.000001 0 0 1 -.000099 0)'>x</text>
@@ -102,8 +100,7 @@ text.f9 {font-family:cmr12;font-size:11.955168px}
 <text class='f8' x='48.351868' y='27.807313' transform='matrix(1.000001 0 0 1 -.000099 0)'>est<tspan x='66.621952'>lisse)</tspan><tspan x='-24.407799' y='42.253141'>Le</tspan><tspan x='-7.992805'>b</tspan><tspan x='-1.165924'>ord</tspan><tspan x='19.639852'>de</tspan></text>
 <text class='f6' x='35.2442' y='42.253141' transform='matrix(1.000001 0 0 1 -.000099 0)'>M</text>
 <text class='f8' x='51.718888' y='42.253141' transform='matrix(1.000001 0 0 1 -.000099 0)'>est</text>
-<text class='f6' x='69.988972' y='42.253141'  transform='matrix(1 0 0.25 1 -10.563384000000001 0.0)'>∂</text>
-<text class='f6' x='69.988972' y='42.253141' transform='matrix(1.000001 0 0 1 -.000099 0)'><tspan x='76.021826'>M</tspan></text>
+<text class='f6' x='69.988972' y='42.253141' transform='matrix(1.000001 0 0 1 -.000099 0)'>∂<tspan x='76.021826'>M</tspan></text>
 <text class='f9' x='91.916262' y='42.253141' transform='matrix(1.000001 0 0 1 -.000099 0)'>=</text>
 <text class='f1' x='104.341743' y='33.286689' transform='matrix(1.000001 0 0 1 -.000099 0)'>⋃</text>
 <text class='f6' x='116.296911' y='42.253141' transform='matrix(1.000001 0 0 1 -.000099 0)'>ϕ</text>
@@ -111,7 +108,7 @@ text.f9 {font-family:cmr12;font-size:11.955168px}
 <text class='f7' x='130.551786' y='37.305007' transform='matrix(1.000001 0 0 1 -.000099 0)'>1</text>
 <text class='f5' x='123.965279' y='45.316954' transform='matrix(1.000001 0 0 1 -.000099 0)'>i</text>
 <text class='f9' x='135.284101' y='42.253141' transform='matrix(1.000001 0 0 1 -.000099 0)'>(</text>
-<text class='f6' x='139.836427' y='42.253141'  transform='matrix(1 0 0.25 1 -10.563384000000001 0.0)'>∂</text>
+<text class='f6' x='139.836427' y='42.253141' transform='matrix(1.000001 0 0 1 -.000099 0)'>∂</text>
 <text class='f0' x='145.86928' y='42.253141' transform='matrix(.865001 0 0 1 19.692238 0)'>H</text>
 <text class='f5' x='154.680036' y='37.232859' transform='matrix(1.000002 0 0 1 -.000179 0)'>n</text>
 <text class='f9' x='160.31637' y='42.253141' transform='matrix(1.000002 0 0 1 -.000179 0)'>)</text>

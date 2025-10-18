@@ -15,6 +15,7 @@
 \usepackage{adjustbox}
 \usepackage{amsmath}
 \usepackage{ifpdf}
+\usepackage{tikz}
 
 \if@notnofont
     \usepackage{amsfonts, amssymb}
@@ -72,15 +73,13 @@
 \newlength\bshft
 \bshft=.18pt\relax
 \def\fakebold#1{\setbox0=\hbox{$#1$}#1\kern-\wd0\kern\bshft#1\kern-\wd0\kern\bshft#1}
-\newsavebox{\foobox}
-\newcommand{\slantbox}[2][0]{\mbox{%
-    \sbox{\foobox}{#2}%
-    \hskip\wd\foobox
-    \pdfsave
-    \pdfsetmatrix{1 0 #1 1}%
-    \llap{\usebox{\foobox}}%
-    \pdfrestore
-}}
+\newcommand{\slantbox}[2][-.25]{\kern-.125em%
+    \begin{tikzpicture}[outer sep=0, inner sep=0]%
+    \begin{scope}[cm={1,0,-.25,1,(0,0)},baseline=0,outer sep=0, inner sep=0]
+    \node[transform shape] at (0,0) {#2};%
+    \end{scope}%
+    \end{tikzpicture}%
+}
 \newcommand{\unslant}[2][-.25]{\slantbox[#1]{$#2$}}
 \let\oldOmega\Omega
 \let\oldTheta\Theta

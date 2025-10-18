@@ -1,7 +1,7 @@
 Probabilités avancées -- Martingales à temps discret
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{probas,usuelles,bigoperators}\togglebigoppar\def\none{\ensuremath{\emptyset}}\def\ssn{sous/sur/\none}
+\usepackage{probas,usuelles,bigoperators}\togglebigoppar\togglebornelimits\def\none{\ensuremath{\emptyset}}\def\ssn{sous/sur/\none}
 Filtration;;$\l\mathcal F_n\r$ une suite croissante de sous-tribus de $\mathcal F$
 Processus adapté à une filtration $\l\mathcal F_n\r$;;$\l X_n\r$ une suite de variables aléatoires avec $X_n$ qui est $\mathcal F_n$-mesurable
 Martingale;;$\l X_n\r$ est une martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}=X_n$
@@ -18,4 +18,8 @@ Lien entre tribus de temps d'arrêt;;Si $S\leqslant T$ alors $\mathcal F_S\subse
 Processus arrêté pour le jeu aléatoire $\l X_n\r$ adapté à la filtration $\l\mathcal F_n\r$ et le temps d'arrêt $T$;;$X_n^T=X_{n\wedge T}$
 Théorème de la martingale arrêtée;;Si $\l X_n\r$ est une \ssn-martingale alors $\l X_{n\wedge T}\r$ aussi
 Théorème d'arrêt de Doobs;;Si $S\leqslant T$ sont deux temps d'arrêt bornés et $\l X_n\r$ est une \ssn-martingale alors $\esp{X_T\sq\mathcal F_S}=X_S$ et en particulier, $\esp{X_T}=\esp{X_S}=\esp{X_0}$ (resp. $\geqslant$/$\leqslant$)\linebreak Si $T$ est borné, ou $T$ est intégrable et $\left|X_{n+1}-X_n\right|\leqslant M$ p.s. ou $T$ est p.s. fini et $\left|X_{n\wedge T}\right|\leqslant M$ alors $X_T$ est intégrable et $\esp{X_T}=\esp{X_0}$ (resp. $\geqslant$/$\leqslant$)
-Convergence presque-sûre de martingales;;Si $\l X_n\r$ est une sous/sur-martingale et $\sup{\esp{X_n^{-/+}}}<+\infty$ alors il existe une variable aléatoire $X_\infty$ intégrable telle que $X_n\to X_\infty$ presque-sûrement\linebreak Si $\l X_n\r$ est une \ssn-martingale et $\sup{\left|X_n\right|}<+\infty$ alors il existe une variable aléatoire $X_\infty$ intégrable telle que $X_n\to X_\infty$ presque-sûrement
+Théorème de convergence presque-sûre de martingales;;Si $\l X_n\r$ est une sous/sur-martingale et $\sup{\esp{X_n^{-/+}}}<+\infty$ alors il existe une variable aléatoire $X_\infty$ intégrable telle que $X_n\to X_\infty$ presque-sûrement\linebreak Si $\l X_n\r$ est une \ssn-martingale et $\sup{\left|X_n\right|}<+\infty$ alors il existe une variable aléatoire $X_\infty$ intégrable telle que $X_n\to X_\infty$ presque-sûrement
+Théorème de la martingale arrêtée de Doob;;Soit $\l X_n\r$ une sous-martingale avec $\l X_n\r\in L^p$, alors pour tout $\lambda>0$ et tout $n\in\mathbb N$, $\p{\max[k\in\llb0,n\rrb]{X_k}\geqslant\lambda}\leqslant\frac1\lambda\esp{X_n\mathbb1_{\togglebornelimits\set{\max[k\in\llb0,n\rrb]{X_k}\geqslant\lambda}}}\leqslant\esp{X_n^+}$
+Inégalité maximale de Komogorov;;Soit $\l X_n\r$ une martingale de carré sommable, alors pour tout $\lambda>0$ et tout $n\in\mathbb N$, $\p{\max[k\in\llb0,n\rrb]{X_k}\geqslant\lambda}\leqslant\frac{\esp{X_n^2}}{\lambda^2}$
+Inégalité $L^p$ de Doob;;Soient $\l X_n\r$ une martingale, $X_n^*=\max[k\in\llb0,n\rrb]{\left|X_k\right|}$, $p\in\left]1,+\infty\right[$ et $q=\frac{p}{p-1}$, alors pour tout $n\in\mathbb N$, $\esp{\l X_n^*\r^p}^{\oldfrac1p}\leqslant q\esp{\left|X_n\right|^p}^{\oldfrac 1p}$
+Théorème de convergence $L^p$ de martingales;;Si $\l X_n\r$ est une martingale bornée dans $L^p$ alors $\l X_n\r$ converge presque-sûrement vers $X_\infty$ dans $L^p$\linebreak En particulier, $\esp{\left|X_\infty\right|^p}^{\oldfrac1p}\leqslant\frac{p}{p-1}\sup[n\in\mathbb N]{\esp{\left|X_n\right|^p}^{\oldfrac1p}}$\linebreak De plus, $\esp{\l X_\infty^*\r^p}^{\oldfrac1p}\leqslant\frac{p}{p-1}\esp{\left|X_\infty\right|^p}^{\oldfrac1p}$
