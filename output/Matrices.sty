@@ -26,7 +26,6 @@
 \newlength{\dotlift}
 \newlength{\matsep}
 \newlength{\matmin}
-\makeatletter
 \@ifclassloaded{beamer}{
     \setlength{\dotsep}{5.5pt}
     \setlength{\dotlift}{1.5pt}
@@ -123,7 +122,6 @@
   \global\pgf@ya=\pgf@ya
   \global\pgf@xb=\pgf@xb
   \global\pgf@yb=\pgf@yb}
-\makeatletter
 \newcommand\mtxvline[2]{
     \comparestring{#2}{left}{
         \path (m.west) coordinate (X);
