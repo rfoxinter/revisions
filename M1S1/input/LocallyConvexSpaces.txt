@@ -45,3 +45,7 @@ Banach-Alaoglu theorem;;Let $E$ be a normed vector space, then $\bar{\mathcal B_
 Properties of the weak-$*$ topology on $\bar{\mathcal B_{E^*}}\l0,1\r$ if $E$ is separable;;It is metrizable\linebreak Consequently, $\bar{\mathcal B_{E^*}}\l0,1\r\subset E$ is compact iff it is sequentially compact
 Reflexive normed vector space;;$E$ is reflexive iff $E^{**}=J\l E\r$
 Kakutani theorem;;Let $E$ be a normed vector space, then $E$ is reflexive iff the unit ball $\bar{\mathcal B_E}\l0,1\r$ is weakly compact
+Metrizability of $\sigma\l E,E^*\r$ for $E$ an infinite-dimensional normed vector space;;$\sigma\l E,E^*\r$ is not metrizable
+A normed vector space $E$ is uniformly convex;;For all $\epsilon>0$, there exists $\delta>0$ such that if $\nrm u=1$, $\nrm v=1$ and $\nrm{u-v}>\epsilon$ then $\nrm{\frac{u+v}2}<1-\delta$
+Properties of weak-converging sequences;;$u_n\rightharpoonup u$ iff for all $\phi\in E^*$, $\phi\l u_n\r\to\phi\l u\r$\linebreak If $u_n\rightharpoonup u$ then $\nrm u\leqslant\limi[n\in\mathbb N]{\nrm{u_n}}$\linebreak If $u_n\rightharpoonup u$ and $\phi_n\to\phi$ then $\phi\l u_n\r\to\phi\l u\r$\linebreak If $E$ is uniformly convex, $u_n\rightharpoonup u$ and $\nrm{u_n}\to\nrm u$ then $u_n\to u$
+\v{S}mulian theorem;;If $E$ is a normed vector space and $K\subset E$, then if $K$ is weakly compact then $K$ is weakly sequentially compact\linebreak In perticular, if $E$ is reflexive and $\l u_n\r$ is a bounded sequence then $\l u_n\r$ has an a weakly convergent subsequence

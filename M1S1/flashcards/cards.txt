@@ -1,4 +1,6 @@
 https://rfoxinter.github.io/revisions/flashcards/
+../M1S1/flashcards/AlgebreAvancee/Localisation
+20251024173752
 ../M1S1/flashcards/AlgebreAvancee/ModulesDeTypeFiniSurLesAnneauxPrincipaux
 20251018092222
 ../M1S1/flashcards/AlgebreAvancee/ModulesSurUnAnneau
@@ -6,9 +8,9 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S1/flashcards/AnalyseAnancee/GeneralTopology
 20250910180220
 ../M1S1/flashcards/AnalyseAnancee/LocallyConvexSpaces
-20251018104750
+20251024184536
 ../M1S1/flashcards/GeometrieAvancee/ChampsDeVecteurs
-20251018110355
+20251024190829
 ../M1S1/flashcards/GeometrieAvancee/FibresTangentsEtDifferentiels
 20251011100938
 ../M1S1/flashcards/GeometrieAvancee/VarietesDifferentiellesAbstraites
@@ -16,4 +18,4 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S1/flashcards/ProbabilitesAvancees/EsperanceConditionnelle
 20250927100339
 ../M1S1/flashcards/ProbabilitesAvancees/MartingalesATempsDiscret
-20251018093733
+20251024182656

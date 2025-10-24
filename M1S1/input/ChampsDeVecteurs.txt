@@ -1,10 +1,23 @@
 Géométrie avancée -- Champs de vecteurs
 Shuffle questions : True
 Q/R & R/Q : False
-\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\DeclareMathOperator{\oldder}{Der}\def\Der#1{\oldder\l#1\r}\usepackage[nopar]{analyse,bigoperators}
+\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\DeclareMathOperator{\oldder}{Der}\def\Der#1{\oldder\l#1\r}\usepackage[nopar]{analyse,bigoperators}\togglebigoppar
 $\cv U$;;Ensemble des champs de vecteurs lisses sur $U$\linebreak Ensemble des sections lisses $s\!:\!U\to\tg U$
 Dérivation sur $U\subset M$ un ouvert dans une vériété différentielle;;Application linéaire $\delta\!:\!\mathcal C^\infty\l U,\mathbb R\r\to\mathcal C^{\infty}\l U,\mathbb R\r$ qui vérifie la règle de Leibniz: $\delta\l fg\r=\delta\l f\r g+f\delta\l g\r$\linebreak On note $\Der U$ les dérivations sur $U$
 Restriction d'une dérivation;;Si $U\subset V\subset M$ sont ouverts alors on dispose d'une application canonique de restriction $\rho\!:\!\Der V\to\Der U$ définie par $\rho\l\delta\r\l f\r=\delta_{|U}\l f\r$
 Construction de dérivations sur $M$;;Si $\l U_i\r$ est un recouvrement d'ouverts de $M$ et $\delta_i\in\Der{U_i}$ sont des dérivations telles que ${\delta_i}_{|U_i\cap U_j}={\delta_j}_{|U_i\cap U_j}$ alors il existe une unique dérivation $\delta\in\Der M$ telle que $\delta_{|U_i}=\delta_i$
 Lien entre $\cv U$ et $\Der U$, $U\subset\mathbb R^n$ ouvert;;L'application $X=\l X_1,\cdots,X_n\r\mapsto L_X=\sum{i=1}n{X_i\pder[][x_i]{}{}}$ est un isomorphisme d'espaces vectoriels sur $\mathbb R$
 Lien entre $\cv M$ et $\Der M$, $M$ variété différentielle;;L'application $X\mapsto L_X={x\mapsto \dd_xf\l X\l x\r\r}$ est un isomorphisme d'espaces vectoriels sur $\mathbb R$
+$X\in\cv M$, $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*X$;;$\appl{\phi_*X}{N}{\tg N}{y}{\dd_{\phi^{-1}\l y\r}\phi\l X_{\phi^{-1}\l y\r}\r}\in\cv N$
+$X\in\Der M$, $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\delta$;;$\appl{\phi_*\delta}{\mathcal C^\infty N}{\mathcal C^\infty N}{f}{\delta\l f\circ\phi\r\circ\phi^{-1}}$
+$\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi^*$;;$\phi^*X=\l\phi_*\r^{-1}$
+$\lc\delta_1,\delta_2\rc$, $\delta_1,\delta_2\in\Der M$;;$\delta_1\delta_2-\delta_2\delta_1\in\Der M$
+$\lc X,Y\rc$, $X,Y\in\cv M$;;L'unique élément de $\Der M$ tel que $L_{\lc X,Y\rc}=\lc L_X,L_Y\rc$
+$\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\lc X,Y\r$;;$\lc\phi_*X,\phi_*Y\rc$
+Identité de Jacobi;;$\lc X,\lc Y,Z\rc\rc+\lc Y,\lc Z,X\rc\rc+\lc Z,\lc X,Y\rc\rc=0$
+$X\in\cv M$, une courbe lisse $c$ est itégrable;;$c'=X_c=X\circ c$
+Solutions à $c_x'=X_{c_x}$, $X\in\cv U$;;Si $x\in U$ alors il existe un intervalle $I$ ouvert et contenant $0$ et une courbe intégrable $c_x$ tels que $c_x\l 0\r=x$ et $c'=X_c$, un tel $c$ est unique et on peut définir un intervalle maximal de définition $I\l x\r=\left]a\l x\r,b\l x\r\right[$ de $c$\linebreak$\varOmega=\bigcup{x\in U}{}{I\l x\r\times\set x}$ est un ouvert qui contient $\set0\times U$
+Flot de champ de vecteur $X$;;$\appl{\phi^X}{\varOmega}{U}{\l t,x\r}{c_x\l t\r}$\linebreak On note $\phi^X_t=\phi^X\l t,\cdot\r$
+Propriétés de $\phi^X$;;$\phi^X_0=\id_U$\linebreak$\phi^X_{t_2}\circ\phi^X_{t_1}=\phi^X_{t_1+t_2}=\phi^X_{t_1}\circ\phi^X_{t_2}$\linebreak$\phi^X\!:\!\varOmega\cap\l\set t\times U\r\to\varOmega\cap\l\set{-t}\times U\r$ est un difféomorphisme
+$\varOmega\subset I\times U$ ouvert tel que $\set0\times U\subset\varOmega$\linebreak$h\!:\!\varOmega\to U$ est un groupe à $1$-paramètre;;$h\l0,\cdot\r=\id_U$\linebreak Dès que ça a un sens, $h\l t,h\l t',x\r\r=h\l t+t',x\r$
+$\psi\!:\!U\to V$ difféomorphisme\linebreak$\phi^{\psi_*X}$;;$\psi\circ\phi^X\circ\psi^{-1}$
