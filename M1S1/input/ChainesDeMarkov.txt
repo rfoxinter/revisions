@@ -1,0 +1,9 @@
+Probabilités avancées -- Chaînes de Markov
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{probas}\usepackage[nopar]{bigoperators}
+Chaîne de Markov homogène;;Processus aléatoire $\l X_n\r$ à valeurs dans $E$ au plus dénombrable tel que $\p{X_{n+1}=x_{n+1}\sq X_0,\cdots,X_n}=\p{X_{n+1}=x_{n+1}\sq X_n}$ et $\p{X_{n+1}=y\sq X_n=x}=\p{X_1=y\sq X_0=x}$
+Noyau de transition;;$P\!:\!E\times E\to\lc0,1\rc$ telle que, pour tout $x\in E$, $\sum{y\in E}{}{P\l x,y\r}=1$\linebreak Le noyau de transition associé à une chaîne de Markov est $P\l x,y\r=\p{X_1=y\sq X_0=x}$
+Mesure $\mathbb P_x$ pour un noyau de transition $P$;;Il existe une unique mesure $\mathbb P_x$ sur $E^{\mathbb N}$ telle que si $X_i\!:\!E^{\mathbb N}\to E$ est la projection sur le coefficient $i$ alors $\p[x]{X_0=x}=1$ et telle que $\l X_n\r$ soit une chaîne de Markov de transition $P$
+Mesure $\mathbb P_\mu$ pour un noyau de transition $P$ et une mesure de probabilités $\mu$;;$\mathbb P_\mu=\sum{x\in E}{}{\mu\l\set x\r\mathbb P_x}$
+Propriété de Markov faible;;Si $\l X_n\r$ est une chaîne de Markov alors\linebreak$\forall m,n\geqslant1$, $\forall A\subset E^{n+1}$, $\forall B\subset E^{n}$, $\p[\!\!x]{\l X_0{,}{\cdot}{\cdot}{\cdot}{,}X_n\r{\in}A{,}\l X_n{,}{\cdot}{\cdot}{\cdot}{,}X_{n+m}\r{\in}B\!\sq\!X_n{=}y}{=}$\linebreak$\p[\!\!x]{\l X_0{,}{\cdot}{\cdot}{\cdot}{,}X_n\r{\in}A\!\sq\!X_n{=}y}\p[\!\!y]{\l X_n{,}{\cdot}{\cdot}{\cdot}{,}X_{n+m}\r{\in}B}$\linebreak Pour toute $F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+m}\r_{n\in\mathbb N}\r\sq\mathcal F_m}=\esp[X_m]{F}$
