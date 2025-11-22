@@ -1,0 +1,12 @@
+Géométrie avancée -- Formes différentielles
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al}\usepackage[nopar]{bigoperators}\DeclareMathOperator{\oldtens}{T}\def\tens#1{\oldtens\l#1\r}\newcommand{\ext}[2][]{\mathop{}\mkern-3mu{\textstyle\bigwedge^{#1}}\l#2\r}\def\bbN{\mathbb N}\DeclareMathOperator{\oldalt}{A}\newcommand{\falt}[2][]{\oldalt_{#1}\l#2\r}
+Espace des tenseurs de type $\l r,s\r$ associés à $V$;;$V_{r,s}=V^{\otimes r}\otimes\l V^*\r^{\otimes s}$
+Algèbre tensorielle de $V$;;$\tens V=\bigoplus{r,s\in\bbN}{}{V_{r,s}}$\linebreak C'est une algèbre associative (bi-)graduée et les tenseurs de $V_{r,s}$ sont appelés tenseurs homogènes de (bi-)degré $\l r,s\r$
+Tenseur pur de $\tens V$;;Tenseur de la forme $u_1\otimes\cdots\otimes v_r\otimes u_1^*\otimes\cdots\otimes u_s^*$
+Algèbre extérieure de $V$;;$\ext V=\operatorname{C}\l V\r/\operatorname{I}\l V\r$ où $\operatorname{C}\l V\r=\bigoplus{k\in\bbN}{}{V_{k,0}}$ et $\operatorname{I}\l V\r$ est l'idéal bilatère de $\operatorname{C}\l V\r$ engendré par $\set{v\otimes v,v\in V}$\linebreak$\ext V$ est une algèbre graduée\linebreak$\ext[k]V=V_{k,0}/\operatorname{I}_k\l V\r$ où $\operatorname{I}_k\l V\r=\operatorname{I}\l V\r\cap V_{k,0}$
+Lien entre $u\wedge v$ et $v\wedge u$ pour $u\in\ext[r]V$ et $v\in\ext[s]V$;;$u\wedge v=\l-1\r^{rs}v\wedge u$
+$\dim{\ext[k]V}$;;$\binom dk$ pour $d=\dim V$
+$\falt V$;;$\bigoplus{k\in\bbN}{}{\falt[k]V}$ où $\falt[k]V$ est l'espace vectoriel des formes $k$-linéaires alternées
+Porpriété universelle de $\l\ext[k]V,\pi\!:\!V^k\to\ext[k]V\r$;;Pour tout $\mathbb R$-ev $F$ et tout $\phi\:\!V^k\to F$ application $k$-linéaire alternée, il existe une unique application $\overline\phi\!:\!\ext[k]V\to F$ linéaire telle que $\overline\phi\circ\pi=\phi$

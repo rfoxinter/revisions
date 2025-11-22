@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\DeclareMathOperator{\oldder}{Der}\def\Der#1{\oldder\l#1\r}\usepackage[nopar]{analyse,bigoperators}\togglebigoppar
+\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\DeclareMathOperator{\oldder}{Der}\def\Der#1{\oldder\l#1\r}\usepackage[nopar]{analyse,bigoperators}\togglebigoppar\usepackage{arrows}\def\bbN{\mathbb N}\def\bbR{\mathbb R}
 \hypersetup{pdftitle=Géométrie avancée -- Champs de vecteurs}
 \title{Géométrie avancée\\\emph{Champs de vecteurs}}
 \author{}
@@ -10,42 +10,72 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Flot de champ de vecteur $X$}{1/19}
-\slider{$\appl{\phi^X}{\varOmega}{U}{\l t,x\r}{c_x\l t\r}$\linebreak On note $\phi^X_t=\phi^X\l t,\cdot\r$}{1/19}
-\slideq{$X\in\cv M$, une courbe lisse $c$ est itégrable}{2/19}
-\slider{$c'=X_c=X\circ c$}{2/19}
-\slideq{Solutions à $c_x'=X_{c_x}$, $X\in\cv U$}{3/19}
-\slider{Si $x\in U$ alors il existe un intervalle $I$ ouvert et contenant $0$ et une courbe intégrable $c_x$ tels que $c_x\l 0\r=x$ et $c'=X_c$, un tel $c$ est unique et on peut définir un intervalle maximal de définition $I\l x\r=\left]a\l x\r,b\l x\r\right[$ de $c$\linebreak$\varOmega=\bigcup{x\in U}{}{I\l x\r\times\set x}$ est un ouvert qui contient $\set0\times U$}{3/19}
-\slideq{Identité de Jacobi}{4/19}
-\slider{$\lc X,\lc Y,Z\rc\rc+\lc Y,\lc Z,X\rc\rc+\lc Z,\lc X,Y\rc\rc=0$}{4/19}
-\slideq{Lien entre $\cv U$ et $\Der U$, $U\subset\mathbb R^n$ ouvert}{5/19}
-\slider{L'application $X=\l X_1,\cdots,X_n\r\mapsto L_X=\sum{i=1}n{X_i\pder[][x_i]{}{}}$ est un isomorphisme d'espaces vectoriels sur $\mathbb R$}{5/19}
-\slideq{$\lc\delta_1,\delta_2\rc$, $\delta_1,\delta_2\in\Der M$}{6/19}
-\slider{$\delta_1\delta_2-\delta_2\delta_1\in\Der M$}{6/19}
-\slideq{$\varOmega\subset I\times U$ ouvert tel que $\set0\times U\subset\varOmega$\linebreak$h\!:\!\varOmega\to U$ est un groupe à $1$-paramètre}{7/19}
-\slider{$h\l0,\cdot\r=\id_U$\linebreak Dès que ça a un sens, $h\l t,h\l t',x\r\r=h\l t+t',x\r$}{7/19}
-\slideq{$\lc X,Y\rc$, $X,Y\in\cv M$}{8/19}
-\slider{L'unique élément de $\Der M$ tel que $L_{\lc X,Y\rc}=\lc L_X,L_Y\rc$}{8/19}
-\slideq{$\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\lc X,Y\r$}{9/19}
-\slider{$\lc\phi_*X,\phi_*Y\rc$}{9/19}
-\slideq{$\cv U$}{10/19}
-\slider{Ensemble des champs de vecteurs lisses sur $U$\linebreak Ensemble des sections lisses $s\!:\!U\to\tg U$}{10/19}
-\slideq{Construction de dérivations sur $M$}{11/19}
-\slider{Si $\l U_i\r$ est un recouvrement d'ouverts de $M$ et $\delta_i\in\Der{U_i}$ sont des dérivations telles que ${\delta_i}_{|U_i\cap U_j}={\delta_j}_{|U_i\cap U_j}$ alors il existe une unique dérivation $\delta\in\Der M$ telle que $\delta_{|U_i}=\delta_i$}{11/19}
-\slideq{$\psi\!:\!U\to V$ difféomorphisme\linebreak$\phi^{\psi_*X}$}{12/19}
-\slider{$\psi\circ\phi^X\circ\psi^{-1}$}{12/19}
-\slideq{Lien entre $\cv M$ et $\Der M$, $M$ variété différentielle}{13/19}
-\slider{L'application $X\mapsto L_X={x\mapsto \dd_xf\l X\l x\r\r}$ est un isomorphisme d'espaces vectoriels sur $\mathbb R$}{13/19}
-\slideq{$X\in\cv M$, $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*X$}{14/19}
-\slider{$\appl{\phi_*X}{N}{\tg N}{y}{\dd_{\phi^{-1}\l y\r}\phi\l X_{\phi^{-1}\l y\r}\r}\in\cv N$}{14/19}
-\slideq{Dérivation sur $U\subset M$ un ouvert dans une vériété différentielle}{15/19}
-\slider{Application linéaire $\delta\!:\!\mathcal C^\infty\l U,\mathbb R\r\to\mathcal C^{\infty}\l U,\mathbb R\r$ qui vérifie la règle de Leibniz: $\delta\l fg\r=\delta\l f\r g+f\delta\l g\r$\linebreak On note $\Der U$ les dérivations sur $U$}{15/19}
-\slideq{Restriction d'une dérivation}{16/19}
-\slider{Si $U\subset V\subset M$ sont ouverts alors on dispose d'une application canonique de restriction $\rho\!:\!\Der V\to\Der U$ définie par $\rho\l\delta\r\l f\r=\delta_{|U}\l f\r$}{16/19}
-\slideq{$\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi^*$}{17/19}
-\slider{$\phi^*X=\l\phi_*\r^{-1}$}{17/19}
-\slideq{$X\in\Der M$, $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\delta$}{18/19}
-\slider{$\appl{\phi_*\delta}{\mathcal C^\infty N}{\mathcal C^\infty N}{f}{\delta\l f\circ\phi\r\circ\phi^{-1}}$}{18/19}
-\slideq{Propriétés de $\phi^X$}{19/19}
-\slider{$\phi^X_0=\id_U$\linebreak$\phi^X_{t_2}\circ\phi^X_{t_1}=\phi^X_{t_1+t_2}=\phi^X_{t_1}\circ\phi^X_{t_2}$\linebreak$\phi^X\!:\!\varOmega\cap\l\set t\times U\r\to\varOmega\cap\l\set{-t}\times U\r$ est un difféomorphisme}{19/19}
+\slideq{$\lc X,Y\rc$, $X,Y\in\cv M$}{1/34}
+\slider{L'unique élément de $\Der M$ tel que $L_{\lc X,Y\rc}=\lc L_X,L_Y\rc$}{1/34}
+\slideq{Dérivation sur $U\subset M$ un ouvert dans une vériété différentielle}{2/34}
+\slider{Application linéaire $\delta\!:\!\mathcal C^\infty\l U,\mathbb R\r\to\mathcal C^{\infty}\l U,\mathbb R\r$ qui vérifie la règle de Leibniz: $\delta\l fg\r=\delta\l f\r g+f\delta\l g\r$\linebreak On note $\Der U$ les dérivations sur $U$}{2/34}
+\slideq{Propriétés des sous-niveaux fermés $M_a=f^{-1}\l\left]-\infty,a\rc\r$ pour $M$ une variété différentielle et $f\!:\!M\to\bbR$ lisse}{3/34}
+\slider{Si $f^{-1}\l\lc a,b\rc\r$ n'a pas de points critiques et est compact alors il existe $\phi\in\operatorname{Diff\mkern-3mu\acute{\mkern2mu e}o}\l M\r$ tel que $\phi\l M_a\r=M_b$}{3/34}
+\slideq{Restriction d'une dérivation}{4/34}
+\slider{Si $U\subset V\subset M$ sont ouverts alors on dispose d'une application canonique de restriction $\rho\!:\!\Der V\to\Der U$ définie par $\rho\l\delta\r\l f\r=\delta_{|U}\l f\r$}{4/34}
+\slideq{$\cv U$}{5/34}
+\slider{Ensemble des champs de vecteurs lisses sur $U$\linebreak Ensemble des sections lisses $s\!:\!U\to\tg U$}{5/34}
+\slideq{$\left.\hskip-\nulldelimiterspace\der[][t]{}{\l\phi_t^Y\r_*X}\right|_{t=0}$}{6/34}
+\slider{$\lc X,Y\rc$}{6/34}
+\slideq{$X\in\cv M$ est complet}{7/34}
+\slider{Le flot $\phi^X$ est défini sur $\bbR\times M$}{7/34}
+\slideq{$X\in\Der M$, $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\delta$}{8/34}
+\slider{$\appl{\phi_*\delta}{\mathcal C^\infty N}{\mathcal C^\infty N}{f}{\delta\l f\circ\phi\r\circ\phi^{-1}}$}{8/34}
+\slideq{Sous-fibré vectoriel de $E$}{9/34}
+\slider{Fibré vectoriel et sous-variété de $E$ qui peut être simultanément trivialisé avec $E$}{9/34}
+\slideq{$\lc\delta_1,\delta_2\rc$, $\delta_1,\delta_2\in\Der M$}{10/34}
+\slider{$\delta_1\delta_2-\delta_2\delta_1\in\Der M$}{10/34}
+\slideq{Propriétés des champs de vecteurs dans le cas où $M$ est compact}{11/34}
+\slider{Ils sont complets}{11/34}
+\slideq{$D$ est involutive}{12/34}
+\slider{$D$ est stable par crochet\linebreak$X,Y\in D\Rightarrow\lc X,Y\rc\in D$}{12/34}
+\slideq{$X\in\cv M$ appartient à $D$}{13/34}
+\slider{Pour tout $x\in M$, $X\l x\r\in D$}{13/34}
+\slideq{Distribution $D$ de rang $p\in\llb1,n\rrb$}{14/34}
+\slider{Sous-fibré vectoriel de rang $p$ de $\tg M$}{14/34}
+\slideq{$\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi^*$}{15/34}
+\slider{$\phi^*X=\l\phi_*\r^{-1}$}{15/34}
+\slideq{Solutions à $c_x'=X_{c_x}$, $X\in\cv U$}{16/34}
+\slider{Si $x\in U$ alors il existe un intervalle $I$ ouvert et contenant $0$ et une courbe intégrable $c_x$ tels que $c_x\l 0\r=x$ et $c'=X_c$, un tel $c$ est unique et on peut définir un intervalle maximal de définition $I\l x\r=\left]a\l x\r,b\l x\r\right[$ de $c$\linebreak$\varOmega=\bigcup{x\in U}{}{I\l x\r\times\set x}$ est un ouvert qui contient $\set0\times U$}{16/34}
+\slideq{Flot de champ de vecteur $X$}{17/34}
+\slider{$\appl{\phi^X}{\varOmega}{U}{\l t,x\r}{c_x\l t\r}$\linebreak On note $\phi^X_t=\phi^X\l t,\cdot\r$}{17/34}
+\slideq{Lien immédiat entre distribution involutive et distribution complètement intégrable}{18/34}
+\slider{Une distribution complètement intégrable est involutive}{18/34}
+\slideq{Propriétés de l'action $\operatorname{Diff\mkern-3mu\acute{\mkern2mu e}o}\l M\r\acts M$}{19/34}
+\slider{L'action est $k$-transitive pour tout $k\in\bbN$}{19/34}
+\slideq{$X\in\cv M$, $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*X$}{20/34}
+\slider{$\appl{\phi_*X}{N}{\tg N}{y}{\dd_{\phi^{-1}\l y\r}\phi\l X_{\phi^{-1}\l y\r}\r}\in\cv N$}{20/34}
+\slideq{Théorème de redressement de champs de vecteurs}{21/34}
+\slider{Si $M$ est une variété différentielle et $X\in\cv M$ est tel que $X\l x_0\r\neq0$ alors in existe une carte $\l U,\psi\r$ autour de $x_0$ telle que $X_{|U}=\partial_1$ (ie, $\psi_*X=\pder[][x_1]{}{}$)}{21/34}
+\slideq{Lien entre $\cv M$ et les groupes locaux à un paramètre}{22/34}
+\slider{À un champ de vecteurs $X$, on peut lui associer sur les ouverts de l'atlas $\l U_i,\psi_i\r$ le flot $\phi_i^X=\psi_i^{-1}\circ\phi^{\l\psi_i\r_*X}\circ\psi_i$, qui se recollent sur $M$ pour définir un flot $\phi$\linebreak Réciproquement, $x\mapsto\pder[][t]{h}{\l0,x\r}$ est un champ de vecteurs sur $M$}{22/34}
+\slideq{$D$ est complètement intégrable}{23/34}
+\slider{Pour tout $x\in M$, il existe un ouvert $U$ contenant $x$ et $x\in Z\subset U$ une sous-variété de dimension $p$ telle que, pour tout $z\in Z$, $\tg_zZ=D_z$ où $D_z$ est la fibre au dessus de $z$ dans $D$}{23/34}
+\slideq{Théorème de redressement simultané de champs de vecteurs}{24/34}
+\slider{Si $M$ est une variété différentielle et $X_1,\cdots,X_p\in\cv M$ sont tels que $\l X_1\l x_0\r,\cdots,X_p\l x_0\r\r$ est libre et pour tout $\l i,j\r\in\llb1,p\rrb^2$, $\lc X_i,X_j\rc=0$, alors in existe une carte $\l U,\psi\r$ autour de $x_0$ telle que ${X_i}_{|U}=\partial_i$ (ie, $\psi_*X_i=\pder[][x_i]{}{}$)}{24/34}
+\slideq{Construction de dérivations sur $M$}{25/34}
+\slider{Si $\l U_i\r$ est un recouvrement d'ouverts de $M$ et $\delta_i\in\Der{U_i}$ sont des dérivations telles que ${\delta_i}_{|U_i\cap U_j}={\delta_j}_{|U_i\cap U_j}$ alors il existe une unique dérivation $\delta\in\Der M$ telle que $\delta_{|U_i}=\delta_i$}{25/34}
+\slideq{$\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\lc X,Y\rc$}{26/34}
+\slider{$\lc\phi_*X,\phi_*Y\rc$}{26/34}
+\slideq{Lien entre $\cv U$ et $\Der U$, $U\subset\mathbb R^n$ ouvert}{27/34}
+\slider{L'application $X=\l X_1,\cdots,X_n\r\mapsto L_X=\sum{i=1}n{X_i\pder[][x_i]{}{}}$ est un isomorphisme d'espaces vectoriels sur $\mathbb R$}{27/34}
+\slideq{$\psi\!:\!U\to V$ difféomorphisme\linebreak$\phi^{\psi_*X}$}{28/34}
+\slider{$\psi\circ\phi^X\circ\psi^{-1}$}{28/34}
+\slideq{Propriétés de $\phi^X$}{29/34}
+\slider{$\phi^X_0=\id_U$\linebreak$\phi^X_{t_2}\circ\phi^X_{t_1}=\phi^X_{t_1+t_2}=\phi^X_{t_1}\circ\phi^X_{t_2}$\linebreak$\phi^X\!:\!\varOmega\cap\l\set t\times U\r\to\varOmega\cap\l\set{-t}\times U\r$ est un difféomorphisme}{29/34}
+\slideq{$X\in\cv M$, une courbe lisse $c$ est itégrable}{30/34}
+\slider{$c'=X_c=X\circ c$}{30/34}
+\slideq{Théorème de Frobenius}{31/34}
+\slider{Une distribution involutive est complètement intégrable}{31/34}
+\slideq{Identité de Jacobi}{32/34}
+\slider{$\lc X,\lc Y,Z\rc\rc+\lc Y,\lc Z,X\rc\rc+\lc Z,\lc X,Y\rc\rc=0$}{32/34}
+\slideq{$\varOmega\subset I\times U$ ouvert tel que $\set0\times U\subset\varOmega$\linebreak$h\!:\!\varOmega\to U$ est un groupe à $1$-paramètre}{33/34}
+\slider{$h\l0,\cdot\r=\id_U$\linebreak Dès que ça a un sens, $h\l t,h\l t',x\r\r=h\l t+t',x\r$}{33/34}
+\slideq{Lien entre $\cv M$ et $\Der M$, $M$ variété différentielle}{34/34}
+\slider{L'application $X\mapsto L_X={x\mapsto \dd_xf\l X\l x\r\r}$ est un isomorphisme d'espaces vectoriels sur $\mathbb R$}{34/34}
 \end{document}

@@ -1,7 +1,7 @@
 Géométrie avancée -- Champs de vecteurs
 Shuffle questions : True
 Q/R & R/Q : False
-\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\DeclareMathOperator{\oldder}{Der}\def\Der#1{\oldder\l#1\r}\usepackage[nopar]{analyse,bigoperators}\togglebigoppar
+\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\DeclareMathOperator{\oldder}{Der}\def\Der#1{\oldder\l#1\r}\usepackage[nopar]{analyse,bigoperators}\togglebigoppar\usepackage{arrows}\def\bbN{\mathbb N}\def\bbR{\mathbb R}
 $\cv U$;;Ensemble des champs de vecteurs lisses sur $U$\linebreak Ensemble des sections lisses $s\!:\!U\to\tg U$
 Dérivation sur $U\subset M$ un ouvert dans une vériété différentielle;;Application linéaire $\delta\!:\!\mathcal C^\infty\l U,\mathbb R\r\to\mathcal C^{\infty}\l U,\mathbb R\r$ qui vérifie la règle de Leibniz: $\delta\l fg\r=\delta\l f\r g+f\delta\l g\r$\linebreak On note $\Der U$ les dérivations sur $U$
 Restriction d'une dérivation;;Si $U\subset V\subset M$ sont ouverts alors on dispose d'une application canonique de restriction $\rho\!:\!\Der V\to\Der U$ définie par $\rho\l\delta\r\l f\r=\delta_{|U}\l f\r$
@@ -13,7 +13,7 @@ $X\in\Der M$, $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\delta$;;$\appl
 $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi^*$;;$\phi^*X=\l\phi_*\r^{-1}$
 $\lc\delta_1,\delta_2\rc$, $\delta_1,\delta_2\in\Der M$;;$\delta_1\delta_2-\delta_2\delta_1\in\Der M$
 $\lc X,Y\rc$, $X,Y\in\cv M$;;L'unique élément de $\Der M$ tel que $L_{\lc X,Y\rc}=\lc L_X,L_Y\rc$
-$\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\lc X,Y\r$;;$\lc\phi_*X,\phi_*Y\rc$
+$\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\lc X,Y\rc$;;$\lc\phi_*X,\phi_*Y\rc$
 Identité de Jacobi;;$\lc X,\lc Y,Z\rc\rc+\lc Y,\lc Z,X\rc\rc+\lc Z,\lc X,Y\rc\rc=0$
 $X\in\cv M$, une courbe lisse $c$ est itégrable;;$c'=X_c=X\circ c$
 Solutions à $c_x'=X_{c_x}$, $X\in\cv U$;;Si $x\in U$ alors il existe un intervalle $I$ ouvert et contenant $0$ et une courbe intégrable $c_x$ tels que $c_x\l 0\r=x$ et $c'=X_c$, un tel $c$ est unique et on peut définir un intervalle maximal de définition $I\l x\r=\left]a\l x\r,b\l x\r\right[$ de $c$\linebreak$\varOmega=\bigcup{x\in U}{}{I\l x\r\times\set x}$ est un ouvert qui contient $\set0\times U$
@@ -21,3 +21,18 @@ Flot de champ de vecteur $X$;;$\appl{\phi^X}{\varOmega}{U}{\l t,x\r}{c_x\l t\r}$
 Propriétés de $\phi^X$;;$\phi^X_0=\id_U$\linebreak$\phi^X_{t_2}\circ\phi^X_{t_1}=\phi^X_{t_1+t_2}=\phi^X_{t_1}\circ\phi^X_{t_2}$\linebreak$\phi^X\!:\!\varOmega\cap\l\set t\times U\r\to\varOmega\cap\l\set{-t}\times U\r$ est un difféomorphisme
 $\varOmega\subset I\times U$ ouvert tel que $\set0\times U\subset\varOmega$\linebreak$h\!:\!\varOmega\to U$ est un groupe à $1$-paramètre;;$h\l0,\cdot\r=\id_U$\linebreak Dès que ça a un sens, $h\l t,h\l t',x\r\r=h\l t+t',x\r$
 $\psi\!:\!U\to V$ difféomorphisme\linebreak$\phi^{\psi_*X}$;;$\psi\circ\phi^X\circ\psi^{-1}$
+Lien entre $\cv M$ et les groupes locaux à un paramètre;;À un champ de vecteurs $X$, on peut lui associer sur les ouverts de l'atlas $\l U_i,\psi_i\r$ le flot $\phi_i^X=\psi_i^{-1}\circ\phi^{\l\psi_i\r_*X}\circ\psi_i$, qui se recollent sur $M$ pour définir un flot $\phi$\linebreak Réciproquement, $x\mapsto\pder[][t]{h}{\l0,x\r}$ est un champ de vecteurs sur $M$
+$\left.\hskip-\nulldelimiterspace\der[][t]{}{\l\phi_t^Y\r_*X}\right|_{t=0}$;;$\lc X,Y\rc$
+$X\in\cv M$ est complet;;Le flot $\phi^X$ est défini sur $\bbR\times M$
+Propriétés des champs de vecteurs dans le cas où $M$ est compact;;Ils sont complets
+Propriétés de l'action $\operatorname{Diff\mkern-3mu\acute{\mkern2mu e}o}\l M\r\acts M$;;L'action est $k$-transitive pour tout $k\in\bbN$
+Propriétés des sous-niveaux fermés $M_a=f^{-1}\l\left]-\infty,a\rc\r$ pour $M$ une variété différentielle et $f\!:\!M\to\bbR$ lisse;;Si $f^{-1}\l\lc a,b\rc\r$ n'a pas de points critiques et est compact alors il existe $\phi\in\operatorname{Diff\mkern-3mu\acute{\mkern2mu e}o}\l M\r$ tel que $\phi\l M_a\r=M_b$
+Théorème de redressement de champs de vecteurs;;Si $M$ est une variété différentielle et $X\in\cv M$ est tel que $X\l x_0\r\neq0$ alors in existe une carte $\l U,\psi\r$ autour de $x_0$ telle que $X_{|U}=\partial_1$ (ie, $\psi_*X=\pder[][x_1]{}{}$)
+Théorème de redressement simultané de champs de vecteurs;;Si $M$ est une variété différentielle et $X_1,\cdots,X_p\in\cv M$ sont tels que $\l X_1\l x_0\r,\cdots,X_p\l x_0\r\r$ est libre et pour tout $\l i,j\r\in\llb1,p\rrb^2$, $\lc X_i,X_j\rc=0$, alors in existe une carte $\l U,\psi\r$ autour de $x_0$ telle que ${X_i}_{|U}=\partial_i$ (ie, $\psi_*X_i=\pder[][x_i]{}{}$)
+Sous-fibré vectoriel de $E$;;Fibré vectoriel et sous-variété de $E$ qui peut être simultanément trivialisé avec $E$
+Distribution $D$ de rang $p\in\llb1,n\rrb$;;Sous-fibré vectoriel de rang $p$ de $\tg M$
+$X\in\cv M$ appartient à $D$;;Pour tout $x\in M$, $X\l x\r\in D$
+$D$ est involutive;;$D$ est stable par crochet\linebreak$X,Y\in D\Rightarrow\lc X,Y\rc\in D$
+$D$ est complètement intégrable;;Pour tout $x\in M$, il existe un ouvert $U$ contenant $x$ et $x\in Z\subset U$ une sous-variété de dimension $p$ telle que, pour tout $z\in Z$, $\tg_zZ=D_z$ où $D_z$ est la fibre au dessus de $z$ dans $D$
+Lien immédiat entre distribution involutive et distribution complètement intégrable;;Une distribution complètement intégrable est involutive
+Théorème de Frobenius;;Une distribution involutive est complètement intégrable

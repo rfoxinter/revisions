@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{probas}\usepackage[nopar]{bigoperators}
+\usepackage{probas}\usepackage[nopar]{bigoperators}\usepackage{usuelles}
 \hypersetup{pdftitle=Probabilités avancées -- Chaînes de Markov}
 \title{Probabilités avancées\\\emph{Chaînes de Markov}}
 \author{}
@@ -10,14 +10,28 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Propriété de Markov faible}{1/5}
-\slider{Si $\l X_n\r$ est une chaîne de Markov alors\linebreak$\forall m,n\geqslant1$, $\forall A\subset E^{n+1}$, $\forall B\subset E^{n}$, $\p[\!\!x]{\l X_0{,}{\cdot}{\cdot}{\cdot}{,}X_n\r{\in}A{,}\l X_n{,}{\cdot}{\cdot}{\cdot}{,}X_{n+m}\r{\in}B\!\sq\!X_n{=}y}{=}$\linebreak$\p[\!\!x]{\l X_0{,}{\cdot}{\cdot}{\cdot}{,}X_n\r{\in}A\!\sq\!X_n{=}y}\p[\!\!y]{\l X_n{,}{\cdot}{\cdot}{\cdot}{,}X_{n+m}\r{\in}B}$\linebreak Pour toute $F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+m}\r_{n\in\mathbb N}\r\sq\mathcal F_m}=\esp[X_m]{F}$}{1/5}
-\slideq{Chaîne de Markov homogène}{2/5}
-\slider{Processus aléatoire $\l X_n\r$ à valeurs dans $E$ au plus dénombrable tel que $\p{X_{n+1}=x_{n+1}\sq X_0,\cdots,X_n}=\p{X_{n+1}=x_{n+1}\sq X_n}$ et $\p{X_{n+1}=y\sq X_n=x}=\p{X_1=y\sq X_0=x}$}{2/5}
-\slideq{Noyau de transition}{3/5}
-\slider{$P\!:\!E\times E\to\lc0,1\rc$ telle que, pour tout $x\in E$, $\sum{y\in E}{}{P\l x,y\r}=1$\linebreak Le noyau de transition associé à une chaîne de Markov est $P\l x,y\r=\p{X_1=y\sq X_0=x}$}{3/5}
-\slideq{Mesure $\mathbb P_x$ pour un noyau de transition $P$}{4/5}
-\slider{Il existe une unique mesure $\mathbb P_x$ sur $E^{\mathbb N}$ telle que si $X_i\!:\!E^{\mathbb N}\to E$ est la projection sur le coefficient $i$ alors $\p[x]{X_0=x}=1$ et telle que $\l X_n\r$ soit une chaîne de Markov de transition $P$}{4/5}
-\slideq{Mesure $\mathbb P_\mu$ pour un noyau de transition $P$ et une mesure de probabilités $\mu$}{5/5}
-\slider{$\mathbb P_\mu=\sum{x\in E}{}{\mu\l\set x\r\mathbb P_x}$}{5/5}
+\slideq{Mesure $\mathbb P_x$ pour un noyau de transition $P$}{1/12}
+\slider{Il existe une unique mesure $\mathbb P_x$ sur $E^{\mathbb N}$ telle que si $X_i\!:\!E^{\mathbb N}\to E$ est la projection sur le coefficient $i$ alors $\p[x]{X_0=x}=1$ et telle que $\l X_n\r$ soit une chaîne de Markov de transition $P$}{1/12}
+\slideq{Propriété de Markov forte}{2/12}
+\slider{Si $\l X_n\r$ est une chaîne de Markov, $\mathcal F_n$ est la filtration naturelle et $T$ est un temps d'arrêt alors\linebreak$\forall A\in\mathcal F_T$, $\forall F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+T}\r_{n\geqslant0}\r\mathbb1_A\sq T<+\infty,X_T=y}=$\linebreak$\p[\!\!x]{A\sq T<+\infty,X_T=y}\esp[y]{F}$\linebreak Pour toute $F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+T}\r_{n\in\mathbb N}\r\sq\mathcal F_T}=\esp[X_T]{F}\mathbb1_{T<+\infty}$}{2/12}
+\slideq{Relation d'équivalence $x\sim y$ sur les chaînes de Markov}{3/12}
+\slider{$x\sim y$ si et seulement si $x\rightsquigarrow y$ et $y\rightsquigarrow x$}{3/12}
+\slideq{Fonction de Green}{4/12}
+\slider{$G\!:\!E\times E\to\lc0,+\infty\rc$ telle que $G\l x,y\r=\esp[x]{N_y}$\linebreak$\rho\!:\!E\times E\to\lc0,1\rc$ telle que $\rho\l x,y\r=\p[\!\!x]{T_y<+\infty}$}{4/12}
+\slideq{Propriétés de la fonction de Green}{5/12}
+\slider{$G\l x,y\r=\sum{n=0}{+\infty}{P^n\l x,y\r}$\linebreak Si $x$ est récurrent, $G\l x,x\r=+\infty$\linebreak Si $x$ est transient, $G\l x,x\r<+\infty$\linebreak Si $x\neq y$ alors $G\l x,y\r=\rho\l x,y\r G\l y,y\r$, en particulier, $G\l x,y\r\leqslant G\l y,y\r$\linebreak$G\l x,x\r=1+\rho\l x,x\r G\l x,x\r$}{5/12}
+\slideq{Mesure $\mathbb P_\mu$ pour un noyau de transition $P$ et une mesure de probabilités $\mu$}{6/12}
+\slider{$\mathbb P_\mu=\sum{x\in E}{}{\mu\l\set x\r\mathbb P_x}$}{6/12}
+\slideq{$x\in E$ est récurrent/transient}{7/12}
+\slider{$x$ est récurrent si $\p[\!\!x]{T_x<+\infty}=1$, et alors $N_x=+\infty$\linebreak$x$ est transient si $\p[\!\!x]{T_x<+\infty}<1$, et alors $\esp[x]{N_x}=\frac{1}{\p[\!\!x]{T_x=+\infty}}<+\infty$}{7/12}
+\slideq{Relation $x\rightsquigarrow y$ sur les chaînes de Markov}{8/12}
+\slider{$x\rightsquigarrow y$ si et seulement si $G\l x,y\r>0$\linebreak C'est une relation réflexive et transitive\linebreak Si $x$ est récurrent et $x\rightsquigarrow y$ alors $y\rightsquigarrow x$ et $\rho\l x,y\r=\rho\l y,x\r=1$}{8/12}
+\slideq{Définition et lien entre $T_x$ temps d'arrêt associé à $x$ et $N_x$ le nombre de passages en $x$}{9/12}
+\slider{$N_x=\sum{n=0}{+\infty}{\mathbb1_{X_n=x}}$\linebreak$T_x=\inf{\set{n\in\mathbb N,X_n=x}}$\linebreak$\set{T_x<+\infty}=\set{N_x\geqslant\mathbb1_{X_0=x}+1}$}{9/12}
+\slideq{Propriété de Markov faible}{10/12}
+\slider{Si $\l X_n\r$ est une chaîne de Markov alors\linebreak$\forall m,n\geqslant1$, $\forall A\subset E^{n+1}$, $\forall B\subset E^{n}$, $\p[\!\!x]{\l X_0{,}{\cdot}{\cdot}{\cdot}{,}X_n\r{\in}A{,}\l X_n{,}{\cdot}{\cdot}{\cdot}{,}X_{n+m}\r{\in}B\!\sq\!X_n{=}y}{=}$\linebreak$\p[\!\!x]{\l X_0{,}{\cdot}{\cdot}{\cdot}{,}X_n\r{\in}A\!\sq\!X_n{=}y}\p[\!\!y]{\l X_n{,}{\cdot}{\cdot}{\cdot}{,}X_{n+m}\r{\in}B}$\linebreak Pour toute $F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+m}\r_{n\in\mathbb N}\r\sq\mathcal F_m}=\esp[X_m]{F}$}{10/12}
+\slideq{Noyau de transition}{11/12}
+\slider{$P\!:\!E\times E\to\lc0,1\rc$ telle que, pour tout $x\in E$, $\sum{y\in E}{}{P\l x,y\r}=1$\linebreak Le noyau de transition associé à une chaîne de Markov est $P\l x,y\r=\p{X_1=y\sq X_0=x}$}{11/12}
+\slideq{Chaîne de Markov homogène}{12/12}
+\slider{Processus aléatoire $\l X_n\r$ à valeurs dans $E$ au plus dénombrable tel que $\p{X_{n+1}=x_{n+1}\sq X_0,\cdots,X_n}=\p{X_{n+1}=x_{n+1}\sq X_n}$ et $\p{X_{n+1}=y\sq X_n=x}=\p{X_1=y\sq X_0=x}$}{12/12}
 \end{document}

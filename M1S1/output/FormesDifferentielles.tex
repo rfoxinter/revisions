@@ -1,0 +1,29 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{al}\usepackage[nopar]{bigoperators}\DeclareMathOperator{\oldtens}{T}\def\tens#1{\oldtens\l#1\r}\newcommand{\ext}[2][]{\mathop{}\mkern-3mu{\textstyle\bigwedge^{#1}}\l#2\r}\def\bbN{\mathbb N}\DeclareMathOperator{\oldalt}{A}\newcommand{\falt}[2][]{\oldalt_{#1}\l#2\r}
+\hypersetup{pdftitle=Géométrie avancée -- Formes différentielles}
+\title{Géométrie avancée\\\emph{Formes différentielles}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\falt V$}{1/8}
+\slider{$\bigoplus{k\in\bbN}{}{\falt[k]V}$ où $\falt[k]V$ est l'espace vectoriel des formes $k$-linéaires alternées}{1/8}
+\slideq{Algèbre extérieure de $V$}{2/8}
+\slider{$\ext V=\operatorname{C}\l V\r/\operatorname{I}\l V\r$ où $\operatorname{C}\l V\r=\bigoplus{k\in\bbN}{}{V_{k,0}}$ et $\operatorname{I}\l V\r$ est l'idéal bilatère de $\operatorname{C}\l V\r$ engendré par $\set{v\otimes v,v\in V}$\linebreak$\ext V$ est une algèbre graduée\linebreak$\ext[k]V=V_{k,0}/\operatorname{I}_k\l V\r$ où $\operatorname{I}_k\l V\r=\operatorname{I}\l V\r\cap V_{k,0}$}{2/8}
+\slideq{$\dim{\ext[k]V}$}{3/8}
+\slider{$\binom dk$ pour $d=\dim V$}{3/8}
+\slideq{Lien entre $u\wedge v$ et $v\wedge u$ pour $u\in\ext[r]V$ et $v\in\ext[s]V$}{4/8}
+\slider{$u\wedge v=\l-1\r^{rs}v\wedge u$}{4/8}
+\slideq{Tenseur pur de $\tens V$}{5/8}
+\slider{Tenseur de la forme $u_1\otimes\cdots\otimes v_r\otimes u_1^*\otimes\cdots\otimes u_s^*$}{5/8}
+\slideq{Espace des tenseurs de type $\l r,s\r$ associés à $V$}{6/8}
+\slider{$V_{r,s}=V^{\otimes r}\otimes\l V^*\r^{\otimes s}$}{6/8}
+\slideq{Porpriété universelle de $\l\ext[k]V,\pi\!:\!V^k\to\ext[k]V\r$}{7/8}
+\slider{Pour tout $\mathbb R$-ev $F$ et tout $\phi\:\!V^k\to F$ application $k$-linéaire alternée, il existe une unique application $\overline\phi\!:\!\ext[k]V\to F$ linéaire telle que $\overline\phi\circ\pi=\phi$}{7/8}
+\slideq{Algèbre tensorielle de $V$}{8/8}
+\slider{$\tens V=\bigoplus{r,s\in\bbN}{}{V_{r,s}}$\linebreak C'est une algèbre associative (bi-)graduée et les tenseurs de $V_{r,s}$ sont appelés tenseurs homogènes de (bi-)degré $\l r,s\r$}{8/8}
+\end{document}
