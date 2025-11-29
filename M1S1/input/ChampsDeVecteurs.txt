@@ -1,7 +1,7 @@
 Géométrie avancée -- Champs de vecteurs
 Shuffle questions : True
 Q/R & R/Q : False
-\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\DeclareMathOperator{\oldder}{Der}\def\Der#1{\oldder\l#1\r}\usepackage[nopar]{analyse,bigoperators}\togglebigoppar\usepackage{arrows}\def\bbN{\mathbb N}\def\bbR{\mathbb R}
+\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\DeclareMathOperator{\oldder}{Der}\def\Der#1{\oldder\l#1\r}\usepackage[nopar]{analyse,bigoperators}\togglebigoppar\usepackage{arrows}
 $\cv U$;;Ensemble des champs de vecteurs lisses sur $U$\linebreak Ensemble des sections lisses $s\!:\!U\to\tg U$
 Dérivation sur $U\subset M$ un ouvert dans une vériété différentielle;;Application linéaire $\delta\!:\!\mathcal C^\infty\l U,\mathbb R\r\to\mathcal C^{\infty}\l U,\mathbb R\r$ qui vérifie la règle de Leibniz: $\delta\l fg\r=\delta\l f\r g+f\delta\l g\r$\linebreak On note $\Der U$ les dérivations sur $U$
 Restriction d'une dérivation;;Si $U\subset V\subset M$ sont ouverts alors on dispose d'une application canonique de restriction $\rho\!:\!\Der V\to\Der U$ définie par $\rho\l\delta\r\l f\r=\delta_{|U}\l f\r$

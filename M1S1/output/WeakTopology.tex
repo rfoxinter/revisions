@@ -2,68 +2,68 @@
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
 \usepackage{usuelles,topologie,complexes,structures}\usepackage[nopar]{bigoperators,analyse}
-\hypersetup{pdftitle=Analyse anancée -- Weak topology}
-\title{Analyse anancée\\\emph{Weak topology}}
+\hypersetup{pdftitle=Analyse avancée -- Weak topology}
+\title{Analyse avancée\\\emph{Weak topology}}
 \author{}
 \date{}
 \begin{document}
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Continuity properties of $f\!:\!\l X,\mathcal T\r\to\mathbb R$ continuous and convex when $X$ is endowed with the weak topology}{1/28}
-\slider{$f$ is lower semi-continuous: $\set{f\leqslant a}$ is closed}{1/28}
-\slideq{Weak topology on $X$}{2/28}
-\slider{$\sigma\l X,X^*\r$ the initial topology on $X$ associated to its topological dual}{2/28}
-\slideq{Properties of $\l X,\sigma\l X,M\r\r$ for $X$ a TVS over $\mathbb K$ and $M\subset\mathcal L\l X,\mathbb K\r$ that separates points}{3/28}
-\slider{It is an LCTVS\linebreak Its topological dual is $M$\linebreak A neighbourhood basis of the origin is given by $V_{\phi,\epsilon}=\set{u\in X,\vala{\phi\l u\r}<\epsilon}$}{3/28}
+\slideq{$BC\l T\r$}{1/28}
+\slider{Bounded continuous fonctions on the topological space $T$}{1/28}
+\slideq{Kakutani theorem}{2/28}
+\slider{Let $E$ be a normed vector space, then $E$ is reflexive iff the unit ball $\bar{\mathcal B_E}\l0,1\r$ is weakly compact}{2/28}
+\slideq{Link between closed and weakly closed sets}{3/28}
+\slider{If $A$ is weakly closed then it is closed\linebreak If $A$ is closed and convex then $A$ is weakly closed}{3/28}
 \slideq{Weak-$*$ topology}{4/28}
 \slider{Weak topology associated to $J\l E\r$ where $J\l u\r\l\phi\r=\phi\l u\r$}{4/28}
-\slideq{Properties of weak-converging sequences}{5/28}
-\slider{$u_n\rightharpoonup u$ iff for all $\phi\in E^*$, $\phi\l u_n\r\to\phi\l u\r$\linebreak If $u_n\rightharpoonup u$ then $\nrm u\leqslant\limi[n\in\mathbb N]{\nrm{u_n}}$\linebreak If $u_n\rightharpoonup u$ and $\phi_n\to\phi$ then $\phi\l u_n\r\to\phi\l u\r$\linebreak If $E$ is uniformly convex, $u_n\rightharpoonup u$ and $\nrm{u_n}\to\nrm u$ then $u_n\to u$}{5/28}
-\slideq{Reflexive normed vector space}{6/28}
-\slider{$E$ is reflexive iff $E^{**}=J\l E\r$}{6/28}
-\slideq{Weak topology}{7/28}
-\slider{$\sigma\l X,X^*\r$ topology}{7/28}
-\slideq{Properties of $X^*$ when $X$ is an LCTVS}{8/28}
-\slider{$X^*$ separates points}{8/28}
-\slideq{Metrizability of $\sigma\l E,E^*\r$ for $E$ an infinite-dimensional normed vector space}{9/28}
-\slider{$\sigma\l E,E^*\r$ is not metrizable}{9/28}
-\slideq{Subsequent convergence in weak-* topology}{10/28}
-\slider{If $E$ is a separable normed space and $\l\phi_n\r$ is a bounded sequence in $E^*$ then there is a subsequence of $\l \phi_n\r$ that converges for the weak-* topology}{10/28}
-\slideq{Kakutani theorem}{11/28}
-\slider{Let $E$ be a normed vector space, then $E$ is reflexive iff the unit ball $\bar{\mathcal B_E}\l0,1\r$ is weakly compact}{11/28}
-\slideq{$C_0\l T\r$}{12/28}
-\slider{$\set{f\in BC\l T\r,\forall\epsilon>0,\exists K\subset T\text{ compact}, x\notin K\Rightarrow\vala{f\l x\r}<\epsilon}$}{12/28}
-\slideq{Properties of the weak-$*$ topology on $\bar{\mathcal B_{E^*}}\l0,1\r$ if $E$ is separable}{13/28}
-\slider{It is metrizable\linebreak Consequently, $\bar{\mathcal B_{E^*}}\l0,1\r\subset E$ is compact iff it is sequentially compact}{13/28}
-\slideq{Properties of $\mathcal M_b\l T\r$ the set of bounded measures on $T$}{14/28}
-\slider{$\l\mathcal M_b\l T\r,\nrm[\text{\textsc{VT}}]\cdot\r$ is a Banach space and if $T$ is not countable then it is not separable}{14/28}
-\slideq{Link between bounded and weakly bounded in an LCTVS}{15/28}
-\slider{$A\subset X$ is bounded iff it is weakly bounded}{15/28}
-\slideq{Weak convergence in $L^p$ for $1<p\leqslant+\infty$}{16/28}
-\slider{If $\l u_n\r$ is a bounded sequence in $L^p\l U\r$, then there is a subsequence $\l u_{n_k}\r$ and $u\in L^p\l U\r$ such that $\nrm[p]u\leqslant\limi{\nrm[p]{u_{n_k}}}<+\infty$ and for all $v\in L^{p'}\l U\r$, $\int[\lambda][U]{u_{n_k}u}\to\int[\lambda][U]{uv}$}{16/28}
-\slideq{Riesz's representation theorem for bounded measures}{17/28}
-\slider{$\appl{\Lambda}{\mathcal M_b\l T\r}{C_0\l T\r}{\mu}{\l f\mapsto\int[\mu][T]f\r}$ is an isometric isomorphism}{17/28}
-\slideq{Continuity of maps between $E$ and $F$ Banach spaces with topologies $\mathcal T_E$ and $\mathcal T_F$ induced by the norm and $\mathcal T_E^*$ and $\mathcal T_F^*$ the weak topology}{18/28}
-\slider{$T\!:\!\l E,\mathcal T_E\r\to\l F,\mathcal T_F\r$ is continuous iff $T\!:\!\l E,\mathcal T_E\r\to\l F,\mathcal T_F^*\r$ is continuous iff $T\!:\!\l E,\mathcal T_E^*\r\to\l F,\mathcal T_F^*\r$ is continuous\linebreak $T\!:\!\l E,\mathcal T_E^*\r\to\l F,\mathcal T_F\r$ is continuous iff one of the conditions above is true and $T$ has finite rank}{18/28}
-\slideq{Banach-Alaoglu theorem}{19/28}
-\slider{Let $E$ be a normed vector space, then $\bar{\mathcal B_{E^*}}\l0,1\r$ is a weak-$*$ compact}{19/28}
-\slideq{A normed vector space $E$ is uniformly convex}{20/28}
-\slider{For all $\epsilon>0$, there exists $\delta>0$ such that if $\nrm u=1$, $\nrm v=1$ and $\nrm{u-v}>\epsilon$ then $\nrm{\frac{u+v}2}<1-\delta$}{20/28}
-\slideq{$BC\l T\r$}{21/28}
-\slider{Bounded continuous fonctions on the topological space $T$}{21/28}
-\slideq{Weak convergence of bounded sequences in $L^1\l U\r$ to elements of $\mathcal M_b\l\overline U\r$}{22/28}
-\slider{If $\l u_n\r$ is a bounded sequence in $L^1\l U\r$ then there exists a subsequence $\l u_{n_k}\r$ that converges weakly to $\mu\in\mathcal M_b\l\overline U\r$ such that $\nrm[\text{\textsc{VT}}]\mu\leqslant\limi{\nrm[1]{u_{n_k}}}$ and for all $f\in C_0\l\overline U\r$, $\int[\lambda][U]{fu_{n_k}}\to\int[\mu][\overline U]{f}$}{22/28}
-\slideq{Weak convergence of bounded sequences in $\mathcal M_b\l T\r$}{23/28}
-\slider{If $T$ is a second countable, locally compact Hausdorff space and $\l\mu_n\r$ is a bounded sequence in $\mathcal M_b\l T\r$ then there exists a subsequence $\l\mu_{n_k}\r$ that converges weakly to $\mu\in\mathcal M_b\l T\r$ such that $\nrm[\text{\textsc{VT}}]\mu\leqslant\limi{\nrm[\text{\textsc{VT}}]{\mu_{n_k}}}$ and for all $f\in C_0\l T\r$, $\int[\mu_{n_k}][T]{f}\to\int[\mu][U]{f}$}{23/28}
-\slideq{Propreties of weak-* converging sequences}{24/28}
-\slider{$\phi_n\rightharpoonup^*\phi$ iff for all $u\in E$, $\phi_n\l u\r\to\phi\l u\r$\linebreak If $\phi_n\rightharpoonup^*\phi$ then $\l\phi_n\r$ is bounded and $\nrm[E^*]\phi\leqslant\limi[n\in\mathbb N]{\nrm[E^*]{\phi_n}}$\linebreak Weak-strong principle: If $\phi_n\rightharpoonup^*\phi$ et $u_n\to u$ then $\phi_n\l u_n\r\to\phi\l u\r$}{24/28}
-\slideq{CNS for $\exists\lambda_1,\cdots,\lambda_n$, $\phi=\lambda_1\phi_1+\cdots+\lambda_n\phi_n$}{25/28}
-\slider{$\ker\phi\subset\bigcap{i=1}n{\ker\phi_i}$}{25/28}
-\slideq{Link between closed and weakly closed sets}{26/28}
-\slider{If $A$ is weakly closed then it is closed\linebreak If $A$ is closed and convex then $A$ is weakly closed}{26/28}
-\slideq{Link between the separable aspect of $E$ and $E^*$}{27/28}
-\slider{If $E^*$ is separable then $E$ is separable}{27/28}
-\slideq{\v{S}mulian theorem}{28/28}
-\slider{If $E$ is a normed vector space and $K\subset E$, then if $K$ is weakly compact then $K$ is weakly sequentially compact\linebreak In perticular, if $E$ is reflexive and $\l u_n\r$ is a bounded sequence then $\l u_n\r$ has an a weakly convergent subsequence}{28/28}
+\slideq{A normed vector space $E$ is uniformly convex}{5/28}
+\slider{For all $\epsilon>0$, there exists $\delta>0$ such that if $\nrm u=1$, $\nrm v=1$ and $\nrm{u-v}>\epsilon$ then $\nrm{\frac{u+v}2}<1-\delta$}{5/28}
+\slideq{Riesz's representation theorem for bounded measures}{6/28}
+\slider{$\appl{\Lambda}{\mathcal M_b\l T\r}{C_0\l T\r}{\mu}{\l f\mapsto\int[\mu][T]f\r}$ is an isometric isomorphism}{6/28}
+\slideq{Propreties of weak-* converging sequences}{7/28}
+\slider{$\phi_n\rightharpoonup^*\phi$ iff for all $u\in E$, $\phi_n\l u\r\to\phi\l u\r$\linebreak If $\phi_n\rightharpoonup^*\phi$ then $\l\phi_n\r$ is bounded and $\nrm[E^*]\phi\leqslant\limi[n\in\mathbb N]{\nrm[E^*]{\phi_n}}$\linebreak Weak-strong principle: If $\phi_n\rightharpoonup^*\phi$ et $u_n\to u$ then $\phi_n\l u_n\r\to\phi\l u\r$}{7/28}
+\slideq{CNS for $\exists\lambda_1,\cdots,\lambda_n$, $\phi=\lambda_1\phi_1+\cdots+\lambda_n\phi_n$}{8/28}
+\slider{$\ker\phi\subset\bigcap{i=1}n{\ker\phi_i}$}{8/28}
+\slideq{Link between bounded and weakly bounded in an LCTVS}{9/28}
+\slider{$A\subset X$ is bounded iff it is weakly bounded}{9/28}
+\slideq{Weak topology}{10/28}
+\slider{$\sigma\l X,X^*\r$ topology}{10/28}
+\slideq{Metrizability of $\sigma\l E,E^*\r$ for $E$ an infinite-dimensional normed vector space}{11/28}
+\slider{$\sigma\l E,E^*\r$ is not metrizable}{11/28}
+\slideq{Reflexive normed vector space}{12/28}
+\slider{$E$ is reflexive iff $E^{**}=J\l E\r$}{12/28}
+\slideq{Continuity of maps between $E$ and $F$ Banach spaces with topologies $\mathcal T_E$ and $\mathcal T_F$ induced by the norm and $\mathcal T_E^*$ and $\mathcal T_F^*$ the weak topology}{13/28}
+\slider{$T\!:\!\l E,\mathcal T_E\r\to\l F,\mathcal T_F\r$ is continuous iff $T\!:\!\l E,\mathcal T_E\r\to\l F,\mathcal T_F^*\r$ is continuous iff $T\!:\!\l E,\mathcal T_E^*\r\to\l F,\mathcal T_F^*\r$ is continuous\linebreak $T\!:\!\l E,\mathcal T_E^*\r\to\l F,\mathcal T_F\r$ is continuous iff one of the conditions above is true and $T$ has finite rank}{13/28}
+\slideq{Weak convergence in $L^p$ for $1<p\leqslant+\infty$}{14/28}
+\slider{If $\l u_n\r$ is a bounded sequence in $L^p\l U\r$, then there is a subsequence $\l u_{n_k}\r$ and $u\in L^p\l U\r$ such that $\nrm[p]u\leqslant\limi{\nrm[p]{u_{n_k}}}<+\infty$ and for all $v\in L^{p'}\l U\r$, $\int[\lambda][U]{u_{n_k}u}\to\int[\lambda][U]{uv}$}{14/28}
+\slideq{Properties of the weak-$*$ topology on $\bar{\mathcal B_{E^*}}\l0,1\r$ if $E$ is separable}{15/28}
+\slider{It is metrizable\linebreak Consequently, $\bar{\mathcal B_{E^*}}\l0,1\r\subset E$ is compact iff it is sequentially compact}{15/28}
+\slideq{Properties of $X^*$ when $X$ is an LCTVS}{16/28}
+\slider{$X^*$ separates points}{16/28}
+\slideq{Weak convergence of bounded sequences in $\mathcal M_b\l T\r$}{17/28}
+\slider{If $T$ is a second countable, locally compact Hausdorff space and $\l\mu_n\r$ is a bounded sequence in $\mathcal M_b\l T\r$ then there exists a subsequence $\l\mu_{n_k}\r$ that converges weakly to $\mu\in\mathcal M_b\l T\r$ such that $\nrm[\text{\textsc{VT}}]\mu\leqslant\limi{\nrm[\text{\textsc{VT}}]{\mu_{n_k}}}$ and for all $f\in C_0\l T\r$, $\int[\mu_{n_k}][T]{f}\to\int[\mu][U]{f}$}{17/28}
+\slideq{Properties of $\l X,\sigma\l X,M\r\r$ for $X$ a TVS over $\mathbb K$ and $M\subset\mathcal L\l X,\mathbb K\r$ that separates points}{18/28}
+\slider{It is an LCTVS\linebreak Its topological dual is $M$\linebreak A neighbourhood basis of the origin is given by $V_{\phi,\epsilon}=\set{u\in X,\vala{\phi\l u\r}<\epsilon}$}{18/28}
+\slideq{Properties of $\mathcal M_b\l T\r$ the set of bounded measures on $T$}{19/28}
+\slider{$\l\mathcal M_b\l T\r,\nrm[\text{\textsc{VT}}]\cdot\r$ is a Banach space and if $T$ is not countable then it is not separable}{19/28}
+\slideq{Banach-Alaoglu theorem}{20/28}
+\slider{Let $E$ be a normed vector space, then $\bar{\mathcal B_{E^*}}\l0,1\r$ is a weak-$*$ compact}{20/28}
+\slideq{Link between the separable aspect of $E$ and $E^*$}{21/28}
+\slider{If $E^*$ is separable then $E$ is separable}{21/28}
+\slideq{Properties of weak-converging sequences}{22/28}
+\slider{$u_n\rightharpoonup u$ iff for all $\phi\in E^*$, $\phi\l u_n\r\to\phi\l u\r$\linebreak If $u_n\rightharpoonup u$ then $\nrm u\leqslant\limi[n\in\mathbb N]{\nrm{u_n}}$\linebreak If $u_n\rightharpoonup u$ and $\phi_n\to\phi$ then $\phi\l u_n\r\to\phi\l u\r$\linebreak If $E$ is uniformly convex, $u_n\rightharpoonup u$ and $\nrm{u_n}\to\nrm u$ then $u_n\to u$}{22/28}
+\slideq{Weak topology on $X$}{23/28}
+\slider{$\sigma\l X,X^*\r$ the initial topology on $X$ associated to its topological dual}{23/28}
+\slideq{\v{S}mulian theorem}{24/28}
+\slider{If $E$ is a normed vector space and $K\subset E$, then if $K$ is weakly compact then $K$ is weakly sequentially compact\linebreak In perticular, if $E$ is reflexive and $\l u_n\r$ is a bounded sequence then $\l u_n\r$ has an a weakly convergent subsequence}{24/28}
+\slideq{Continuity properties of $f\!:\!\l X,\mathcal T\r\to\mathbb R$ continuous and convex when $X$ is endowed with the weak topology}{25/28}
+\slider{$f$ is lower semi-continuous: $\set{f\leqslant a}$ is closed}{25/28}
+\slideq{Subsequent convergence in weak-* topology}{26/28}
+\slider{If $E$ is a separable normed space and $\l\phi_n\r$ is a bounded sequence in $E^*$ then there is a subsequence of $\l \phi_n\r$ that converges for the weak-* topology}{26/28}
+\slideq{$C_0\l T\r$}{27/28}
+\slider{$\set{f\in BC\l T\r,\forall\epsilon>0,\exists K\subset T\text{ compact}, x\notin K\Rightarrow\vala{f\l x\r}<\epsilon}$}{27/28}
+\slideq{Weak convergence of bounded sequences in $L^1\l U\r$ to elements of $\mathcal M_b\l\overline U\r$}{28/28}
+\slider{If $\l u_n\r$ is a bounded sequence in $L^1\l U\r$ then there exists a subsequence $\l u_{n_k}\r$ that converges weakly to $\mu\in\mathcal M_b\l\overline U\r$ such that $\nrm[\text{\textsc{VT}}]\mu\leqslant\limi{\nrm[1]{u_{n_k}}}$ and for all $f\in C_0\l\overline U\r$, $\int[\lambda][U]{fu_{n_k}}\to\int[\mu][\overline U]{f}$}{28/28}
 \end{document}

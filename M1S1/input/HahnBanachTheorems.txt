@@ -1,4 +1,4 @@
-Analyse anancée -- Hahn-Banach theorems
+Analyse avancée -- Hahn-Banach theorems
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{analyse,usuelles,topologie,complexes,structures}\usepackage[nopar]{bigoperators}

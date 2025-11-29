@@ -1,4 +1,4 @@
-Analyse anancée -- Weak topology
+Analyse avancée -- Weak topology
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{usuelles,topologie,complexes,structures}\usepackage[nopar]{bigoperators,analyse}

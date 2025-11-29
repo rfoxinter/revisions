@@ -15,9 +15,10 @@ Localisé de $A$ en $\pp$;;Si $\pp$ est un idéal premier de $A$, le localisé d
 Propriétés du localisé de $A$ en $\pp$;;C'est un anneau local d'idéal maximal $\mm=\set{\frac as\in A_\pp,a\in\pp,s\notin\pp}$ et $A_\pp/\mm\cong\operatorname{Frac}\l A\r$
 Compatibilité de la localisation au quotient;;Si $I$ est un idéal de $A$ et $B=A/I$ avec $\pi\!:\!A\to B$, si $S$ est une partie multiplicative de $A$ alors $T=\pi\l S\r$ est une partie multiplicative de $B$ et $T^{-1}B\cong S^{-1}A/I'$ où $I'$ est l'idéal engendré par $\phi\l I\r$
 Propriété de $S^{-1}M=M\times S/{\sim}$ où $\l m,s\r\sim\l m',s'\r$ si et seulement s'il existe $t\in S$ tel que $t\l sm'-s'm\r=0$;;Il existe une unique structure de $S^{-1}A$-module sur $S^{-1}M$ telle que $\frac ms+\frac{m'}{s'}=\frac{s'm+sm'}{ss'}$ et $\frac as\frac mt=\frac{am}{st}$
-PU de $S^{-1}M$;;VOIR TD
+PU de $S^{-1}M$;;Pour tout $A$-module $N$ tel que pour tout $s\in S$, $n\mapsto sn$ est un isomorphisme de $N$ et pour tout application linéaire $f\!:\!M\to N$, il existe une unique application linéaire $g\!:\!S^{-1}M\to N$ telle que $g\circ\phi_{S,M}=f$
 Localisation de $u\in\hom[A]{M,N}$;;Il existe une unique application $S^{-1}u\in\hom[S^{-1}A]{S^{-1}M,S^{-1}N}$ telle que $S^{-1}u\l\frac ms\r=\frac{u\l m\r}s$
 Comportement de $S^{-1}$ vis-à-vis des suites exactes courtes;;Le foncteur $S^{-1}$ préserve les suites exactes courtes\linebreak$S^{-1}$ préserve en particulier le caractère injectif et surjectif d'applications linéaires
 Propriété des idéaux de $S^{-1}A$ relevés en idéaux de $A$;;Si $J$ est un idéal de $S^{-1}A$ alors $J=S^{-1}\l\phi_A^{-1}\l J\r\r$\linebreak Ainsi, si $A$ est noethérien ou principal alors $S^{-1}A$ aussi
 Ensemble en bijection avec les idéaux de $S^{-1}A$;;L'ensemble des idéaux $I$ de $A$ tels que, pour tout $s\in S$ et $a\in A$, si $as\in I$ alors $a\in I$\linebreak Les bijections sont données par $S^{-1}\bullet$ et $\phi^{-1}$
 Ensemble en bijection avec les idéaux premiers de $S^{-1}A$;;L'ensemble des idéaux premiers $\pp$ de $A$ tels que $S\cap\pp=\varnothing$\linebreak Les bijections sont données par $S^{-1}\bullet$ et $\phi^{-1}$
+CNS pour $M=0$ sur les idéaux premiers et maximaux;;$M=0$\linebreak Si et seulement si, pour tout idéal $\pp$ premier, $M_\pp=0$\linebreak Si et seulement si, pour tout idéal maximal $\mm$, $M_\mm=0$

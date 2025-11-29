@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\def\mm{\mathfrak m}\def\pp{\mathfrak p}\def\kk{\mathbb k}\usepackage{complexes}\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round, outer sep = -2.25pt}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}
+\def\mm{\mathfrak m}\def\pp{\mathfrak p}\def\kk{\mathbb k}\usepackage{complexes}\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round, outer sep = -2.25pt}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}\usepackage{structures}
 \hypersetup{pdftitle=Algèbre avancée -- Localisation}
 \title{Algèbre avancée\\\emph{Localisation}}
 \author{}
@@ -10,26 +10,44 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Propriétés des modules projectifs de $A$ un anneau local}{1/11}
-\slider{Tout module projectif de type fini est libre\linebreak Ce résultat reste vrai même si $P$ n'est pas de type fini (Kaplansky)}{1/11}
-\slideq{$A$ est local}{2/11}
-\slider{$A$ est local s'il possède un unique idéal maximal}{2/11}
-\slideq{Propriétés de $\l x_1,\cdots,x_n\r$ si $\l\bar{x_1},\cdots,\bar{x_n}\r$ est une base de $M/\mm M$ en tant que $A/\mm$-espace vectoriel pour $\l A,\mm\r$ un anneau local et $M$ un module de type fini}{3/11}
-\slider{C'est une famille génératrice de $M$ en tant que $A$-module}{3/11}
-\slideq{Corps résiduel}{4/11}
-\slider{$\kk=A/\mm$ est le corps résiduel de $\l A,\mm\r$ local}{4/11}
-\slideq{Localisé de $A$ en $\pp$}{5/11}
-\slider{Si $\pp$ est un idéal premier de $A$, le localisé de $A$ en $\pp$ est $A_\pp=S^{-1}A$ pour $S=A\setminus\pp$}{5/11}
-\slideq{CNS pour que $A$ soit local d'idéal maximal $I$}{6/11}
-\slider{$A^\times=A\setminus I$}{6/11}
-\slideq{Propriétés du localisé de $A$ en $\pp$}{7/11}
-\slider{C'est un anneau local d'idéal maximal $\mm=\set{\frac as\in A_\pp,a\in\pp,s\notin\pp}$ et $A_\pp/\mm\cong\operatorname{Frac}\l A\r$}{7/11}
-\slideq{$S^{-1}A$}{8/11}
-\slider{Anneau $A\times S/{\sim}$ où $\l a,s\r\sim\l a',s'\r$ si et seulement s'il existe $t\in S$ tel que $t\l sa'-s'a\r=0$}{8/11}
-\slideq{Lemme de Nakayama}{9/11}
-\slider{Si $\l A,\mm\r$ est un anneau local et $M$ est un $A$-module de type fini tel que $\mm M=M$ alors $M=\set0$}{9/11}
-\slideq{$S$ est une partie multiplicative de $A$}{10/11}
-\slider{$1\in S$ et si $\l x,y\r\in S^2$ alors $xy\in S$}{10/11}
-\slideq{PU de l'anneau des fractions\linebreak$A$ un anneau, $S$ une partie multiplicative de $A$}{11/11}
-\slider{Soit $\phi\!:\!A\to S^{-1}A$ le morphisme canonique, alors pour tout anneau $B$ et tout morphisme $\psi\!:\!A\to B$ tel que $\psi\l S\r\subset B^\times$, il existe un unique morphisme d'anneaux $\widetilde\psi$ tel que $\psi=\widetilde\psi\circ\phi$\linebreak\begin{tikzcd}[ampersand replacement=\&]A\ar[rr,"\psi"']\ar[dr,"\phi"]\&\&B\\\&S^{-1}A\ar[ur,"\widetilde\psi",dashed]\&\end{tikzcd}}{11/11}
+\slideq{PU de $S^{-1}M$}{1/20}
+\slider{Pour tout $A$-module $N$ tel que pour tout $s\in S$, $n\mapsto sn$ est un isomorphisme de $N$ et pour tout application linéaire $f\!:\!M\to N$, il existe une unique application linéaire $g\!:\!S^{-1}M\to N$ telle que $g\circ\phi_{S,M}=f$}{1/20}
+\slideq{$S^{-1}A$}{2/20}
+\slider{Anneau $A\times S/{\sim}$ où $\l a,s\r\sim\l a',s'\r$ si et seulement s'il existe $t\in S$ tel que $t\l sa'-s'a\r=0$}{2/20}
+\slideq{Compatibilité de la localisation au quotient}{3/20}
+\slider{Si $I$ est un idéal de $A$ et $B=A/I$ avec $\pi\!:\!A\to B$, si $S$ est une partie multiplicative de $A$ alors $T=\pi\l S\r$ est une partie multiplicative de $B$ et $T^{-1}B\cong S^{-1}A/I'$ où $I'$ est l'idéal engendré par $\phi\l I\r$}{3/20}
+\slideq{Propriétés des modules projectifs de $A$ un anneau local}{4/20}
+\slider{Tout module projectif de type fini est libre\linebreak Ce résultat reste vrai même si $P$ n'est pas de type fini (Kaplansky)}{4/20}
+\slideq{Ensemble en bijection avec les idéaux premiers de $S^{-1}A$}{5/20}
+\slider{L'ensemble des idéaux premiers $\pp$ de $A$ tels que $S\cap\pp=\varnothing$\linebreak Les bijections sont données par $S^{-1}\bullet$ et $\phi^{-1}$}{5/20}
+\slideq{Localisé de $A$ en $\pp$}{6/20}
+\slider{Si $\pp$ est un idéal premier de $A$, le localisé de $A$ en $\pp$ est $A_\pp=S^{-1}A$ pour $S=A\setminus\pp$}{6/20}
+\slideq{Propriétés de $\l x_1,\cdots,x_n\r$ si $\l\bar{x_1},\cdots,\bar{x_n}\r$ est une base de $M/\mm M$ en tant que $A/\mm$-espace vectoriel pour $\l A,\mm\r$ un anneau local et $M$ un module de type fini}{7/20}
+\slider{C'est une famille génératrice de $M$ en tant que $A$-module}{7/20}
+\slideq{Localisation de $u\in\hom[A]{M,N}$}{8/20}
+\slider{Il existe une unique application $S^{-1}u\in\hom[S^{-1}A]{S^{-1}M,S^{-1}N}$ telle que $S^{-1}u\l\frac ms\r=\frac{u\l m\r}s$}{8/20}
+\slideq{Propriétés du localisé de $A$ en $\pp$}{9/20}
+\slider{C'est un anneau local d'idéal maximal $\mm=\set{\frac as\in A_\pp,a\in\pp,s\notin\pp}$ et $A_\pp/\mm\cong\operatorname{Frac}\l A\r$}{9/20}
+\slideq{Corps résiduel}{10/20}
+\slider{$\kk=A/\mm$ est le corps résiduel de $\l A,\mm\r$ local}{10/20}
+\slideq{Propriété des idéaux de $S^{-1}A$ relevés en idéaux de $A$}{11/20}
+\slider{Si $J$ est un idéal de $S^{-1}A$ alors $J=S^{-1}\l\phi_A^{-1}\l J\r\r$\linebreak Ainsi, si $A$ est noethérien ou principal alors $S^{-1}A$ aussi}{11/20}
+\slideq{Ensemble en bijection avec les idéaux de $S^{-1}A$}{12/20}
+\slider{L'ensemble des idéaux $I$ de $A$ tels que, pour tout $s\in S$ et $a\in A$, si $as\in I$ alors $a\in I$\linebreak Les bijections sont données par $S^{-1}\bullet$ et $\phi^{-1}$}{12/20}
+\slideq{$S$ est une partie multiplicative de $A$}{13/20}
+\slider{$1\in S$ et si $\l x,y\r\in S^2$ alors $xy\in S$}{13/20}
+\slideq{CNS pour que $A$ soit local d'idéal maximal $I$}{14/20}
+\slider{$A^\times=A\setminus I$}{14/20}
+\slideq{PU de l'anneau des fractions\linebreak$A$ un anneau, $S$ une partie multiplicative de $A$}{15/20}
+\slider{Soit $\phi\!:\!A\to S^{-1}A$ le morphisme canonique, alors pour tout anneau $B$ et tout morphisme $\psi\!:\!A\to B$ tel que $\psi\l S\r\subset B^\times$, il existe un unique morphisme d'anneaux $\widetilde\psi$ tel que $\psi=\widetilde\psi\circ\phi$\linebreak\begin{tikzcd}[ampersand replacement=\&]A\ar[rr,"\psi"']\ar[dr,"\phi"]\&\&B\\\&S^{-1}A\ar[ur,"\widetilde\psi",dashed]\&\end{tikzcd}}{15/20}
+\slideq{$A$ est local}{16/20}
+\slider{$A$ est local s'il possède un unique idéal maximal}{16/20}
+\slideq{Lemme de Nakayama}{17/20}
+\slider{Si $\l A,\mm\r$ est un anneau local et $M$ est un $A$-module de type fini tel que $\mm M=M$ alors $M=\set0$}{17/20}
+\slideq{Comportement de $S^{-1}$ vis-à-vis des suites exactes courtes}{18/20}
+\slider{Le foncteur $S^{-1}$ préserve les suites exactes courtes\linebreak$S^{-1}$ préserve en particulier le caractère injectif et surjectif d'applications linéaires}{18/20}
+\slideq{Propriété de $S^{-1}M=M\times S/{\sim}$ où $\l m,s\r\sim\l m',s'\r$ si et seulement s'il existe $t\in S$ tel que $t\l sm'-s'm\r=0$}{19/20}
+\slider{Il existe une unique structure de $S^{-1}A$-module sur $S^{-1}M$ telle que $\frac ms+\frac{m'}{s'}=\frac{s'm+sm'}{ss'}$ et $\frac as\frac mt=\frac{am}{st}$}{19/20}
+\slideq{CNS pour $M=0$ sur les idéaux premiers et maximaux}{20/20}
+\slider{$M=0$\linebreak Si et seulement si, pour tout idéal $\pp$ premier, $M_\pp=0$\linebreak Si et seulement si, pour tout idéal maximal $\mm$, $M_\mm=0$}{20/20}
 \end{document}

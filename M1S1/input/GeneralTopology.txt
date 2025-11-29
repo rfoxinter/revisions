@@ -1,4 +1,4 @@
-Analyse anancée -- General topology
+Analyse avancée -- General topology
 Shuffle questions : True
 Q/R & R/Q : False
 \usepackage{al,bigoperators}\togglebigoppar

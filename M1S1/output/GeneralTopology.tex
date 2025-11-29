@@ -2,42 +2,42 @@
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
 \usepackage{al,bigoperators}\togglebigoppar
-\hypersetup{pdftitle=Analyse anancée -- General topology}
-\title{Analyse anancée\\\emph{General topology}}
+\hypersetup{pdftitle=Analyse avancée -- General topology}
+\title{Analyse avancée\\\emph{General topology}}
 \author{}
 \date{}
 \begin{document}
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Initial topology on a non-empty set $X$ associated to $\l Y_i,\mathcal T_i,\phi_i\!:\!X\to Y_i\r$}{1/15}
-\slider{The coarsest topology on $X$ such that all of the $\phi_i$ are continuous}{1/15}
-\slideq{$p$ is a norm}{2/15}
-\slider{$p$ is positive, sub-additive and homogeneous and $p\l u\r=0$ iff $u=0$}{2/15}
-\slideq{$\l X,\mathcal T\r$ is a topological vector space}{3/15}
-\slider{$X$ is a vector space such that $\nappl{X\times X}X{\l x,y\r}{x+y}$ and $\nappl{\mathbb K\times X}X{\l \lambda,x\r}{\lambda x}$ are continuous and all singletons are closed}{3/15}
-\slideq{Topology induced by a family semi-norms}{4/15}
-\slider{$\varnothing\in\mathcal T$, $X\in\mathcal T$ and $U\in\mathcal T$ if for all $u\in U$, there exists $n_1,\cdots,n_k$ and $r>0$ such that $u\in\bigcap{i=1}{k}{B_{p_{n_i}}\l u,r\r}\subset U$\linebreak\linebreak If each $p_n$ is separating then $\l X,\mathcal T\r$ is metrizable}{4/15}
+\slideq{$p$ is a semi-norm}{1/15}
+\slider{$p$ is positive, sub-additive and homogeneous}{1/15}
+\slideq{$p$ is sub-additive}{2/15}
+\slider{$p\l u+v\r\leqslant p\l u\r+p\l v\r$}{2/15}
+\slideq{Link between dense sets and neighbourhood bases}{3/15}
+\slider{If $X$ has a countable dense set then $X$ has a countable neighbourhood basis}{3/15}
+\slideq{$p$ is a norm}{4/15}
+\slider{$p$ is positive, sub-additive and homogeneous and $p\l u\r=0$ iff $u=0$}{4/15}
 \slideq{Neighbourhood basis for a topology $\mathcal T$}{5/15}
 \slider{$\mathcal B\subset\mathcal P\l X\r$ such that for all $U\in\mathcal T\setminus\set\varnothing$, there exists $V\in\mathcal B$ such that $u\in V\subset U$\linebreak In particular, for each $u\in X$, there exists $V\in\mathcal B$ such that $u\in V$ and for all $V,V'\in\mathcal B$, if $u\in V\cap V'$, then there exists $W\in\mathcal B$ such that $u\in W\subset V\cap V'$\linebreak Conversly, if $\mathcal T\subset\mathcal P\l X\r$ and $\mathcal B$ and $\mathcal T$ verify the three previous properties, $\mathcal T$ is a topology}{5/15}
-\slideq{$p$ is homogeneous}{6/15}
-\slider{$\forall t\in\mathbb K$, $p\l tu\r=\left|t\right|p\l u\r$}{6/15}
-\slideq{Link between dense sets and neighbourhood bases}{7/15}
-\slider{If $X$ has a countable dense set then $X$ has a countable neighbourhood basis}{7/15}
+\slideq{Basis for $X$}{6/15}
+\slider{$\bigcup{x\in X}{}{\mathcal B_x}$ with $\mathcal B_x$ a neighbourhood basis of $x$}{6/15}
+\slideq{$\l X,\mathcal T\r$ is a topological vector space}{7/15}
+\slider{$X$ is a vector space such that $\nappl{X\times X}X{\l x,y\r}{x+y}$ and $\nappl{\mathbb K\times X}X{\l \lambda,x\r}{\lambda x}$ are continuous and all singletons are closed}{7/15}
 \slideq{$A$ is a neighbourhood of $u\in X$}{8/15}
 \slider{There exists an open set $U$ such that $u\in U\subset A$}{8/15}
 \slideq{Final topology on a non-empty set $X$ associated to $\l Z_i,\mathcal T_i,\phi_i\!:\!Z_i\to X\r$}{9/15}
 \slider{The finest topology on $X$ such that all of the $\phi_i$ are continuous}{9/15}
-\slideq{$p$ is a semi-norm}{10/15}
-\slider{$p$ is positive, sub-additive and homogeneous}{10/15}
-\slideq{Neighbourhood basis of $u\in X$}{11/15}
-\slider{$\mathcal B_u\subset\mathcal T$ such that for all neighbourhood $A$ of $u$, there exists $U\in\mathcal B_u$ such that $U\subset A$}{11/15}
-\slideq{Basis for $X$}{12/15}
-\slider{$\bigcup{x\in X}{}{\mathcal B_x}$ with $\mathcal B_x$ a neighbourhood basis of $x$}{12/15}
-\slideq{$\mathcal T$ is finer than $\mathcal S$\linebreak$\mathcal S$ is coarser than $\mathcal T$}{13/15}
-\slider{$\mathcal S\subset\mathcal T$}{13/15}
-\slideq{$p$ is positively homogeneous}{14/15}
-\slider{$\forall t\in\mathbb R_+$, $p\l tu\r=tp\l u\r$}{14/15}
-\slideq{$p$ is sub-additive}{15/15}
-\slider{$p\l u+v\r\leqslant p\l u\r+p\l v\r$}{15/15}
+\slideq{$\mathcal T$ is finer than $\mathcal S$\linebreak$\mathcal S$ is coarser than $\mathcal T$}{10/15}
+\slider{$\mathcal S\subset\mathcal T$}{10/15}
+\slideq{Topology induced by a family semi-norms}{11/15}
+\slider{$\varnothing\in\mathcal T$, $X\in\mathcal T$ and $U\in\mathcal T$ if for all $u\in U$, there exists $n_1,\cdots,n_k$ and $r>0$ such that $u\in\bigcap{i=1}{k}{B_{p_{n_i}}\l u,r\r}\subset U$\linebreak\linebreak If each $p_n$ is separating then $\l X,\mathcal T\r$ is metrizable}{11/15}
+\slideq{$p$ is homogeneous}{12/15}
+\slider{$\forall t\in\mathbb K$, $p\l tu\r=\left|t\right|p\l u\r$}{12/15}
+\slideq{Neighbourhood basis of $u\in X$}{13/15}
+\slider{$\mathcal B_u\subset\mathcal T$ such that for all neighbourhood $A$ of $u$, there exists $U\in\mathcal B_u$ such that $U\subset A$}{13/15}
+\slideq{Initial topology on a non-empty set $X$ associated to $\l Y_i,\mathcal T_i,\phi_i\!:\!X\to Y_i\r$}{14/15}
+\slider{The coarsest topology on $X$ such that all of the $\phi_i$ are continuous}{14/15}
+\slideq{$p$ is positively homogeneous}{15/15}
+\slider{$\forall t\in\mathbb R_+$, $p\l tu\r=tp\l u\r$}{15/15}
 \end{document}
