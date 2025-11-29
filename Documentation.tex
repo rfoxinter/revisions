@@ -343,6 +343,12 @@ Un exemple de fichier python générant un tel fichier est disponible à l'adres
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\epsilon?}
 \mcmd[\footnotemark]{\epsilon}
 \footnotetext{Correspond à la commande usuelle \mintinline{latexmath}?\varepsilon?}
+\mcmd[\footnotemark]{\bbA\bbz}
+\footnotetext{Raccourci pour la commande usuelle \mintinline{latexmath}?\mathbb?}
+\mcmd[\footnotemark]{\calA\calZ}
+\footnotetext{Raccourci pour la commande usuelle \mintinline{latexmath}?\mathcal?}
+\mcmd[\footnotemark]{\frakA\frakz}
+\footnotetext{Raccourci pour la commande usuelle \mintinline{latexmath}?\mathfrak?}
 \subsection{L'option {\color{namecolour}\texttt{nofont}}}
 Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n'a pas de commande \mintinline{latexmath}?\llbracket? et\linebreak\mintinline{latexmath}?\rrbracket?, il faut mettre les commandes \mintinline{latex}?\newcommand{\llbracket}{\commandellb}? et \mintinline{latex}?\newcommand{\rrbracket}{\commanderrb}? avant \mintinline{latex}?\usepackage{preambule}?. Dans ces commandes, \mintinline{latex}?\commandellb? correspond à la commande pour obtenir $\llbracket$ et \mintinline{latex}?\commanderrb? correspond à la commande pour obtenir $\rrbracket$. Ces deux commandes doivent être remplacées par << \texttt{.} >> si la police utilisée n'a pas ce caractère : \mintinline{latex}?\newcommand{\llbracket}{.}? (idem pour {\color{keycolour}\texttt{\textbackslash llbracket}}).
 \subsection{Commandes de \texttt{Preambule.sty}}
