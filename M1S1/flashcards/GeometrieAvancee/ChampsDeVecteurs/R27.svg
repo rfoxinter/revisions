@@ -73,27 +73,28 @@ text.f7 {font-family:cmr12;font-size:11.955168px}
 <text class='f7' x='-71.501872' y='.798595'>(</text>
 <text class='f4' x='-66.949547' y='.798595'>U<tspan x='-59.05116'>,</tspan><tspan x='-53.807001'>ψ</tspan></text>
 <text class='f7' x='-45.767786' y='.798595'>)</text>
-<text class='f6' x='-37.614074' y='.798595'>autour<tspan x='-.203263'>de</tspan></text>
-<text class='f4' x='15.101413' y='.798595'>x</text>
-<text class='f5' x='21.7535' y='2.591858'>0</text>
-<text class='f6' x='30.087238' y='.798595'>telle<tspan x='55.144629'>que</tspan></text>
-<text class='f4' x='76.626013' y='.798595'>X</text>
-<text class='f3' x='86.34124' y='2.591858'>i</text>
-<text class='f1' x='89.722501' y='3.08999'>|</text>
-<text class='f3' x='92.074824' y='3.08999'>U</text>
-<text class='f7' x='102.471688' y='.798595'>=</text>
-<text class='f4' x='114.897169' y='.798595'>∂</text>
-<text class='f3' x='120.930023' y='2.591858'>i</text>
-<text class='f6' x='127.912719' y='.798595'>(ie,</text>
-<text class='f4' x='147.768952' y='.798595'>ψ</text>
-<text class='f1' x='155.379219' y='2.591858'>∗</text>
-<text class='f4' x='160.111534' y='.798595'>X</text>
-<text class='f3' x='169.826761' y='2.591858'>i</text>
-<text class='f7' x='176.528862' y='.798595'>=</text>
-<text class='f4' x='194.91747' y='-7.289163'>∂</text>
-<rect x='190.149857' y='-2.42929' height='.478187' width='16.066201'/>
-<text class='f4' x='190.149857' y='8.999258'>∂<tspan x='196.182711'>x</tspan></text>
-<text class='f3' x='202.834798' y='12.06307'>i</text>
-<text class='f6' x='207.411572' y='.798595'>)</text>
+<text class='f6' x='-37.667615' y='.798595'>autour<tspan x='-.31036'>de</tspan></text>
+<text class='f4' x='14.940791' y='.798595'>x</text>
+<text class='f5' x='21.592878' y='2.591858'>0</text>
+<text class='f6' x='29.873061' y='.798595'>telle<tspan x='54.87691'>que</tspan></text>
+<text class='f4' x='76.304754' y='.798595'>X</text>
+<text class='f3' x='86.019981' y='2.591858'>i</text>
+<text class='f1' x='89.401241' y='3.08999'>|</text>
+<text class='f3' x='91.753565' y='3.08999'>U</text>
+<text class='f7' x='102.150429' y='.798595'>=</text>
+<text class='f4' x='117.56572' y='-3.352495' transform='matrix(1 0 .25 1 -1.538878 4.15114)'>∂</text>
+<text class='f3' x='120.8229' y='2.591858'>i</text>
+<text class='f6' x='127.752039' y='.798595'>(ie,</text>
+<text class='f4' x='147.554793' y='.798595'>ψ</text>
+<text class='f1' x='155.16506' y='2.591858'>∗</text>
+<text class='f4' x='159.897375' y='.798595'>X</text>
+<text class='f3' x='169.612602' y='2.591858'>i</text>
+<text class='f7' x='176.314703' y='.798595'>=</text>
+<text class='f4' x='197.693122' y='-11.440253' transform='matrix(1 0 .25 1 .483075 4.15114)'>∂</text>
+<rect x='189.935698' y='-2.42929' height='.478187' width='16.280349'/>
+<text class='f4' x='192.925509' y='4.848168' transform='matrix(1 0 .25 1 -3.589042 4.15114)'>∂</text>
+<text class='f4' x='196.182688' y='8.999258'>x</text>
+<text class='f3' x='202.834775' y='12.06307'>i</text>
+<text class='f6' x='207.411561' y='.798595'>)</text>
 </g>
 </svg>

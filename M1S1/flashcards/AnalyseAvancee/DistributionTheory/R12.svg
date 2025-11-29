@@ -33,25 +33,25 @@ text.f8 {font-family:cmr12;font-size:11.955168px}
 <text class='f7' x='41.004144' y='-62.535496'>is<tspan x='52.772398'>of</tspan><tspan x='66.101097'>order</tspan><tspan x='96.659598'>at</tspan><tspan x='110.963567'>most</tspan></text>
 <text class='f6' x='139.636516' y='-62.535496'>j</text>
 <text class='f7' x='149.053092' y='-62.535496'>iﬀ<tspan x='163.031964'>for</tspan><tspan x='180.911928'>all</tspan></text>
-<text class='f6' x='-61.664449' y='-48.089668'>u</text>
-<text class='f4' x='-51.68118' y='-48.089668'>∈<tspan x='-40.390212'>D</tspan></text>
-<text class='f8' x='-30.835983' y='-48.089668'>(</text>
-<text class='f6' x='-26.283658' y='-48.089668'>O</text>
-<text class='f8' x='-17.01241' y='-48.089668'>)</text>
-<text class='f7' x='-8.559003' y='-48.089668'>suc<tspan x='7.435427'>h</tspan><tspan x='17.838315'>that</tspan></text>
-<text class='f4' x='43.195355' y='-48.089668'>|</text>
-<text class='f6' x='46.516246' y='-48.089668'>m</text>
-<text class='f4' x='56.755512' y='-48.089668'>|</text>
-<text class='f1' x='63.397232' y='-48.089668'></text>
-<text class='f6' x='76.016558' y='-48.089668'>j</text>
-<text class='f7' x='81.532054' y='-48.089668'>,<tspan x='88.684033'>if</tspan></text>
-<text class='f6' x='99.412006' y='-48.089668'>∂</text>
-<text class='f5' x='105.44486' y='-52.428105'>m<tspan x='105.44486' y='-45.134153'>x</tspan></text>
-<text class='f6' x='113.433519' y='-48.089668'>u</text>
-<text class='f8' x='120.095958' y='-48.089668'>(</text>
-<text class='f6' x='124.648284' y='-48.089668'>z</text>
-<text class='f8' x='130.61889' y='-48.089668'>)<tspan x='138.492046'>=</tspan><tspan x='150.917526'>0</tspan></text>
-<text class='f7' x='160.671598' y='-48.089668'>then</text>
+<text class='f6' x='-61.771531' y='-48.089668'>u</text>
+<text class='f4' x='-51.788262' y='-48.089668'>∈<tspan x='-40.497294'>D</tspan></text>
+<text class='f8' x='-30.943065' y='-48.089668'>(</text>
+<text class='f6' x='-26.390739' y='-48.089668'>O</text>
+<text class='f8' x='-17.119491' y='-48.089668'>)</text>
+<text class='f7' x='-8.666084' y='-48.089668'>suc<tspan x='7.328346'>h</tspan><tspan x='17.731234'>that</tspan></text>
+<text class='f4' x='43.088274' y='-48.089668'>|</text>
+<text class='f6' x='46.409164' y='-48.089668'>m</text>
+<text class='f4' x='56.648431' y='-48.089668'>|</text>
+<text class='f1' x='63.290151' y='-48.089668'></text>
+<text class='f6' x='75.909477' y='-48.089668'>j</text>
+<text class='f7' x='81.424973' y='-48.089668'>,<tspan x='88.576951'>if</tspan></text>
+<text class='f6' x='102.294736' y='-52.240758' transform='matrix(1 0 .25 1 10.683 4.1511)'>∂</text>
+<text class='f5' x='105.551915' y='-52.428105'>m<tspan x='105.551915' y='-45.134153'>x</tspan></text>
+<text class='f6' x='113.540573' y='-48.089668'>u</text>
+<text class='f8' x='120.203013' y='-48.089668'>(</text>
+<text class='f6' x='124.755339' y='-48.089668'>z</text>
+<text class='f8' x='130.725945' y='-48.089668'>)<tspan x='138.5991'>=</tspan><tspan x='151.024581'>0</tspan></text>
+<text class='f7' x='160.778653' y='-48.089668'>then</text>
 <text class='f4' x='-55.957396' y='-33.64384'></text>
 <text class='f6' x='-51.308159' y='-33.64384'>α<tspan x='-43.786435'>,</tspan><tspan x='-38.542276'>u</tspan></text>
 <text class='f4' x='-31.879836' y='-33.64384'></text>
@@ -67,19 +67,19 @@ text.f8 {font-family:cmr12;font-size:11.955168px}
 <text class='f0' x='115.385378' y='-30.156916'></text>
 <text class='f5' x='121.584376' y='-30.156916'>j</text>
 <text class='f7' x='129.867615' y='-33.64384'>suc<tspan x='145.862044'>h</tspan><tspan x='156.264932'>that</tspan></text>
-<text class='f6' x='16.940486' y='-14.61513'>α</text>
-<text class='f8' x='27.78304' y='-14.61513'>=</text>
-<text class='f2' x='42.713318' y='-25.972595'></text>
-<text class='f3' x='40.208521' y='-.069594'>|</text>
-<text class='f5' x='42.560844' y='-.069594'>m</text>
-<text class='f3' x='50.051371' y='-.069594'>|</text>
-<text class='f0' x='52.403694' y='-.069594'></text>
-<text class='f5' x='58.602692' y='-.069594'>j</text>
-<text class='f6' x='64.479215' y='-14.61513'>C</text>
-<text class='f5' x='72.854261' y='-12.821867'>m</text>
-<text class='f6' x='80.842919' y='-14.61513'>∂</text>
-<text class='f5' x='86.875773' y='-18.953567'>m<tspan x='86.875773' y='-11.659615'>x</tspan></text>
-<text class='f6' x='94.864431' y='-14.61513'>δ</text>
-<text class='f5' x='100.049087' y='-12.821867'>z</text>
+<text class='f6' x='15.837171' y='-14.61513'>α</text>
+<text class='f8' x='26.679725' y='-14.61513'>=</text>
+<text class='f2' x='41.610003' y='-25.972595'></text>
+<text class='f3' x='39.105206' y='-.069594'>|</text>
+<text class='f5' x='41.457529' y='-.069594'>m</text>
+<text class='f3' x='48.948056' y='-.069594'>|</text>
+<text class='f0' x='51.300379' y='-.069594'></text>
+<text class='f5' x='57.499377' y='-.069594'>j</text>
+<text class='f6' x='63.3759' y='-14.61513'>C</text>
+<text class='f5' x='71.750946' y='-12.821867'>m</text>
+<text class='f6' x='84.721912' y='-18.76622' transform='matrix(1 0 .25 1 2.31435 4.1511)'>∂</text>
+<text class='f5' x='87.979092' y='-18.953567'>m<tspan x='87.979092' y='-11.659615'>x</tspan></text>
+<text class='f6' x='95.96775' y='-14.61513'>δ</text>
+<text class='f5' x='101.152405' y='-12.821867'>z</text>
 </g>
 </svg>

@@ -41,25 +41,26 @@ text.f6 {font-family:cmr12;font-size:11.955168px}
 <text class='f6' x='168.038503' y='-48.089668'>(</text>
 <text class='f3' x='172.590829' y='-48.089668'>U<tspan x='180.489215'>,</tspan><tspan x='185.733374'>ψ</tspan></text>
 <text class='f6' x='193.77259' y='-48.089668'>)</text>
-<text class='f5' x='-60.865352' y='-27.714673'>autour<tspan x='-23.154884'>de</tspan></text>
-<text class='f3' x='-7.550535' y='-27.714673'>x</text>
-<text class='f4' x='-.898448' y='-25.92141'>0</text>
-<text class='f5' x='7.734948' y='-27.714673'>telle<tspan x='33.092011'>que</tspan></text>
-<text class='f3' x='54.873068' y='-27.714673'>X</text>
-<text class='f0' x='64.588295' y='-25.854963'>|</text>
-<text class='f2' x='66.940619' y='-25.854963'>U</text>
-<text class='f6' x='77.337483' y='-27.714673'>=</text>
-<text class='f3' x='89.762964' y='-27.714673'>∂</text>
-<text class='f4' x='95.795818' y='-25.92141'>1</text>
-<text class='f5' x='104.429214' y='-27.714673'>(ie,</text>
-<text class='f3' x='124.584817' y='-27.714673'>ψ</text>
-<text class='f0' x='132.195083' y='-25.92141'>∗</text>
-<text class='f3' x='136.927398' y='-27.714673'>X</text>
-<text class='f6' x='150.903336' y='-27.714673'>=</text>
-<text class='f3' x='169.967465' y='-35.802432'>∂</text>
-<rect x='164.52433' y='-30.942559' height='.478187' width='17.417245'/>
-<text class='f3' x='164.52433' y='-19.514011'>∂<tspan x='170.557184'>x</tspan></text>
-<text class='f4' x='177.209271' y='-16.582834'>1</text>
-<text class='f5' x='183.137088' y='-27.714673'>)</text>
+<text class='f5' x='-61.0795' y='-27.714673'>autour<tspan x='-23.369031'>de</tspan></text>
+<text class='f3' x='-7.764683' y='-27.714673'>x</text>
+<text class='f4' x='-1.112596' y='-25.92141'>0</text>
+<text class='f5' x='7.520801' y='-27.714673'>telle<tspan x='32.877864'>que</tspan></text>
+<text class='f3' x='54.658921' y='-27.714673'>X</text>
+<text class='f0' x='64.374148' y='-25.854963'>|</text>
+<text class='f2' x='66.726472' y='-25.854963'>U</text>
+<text class='f6' x='77.123336' y='-27.714673'>=</text>
+<text class='f3' x='92.538627' y='-31.865763' transform='matrix(1 0 .25 1 5.58925 4.1511)'>∂</text>
+<text class='f4' x='95.795806' y='-25.92141'>1</text>
+<text class='f5' x='104.429203' y='-27.714673'>(ie,</text>
+<text class='f3' x='124.584805' y='-27.714673'>ψ</text>
+<text class='f0' x='132.195072' y='-25.92141'>∗</text>
+<text class='f3' x='136.927387' y='-27.714673'>X</text>
+<text class='f6' x='150.903324' y='-27.714673'>=</text>
+<text class='f3' x='172.957264' y='-39.953522' transform='matrix(1 0 .25 1 7.611375 4.1511)'>∂</text>
+<rect x='164.524319' y='-30.942559' height='.478187' width='17.631392'/>
+<text class='f3' x='167.514129' y='-23.665101' transform='matrix(1 0 .25 1 3.539275 4.1511)'>∂</text>
+<text class='f3' x='170.771309' y='-19.514011'>x</text>
+<text class='f4' x='177.423396' y='-16.582834'>1</text>
+<text class='f5' x='183.351225' y='-27.714673'>)</text>
 </g>
 </svg>

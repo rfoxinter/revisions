@@ -55,16 +55,18 @@ text.f8 {font-family:cmr12;font-size:11.955168px}
 <text class='f5' x='57.411272' y='-32.38004'>M</text>
 <text class='f7' x='73.88596' y='-32.38004'>p<tspan x='80.712841'>our</tspan><tspan x='101.518616'>déﬁnir</tspan><tspan x='137.92874'>un</tspan><tspan x='154.833433'>ﬂot</tspan></text>
 <text class='f5' x='175.639208' y='-32.38004'>ϕ</text>
-<text class='f7' x='-52.83869' y='-12.669241'>Récipro<tspan x='-13.342316'>quemen</tspan><tspan x='25.66854'>t,</tspan></text>
-<text class='f5' x='37.371784' y='-12.669241'>x</text>
-<text class='f2' x='47.344701' y='-12.669241'>↦→</text>
-<text class='f5' x='63.816246' y='-20.757'>∂<tspan x='70.347232'>h</tspan></text>
-<rect x='63.816246' y='-15.897127' height='.478187' width='13.269529'/>
-<text class='f5' x='65.071944' y='-4.468579'>∂<tspan x='71.104798'>t</tspan></text>
-<text class='f8' x='78.28129' y='-12.669241'>(<tspan x='82.833615'>0</tspan></text>
-<text class='f5' x='88.686606' y='-12.669241'>,<tspan x='93.930764'>x</tspan></text>
-<text class='f8' x='100.582852' y='-12.669241'>)</text>
-<text class='f7' x='109.036259' y='-12.669241'>est<tspan x='127.306342'>un</tspan><tspan x='144.211036'>c</tspan><tspan x='149.087384'>hamp</tspan><tspan x='181.596403'>de</tspan><tspan x='31.369592' y='4.697047'>v</tspan><tspan x='37.221211'>ecteurs</tspan><tspan x='76.947265'>sur</tspan></text>
+<text class='f7' x='-52.945771' y='-12.669241'>Récipro<tspan x='-13.449397'>quemen</tspan><tspan x='25.561459'>t,</tspan></text>
+<text class='f5' x='37.264703' y='-12.669241'>x</text>
+<text class='f2' x='47.23762' y='-12.669241'>↦→</text>
+<text class='f5' x='66.698976' y='-24.90809' transform='matrix(1 0 .25 1 3.849825 4.1511)'>∂</text>
+<text class='f5' x='70.454287' y='-20.757'>h</text>
+<rect x='63.709165' y='-15.897127' height='.478187' width='13.483677'/>
+<text class='f5' x='67.954673' y='-8.619669' transform='matrix(1 0 .25 1 -.222283 4.15114)'>∂</text>
+<text class='f5' x='71.211853' y='-4.468579'>t</text>
+<text class='f8' x='78.388356' y='-12.669241'>(<tspan x='82.940681'>0</tspan></text>
+<text class='f5' x='88.793672' y='-12.669241'>,<tspan x='94.037831'>x</tspan></text>
+<text class='f8' x='100.689918' y='-12.669241'>)</text>
+<text class='f7' x='109.143325' y='-12.669241'>est<tspan x='127.413408'>un</tspan><tspan x='144.318102'>c</tspan><tspan x='149.19445'>hamp</tspan><tspan x='181.703469'>de</tspan><tspan x='31.369592' y='4.697047'>v</tspan><tspan x='37.221211'>ecteurs</tspan><tspan x='76.947265'>sur</tspan></text>
 <text class='f5' x='96.517694' y='4.697047'>M</text>
 </g>
 </svg>

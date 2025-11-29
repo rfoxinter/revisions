@@ -2345,18 +2345,13 @@ space before arrow={0.2ex},
 \newcommand{\derfrac}[2]{{\analysedisplay\oldderfrac{#1}{#2}}}
 
 \let\slantpartial\partial
-\ifpdf
-    % pdf output
-    \newsavebox{\partialbox}
-    \newcommand{\displaypartial}{\noexpand{\unslant{\displaystyle\textstyle\slantpartial}}\kern-1.2pt}
-    \newcommand{\normalpartial}{\noexpand{\unslant{\textstyle\slantpartial}}\kern-1.2pt}
-    \newcommand{\scriptpartial}{\noexpand{\unslant{\scriptstyle\slantpartial}}\kern-1.2pt}
-    \newcommand{\scriptscriptpartial}{\noexpand{\unslant{\scriptscriptstyle\slantpartial}}\kern-1.2pt}
-    \renewcommand{\partial}{\mathchoice{\displaypartial}{\normalpartial}{\scriptpartial}{\scriptscriptpartial}}
-\else
-    % other output
-    \renewcommand{\partial}{\slantpartial\kern-0.8pt}
-\fi
+\newsavebox{\partialbox}
+\newcommand{\displaypartial}{\mathop{}\mkern-3mu\noexpand{\unslant{\displaystyle\textstyle\slantpartial}}\kern-1.2pt}
+\newcommand{\normalpartial}{\mathop{}\mkern-3mu\noexpand{\unslant{\textstyle\slantpartial}}\kern-1.2pt}
+\newcommand{\scriptpartial}{\mathop{}\mkern-3mu\noexpand{\unslant{\scriptstyle\slantpartial}}\kern-1.2pt}
+\newcommand{\scriptscriptpartial}{\mathop{}\mkern-3mu\noexpand{\unslant{\scriptscriptstyle\slantpartial}}\kern-1.2pt}
+\renewcommand{\partial}{\mathchoice{\displaypartial}{\normalpartial}{\scriptpartial}{\scriptscriptpartial}}
+
 \newcommand{\resetpartial}{\let\partial\slantpartial}
 
 

@@ -30,17 +30,18 @@ text.f5 {font-family:cmr12;font-size:11.955168px}
 <text class='f3' x='109.527991' y='-62.535496'>O</text>
 <text class='f5' x='118.799239' y='-62.535496'>)</text>
 <text class='f4' x='123.351564' y='-62.535496'>,</text>
-<text class='f1' x='-32.057625' y='-48.089668'></text>
-<text class='f3' x='-27.408388' y='-48.089668'>β<tspan x='-20.137117'>,</tspan><tspan x='-14.892958'>u</tspan></text>
-<text class='f1' x='-8.230519' y='-48.089668'></text>
-<text class='f5' x='-.260452' y='-48.089668'>=<tspan x='12.165029'>(</tspan></text>
-<text class='f1' x='16.717354' y='-48.089668'>−</text>
-<text class='f5' x='26.015852' y='-48.089668'>1)</text>
-<text class='f2' x='36.42116' y='-53.901203'>m</text>
-<text class='f1' x='44.409818' y='-48.089668'></text>
-<text class='f3' x='49.059055' y='-48.089668'>α<tspan x='56.580779'>,</tspan><tspan x='61.824938'>∂</tspan></text>
-<text class='f2' x='67.857792' y='-52.428105'>m<tspan x='67.857792' y='-45.134153'>x</tspan></text>
-<text class='f3' x='75.84645' y='-48.089668'>u</text>
-<text class='f1' x='82.50889' y='-48.089668'></text>
+<text class='f1' x='-32.164706' y='-48.089668'></text>
+<text class='f3' x='-27.515469' y='-48.089668'>β<tspan x='-20.244198'>,</tspan><tspan x='-15.00004'>u</tspan></text>
+<text class='f1' x='-8.3376' y='-48.089668'></text>
+<text class='f5' x='-.367533' y='-48.089668'>=<tspan x='12.057947'>(</tspan></text>
+<text class='f1' x='16.610273' y='-48.089668'>−</text>
+<text class='f5' x='25.90877' y='-48.089668'>1)</text>
+<text class='f2' x='36.314079' y='-53.901203'>m</text>
+<text class='f1' x='44.302737' y='-48.089668'></text>
+<text class='f3' x='48.951974' y='-48.089668'>α<tspan x='56.473698'>,</tspan></text>
+<text class='f3' x='64.707667' y='-52.240758' transform='matrix(1 0 .25 1 10.683 4.1511)'>∂</text>
+<text class='f2' x='67.964847' y='-52.428105'>m<tspan x='67.964847' y='-45.134153'>x</tspan></text>
+<text class='f3' x='75.953505' y='-48.089668'>u</text>
+<text class='f1' x='82.615945' y='-48.089668'></text>
 </g>
 </svg>
