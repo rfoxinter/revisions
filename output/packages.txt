@@ -1,4 +1,5 @@
 AL.sty
+Alias.sty
 Analyse.sty
 Arithmetique.sty
 Arrows.sty
