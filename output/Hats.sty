@@ -20,3 +20,13 @@
         \box0
     }
 }
+\newcommand{\ccheck}[1]{\mathpalette\check@check{#1}\sbox0{$\m@th#1$}\hspace{-0.25\wd0}}
+\newcommand{\check@check}[2]{
+    \sbox0{$\m@th#1#2$}
+    \vbox{
+        \hbox{\hspace{-0.25\wd0}\resizebox{2.5\wd0}{\height}{\v{\ }}\hspace{-\wd0}}
+        \nointerlineskip
+        \vspace{-5pt}
+        \box0
+    }
+}
