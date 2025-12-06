@@ -10,34 +10,54 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Mesure $\mathbb P_x$ pour un noyau de transition $P$}{1/15}
-\slider{Il existe une unique mesure $\mathbb P_x$ sur $E^{\mathbb N}$ telle que si $X_i\!:\!E^{\mathbb N}\to E$ est la projection sur le coefficient $i$ alors $\p[x]{X_0=x}=1$ et telle que $\l X_n\r$ soit une chaîne de Markov de transition $P$}{1/15}
-\slideq{Théorème sur la structure des états des chaînes de Markov $\l X_n\r$ sur $E$}{2/15}
-\slider{{\togglebigopdisplay On a une partition en classes d'équivalence $E=\bigsqcup{i\in I}{}{R_i}\sqcup\bigsqcup{j\in J}{}{T_j}$, $R=\bigsqcup{i\in I}{}{R_i}$ et $T=\bigsqcup{j\in J}{}{T_j}$ les ensembles des états récurrents et transients\linebreak Si $x\in R_i$ alors $\mathbb P_x$-ps, si $y\in R_i$ alors $N_y=+\infty$ et si $z\notin R_i$, $N_z=0$\linebreak Si $x\in T_j$ et $T=\inf{\set{n\geqslant0,X_n\in R}}$, alors $\mathbb P_{\!\!x}\l\l T=\infty\wedge\l\forall y\in E, N_y<+\infty\r\r\vee{}\right.$\linebreak$\left.\l T<\infty\wedge\l\exists i\in I,\forall n\leqslant T,X_n\in R_i\r\r\right)=1$}}{2/15}
-\slideq{Propriété de Markov forte}{3/15}
-\slider{Si $\l X_n\r$ est une chaîne de Markov, $\mathcal F_n$ est la filtration naturelle et $T$ est un temps d'arrêt alors\linebreak$\forall A\in\mathcal F_T$, $\forall F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+T}\r_{n\geqslant0}\r\mathbb1_A\sq T<+\infty,X_T=y}=$\linebreak$\p[\!\!x]{A\sq T<+\infty,X_T=y}\esp[y]{F}$\linebreak Pour toute $F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+T}\r_{n\in\mathbb N}\r\sq\mathcal F_T}=\esp[X_T]{F}\mathbb1_{T<+\infty}$}{3/15}
-\slideq{Relation $x\rightsquigarrow y$ sur les chaînes de Markov}{4/15}
-\slider{$x\rightsquigarrow y$ si et seulement si $G\l x,y\r>0$\linebreak C'est une relation réflexive et transitive\linebreak Si $x$ est récurrent et $x\rightsquigarrow y$ alors $y\rightsquigarrow x$ et $\rho\l x,y\r=\rho\l y,x\r=1$}{4/15}
-\slideq{Noyau de transition}{5/15}
-\slider{$P\!:\!E\times E\to\lc0,1\rc$ telle que, pour tout $x\in E$, $\sum{y\in E}{}{P\l x,y\r}=1$\linebreak Le noyau de transition associé à une chaîne de Markov est $P\l x,y\r=\p{X_1=y\sq X_0=x}$}{5/15}
-\slideq{Fonction de Green}{6/15}
-\slider{$G\!:\!E\times E\to\lc0,+\infty\rc$ telle que $G\l x,y\r=\esp[x]{N_y}$\linebreak$\rho\!:\!E\times E\to\lc0,1\rc$ telle que $\rho\l x,y\r=\p[\!\!x]{T_y<+\infty}$}{6/15}
-\slideq{Propriété de Markov faible}{7/15}
-\slider{Si $\l X_n\r$ est une chaîne de Markov alors\linebreak$\forall m,n\geqslant1$, $\forall A\subset E^{n+1}$, $\forall B\subset E^{n}$, $\p[\!\!x]{\l X_0{,}{\cdot}{\cdot}{\cdot}{,}X_n\r{\in}A{,}\l X_n{,}{\cdot}{\cdot}{\cdot}{,}X_{n+m}\r{\in}B\!\sq\!X_n{=}y}{=}$\linebreak$\p[\!\!x]{\l X_0{,}{\cdot}{\cdot}{\cdot}{,}X_n\r{\in}A\!\sq\!X_n{=}y}\p[\!\!y]{\l X_n{,}{\cdot}{\cdot}{\cdot}{,}X_{n+m}\r{\in}B}$\linebreak Pour toute $F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+m}\r_{n\in\mathbb N}\r\sq\mathcal F_m}=\esp[X_m]{F}$}{7/15}
-\slideq{$x\in E$ est récurrent/transient}{8/15}
-\slider{$x$ est récurrent si $\p[\!\!x]{T_x<+\infty}=1$, et alors $N_x=+\infty$\linebreak$x$ est transient si $\p[\!\!x]{T_x<+\infty}<1$, et alors $\esp[x]{N_x}=\frac{1}{\p[\!\!x]{T_x=+\infty}}<+\infty$}{8/15}
-\slideq{Chaîne de Markov homogène}{9/15}
-\slider{Processus aléatoire $\l X_n\r$ à valeurs dans $E$ au plus dénombrable tel que $\p{X_{n+1}=x_{n+1}\sq X_0,\cdots,X_n}=\p{X_{n+1}=x_{n+1}\sq X_n}$ et $\p{X_{n+1}=y\sq X_n=x}=\p{X_1=y\sq X_0=x}$\linebreak$\l X_n\r$ est une chaîne de Markov (homogène) s'il existe un noyau de probabilités $P$ tel que $\p{X_{n+1}=y\sq X_0,\cdots,X_n}=P\l X_n,y\r$}{9/15}
-\slideq{Définition et lien entre $T_x$ temps d'arrêt associé à $x$ et $N_x$ le nombre de passages en $x$}{10/15}
-\slider{$N_x=\sum{n=0}{+\infty}{\mathbb1_{X_n=x}}$\linebreak$T_x=\inf{\set{n\in\mathbb N,X_n=x}}$\linebreak$\set{T_x<+\infty}=\set{N_x\geqslant\mathbb1_{X_0=x}+1}$}{10/15}
-\slideq{Relation d'équivalence $x\sim y$ sur les chaînes de Markov}{11/15}
-\slider{$x\sim y$ si et seulement si $x\rightsquigarrow y$ et $y\rightsquigarrow x$}{11/15}
-\slideq{La chaîne de Markov $\l X_n\r$ est irréductible}{12/15}
-\slider{Pour tout $\l x,y\r\in E$, $x\rightsquigarrow y$ et $y\rightsquigarrow x$\linebreak En particulier, soit tout état est récurrent, soit tout état est transient\linebreak Si $E$ est fini, tout état est récurrent}{12/15}
-\slideq{Mesure $\mathbb P_\mu$ pour un noyau de transition $P$ et une mesure de probabilités $\mu$}{13/15}
-\slider{$\mathbb P_\mu=\sum{x\in E}{}{\mu\l\set x\r\mathbb P_x}$}{13/15}
-\slideq{$F\subset E$ est close}{14/15}
-\slider{Pour tout $x\in F$ et tout $y\notin F$, $\p[\!\!x]{T_y=\infty}=1$\linebreak En particulier, les classes de récurrence sont closes}{14/15}
-\slideq{Propriétés de la fonction de Green}{15/15}
-\slider{$G\l x,y\r=\sum{n=0}{+\infty}{P^n\l x,y\r}$\linebreak Si $x$ est récurrent, $G\l x,x\r=+\infty$\linebreak Si $x$ est transient, $G\l x,x\r<+\infty$\linebreak Si $x\neq y$ alors $G\l x,y\r=\rho\l x,y\r G\l y,y\r$, en particulier, $G\l x,y\r\leqslant G\l y,y\r$\linebreak$G\l x,x\r=1+\rho\l x,x\r G\l x,x\r$}{15/15}
+\slideq{Noyau de transition}{1/25}
+\slider{$P\!:\!E\times E\to\lc0,1\rc$ telle que, pour tout $x\in E$, $\sum{y\in E}{}{P\l x,y\r}=1$\linebreak Le noyau de transition associé à une chaîne de Markov est $P\l x,y\r=\p{X_1=y\sq X_0=x}$}{1/25}
+\slideq{Propriétés de la fonction de Green}{2/25}
+\slider{$G\l x,y\r=\sum{n=0}{+\infty}{P^n\l x,y\r}$\linebreak Si $x$ est récurrent, $G\l x,x\r=+\infty$\linebreak Si $x$ est transient, $G\l x,x\r<+\infty$\linebreak Si $x\neq y$ alors $G\l x,y\r=\rho\l x,y\r G\l y,y\r$, en particulier, $G\l x,y\r\leqslant G\l y,y\r$\linebreak$G\l x,x\r=1+\rho\l x,x\r G\l x,x\r$}{2/25}
+\slideq{$\mu$ est une mesure invariante pour $P$}{3/25}
+\slider{$\mu\neq0$, pour tout $x\in E$, $\mu\l x\r<+\infty$ et pour tout $y\in E$, $\mu\l y\r=\sum{x\in E}{}{\mu\l x\r P\l x,y\r}$\linebreak On a $\mu P=\mu$, donc $\mu$ est un vecteur propre de $P^\top$ associé à la veleur propre $1$}{3/25}
+\slideq{Mesure $\mathbb P_\mu$ pour un noyau de transition $P$ et une mesure de probabilités $\mu$}{4/25}
+\slider{$\mathbb P_\mu=\sum{x\in E}{}{\mu\l\set x\r\mathbb P_x}$}{4/25}
+\slideq{$\mu$ est une mesure réversible pour $P$}{5/25}
+\slider{$\mu\neq0$, pour tout $x\in E$, $\mu\l x\r<+\infty$ et pour tout $y\in E$, $\mu\l x\r P\l x,y\r=\mu\l y\r P\l y,x\r$}{5/25}
+\slideq{Mesure des éléments transients d'une chaîne de Markov non irréductible par une mesure invariante de masse totale finie}{6/25}
+\slider{$\mu\l T\r=0$}{6/25}
+\slideq{Relation d'équivalence $x\sim y$ sur les chaînes de Markov}{7/25}
+\slider{$x\sim y$ si et seulement si $x\rightsquigarrow y$ et $y\rightsquigarrow x$}{7/25}
+\slideq{Propriétés des mesures invariantes sur les chaînes irréductibles transientes}{8/25}
+\slider{Toutes les mesures invariantes ont une masse totale infinie}{8/25}
+\slideq{Relation $x\rightsquigarrow y$ sur les chaînes de Markov}{9/25}
+\slider{$x\rightsquigarrow y$ si et seulement si $G\l x,y\r>0$\linebreak C'est une relation réflexive et transitive\linebreak Si $x$ est récurrent et $x\rightsquigarrow y$ alors $y\rightsquigarrow x$ et $\rho\l x,y\r=\rho\l y,x\r=1$}{9/25}
+\slideq{Chaîne de Markov irréductible récurrente nulle}{10/25}
+\slider{Toutes les mesures invariantes ont une masse totale infinie}{10/25}
+\slideq{Définition et support de la mesure $\mu_x$}{11/25}
+\slider{$\mu_x\l y\r=\esp[x]{\sum{k=0}{T-1}{\mathbb1_{X_k=y}}}$\linebreak En particulier, $\mu_x\l x\r=1$\linebreak$\operatorname{supp}\l\mu_x\r=\set{y\in E,x\rightsquigarrow y}$}{11/25}
+\slideq{Mesure $\mathbb P_x$ pour un noyau de transition $P$}{12/25}
+\slider{Il existe une unique mesure $\mathbb P_x$ sur $E^{\mathbb N}$ telle que si $X_i\!:\!E^{\mathbb N}\to E$ est la projection sur le coefficient $i$ alors $\p[x]{X_0=x}=1$ et telle que $\l X_n\r$ soit une chaîne de Markov de transition $P$}{12/25}
+\slideq{Propriétés de l'espace des mesures invariantes}{13/25}
+\slider{C'est un espace convexe\linebreak Si $\mu$ et $\nu$ sont deux mesures invariantes pour $P$ et $\alpha_1,\alpha_2\geqslant0$ sont tels que $\alpha_1+\alpha_2>0$ alors $\alpha_1\mu+\alpha_2\nu$ est une mesure invariante pour $P$}{13/25}
+\slideq{$F\subset E$ est close}{14/25}
+\slider{Pour tout $x\in F$ et tout $y\notin F$, $\p[\!\!x]{T_y=\infty}=1$\linebreak En particulier, les classes de récurrence sont closes}{14/25}
+\slideq{Structure des mesures invariantes sur les chaînes irréductible récurrentes}{15/25}
+\slider{Toutes les mesures invariantes sont proportionnelles\linebreak De plus, soit toutes les mesures invariantes ont une masse totale infinie et pour tout $x\in E$, $\esp[x]{T_x}=+\infty$\linebreak Soit toutes les mesures invariantes sont de masse totale finie et il existe alors une unique loi invariante $\pi$ telle que $\pi\l x\r=\frac1{\esp[x]{T_x}}>0$}{15/25}
+\slideq{Propriété de Markov faible}{16/25}
+\slider{Si $\l X_n\r$ est une chaîne de Markov alors\linebreak$\forall m,n\geqslant1$, $\forall A\subset E^{n+1}$, $\forall B\subset E^{n}$, $\p[\!\!x]{\l X_0{,}{\cdot}{\cdot}{\cdot}{,}X_n\r{\in}A{,}\l X_n{,}{\cdot}{\cdot}{\cdot}{,}X_{n+m}\r{\in}B\!\sq\!X_n{=}y}{=}$\linebreak$\p[\!\!x]{\l X_0{,}{\cdot}{\cdot}{\cdot}{,}X_n\r{\in}A\!\sq\!X_n{=}y}\p[\!\!y]{\l X_n{,}{\cdot}{\cdot}{\cdot}{,}X_{n+m}\r{\in}B}$\linebreak Pour toute $F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+m}\r_{n\in\mathbb N}\r\sq\mathcal F_m}=\esp[X_m]{F}$}{16/25}
+\slideq{Chaîne de Markov homogène}{17/25}
+\slider{Processus aléatoire $\l X_n\r$ à valeurs dans $E$ au plus dénombrable tel que $\p{X_{n+1}=x_{n+1}\sq X_0,\cdots,X_n}=\p{X_{n+1}=x_{n+1}\sq X_n}$ et $\p{X_{n+1}=y\sq X_n=x}=\p{X_1=y\sq X_0=x}$\linebreak$\l X_n\r$ est une chaîne de Markov (homogène) s'il existe un noyau de probabilités $P$ tel que $\p{X_{n+1}=y\sq X_0,\cdots,X_n}=P\l X_n,y\r$}{17/25}
+\slideq{Fonction de Green}{18/25}
+\slider{$G\!:\!E\times E\to\lc0,+\infty\rc$ telle que $G\l x,y\r=\esp[x]{N_y}$\linebreak$\rho\!:\!E\times E\to\lc0,1\rc$ telle que $\rho\l x,y\r=\p[\!\!x]{T_y<+\infty}$}{18/25}
+\slideq{$x\in E$ est récurrent/transient}{19/25}
+\slider{$x$ est récurrent si $\p[\!\!x]{T_x<+\infty}=1$, et alors $N_x=+\infty$\linebreak$x$ est transient si $\p[\!\!x]{T_x<+\infty}<1$, et alors $\esp[x]{N_x}=\frac{1}{\p[\!\!x]{T_x=+\infty}}<+\infty$}{19/25}
+\slideq{Théorème sur la structure des états des chaînes de Markov $\l X_n\r$ sur $E$}{20/25}
+\slider{{\togglebigopdisplay On a une partition en classes d'équivalence $E=\bigsqcup{i\in I}{}{R_i}\sqcup\bigsqcup{j\in J}{}{T_j}$, $R=\bigsqcup{i\in I}{}{R_i}$ et $T=\bigsqcup{j\in J}{}{T_j}$ les ensembles des états récurrents et transients\linebreak Si $x\in R_i$ alors $\mathbb P_x$-ps, si $y\in R_i$ alors $N_y=+\infty$ et si $z\notin R_i$, $N_z=0$\linebreak Si $x\in T_j$ et $T=\inf{\set{n\geqslant0,X_n\in R}}$, alors $\mathbb P_{\!\!x}\l\l T=\infty\wedge\l\forall y\in E, N_y<+\infty\r\r\vee{}\right.$\linebreak$\left.\l T<\infty\wedge\l\exists i\in I,\forall n\leqslant T,X_n\in R_i\r\r\r=1$}}{20/25}
+\slideq{La chaîne de Markov $\l X_n\r$ est irréductible}{21/25}
+\slider{Pour tout $\l x,y\r\in E$, $x\rightsquigarrow y$ et $y\rightsquigarrow x$\linebreak En particulier, soit tout état est récurrent, soit tout état est transient\linebreak Si $E$ est fini, tout état est récurrent}{21/25}
+\slideq{Propriété de Markov forte}{22/25}
+\slider{Si $\l X_n\r$ est une chaîne de Markov, $\mathcal F_n$ est la filtration naturelle et $T$ est un temps d'arrêt alors\linebreak$\forall A\in\mathcal F_T$, $\forall F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+T}\r_{n\geqslant0}\r\mathbb1_A\sq T<+\infty,X_T=y}=$\linebreak$\p[\!\!x]{A\sq T<+\infty,X_T=y}\esp[y]{F}$\linebreak Pour toute $F\!:\!E^{\mathbb N}\to\mathbb R_+$ mesurable, $\esp[x]{F\l\l X_{n+T}\r_{n\in\mathbb N}\r\sq\mathcal F_T}=\esp[X_T]{F}\mathbb1_{T<+\infty}$}{22/25}
+\slideq{Chaîne de Markov irréductible récurrente positive}{23/25}
+\slider{Toutes les mesures invariantes ont une masse totale finie}{23/25}
+\slideq{Définition et lien entre $T_x$ temps d'arrêt associé à $x$ et $N_x$ le nombre de passages en $x$}{24/25}
+\slider{$N_x=\sum{n=0}{+\infty}{\mathbb1_{X_n=x}}$\linebreak$T_x=\inf{\set{n\in\mathbb N,X_n=x}}$\linebreak$\set{T_x<+\infty}=\set{N_x\geqslant\mathbb1_{X_0=x}+1}$}{24/25}
+\slideq{Propriétés de $\mu_x$}{25/25}
+\slider{$\mu_x\geqslant\mu_xP$\linebreak Si $x$ est récurrent alors $\mu_x$ est une mesure invariante et $\operatorname{supp}\l\mu_x\r=\set{y\in E,x\sim y}$}{25/25}
 \end{document}

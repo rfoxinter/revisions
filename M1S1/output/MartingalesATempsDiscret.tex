@@ -10,62 +10,62 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Une famille de variables aléatoires dans $L^1$ $\l X_i\r$ est uniformément intégrable}{1/29}
-\slider{Pour tout $\epsilon>0$, il existe $M\geqslant0$ tel que, pour tout $i\in I$, $\esp{X_i\mathbb1_{\set{\left|X_i\right|\geqslant M}}}\leqslant\epsilon$}{1/29}
-\slideq{Intégrale stochastique (discrète)}{2/29}
-\slider{Soit $\l X_n\r$ un processus adapté à $\mathcal F_n$ et $\l H_n\r$ un processus prévisible, l'intégrale stochastique de $\l H_n\r$ par rapport à $\l X_n\r$ est $\l H\cdot X\r_n=\sum{k=1}{n}{H_k\l X_k-X_{k-1}\r}$}{2/29}
-\slideq{Théorème de convergence $L^p$ de martingales}{3/29}
-\slider{Si $\l X_n\r$ est une martingale bornée dans $L^p$ alors $\l X_n\r$ converge presque-sûrement vers $X_\infty$ dans $L^p$\linebreak En particulier, $\esp{\left|X_\infty\right|^p}^{\oldfrac1p}\leqslant\frac{p}{p-1}\sup[n\in\mathbb N]{\esp{\left|X_n\right|^p}^{\oldfrac1p}}$\linebreak De plus, $\esp{\l X_\infty^*\r^p}^{\oldfrac1p}\leqslant\frac{p}{p-1}\esp{\left|X_\infty\right|^p}^{\oldfrac1p}$}{3/29}
-\slideq{Processus arrêté pour le jeu aléatoire $\l X_n\r$ adapté à la filtration $\l\mathcal F_n\r$ et le temps d'arrêt $T$}{4/29}
-\slider{$X_n^T=X_{n\wedge T}$}{4/29}
-\slideq{Martingale}{5/29}
-\slider{$\l X_n\r$ est une martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}=X_n$}{5/29}
-\slideq{Théorème d'arrêt de Doob}{6/29}
-\slider{Si $S\leqslant T$ sont deux temps d'arrêt bornés et $\l X_n\r$ est une \ssn-martingale alors $\esp{X_T\sq\mathcal F_S}=X_S$ et en particulier, $\esp{X_T}=\esp{X_S}=\esp{X_0}$ (resp. $\geqslant$/$\leqslant$)\linebreak Si $T$ est borné, ou $T$ est intégrable et $\left|X_{n+1}-X_n\right|\leqslant M$ p.s. ou $T$ est p.s. fini et $\left|X_{n\wedge T}\right|\leqslant M$ alors $X_T$ est intégrable et $\esp{X_T}=\esp{X_0}$ (resp. $\geqslant$/$\leqslant$)}{6/29}
-\slideq{Théorème de la martingale arrêtée}{7/29}
-\slider{Si $\l X_n\r$ est une \ssn-martingale alors $\l X_{n\wedge T}\r$ aussi}{7/29}
-\slideq{Théorème de convergence de martingales $L^2$}{8/29}
-\slider{Si $\l X_n\r$ est une martingale $L^2$ alors elle converge presque-sûrement sur $\set{\left\langle X\right\rangle_\infty<+\infty}$}{8/29}
-\slideq{Processus adapté à une filtration $\l\mathcal F_n\r$}{9/29}
-\slider{$\l X_n\r$ une suite de variables aléatoires avec $X_n$ qui est $\mathcal F_n$-mesurable}{9/29}
-\slideq{Combinaisons possibles sur les temps d'arrêt}{10/29}
-\slider{Si $S$ et $T$ sont deux temps d'arrêt, $T\wedge S$, $T\vee S$, $T+S$ sont des temps d'arrêt}{10/29}
-\slideq{Intégrales stochastiques de \ssn-martingales}{11/29}
-\slider{Si $\l X_n\r$ est une martingale et $\l H_n\r$ est un processus prévisible de $L^\infty$ alors $\l\l H\cdot X\r_n\r$ est une martingale\linebreak Si $\l X_n\r$ est une sous/sur-martingale et $\l H_n\r$ est un processus prévisible positif de $L^\infty$ alors $\l\l H\cdot X\r_n\r$ est une sous/sur-martingale\linebreak Si $\l X_n\r$ est dans $L^2$ alors on peut avoir $\l H_n\r$ dans $L^2$}{11/29}
-\slideq{Filtration}{12/29}
-\slider{$\l\mathcal F_n\r$ une suite croissante de sous-tribus de $\mathcal F$}{12/29}
-\slideq{Martingale rétrograde}{13/29}
-\slider{$\l\mathcal F_n\r$ est une suite de tribus décroissante et $\l X_n\r$ est telle que $\esp{X_n\sq\mathcal F_{n-1}}=X_{n-1}$\linebreak Il existe toujours $X_\infty$ tel que $\l X_n\r$ converge presque-sûrement et dans $L^1$ vers $X_\infty$}{13/29}
-\slideq{Inégalité maximale de Komogorov}{14/29}
-\slider{Soit $\l X_n\r$ une martingale de carré sommable, alors pour tout $\lambda>0$ et tout $n\in\mathbb N$, $\p{\max[k\in\llb0,n\rrb]{X_k}\geqslant\lambda}\leqslant\frac{\esp{X_n^2}}{\lambda^2}$}{14/29}
-\slideq{Processus prévisible}{15/29}
-\slider{$\l H_n\r_{n\in\mathbb N^*}$ est un processus prévisible par rapport à $\l X_n\r_{n\in\mathbb N}$ adapté à $\mathcal F_n$ si $H_n$ est $\mathcal F_{n-1}$-mesurable}{15/29}
-\slideq{$\l X_n\r$ est une martingale fermée pour $\l X_n\r$ une martingale dans $L^1$}{16/29}
-\slider{Il existe $Z$ une variable aléatoire intégrable telle que $X_n=\esp{Z\sq\mathcal F_n}$}{16/29}
-\slideq{Décomposition de Doob}{17/29}
-\slider{Soit $\l\mathcal F_n\r$ une filtration et $\l X_n\r$ un processus adapté, il existe une martigale $\l M_n\r$ avec $M_0=0$ et un processus prévisible $\l A_n\r$ tel que $X_n=X_0+M_n+A_n$ et cette décomposition est unique\linebreak $\l X_n\r$ est une sous-martingale si et seulement si $\l A_n\r$ est presque-sûrement croissante}{17/29}
-\slideq{Lien entre tribus de temps d'arrêt}{18/29}
-\slider{Si $S\leqslant T$ alors $\mathcal F_S\subset\mathcal F_T$}{18/29}
-\slideq{Stabilités des sous/sur/\none-martingales}{19/29}
-\slider{Si $\l X_n\r$ et $\l Y_n\r$ sont deux \ssn-martingales alors $\l X_n+Y_n\r$ aussi\linebreak Si $\l X_n\r$ et $\l Y_n\r$ sont des sous-martingales (resp. sur-martingale) alors $\l\max{X_n,Y_n}\r$ (resp. $\l\min{X_n,Y_n}\r$) aussi\linebreak Si $\l X_n\r$ est une martingale et $\phi$ est convexe telle que $\esp{\left|\phi\l X_n\r\right|}<+\infty$ alors $\l\phi\l X_n\r\r$ est une sous-martingale}{19/29}
-\slideq{Propriété des incréments d'une martingale $L^2$}{20/29}
-\slider{Si $\l X_n\r$ est une martingale $L^2$ et $m\le n\le p\le q$ alors $\esp{\l X_n-x_m\r\l X_p-X_q\r}=0$\linebreak En particulier, $\esp{X_n^2}=\esp{X_0^2}+\sum{k=0}{n-1}{\esp{\l X_{k+1}-X_k\r^2}}$ et une martigale converge dans $L^2$ si et seulement si $\sum{k=0}{+\infty}{\esp{\l X_{k+1}-X_k\r^2}}\leqslant+\infty$}{20/29}
-\slideq{Théorème de la martingale arrêtée de Doob}{21/29}
-\slider{Soit $\l X_n\r$ une sous-martingale avec $\l X_n\r\in L^p$, alors pour tout $\lambda>0$ et tout $n\in\mathbb N$, $\p{\max[k\in\llb0,n\rrb]{X_k}\geqslant\lambda}\leqslant\frac1\lambda\esp{X_n\mathbb1_{\togglebornelimits\set{\max[k\in\llb0,n\rrb]{X_k}\geqslant\lambda}}}\leqslant\esp{X_n^+}$}{21/29}
-\slideq{Théorème de convergence de martingales $L^1$}{22/29}
-\slider{Si $\l X_n\r$ est une martingale $L^1$ alors les conditions suivantes sont équivalentes\linebreak$\l X_n\r$ converge dans $L^1$\linebreak$\l X_n\r$ est uniformément intégrable\linebreak$\l X_n\r$ est une martingale fermée}{22/29}
-\slideq{Sur-martingale}{23/29}
-\slider{$\l X_n\r$ est une sur-martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}\leqslant X_n$}{23/29}
-\slideq{Temps d'arrêt pour le jeu aléatoire $\l X_n\r$ adapté à la filtration $\l\mathcal F_n\r$}{24/29}
-\slider{Variable aléatoire $T\!:\!\varOmega\to\mathbb N\cup\set{+\infty}$ telle que $\set{T=n}$ (ou de manière équivalente $\set{T\leqslant n}$) est $\mathcal F_n$-mesurable}{24/29}
-\slideq{Inégalité $L^p$ de Doob}{25/29}
-\slider{Soient $\l X_n\r$ une martingale, $X_n^*=\max[k\in\llb0,n\rrb]{\left|X_k\right|}$, $p\in\left]1,+\infty\right[$ et $q=\frac{p}{p-1}$, alors pour tout $n\in\mathbb N$, $\esp{\l X_n^*\r^p}^{\oldfrac1p}\leqslant q\esp{\left|X_n\right|^p}^{\oldfrac 1p}$}{25/29}
-\slideq{Sous-martingale}{26/29}
-\slider{$\l X_n\r$ est une sous-martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}\geqslant X_n$}{26/29}
-\slideq{Tribu engendrée par un temps d'arrêt}{27/29}
-\slider{$\mathcal F_T=\set{A\in\mathcal F_\infty,\forall n\in\mathbb N,A\cap\set{T=n}\in\mathcal F_n}$}{27/29}
-\slideq{Processus croissant adapté à la martingale $\l X_n\r$ dans $L^2$}{28/29}
-\slider{$\l\left\langle X\right\rangle_n\r$ telle que $X_n=X_0+M_n+\left\langle X\right\rangle_n$ avec $\l M_n\r$ une martingale\linebreak L'existence est donnée par le théorème de décomposition de Doob}{28/29}
-\slideq{Théorème de convergence presque-sûre de martingales}{29/29}
-\slider{Si $\l X_n\r$ est une sous/sur-martingale et $\sup{\esp{X_n^{-/+}}}<+\infty$ alors il existe une variable aléatoire $X_\infty$ intégrable telle que $X_n\to X_\infty$ presque-sûrement\linebreak Si $\l X_n\r$ est une \ssn-martingale et $\sup{\left|X_n\right|}<+\infty$ alors il existe une variable aléatoire $X_\infty$ intégrable telle que $X_n\to X_\infty$ presque-sûrement}{29/29}
+\slideq{Propriété des incréments d'une martingale $L^2$}{1/29}
+\slider{Si $\l X_n\r$ est une martingale $L^2$ et $m\le n\le p\le q$ alors $\esp{\l X_n-x_m\r\l X_p-X_q\r}=0$\linebreak En particulier, $\esp{X_n^2}=\esp{X_0^2}+\sum{k=0}{n-1}{\esp{\l X_{k+1}-X_k\r^2}}$ et une martigale converge dans $L^2$ si et seulement si $\sum{k=0}{+\infty}{\esp{\l X_{k+1}-X_k\r^2}}\leqslant+\infty$}{1/29}
+\slideq{Théorème de convergence presque-sûre de martingales}{2/29}
+\slider{Si $\l X_n\r$ est une sous/sur-martingale et $\sup{\esp{X_n^{-/+}}}<+\infty$ alors il existe une variable aléatoire $X_\infty$ intégrable telle que $X_n\to X_\infty$ presque-sûrement\linebreak Si $\l X_n\r$ est une \ssn-martingale et $\sup{\left|X_n\right|}<+\infty$ alors il existe une variable aléatoire $X_\infty$ intégrable telle que $X_n\to X_\infty$ presque-sûrement}{2/29}
+\slideq{Lien entre tribus de temps d'arrêt}{3/29}
+\slider{Si $S\leqslant T$ alors $\mathcal F_S\subset\mathcal F_T$}{3/29}
+\slideq{Une famille de variables aléatoires dans $L^1$ $\l X_i\r$ est uniformément intégrable}{4/29}
+\slider{Pour tout $\epsilon>0$, il existe $M\geqslant0$ tel que, pour tout $i\in I$, $\esp{X_i\mathbb1_{\set{\left|X_i\right|\geqslant M}}}\leqslant\epsilon$}{4/29}
+\slideq{Théorème de la martingale arrêtée}{5/29}
+\slider{Si $\l X_n\r$ est une \ssn-martingale alors $\l X_{n\wedge T}\r$ aussi}{5/29}
+\slideq{Processus croissant adapté à la martingale $\l X_n\r$ dans $L^2$}{6/29}
+\slider{$\l\left\langle X\right\rangle_n\r$ telle que $X_n=X_0+M_n+\left\langle X\right\rangle_n$ avec $\l M_n\r$ une martingale\linebreak L'existence est donnée par le théorème de décomposition de Doob}{6/29}
+\slideq{Martingale rétrograde}{7/29}
+\slider{$\l\mathcal F_n\r$ est une suite de tribus décroissante et $\l X_n\r$ est telle que $\esp{X_n\sq\mathcal F_{n-1}}=X_{n-1}$\linebreak Il existe toujours $X_\infty$ tel que $\l X_n\r$ converge presque-sûrement et dans $L^1$ vers $X_\infty$}{7/29}
+\slideq{Filtration}{8/29}
+\slider{$\l\mathcal F_n\r$ une suite croissante de sous-tribus de $\mathcal F$}{8/29}
+\slideq{Décomposition de Doob}{9/29}
+\slider{Soit $\l\mathcal F_n\r$ une filtration et $\l X_n\r$ un processus adapté, il existe une martigale $\l M_n\r$ avec $M_0=0$ et un processus prévisible $\l A_n\r$ tel que $X_n=X_0+M_n+A_n$ et cette décomposition est unique\linebreak $\l X_n\r$ est une sous-martingale si et seulement si $\l A_n\r$ est presque-sûrement croissante}{9/29}
+\slideq{Théorème de convergence de martingales $L^2$}{10/29}
+\slider{Si $\l X_n\r$ est une martingale $L^2$ alors elle converge presque-sûrement sur $\set{\left\langle X\right\rangle_\infty<+\infty}$}{10/29}
+\slideq{Sur-martingale}{11/29}
+\slider{$\l X_n\r$ est une sur-martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}\leqslant X_n$}{11/29}
+\slideq{Stabilités des sous/sur/\none-martingales}{12/29}
+\slider{Si $\l X_n\r$ et $\l Y_n\r$ sont deux \ssn-martingales alors $\l X_n+Y_n\r$ aussi\linebreak Si $\l X_n\r$ et $\l Y_n\r$ sont des sous-martingales (resp. sur-martingale) alors $\l\max{X_n,Y_n}\r$ (resp. $\l\min{X_n,Y_n}\r$) aussi\linebreak Si $\l X_n\r$ est une martingale et $\phi$ est convexe telle que $\esp{\left|\phi\l X_n\r\right|}<+\infty$ alors $\l\phi\l X_n\r\r$ est une sous-martingale}{12/29}
+\slideq{Théorème de convergence $L^p$ de martingales}{13/29}
+\slider{Si $\l X_n\r$ est une martingale bornée dans $L^p$ alors $\l X_n\r$ converge presque-sûrement vers $X_\infty$ dans $L^p$\linebreak En particulier, $\esp{\left|X_\infty\right|^p}^{\oldfrac1p}\leqslant\frac{p}{p-1}\sup[n\in\mathbb N]{\esp{\left|X_n\right|^p}^{\oldfrac1p}}$\linebreak De plus, $\esp{\l X_\infty^*\r^p}^{\oldfrac1p}\leqslant\frac{p}{p-1}\esp{\left|X_\infty\right|^p}^{\oldfrac1p}$}{13/29}
+\slideq{Combinaisons possibles sur les temps d'arrêt}{14/29}
+\slider{Si $S$ et $T$ sont deux temps d'arrêt, $T\wedge S$, $T\vee S$, $T+S$ sont des temps d'arrêt}{14/29}
+\slideq{Inégalité maximale de Kolmogorov}{15/29}
+\slider{Soit $\l X_n\r$ une martingale de carré sommable, alors pour tout $\lambda>0$ et tout $n\in\mathbb N$, $\p{\max[k\in\llb0,n\rrb]{X_k}\geqslant\lambda}\leqslant\frac{\esp{X_n^2}}{\lambda^2}$}{15/29}
+\slideq{Tribu engendrée par un temps d'arrêt}{16/29}
+\slider{$\mathcal F_T=\set{A\in\mathcal F_\infty,\forall n\in\mathbb N,A\cap\set{T=n}\in\mathcal F_n}$}{16/29}
+\slideq{Processus adapté à une filtration $\l\mathcal F_n\r$}{17/29}
+\slider{$\l X_n\r$ une suite de variables aléatoires avec $X_n$ qui est $\mathcal F_n$-mesurable}{17/29}
+\slideq{Temps d'arrêt pour le jeu aléatoire $\l X_n\r$ adapté à la filtration $\l\mathcal F_n\r$}{18/29}
+\slider{Variable aléatoire $T\!:\!\varOmega\to\mathbb N\cup\set{+\infty}$ telle que $\set{T=n}$ (ou de manière équivalente $\set{T\leqslant n}$) est $\mathcal F_n$-mesurable}{18/29}
+\slideq{Intégrale stochastique (discrète)}{19/29}
+\slider{Soit $\l X_n\r$ un processus adapté à $\mathcal F_n$ et $\l H_n\r$ un processus prévisible, l'intégrale stochastique de $\l H_n\r$ par rapport à $\l X_n\r$ est $\l H\cdot X\r_n=\sum{k=1}{n}{H_k\l X_k-X_{k-1}\r}$}{19/29}
+\slideq{Sous-martingale}{20/29}
+\slider{$\l X_n\r$ est une sous-martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}\geqslant X_n$}{20/29}
+\slideq{$\l X_n\r$ est une martingale fermée pour $\l X_n\r$ une martingale dans $L^1$}{21/29}
+\slider{Il existe $Z$ une variable aléatoire intégrable telle que $X_n=\esp{Z\sq\mathcal F_n}$}{21/29}
+\slideq{Processus prévisible}{22/29}
+\slider{$\l H_n\r_{n\in\mathbb N^*}$ est un processus prévisible par rapport à $\l X_n\r_{n\in\mathbb N}$ adapté à $\mathcal F_n$ si $H_n$ est $\mathcal F_{n-1}$-mesurable}{22/29}
+\slideq{Martingale}{23/29}
+\slider{$\l X_n\r$ est une martingale par rapport à $\l\mathcal F_n\r$ si $\l X_n\r$ est adaptée à $\l \mathcal F_n\r$ et $\esp{X_{n+1}\sq\mathcal F_n}=X_n$}{23/29}
+\slideq{Processus arrêté pour le jeu aléatoire $\l X_n\r$ adapté à la filtration $\l\mathcal F_n\r$ et le temps d'arrêt $T$}{24/29}
+\slider{$X_n^T=X_{n\wedge T}$}{24/29}
+\slideq{Théorème de la martingale arrêtée de Doob}{25/29}
+\slider{Soit $\l X_n\r$ une sous-martingale avec $\l X_n\r\in L^p$, alors pour tout $\lambda>0$ et tout $n\in\mathbb N$, $\p{\max[k\in\llb0,n\rrb]{X_k}\geqslant\lambda}\leqslant\frac1\lambda\esp{X_n\mathbb1_{\togglebornelimits\set{\max[k\in\llb0,n\rrb]{X_k}\geqslant\lambda}}}\leqslant\esp{X_n^+}$}{25/29}
+\slideq{Inégalité $L^p$ de Doob}{26/29}
+\slider{Soient $\l X_n\r$ une martingale, $X_n^*=\max[k\in\llb0,n\rrb]{\left|X_k\right|}$, $p\in\left]1,+\infty\right[$ et $q=\frac{p}{p-1}$, alors pour tout $n\in\mathbb N$, $\esp{\l X_n^*\r^p}^{\oldfrac1p}\leqslant q\esp{\left|X_n\right|^p}^{\oldfrac 1p}$}{26/29}
+\slideq{Intégrales stochastiques de \ssn-martingales}{27/29}
+\slider{Si $\l X_n\r$ est une martingale et $\l H_n\r$ est un processus prévisible de $L^\infty$ alors $\l\l H\cdot X\r_n\r$ est une martingale\linebreak Si $\l X_n\r$ est une sous/sur-martingale et $\l H_n\r$ est un processus prévisible positif de $L^\infty$ alors $\l\l H\cdot X\r_n\r$ est une sous/sur-martingale\linebreak Si $\l X_n\r$ est dans $L^2$ alors on peut avoir $\l H_n\r$ dans $L^2$}{27/29}
+\slideq{Théorème d'arrêt de Doob}{28/29}
+\slider{Si $S\leqslant T$ sont deux temps d'arrêt bornés et $\l X_n\r$ est une \ssn-martingale alors $\esp{X_T\sq\mathcal F_S}=X_S$ et en particulier, $\esp{X_T}=\esp{X_S}=\esp{X_0}$ (resp. $\geqslant$/$\leqslant$)\linebreak Si $T$ est borné, ou $T$ est intégrable et $\left|X_{n+1}-X_n\right|\leqslant M$ p.s. ou $T$ est p.s. fini et $\left|X_{n\wedge T}\right|\leqslant M$ alors $X_T$ est intégrable et $\esp{X_T}=\esp{X_0}$ (resp. $\geqslant$/$\leqslant$)}{28/29}
+\slideq{Théorème de convergence de martingales $L^1$}{29/29}
+\slider{Si $\l X_n\r$ est une martingale $L^1$ alors les conditions suivantes sont équivalentes\linebreak$\l X_n\r$ converge dans $L^1$\linebreak$\l X_n\r$ est uniformément intégrable\linebreak$\l X_n\r$ est une martingale fermée}{29/29}
 \end{document}

@@ -1,0 +1,21 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{al}\usepackage[nopar]{bigoperators}
+\hypersetup{pdftitle=Algèbre avancée -- Produit tensoriel}
+\title{Algèbre avancée\\\emph{Produit tensoriel}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Liberté du produit tensoriel}{1/4}
+\slider{Si $M$ est libre de base $\l e_i\r_{i\in I}$ et $N$ est libre de base $\l f_j\r_{j\in J}$ alors $M\otimes N$ est libre de base $\l e_i\otimes f_j\r_{\l i,j\r\in I\times J}$}{1/4}
+\slideq{Distributivité de $\otimes$ sur $\oplus$}{2/4}
+\slider{$\l\bigoplus{i\in I}{}{M_i}\r\otimes_A\l\bigoplus{j\in J}{}{N_j}\r\cong\bigoplus{\l i,j\r\in I\times J}{}{\l M_i\otimes_AN_j\r}$}{2/4}
+\slideq{$u\!:\!M\times N\to P$ est $A$-bilinéaire}{3/4}
+\slider{$\nappl{N}{P}{y}{u\l x,y\r}$ est linéaire pour tout $x\in M$\linebreak$\nappl{M}{P}{x}{u\l x,y\r}$ est linéaire pour tout $y\in N$\linebreak On note $\al[2]{M\times N}P$ les applications bilinéaires de $M\times N$ dans $P$}{3/4}
+\slideq{PU du produit tensoriel}{4/4}
+\slider{Il existe un $A$-module $P_0$ et un morphisme $u\!:\!M\times N\to P_0$ bilinéaire, uniques à isomorphisme près, tel que pour toute application bilinéaire $u\!:\!M\times N\to P$, il existe une unique application linéaire $v\!:\!P_0\to P$ tel que $u=v\circ u_0$\linebreak$P_0$ est noté $M\otimes_AN$ ou $M\otimes N$ lorsqu'il n'y a pas d'ambiguïté sur l'anneau $A$}{4/4}
+\end{document}

@@ -1,7 +1,7 @@
 Géométrie avancée -- Formes différentielles
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al,topologie}\usepackage[nopar,bigopsymb]{bigoperators}\DeclareMathOperator{\oldtens}{T}\def\tens#1{\oldtens\l#1\r}\newcommand{\ext}[2][]{\mathop{}\mkern-3mu\raisebox{1.5pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}#2}\newcommand{\pext}[2][]{\mathop{}\mkern-3mu\raisebox{1.5pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}\l#2\r}\DeclareMathOperator{\oldalt}{A}\newcommand{\falt}[2][]{\oldalt_{#1}\l#2\r}
+\usepackage{al,topologie,analyse}\usepackage[nopar,bigopsymb]{bigoperators}\DeclareMathOperator{\oldtens}{T}\def\tens#1{\oldtens\l#1\r}\newcommand{\ext}[2][]{\mathop{}\mkern-3mu\raisebox{1.5pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}#2}\newcommand{\pext}[2][]{\mathop{}\mkern-3mu\raisebox{1.5pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}\l#2\r}\DeclareMathOperator{\oldalt}{A}\newcommand{\falt}[2][]{\oldalt_{#1}\l#2\r}\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\DeclareMathOperator{\oldom}{\oldOmega}\newcommand{\om}[1]{\oldom_{#1}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\def\ccv#1#2{{\operatorname{\upGamma}}\l#1,\ext[#2]{\om#1}\r}
 Espace des tenseurs de type $\l r,s\r$ associés à $V$;;$V_{r,s}=V^{\otimes r}\otimes\l V^*\r^{\otimes s}$
 Algèbre tensorielle de $V$;;$\tens V=\bigoplus{r,s\in\bbN}{}{V_{r,s}}$\linebreak C'est une algèbre associative (bi-)graduée et les tenseurs de $V_{r,s}$ sont appelés tenseurs homogènes de (bi-)degré $\l r,s\r$
 Tenseur pur de $\tens V$;;Tenseur de la forme $u_1\otimes\cdots\otimes v_r\otimes u_1^*\otimes\cdots\otimes u_s^*$
@@ -22,3 +22,8 @@ Somme directe de fibrés;;Si $E_1=\l U_i,g^1_{i,j}\r$ et $E_2=\l U_i,g^2_{i,j}\r
 Produit tensoriel de fibrés;;Si $E_1=\l U_i,g^1_{i,j}\r$ et $E_2=\l U_i,g^2_{i,j}\r$ alors $E_1\otimes E_2$ est le fibré tel que $\l E_1\otimes E_2\r_x=\l E_1\r_x\otimes\l E_2\r_x$, c'est $E_1\otimes E_2=\l U_i,g^1_{i,j}\otimes g^2_{i,j}\r$
 Dual d'un fibré;;Si $E=\l U_i,g_{i,j}\r$ alors $E^*$ est le fibré tel que $\l E^*\r_x=\l E_x\r^*$, c'est $E^*=\l U_i,\transp{g_{i,j}}\r$
 Produit extérieur d'un fibré;;Si $E=\l U_i,g_{i,j}\r$ alors $\ext[k]E$ est le fibré tel que $\l\ext[p]E\r_x=\pext[p]{E_x}$, c'est $\ext[p]E=\l U_i,\pext[p]{g_{i,j}}\r$
+Forme différentielle de degré $p$ sur $M$ une variété différentielle;;Une section (locale) de $\ext[p]{\om M}$ où $\om M=\tg M^*$
+Tiré en arrière de $\omega\in\ccv Np$ par $f\!:\!M\to N$ lisse;;$f^*\omega=\l x\mapsto\pext[p]{\transp{\dd_xf}}\omega_{f\l x\r}\r\in\ccv Mp$\linebreak Via l'identification aux formes alternées, $f^*\omega\l x\r$ est l'application $\nappl{\l\tg_xM\r^p}{\bbR}{v_1,\cdots,v_p}{\omega_{f\l x\r}\l\dd_xf\l v_1\r,\cdots,\dd_xf\l v_p\r\r}$
+Propriétés fonctorielles du tiré en arrière;;$f^*\l\alpha\wedge\beta\r=f^*\l\alpha\r\wedge f^*\l\beta\r$\linebreak$\l g\circ f\r^*=g^*\circ f^*$
+Différentielle extérieure sur une variété différentielle $M$;;Il existe une unique application $\dd\!:\!\ccv M{}\to\ccv M{}$ qui soit une antidérivation homogène de degré $1$ telle que $\dd_{|\calC^\infty\l M,\bbR\r}$ soit la différentielle usuelle et $\dd\circ\dd=0$
+Tiré en arrière de la différentielle extérieure;;$\phi^*\circ\dd=\dd\circ\phi^*$
