@@ -29,7 +29,7 @@ text.f9 {font-family:cmr12;font-size:11.955168px}
 <text class='f9' x='-42.581363' y='-48.822272'>d<tspan x='-34.749709'>:</tspan><tspan x='-30.169716'>Γ</tspan></text>
 <text class='f1' x='-22.855545' y='-58.506036'></text>
 <text class='f6' x='-17.376063' y='-48.822272'>M<tspan x='-5.452788'>,</tspan></text>
-<text class='f1' x='-.208629' y='-60.119933' transform='matrix(.72002 0 0 .72002 -.058412 -14.321957)'>⋀</text>
+<text class='f1' x='-.208629' y='-59.870867' transform='matrix(.72002 0 0 .72002 -.058412 -14.252214)'>⋀</text>
 <text class='f9' x='9.455281' y='-48.822272' transform='matrix(1 0 0 1 0 -.000011)'>Ω</text>
 <text class='f5' x='17.9096' y='-47.029009' transform='matrix(1 0 0 1 0 -.000011)'>M</text>
 <text class='f1' x='27.389431' y='-58.506036' transform='matrix(1 0 0 1 0 -.000011)'></text>
@@ -37,7 +37,7 @@ text.f9 {font-family:cmr12;font-size:11.955168px}
 <text class='f9' x='51.465775' y='-48.822272' transform='matrix(1 0 0 1 0 -.000011)'>Γ</text>
 <text class='f1' x='58.779945' y='-58.506036' transform='matrix(1 0 0 1 0 -.000011)'></text>
 <text class='f6' x='64.259428' y='-48.822272' transform='matrix(1 0 0 1 0 -.000011)'>M<tspan x='76.182702'>,</tspan></text>
-<text class='f1' x='81.426861' y='-60.119933' transform='matrix(.72002 0 0 .72002 22.797898 -14.321965)'>⋀</text>
+<text class='f1' x='81.426861' y='-59.870867' transform='matrix(.72002 0 0 .72002 22.797898 -14.252222)'>⋀</text>
 <text class='f9' x='91.090771' y='-48.822272' transform='matrix(1 0 0 1 .000018 -.000023)'>Ω</text>
 <text class='f5' x='99.54509' y='-47.029009' transform='matrix(1 0 0 1 .000018 -.000023)'>M</text>
 <text class='f1' x='109.024922' y='-58.506036' transform='matrix(1 0 0 1 .000018 -.000023)'></text>

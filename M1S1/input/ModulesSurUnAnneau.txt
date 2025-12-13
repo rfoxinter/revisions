@@ -42,4 +42,4 @@ Astuce du déterminant;;Si $P$ est une matrice de $u\in\hom{M,M}$ avec $M$ finim
 Propriétés des endomorphismes surjectifs de $M$ un $A$-module de type fini;;C'est un isomorphisme
 Un module $P$ est projectif;;Le foncteur $\hom[A]{\cdot,P}$ préserve les suites exactes courtes
 CNS pour que $P$ soit projectif;;Pour toute surjection linéaire $\pi\!:\!N\to\doublehead N'$ et toute application linéaire $f\!:\!P\to N'$, il existe $g\in\hom[A]{P,N}$ tel que $f=\pi\circ g$\linebreak Toute suite exacte courte de la forme \begin{tikzcd}[ampersand replacement=\&]0\ar[r]\&M\ar[r,"u"]\&N\ar[r,"v"]\&P\ar[r]\&0\end{tikzcd} est scindée\linebreak Il existe un $A$-module $Q$ tel que $P\oplus Q$ soit libre
-Modules steblement finis;;$M$ est stablement fini s'il existe $n\in\mathbb N$ tel que $M\oplus A^n$ est libre\linebreak\textsl{Un module tel que $M\oplus A^n=A^m$ n'est pas nécessairement de la forme $A^{m-n}$}
+Modules stablement finis;;$M$ est stablement fini s'il existe $n\in\mathbb N$ tel que $M\oplus A^n$ est libre\linebreak\textsl{Un module tel que $M\oplus A^n=A^m$ n'est pas nécessairement de la forme $A^{m-n}$}

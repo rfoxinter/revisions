@@ -34,8 +34,8 @@ text.f6 {font-family:cmr12;font-size:11.955168px}
 <rect x='-44.35947' y='-39.797096' height='.478187' width='7.668357' transform='matrix(1.000001 0 0 1 .000006 0)'/>
 <text class='f4' x='-44.35947' y='-32.736978' transform='matrix(1.000001 0 0 1 .000006 0)'>ϕ</text>
 <text class='f6' x='-35.362781' y='-32.736978' transform='matrix(1.000001 0 0 1 .000006 0)'>:</text>
-<text class='f1' x='-30.782788' y='-44.034638' transform='matrix(.72002 0 0 .72002 -8.618567 -9.818395)'>⋀</text>
-<text class='f3' x='-23.609508' y='-38.56981' transform='matrix(1 0 0 1 0 -.000008)'>k</text>
+<text class='f1' x='-30.782788' y='-43.785572' transform='matrix(.72002 0 0 .72002 -8.618567 -9.748652)'>⋀</text>
+<text class='f3' x='-23.609508' y='-38.320744' transform='matrix(1 0 0 1 0 -.000008)'>k</text>
 <text class='f4' x='-18.489761' y='-32.736978' transform='matrix(1 0 0 1 0 -.000008)'>V</text>
 <text class='f2' x='-5.743252' y='-32.736978' transform='matrix(1 0 0 1 0 -.000008)'>→</text>
 <text class='f4' x='9.532779' y='-32.736978' transform='matrix(1 0 0 1 0 -.000008)'>F</text>

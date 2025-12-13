@@ -37,10 +37,10 @@ text.f3 {font-family:cmr12;font-size:11.955168px}
 <text class='f3' x='-19.198779' y='-48.089668'>)</text>
 <text class='f0' x='-14.646461' y='-53.901203'>∗</text>
 <text class='f3' x='-6.593317' y='-48.089668'>=</text>
-<text class='f2' x='5.832164' y='-48.089668'>g</text>
-<text class='f0' x='11.86642' y='-52.428105'>∗</text>
-<text class='f1' x='19.255398' y='-48.089668'>◦</text>
-<text class='f2' x='27.889669' y='-48.089668'>f</text>
+<text class='f2' x='5.832164' y='-48.089668'>f</text>
+<text class='f0' x='12.8786' y='-52.428105'>∗</text>
+<text class='f1' x='20.267579' y='-48.089668'>◦</text>
+<text class='f2' x='28.901849' y='-48.089668'>g</text>
 <text class='f0' x='34.936105' y='-52.428105'>∗</text>
 </g>
 </svg>

@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{al,topologie,analyse}\usepackage[nopar,bigopsymb]{bigoperators}\DeclareMathOperator{\oldtens}{T}\def\tens#1{\oldtens\l#1\r}\newcommand{\ext}[2][]{\mathop{}\mkern-3mu\raisebox{1.5pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}#2}\newcommand{\pext}[2][]{\mathop{}\mkern-3mu\raisebox{1.5pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}\l#2\r}\DeclareMathOperator{\oldalt}{A}\newcommand{\falt}[2][]{\oldalt_{#1}\l#2\r}\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\DeclareMathOperator{\oldom}{\oldOmega}\newcommand{\om}[1]{\oldom_{#1}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\def\ccv#1#2{{\operatorname{\upGamma}}\l#1,\ext[#2]{\om#1}\r}
+\usepackage{al,topologie,analyse}\usepackage[nopar,bigopsymb]{bigoperators}\DeclareMathOperator{\oldtens}{T}\def\tens#1{\oldtens\l#1\r}\newcommand{\ext}[2][]{\mathop{}\mkern-3mu\raisebox{1.25pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}#2}\newcommand{\pext}[2][]{\mathop{}\mkern-3mu\raisebox{1.25pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}\l#2\r}\DeclareMathOperator{\oldalt}{A}\newcommand{\falt}[2][]{\oldalt_{#1}\l#2\r}\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\DeclareMathOperator{\oldom}{\oldOmega}\newcommand{\om}[1]{\oldom_{#1}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\def\ccv#1#2{{\operatorname{\upGamma}}\l#1,\ext[#2]{\om#1}\r}\newcommand{\fd}[2][]{\oldom^{#1}\l#2\r}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}
 \hypersetup{pdftitle=Géométrie avancée -- Formes différentielles}
 \title{Géométrie avancée\\\emph{Formes différentielles}}
 \author{}
@@ -10,54 +10,62 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Propriétés du produit scalaire canonique $V_{r,s}\times\l V^*\r_{r,s}\to\bbR$}{1/25}
-\slider{$\appl{\psc\cdot\cdot}{V_{r,s}\times\l V^*\r_{r,s}}{\bbR}{\substack{u_1\otimes\cdots\otimes u_r\otimes u^*_1\otimes u^*_s\\v^*_1\otimes\cdots\otimes v^*_r\otimes v_1\otimes v_s}}{v^*_1\l u_1\r\cdots u_s^*\l v_s\r}$\linebreak$\psc\cdot\cdot$ est non dégénéré\linebreak Cela donne un isomorphisme canonique $\l V_{r,s}\r^*\cong\l V^*\r_{r,s}\cong\operatorname{M}_{r,s}$ les formes multilinéaires sur $V^r\times\l V^*\r^s$}{1/25}
-\slideq{$l$ un endomprhisme d'une algèbre graduée $\bigoplus{d\in\bbN}{}{A_d}$ est une dérivation}{2/25}
-\slider{$l\l u\wedge v\r=l\l u\r\wedge v+u\wedge l\l v\r$}{2/25}
-\slideq{Caractérisation, à isomorphisme près, des fibrés}{3/25}
-\slider{Les fonctions de transition $g_{i,j}$\linebreak En particulier, pour $\l U_i\r$ un recouvrement d'une variété $M$ et $g_{i,j}\!:\!U_i\cap U_j\to\gl{\bbR^r}$ qui vérifient la condition de cocycle, on a un unique fibré vectoriel $E$ de $M$, à isomorphisme près, dont les fonctions de transitions sont les $g_{i,j}$}{3/25}
-\slideq{Algèbre extérieure de $V$}{4/25}
-\slider{$\ext V=\pext V=\operatorname{C}\l V\r/\operatorname{I}\l V\r$ où $\operatorname{C}\l V\r=\bigoplus{k\in\bbN}{}{V_{k,0}}$ et $\operatorname{I}\l V\r$ est l'idéal bilatère de $\operatorname{C}\l V\r$ engendré par $\set{v\otimes v,v\in V}$\linebreak$\ext V$ est une algèbre graduée\linebreak$\ext[k]V=V_{k,0}/\operatorname{I}_k\l V\r$ où $\operatorname{I}_k\l V\r=\operatorname{I}\l V\r\cap V_{k,0}$}{4/25}
-\slideq{Porpriété universelle de $\l\ext[k]V,\pi\!:\!V^k\to\ext[k]V\r$}{5/25}
-\slider{Pour tout $\mathbb R$-ev $F$ et tout $\phi\:\!V^k\to F$ application $k$-linéaire alternée, il existe une unique application $\overline\phi\!:\!\ext[k]V\to F$ linéaire telle que $\overline\phi\circ\pi=\phi$}{5/25}
-\slideq{$l$ un endomprhisme d'une algèbre graduée $\bigoplus{d\in\bbN}{}{A_d}$ est une homogène de degré $k$}{6/25}
-\slider{$l\!:\!A_{k+j}\to A_k$ pour tout $k\in\bbN$}{6/25}
-\slideq{$l$ un endomprhisme d'une algèbre graduée $\bigoplus{d\in\bbN}{}{A_d}$ est une antidérivation}{7/25}
-\slider{$l\l u\wedge v\r=l\l u\r\wedge v+\l-1\r^pu\wedge l\l v\r$ pour $u\in A_p$}{7/25}
-\slideq{Produit extérieur d'un fibré}{8/25}
-\slider{Si $E=\l U_i,g_{i,j}\r$ alors $\ext[k]E$ est le fibré tel que $\l\ext[p]E\r_x=\pext[p]{E_x}$, c'est $\ext[p]E=\l U_i,\pext[p]{g_{i,j}}\r$}{8/25}
-\slideq{Algèbre tensorielle de $V$}{9/25}
-\slider{$\tens V=\bigoplus{r,s\in\bbN}{}{V_{r,s}}$\linebreak C'est une algèbre associative (bi-)graduée et les tenseurs de $V_{r,s}$ sont appelés tenseurs homogènes de (bi-)degré $\l r,s\r$}{9/25}
-\slideq{Somme directe de fibrés}{10/25}
-\slider{Si $E_1=\l U_i,g^1_{i,j}\r$ et $E_2=\l U_i,g^2_{i,j}\r$ alors $E_1\oplus E_2$ est le fibré tel que $\l E_1\oplus E_2\r_x=\l E_1\r_x\oplus\l E_2\r_x$, c'est $E_1\oplus E_2=\l U_i,g^1_{i,j}\oplus g^2_{i,j}\r$}{10/25}
-\slideq{Lien entre $u\wedge v$ et $v\wedge u$ pour $u\in\ext[r]V$ et $v\in\ext[s]V$}{11/25}
-\slider{$u\wedge v=\l-1\r^{rs}v\wedge u$}{11/25}
-\slideq{Tenseur pur de $\tens V$}{12/25}
-\slider{Tenseur de la forme $u_1\otimes\cdots\otimes v_r\otimes u_1^*\otimes\cdots\otimes u_s^*$}{12/25}
-\slideq{$\falt V$}{13/25}
-\slider{$\bigoplus{k\in\bbN}{}{\falt[k]V}$ où $\falt[k]V$ est l'espace vectoriel des formes $k$-linéaires alternées}{13/25}
-\slideq{Tiré en arrière de la différentielle extérieure}{14/25}
-\slider{$\phi^*\circ\dd=\dd\circ\phi^*$}{14/25}
-\slideq{Différentielle extérieure sur une variété différentielle $M$}{15/25}
-\slider{Il existe une unique application $\dd\!:\!\ccv M{}\to\ccv M{}$ qui soit une antidérivation homogène de degré $1$ telle que $\dd_{|\calC^\infty\l M,\bbR\r}$ soit la différentielle usuelle et $\dd\circ\dd=0$}{15/25}
-\slideq{$g_{i,j}$ vérifie la condition de cocycle}{16/25}
-\slider{$g_{i,j}g_{j,k}=g_{i,k}$}{16/25}
-\slideq{$\dim{\ext[k]V}$}{17/25}
-\slider{$\binom dk$ pour $d=\dim V$}{17/25}
-\slideq{Espace des tenseurs de type $\l r,s\r$ associés à $V$}{18/25}
-\slider{$V_{r,s}=V^{\otimes r}\otimes\l V^*\r^{\otimes s}$}{18/25}
-\slideq{Dual d'un fibré}{19/25}
-\slider{Si $E=\l U_i,g_{i,j}\r$ alors $E^*$ est le fibré tel que $\l E^*\r_x=\l E_x\r^*$, c'est $E^*=\l U_i,\transp{g_{i,j}}\r$}{19/25}
-\slideq{Forme différentielle de degré $p$ sur $M$ une variété différentielle}{20/25}
-\slider{Une section (locale) de $\ext[p]{\om M}$ où $\om M=\tg M^*$}{20/25}
-\slideq{Produit tensoriel de fibrés}{21/25}
-\slider{Si $E_1=\l U_i,g^1_{i,j}\r$ et $E_2=\l U_i,g^2_{i,j}\r$ alors $E_1\otimes E_2$ est le fibré tel que $\l E_1\otimes E_2\r_x=\l E_1\r_x\otimes\l E_2\r_x$, c'est $E_1\otimes E_2=\l U_i,g^1_{i,j}\otimes g^2_{i,j}\r$}{21/25}
-\slideq{Propriétés fonctorielles du tiré en arrière}{22/25}
-\slider{$f^*\l\alpha\wedge\beta\r=f^*\l\alpha\r\wedge f^*\l\beta\r$\linebreak$\l g\circ f\r^*=g^*\circ f^*$}{22/25}
-\slideq{Tiré en arrière de $\omega\in\ccv Np$ par $f\!:\!M\to N$ lisse}{23/25}
-\slider{$f^*\omega=\l x\mapsto\pext[p]{\transp{\dd_xf}}\omega_{f\l x\r}\r\in\ccv Mp$\linebreak Via l'identification aux formes alternées, $f^*\omega\l x\r$ est l'application $\nappl{\l\tg_xM\r^p}{\bbR}{v_1,\cdots,v_p}{\omega_{f\l x\r}\l\dd_xf\l v_1\r,\cdots,\dd_xf\l v_p\r\r}$}{23/25}
-\slideq{Produit intérieur par $u\in\ext V$}{24/25}
-\slider{$i\l u\r=\transp{\epsilon\l u\r}$ où $\epsilon\l u\r\l v\r=u\wedge V$\linebreak$i\l u\r\l L\r=L\circ\epsilon\l u\r$\linebreak En particulier, $\psc{i\l u\r v^*}w=\psc v{u\wedge w}$\linebreak C'est une antidérivation homogène de degré $-1$}{24/25}
-\slideq{Propriétés du produit scalaire canonique $\pext[k]{V^*}\times\ext[k]V\to\bbR$}{25/25}
-\slider{$\appl{\psc\cdot\cdot}{\pext[k]{V^*}\times\ext[k]V}{\bbR}{\substack{u^*_1\wedge\cdots\wedge u^*_k\\v_1\wedge\cdots\wedge v_k}}{\det{\l u_i^*\l v_j\r\r_{\l i,j\r\in\llb1,k\rrb^2}}}$\linebreak$\psc\cdot\cdot$ est non dégénéré\linebreak Cela donne un isomorphisme canonique $\pext[k]V^*\cong\pext[k]{V^*}\cong\operatorname{A}_{r,s}$\linebreak On a donc $\pext V^*\cong\pext{V^*}\cong\falt V$}{25/25}
+\slideq{Produit intérieur par $u\in\ext V$}{1/29}
+\slider{$i\l u\r=\transp{\epsilon\l u\r}$ où $\epsilon\l u\r\l v\r=u\wedge V$\linebreak$i\l u\r\l L\r=L\circ\epsilon\l u\r$\linebreak En particulier, $\psc{i\l u\r v^*}w=\psc v{u\wedge w}$\linebreak C'est une antidérivation homogène de degré $-1$}{1/29}
+\slideq{$\dim{\ext[k]V}$}{2/29}
+\slider{$\binom dk$ pour $d=\dim V$}{2/29}
+\slideq{Algèbre tensorielle de $V$}{3/29}
+\slider{$\tens V=\bigoplus{r,s\in\bbN}{}{V_{r,s}}$\linebreak C'est une algèbre associative (bi-)graduée et les tenseurs de $V_{r,s}$ sont appelés tenseurs homogènes de (bi-)degré $\l r,s\r$}{3/29}
+\slideq{Porpriété universelle de $\l\ext[k]V,\pi\!:\!V^k\to\ext[k]V\r$}{4/29}
+\slider{Pour tout $\mathbb R$-ev $F$ et tout $\phi\:\!V^k\to F$ application $k$-linéaire alternée, il existe une unique application $\overline\phi\!:\!\ext[k]V\to F$ linéaire telle que $\overline\phi\circ\pi=\phi$}{4/29}
+\slideq{$l$ un endomprhisme d'une algèbre graduée $\bigoplus{d\in\bbN}{}{A_d}$ est une dérivation}{5/29}
+\slider{$l\l u\wedge v\r=l\l u\r\wedge v+u\wedge l\l v\r$}{5/29}
+\slideq{Forme différentielle de degré $p$ sur $M$ une variété différentielle}{6/29}
+\slider{Une section (locale) de $\ext[p]{\om M}$ où $\om M=\tg M^*$}{6/29}
+\slideq{$l$ un endomprhisme d'une algèbre graduée $\bigoplus{d\in\bbN}{}{A_d}$ est une homogène de degré $k$}{7/29}
+\slider{$l\!:\!A_{k+j}\to A_k$ pour tout $k\in\bbN$}{7/29}
+\slideq{$l$ un endomprhisme d'une algèbre graduée $\bigoplus{d\in\bbN}{}{A_d}$ est une antidérivation}{8/29}
+\slider{$l\l u\wedge v\r=l\l u\r\wedge v+\l-1\r^pu\wedge l\l v\r$ pour $u\in A_p$}{8/29}
+\slideq{Caractérisation de $\calL_X$}{9/29}
+\slider{$\calL_X$ est caractérisée par\linebreak$\calL_X\l f\r=\dd f\l X\r$\linebreak$\lc\dd,\calL_X\rc=0$, ie $\dd\circ\calL_X=\calL_X\circ\dd$\linebreak$\calL_X$ est une dérivation}{9/29}
+\slideq{Différentielle extérieure sur une variété différentielle $M$}{10/29}
+\slider{Il existe une unique application $\dd\!:\!\ccv M{}\to\ccv M{}$ qui soit une antidérivation homogène de degré $1$ telle que $\dd_{|\calC^\infty\l M,\bbR\r}$ soit la différentielle usuelle et $\dd\circ\dd=0$}{10/29}
+\slideq{Formule magique de Cartan}{11/29}
+\slider{$\calL_X=\dd\circ\iota\l X\r+\iota\l X\r\circ\dd$}{11/29}
+\slideq{Produit tensoriel de fibrés}{12/29}
+\slider{Si $E_1=\l U_i,g^1_{i,j}\r$ et $E_2=\l U_i,g^2_{i,j}\r$ alors $E_1\otimes E_2$ est le fibré tel que $\l E_1\otimes E_2\r_x=\l E_1\r_x\otimes\l E_2\r_x$, c'est $E_1\otimes E_2=\l U_i,g^1_{i,j}\otimes g^2_{i,j}\r$}{12/29}
+\slideq{Propriétés du produit scalaire canonique $V_{r,s}\times\l V^*\r_{r,s}\to\bbR$}{13/29}
+\slider{$\appl{\psc\cdot\cdot}{V_{r,s}\times\l V^*\r_{r,s}}{\bbR}{\substack{u_1\otimes\cdots\otimes u_r\otimes u^*_1\otimes u^*_s\\v^*_1\otimes\cdots\otimes v^*_r\otimes v_1\otimes v_s}}{v^*_1\l u_1\r\cdots u_s^*\l v_s\r}$\linebreak$\psc\cdot\cdot$ est non dégénéré\linebreak Cela donne un isomorphisme canonique $\l V_{r,s}\r^*\cong\l V^*\r_{r,s}\cong\operatorname{M}_{r,s}$ les formes multilinéaires sur $V^r\times\l V^*\r^s$}{13/29}
+\slideq{Caractérisation, à isomorphisme près, des fibrés}{14/29}
+\slider{Les fonctions de transition $g_{i,j}$\linebreak En particulier, pour $\l U_i\r$ un recouvrement d'une variété $M$ et $g_{i,j}\!:\!U_i\cap U_j\to\gl{\bbR^r}$ qui vérifient la condition de cocycle, on a un unique fibré vectoriel $E$ de $M$, à isomorphisme près, dont les fonctions de transitions sont les $g_{i,j}$}{14/29}
+\slideq{$g_{i,j}$ vérifie la condition de cocycle}{15/29}
+\slider{$g_{i,j}g_{j,k}=g_{i,k}$}{15/29}
+\slideq{Tenseur pur de $\tens V$}{16/29}
+\slider{Tenseur de la forme $u_1\otimes\cdots\otimes v_r\otimes u_1^*\otimes\cdots\otimes u_s^*$}{16/29}
+\slideq{Propriétés du produit scalaire canonique $\pext[k]{V^*}\times\ext[k]V\to\bbR$}{17/29}
+\slider{$\appl{\psc\cdot\cdot}{\pext[k]{V^*}\times\ext[k]V}{\bbR}{\substack{u^*_1\wedge\cdots\wedge u^*_k\\v_1\wedge\cdots\wedge v_k}}{\det{\l u_i^*\l v_j\r\r_{\l i,j\r\in\llb1,k\rrb^2}}}$\linebreak$\psc\cdot\cdot$ est non dégénéré\linebreak Cela donne un isomorphisme canonique $\pext[k]V^*\cong\pext[k]{V^*}\cong\operatorname{A}_{r,s}$\linebreak On a donc $\pext V^*\cong\pext{V^*}\cong\falt V$}{17/29}
+\slideq{Tiré en arrière de la différentielle extérieure}{18/29}
+\slider{$\phi^*\circ\dd=\dd\circ\phi^*$}{18/29}
+\slideq{Somme directe de fibrés}{19/29}
+\slider{Si $E_1=\l U_i,g^1_{i,j}\r$ et $E_2=\l U_i,g^2_{i,j}\r$ alors $E_1\oplus E_2$ est le fibré tel que $\l E_1\oplus E_2\r_x=\l E_1\r_x\oplus\l E_2\r_x$, c'est $E_1\oplus E_2=\l U_i,g^1_{i,j}\oplus g^2_{i,j}\r$}{19/29}
+\slideq{$\calL_{\lc X,Y\rc}$}{20/29}
+\slider{$\calL_X\circ\calL_Y-\calL_Y\circ\calL_X$}{20/29}
+\slideq{$\falt V$}{21/29}
+\slider{$\bigoplus{k\in\bbN}{}{\falt[k]V}$ où $\falt[k]V$ est l'espace vectoriel des formes $k$-linéaires alternées}{21/29}
+\slideq{Produit extérieur d'un fibré}{22/29}
+\slider{Si $E=\l U_i,g_{i,j}\r$ alors $\ext[k]E$ est le fibré tel que $\l\ext[p]E\r_x=\pext[p]{E_x}$, c'est $\ext[p]E=\l U_i,\pext[p]{g_{i,j}}\r$}{22/29}
+\slideq{Dérivée de Lie associée à $X$}{23/29}
+\slider{$\appl{\calL_X}{\fd M}{\fd M}{\alpha}{\left.\hskip-\nulldelimiterspace\der[][t]{}{\l\phi_t^X\r^*\alpha}\right|_{t=0}}$}{23/29}
+\slideq{Lien entre $u\wedge v$ et $v\wedge u$ pour $u\in\ext[r]V$ et $v\in\ext[s]V$}{24/29}
+\slider{$u\wedge v=\l-1\r^{rs}v\wedge u$}{24/29}
+\slideq{Propriétés fonctorielles du tiré en arrière}{25/29}
+\slider{$f^*\l\alpha\wedge\beta\r=f^*\l\alpha\r\wedge f^*\l\beta\r$\linebreak$\l g\circ f\r^*=f^*\circ g^*$}{25/29}
+\slideq{Espace des tenseurs de type $\l r,s\r$ associés à $V$}{26/29}
+\slider{$V_{r,s}=V^{\otimes r}\otimes\l V^*\r^{\otimes s}$}{26/29}
+\slideq{Tiré en arrière de $\omega\in\ccv Np$ par $f\!:\!M\to N$ lisse}{27/29}
+\slider{$f^*\omega=\l x\mapsto\pext[p]{\transp{\dd_xf}}\omega_{f\l x\r}\r\in\ccv Mp$\linebreak Via l'identification aux formes alternées, $f^*\omega\l x\r$ est l'application $\nappl{\l\tg_xM\r^p}{\bbR}{v_1,\cdots,v_p}{\omega_{f\l x\r}\l\dd_xf\l v_1\r,\cdots,\dd_xf\l v_p\r\r}$}{27/29}
+\slideq{Algèbre extérieure de $V$}{28/29}
+\slider{$\ext V=\pext V=\operatorname{C}\l V\r/\operatorname{I}\l V\r$ où $\operatorname{C}\l V\r=\bigoplus{k\in\bbN}{}{V_{k,0}}$ et $\operatorname{I}\l V\r$ est l'idéal bilatère de $\operatorname{C}\l V\r$ engendré par $\set{v\otimes v,v\in V}$\linebreak$\ext V$ est une algèbre graduée\linebreak$\ext[k]V=V_{k,0}/\operatorname{I}_k\l V\r$ où $\operatorname{I}_k\l V\r=\operatorname{I}\l V\r\cap V_{k,0}$}{28/29}
+\slideq{Dual d'un fibré}{29/29}
+\slider{Si $E=\l U_i,g_{i,j}\r$ alors $E^*$ est le fibré tel que $\l E^*\r_x=\l E_x\r^*$, c'est $E^*=\l U_i,\transp{g_{i,j}}\r$}{29/29}
 \end{document}

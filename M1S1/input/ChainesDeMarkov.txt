@@ -1,7 +1,7 @@
 Probabilités avancées -- Chaînes de Markov
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{probas}\usepackage[nopar]{bigoperators}\usepackage{usuelles}
+\usepackage{probas}\usepackage[nopar]{bigoperators,analyse}\usepackage{usuelles}
 Chaîne de Markov homogène;;Processus aléatoire $\l X_n\r$ à valeurs dans $E$ au plus dénombrable tel que $\p{X_{n+1}=x_{n+1}\sq X_0,\cdots,X_n}=\p{X_{n+1}=x_{n+1}\sq X_n}$ et $\p{X_{n+1}=y\sq X_n=x}=\p{X_1=y\sq X_0=x}$\linebreak$\l X_n\r$ est une chaîne de Markov (homogène) s'il existe un noyau de probabilités $P$ tel que $\p{X_{n+1}=y\sq X_0,\cdots,X_n}=P\l X_n,y\r$
 Noyau de transition;;$P\!:\!E\times E\to\lc0,1\rc$ telle que, pour tout $x\in E$, $\sum{y\in E}{}{P\l x,y\r}=1$\linebreak Le noyau de transition associé à une chaîne de Markov est $P\l x,y\r=\p{X_1=y\sq X_0=x}$
 Mesure $\mathbb P_x$ pour un noyau de transition $P$;;Il existe une unique mesure $\mathbb P_x$ sur $E^{\mathbb N}$ telle que si $X_i\!:\!E^{\mathbb N}\to E$ est la projection sur le coefficient $i$ alors $\p[x]{X_0=x}=1$ et telle que $\l X_n\r$ soit une chaîne de Markov de transition $P$
@@ -22,8 +22,14 @@ Propriétés de l'espace des mesures invariantes;;C'est un espace convexe\linebr
 $\mu$ est une mesure réversible pour $P$;;$\mu\neq0$, pour tout $x\in E$, $\mu\l x\r<+\infty$ et pour tout $y\in E$, $\mu\l x\r P\l x,y\r=\mu\l y\r P\l y,x\r$
 Définition et support de la mesure $\mu_x$;;$\mu_x\l y\r=\esp[x]{\sum{k=0}{T-1}{\mathbb1_{X_k=y}}}$\linebreak En particulier, $\mu_x\l x\r=1$\linebreak$\operatorname{supp}\l\mu_x\r=\set{y\in E,x\rightsquigarrow y}$
 Propriétés de $\mu_x$;;$\mu_x\geqslant\mu_xP$\linebreak Si $x$ est récurrent alors $\mu_x$ est une mesure invariante et $\operatorname{supp}\l\mu_x\r=\set{y\in E,x\sim y}$
-Structure des mesures invariantes sur les chaînes irréductible récurrentes;;Toutes les mesures invariantes sont proportionnelles\linebreak De plus, soit toutes les mesures invariantes ont une masse totale infinie et pour tout $x\in E$, $\esp[x]{T_x}=+\infty$\linebreak Soit toutes les mesures invariantes sont de masse totale finie et il existe alors une unique loi invariante $\pi$ telle que $\pi\l x\r=\frac1{\esp[x]{T_x}}>0$
+Structure des mesures invariantes sur les chaînes irréductible récurrentes;;Les mesures invariantes sont proportionnelles\linebreak De plus, soit toutes les mesures invariantes ont une masse totale infinie et pour tout $x\in E$, $\esp[x]{T_x}=+\infty$\linebreak Soit toutes les mesures invariantes sont de masse totale finie et il existe alors une unique loi invariante $\pi$ telle que $\pi\l x\r=\frac1{\esp[x]{T_x}}>0$
 Chaîne de Markov irréductible récurrente nulle;;Toutes les mesures invariantes ont une masse totale infinie
 Chaîne de Markov irréductible récurrente positive;;Toutes les mesures invariantes ont une masse totale finie
 Propriétés des mesures invariantes sur les chaînes irréductibles transientes;;Toutes les mesures invariantes ont une masse totale infinie
 Mesure des éléments transients d'une chaîne de Markov non irréductible par une mesure invariante de masse totale finie;;$\mu\l T\r=0$
+Théorème ergodique;;Soit $\l X_n\r$ une chaîne de Markov irréductible récurrente et $\mu$ une mesure invariante, soient $f,g\!:\!E\to\bbR_+$ deux fonctions mesurables telles que $\int[\mu]g>0$ et $\int[\mu]f$ ou $\int[\mu]g$ soit finie, alors pour tout $x\in E$, {\toggleanalysedisplay\togglebigopdisplay\togglebigoplimits$\frac{\sum{i=0}{n-1}{f\l X_i\r}}{\sum{i=0}{n-1}{g\l X_i\r}}\xrightarrow[n\to+\infty]{}\frac{\int[\mu]f}{\int[\mu]g}$} $\bbP_{\!\!x}$-ps
+Cas particuliers du théorème ergodique pour les chaînes irréductibles positives;;Soit $\l X_n\r$ une chaîne de Markov irréductible récurrente positive alors $\frac1n\sum{i=0}{n-1}{f\l X_i\r}\xrightarrow[n\to+\infty]{}\int[\pi]f$ $\bbP_{\!\!x}$-ps pour $\pi$ la loi invariante\linebreak En particulier, $\pi\l y\r=\lim[n\to+\infty]{\frac1n\sum{i=0}{n-1}{\mathbb1_{X_i=y}}}$
+Cas particuliers du théorème ergodique pour les chaînes irréductibles nulles;;Soit $\l X_n\r$ une chaîne de Markov irréductible récurrente nulle alors $\frac1n\sum{i=0}{n-1}{f\l X_i\r}\xrightarrow[n\to+\infty]{}0$ $\bbP_{\!\!x}$-ps
+Période de $x\in E$;;$d_x=\operatorname{pgcd}\l I_x\r$ où $I_x=\set{n\in\bbN,P^n\l x,x\r>0}$\linebreak Si $x$ est récurrent, $I_x-I_x=d_x\bbZ$ et il existe $N\in\bbN$ tel que $\left\llbracket N,+\infty\right\llbracket\subset I_x$
+Période d'une chaîne irréductible récurrente;;Si $\l X_n\r$ est irréductible récurrente, $d_x=d_y$ pour tout $x,y\in E$\linebreak La période de $\l X_n\r$ est la période $d$ commune\linebreak$\l X_n\r$ est apériodique si $d=1$
+Convergence de $P^n$ pour une chaîne irréductible, récurrente positive et apériodique;;$\sum{y\in E}{}{\left|P^n\l x,y\r-\pi\l y\r\right|}\xrightarrow[n\to+\infty]{}0$ pour tout $x\in E$ et en particulier, $X_n\xrightarrow[n\to+\infty]{\calL}\pi$

@@ -15,8 +15,8 @@ text.f3 {font-family:cmr12;font-size:11.955168px}
 <g id='page1'>
 <text class='f3' x='-71.501872' y='-57.753335'>dim</text>
 <text class='f0' x='-51.991905' y='-71.023685'></text>
-<text class='f0' x='-44.851992' y='-69.050995' transform='matrix(.72002 0 0 .72002 -12.557663 -16.822458)'>⋀</text>
-<text class='f1' x='-37.678712' y='-63.586167' transform='matrix(1 0 0 1 -.00001 -.000013)'>k</text>
+<text class='f0' x='-44.851992' y='-68.801929' transform='matrix(.72002 0 0 .72002 -12.557663 -16.752743)'>⋀</text>
+<text class='f1' x='-37.678712' y='-63.337101' transform='matrix(1 0 0 1 -.00001 -.000013)'>k</text>
 <text class='f2' x='-32.558965' y='-57.753335' transform='matrix(1 0 0 1 -.00001 -.000013)'>V</text>
 <text class='f0' x='-23.133286' y='-71.023685' transform='matrix(1 0 0 1 -.00001 -.000013)'></text>
 </g>

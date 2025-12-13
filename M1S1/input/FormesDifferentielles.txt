@@ -1,7 +1,7 @@
 Géométrie avancée -- Formes différentielles
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al,topologie,analyse}\usepackage[nopar,bigopsymb]{bigoperators}\DeclareMathOperator{\oldtens}{T}\def\tens#1{\oldtens\l#1\r}\newcommand{\ext}[2][]{\mathop{}\mkern-3mu\raisebox{1.5pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}#2}\newcommand{\pext}[2][]{\mathop{}\mkern-3mu\raisebox{1.5pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}\l#2\r}\DeclareMathOperator{\oldalt}{A}\newcommand{\falt}[2][]{\oldalt_{#1}\l#2\r}\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\DeclareMathOperator{\oldom}{\oldOmega}\newcommand{\om}[1]{\oldom_{#1}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\def\ccv#1#2{{\operatorname{\upGamma}}\l#1,\ext[#2]{\om#1}\r}
+\usepackage{al,topologie,analyse}\usepackage[nopar,bigopsymb]{bigoperators}\DeclareMathOperator{\oldtens}{T}\def\tens#1{\oldtens\l#1\r}\newcommand{\ext}[2][]{\mathop{}\mkern-3mu\raisebox{1.25pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}#2}\newcommand{\pext}[2][]{\mathop{}\mkern-3mu\raisebox{1.25pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}\l#2\r}\DeclareMathOperator{\oldalt}{A}\newcommand{\falt}[2][]{\oldalt_{#1}\l#2\r}\DeclareMathOperator{\oldtg}{T}\def\tg{{\oldtg}}\DeclareMathOperator{\oldom}{\oldOmega}\newcommand{\om}[1]{\oldom_{#1}}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}\def\ccv#1#2{{\operatorname{\upGamma}}\l#1,\ext[#2]{\om#1}\r}\newcommand{\fd}[2][]{\oldom^{#1}\l#2\r}\let\upGamma\Gamma\def\cv#1{{\operatorname{\upGamma}}\l#1,\tg#1\r}
 Espace des tenseurs de type $\l r,s\r$ associés à $V$;;$V_{r,s}=V^{\otimes r}\otimes\l V^*\r^{\otimes s}$
 Algèbre tensorielle de $V$;;$\tens V=\bigoplus{r,s\in\bbN}{}{V_{r,s}}$\linebreak C'est une algèbre associative (bi-)graduée et les tenseurs de $V_{r,s}$ sont appelés tenseurs homogènes de (bi-)degré $\l r,s\r$
 Tenseur pur de $\tens V$;;Tenseur de la forme $u_1\otimes\cdots\otimes v_r\otimes u_1^*\otimes\cdots\otimes u_s^*$
@@ -24,6 +24,10 @@ Dual d'un fibré;;Si $E=\l U_i,g_{i,j}\r$ alors $E^*$ est le fibré tel que $\l 
 Produit extérieur d'un fibré;;Si $E=\l U_i,g_{i,j}\r$ alors $\ext[k]E$ est le fibré tel que $\l\ext[p]E\r_x=\pext[p]{E_x}$, c'est $\ext[p]E=\l U_i,\pext[p]{g_{i,j}}\r$
 Forme différentielle de degré $p$ sur $M$ une variété différentielle;;Une section (locale) de $\ext[p]{\om M}$ où $\om M=\tg M^*$
 Tiré en arrière de $\omega\in\ccv Np$ par $f\!:\!M\to N$ lisse;;$f^*\omega=\l x\mapsto\pext[p]{\transp{\dd_xf}}\omega_{f\l x\r}\r\in\ccv Mp$\linebreak Via l'identification aux formes alternées, $f^*\omega\l x\r$ est l'application $\nappl{\l\tg_xM\r^p}{\bbR}{v_1,\cdots,v_p}{\omega_{f\l x\r}\l\dd_xf\l v_1\r,\cdots,\dd_xf\l v_p\r\r}$
-Propriétés fonctorielles du tiré en arrière;;$f^*\l\alpha\wedge\beta\r=f^*\l\alpha\r\wedge f^*\l\beta\r$\linebreak$\l g\circ f\r^*=g^*\circ f^*$
+Propriétés fonctorielles du tiré en arrière;;$f^*\l\alpha\wedge\beta\r=f^*\l\alpha\r\wedge f^*\l\beta\r$\linebreak$\l g\circ f\r^*=f^*\circ g^*$
 Différentielle extérieure sur une variété différentielle $M$;;Il existe une unique application $\dd\!:\!\ccv M{}\to\ccv M{}$ qui soit une antidérivation homogène de degré $1$ telle que $\dd_{|\calC^\infty\l M,\bbR\r}$ soit la différentielle usuelle et $\dd\circ\dd=0$
 Tiré en arrière de la différentielle extérieure;;$\phi^*\circ\dd=\dd\circ\phi^*$
+Dérivée de Lie associée à $X$;;$\appl{\calL_X}{\fd M}{\fd M}{\alpha}{\left.\hskip-\nulldelimiterspace\der[][t]{}{\l\phi_t^X\r^*\alpha}\right|_{t=0}}$
+Caractérisation de $\calL_X$;;$\calL_X$ est caractérisée par\linebreak$\calL_X\l f\r=\dd f\l X\r$\linebreak$\lc\dd,\calL_X\rc=0$, ie $\dd\circ\calL_X=\calL_X\circ\dd$\linebreak$\calL_X$ est une dérivation
+$\calL_{\lc X,Y\rc}$;;$\calL_X\circ\calL_Y-\calL_Y\circ\calL_X$
+Formule magique de Cartan;;$\calL_X=\dd\circ\iota\l X\r+\iota\l X\r\circ\dd$

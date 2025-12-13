@@ -1,8 +1,18 @@
 Algèbre avancée -- Produit tensoriel
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al}\usepackage[nopar]{bigoperators}
+\usepackage{al,structures}\usepackage[nopar]{bigoperators}\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}, every diagram/.append style={cramped, column sep=scriptsize, row sep=scriptsize}}
 $u\!:\!M\times N\to P$ est $A$-bilinéaire;;$\nappl{N}{P}{y}{u\l x,y\r}$ est linéaire pour tout $x\in M$\linebreak$\nappl{M}{P}{x}{u\l x,y\r}$ est linéaire pour tout $y\in N$\linebreak On note $\al[2]{M\times N}P$ les applications bilinéaires de $M\times N$ dans $P$
 PU du produit tensoriel;;Il existe un $A$-module $P_0$ et un morphisme $u\!:\!M\times N\to P_0$ bilinéaire, uniques à isomorphisme près, tel que pour toute application bilinéaire $u\!:\!M\times N\to P$, il existe une unique application linéaire $v\!:\!P_0\to P$ tel que $u=v\circ u_0$\linebreak$P_0$ est noté $M\otimes_AN$ ou $M\otimes N$ lorsqu'il n'y a pas d'ambiguïté sur l'anneau $A$
 Liberté du produit tensoriel;;Si $M$ est libre de base $\l e_i\r_{i\in I}$ et $N$ est libre de base $\l f_j\r_{j\in J}$ alors $M\otimes N$ est libre de base $\l e_i\otimes f_j\r_{\l i,j\r\in I\times J}$
 Distributivité de $\otimes$ sur $\oplus$;;$\l\bigoplus{i\in I}{}{M_i}\r\otimes_A\l\bigoplus{j\in J}{}{N_j}\r\cong\bigoplus{\l i,j\r\in I\times J}{}{\l M_i\otimes_AN_j\r}$
+Propriétés de $\otimes$;;$A\otimes_AM\cong M\otimes_AA\cong M$\linebreak$M\otimes N\cong N\otimes M$\linebreak$M\otimes\l N\otimes P\r\cong\l M\otimes N\r\otimes P$
+Liens entre $\otimes$ et $\oldhom$;;On a $\Phi\!:\!\hom{M_1,N_1}\otimes\hom{M_2,N_2}\to\hom{M_1\otimes M_2,N_1\otimes N_2}$\linebreak Si $M_1$ et $N_1$ ou $M_2$ et $N_2$ sont libres de rang fini ou projectifs de type fini, c'est un isomorphisme\linebreak En particulier, $M^*\otimes N\to\hom{M,N}$
+Lien entre les suites exactes et $\otimes$;;Si \begin{tikzcd}[ampersand replacement=\&]M\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd} est une suite exacte alors la suite suivante est aussi exacte\linebreak\begin{tikzcd}[ampersand replacement=\&]M_1\otimes N\ar[r,"u\otimes{\id}"]\&M_2\otimes N\ar[r,"v\otimes{\id}"]\&M_3\otimes N\ar[r]\&0\end{tikzcd}\linebreak L'injectivité n'est pas nécessairement préservée
+$M\otimes_AA/I$;;$M/IM$
+$A/I\otimes_AA/J$;;$A/\l I+J\r$
+$M$ est un $A$-module plat;;Pour toute application linéaire injective $u\!:\!N_1\to N_2$, l'application $u\otimes{\id}\!:\!N_1\otimes M\to N_2\otimes M$ est injective
+Platitude de $\bigoplus{i\in I}{}{M_i}$;;$\bigoplus{i\in I}{}{M_i}$ est plat si et seulement si pour tout $i\in I$, $M_i$ est plat
+$A$-modules plats d'un anneau principal;;$A$-modules sans torsion
+Caractère local de la platitude;;$M$ est plat\linebreak Si et seulement si, pour tout idéal $\frakp$ premier, $M_\frakp$ est plat\linebreak Si et seulement si, pour tout idéal maximal $\frakm$, $M_\frakm$ est plat
+Extension des scalaires;;Si $\varphi\!:\!A\to B$ est un morphisme d'anneaux et $M$ est un $A$-module, alors il existe une unique structure de $B$-module sur $M\otimes_AB$ telle que $b'\cdot\l x\otimes b\r=x\otimes bb'$\linebreak Ce module est noté $M_B$

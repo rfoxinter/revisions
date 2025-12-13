@@ -25,10 +25,10 @@ text.f9 {font-family:cmr12;font-size:11.955168px}
 ]]>
 </style>
 <g id='page1'>
-<text class='f2' x='-66.848774' y='-70.246539' transform='matrix(.72002 0 0 .72002 -18.716327 -17.157202)'>⋀</text>
+<text class='f2' x='-66.848774' y='-69.997473' transform='matrix(.72002 0 0 .72002 -18.716327 -17.087459)'>⋀</text>
 <text class='f6' x='-59.177362' y='-58.948879' transform='matrix(1 0 0 1 -.000015 -.000014)'>V</text>
 <text class='f9' x='-46.430853' y='-58.948879' transform='matrix(1 0 0 1 -.000015 -.000014)'>=</text>
-<text class='f2' x='-34.005372' y='-70.246539' transform='matrix(.72002 0 0 .72002 -9.520845 -17.157212)'>⋀</text>
+<text class='f2' x='-34.005372' y='-69.997473' transform='matrix(.72002 0 0 .72002 -9.520845 -17.087469)'>⋀</text>
 <text class='f9' x='-26.33396' y='-58.948879' transform='matrix(1 0 0 1 -.000022 -.000027)'>(</text>
 <text class='f6' x='-21.781634' y='-58.948879' transform='matrix(1 0 0 1 -.000022 -.000027)'>V</text>
 <text class='f9' x='-12.355956' y='-58.948879' transform='matrix(1 0 0 1 -.000022 -.000027)'>)<tspan x='-4.482812'>=</tspan><tspan x='7.942669'>C</tspan><tspan x='16.396988'>(</tspan></text>
@@ -65,33 +65,33 @@ text.f9 {font-family:cmr12;font-size:11.955168px}
 <text class='f4' x='185.268667' y='-33.184852' transform='matrix(1 0 0 1 -.000099 -.000027)'>∈</text>
 <text class='f6' x='196.559635' y='-33.184852' transform='matrix(1 0 0 1 -.000099 -.000027)'>V</text>
 <text class='f4' x='205.985314' y='-33.184852' transform='matrix(1 0 0 1 -.000099 -.000027)'>}</text>
-<text class='f2' x='-.442874' y='-30.036685' transform='matrix(.72002 0 0 .72002 -.124095 -5.899259)'>⋀</text>
+<text class='f2' x='-.442874' y='-29.787619' transform='matrix(.72002 0 0 .72002 -.124095 -5.829544)'>⋀</text>
 <text class='f6' x='7.228539' y='-18.739024' transform='matrix(1 0 0 .999999 -.000099 -.000032)'>V</text>
 <text class='f8' x='20.555299' y='-18.739024' transform='matrix(1 0 0 .999999 -.000099 -.000032)'>est<tspan x='38.825383'>une</tspan><tspan x='60.931537'>algèbre</tspan><tspan x='101.242753'>graduée</tspan></text>
-<text class='f2' x='-34.797838' y='-15.590857' transform='matrix(.72002 0 0 .72002 -9.742786 -1.85473)'>⋀</text>
-<text class='f5' x='-27.624557' y='-10.126029' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>k</text>
-<text class='f6' x='-22.50481' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>V</text>
-<text class='f9' x='-9.758302' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>=</text>
-<text class='f6' x='2.667179' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>V</text>
-<text class='f5' x='9.491529' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>k<tspan x='14.113145'>,</tspan></text>
-<text class='f7' x='16.465469' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>0</text>
-<text class='f6' x='21.197783' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>/</text>
-<text class='f9' x='29.043271' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>I</text>
-<text class='f5' x='33.266281' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>k</text>
-<text class='f9' x='38.386028' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>(</text>
-<text class='f6' x='42.938354' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>V</text>
-<text class='f9' x='52.364033' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>)</text>
-<text class='f8' x='60.817429' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>où</text>
-<text class='f9' x='77.071938' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>I</text>
-<text class='f5' x='81.294948' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>k</text>
-<text class='f9' x='86.414695' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>(</text>
-<text class='f6' x='90.967021' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>V</text>
-<text class='f9' x='100.3927' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>)<tspan x='108.265844'>=</tspan><tspan x='120.691325'>I</tspan><tspan x='124.914334'>(</tspan></text>
-<text class='f6' x='129.46666' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>V</text>
-<text class='f9' x='138.892339' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>)</text>
-<text class='f4' x='146.101317' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>∩</text>
-<text class='f6' x='156.728119' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>V</text>
-<text class='f5' x='163.552469' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>k<tspan x='168.174084'>,</tspan></text>
-<text class='f7' x='170.526408' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000034)'>0</text>
+<text class='f2' x='-34.797838' y='-15.341791' transform='matrix(.72002 0 0 .72002 -9.742786 -1.784998)'>⋀</text>
+<text class='f5' x='-27.624557' y='-9.876963' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>k</text>
+<text class='f6' x='-22.50481' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>V</text>
+<text class='f9' x='-9.758302' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>=</text>
+<text class='f6' x='2.667179' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>V</text>
+<text class='f5' x='9.491529' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>k<tspan x='14.113145'>,</tspan></text>
+<text class='f7' x='16.465469' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>0</text>
+<text class='f6' x='21.197783' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>/</text>
+<text class='f9' x='29.043271' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>I</text>
+<text class='f5' x='33.266281' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>k</text>
+<text class='f9' x='38.386028' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>(</text>
+<text class='f6' x='42.938354' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>V</text>
+<text class='f9' x='52.364033' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>)</text>
+<text class='f8' x='60.817429' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>où</text>
+<text class='f9' x='77.071938' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>I</text>
+<text class='f5' x='81.294948' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>k</text>
+<text class='f9' x='86.414695' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>(</text>
+<text class='f6' x='90.967021' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>V</text>
+<text class='f9' x='100.3927' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>)<tspan x='108.265844'>=</tspan><tspan x='120.691325'>I</tspan><tspan x='124.914334'>(</tspan></text>
+<text class='f6' x='129.46666' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>V</text>
+<text class='f9' x='138.892339' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>)</text>
+<text class='f4' x='146.101317' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>∩</text>
+<text class='f6' x='156.728119' y='-4.293196' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>V</text>
+<text class='f5' x='163.552469' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>k<tspan x='168.174084'>,</tspan></text>
+<text class='f7' x='170.526408' y='-2.499933' transform='matrix(1 0 0 .999999 -.000107 -.000033)'>0</text>
 </g>
 </svg>
