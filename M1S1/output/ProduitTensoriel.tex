@@ -10,32 +10,52 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Extension des scalaires}{1/14}
-\slider{Si $\varphi\!:\!A\to B$ est un morphisme d'anneaux et $M$ est un $A$-module, alors il existe une unique structure de $B$-module sur $M\otimes_AB$ telle que $b'\cdot\l x\otimes b\r=x\otimes bb'$\linebreak Ce module est noté $M_B$}{1/14}
-\slideq{Platitude de $\bigoplus{i\in I}{}{M_i}$}{2/14}
-\slider{$\bigoplus{i\in I}{}{M_i}$ est plat si et seulement si pour tout $i\in I$, $M_i$ est plat}{2/14}
-\slideq{$u\!:\!M\times N\to P$ est $A$-bilinéaire}{3/14}
-\slider{$\nappl{N}{P}{y}{u\l x,y\r}$ est linéaire pour tout $x\in M$\linebreak$\nappl{M}{P}{x}{u\l x,y\r}$ est linéaire pour tout $y\in N$\linebreak On note $\al[2]{M\times N}P$ les applications bilinéaires de $M\times N$ dans $P$}{3/14}
-\slideq{$A$-modules plats d'un anneau principal}{4/14}
-\slider{$A$-modules sans torsion}{4/14}
-\slideq{Liberté du produit tensoriel}{5/14}
-\slider{Si $M$ est libre de base $\l e_i\r_{i\in I}$ et $N$ est libre de base $\l f_j\r_{j\in J}$ alors $M\otimes N$ est libre de base $\l e_i\otimes f_j\r_{\l i,j\r\in I\times J}$}{5/14}
-\slideq{Caractère local de la platitude}{6/14}
-\slider{$M$ est plat\linebreak Si et seulement si, pour tout idéal $\frakp$ premier, $M_\frakp$ est plat\linebreak Si et seulement si, pour tout idéal maximal $\frakm$, $M_\frakm$ est plat}{6/14}
-\slideq{PU du produit tensoriel}{7/14}
-\slider{Il existe un $A$-module $P_0$ et un morphisme $u\!:\!M\times N\to P_0$ bilinéaire, uniques à isomorphisme près, tel que pour toute application bilinéaire $u\!:\!M\times N\to P$, il existe une unique application linéaire $v\!:\!P_0\to P$ tel que $u=v\circ u_0$\linebreak$P_0$ est noté $M\otimes_AN$ ou $M\otimes N$ lorsqu'il n'y a pas d'ambiguïté sur l'anneau $A$}{7/14}
-\slideq{Distributivité de $\otimes$ sur $\oplus$}{8/14}
-\slider{$\l\bigoplus{i\in I}{}{M_i}\r\otimes_A\l\bigoplus{j\in J}{}{N_j}\r\cong\bigoplus{\l i,j\r\in I\times J}{}{\l M_i\otimes_AN_j\r}$}{8/14}
-\slideq{Lien entre les suites exactes et $\otimes$}{9/14}
-\slider{Si \begin{tikzcd}[ampersand replacement=\&]M\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd} est une suite exacte alors la suite suivante est aussi exacte\linebreak\begin{tikzcd}[ampersand replacement=\&]M_1\otimes N\ar[r,"u\otimes{\id}"]\&M_2\otimes N\ar[r,"v\otimes{\id}"]\&M_3\otimes N\ar[r]\&0\end{tikzcd}\linebreak L'injectivité n'est pas nécessairement préservée}{9/14}
-\slideq{Propriétés de $\otimes$}{10/14}
-\slider{$A\otimes_AM\cong M\otimes_AA\cong M$\linebreak$M\otimes N\cong N\otimes M$\linebreak$M\otimes\l N\otimes P\r\cong\l M\otimes N\r\otimes P$}{10/14}
-\slideq{$M\otimes_AA/I$}{11/14}
-\slider{$M/IM$}{11/14}
-\slideq{Liens entre $\otimes$ et $\oldhom$}{12/14}
-\slider{On a $\Phi\!:\!\hom{M_1,N_1}\otimes\hom{M_2,N_2}\to\hom{M_1\otimes M_2,N_1\otimes N_2}$\linebreak Si $M_1$ et $N_1$ ou $M_2$ et $N_2$ sont libres de rang fini ou projectifs de type fini, c'est un isomorphisme\linebreak En particulier, $M^*\otimes N\to\hom{M,N}$}{12/14}
-\slideq{$A/I\otimes_AA/J$}{13/14}
-\slider{$A/\l I+J\r$}{13/14}
-\slideq{$M$ est un $A$-module plat}{14/14}
-\slider{Pour toute application linéaire injective $u\!:\!N_1\to N_2$, l'application $u\otimes{\id}\!:\!N_1\otimes M\to N_2\otimes M$ est injective}{14/14}
+\slideq{Propriétés préservées par extension des scalaires}{1/24}
+\slider{Si $M$ est libre de base $\l e_i\r_{i\in I}$ alors $M_B$ est libre de base $\l e_i\otimes 1\r_{i\in I}$\linebreak Si $M$ est de type finie et $\l e_i\r_{i\in I}$ en est une famille génératrice alors $M_B$ est de type fini et $\l e_i\otimes 1\r_{i\in I}$ en est une famille génératrice\linebreak Si $M$ est projectif alors $M_B$ est projectif}{1/24}
+\slideq{Caractère local de la platitude}{2/24}
+\slider{$M$ est plat\linebreak Si et seulement si, pour tout idéal $\frakp$ premier, $M_\frakp$ est plat\linebreak Si et seulement si, pour tout idéal maximal $\frakm$, $M_\frakm$ est plat}{2/24}
+\slideq{Élément isomorphe à $M_{S^{-1}A}$}{3/24}
+\slider{$S^{-1}M$ via $\frac xs\mapsto x\otimes\frac1s$\linebreak En particulier, si on a $u\!:\!M\to N$ qui est $A$-linéaire alors $S^{-1}u=u_{S^{-1}A}$ via cette identification}{3/24}
+\slideq{Propriétés de $\otimes$}{4/24}
+\slider{$A\otimes_AM\cong M\otimes_AA\cong M$\linebreak$M\otimes N\cong N\otimes M$\linebreak$M\otimes\l N\otimes P\r\cong\l M\otimes N\r\otimes P$}{4/24}
+\slideq{PU du produit tensoriel de $A$-algèbres}{5/24}
+\slider{Pour toute $A$-algèbre $D$, $\hom[A]{B\otimes C,D}\cong\hom[A]{B,D}\times\hom[A]{C,D}$\linebreak\begin{tikzcd}[ampersand replacement=\&,column sep=normal,row sep=tiny]B\ar[dr,"{\id}\otimes1"',sloped]\ar[drr,"f"',bend left=20]\&\&\\\&B\otimes C\ar[r,dashed,"\exists!h"]\&D\\C\ar[ur,"1\otimes{\id}",sloped]\ar[urr, "g", bend right=20]\&\&\end{tikzcd}}{5/24}
+\slideq{$A/I\otimes_AA/J$}{6/24}
+\slider{$A/\l I+J\r$}{6/24}
+\slideq{Platitude de $\bigoplus{i\in I}{}{M_i}$}{7/24}
+\slider{$\bigoplus{i\in I}{}{M_i}$ est plat si et seulement si pour tout $i\in I$, $M_i$ est plat}{7/24}
+\slideq{$A$-modules plats d'un anneau principal}{8/24}
+\slider{$A$-modules sans torsion}{8/24}
+\slideq{PU du produit tensoriel}{9/24}
+\slider{Il existe un $A$-module $P_0$ et un morphisme $u\!:\!M\times N\to P_0$ bilinéaire, uniques à isomorphisme près, tel que pour toute application bilinéaire $u\!:\!M\times N\to P$, il existe une unique application linéaire $v\!:\!P_0\to P$ tel que $u=v\circ u_0$\linebreak$P_0$ est noté $M\otimes_AN$ ou $M\otimes N$ lorsqu'il n'y a pas d'ambiguïté sur l'anneau $A$}{9/24}
+\slideq{$A$-algèbre sur un anneau $A$ commutatif\linebreak Morphisme de $A$-algèbres}{10/24}
+\slider{Anneau $B$ muni d'un morphisme d'anneau $\varphi\!:\!A\to B$\linebreak Un morphisme de $A$-algèbres est un triangle commutatif où $\psi$ est un morphisme d'anneaux\linebreak\begin{tikzcd}[ampersand replacement=\&,column sep=normal,row sep=tiny]\&B\ar[dd,"\psi"',outer sep=-2pt]\\A\ar[ur,"\varphi_B"',sloped,outer sep=-2pt]\ar[dr,"\varphi_C",sloped,outer sep=-2pt]\&\\\&C\end{tikzcd}}{10/24}
+\slideq{Liberté du produit tensoriel}{11/24}
+\slider{Si $M$ est libre de base $\l e_i\r_{i\in I}$ et $N$ est libre de base $\l f_j\r_{j\in J}$ alors $M\otimes N$ est libre de base $\l e_i\otimes f_j\r_{\l i,j\r\in I\times J}$}{11/24}
+\slideq{Extension des scalaires de $M$ de $A$ à $B$}{12/24}
+\slider{Si $\varphi\!:\!A\to B$ est un morphisme d'anneaux et $M$ est un $A$-module, alors il existe une unique structure de $B$-module sur $M\otimes_AB$ telle que $b'\cdot\l x\otimes b\r=x\otimes bb'$\linebreak Ce module est noté $M_B$}{12/24}
+\slideq{Lien entre les suites exactes et $\otimes$}{13/24}
+\slider{Si \begin{tikzcd}[ampersand replacement=\&]M\ar[r,"u"]\&M_2\ar[r,"v"]\&M_3\ar[r]\&0\end{tikzcd} est une suite exacte alors la suite suivante est aussi exacte\linebreak\begin{tikzcd}[ampersand replacement=\&]M_1\otimes N\ar[r,"u\otimes{\id}"]\&M_2\otimes N\ar[r,"v\otimes{\id}"]\&M_3\otimes N\ar[r]\&0\end{tikzcd}\linebreak L'injectivité n'est pas nécessairement préservée}{13/24}
+\slideq{Liens entre $\otimes$ et $\oldhom$}{14/24}
+\slider{On a $\Phi\!:\!\hom{M_1,N_1}\otimes\hom{M_2,N_2}\to\hom{M_1\otimes M_2,N_1\otimes N_2}$\linebreak Si $M_1$ et $N_1$ ou $M_2$ et $N_2$ sont libres de rang fini ou projectifs de type fini, c'est un isomorphisme\linebreak En particulier, $M^*\otimes N\to\hom{M,N}$}{14/24}
+\slideq{Extension des scalaires de $u\!:\!M\to N$}{15/24}
+\slider{Si $M$ et $N$ sont deux $A$-modules et $u$ est $A$-linéaire alors il existe une unique application $B$-linéaire $u_B\!:\!M_B\to N_B$ telle que $u_B\l x\otimes1\r=u\l x\r\otimes1$}{15/24}
+\slideq{$M$ est un $A$-module plat}{16/24}
+\slider{Pour toute application linéaire injective $u\!:\!N_1\to N_2$, l'application $u\otimes{\id}\!:\!N_1\otimes M\to N_2\otimes M$ est injective}{16/24}
+\slideq{$\almat{u_B}{\mathcal{B}\otimes1}{\mathcal{B}'\otimes1}$\linebreak$\calB$ et $\calB'$ deux bases de $M$ comme $A$-module}{17/24}
+\slider{$\phi\cdot\almat{u}{\mathcal{B}}{\mathcal{B}}$ où $\phi\!:\!A\to B$ agit coefficient par coefficient}{17/24}
+\slideq{Platitude de $S^{-1}A$}{18/24}
+\slider{$S^{-1}A$ est plat\linebreak En particulier, si $A$ est intègre, alors $\operatorname{Frac}\l A\r$ est plat}{18/24}
+\slideq{PU de l'extension des scalaires}{19/24}
+\slider{Soit $M$ un $A$-module et $N$ un $B$-module, pour toute application $A$-linéaire $f\!:\!M\to N$, il existe une unique application $B$-linéaire $g\!:\!M_B\to N$ telle que le diagramme suivant commute\linebreak\begin{tikzcd}[ampersand replacement=\&]M\ar[rr,"f"']\ar[dr,"{\id}\otimes 1",sloped]\&\&N\\\&M_B\ar[ur,"g",sloped]\&\end{tikzcd}}{19/24}
+\slideq{PU de $A\lc X_1,\cdots,X_n\rc$}{20/24}
+\slider{Pour toute $A$-algèbre commutative $B$, on a un isomorphisme canonique $\hom[A]{A\lc X_1,\cdots,X_n\rc,B}\cong B^n$ donnée par $f\mapsto\l f\l X_1\r,\cdots,f\l X_n\r\r$}{20/24}
+\slideq{Produit tensoriel de $A$-algèbres}{21/24}
+\slider{Si $B$ et $C$ sont deux $A$-algèbres, il existe une unique structure de $A$-algèbre sur $B\otimes_AC$ qui est compatible à la structure de $A$-module et vérifie $\l b\otimes c\r\times\l b'\otimes c'\r=\l bb'\r\otimes\l cc'\r$}{21/24}
+\slideq{Distributivité de $\otimes$ sur $\oplus$}{22/24}
+\slider{$\l\bigoplus{i\in I}{}{M_i}\r\otimes_A\l\bigoplus{j\in J}{}{N_j}\r\cong\bigoplus{\l i,j\r\in I\times J}{}{\l M_i\otimes_AN_j\r}$}{22/24}
+\slideq{$u\!:\!M\times N\to P$ est $A$-bilinéaire}{23/24}
+\slider{$\nappl{N}{P}{y}{u\l x,y\r}$ est linéaire pour tout $x\in M$\linebreak$\nappl{M}{P}{x}{u\l x,y\r}$ est linéaire pour tout $y\in N$\linebreak On note $\al[2]{M\times N}P$ les applications bilinéaires de $M\times N$ dans $P$}{23/24}
+\slideq{$M\otimes_AA/I$}{24/24}
+\slider{$M/IM$}{24/24}
 \end{document}

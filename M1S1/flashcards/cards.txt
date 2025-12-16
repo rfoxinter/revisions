@@ -8,9 +8,9 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S1/flashcards/AlgebreAvancee/ModulesSurUnAnneau
 20251213073815
 ../M1S1/flashcards/AlgebreAvancee/ProduitTensoriel
-20251213081707
+20251216150049
 ../M1S1/flashcards/AnalyseAvancee/DistributionTheory
-20251213074236
+20251216161244
 ../M1S1/flashcards/AnalyseAvancee/GeneralTopology
 20251129095402
 ../M1S1/flashcards/AnalyseAvancee/HahnBanachTheorems
