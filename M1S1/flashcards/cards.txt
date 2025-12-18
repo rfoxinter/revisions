@@ -25,6 +25,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20251011100938
 ../M1S1/flashcards/GeometrieAvancee/FormesDifferentielles
 20251213085052
+../M1S1/flashcards/GeometrieAvancee/IntegrationDesFormesDifferentiellesDeDegreMaximal
+20251218111155
 ../M1S1/flashcards/GeometrieAvancee/VarietesDifferentiellesAbstraites
 20251129115155
 ../M1S1/flashcards/ProbabilitesAvancees/ChainesDeMarkov

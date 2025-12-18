@@ -1,0 +1,35 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage[nopar]{analyse}\DeclareMathOperator{\oldom}{\oldOmega}\newcommand{\om}[1]{\oldom_{#1}}\newcommand{\fd}[2][]{\oldom^{#1}\l#2\r}\newcommand{\fdc}[2][]{\oldom_c^{#1}\l#2\r}\DeclareMathOperator{\oldsupp}{supp}\def\supp#1{\oldsupp\l#1\r}
+\hypersetup{pdftitle=Géométrie avancée -- Intégration des formes différentielles de degré maximal}
+\title{Géométrie avancée\\\emph{Intégration des formes différentielles de degré maximal}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Formule de Stokes}{1/11}
+\slider{Si $M$ est une variété différentielle orientée de dimension $n$ et $D\subset M$ est un domaine régulier avec son bord $\partial D$ (éventuellement vide) muni de l'orientation induite par celle de $M$, et si $\alpha\in\fd[n-1]M$ alors $\int[][D]{\dd\alpha}=\int[][\partial D]\alpha$}{1/11}
+\slideq{$\supp\omega$ pour $\omega\in\fd M$}{2/11}
+\slider{$\overline{\set{x\in M,\omega_x\neq0}}$\linebreak On note $\fdc M$ les formes différentielles sur $M$ à support compact}{2/11}
+\slideq{Formule de changement de variable pour l'intégrale sur des ouverts}{3/11}
+\slider{Si $\psi\!:\!U\to V$ est un difféomorphisme et $U$ est connexe alors $\int[][V]{\psi^*\omega}=\pm\int[][U]\omega$\linebreak Le signe est défini suivant que $\psi$ préserve ou non l'orientation}{3/11}
+\slideq{Intégrale de $\omega\in\fd[n]U$ pour $U$ un ouvert de $M$}{4/11}
+\slider{Si $\omega=f\dd x_1\wedge\cdots\wedge\dd x_n$ avec $f\in\calC^\infty\l U,\bbR\r$\linebreak Si $f\in L^1\l U,\bbR\r$ alors $\int[][U]\omega=\int[x_1{\cdots}\dd x_n][U]f$}{4/11}
+\slideq{CS pour avoir ${\int[][K\cup L]{}}={\int[][K]{}}+{\int[][L]{}}$ pour $K$ et $L$ deux parties compactes de $M$}{5/11}
+\slider{$K\cap L$ est négligeable}{5/11}
+\slideq{$D\subset M$ est un domaine régulier}{6/11}
+\slider{$D=\overline{\mathring D}$ et $\partial D=\varnothing$ ou $\partial D$ est une sous-variété de $M$ de codimension $1$}{6/11}
+\slideq{CNS pour qu'une variété différentielle $M$ soit orientable}{7/11}
+\slider{$M$ admet une forme volume}{7/11}
+\slideq{Formule de changement de variables pour l'intégrale sur des variétés}{8/11}
+\slider{Soient $M$ et $N$ deux variétés orientées de dimension $n$ et $f\!:\!M\to N$ un difféomorphisme qui préserve l'orientation alors, pour tout $\omega\in\fdc[n]M$, $\int[][N]\omega=\int[][M]{f^*\omega}$}{8/11}
+\slideq{Forme volume}{9/11}
+\slider{Section globale de $\fd[n]M$ qui ne s'annule jamais}{9/11}
+\slideq{Intégrale sur une variété $M$}{10/11}
+\slider{Si $M$ est une variété différentielle orientée de dimension $n$ alors il existe une unique forme linéaire $\oldint_M\!:\!\fdc[n]M\to\bbR$ continue telle que, pour tout $\l U,\phi\r$ ouvert de carte de l'atlas maximal d'orientation et tout $\omega\in\fdc[n]M$ telle que $\supp\omega\subset U$, $\int[][M]\omega=\int[][\phi^{-1}\l U\r]{\l\phi^{-1}\r^*\omega}$}{10/11}
+\slideq{Intégration sur des parties compactes d'une variété}{11/11}
+\slider{Si $M$ est une variété différentielle orientée de dimension $n$ et $K\subset M$ est compact alors il existe une unique forme linéaire $\oldint_K\!:\!\fd[n]M\to\bbR$ continue telle que, pour tout $\l U,\phi\r$ ouvert de carte de l'atlas maximal d'orientation et tout $\omega\in\fdc[n]M$ telle que $\supp\omega\subset U$, $\int[][K]\omega=\int[][\phi^{-1}\l K\r]{\l\phi^{-1}\r^*\omega}$}{11/11}
+\end{document}
