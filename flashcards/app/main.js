@@ -122,6 +122,12 @@ async function list_cards(downloaded = false) {
         a.href = "javascript:config_src('" + flurl + "')";
         p.appendChild(a);
         document.getElementById("cards_container").appendChild(p);
+        p = document.createElement("p");
+        a = document.createElement("a");
+        a.innerText = "Mettre à jour les fiches de la source";
+        a.href = "javascript:sync_all('" + flurl + "',false)";
+        p.appendChild(a);
+        document.getElementById("cards_container").appendChild(p);
     }
     if (flurl.substring(flurl.length - 9) !== "cards.txt") {window.alert("Fichier incorrect"); return;}
     try {

@@ -72,4 +72,9 @@ defaults:
             path: L3S2/**
         values:
             sitemap: false
+    -
+        scope:
+            path: M1S1/**
+        values:
+            sitemap: false
 

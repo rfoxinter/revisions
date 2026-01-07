@@ -89,6 +89,43 @@ async function sync(url, name, message = true) {
     } else {if (message) {window.alert('Impossible de rafraîchir le fichier');}}
 }
 
+async function sync_all(url, message = true) {
+    try {
+        response = await fetch(url);
+    } catch(error) {if (message) {window.alert('Impossible de rafraîchir les fichiers');}}
+    if (response.status == 200) {
+        const jsCode = await response.text();
+        let ls = jsCode.split('\n'); let found = false;
+        for (let i = 0; i < (ls.length - 1)/2; ++i) {
+            if (document.getElementById("[" + url + "," + ls[2*i + 1] + "]") != null) {
+                let name = ls[2*i + 1];
+                if (parseInt(ls[2*i + 2]) > await read_date(url, name)) {
+                    sync_file(url, name);
+                } else {if (message) {window.alert('Le fichier est à jour.');}}
+                console.log("parsed", url, name);;
+            }
+        }
+    } else {if (message) {window.alert('Impossible de rafraîchir le fichier');}}
+}
+
+async function sync_file(url, name) {
+    console.log("updating", url, name);
+    let card = document.getElementById('[' + url + ',' + name + ']').getElementsByTagName('a');
+    let href = [];
+    for (let i = 0; i < card.length; ++i) {
+        href.push(card[i].href);
+        card[i].style.filter = 'grayscale(100%)';
+        card[i].href = 'javascript:void(0);'
+        
+    }
+    await delete_card(url, name, false);
+    await add_card(url, name, absolute(ls[0]+ls[2*i+1]), undefined);
+    for (let i = 0; i < card.length; ++i) {
+        card[i].style.filter = '';
+        card[i].href = href[i];
+    }
+}
+
 async function sync_upload(name) {
     var card = await read_card("Fichiers importés", name);
     var file = await deflate(card).split('\n');

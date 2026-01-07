@@ -23,10 +23,10 @@
             width: unset !important;
             vertical-align: middle;
         }
-        path:not([fill]), path:is([fill=none]) {
+        path:is(:not([fill]),[fill=none]):is(:not([stroke]),[stroke="#000"]) {
             stroke: #606c71;
         }
-        path:not([stroke]), path:is([stroke=none]) {
+        path:is(:not([stroke]),[stroke=none]):is(:not([fill]),[fill="#000"]) {
             fill: #606c71;
         }
         button {

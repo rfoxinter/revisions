@@ -4,7 +4,7 @@ function is_numeric(str){
 
 function display() {
     var file = new XMLHttpRequest();
-    file.open('GET', './files.txt');
+    file.open('GET', 'https://rfoxinter.github.io/revisions/sitemap.xml');
     file.send();
     file.onreadystatechange = function() {
         if (file.readyState === 4) {
@@ -16,7 +16,7 @@ function display() {
 }
 
 function display_files(sitemap){
-    const path = 'https://rfoxinter.github.io/revisions/M1S1/pdf/';
+    const path = 'https://rfoxinter.github.io/revisions/M1S2/pdf/';
     const extension = '\\.pdf';
 
     var files = [];
