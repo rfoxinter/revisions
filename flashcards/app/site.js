@@ -102,14 +102,12 @@ async function sync_all(url, message = true) {
                 if (parseInt(ls[2*i + 2]) > await read_date(url, name)) {
                     sync_file(ls[0], url, name);
                 } else {if (message) {window.alert('Le fichier est à jour.');}}
-                console.log("parsed", url, name);;
             }
         }
     } else {if (message) {window.alert('Impossible de rafraîchir le fichier');}}
 }
 
 async function sync_file(ls0, url, name) {
-    console.log("updating", url, name);
     let card = document.getElementById('[' + url + ',' + name + ']').getElementsByTagName('a');
     let href = [];
     for (let i = 0; i < card.length; ++i) {
