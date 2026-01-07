@@ -10,7 +10,7 @@ Lien entre $\cv U$ et $\Der U$, $U\subset\mathbb R^n$ ouvert;;L'application $X=\
 Lien entre $\cv M$ et $\Der M$, $M$ variété différentielle;;L'application $X\mapsto L_X={x\mapsto \dd_xf\l X\l x\r\r}$ est un isomorphisme d'espaces vectoriels sur $\mathbb R$
 $X\in\cv M$, $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*X$;;$\appl{\phi_*X}{N}{\tg N}{y}{\dd_{\phi^{-1}\l y\r}\phi\l X_{\phi^{-1}\l y\r}\r}\in\cv N$
 $X\in\Der M$, $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\delta$;;$\appl{\phi_*\delta}{\mathcal C^\infty N}{\mathcal C^\infty N}{f}{\delta\l f\circ\phi\r\circ\phi^{-1}}$
-$\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi^*$;;$\phi^*X=\l\phi^{-1}\r_*$
+$\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi^*$;;$\phi^*X=\l\phi^{-1}\r_*X$
 $\lc\delta_1,\delta_2\rc$, $\delta_1,\delta_2\in\Der M$;;$\delta_1\delta_2-\delta_2\delta_1\in\Der M$
 $\lc X,Y\rc$, $X,Y\in\cv M$;;L'unique élément de $\Der M$ tel que $L_{\lc X,Y\rc}=\lc L_X,L_Y\rc$
 $\phi\!:\!M\to N$ difféomorphisme\linebreak$\phi_*\lc X,Y\rc$;;$\lc\phi_*X,\phi_*Y\rc$

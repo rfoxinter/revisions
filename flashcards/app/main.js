@@ -479,7 +479,7 @@ function add_card(_url, _name, filesrc, nb) {
 
 function add_all(downloaded) {
     var elems = document.getElementById("cards_container").childNodes;
-    for (i = 1 + downloaded; i < elems.length; ++i) {
+    for (i = 1 + 2 * downloaded; i < elems.length; ++i) {
         elems[i].getElementsByTagName("span")[0].click();
     }
 }

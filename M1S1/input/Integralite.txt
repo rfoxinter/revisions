@@ -10,7 +10,7 @@ $x\in B$ est entier sur $A$;;Il existe $P\in A\lc X\rc$ unitaire tel que $P\l x\
 $B$ est entier sur $A$;;Tout $x\in B$ est entier sur $A$
 CNS pour avoir $x\in B$ entier sur $A$;;$x$ est fini sur $A$\linebreak Il existe un sous-anneau $B'$ de $B$ contenant $A$ et $x$ tel que $B'$ est fini sur $A$
 Stabilité des extensions entières et finies et des éléments entiers;;Si $B$ est entière/finie sur $A$ et $C$ est entière/finie sur $B$ alors $C$ est entière/finie sur $A$\linebreak Si $x$ et $y$ sont entiers sur $A$ alors $xy$ et $x-y$ sont entiers sur $A$\linebreak En particulier, $\set{x\in B,x\text{ est entier sur} A}$ est un sous-anneau de $B$ contenant $A$
-Fermeture intégrale de $A$ dans $B$\linebreak$A$ est intégralement fermé;;$C=\set{x\in B,x\text{ est entier sur} A}$ est la fermeture intégrale de $A$ dans $B$\linebreak$A$ est intégralement fermé dans $B$ si $A=C$\linebreak En particulier, $C$ est intégralement fermé dans $B$
+Fermeture intégrale de $A$ dans $B$\linebreak$A$ est intégralement fermé;;$C=\set{x\in B,x\text{ est entier sur }A}$ est la fermeture intégrale de $A$ dans $B$\linebreak$A$ est intégralement fermé dans $B$ si $A=C$\linebreak En particulier, $C$ est intégralement fermé dans $B$
 $A$ est intégralement clos\linebreak Normalisé de $A$;;$A$ est un anneau intègre et $A$ est intégralement fermé dans $\Frac A$\linebreak Le normalisé de $A$ est la fermeture intégrale de $A$ dans $\Frac A$, c'est un anneau intégralement clos
 $x\in\mathbb L$ avec $\mathbb L/\Frac A=\mathbb K$ finie est entier sur $A$ intégralement clos;;$\mu_{\mathbb K,x}\in A\lc X\rc$
 Propriété des éléments entiers d'un anneau factoriels;;Les anneaux factoriels sont intégralement clos

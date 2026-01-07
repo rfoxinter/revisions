@@ -100,7 +100,7 @@ async function sync_all(url, message = true) {
             if (document.getElementById("[" + url + "," + ls[2*i + 1] + "]") != null) {
                 let name = ls[2*i + 1];
                 if (parseInt(ls[2*i + 2]) > await read_date(url, name)) {
-                    sync_file(url, name);
+                    sync_file(ls[0], url, name);
                 } else {if (message) {window.alert('Le fichier est à jour.');}}
                 console.log("parsed", url, name);;
             }
@@ -108,7 +108,7 @@ async function sync_all(url, message = true) {
     } else {if (message) {window.alert('Impossible de rafraîchir le fichier');}}
 }
 
-async function sync_file(url, name) {
+async function sync_file(ls0, url, name) {
     console.log("updating", url, name);
     let card = document.getElementById('[' + url + ',' + name + ']').getElementsByTagName('a');
     let href = [];
@@ -119,7 +119,7 @@ async function sync_file(url, name) {
         
     }
     await delete_card(url, name, false);
-    await add_card(url, name, absolute(ls[0]+ls[2*i+1]), undefined);
+    await add_card(url, name, absolute(ls0+name), undefined);
     for (let i = 0; i < card.length; ++i) {
         card[i].style.filter = '';
         card[i].href = href[i];

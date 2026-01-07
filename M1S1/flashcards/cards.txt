@@ -1,6 +1,6 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ../M1S1/flashcards/AlgebreAvancee/Integralite
-20251206104042
+20260107162419
 ../M1S1/flashcards/AlgebreAvancee/Localisation
 20251129075244
 ../M1S1/flashcards/AlgebreAvancee/ModulesDeTypeFiniSurLesAnneauxPrincipaux
@@ -20,7 +20,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S1/flashcards/AnalyseAvancee/WeakTopology
 20251129100055
 ../M1S1/flashcards/GeometrieAvancee/ChampsDeVecteurs
-20260107161454
+20260107162202
 ../M1S1/flashcards/GeometrieAvancee/FibresTangentsEtDifferentiels
 20251011100938
 ../M1S1/flashcards/GeometrieAvancee/FormesDifferentielles
