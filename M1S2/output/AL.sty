@@ -1,0 +1,49 @@
+\DeclareMathOperator{\oldvect}{Vect}
+\newcommand{\vect}[1]{\oldvect\l#1\r}
+\newcommand{\al}[3][]{\def\alargII{,#3}\if\relax\detokenize{#3}\relax\def\alargII{}\fi\mathcal{L}_{#1}\l#2\alargII\r}
+\ifdefined\varoplus
+    \let\oldoplus\oplus
+    \let\oplus\varoplus
+\fi
+\ifdefined\varotimes
+    \ifdefined\oldotimes
+    \else
+        \let\oldotimes\otimes
+        \let\otimes\varotimes
+    \fi
+\fi
+\let\oldgl\relax
+\DeclareMathOperator{\oldgl}{GL}
+\newcommand{\gl}[1]{\oldgl\l#1\r}
+\let\olddim\dim
+\renewcommand{\dim}[1]{\olddim\l#1\r}
+\DeclareMathOperator{\oldrg}{rg}
+\newcommand{\rg}[1]{\oldrg\l#1\r}
+\DeclareMathOperator{\oldtr}{tr}
+\newcommand{\tr}[1]{\oldtr\l#1\r}
+\DeclareMathOperator{\oldmat}{Mat}
+\newcommand{\almat}[3]{\def\almatargIII{,#3}\if\relax\detokenize{#3}\relax\def\almatargIII{}\fi\oldmat_{#2\almatargIII}\l#1\r}
+\DeclareMathOperator{\oldsl}{SL}
+\renewcommand{\sl}[2][]{\oldsl_{#1}\l#2\r}
+\DeclareMathOperator{\oldorth}{O}
+\newcommand{\orth}[2][]{\oldorth_{#1}\l#2\r}
+\DeclareMathOperator{\oldso}{SO}
+\newcommand{\so}[2][]{\oldso_{#1}\l#2\r}
+\DeclareMathOperator{\oldalsym}{S}
+\newcommand{\alsym}[2][]{\oldalsym^{#1}\l#2\r}
+\DeclareMathOperator{\oldalant}{A}
+\newcommand{\alant}[2][]{\oldalant^{#1}\l#2\r}
+\DeclareMathOperator{\oldsp}{sp}
+\renewcommand{\sp}[2][]{\oldsp_{#1}\l#2\r}
+\let\oldid\relax
+\let\id\relax
+\DeclareMathOperator{\oldid}{id}
+\newcommand{\id}{\oldid}
+\let\transp\relax
+\newcommand{\transp}[1]{{\vphantom{#1}^t}{#1}}
+\DeclareMathOperator{\olddiscr}{discr}
+\newcommand{\discr}[2][]{\olddiscr_{#1}\l#2\r}
+\let\appl\relax
+\newcommand{\appl}[5]{\begin{array}[t]{@{}r@{}r@{}c@{}l@{}}#1\!:\!{}&#2&{}\longrightarrow{}&#3\\&#4&{}\longmapsto{}&#5\end{array}}
+\let\nappl\relax
+\newcommand{\nappl}[4]{\begin{array}[t]{@{}r@{}c@{}l@{}}#1&{}\longrightarrow{}&#2\\#3&{}\longmapsto{}&#4\end{array}}

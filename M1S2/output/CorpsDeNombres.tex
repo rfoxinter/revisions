@@ -1,0 +1,25 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{al,topologie}\usepackage[nopar]{bigoperators}\DeclareMathOperator{\oldnrm}{nrm}\renewcommand\nrm[3]{\oldnrm_{#1/#2}\l#3\r}\let\tr\relax\newcommand\tr[3]{\oldtr_{#1/#2}\l#3\r}
+\hypersetup{pdftitle=Théorie algébrique des nombres -- Corps de nombres}
+\title{Théorie algébrique des nombres\\\emph{Corps de nombres}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\tr LKx$}{1/6}
+\slider{$\oldtr_K\l m_x\r$\linebreak$\appl{m_x}{L}{L}{y}{xy}$}{1/6}
+\slideq{$\operatorname{disc}\l\alpha_1,\cdots,\alpha_d\r$}{2/6}
+\slider{$\det\l\l\psc{\alpha_i}{\alpha_j}\r_{\l i,j\r\in\llb 1,d\rrb^2}\r$}{2/6}
+\slideq{$\operatorname{disc}\l P\r$}{3/6}
+\slider{$\prod{i<j}{}{\l x_i-x_j\r^2}$\linebreak$\l-1\r^{\frac{n\l n-1\r}2}\prod{i=1}{n}{P'\l x_i\r}$\linebreak$\l-1\r^{\frac{n\l n-1\r}2}\nrm K\bbQ{P'}$}{3/6}
+\slideq{Corps de nombres}{4/6}
+\slider{Extension finie de $\bbQ$}{4/6}
+\slideq{$\psc xy_K$}{5/6}
+\slider{$\tr K\bbQ{xy}$}{5/6}
+\slideq{$\nrm LKx$}{6/6}
+\slider{$\det_K\l m_x\r$\linebreak$\appl{m_x}{L}{L}{y}{xy}$}{6/6}
+\end{document}

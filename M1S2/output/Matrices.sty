@@ -1,0 +1,244 @@
+\RequirePackage{tools}
+\RequirePackage{tikz}
+\usetikzlibrary{matrix,calc,fit}
+
+\newif\if@dots\@dotstrue
+\DeclareOption{nodots}{\@dotsfalse}
+\DeclareOption*{}
+\ProcessOptions\relax
+
+\newcommand{\mat}[3]{\def\matargII{,#2}\if\relax\detokenize{#2}\relax\def\matargII{}\fi\mathcal{M}_{#1\matargII}\l#3\r}
+\newcommand{\sym}[3][]{\mathcal{S}_{#2}^{#1}\l#3\r}
+\newcommand{\ant}[2]{\mathcal{A}_{#1}\l#2\r}
+\newcommand{\diag}[2]{\mathcal{D}_{#1}\l#2\r}
+\newcommand{\ts}[2]{\mathcal{T}_{#1}^+\l#2\r}
+\newcommand{\ti}[2]{\mathcal{T}_{#1}^-\l#2\r}
+\let\olddet\det
+\renewcommand{\det}[2][]{\olddet_{#1}\l#2\r}
+\let\oldgl\relax
+\DeclareMathOperator{\oldgl}{GL}
+\newcommand{\matgl}[3][]{\oldgl_{#2}^{#1}\l#3\r}
+\DeclareMathOperator{\oldcom}{Com}
+\newcommand{\com}[1]{\oldcom\l#1\r}
+\let\transp\relax
+\newcommand{\transp}[1]{{\vphantom{#1}^t}{#1}}
+\newlength{\dotsep}
+\newlength{\dotlift}
+\newlength{\matsep}
+\newlength{\matmin}
+\@ifclassloaded{beamer}{
+    \setlength{\dotsep}{5.5pt}
+    \setlength{\dotlift}{1.5pt}
+    \setlength{\matsep}{5pt}
+    \setlength{\matmin}{25pt}
+}{
+    \setlength{\dotsep}{3.5pt}
+    \setlength{\dotlift}{0.5pt}
+    \setlength{\matsep}{3.5pt}
+    \setlength{\matmin}{15pt}
+}
+\newcommand{\amp}{\detokenize{&}}
+\newcommand{\tmatrix}[1][]{\def\tmatargI{#1}\tmptmatrix}
+\newcommand{\tmptmatrix}[4][]{
+\begin{tikzpicture}[baseline={([yshift=-0.5ex]m.center)}]
+\matrix (m) [
+        ampersand replacement=\&,
+        nodes={anchor=center},
+        matrix of math nodes,
+        left delimiter=#2,
+        right delimiter=#4,
+        anchor=center,
+        minimum width=\matmin,
+        minimum height=\matmin,
+        row sep=\matsep,
+        column sep=\matsep,
+        inner sep=0pt,
+        nodes in empty cells,
+        #1
+    ] {#3};
+    \tmatargI
+\end{tikzpicture}}
+\def\smalltmatrix{\tmatrix[][minimum height = 0ex, row sep = .5ex, minimum width = 0ex, column sep = 1ex, inner sep = 0ex, nodes={anchor=base, execute at begin node=\scriptstyle},]}
+\def\crampedtmatrix{\tmatrix[][minimum height = 0ex, row sep = .5ex, minimum width = 0ex, column sep = 1ex, inner sep = 0ex, nodes={anchor=base},]}
+\newcommand{\tcase}[1][]{\def\tmatargI{#1}\tmptcase}
+\newcommand{\tmptcase}[2][]{
+\begin{tikzpicture}[every left delimiter/.style={xshift=.2em},every right delimiter/.style={xshift=-.125em},baseline={([yshift=-0.5ex]m.center)}]
+\matrix (m) [
+        ampersand replacement=\&,
+        nodes={anchor=west, execute at begin node=$\vphantom{1},%
+            execute at end node=$%
+        },
+        matrix of nodes,
+        left delimiter=\{,
+        right delimiter={.\kern-\nulldelimiterspace},
+        anchor=center,
+        minimum width=0pt,
+        minimum height=\matmin,
+        row sep=0pt,
+        column sep=1ex,
+        inner sep=0pt,
+        nodes in empty cells,
+        #1
+    ] {#2};
+    \tmatargI
+\end{tikzpicture}}
+\if@dots
+    \DeclareMathSymbol{\mcdot}{\mathpunct}{symbols}{"01}
+    \def\oldmdots{\mathinner{\hbox{$\mcdot$}\hbox{$\mcdot$}\hbox{$\mcdot$}}}
+    \def\oldddots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise0pt\hbox{$\mcdot$}}}
+    \def\oldidots{\mathinner{\raise0pt\vbox{\hbox{$\mcdot$}}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\hbox{$\mcdot$}}}
+    \def\oldvdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise\dotsep\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \def\oldxdots{\mathinner{\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise0pt\hbox{$\mcdot$}}}
+    \def\oldplusdots{\mathinner{\raise\dotsep\hbox{$\mcdot$}\raise2\dotsep\vbox{\hbox{$\mcdot$}}\mkern-5mu\raise\dotsep\hbox{$\mcdot$}\mkern-5mu\raise0pt\hbox{$\mcdot$}\raise\dotsep\hbox{$\mcdot$}}}
+    \newcommand{\mdots}{\raise\dotlift\hbox{$\oldmdots$}}
+    \renewcommand{\ddots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldddots$}$}}}
+    \newcommand{\idots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldidots$}$}}}
+    \renewcommand{\vdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldvdots$}$}}}
+    \newcommand{\xdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldxdots$}$}}}
+    \newcommand{\plusdots}{\vcenter{\hbox{$\lower1pt\hbox{$\oldplusdots$}$}}}
+\fi
+\def\tikz@lib@fit@scan{%
+  \pgfutil@ifnextchar\pgf@stop{\pgfutil@gobble}{%
+    \pgfutil@ifnextchar\foreach{\tikz@lib@fit@scan@handle@foreach}{%
+      \tikz@scan@one@point\tikz@lib@fit@scan@handle}}}
+\def\tikz@lib@fit@scan@handle@foreach\foreach#1in#2#3{%
+  \foreach #1 in {#2}
+  {\tikz@scan@one@point\tikz@lib@fit@scan@handle@foreach@#3}
+  \tikz@lib@fit@scan}
+\def\tikz@lib@fit@scan@handle@foreach@#1{%
+  \iftikz@shapeborder
+    \tikz@lib@fit@adjust{%
+      \pgfpointanchor{\tikz@shapeborder@name}{west}}%
+    \tikz@lib@fit@adjust{%
+      \pgfpointanchor{\tikz@shapeborder@name}{east}}%
+    \tikz@lib@fit@adjust{%
+      \pgfpointanchor{\tikz@shapeborder@name}{north}}%
+    \tikz@lib@fit@adjust{%
+      \pgfpointanchor{\tikz@shapeborder@name}{south}}%
+  \else
+    \tikz@lib@fit@adjust{#1}%
+  \fi
+  \global\pgf@xa=\pgf@xa
+  \global\pgf@ya=\pgf@ya
+  \global\pgf@xb=\pgf@xb
+  \global\pgf@yb=\pgf@yb}
+\newcommand\mtxvline[2]{
+    \comparestring{#2}{left}{
+        \path (m.west) coordinate (X);
+    }{
+        \comparestring{#2}{right}{
+            \path (m.east) coordinate (X);
+        }{
+            \pgfmathparse{int(#2+1)}
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-#2)}] (fit-l) {};
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-\pgfmathresult)}] (fit-r) {};
+            \path (fit-l.east) -- (fit-r.west) coordinate[midway] (X);
+        }
+    }
+    \draw[#1] ($(X |- m.north)-(0, \pgflinewidth/2)$) --  ($(X |- m.south)+(0, \pgflinewidth/2)$);
+}
+\newcommand\mtxhline[2]{
+    \comparestring{#2}{top}{
+        \path (m.north) coordinate (X);
+    }{
+        \comparestring{#2}{bottom}{
+            \path (m.south) coordinate (X);
+        }{
+            \pgfmathparse{int(#2+1)}
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-#2-\x)}] (fit-t) {};
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-\pgfmathresult-\x)}] (fit-b) {};
+            \path (fit-t.south) -- (fit-b.north) coordinate[midway] (X);
+        }
+    }
+    \draw[#1] ($(X -| m.west)-(\pgflinewidth/2, 0)$) --  ($(X -| m.east)+(\pgflinewidth/2, 0)$);
+}
+\newcommand\mtxvpartial[4]{
+    \comparestring{#2}{left}{
+        \path (m.west) coordinate (Xv);
+    }{
+        \comparestring{#2}{right}{
+            \path (m.east) coordinate (Xv);
+        }{
+            \pgfmathparse{int(#2+1)}
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-#2)}] (fit-l) {};
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-\pgfmathresult)}] (fit-r) {};
+            \path (fit-l.east) -- (fit-r.west) coordinate[midway] (Xv);
+        }
+    }
+    \comparestring{#3}{top}{
+        \path (m.north) coordinate (Xt);
+    } {
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-#3-\x)}] (fit-t1) {};
+        \pgfmathparse{int(#3+1)}
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-\pgfmathresult-\x)}] (fit-t2) {};
+        \path (fit-t1.south) -- (fit-t2.north) coordinate[midway] (Xt);
+    }
+    \comparestring{#4}{bottom}{
+        \path (m.south) coordinate (Xb);
+    } {
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-#4-\x)}] (fit-b1) {};
+        \pgfmathparse{int(#4+1)}
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-\pgfmathresult-\x)}] (fit-b2) {};
+        \path (fit-b1.south) -- (fit-b2.north) coordinate[midway] (Xb);
+    }
+    \draw[#1] ($(Xv |- Xt)-(0, \pgflinewidth/2)$) --  ($(Xv |- Xb)+(0, \pgflinewidth/2)$);
+}
+\newcommand\mtxhpartial[4]{
+    \comparestring{#2}{top}{
+        \path (m.north) coordinate (Xh);
+    }{
+        \comparestring{#2}{bottom}{
+            \path (m.south) coordinate (Xh);
+        }{
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-#2-\x)}] (fit-t) {};
+            \pgfmathparse{int(#2+1)}
+            \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentcolumn}{(m-\pgfmathresult-\x)}] (fit-b) {};
+            \path (fit-b.north) -- (fit-t.south) coordinate[midway] (Xh);
+        }
+    }
+    \comparestring{#3}{left}{
+        \path (m.west) coordinate (Xl);
+    } {
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-#3)}] (fit-l1) {};
+        \pgfmathparse{int(#3+1)}
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-\pgfmathresult)}] (fit-l2) {};
+        \path (fit-l1.east) -- (fit-l2.west) coordinate[midway] (Xl);
+    }
+    \comparestring{#4}{right}{
+        \path (m.east) coordinate (Xr);
+    } {
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-#4)}] (fit-r1) {};
+        \pgfmathparse{int(#4+1)}
+        \node [fit=\foreach \x in {1,...,\the\pgfmatrixcurrentrow}{(m-\x-\pgfmathresult)}] (fit-r2) {};
+        \path (fit-r1.east) -- (fit-r2.west) coordinate[midway] (Xr);
+    }
+    \draw[#1] ($(Xh -| Xl)-(\pgflinewidth/2, 0)$) --  ($(Xh -| Xr)+(\pgflinewidth/2, 0)$);
+}
+\newcommand\mtxbox[3]{
+    \ifnum#2=1
+        \edef\leftcoord{left}
+    \else
+        \pgfmathparse{int(#2-1)}
+        \edef\leftcoord{\pgfmathresult}
+    \fi
+    \ifnum#3=1
+        \edef\topcoord{top}
+    \else
+        \pgfmathparse{int(#3-1)}
+        \edef\topcoord{\pgfmathresult}
+    \fi
+    \ifnum#2=\the\pgfmatrixcurrentcolumn
+        \edef\rightcoord{right}
+    \else
+        \edef\rightcoord{#2}
+    \fi
+    \ifnum#3=\the\pgfmatrixcurrentrow
+        \edef\bottomcoord{bottom}
+    \else
+        \edef\bottomcoord{#3}
+    \fi
+    \mtxhpartial{#1}{\topcoord}{\leftcoord}{\rightcoord}
+    \mtxhpartial{#1}{\bottomcoord}{\leftcoord}{\rightcoord}
+    \mtxvpartial{#1}{\leftcoord}{\topcoord}{\bottomcoord}
+    \mtxvpartial{#1}{\rightcoord}{\topcoord}{\bottomcoord}
+}

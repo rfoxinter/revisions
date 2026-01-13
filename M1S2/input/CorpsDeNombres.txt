@@ -1,0 +1,10 @@
+Théorie algébrique des nombres -- Corps de nombres
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al,topologie}\usepackage[nopar]{bigoperators}\DeclareMathOperator{\oldnrm}{nrm}\renewcommand\nrm[3]{\oldnrm_{#1/#2}\l#3\r}\let\tr\relax\newcommand\tr[3]{\oldtr_{#1/#2}\l#3\r}
+Corps de nombres;;Extension finie de $\bbQ$
+$\tr LKx$;;$\oldtr_K\l m_x\r$\linebreak$\appl{m_x}{L}{L}{y}{xy}$
+$\nrm LKx$;;$\det_K\l m_x\r$\linebreak$\appl{m_x}{L}{L}{y}{xy}$
+$\psc xy_K$;;$\tr K\bbQ{xy}$
+$\operatorname{disc}\l\alpha_1,\cdots,\alpha_d\r$;;$\det\l\l\psc{\alpha_i}{\alpha_j}\r_{\l i,j\r\in\llb 1,d\rrb^2}\r$
+$\operatorname{disc}\l P\r$;;$\prod{i<j}{}{\l x_i-x_j\r^2}$\linebreak$\l-1\r^{\frac{n\l n-1\r}2}\prod{i=1}{n}{P'\l x_i\r}$\linebreak$\l-1\r^{\frac{n\l n-1\r}2}\nrm K\bbQ{P'}$

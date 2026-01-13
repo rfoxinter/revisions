@@ -1,0 +1,95 @@
+\newif\if@notnofont\@notnofonttrue
+\DeclareOption{nofont}{\@notnofontfalse}
+\newif\if@notnoell\@notnoelltrue
+\DeclareOption{noell}{\@notnoellfalse}
+\newif\if@upint\@upinttrue
+\DeclareOption{slantint}{\@upintfalse}
+\newif\if@notamsbb\@notamsbbtrue
+\DeclareOption{amsbb}{\@notamsbbfalse}
+\DeclareOption*{}
+\ProcessOptions\relax
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{ifpdf}
+\usepackage{tikz}
+\usepackage{alias}
+
+\if@notnofont
+    \usepackage{amsfonts, amssymb}
+    \usepackage{stmaryrd}
+    \SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\fi
+\if@upint
+    \let\@BeginDoc\AtBeginDocument
+    \def\AtBeginDocument#1{\relax#1\relax}
+    \usepackage[limits]{cmupint}
+    \let\upilimits@\relax
+    \let\AtBeginDocument\@BeginDoc
+\fi
+\if@notamsbb
+    \usepackage{bbmt}
+\fi
+\if@notnoell
+    \mathcode`l="8000
+    \begingroup
+    \makeatletter
+    \lccode`\~=`\l
+    \DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
+    \lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
+    \endgroup
+    \makeatother
+\fi
+
+\renewcommand\l{\left(}
+\renewcommand\r{\right)}
+\newcommand{\llb}{\left\llbracket}
+\newcommand{\rrb}{\right\rrbracket}
+\def\lc{\left[}
+\def\rc{\right]}
+\def\set#1{\left\{#1\right\}}
+\let\oldleft\left
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\oldleft}
+\let\oldright\right
+\renewcommand{\right}{\aftergroup\egroup\oldright}
+\let\oldsqrt\sqrt
+\renewcommand{\sqrt}[2][\mkern8mu]{\mkern-4mu\mathop{\oldsqrt[#1]{#2}}{}\mkern-3mu}
+\let\oldfrac\frac
+\renewcommand{\frac}[2]{\mathchoice{\dfrac{#1}{#2}}{\dfrac{#1}{#2}}{\oldfrac{#1}{#2}}{\oldfrac{#1}{#2}}}
+\newif\ifdfrac
+\dfractrue
+\newcommand{\toggledfrac}{%
+    \ifdfrac%
+        \let\frac\oldfrac%
+    \else%
+        \renewcommand{\frac}[2]{\mathchoice{\dfrac{##1}{##2}}{\dfrac{##1}{##2}}{\oldfrac{##1}{##2}}{\oldfrac{##1}{##2}}}%
+    \fi%
+}
+\let\oldvec\vec
+\renewcommand{\vec}{\overrightarrow}
+\renewcommand*{\overrightarrow}[1]{\vbox{\halign{##\cr\scriptsize\rightarrowfill\cr\noalign{\nointerlineskip\vskip1pt}$#1\mskip2mu$\cr}}}
+\newlength\bshft
+\bshft=.18pt\relax
+\def\fakebold#1{\setbox0=\hbox{$#1$}#1\kern-\wd0\kern\bshft#1\kern-\wd0\kern\bshft#1}
+\newcommand{\slantbox}[2][-.25]{\kern-.125em%
+    \begin{tikzpicture}[outer sep=0, inner sep=0]%
+    \begin{scope}[cm={1,0,-.25,1,(0,0)},baseline=0,outer sep=0, inner sep=0]
+    \node[transform shape] at (0,0) {#2};%
+    \end{scope}%
+    \end{tikzpicture}%
+}
+\newcommand{\unslant}[2][-.25]{\slantbox[#1]{$#2$}}
+\let\oldOmega\Omega
+\let\oldTheta\Theta
+\let\oldepsilon\epsilon
+\let\epsilon\varepsilon
+\let\varepsilon\oldepsilon
+\let\oldepsilon\relax
+\let\oldphi\phi
+\let\phi\varphi
+\let\varphi\oldphi
+\let\oldphi\relax
+\let\subset\subseteq

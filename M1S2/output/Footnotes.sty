@@ -1,0 +1,12 @@
+\newcounter{footnotemarkcounter}
+\setcounter{footnotemarkcounter}0
+\newcounter{footnotetextcounter}
+\setcounter{footnotetextcounter}0
+\@ifclassloaded{beamer}{
+    \AtBeginEnvironment{frame}{\setcounter{footnotemarkcounter}0\setcounter{footnotetextcounter}0}
+}{}
+
+\renewcommand{\footnotemark}{\stepcounter{footnotemarkcounter}{\textsuperscript{\textit{\oldstylenums{\thefootnotemarkcounter}}}}}
+\let\oldfootnotetext\footnotetext
+\renewcommand{\footnotetext}[1]{{\stepcounter{footnotetextcounter}\def\thefootnote{\textit{\oldstylenums{\thefootnotetextcounter}}}\def\thempfootnote{\textit{\oldstylenums{\thefootnotetextcounter}}}\oldfootnotetext{#1}}}
+\renewcommand{\footnote}{\footnotemark\footnotetext}

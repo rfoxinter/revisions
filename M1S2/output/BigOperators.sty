@@ -1,0 +1,171 @@
+\RequirePackage{tools}
+
+\newif\if@nobigoppar\@nobigopparfalse
+\DeclareOption{nopar}{\@nobigoppartrue}
+\newif\if@nobigoplimits\@nobigoplimitsfalse
+\DeclareOption{nolimits}{\@nobigoplimitstrue}
+\newif\if@autobigoplimits\@autobigoplimitsfalse
+\DeclareOption{autolimits}{\@autobigoplimitstrue}
+\newif\if@nobigopdisplay\@nobigopdisplayfalse
+\DeclareOption{nodisplay}{\@nobigopdisplaytrue}
+\newif\if@bigopsymb\@bigopsymbfalse
+\DeclareOption{bigopsymb}{\@bigopsymbtrue}
+\DeclareOption*{}
+\ProcessOptions\relax
+\def\bigopleftp{\l}
+\def\bigoprightp{\r}
+\if@nobigoppar
+    \def\bigopleftp{}
+    \def\bigoprightp{}
+\fi
+\def\bigoplimits{\limits}
+\if@nobigoplimits
+    \def\bigoplimits{\nolimits}
+\fi
+\if@autobigoplimits
+    \def\bigoplimits{}
+\fi
+\def\bigopdisplay{\displaystyle}
+\if@nobigopdisplay
+    \def\bigopdisplay{}
+\fi
+
+
+\newcommand{\togglebigoppar}{\comparestring{\bigopleftp}{}{\def\bigopleftp{\l}\def\bigoprightp{\r}}{\def\bigopleftp{}\def\bigoprightp{}}}
+\newcommand{\togglebigoplimits}{\comparestring{\bigoplimits}{\limits}{\def\bigoplimits{\nolimits}}{\def\bigoplimits{\limits}}}
+\newcommand{\autobigoplimits}{\def\bigoplimits{}}
+\newcommand{\togglebigopdisplay}{\comparestring{\bigopdisplay}{}{\def\bigopdisplay{\displaystyle}}{\def\bigopdisplay{}}}
+
+\@ifundefined{oldsum}{\let\oldsum\sum}{}
+\renewcommand\sum[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
+        \def\opbelow{}
+    \else
+        \def\opbelow{\bigoplimits_{#1}}
+    \fi
+    \if\relax\detokenize{#2}\relax
+        \def\opabove{}
+    \else
+        \def\opabove{\bigoplimits^{#2}}
+    \fi
+    {\bigopdisplay\oldsum\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\oldprod\prod
+\renewcommand\prod[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
+        \def\opbelow{}
+    \else
+        \def\opbelow{\bigoplimits_{#1}}
+    \fi
+    \if\relax\detokenize{#2}\relax
+        \def\opabove{}
+    \else
+        \def\opabove{\bigoplimits^{#2}}
+    \fi
+    {\bigopdisplay\oldprod\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+    \let\oldcoprod\coprod
+\renewcommand\coprod[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
+        \def\opbelow{}
+    \else
+        \def\opbelow{\bigoplimits_{#1}}
+    \fi
+    \if\relax\detokenize{#2}\relax
+        \def\opabove{}
+    \else
+        \def\opabove{\bigoplimits^{#2}}
+    \fi
+    {\bigopdisplay\oldcoprod\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\oldcap\bigcap
+\renewcommand\bigcap[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
+        \def\opbelow{}
+    \else
+        \def\opbelow{\bigoplimits_{#1}}
+    \fi
+    \if\relax\detokenize{#2}\relax
+        \def\opabove{}
+    \else
+        \def\opabove{\bigoplimits^{#2}}
+    \fi
+    {\bigopdisplay\oldcap\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\oldcup\bigcup
+\renewcommand\bigcup[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
+        \def\opbelow{}
+    \else
+        \def\opbelow{\bigoplimits_{#1}}
+    \fi
+    \if\relax\detokenize{#2}\relax
+        \def\opabove{}
+    \else
+        \def\opabove{\bigoplimits^{#2}}
+    \fi
+    {\bigopdisplay\oldcup\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\oldbigsqcup\bigsqcup
+\renewcommand\bigsqcup[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
+        \def\opbelow{}
+    \else
+        \def\opbelow{\bigoplimits_{#1}}
+    \fi
+    \if\relax\detokenize{#2}\relax
+        \def\opabove{}
+    \else
+        \def\opabove{\bigoplimits^{#2}}
+    \fi
+    {\bigopdisplay\oldbigsqcup\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\olduplus\biguplus
+\renewcommand\biguplus[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
+        \def\opbelow{}
+    \else
+        \def\opbelow{\bigoplimits_{#1}}
+    \fi
+    \if\relax\detokenize{#2}\relax
+        \def\opabove{}
+    \else
+        \def\opabove{\bigoplimits^{#2}}
+    \fi
+    {\bigopdisplay\olduplus\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+\let\oldbigoplus\bigoplus
+\renewcommand\bigoplus[3]{\mathop{}\mkern-3mu
+    \if\relax\detokenize{#1}\relax
+        \def\opbelow{}
+    \else
+        \def\opbelow{\bigoplimits_{#1}}
+    \fi
+    \if\relax\detokenize{#2}\relax
+        \def\opabove{}
+    \else
+        \def\opabove{\bigoplimits^{#2}}
+    \fi
+    {\bigopdisplay\oldbigoplus\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp#3\bigoprightp}
+
+
+\if@bigopsymb
+    \usepackage{graphics}
+    \DeclareRobustCommand\makebigop[2][1]{\mathop{\vphantom{\oldsum}\mathpalette\bigop@{{#1}{#2}}}\slimits@}
+    \newcommand{\bigop@}[2]{\bigop@@#1#2}
+    \newcommand{\bigop@@}[3]{\vcenter{\sbox\z@{$#1\oldsum$}\hbox{\resizebox{#2\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#3$}}}}
+    \newcommand\makebigopcommand[3][1]{%
+        \expandafter\let\csname #3symb\endcsname\relax
+        \expandafter\let\csname #3\endcsname\relax
+        \expandafter\newcommand\csname #3symb\endcsname{%
+            \DOTSB\makebigop[#1]{#2}%
+        }%
+        \expandafter\newcommand\csname #3\endcsname[3]{\mathop{}\mkern-3mu%
+            \if\relax\detokenize{##1}\relax
+                \def\opbelow{}
+            \else
+                \def\opbelow{\bigoplimits_{##1}}
+            \fi
+            \if\relax\detokenize{##2}\relax
+                \def\opabove{}
+            \else
+                \def\opabove{\bigoplimits^{##2}}
+            \fi
+            {\bigopdisplay\csname #3symb\endcsname\opbelow\opabove}\mkern-3mu{}\mathop{}\bigopleftp##3\bigoprightp%
+        }%
+    }
+    \makebigopcommand{\mathcal K}{fracK}
+\fi
