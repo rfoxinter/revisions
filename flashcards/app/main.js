@@ -128,6 +128,12 @@ async function list_cards(downloaded = false) {
         a.href = "javascript:sync_all('" + flurl + "',false)";
         p.appendChild(a);
         document.getElementById("cards_container").appendChild(p);
+        p = document.createElement("p");
+        a = document.createElement("a");
+        a.innerText = "Supprimer les fiches de la source";
+        a.href = "javascript:delete_all('" + flurl + "',false)";
+        p.appendChild(a);
+        document.getElementById("cards_container").appendChild(p);
     }
     if (flurl.substring(flurl.length - 9) !== "cards.txt") {window.alert("Fichier incorrect"); return;}
     try {
@@ -322,6 +328,25 @@ function delete_card(_url, _name, _confirm = true) {
     });
 }
 
+function delete_config(_url) {
+    return new Promise(function(resolve, reject) {
+        delsv(false, [_url, _name]);
+        var open = indexedDB.open("flcrddb");
+        open.onsuccess = function(event) {
+            var db = event.target.result;
+            var tx = db.transaction("flcfg", "readwrite");
+            var store = tx.objectStore("flcfg");
+
+            store.delete(_url);
+
+            tx.oncomplete = function() {
+                resolve();
+                db.close();
+            };
+        };
+    });
+}
+
 function read_card(_url, _name) {
     return new Promise(function(resolve, reject) {
         var open = indexedDB.open("flcrddb");
@@ -479,7 +504,7 @@ function add_card(_url, _name, filesrc, nb) {
 
 function add_all(downloaded) {
     var elems = document.getElementById("cards_container").childNodes;
-    for (i = 1 + 2 * downloaded; i < elems.length; ++i) {
+    for (i = 1 + 3 * downloaded; i < elems.length; ++i) {
         elems[i].getElementsByTagName("span")[0].click();
     }
 }
@@ -673,6 +698,14 @@ function config_src(src) {
                 document.getElementById("auto_upd").checked = result.auto_upd;
                 document.getElementById("root").value = result.root;
                 document.getElementById("group_folder").checked = result.group_folder;
+            } else {
+                document.getElementById("alias").value = "";
+                document.getElementById("fl_name").checked = false;
+                ch_clicked();
+                document.getElementById("fl_closed").checked = false;
+                document.getElementById("auto_upd").checked = false;
+                document.getElementById("root").value = "";
+                document.getElementById("group_folder").checked = false;
             }
         };
 
@@ -733,7 +766,6 @@ async function loadfl() {
                 var text = await response.text();
                 var fl_defl = deflate(text).split("\n");
                 if (fl_defl[fl_defl[3].replace(']"', '').replace('"[', '').split(',').map(x => parseInt(x)).length * 2 + 6] !== btoa(fl_defl[0])) {
-                    console.log(fl_defl);
                     throw new Error("Fichier corrompu");
                 } else {
                     var open = indexedDB.open("flcrddb");
