@@ -1,6 +1,6 @@
 https://rfoxinter.github.io/revisions/flashcards/
 ../M1S1/flashcards/AlgebreAvancee/Integralite
-20260107162419
+20260118075053
 ../M1S1/flashcards/AlgebreAvancee/Localisation
 20251129075244
 ../M1S1/flashcards/AlgebreAvancee/ModulesDeTypeFiniSurLesAnneauxPrincipaux
