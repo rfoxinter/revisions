@@ -19,7 +19,7 @@
 \usepackage{dsft,bbmt}
 \usepackage{output/tools}
 \usepackage[bigopsymb]{output/bigoperators}
-\usepackage{output/matrices,output/al,output/analyse,output/arithmetique,output/arrows,output/complexes,output/equivalents,output/galois,output/hats,output/polynomes,output/probas,output/sffont,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
+\usepackage{output/matrices,output/al,output/analyse,output/analysecomplexe,output/arithmetique,output/arrows,output/complexes,output/equivalents,output/galois,output/geometrie,output/hats,output/polynomes,output/probas,output/sffont,output/structures,output/trigo,output/tables,output/topologie,output/usuelles}
 \makeatletter
 \newcommand{\oldl}{\lsb@l}
 \makeatother
@@ -194,7 +194,7 @@ Il est possibles de changer les polices de caractères/symboles en important des
 
 Il est possible de redéfinir le $l$ en $\oldl$ avec \mintinline{latex}?\usepackage[noell]{premabule}?.
 
-Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de placer dans le préambule\footnote{Cette commande est déjà définie dans \hyperlink{section.23}{\texttt{Usuelles.sty}}}:
+Pour utiliser des commandes avec des parenthèses automatiques (comme pour $\oldsup$), il est possible de placer dans le préambule\footnote{Cette commande est déjà définie dans \hyperlink{section.25}{\texttt{Usuelles.sty}}}:
 \vspace{-\abovedisplayskip}\begin{minted}{latex}
 \let\oldsup\sup
 \renewcommand{\sup}[1]{\oldsup\l#1\r}
@@ -414,7 +414,7 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\tr{u}}
 \mcmd{\oldmat}
 \mcmd[\footnotemark]{\almat{u}{\mathcal{B}}{}}
-\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.14}{\texttt{Matrices.sty}}}
+\footnotetext{Ne pas confondre cette commande avec \mintinline{latexmath}?\mat? de \hyperlink{section.16}{\texttt{Matrices.sty}}}
 \mcmd{\almat{u}{\mathcal{B}}{\mathcal{C}}}
 \mcmd{\oldsl}
 \mcmd{\sl{E}}
@@ -439,7 +439,7 @@ Si {\color{namecolour}\texttt{nofont}} est utilisé et que la police utilisée n
 \mcmd{\appl{\id}{E}{E}{x}{x}}
 \mcmd{\nappl{E}{\mathbb{R}}{x}{l(x)}}
 \hsection{Analyse.sty}
-Le package \hyperlink{section.20}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
+Le package \hyperlink{section.22}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Analyse.sty}.
 
 \vspace{0.5cm}
 
@@ -530,6 +530,18 @@ Il est possible de changer cette option au cours du document en utilisant la com
 Si {\color{namecolour}\texttt{autolimits}} est utilisé, le comportement automatiques de \LaTeX{} pour l'affichage des indices sera utilisé. La commande \mintinline{latex}?\toggleanalyselimits? remettra alors le comportement par défaut du package (donc avec \mintinline{latexmath}?\limits?).
 
 Il est possible de changer cette option au cours du document en utilisant la commande \mintinline{latex}?\autoanalyselimits?.
+\hsection{AnalyseComplexe.sty}
+\mhd
+\mcmd{\oldres}
+\mcmd{\res{P}{f}}
+\mcmd{\altres{f}}
+\mcmd{\oldord}
+\mcmd{\ord[P]{f}}
+\mcmd{\oldfdiv}
+\mcmd{\fdiv{f}}
+\mcmd{\oldpic}
+\mcmd{\pic{\mathbb{C}/\Lambda}}
+\mcmd{\pic[0]{\mathbb{C}/\Lambda}}
 \hsection{Arithmetique.sty}
 \mhd
 \mcmd[\footnotemark]{\olddiv}
@@ -543,7 +555,7 @@ Il est possible de changer cette option au cours du document en utilisant la com
 \mhd
 \mcmd{G\acts X}
 \hsection{BigOperators.sty}
-Le package \hyperlink{section.20}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{BigOperators.sty}.
+Le package \hyperlink{section.22}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{BigOperators.sty}.
 
 \vspace{0.5cm}
 
@@ -746,6 +758,26 @@ Ce package redéfinit les notes de bas de pages. Les numéros des notes sont mis
 \mcmd{\degins[\mathbb{K}]{\alpha}}
 \mcmd{\olddegpi}
 \mcmd{\degpi[\mathbb{K}]{\alpha}}
+\hsection{Geometrie.sty}
+Le package \hyperlink{section.8}{\texttt{TBigoperators.sty}} sera importé automatiquement avec \texttt{Geometrie.sty}.
+\vspace{0.5cm}
+\mhd
+\mcmd{\tg}
+\mcmd{\oldder}
+\mcmd{\Der{\delta}}
+\mcmd{\ext{V}}
+\mcmd{\ext[1]{V}}
+\mcmd{\pext{V}}
+\mcmd{\pext[1]{V}}
+\mcmd{\symalg{V}}
+\mcmd{\symalg[1]{V}}
+\mcmd{\psymalg{V}}
+\mcmd{\psymalg[1]{V}}
+\mcmd{\oldalt}
+\mcmd{\falt{V}}
+\mcmd{\cv{M}{\tg M}}
+\mcmd{\fd{M}}
+\mcmd{\fd[1]{M}}
 \hsection{Hats.sty}
 Ce package importe automatiquement le package \href{https://ctan.org/pkg/graphics}{\color{black}\texttt{graphics}}.
 \vspace{0.5cm}
@@ -757,7 +789,7 @@ Ce package importe automatiquement le package \href{https://ctan.org/pkg/graphic
 \mcmd{\ccheck{AB}}
 \mcmd{\ccheck{ABCDEFFGH}}
 \hsection{Matrices.sty}
-Le package \hyperlink{section.20}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
+Le package \hyperlink{section.22}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Matrices.sty}.
 
 \vspace{0.5cm}
 
@@ -928,7 +960,7 @@ $\left\lfloor\frac{n}{2}\right\rfloor=\tcase{
 \mcmd{\hypg{N}{n}{q}}
 \mcmd{\poiss{\lambda}}
 \mcmd{\expon{\theta}}
-\mcmd{\normal{m}{\sigma}}
+\mcmd{\normal{m}{\sigma^2}}
 \hsection{Sffont.sty}
 Ce package définit une nouvelle police \texttt{cmssp} qui correspond à \texttt{cmss} en 10pt. Pour l'utiliser, il faut utiliser \mintinline{latex}?\fontfamily{cmssp}\fontsize{Xpt}{\baselineskip}\selectfont?.
 
@@ -1081,7 +1113,7 @@ Ce fichier fournit des commandes \LaTeX{} utiles pour créer des macros.
 \mcmd{\ath{x}}
 \mcmd{\ath[']{x}}
 \hsection{Usuelles.sty}
-Le package \hyperlink{section.20}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Usuelles.sty}.
+Le package \hyperlink{section.22}{\texttt{Tools.sty}} sera importé automatiquement avec \texttt{Usuelles.sty}.
 
 \vspace{0.5cm}
 
