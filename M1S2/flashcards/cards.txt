@@ -1,3 +1,15 @@
 https://rfoxinter.github.io/revisions/flashcards/
+../M1S2/flashcards/GeometrieRiemannienne/MetriqueEtDistanceRiemannienneConnexionDeLeviCivita
+20260118104034
+../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/Coniques
+20260118113620
+../M1S2/flashcards/ProcessusStochastiques/ConvergenceEnLoiEtTheoremeCentralLimite
+20260118085456
+../M1S2/flashcards/SurfacesDeRiemann/FonctionsElliptiques
+20260118095243
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/CorpsDeNombres
 20260113080340
+../M1S2/flashcards/TheorieSpectrale/OperateursNormaux
+20260118105400
+../M1S2/flashcards/TheorieSpectrale/SpectreDUnOperateur
+20260118104652

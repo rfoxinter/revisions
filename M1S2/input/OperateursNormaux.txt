@@ -1,0 +1,10 @@
+Théorie spectrale -- Opérateurs normaux
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{topologie,structures}
+$T\in\calB\l H\r$ est autoadjoint;;$T=T^*$
+$T\in\calB\l H\r$ est positif;;$T=T^*$ et $\psc{Tx}x\ge0$
+$T\in\calB\l H\r$ est normal;;$TT^*=T^*T$
+$T\in\calB\l H\r$ est unitaire;;$T^*=T^{-1}$
+Propriétés sur les normes de $T\in\calB\l H\r$;;$\nrm{T^*}=\nrm T$\linebreak$\nrm{T^*T}=\nrm T^2$\linebreak Si $T$ est normal, $\nrm{T^n}=\nrm T^n$
+Lien entre le noyau et l'image d'un opérateur normal, et inversibilité de $T\in\calB\l H\r$ normal;;$\ker T=\ker{T^*}=\im T^\perp=\im{T^*}^\perp$\linebreak De plus $T$ est inversible si et seulement si $T$ est borné inférieurement

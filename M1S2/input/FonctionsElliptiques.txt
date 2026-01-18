@@ -1,0 +1,19 @@
+Surfaces de Riemann -- Fonctions elliptiques
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{analysecomplexe,polynomes,structures}\usepackage[nopar]{bigoperators}\let\div\fdiv\let\Lambda\varLambda
+Sommes particulières pour les fonctions elliptiques;;$\sum{P\in\bbC/\Lambda}{}{\res Pf}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{\ord[P]f}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{P\res[P]f}=\in\Lambda$
+Pôles d'une fonction elliptiques;;Une fonction elliptique a deux pôles, comptés avec multiplicité
+$\div f$;;$\sum{P\in\bbC/\Lambda}{}{\ord[P]f\lc P\rc}\in\bbZ\lc\bbC/\Lambda\rc$
+Propriétés de $\olddeg\!:\!\bbZ\lc G\rc\to\bbZ$;;$\olddeg\!:\!\sum{g\in G}{}{n_g\lc g\rc}\mapsto\sum{g\in G}{}{n_g}$ est un morphisme de groupes
+Idéal d'augmentation de $\pol ZG$;;$I_G=\ker{\olddeg}$
+Diviseurs principaux;;$\fdiv{\fr C\Lambda^\times}\subset\pol Z{\bbC/\Lambda}$
+CNS pour que $D=\sum{P\in\bbC/\Lambda}{}{n_P\lc P\rc}$ soit un diviseur principal;;$\sum{P\in\bbC/\Lambda}{}{n_P}=0$ et $\sum{P\in\bbC/\Lambda}{}{n_PP}\in\Lambda$\linebreak Ou bien $D\in I_\Lambda^2$
+$\pic{\bbC/\Lambda}$;;$\pol Z{\bbC/\Lambda}/\div{\fr C\Lambda^\times}$
+$\pic[0]{\bbC/\Lambda}$;;$I_\Lambda/\div{\fr C\Lambda^\times}$
+Théorème d'Abel--Jacobi;;$\pic[0]{\bbC/\Lambda}\cong\bbC/\Lambda$ via $\lc\sum{P\in\bbC/\Lambda}{}{n_P\lc P\rc}\rc\mapsto\sum{P\in\bbC/\Lambda}{}{n_PP}$ et $\lc P\rc-\lc0\rc\mapsfrom P$
+Carte complexe d'un espace topologique $X$;;$\l U,\phi\r$ avec $U\subset X$ ouvert et $\phi\!:\!U\to V$ un homéomorphisme sur un ouvert $V$ de $\bbC$
+$\l U,\phi\r$ et $\l V,\psi\r$ sont compatibles;;$\psi\circ\phi^{-1}\!:\!\phi\l U\cap V\r\to\psi\l U\cap V\r$ est un biholomorphisme\linebreak Comme $\psi\circ\phi^{-1}$ est bijective, cela revient à avoir $\psi\circ\phi^{-1}$ holomorphe
+Atlas complexe d'un espace topologique $X$;;Famille de cartes compatibles $\l\l U_i,\phi_i\r\r_{i\in I}$ avec $X=\bigcup{i\in I}{}{U_i}$
+Surface de Riemann;;Esapce topologique séparé non vide muni d'un atlas complexe
+$f\!:U\to\bbC$ est holomorphe pour $U$ un ouvert d'une surface de Riemann $X$;;$f\circ\phi_i^{-1}\!:\!\phi_i\l U\cap U_i\r\to\bbC$ est holomorphe pour toute carte $\l U_i,\phi_i\r$

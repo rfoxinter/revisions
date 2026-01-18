@@ -1,0 +1,31 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{probas,topologie,usuelles,complexes}\usepackage[nopar]{bigoperators,analyse}
+\hypersetup{pdftitle=Processus stochastiques -- Convergence en loi et théorème central limite}
+\title{Processus stochastiques\\\emph{Convergence en loi et théorème central limite}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Théorème central limite de Lindeberg}{1/9}
+\slider{Si $X$ est un tableau de variables aléatoires réelles vérifiant la condition de Lindeberg alors $\frac{\sum{k=1}{r_n}{\l X_{n,k}-\mu_{n,k}\r}}{s_n}\to\normal01$}{1/9}
+\slideq{$X$ une variable aléatoire réelle est infiniment divisible}{2/9}
+\slider{Pour tout $n\in\bbN$, il existe $\l X_1,\cdots,X_n\r$ des variables aléatoires réelles indépendantes telles que $X\overset{\scriptstyle\calL}{=}X_1+\cdots+X_n$}{2/9}
+\slideq{Condition de Lyapounov}{3/9}
+\slider{Si $X$ un tableau de variables aléatoires indépendants réelles tel que $s_n>0$, il existe $\delta>0$, $\sum{k=1}{r_n}{\frac1{s_n^{2+\delta}}\esp{\l X_{n,k}-\mu_{n,k}\r^{2+\delta}}}\to0$}{3/9}
+\slideq{Lien entre la condition de Lindeberg et la condition de Lyapounov}{4/9}
+\slider{Si la condition de Lyapounov est vérifiée alors la condition de Lindeberg est vérifiée}{4/9}
+\slideq{Lemme de Slutsky}{5/9}
+\slider{Si $X_n\xrightarrow\calL X$ et $Y_n\xrightarrow\calL c\in\bbR$ alors $\l X_n,Y_n\r\xrightarrow{\calL}\l X,c\r$}{5/9}
+\slideq{Tableau de variables aléatoires idépendantes réelles}{6/9}
+\slider{$\l X_{i,j}\r_{\substack{i\in\bbN^*\\j\in\llb1,r_i\rrb}}$\linebreak Les $\l X_{i,j}\r_{j\in\llb1,r_i\rrb}$ sont mutuellement indépendants pour tout $i\in\bbN^*$\linebreak$\mu_{i,j}=\esp{X_{i,j}}$\linebreak$\sigma_{i,j}^2=\var{X_{i,j}}$\linebreak$s_i^2=\var{X_{i,1}+\cdots+X_{i,r_i}}$}{6/9}
+\slideq{Condition de Lindeberg}{7/9}
+\slider{Si $X$ un tableau de variables aléatoires indépendants réelles tel que $s_n>0$, pour tout $\epsilon>0$, $\sum{k=1}{r_n}{\frac1{s_n^2}\esp{\l X_{n,k}-\mu_{n,k}\r^2\mathbb1_{\vala{X_{n,k}-\mu_{n,k}}>\epsilon}}}\to0$}{7/9}
+\slideq{Caractérisation des variables aléatoires réelles infiniment divisibles par leur fonction caractéristique}{8/9}
+\slider{$\varphi_X=\varphi_\mu$\linebreak$\varphi_\mu\l t\r=\exp{\int[x][\bbR][][\mu]{\frac{\e^{\ii tx}-1-\ii tx}{x^2}}}$}{8/9}
+\slideq{Méthode delta}{9/9}
+\slider{Si $\sqrt n\l X_n-\theta\r\xrightarrow{\calL}\normal0{\sigma^2}$ et $g$ est dérivable en $\theta$, alors $\sqrt n\l g\l X_n\r-g\l\theta\r\r\xrightarrow{\calL}\normal0{\sigma^2g'\l\theta\r^2}$}{9/9}
+\end{document}

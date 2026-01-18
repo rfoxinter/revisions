@@ -1,0 +1,8 @@
+Théorie spectrale -- Spectre d'un opérateur
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage[nopar]{analyse}\usepackage{structures}\def\rmsigma{\operatorname{\sigma}}
+$\lambda$ est une valeur spectrale de $T\in\calB\l E\r$;;$T-\lambda\id\notin\calB\l E\r^\times$\linebreak L'ensemble des valeurs spectrales de $T$ est noté $\rmsigma\l T\r$
+$\lambda$ est une valeur propre de $T\in\calB\l E\r$;;$\ker{T-\lambda\id}\neq\set0$\linebreak L'ensemble des valeurs spectrales de $T$ est noté $\rmsigma_p\l T\r$
+Propriétés topologiques de $\calB\l E\r^\times$;;C'est un ouvert de $\calB\l E\r$
+Propriétés topologiques de $\rmsigma\l T\r$;;C'est un compact contenu dans la boule de rayon $\anrm[\null]T$

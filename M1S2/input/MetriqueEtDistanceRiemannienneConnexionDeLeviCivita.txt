@@ -1,0 +1,10 @@
+Géométrie riemannienne -- Métrique et distance riemannienne, connexion de Levi--Civita
+Shuffle questions : True
+Q/R & R/Q : False
+\PassOptionsToPackage{nopar}{bigoperators}\usepackage[nopar]{analyse}\usepackage{geometrie,al,topologie,usuelles}\let\oldnabla\nabla\renewcommand{\nabla}{{\slantbox[.25]{$\oldnabla$}}\!}
+Métrique riemannienne sur une variété différentielle $M$;;$g\in\cv M{\symalg{\tg^*M}}$ tel que, pour tout $x\in M$, $g_x$ soit une forme bilinéaire sur $\tg_xM$ est un produit scalaire sur cet espace\linebreak En coordonnées locales, $g=\sum{i=1}{\dim M}{g_{i,j}\dd x_i\dd x_j}$ où $g_{i,j}=g\l\partial_i,\partial_j\r$
+Longueur d'un chemin $\gamma\!:\!\lc a,b\rc\to M$;;$\int[t][a][b]{\nrm[g]{\gamma'\l t\r}}$\linebreak$\gamma'\l t\r=\tg_t\gamma\l\partial_t\r$
+Distance riemannienne associée à $g$;;$d_g\!:\!M\times M\to\bbR$ définir par $d_g\l x,y\r=\inf[\gamma:a\rightsquigarrow b]{l_g\l\gamma\r}$\linebreak C'est une distance qui induit la topologie de $M$ et $d_g$ détermine $g$
+$\phi\!:\!\l M,g\r\to\l N,h\r$ est une isométrie riemannienne;;$\phi^*h=g$
+CNS pour que le difféomorphisme $\phi\!:\!\l M,g\r\to\l N,h\r$ soit une isométrie riemannienne;;$\phi$ est une isométrie $\l M,d_g\r\to\l N,d_g\r$
+Connexion de Levi--Civita;;Il existe une unique application $\bbR$-bilinéaire $\nabla\!:\!\calX\l M\r\times\calX\l M\r\to\calX M=\cv M{\tg M}$ telle que\linebreak$X_*g\l Y,Z\r=g\l\nabla_XY,Z\r+g\l Y,\nabla_XZ\r$\linebreak$\nabla_XY-\nabla_YX=\lc X,Y\rc$\linebreak Ceci vérifie alors $\nabla_{fX}Y=f\nabla_XY$ et $\nabla_X\l fY\r=f\nabla_XY+\l X_*f\r Y$

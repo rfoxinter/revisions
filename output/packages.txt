@@ -1,6 +1,7 @@
 AL.sty
 Alias.sty
 Analyse.sty
+AnalyseComplexe.sty
 Arithmetique.sty
 Arrows.sty
 BigOperators.sty
@@ -8,6 +9,7 @@ Complexes.sty
 Equivalents.sty
 Footnotes.sty
 Galois.sty
+Geometrie.sty
 Graphs.sty
 HTMLPreambule.sty
 Hats.sty

@@ -1,0 +1,5 @@
+Introduction à la géométrie algébrique -- Coniques
+Shuffle questions : True
+Q/R & R/Q : False
+%packages
+Classification des coniques de $\bbP^2$;;Conique non dégénérée: $X^2+Y^2-Z^2=0$\linebreak Conique vide: $X^2+Y^2+Z^2=0$\linebreak Droites sécantes: $X^2-Y^2=0$\linebreak Point: $X^2+Y^2=0$\linebreak Double droite: $X^2=0$

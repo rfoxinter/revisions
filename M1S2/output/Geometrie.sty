@@ -1,0 +1,16 @@
+\PassOptionsToPackage{bigopsymb}{bigoperators}
+\RequirePackage{bigoperators}
+
+\DeclareMathOperator{\oldtg}{T}
+\def\tg{{\oldtg}}
+\DeclareMathOperator{\oldder}{Der}
+\def\Der#1{\oldder\l#1\r}
+\newcommand{\ext}[2][]{\mathop{}\mkern-3mu\raisebox{1.25pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}#2}
+\newcommand{\pext}[2][]{\mathop{}\mkern-3mu\raisebox{1.25pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\bigwedge}\!^{#1}$}\l#2\r}
+\newcommand{\symalg}[2][]{\mathop{}\mkern-3mu\raisebox{1.25pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\operatorname{S}}\!^{#1}$}#2}
+\newcommand{\psymalg}[2][]{\mathop{}\mkern-3mu\raisebox{1.25pt}{$\let\bigopdisplay\textstyle\makebigop[.6]{\operatorname{S}}\!^{#1}$}\l#2\r}
+\DeclareMathOperator{\oldalt}{A}
+\newcommand{\falt}[2][]{\oldalt_{#1}\l#2\r}
+\let\upGamma\Gamma
+\newcommand{\cv}[2]{{\operatorname{\upGamma}}\l#1,#2\r}
+\newcommand{\fd}[2][]{\oldOmega^{#1}\l#2\r}

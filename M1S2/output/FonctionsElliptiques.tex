@@ -1,0 +1,43 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{analysecomplexe,polynomes,structures}\usepackage[nopar]{bigoperators}\let\div\fdiv\let\Lambda\varLambda
+\hypersetup{pdftitle=Surfaces de Riemann -- Fonctions elliptiques}
+\title{Surfaces de Riemann\\\emph{Fonctions elliptiques}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\div f$}{1/15}
+\slider{$\sum{P\in\bbC/\Lambda}{}{\ord[P]f\lc P\rc}\in\bbZ\lc\bbC/\Lambda\rc$}{1/15}
+\slideq{$\l U,\phi\r$ et $\l V,\psi\r$ sont compatibles}{2/15}
+\slider{$\psi\circ\phi^{-1}\!:\!\phi\l U\cap V\r\to\psi\l U\cap V\r$ est un biholomorphisme\linebreak Comme $\psi\circ\phi^{-1}$ est bijective, cela revient à avoir $\psi\circ\phi^{-1}$ holomorphe}{2/15}
+\slideq{Surface de Riemann}{3/15}
+\slider{Esapce topologique séparé non vide muni d'un atlas complexe}{3/15}
+\slideq{Propriétés de $\olddeg\!:\!\bbZ\lc G\rc\to\bbZ$}{4/15}
+\slider{$\olddeg\!:\!\sum{g\in G}{}{n_g\lc g\rc}\mapsto\sum{g\in G}{}{n_g}$ est un morphisme de groupes}{4/15}
+\slideq{Diviseurs principaux}{5/15}
+\slider{$\fdiv{\fr C\Lambda^\times}\subset\pol Z{\bbC/\Lambda}$}{5/15}
+\slideq{Pôles d'une fonction elliptiques}{6/15}
+\slider{Une fonction elliptique a deux pôles, comptés avec multiplicité}{6/15}
+\slideq{$f\!:U\to\bbC$ est holomorphe pour $U$ un ouvert d'une surface de Riemann $X$}{7/15}
+\slider{$f\circ\phi_i^{-1}\!:\!\phi_i\l U\cap U_i\r\to\bbC$ est holomorphe pour toute carte $\l U_i,\phi_i\r$}{7/15}
+\slideq{Sommes particulières pour les fonctions elliptiques}{8/15}
+\slider{$\sum{P\in\bbC/\Lambda}{}{\res Pf}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{\ord[P]f}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{P\res[P]f}=\in\Lambda$}{8/15}
+\slideq{$\pic{\bbC/\Lambda}$}{9/15}
+\slider{$\pol Z{\bbC/\Lambda}/\div{\fr C\Lambda^\times}$}{9/15}
+\slideq{Carte complexe d'un espace topologique $X$}{10/15}
+\slider{$\l U,\phi\r$ avec $U\subset X$ ouvert et $\phi\!:\!U\to V$ un homéomorphisme sur un ouvert $V$ de $\bbC$}{10/15}
+\slideq{CNS pour que $D=\sum{P\in\bbC/\Lambda}{}{n_P\lc P\rc}$ soit un diviseur principal}{11/15}
+\slider{$\sum{P\in\bbC/\Lambda}{}{n_P}=0$ et $\sum{P\in\bbC/\Lambda}{}{n_PP}\in\Lambda$\linebreak Ou bien $D\in I_\Lambda^2$}{11/15}
+\slideq{Atlas complexe d'un espace topologique $X$}{12/15}
+\slider{Famille de cartes compatibles $\l\l U_i,\phi_i\r\r_{i\in I}$ avec $X=\bigcup{i\in I}{}{U_i}$}{12/15}
+\slideq{$\pic[0]{\bbC/\Lambda}$}{13/15}
+\slider{$I_\Lambda/\div{\fr C\Lambda^\times}$}{13/15}
+\slideq{Idéal d'augmentation de $\pol ZG$}{14/15}
+\slider{$I_G=\ker{\olddeg}$}{14/15}
+\slideq{Théorème d'Abel--Jacobi}{15/15}
+\slider{$\pic[0]{\bbC/\Lambda}\cong\bbC/\Lambda$ via $\lc\sum{P\in\bbC/\Lambda}{}{n_P\lc P\rc}\rc\mapsto\sum{P\in\bbC/\Lambda}{}{n_PP}$ et $\lc P\rc-\lc0\rc\mapsfrom P$}{15/15}
+\end{document}

@@ -1,0 +1,13 @@
+Processus stochastiques -- Convergence en loi et théorème central limite
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{probas,topologie,usuelles,complexes}\usepackage[nopar]{bigoperators,analyse}
+Tableau de variables aléatoires idépendantes réelles;;$\l X_{i,j}\r_{\substack{i\in\bbN^*\\j\in\llb1,r_i\rrb}}$\linebreak Les $\l X_{i,j}\r_{j\in\llb1,r_i\rrb}$ sont mutuellement indépendants pour tout $i\in\bbN^*$\linebreak$\mu_{i,j}=\esp{X_{i,j}}$\linebreak$\sigma_{i,j}^2=\var{X_{i,j}}$\linebreak$s_i^2=\var{X_{i,1}+\cdots+X_{i,r_i}}$
+Condition de Lindeberg;;Si $X$ un tableau de variables aléatoires indépendants réelles tel que $s_n>0$, pour tout $\epsilon>0$, $\sum{k=1}{r_n}{\frac1{s_n^2}\esp{\l X_{n,k}-\mu_{n,k}\r^2\mathbb1_{\vala{X_{n,k}-\mu_{n,k}}>\epsilon}}}\to0$
+Théorème central limite de Lindeberg;;Si $X$ est un tableau de variables aléatoires réelles vérifiant la condition de Lindeberg alors $\frac{\sum{k=1}{r_n}{\l X_{n,k}-\mu_{n,k}\r}}{s_n}\to\normal01$
+Lemme de Slutsky;;Si $X_n\xrightarrow\calL X$ et $Y_n\xrightarrow\calL c\in\bbR$ alors $\l X_n,Y_n\r\xrightarrow{\calL}\l X,c\r$
+Méthode delta;;Si $\sqrt n\l X_n-\theta\r\xrightarrow{\calL}\normal0{\sigma^2}$ et $g$ est dérivable en $\theta$, alors $\sqrt n\l g\l X_n\r-g\l\theta\r\r\xrightarrow{\calL}\normal0{\sigma^2g'\l\theta\r^2}$
+Condition de Lyapounov;;Si $X$ un tableau de variables aléatoires indépendants réelles tel que $s_n>0$, il existe $\delta>0$, $\sum{k=1}{r_n}{\frac1{s_n^{2+\delta}}\esp{\l X_{n,k}-\mu_{n,k}\r^{2+\delta}}}\to0$
+Lien entre la condition de Lindeberg et la condition de Lyapounov;;Si la condition de Lyapounov est vérifiée alors la condition de Lindeberg est vérifiée
+$X$ une variable aléatoire réelle est infiniment divisible;;Pour tout $n\in\bbN$, il existe $\l X_1,\cdots,X_n\r$ des variables aléatoires réelles indépendantes telles que $X\overset{\scriptstyle\calL}{=}X_1+\cdots+X_n$
+Caractérisation des variables aléatoires réelles infiniment divisibles par leur fonction caractéristique;;$\varphi_X=\varphi_\mu$\linebreak$\varphi_\mu\l t\r=\exp{\int[x][\bbR][][\mu]{\frac{\e^{\ii tx}-1-\ii tx}{x^2}}}$
