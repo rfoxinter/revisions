@@ -107,6 +107,23 @@ async function sync_all(url, message = true) {
     } else {if (message) {window.alert('Impossible de rafraîchir le fichier');}}
 }
 
+function delete_all(url, message = true) {
+    if (url == "") {return;}
+    let url_div = document.getElementsByClassName(url)[0];
+    for (let child = 0; child < url_div.children.length; child++) {
+        const element = url_div.children[child];
+        if (element.tagName == "DIV") {
+            delete_all(element.className);
+        } else if (element.tagName == "P") {
+            try {
+                delete_card(url, element.id, message);
+            } catch {}
+        }
+    }
+    delete_config(url);
+    document.getElementById("down_cards_container").removeChild(url_div)
+}
+
 async function sync_file(ls0, url, name) {
     let card = document.getElementById('[' + url + ',' + name + ']').getElementsByTagName('a');
     let href = [];
