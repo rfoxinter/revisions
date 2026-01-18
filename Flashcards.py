@@ -31,6 +31,7 @@ args = p.parse_args()
 
 def remove_special_chars(s:str) -> str:
     s = sb(u'[ \'’-]', '', s)
+    s = sb(u',', '', s)
     s = sb(u'[àáâä]', 'a', s)
     s = sb(u'[èéêë]', 'e', s)
     s = sb(u'[îï]', 'i', s)
@@ -54,7 +55,7 @@ def output_f(files:list) -> list:
         while r[k] != '}':
             k += 1
         t = r[st + 10:k]
-        dest = t.split('--')
+        dest = t.split(' -- ')
         if len(dest) == 1:
             dest = 'pdf/'
         else:
@@ -122,7 +123,7 @@ def gen_latex(r:list, t:str, ttle:str, dest:str, num:str = '') -> bool:
 \\usepackage{preambule}
 \\setbeamercolor{structure}{fg=black}
 ''' + defs + '''
-\\hypersetup{pdftitle=''' + sb("'", "\u2019", t) + '''}
+\\hypersetup{pdftitle={''' + sb("'", "\u2019", t) + '''}}
 \\title{''' + t2 + '''}
 \\author{}
 \\date{}
@@ -189,7 +190,7 @@ def compile(dest:str) -> bool:
         t, ttle = '', ''
         if '!ttle' in r[0]:
             ttle, t = r[0].split('!!ttle')
-            ttle = ttle.split('--')
+            ttle = ttle.split(' -- ')
             if len(ttle) == 1:
                 ttle = ttle[0].title()
             else:
@@ -197,14 +198,14 @@ def compile(dest:str) -> bool:
             ttle = remove_special_chars(ttle)
         else:
             t = r[0]
-            ttle = t.split('--')
+            ttle = t.split(' -- ')
             if len(ttle) == 1:
                 ttle = ttle[0].title()
             else:
                 ttle = ttle[1].title()
             ttle = remove_special_chars(ttle)
         if dest == 'default':
-            ldest = t.split('--')
+            ldest = t.split(' -- ')
             if len(ldest) == 1:
                 dest = 'pdf/'
             else:
@@ -231,7 +232,7 @@ def main(file_path:str, file:str, n:int, dest:str, _open:bool) -> bool:
     t, ttle = '', ''
     if '!ttle' in r[0]:
         ttle, t = r[0].split('!!ttle')
-        ttle = ttle.split('--')
+        ttle = ttle.split(' -- ')
         if len(ttle) == 1:
             ttle = ttle[0].title()
         else:
@@ -239,14 +240,14 @@ def main(file_path:str, file:str, n:int, dest:str, _open:bool) -> bool:
         ttle = remove_special_chars(ttle)
     else:
         t = r[0]
-        ttle = t.split('--')
+        ttle = t.split(' -- ')
         if len(ttle) == 1:
             ttle = ttle[0].title()
         else:
             ttle = ttle[1].title()
         ttle = remove_special_chars(ttle)
     if dest == 'default':
-        ldest = t.split('--')
+        ldest = t.split(' -- ')
         if len(ldest) == 1:
             dest = 'pdf/'
         else:
