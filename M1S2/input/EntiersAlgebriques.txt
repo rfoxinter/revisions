@@ -1,0 +1,8 @@
+Théorie algébrique des nombres -- Entiers algébriques
+Shuffle questions : True
+Q/R & R/Q : False
+\DeclareMathOperator{\olddisc}{disc}\newcommand{\disc}[1]{\olddisc\l#1\r}
+Base entière de $K$;;Base de $O_K$ comme $\bbZ$-module
+Discriminant de $K$;;Discriminant d'une base entière de $K$
+CS pour avoir une base entière;;$\disc{\alpha_1,\cdots,\alpha_d}$ est sans facteur carré
+Porpriété de $x\in O_K$ tel que, pour tout plongement $\sigma$ de $K$ dans $\bbC$, on ait $\left|\sigma\l x\r\right|\leqslant1$;;$x$ est une racine de l'unité

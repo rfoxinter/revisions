@@ -7,8 +7,12 @@ https://rfoxinter.github.io/revisions/flashcards/
 20260118085456
 ../M1S2/flashcards/SurfacesDeRiemann/FonctionsElliptiques
 20260118095243
+../M1S2/flashcards/TheorieAlgebriqueDesNombres/AnneauxDeDedekind
+20260120105709
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/CorpsDeNombres
 20260113080340
+../M1S2/flashcards/TheorieAlgebriqueDesNombres/EntiersAlgebriques
+20260120105221
 ../M1S2/flashcards/TheorieSpectrale/OperateursNormaux
 20260118105400
 ../M1S2/flashcards/TheorieSpectrale/SpectreDUnOperateur

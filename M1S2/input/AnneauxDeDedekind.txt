@@ -1,0 +1,9 @@
+Théorie algébrique des nombres -- Anneaux de Dedekind
+Shuffle questions : True
+Q/R & R/Q : False
+\DeclareMathOperator{\oldFrac}{Frac}\newcommand{\Frac}[1]{\oldFrac\l#1\r}
+$A$ est un anneau de Dedekind;;$A$ est commutatif, intègre et noethérien\linebreak Tout idéal premier non nul est maximal\linebreak $A$ est intégralement clos
+Propriétés algébriques de $O_K$;;C'est un anneau de Dedekind
+CNS pour qu'un sous-$A$-module $M$ de $\Frac{A}$ soit de type fini;;Il existe $x\in A$ tel que $xM\subset A$
+Idéal fractionnaire;;Sous-$A$-module de $\Frac A$ non vide et de type fini
+Structure de l'ensemble des idéaux fractionnaires;;C'est un groupe de neutre $A$ pour la multiplication
