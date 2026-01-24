@@ -17,3 +17,7 @@ $\l U,\phi\r$ et $\l V,\psi\r$ sont compatibles;;$\psi\circ\phi^{-1}\!:\!\phi\l 
 Atlas complexe d'un espace topologique $X$;;Famille de cartes compatibles $\l\l U_i,\phi_i\r\r_{i\in I}$ avec $X=\bigcup{i\in I}{}{U_i}$
 Surface de Riemann;;Esapce topologique séparé non vide muni d'un atlas complexe
 $f\!:U\to\bbC$ est holomorphe pour $U$ un ouvert d'une surface de Riemann $X$;;$f\circ\phi_i^{-1}\!:\!\phi_i\l U\cap U_i\r\to\bbC$ est holomorphe pour toute carte $\l U_i,\phi_i\r$
+$\calO_X\l U\r$ pour $U\subopn X$;;Fonctions $f\!:\!U\to\bbC$ holomorphes
+Propriété topologique de $\pi\!:\!\bbC\to\bbC/\Lambda$;;$\pi$ est une application ouverte\linebreak Pour $r>0$ tel que $D\l0,r\r\cap\Lambda=\set0$, $\pi_{|D\l z_0,\frac r2\r}$ est un homéomorphisme
+$f\!:\!X\to Y$ est une fonction holomorphe entre surfaces de Riemann\linebreak$\l\l U_i,\phi_i\r\r_{i\in I}$ et $\l\l V_j,\psi_j\r\r_{j\in J}$ atlas respectifs de $X$ et $Y$;;$f$ est continue et, pour tout $j\in J$, $\psi_j\circ f\!:\!f^{-1}\l V_j\r\to\bbC$ est holomorphe
+CNS pour avoir des fonctions holomorphes entre surfaces de Riemann $f\!:\!X\to Y$\linebreak$\l\l U_i,\phi_i\r\r_{i\in I}$ et $\l\l V_j,\psi_j\r\r_{j\in J}$ atlas respectifs de $X$ et $Y$;;$f$ est continue et pour tout $V\subopn X$, $g\in\calO_Y\l V\r$, $g\circ f\in\calO_X\l f^{-1}\l V\r\r$\linebreak$f_{|U_i}$ est holomorphe pour tout $i\in I$ avec $\l U_i\r_{i\in I}$ un recouvrement ouvert de $X$\linebreak$f$ est continue et $f_{|f^{-1}\l V_j\r}$ est holomorphe pour tout $j\in J$ avec $\l V_j\r_{j\in J}$ un recouvrement ouvert de $Y$

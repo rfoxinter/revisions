@@ -36,12 +36,10 @@
 \if@notnoell
     \mathcode`l="8000
     \begingroup
-    \makeatletter
     \lccode`\~=`\l
     \DeclareMathSymbol{\lsb@l}{\mathalpha}{letters}{`l}
     \lowercase{\gdef~{\ifnum\the\mathgroup=\m@ne \ell \else \lsb@l \fi}}%
     \endgroup
-    \makeatother
 \fi
 
 \renewcommand\l{\left(}
@@ -93,3 +91,27 @@
 \let\varphi\oldphi
 \let\oldphi\relax
 \let\subset\subseteq
+\newcommand\subopn{\mathrel{\opncls@{\circ}}}
+\newcommand\subcls{\mathrel{\opncls@{\bullet}}}
+\newcommand{\opncls@}[1]{%
+    \vphantom{\subseteq}% to fix the bounding box
+    \mathpalette\opncls@@{#1}%
+}
+\newcommand{\opncls@@}[2]{%
+    \ooalign{$\m@th#1\subseteq$\cr
+    \hidewidth\opncls@fix{#1}\hbox{$\m@th#1#2\mkern2mu$}\cr}}
+\newcommand\opncls@fix[1]{%
+    \ifx#1\displaystyle
+        \raise.225ex
+    \else
+        \ifx#1\textstyle
+            \raise.225ex
+        \else
+            \ifx#1\scriptstyle
+                \raise.180ex
+            \else
+                \raise.150ex
+            \fi
+        \fi
+    \fi
+}

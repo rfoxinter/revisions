@@ -1,5 +1,12 @@
 Introduction à la géométrie algébrique -- Coniques
 Shuffle questions : True
 Q/R & R/Q : False
-%packages
+\usepackage{polynomes}
 Classification des coniques de $\bbP^2$;;Conique non dégénérée: $X^2+Y^2-Z^2=0$\linebreak Conique vide: $X^2+Y^2+Z^2=0$\linebreak Droites sécantes: $X^2-Y^2=0$\linebreak Point: $X^2+Y^2=0$\linebreak Double droite: $X^2=0$
+Multiplicité de $\alpha\in\bbP^1$ en tant que zéro de $F\in\bbK\lc U,V\rc$ homogène;;Si $\alpha\neq\lc1:0\rc$, c'est la multiplicité de $\alpha$ dans $f$, le déhomogénéisé de $F$ ($F\l\frac UV,1\r$)\linebreak Si $\alpha=\lc1:0\rc$, $\deg F-\deg f$
+Nombre de zéros de $F\in\bbK\lc U,V\rc$ homogène de degré $d$ dans $\bbP^1$;;$F$ a au plus $d$ zéros\linebreak Si $\bbK$ est algébriquement clos alors $F$ a exactement $d$ zéros
+Courbe algébrique;;Lieu des zéros d'un polynôme homogène en $\lc X:Y:Z\rc$\linebreak Le degré de la courbe est le degré du polynôme homogène
+Théorème de Bézout pour les droites et les coniques;;Si $L\subset\bbP^2$ est une droite (respectivement $C\subset\bbP^2$ est une conique) et $D\subset\bbP^2$ est une courbe de degré $d$ tel que $L\not\subset D$ ($C\not\subset D$), alors $\left|L\cap D\right|\leqslant d$ ($\left|C\cap D\right|\leqslant 2d$) avec multiplicité\linebreak Si le corps de base est algébriquement clos alors on a égalité
+Propriétés des coniques passant par $P_1,\cdots,P_5\in\bbP^2$;;Si quatre points ne sont jamais alignés alors il existe au plus une conique passant par $P_1,\cdots,P_5$
+Pinceau de coniques;;Famille de coniques $C_{\lambda,\mu}=\l\lambda Q_1+\mu Q_2=0\r$ avec $Q_1$ et $Q_2$ deux coniques telles que $\left|Q_1\cap Q_2\right|=4$ avec multiplicité
+Nombre de coniques dégénérées dans un pinceau;;Si $Q_1$ ou $Q_2$ est non dégénérée alors $C_{\lambda,\mu}$ a au plus $3$ coniques dégénérées\linebreak Si le corps de base est algébriquement clos, il y en a exactement $3$\linebreak Si le corps de base est $\bbR$, il y en a au moins une
