@@ -1,0 +1,16 @@
+Théorie algébrique des nombres -- Anneaux d'entiers des corps de nombres
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{polynomes,galois}\usepackage[nopar]{bigoperators}\DeclareMathOperator{\olddisc}{disc}\newcommand{\disc}[1]{\olddisc\l#1\r}
+$\frakp\cap\bbZ$ pour $p$ un idéal premier de $\calO_K$;;$p\bbZ$ pour $p$ premier
+$\frakp$ est au dessus de $p$;;$\frakp\cap\bbZ=p\bbZ$
+Indice de ramification de $\frakp$ dans $p$;;Puissance $e$ telle que $\l p\r=\frakp\frakq$ où $\nu_\frakp\l\frakq\r=0$
+Degré d'inertie de $\frakp$;;$f\in\bbN$ tel que $\left|\calO_K/\frakp\right|=p^f$
+$\calO_K$ est monogène;;$\calO_K=\bbZ\lc\alpha\rc$ pour un certain $\alpha\in\calO_K$
+Propriété de $p$ pour un corps de nombres $K$ d'anneaux des entiers $\calO_K$ monogène, engendré par $\alpha$;;Si dans $\bbF_p\lc X\rc$, $\overline{\varPi_\alpha}=\overline{Q_1}^{e_1}\cdots\overline{Q_r}^{e_r}$ avec les $\overline{Q_i}$ irréductibles unitaires distincts et $Q_i$ un relevé unitaire de $\overline{Q_i}$ dans $\bbZ\lc X\rc$ alors $\frakp_i=\l p,Q_i\l\alpha\r\r$ est premier, les $\frakp_i$ sont dictincts et $\l p\r=\frakp_1^{e_1}\cdots\frakp_r^{e_r}$, et le degré d'inertie de $\frakp_i$ est $f_i=\deg{Q_i}$
+Propriétés de $\calO_K/\frakp^i$;;$\left|\calO_K/\frakp^i\right|=p^{fi}$\linebreak Les idéaux de $\calO_K/\frakp^i$ sont les $\frakp_j/\frakp^i$, $j\leqslant i$\linebreak et $\frakp/\frakp^i$ est principal
+Décomposition du degré d'une extension en fonction de la décomposition d'un premier de $\bbZ$;;Si $\l p\r=\frakp_1^{e_1}\cdots\frakp_r^{e_r}$ alors $\sum{i=1}r{e_if_i}=\edeg K\bbQ$
+$p\in\bbZ$ premier se ramifie dans $K$;;Il existe $\frakp$ au dessus de $p$ avec $e>1$
+$p\in\bbZ$ premier est inerte dans $K$;;$\frakp=\l p\r$ est le seul idéal au dessus de $p$, ie $e=1$, $r=1$ et $f=d$
+$p\in\bbZ$ premier est complètement décomposé dans $K$;;Pour tout $\frakp$ au dessus de $p$, $e=1$
+CNS pour que $p$ se ramifie dans $K$;;$p\mid\disc K$

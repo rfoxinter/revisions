@@ -6,9 +6,11 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/ProcessusStochastiques/MouvementBrownien
 20260124075237
 ../M1S2/flashcards/SurfacesDeRiemann/FonctionsElliptiques
-20260124081829
+20260127184009
+../M1S2/flashcards/TheorieAlgebriqueDesNombres/AnneauxDEntiersDesCorpsDeNombres
+20260127190609
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/AnneauxDeDedekind
-20260124075616
+20260127184750
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/CorpsDeNombres
 20260113080340
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/EntiersAlgebriques

@@ -1,7 +1,7 @@
 Surfaces de Riemann -- Fonctions elliptiques
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{analysecomplexe,polynomes,structures}\usepackage[nopar]{bigoperators}\let\div\fdiv\let\Lambda\varLambda
+\usepackage{analysecomplexe,analyse,polynomes,structures}\usepackage[nopar]{bigoperators}\let\div\fdiv\let\Lambda\varLambda
 Sommes particulières pour les fonctions elliptiques;;$\sum{P\in\bbC/\Lambda}{}{\res Pf}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{\ord[P]f}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{P\res[P]f}=\in\Lambda$
 Pôles d'une fonction elliptiques;;Une fonction elliptique a deux pôles, comptés avec multiplicité
 $\div f$;;$\sum{P\in\bbC/\Lambda}{}{\ord[P]f\lc P\rc}\in\bbZ\lc\bbC/\Lambda\rc$
@@ -21,3 +21,20 @@ $\calO_X\l U\r$ pour $U\subopn X$;;Fonctions $f\!:\!U\to\bbC$ holomorphes
 Propriété topologique de $\pi\!:\!\bbC\to\bbC/\Lambda$;;$\pi$ est une application ouverte\linebreak Pour $r>0$ tel que $D\l0,r\r\cap\Lambda=\set0$, $\pi_{|D\l z_0,\frac r2\r}$ est un homéomorphisme
 $f\!:\!X\to Y$ est une fonction holomorphe entre surfaces de Riemann\linebreak$\l\l U_i,\phi_i\r\r_{i\in I}$ et $\l\l V_j,\psi_j\r\r_{j\in J}$ atlas respectifs de $X$ et $Y$;;$f$ est continue et, pour tout $j\in J$, $\psi_j\circ f\!:\!f^{-1}\l V_j\r\to\bbC$ est holomorphe
 CNS pour avoir des fonctions holomorphes entre surfaces de Riemann $f\!:\!X\to Y$\linebreak$\l\l U_i,\phi_i\r\r_{i\in I}$ et $\l\l V_j,\psi_j\r\r_{j\in J}$ atlas respectifs de $X$ et $Y$;;$f$ est continue et pour tout $V\subopn X$, $g\in\calO_Y\l V\r$, $g\circ f\in\calO_X\l f^{-1}\l V\r\r$\linebreak$f_{|U_i}$ est holomorphe pour tout $i\in I$ avec $\l U_i\r_{i\in I}$ un recouvrement ouvert de $X$\linebreak$f$ est continue et $f_{|f^{-1}\l V_j\r}$ est holomorphe pour tout $j\in J$ avec $\l V_j\r_{j\in J}$ un recouvrement ouvert de $Y$
+$f\!:\!X\to Y$ est un isomorphisme (ou biholomorphisme) de surfaces de Riemann;;Il existe une fonction holomorphe $g\!:\!Y\to X$ telle que $f\circ g=\id_X$ et $g\circ f=\id_Y$
+CNS pour que $f\!:\!X\to Y$ soit un isomorphisme;;$f$ est holomorphe et bijective
+Principe du prolongement analytique;;Si $f,g\!:\!X\to Y$ sont holomorphes et $X$ est connexe avec $f\neq g$, alors $\set{x\in X,f\l x\r=g\l x\r}$ est une partie discrète et fermée de $X$\linebreak En contraposant, si $\set{x\in X,f\l x\r=g\l x\r}$ a un point d'accumulation dans $X$ alors $f=g$
+Propriétés des fibres de $f\!:\!X\to Y$ holomorphe;;Si $X$ est connexe et $f$ est non constante alors $f^{-1}\l\set a\r$ est une partie discrète et fermée de $X$ pour tout $a\in Y$\linebreak Si $X$ est compact alors les fibres sont finies
+Théorème de l'image ouverte\linebreak Conséquences selon les propriétés de $X$;;Si $f\!:\!X\to Y$ est holomorphe non constante alors $f$ est ouverte\linebreak En particulier, si $X$ est compacte connexe et $f$ est non constante alors $Y$ est compacte et $f$ est surjective
+$f$ est holomorphe en $P$;;$f\circ\phi^{-1}$ est holomorphe en $\phi\l P\r$
+$f$ a un pôle en $P$;;$f\circ\phi^{-1}$ a un pôle en $\phi\l P\r$
+$f$ est méromorphe en $P$;;$f\circ\phi^{-1}$ est méromorphe en $\phi\l P\r$
+$f$ a une singularité essentielle en $P$;;$f\circ\phi^{-1}$ a une singularité essentielle en $\phi\l P\r$
+CNS pour avoir $f\!:\!\varOmega\setminus\set P\to\bbC$ holomorphe/méromorphe;;$f$ s'étend en une fonction holomorphe $\widehat f\!:\!\varOmega\to\bbP^1\l\bbC\r$\linebreak$f$ a un pôle en $P$ si et seulement si $f\l P\r=\infty$
+$\ord[P]f$;;$\ord[\phi\l P\r]{f\circ\phi^{-1}}$
+$f$ a un zéro (d'ordre $k$) en $P$;;$f\circ\phi^{-1}$ a un zéro (d'ordre $k$) en $\phi\l P\r$
+$f$ a un pôle (d'ordre $k$) en $P$;;$f\circ\phi^{-1}$ a un pôle (d'ordre $k$) en $\phi\l P\r$
+Fonction méromorphe sur $X$;;Donnée de $S\subset X$ fermée et discrète, ainsi que de $f\!:\!X\setminus S\to\bbC$ holomorphe et méromorphe en tout point de $S$
+Ensemble en bijection avec $\calM\l X\r$ pour $X$ connexe;;$\calM\l X\r$ est en bijection avec les applications holomorphes $X\to\bbP^1\l\bbC\r$ via $f\mapsto\widehat f$ avec $\widehat f$ qui vaut la limite de $f$ au voisinage des singularités illusoires et $\widehat f\l P\r=\infty$ aux pôles de $f$
+Structure de $\calM\l X\r$;;Si $X$ est connexe, $\calM\l X\r$ est un corps contenant $\bbC$
+Propriétés des fonctions méromorphes sur une surface de Riemann connexe compacte;;Il existe une fonction méromorphe $f$ non constante sur $X$, et pour toute telle fonction $f$, $\calM\l X\r/\bbC\l f\r$ est finie

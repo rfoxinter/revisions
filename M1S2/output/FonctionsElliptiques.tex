@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{analysecomplexe,polynomes,structures}\usepackage[nopar]{bigoperators}\let\div\fdiv\let\Lambda\varLambda
+\usepackage{analysecomplexe,analyse,polynomes,structures}\usepackage[nopar]{bigoperators}\let\div\fdiv\let\Lambda\varLambda
 \hypersetup{pdftitle={Surfaces de Riemann -- Fonctions elliptiques}}
 \title{Surfaces de Riemann\\\emph{Fonctions elliptiques}}
 \author{}
@@ -10,42 +10,76 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{CNS pour que $D=\sum{P\in\bbC/\Lambda}{}{n_P\lc P\rc}$ soit un diviseur principal}{1/19}
-\slider{$\sum{P\in\bbC/\Lambda}{}{n_P}=0$ et $\sum{P\in\bbC/\Lambda}{}{n_PP}\in\Lambda$\linebreak Ou bien $D\in I_\Lambda^2$}{1/19}
-\slideq{Surface de Riemann}{2/19}
-\slider{Esapce topologique séparé non vide muni d'un atlas complexe}{2/19}
-\slideq{$\calO_X\l U\r$ pour $U\subopn X$}{3/19}
-\slider{Fonctions $f\!:\!U\to\bbC$ holomorphes}{3/19}
-\slideq{Théorème d'Abel--Jacobi}{4/19}
-\slider{$\pic[0]{\bbC/\Lambda}\cong\bbC/\Lambda$ via $\lc\sum{P\in\bbC/\Lambda}{}{n_P\lc P\rc}\rc\mapsto\sum{P\in\bbC/\Lambda}{}{n_PP}$ et $\lc P\rc-\lc0\rc\mapsfrom P$}{4/19}
-\slideq{$\pic{\bbC/\Lambda}$}{5/19}
-\slider{$\pol Z{\bbC/\Lambda}/\div{\fr C\Lambda^\times}$}{5/19}
-\slideq{Sommes particulières pour les fonctions elliptiques}{6/19}
-\slider{$\sum{P\in\bbC/\Lambda}{}{\res Pf}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{\ord[P]f}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{P\res[P]f}=\in\Lambda$}{6/19}
-\slideq{$\pic[0]{\bbC/\Lambda}$}{7/19}
-\slider{$I_\Lambda/\div{\fr C\Lambda^\times}$}{7/19}
-\slideq{Idéal d'augmentation de $\pol ZG$}{8/19}
-\slider{$I_G=\ker{\olddeg}$}{8/19}
-\slideq{$f\!:U\to\bbC$ est holomorphe pour $U$ un ouvert d'une surface de Riemann $X$}{9/19}
-\slider{$f\circ\phi_i^{-1}\!:\!\phi_i\l U\cap U_i\r\to\bbC$ est holomorphe pour toute carte $\l U_i,\phi_i\r$}{9/19}
-\slideq{Pôles d'une fonction elliptiques}{10/19}
-\slider{Une fonction elliptique a deux pôles, comptés avec multiplicité}{10/19}
-\slideq{Diviseurs principaux}{11/19}
-\slider{$\fdiv{\fr C\Lambda^\times}\subset\pol Z{\bbC/\Lambda}$}{11/19}
-\slideq{$\l U,\phi\r$ et $\l V,\psi\r$ sont compatibles}{12/19}
-\slider{$\psi\circ\phi^{-1}\!:\!\phi\l U\cap V\r\to\psi\l U\cap V\r$ est un biholomorphisme\linebreak Comme $\psi\circ\phi^{-1}$ est bijective, cela revient à avoir $\psi\circ\phi^{-1}$ holomorphe}{12/19}
-\slideq{CNS pour avoir des fonctions holomorphes entre surfaces de Riemann $f\!:\!X\to Y$\linebreak$\l\l U_i,\phi_i\r\r_{i\in I}$ et $\l\l V_j,\psi_j\r\r_{j\in J}$ atlas respectifs de $X$ et $Y$}{13/19}
-\slider{$f$ est continue et pour tout $V\subopn X$, $g\in\calO_Y\l V\r$, $g\circ f\in\calO_X\l f^{-1}\l V\r\r$\linebreak$f_{|U_i}$ est holomorphe pour tout $i\in I$ avec $\l U_i\r_{i\in I}$ un recouvrement ouvert de $X$\linebreak$f$ est continue et $f_{|f^{-1}\l V_j\r}$ est holomorphe pour tout $j\in J$ avec $\l V_j\r_{j\in J}$ un recouvrement ouvert de $Y$}{13/19}
-\slideq{Atlas complexe d'un espace topologique $X$}{14/19}
-\slider{Famille de cartes compatibles $\l\l U_i,\phi_i\r\r_{i\in I}$ avec $X=\bigcup{i\in I}{}{U_i}$}{14/19}
-\slideq{Propriété topologique de $\pi\!:\!\bbC\to\bbC/\Lambda$}{15/19}
-\slider{$\pi$ est une application ouverte\linebreak Pour $r>0$ tel que $D\l0,r\r\cap\Lambda=\set0$, $\pi_{|D\l z_0,\frac r2\r}$ est un homéomorphisme}{15/19}
-\slideq{Carte complexe d'un espace topologique $X$}{16/19}
-\slider{$\l U,\phi\r$ avec $U\subset X$ ouvert et $\phi\!:\!U\to V$ un homéomorphisme sur un ouvert $V$ de $\bbC$}{16/19}
-\slideq{Propriétés de $\olddeg\!:\!\bbZ\lc G\rc\to\bbZ$}{17/19}
-\slider{$\olddeg\!:\!\sum{g\in G}{}{n_g\lc g\rc}\mapsto\sum{g\in G}{}{n_g}$ est un morphisme de groupes}{17/19}
-\slideq{$f\!:\!X\to Y$ est une fonction holomorphe entre surfaces de Riemann\linebreak$\l\l U_i,\phi_i\r\r_{i\in I}$ et $\l\l V_j,\psi_j\r\r_{j\in J}$ atlas respectifs de $X$ et $Y$}{18/19}
-\slider{$f$ est continue et, pour tout $j\in J$, $\psi_j\circ f\!:\!f^{-1}\l V_j\r\to\bbC$ est holomorphe}{18/19}
-\slideq{$\div f$}{19/19}
-\slider{$\sum{P\in\bbC/\Lambda}{}{\ord[P]f\lc P\rc}\in\bbZ\lc\bbC/\Lambda\rc$}{19/19}
+\slideq{CNS pour que $D=\sum{P\in\bbC/\Lambda}{}{n_P\lc P\rc}$ soit un diviseur principal}{1/36}
+\slider{$\sum{P\in\bbC/\Lambda}{}{n_P}=0$ et $\sum{P\in\bbC/\Lambda}{}{n_PP}\in\Lambda$\linebreak Ou bien $D\in I_\Lambda^2$}{1/36}
+\slideq{Propriétés des fonctions méromorphes sur une surface de Riemann connexe compacte}{2/36}
+\slider{Il existe une fonction méromorphe $f$ non constante sur $X$, et pour toute telle fonction $f$, $\calM\l X\r/\bbC\l f\r$ est finie}{2/36}
+\slideq{$f\!:U\to\bbC$ est holomorphe pour $U$ un ouvert d'une surface de Riemann $X$}{3/36}
+\slider{$f\circ\phi_i^{-1}\!:\!\phi_i\l U\cap U_i\r\to\bbC$ est holomorphe pour toute carte $\l U_i,\phi_i\r$}{3/36}
+\slideq{Propriétés de $\olddeg\!:\!\bbZ\lc G\rc\to\bbZ$}{4/36}
+\slider{$\olddeg\!:\!\sum{g\in G}{}{n_g\lc g\rc}\mapsto\sum{g\in G}{}{n_g}$ est un morphisme de groupes}{4/36}
+\slideq{Théorème de l'image ouverte\linebreak Conséquences selon les propriétés de $X$}{5/36}
+\slider{Si $f\!:\!X\to Y$ est holomorphe non constante alors $f$ est ouverte\linebreak En particulier, si $X$ est compacte connexe et $f$ est non constante alors $Y$ est compacte et $f$ est surjective}{5/36}
+\slideq{$f$ a un pôle en $P$}{6/36}
+\slider{$f\circ\phi^{-1}$ a un pôle en $\phi\l P\r$}{6/36}
+\slideq{$\ord[P]f$}{7/36}
+\slider{$\ord[\phi\l P\r]{f\circ\phi^{-1}}$}{7/36}
+\slideq{CNS pour avoir des fonctions holomorphes entre surfaces de Riemann $f\!:\!X\to Y$\linebreak$\l\l U_i,\phi_i\r\r_{i\in I}$ et $\l\l V_j,\psi_j\r\r_{j\in J}$ atlas respectifs de $X$ et $Y$}{8/36}
+\slider{$f$ est continue et pour tout $V\subopn X$, $g\in\calO_Y\l V\r$, $g\circ f\in\calO_X\l f^{-1}\l V\r\r$\linebreak$f_{|U_i}$ est holomorphe pour tout $i\in I$ avec $\l U_i\r_{i\in I}$ un recouvrement ouvert de $X$\linebreak$f$ est continue et $f_{|f^{-1}\l V_j\r}$ est holomorphe pour tout $j\in J$ avec $\l V_j\r_{j\in J}$ un recouvrement ouvert de $Y$}{8/36}
+\slideq{Idéal d'augmentation de $\pol ZG$}{9/36}
+\slider{$I_G=\ker{\olddeg}$}{9/36}
+\slideq{Diviseurs principaux}{10/36}
+\slider{$\fdiv{\fr C\Lambda^\times}\subset\pol Z{\bbC/\Lambda}$}{10/36}
+\slideq{Fonction méromorphe sur $X$}{11/36}
+\slider{Donnée de $S\subset X$ fermée et discrète, ainsi que de $f\!:\!X\setminus S\to\bbC$ holomorphe et méromorphe en tout point de $S$}{11/36}
+\slideq{Structure de $\calM\l X\r$}{12/36}
+\slider{Si $X$ est connexe, $\calM\l X\r$ est un corps contenant $\bbC$}{12/36}
+\slideq{Propriété topologique de $\pi\!:\!\bbC\to\bbC/\Lambda$}{13/36}
+\slider{$\pi$ est une application ouverte\linebreak Pour $r>0$ tel que $D\l0,r\r\cap\Lambda=\set0$, $\pi_{|D\l z_0,\frac r2\r}$ est un homéomorphisme}{13/36}
+\slideq{$\calO_X\l U\r$ pour $U\subopn X$}{14/36}
+\slider{Fonctions $f\!:\!U\to\bbC$ holomorphes}{14/36}
+\slideq{Théorème d'Abel--Jacobi}{15/36}
+\slider{$\pic[0]{\bbC/\Lambda}\cong\bbC/\Lambda$ via $\lc\sum{P\in\bbC/\Lambda}{}{n_P\lc P\rc}\rc\mapsto\sum{P\in\bbC/\Lambda}{}{n_PP}$ et $\lc P\rc-\lc0\rc\mapsfrom P$}{15/36}
+\slideq{Ensemble en bijection avec $\calM\l X\r$ pour $X$ connexe}{16/36}
+\slider{$\calM\l X\r$ est en bijection avec les applications holomorphes $X\to\bbP^1\l\bbC\r$ via $f\mapsto\widehat f$ avec $\widehat f$ qui vaut la limite de $f$ au voisinage des singularités illusoires et $\widehat f\l P\r=\infty$ aux pôles de $f$}{16/36}
+\slideq{$f$ a une singularité essentielle en $P$}{17/36}
+\slider{$f\circ\phi^{-1}$ a une singularité essentielle en $\phi\l P\r$}{17/36}
+\slideq{$\l U,\phi\r$ et $\l V,\psi\r$ sont compatibles}{18/36}
+\slider{$\psi\circ\phi^{-1}\!:\!\phi\l U\cap V\r\to\psi\l U\cap V\r$ est un biholomorphisme\linebreak Comme $\psi\circ\phi^{-1}$ est bijective, cela revient à avoir $\psi\circ\phi^{-1}$ holomorphe}{18/36}
+\slideq{Surface de Riemann}{19/36}
+\slider{Esapce topologique séparé non vide muni d'un atlas complexe}{19/36}
+\slideq{Carte complexe d'un espace topologique $X$}{20/36}
+\slider{$\l U,\phi\r$ avec $U\subset X$ ouvert et $\phi\!:\!U\to V$ un homéomorphisme sur un ouvert $V$ de $\bbC$}{20/36}
+\slideq{$f$ a un zéro (d'ordre $k$) en $P$}{21/36}
+\slider{$f\circ\phi^{-1}$ a un zéro (d'ordre $k$) en $\phi\l P\r$}{21/36}
+\slideq{$\pic[0]{\bbC/\Lambda}$}{22/36}
+\slider{$I_\Lambda/\div{\fr C\Lambda^\times}$}{22/36}
+\slideq{$\div f$}{23/36}
+\slider{$\sum{P\in\bbC/\Lambda}{}{\ord[P]f\lc P\rc}\in\bbZ\lc\bbC/\Lambda\rc$}{23/36}
+\slideq{$f\!:\!X\to Y$ est un isomorphisme (ou biholomorphisme) de surfaces de Riemann}{24/36}
+\slider{Il existe une fonction holomorphe $g\!:\!Y\to X$ telle que $f\circ g=\id_X$ et $g\circ f=\id_Y$}{24/36}
+\slideq{Pôles d'une fonction elliptiques}{25/36}
+\slider{Une fonction elliptique a deux pôles, comptés avec multiplicité}{25/36}
+\slideq{Sommes particulières pour les fonctions elliptiques}{26/36}
+\slider{$\sum{P\in\bbC/\Lambda}{}{\res Pf}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{\ord[P]f}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{P\res[P]f}=\in\Lambda$}{26/36}
+\slideq{Propriétés des fibres de $f\!:\!X\to Y$ holomorphe}{27/36}
+\slider{Si $X$ est connexe et $f$ est non constante alors $f^{-1}\l\set a\r$ est une partie discrète et fermée de $X$ pour tout $a\in Y$\linebreak Si $X$ est compact alors les fibres sont finies}{27/36}
+\slideq{$f\!:\!X\to Y$ est une fonction holomorphe entre surfaces de Riemann\linebreak$\l\l U_i,\phi_i\r\r_{i\in I}$ et $\l\l V_j,\psi_j\r\r_{j\in J}$ atlas respectifs de $X$ et $Y$}{28/36}
+\slider{$f$ est continue et, pour tout $j\in J$, $\psi_j\circ f\!:\!f^{-1}\l V_j\r\to\bbC$ est holomorphe}{28/36}
+\slideq{CNS pour que $f\!:\!X\to Y$ soit un isomorphisme}{29/36}
+\slider{$f$ est holomorphe et bijective}{29/36}
+\slideq{CNS pour avoir $f\!:\!\varOmega\setminus\set P\to\bbC$ holomorphe/méromorphe}{30/36}
+\slider{$f$ s'étend en une fonction holomorphe $\widehat f\!:\!\varOmega\to\bbP^1\l\bbC\r$\linebreak$f$ a un pôle en $P$ si et seulement si $f\l P\r=\infty$}{30/36}
+\slideq{$\pic{\bbC/\Lambda}$}{31/36}
+\slider{$\pol Z{\bbC/\Lambda}/\div{\fr C\Lambda^\times}$}{31/36}
+\slideq{Atlas complexe d'un espace topologique $X$}{32/36}
+\slider{Famille de cartes compatibles $\l\l U_i,\phi_i\r\r_{i\in I}$ avec $X=\bigcup{i\in I}{}{U_i}$}{32/36}
+\slideq{$f$ est holomorphe en $P$}{33/36}
+\slider{$f\circ\phi^{-1}$ est holomorphe en $\phi\l P\r$}{33/36}
+\slideq{$f$ est méromorphe en $P$}{34/36}
+\slider{$f\circ\phi^{-1}$ est méromorphe en $\phi\l P\r$}{34/36}
+\slideq{Principe du prolongement analytique}{35/36}
+\slider{Si $f,g\!:\!X\to Y$ sont holomorphes et $X$ est connexe avec $f\neq g$, alors $\set{x\in X,f\l x\r=g\l x\r}$ est une partie discrète et fermée de $X$\linebreak En contraposant, si $\set{x\in X,f\l x\r=g\l x\r}$ a un point d'accumulation dans $X$ alors $f=g$}{35/36}
+\slideq{$f$ a un pôle (d'ordre $k$) en $P$}{36/36}
+\slider{$f\circ\phi^{-1}$ a un pôle (d'ordre $k$) en $\phi\l P\r$}{36/36}
 \end{document}

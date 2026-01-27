@@ -7,3 +7,7 @@ Propriétés algébriques de $\calO_K$;;C'est un anneau de Dedekind
 CNS pour qu'un sous-$A$-module $M$ de $\Frac{A}$ soit de type fini;;Il existe $x\in A$ tel que $xM\subset A$
 Idéal fractionnaire;;Sous-$A$-module de $\Frac A$ non vide et de type fini
 Structure de l'ensemble des idéaux fractionnaires;;C'est un groupe de neutre $A$ pour la multiplication
+Lemme de factorisation des idéaux d'un anneau de Dedekind;;Si $I$ et $X$ sont deux idéaux de $A$ alors il existe un unique idéal $J$ de $A$ tel que $I=XJ$ si et seulement si $I\subset X$\linebreak De plus, $I=A$ si et seulement si $I=X$
+Théorème de factorisation des idéaux d'un anneau de Dedekind;;Tout idéal de $A$ se factorise de manière unique en produit d'idéaux premiers
+Système de générateurs des idéaux fractionnaires d'un anneau de Dedekind;;Les idéaux premiers de $A$ engendrent le groupe des idéaux fractionnaires\linebreak Tout idéal fractionnaire de $A$ s'écrit de manière unique comme produit d'idéaux premiers de $A$ (avec des puissances négatives)
+Propriétés des anneaux de Dedekind factoriel;;Un anneau de Dedekind factoriel est principal
