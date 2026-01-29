@@ -4,9 +4,11 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/ProcessusStochastiques/ConvergenceEnLoiEtTheoremeCentralLimite
 20260129200054
 ../M1S2/flashcards/ProcessusStochastiques/MouvementBrownien
-20260124075237
+20260129202726
 ../M1S2/flashcards/SurfacesDeRiemann/FonctionsElliptiques
-20260127184009
+20260129210303
+../M1S2/flashcards/SurfacesDeRiemann/TheorieDeLaRamification
+20260129211902
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/AnneauxDEntiersDesCorpsDeNombres
 20260127190609
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/AnneauxDeDedekind
@@ -15,7 +17,9 @@ https://rfoxinter.github.io/revisions/flashcards/
 20260113080340
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/EntiersAlgebriques
 20260124075458
+../M1S2/flashcards/TheorieSpectrale/OperateursAutoadjoints
+20260129205343
 ../M1S2/flashcards/TheorieSpectrale/OperateursNormaux
-20260118105400
+20260129204559
 ../M1S2/flashcards/TheorieSpectrale/SpectreDUnOperateur
 20260118104652

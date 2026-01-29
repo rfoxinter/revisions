@@ -1,7 +1,7 @@
 Surfaces de Riemann -- Fonctions elliptiques
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{analysecomplexe,analyse,polynomes,structures}\usepackage[nopar]{bigoperators}\let\div\fdiv\let\Lambda\varLambda
+\usepackage{analysecomplexe,analyse,polynomes,structures,usuelles}\usepackage[nopar]{bigoperators}\let\div\fdiv\let\Lambda\varLambda
 Sommes particulières pour les fonctions elliptiques;;$\sum{P\in\bbC/\Lambda}{}{\res Pf}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{\ord[P]f}=0$\linebreak$\sum{P\in\bbC/\Lambda}{}{P\res[P]f}=\in\Lambda$
 Pôles d'une fonction elliptiques;;Une fonction elliptique a deux pôles, comptés avec multiplicité
 $\div f$;;$\sum{P\in\bbC/\Lambda}{}{\ord[P]f\lc P\rc}\in\bbZ\lc\bbC/\Lambda\rc$
@@ -38,3 +38,4 @@ Fonction méromorphe sur $X$;;Donnée de $S\subset X$ fermée et discrète, ains
 Ensemble en bijection avec $\calM\l X\r$ pour $X$ connexe;;$\calM\l X\r$ est en bijection avec les applications holomorphes $X\to\bbP^1\l\bbC\r$ via $f\mapsto\widehat f$ avec $\widehat f$ qui vaut la limite de $f$ au voisinage des singularités illusoires et $\widehat f\l P\r=\infty$ aux pôles de $f$
 Structure de $\calM\l X\r$;;Si $X$ est connexe, $\calM\l X\r$ est un corps contenant $\bbC$
 Propriétés des fonctions méromorphes sur une surface de Riemann connexe compacte;;Il existe une fonction méromorphe $f$ non constante sur $X$, et pour toute telle fonction $f$, $\calM\l X\r/\bbC\l f\r$ est finie
+Propriétés de $\ord[P]\cdot$;;$\ord[P]f=0$ si et seulement si $f\equiv0$ pour $X$ connexe\linebreak$\ord[P]{fg}=\ord[P]f+\ord[P]g$\linebreak$\ord[P]{f+g}\geqslant\min{\ord[P]f\ord[P]g}$

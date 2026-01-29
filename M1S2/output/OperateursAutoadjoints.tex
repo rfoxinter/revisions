@@ -1,0 +1,19 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{topologie,structures,usuelles}\togglebornelimits
+\hypersetup{pdftitle={Théorie spectrale -- Opérateurs autoadjoints}}
+\title{Théorie spectrale\\\emph{Opérateurs autoadjoints}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{CNS pour que $T$ autoadjoint soit positif}{1/3}
+\slider{Un opérateur autoadjoint $T$ est positif si et seulement si $\sigma\l T\r\subset\bbR_+$}{1/3}
+\slideq{Propriétés des bornes du spectre d'un opérateur autoadjoint}{2/3}
+\slider{Si $H$ est un Hilbert et $T\in\calB\l H\r$ est autoadjoint alors $\sigma\l T\r\neq\varnothing$, $\min{\sigma\l T\r}=\inf[\substack{x\in H\\\nrm x=1}]{\psc{Tx}x}$, $\max{\sigma\l T\r}=\sup[\substack{x\in H\\\nrm x=1}]{\psc{Tx}x}$ et $\max[\lambda\in\sigma\l T\r]{\vala\lambda}=\nrm T$}{2/3}
+\slideq{Inégalité de Cauchy-Schwarz pour les opérateurs positifs}{3/3}
+\slider{Si $T\in\calB\l H\r$ est un opérateur positif alors pour tout $\l x,y\r\in H^2$, $\vala{\psc{Tx}y}^2\leqslant\psc{Tx}x\psc{Ty}y$}{3/3}
+\end{document}

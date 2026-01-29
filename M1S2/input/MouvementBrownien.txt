@@ -1,7 +1,12 @@
 Processus stochastiques -- Mouvement brownien
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{probas}
+\usepackage{probas,footnotes}
 Processus stochastique gaussien;;$\l X_t\r_{t\in T}$ est un processus stochastique gaussien si $X_t$ est à valeurs dans $\bbR^d$ muni des boréliens et tel que, pour tout $p\in\bbN^*$, tout $\l t_1,\cdots,t_p\r\in T^p$ deux à deux distincts, on a que $\l X_{t_1},\cdots,X_{t_p}\r$ est un vecteur gaussien
 $\l B_t\r_{t\in I}$ est un mouvement prébrownien\linebreak$I\subset\bbR_+$ un intevalle;;Pour tout $p\in\bbN^*$ et tout $t_1<\cdots<t_p\in I$, $B_{t_1}$, $B_{t_2}-B_{t_1}$, \dots, $B_{t_p}-B_{t_{p-1}}$ sont des incréments indépendants avec $B_{t_1}\sim\normal0{t_1}$, $B_{t_i}-B_{t_{i-1}}\sim\normal0{t_i-t_{i-1}}$
 CNS pour que $\l B_t\r_{t\in I}$ soit un mouvement prébrownien;;$\l B_t\r_{t\in I}$ est un processus stochastique gaussien centré tel que $\esp{B_sB_t}=s\wedge t$
+Mouvement brownien;;Mouvement prébrownien à trajectoires continues, ie, pour tout $\omega\in\Omega$, $t\mapsto X_t\l\omega\r$ est continu
+$\l Y_t\r_{t\in T}$ est une modification de $\l X_t\r_{t\in T}$;;Pour tout $t\in T$, $\p{X_t=Y_t}=1$
+$\l X_t\r_{t\in T}$ et $\l Y_t\r_{t\in T}$ sont indistingables;;Il existe $N$ de mesure nulle tel que, pour tout $\omega\in\Omega\setminus N$, pour tout $t\in T$, $X_t\l\omega\r=Y_t\l\omega\r$
+Lemme de Kolmogorov;;Soit $\l X_t\r_{t\in T}$ un processus aléatoire indexé par un intervalle de $\bbR$ à valeurs dans un espace métrique complet $\l E,d\r$, s'il existe $q>0$, $\epsilon>0$ et $c>0$ tels que, pour tous $s,t\in T$, $\esp{d\l X_s,X_t\r^q}\le c\left|t-s\right|^{1+\epsilon}$, alors il en existe une modification $\l Y_t\r_{t\in T}$ dont les trajectoires sont $\alpha$-höldériennes\footnote{Il existe $C\l\alpha,\omega\r>0$ tel que $d\l Y_s\l\omega\r,Y_t\l\omega\r\r\leqslant C\l\alpha,\omega\r\left|s-t\right|^\alpha$} pour tout $\alpha\in\left]0,\oldfrac\epsilon q\right[$
+Existence et régularité du mouvement brownien;;Le mouvement brownien existe et a des trajectoires $\alpha$-höldériennes pour tout $\alpha\in\left]0,\frac12\right[$ sur tout compact

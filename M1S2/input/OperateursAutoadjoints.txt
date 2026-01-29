@@ -1,0 +1,7 @@
+Théorie spectrale -- Opérateurs autoadjoints
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{topologie,structures,usuelles}\togglebornelimits
+Inégalité de Cauchy-Schwarz pour les opérateurs positifs;;Si $T\in\calB\l H\r$ est un opérateur positif alors pour tout $\l x,y\r\in H^2$, $\vala{\psc{Tx}y}^2\leqslant\psc{Tx}x\psc{Ty}y$
+Propriétés des bornes du spectre d'un opérateur autoadjoint;;Si $H$ est un Hilbert et $T\in\calB\l H\r$ est autoadjoint alors $\sigma\l T\r\neq\varnothing$, $\min{\sigma\l T\r}=\inf[\substack{x\in H\\\nrm x=1}]{\psc{Tx}x}$, $\max{\sigma\l T\r}=\sup[\substack{x\in H\\\nrm x=1}]{\psc{Tx}x}$ et $\max[\lambda\in\sigma\l T\r]{\vala\lambda}=\nrm T$
+CNS pour que $T$ autoadjoint soit positif;;Un opérateur autoadjoint $T$ est positif si et seulement si $\sigma\l T\r\subset\bbR_+$

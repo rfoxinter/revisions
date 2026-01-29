@@ -1,0 +1,27 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{analysecomplexe,equivalents}\newcommand{\ram}[2]{e_{#1}\l#2\r}%,analyse,polynomes,structures,usuelles}\usepackage[nopar]{bigoperators}\let\div\fdiv\let\Lambda\varLambda
+\hypersetup{pdftitle={Surfaces de Riemann -- Théorie de la ramification}}
+\title{Surfaces de Riemann\\\emph{Théorie de la ramification}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Théorème de la forme normale locale}{1/7}
+\slider{Si $f\!:\!X\to Y$ est une application holomorphe entre surfaces de Riemann, soit $P\in X$, supposons $f$ non constante au voisinage de $P$ et soient $e=\ram fP$ et $\psi$ une carte de $Y$ centrée en $f\l P\r$, alors il existe une carte $\phi$ de $X$ centrée en $P$ telle que $\psi\circ f\circ\phi^{-1}\l z\r=z^e$ au voisinage de $0$}{1/7}
+\slideq{Propriétés topologiques de $R\l f\r$}{2/7}
+\slider{Si $X$ est une surface de Riemann connexe et $f\!:\!X\to Y$ est une application holomorphe non constante alors $R\l f\r$ est une partie discrète et fermée de $X$\linebreak Si $X$ est de plus compacte alors $R\l f\r$ est fini (et donc $B\l f\r$ aussi)}{2/7}
+\slideq{Lien entre ordre d'annulation et indice de ramification}{3/7}
+\slider{Si $f\in\calM\l X\r$ est holomorphe, $\widehat f\!:\!X\to\bbP^1\l\bbC\r$ associée et $f$ non constante au voisinage de $P$, alors si $f$ a un zéro en $P$, $\ram{\widehat f}P=\ord[P]f$, si $f$ a un pôle en $P$ alors $\ram{\widehat f}P=-\ord[P]f$ et si $f$ est holomorphe en $P$ alors $\ram{\widehat f}P=\ord[P]{f-f\l P\r}$}{3/7}
+\slideq{Indice de ramification de $f$ en $P$}{4/7}
+\slider{Si $f$ est non constante, $\ram fP$ est l'unique entier $e\ge1$ tel que $\equiveq[z\to0]{\phi'\circ f\circ\phi^{-1}\l z\r}{\lambda z^e}$ pour $\lambda\in\bbC^*$ où $\phi$ et $\phi'$ sont des cartes de $X$ et $Y$ centrées en $P$ et $f\l P\r$}{4/7}
+\slideq{Points de ramification de $f$\linebreak Points de branchements de $f$}{5/7}
+\slider{$R\l f\r=\set{P\in X,\ram fP\geqslant 2}$\linebreak$B\l f\r=f\l R\l f\r\r$}{5/7}
+\slideq{Propriétés de morphisme de l'indice de ramification}{6/7}
+\slider{Si $f\!:\!X\to Y$ et $g\!:\!Y\to Z$ sont holomorphes avec $f$ non constante au voisinage de $P$ et $g$ non constante au voisinage de $f\l P\r$ alors $\ram{g\circ f}P=\ram gP\ram fP$}{6/7}
+\slideq{$f$ est ramifiée en $P$}{7/7}
+\slider{$\ram fP\geqslant2$}{7/7}
+\end{document}
