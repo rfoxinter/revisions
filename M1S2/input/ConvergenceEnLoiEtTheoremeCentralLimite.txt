@@ -10,4 +10,6 @@ Méthode delta;;Si $\sqrt n\l X_n-\theta\r\xrightarrow{\calL}\normal0{\sigma^2}$
 Condition de Lyapounov;;Si $X$ un tableau de variables aléatoires indépendants réelles tel que $s_n>0$, il existe $\delta>0$, $\sum{k=1}{r_n}{\frac1{s_n^{2+\delta}}\esp{\l X_{n,k}-\mu_{n,k}\r^{2+\delta}}}\to0$
 Lien entre la condition de Lindeberg et la condition de Lyapounov;;Si la condition de Lyapounov est vérifiée alors la condition de Lindeberg est vérifiée
 $X$ une variable aléatoire réelle est infiniment divisible;;Pour tout $n\in\bbN$, il existe $\l X_1,\cdots,X_n\r$ des variables aléatoires réelles indépendantes telles que $X\overset{\scriptstyle\calL}{=}X_1+\cdots+X_n$
-Caractérisation des variables aléatoires réelles infiniment divisibles par leur fonction caractéristique;;$\varphi_X=\varphi_\mu$\linebreak$\varphi_\mu\l t\r=\exp{\int[x][\bbR][][\mu]{\frac{\e^{\ii tx}-1-\ii tx}{x^2}}}$
+Formule de Lévy--Khintchine;;$\phi_\mu\l t\r=\exp{\int[t][][][\mu]{\frac{\e^{\ii tx}-1-\ii tx}{x^2}}}$
+Caractérisation des variables aléatoires infiniment divisibles par les tableaux;;Toute variable infiniment divisible centrée et de variance nulle est limite d'un tableau de variables aléatoires indépendantes réelles centrées vérifiant $s_n^2>0$, $\sup{s_n^2}<+\infty$ et $\max[k]{\sigma_{n,k}^2}\xrightarrow[n\to+\infty]{}0$
+Caractérisation des variables aléatoires réelles infiniment divisibles par leur fonction caractéristique;;$\varphi_X=\varphi_\mu$\linebreak$\varphi_\mu\l t\r=\exp{\int[x][][][\mu]{\frac{\e^{\ii tx}-1-\ii tx}{x^2}}}$
