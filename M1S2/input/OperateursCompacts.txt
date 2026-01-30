@@ -1,0 +1,10 @@
+Théorie spectrale -- Opérateurs compacts
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{structures}
+$T\in\calB\l E,F\r$ entre Banach est un opérateur compact\linebreak $T\in\calK\l E,F\r$;;Il vérifie l'une des trois conditions équivalentes suivantes\linebreak $T\l B_E\r$ est précompact (ou d'adhérence compacte)\linebreak L'image par $T$ de toute partie bornée est précompacte\linebreak De toute suite bornée $\l x_n\r$ de $E$, on peut extraire une sous-suite de $\l Tx_n\r$ qui converge
+Compositions avec des opérateurs compacts;;Si $S\in\calB\l E,F\r$ et $T\in\calB\l F,G\r$ avec $S$ ou $T$ compact alors $T\circ S$ est compact
+Propriétés topologiques de $\calK\l E,F\r$;;C'est un sous-espace fermé de $\calB\l E,F\r$
+Lien entre $\calK\l E,F\r$ et $\calR\l E,F\r$ les opérateurs de rang fini;;$\overline{\calR\l E,F\r}\subset\calK\l E,F\r$\linebreak Si $E$ est un Hilbert alors il y a égalité
+CNS pour que $T\in\calB\l H,K\r$ soit compact entre deux Banach;;$T\l B_H\r$ est compact\linebreak Pour toute suite faiblement convergente de $H$, la suite $\l Tx_n\r$ est fortement convergente\linebreak $T\in\overline{\calR\l H,K\r}$\linebreak$T^*$ est compact
+Théorème spectral pour les opérateurs compacts autoadjoints;;Si $H$ est un Hilbert et $T\in\calB\l H\r$ est un opérateur compact autoadjoint alors $\sigma\l T\r\setminus\set0$ est discret, tout $\lambda\in\sigma\l T\r\setminus\set0$ est une valeur propre de multiplicité $\dim{\ker{T-\lambda\operatorname{id}}}<+\infty$\linebreak De plus, on a $H={\mathop{\displaystyle\bigoplus\nolimits^\bot}\limits_{\lambda\in\sigma\l T\r}}\mkern-3mu{}\mathop{}\ker{T-\lambda\operatorname{id}}$

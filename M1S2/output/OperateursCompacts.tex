@@ -1,0 +1,25 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{structures}
+\hypersetup{pdftitle={Théorie spectrale -- Opérateurs compacts}}
+\title{Théorie spectrale\\\emph{Opérateurs compacts}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Théorème spectral pour les opérateurs compacts autoadjoints}{1/6}
+\slider{Si $H$ est un Hilbert et $T\in\calB\l H\r$ est un opérateur compact autoadjoint alors $\sigma\l T\r\setminus\set0$ est discret, tout $\lambda\in\sigma\l T\r\setminus\set0$ est une valeur propre de multiplicité $\dim{\ker{T-\lambda\operatorname{id}}}<+\infty$\linebreak De plus, on a $H={\mathop{\displaystyle\bigoplus\nolimits^\bot}\limits_{\lambda\in\sigma\l T\r}}\mkern-3mu{}\mathop{}\ker{T-\lambda\operatorname{id}}$}{1/6}
+\slideq{Propriétés topologiques de $\calK\l E,F\r$}{2/6}
+\slider{C'est un sous-espace fermé de $\calB\l E,F\r$}{2/6}
+\slideq{Lien entre $\calK\l E,F\r$ et $\calR\l E,F\r$ les opérateurs de rang fini}{3/6}
+\slider{$\overline{\calR\l E,F\r}\subset\calK\l E,F\r$\linebreak Si $E$ est un Hilbert alors il y a égalité}{3/6}
+\slideq{$T\in\calB\l E,F\r$ entre Banach est un opérateur compact\linebreak $T\in\calK\l E,F\r$}{4/6}
+\slider{Il vérifie l'une des trois conditions équivalentes suivantes\linebreak $T\l B_E\r$ est précompact (ou d'adhérence compacte)\linebreak L'image par $T$ de toute partie bornée est précompacte\linebreak De toute suite bornée $\l x_n\r$ de $E$, on peut extraire une sous-suite de $\l Tx_n\r$ qui converge}{4/6}
+\slideq{CNS pour que $T\in\calB\l H,K\r$ soit compact entre deux Banach}{5/6}
+\slider{$T\l B_H\r$ est compact\linebreak Pour toute suite faiblement convergente de $H$, la suite $\l Tx_n\r$ est fortement convergente\linebreak $T\in\overline{\calR\l H,K\r}$\linebreak$T^*$ est compact}{5/6}
+\slideq{Compositions avec des opérateurs compacts}{6/6}
+\slider{Si $S\in\calB\l E,F\r$ et $T\in\calB\l F,G\r$ avec $S$ ou $T$ compact alors $T\circ S$ est compact}{6/6}
+\end{document}

@@ -1,0 +1,17 @@
+Introduction à la géométrie algébrique -- Variétés algébriques
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage[nopar]{bigoperators}\usepackage{polynomes}
+$V\l I\r$\linebreak$I\subset\bbk\lc X_1,\cdots,X_n\rc$;;$\set{P\in\bbA^n_\bbk,\forall f\in I,f\l P\r=0}$
+$X\subset\bbA^n_\bbk$ est algébrique;;Il existe un idéal $I$ de $\bbk\lc X_1,\cdots,X_n\rc$ tel que $X=V\l I\r$
+Propriétés de $V$;;$V\l\l0\r\r=\bbA^n_\bbk$\linebreak$V\l\bbk\lc X_1,\cdots,X_n\rc\r=\varnothing$\linebreak$I\subset J\Rightarrow V\l Y\r\supseteq V\l Y\r$\linebreak$V\l I_1\cap I_2\r=V\l I_1\r\cup V\l I_2\r$\linebreak$V\l\sum{\lambda\in\varLambda}{}{I_\lambda}\r=\bigcap{\lambda\in\varLambda}{}{V\l I_\lambda\r}$
+Topologie de Zariski;;La topologie de Zariski sur $\bbA^n_\bbk$ est la topologie qui a pour fermés les ensembles algébriques
+$I\l X\r$\linebreak$X\subset\bbA^n_\bbk$;;$\set{f\in\pol k{X_1,\cdots,X_n},\forall P\in X,f\l P\r=0}$
+Propriétés de $I$;;$X\subset Y\Rightarrow I\l X\r\supseteq I\l Y\r$
+Lien entre $I$ et $V$;;$X\subset V\l I\l X\r\r$ avec égalité si et seulement si $X$ est un ensemble algébrique\linebreak$J\subset I\l V\l J\r\r$
+Un ensemble algébrique $X\subset\bbA^n_\bbk$ est irréductible;;Il n'existe pas d'ensembles algébriques $X_1\varsubsetneq X$ et $X_2\varsubsetneq X$ tels que $X=X_1\cup X_2$
+Propriétés des ensembles algébriques irréductibles;;$X$ est algébrique si et seulement si $I\l X\r$ est premier\linebreak Tout ensemble algébrique se décompose de manière unique en irréductibles
+Radical d'un idéal $I$;;$\operatorname{rad}\l I\r=\sqrt I=\set{x\in A,\exists n\in\bbN,x^n\in A}$
+$I$ est un idéal radical;;$I=\sqrt I$
+Nullstellensatz pour $I$ et $V$;;Soit $\bbk$ un corps algébriquement clos\linebreak Si $J$ est un idéal de $\pol k{X_1,\cdots,X_n}$ tel que $J\neq\l1\r$ alors $V\l J\r\neq\varnothing$\linebreak Pour tout idéal $J$ de $\pol k{X_1,\cdots,X_n}$, on a $\sqrt J=I\l V\l J\r\r$
+Correspondances induites par $I$ et $V$;;$\set{J\leqslant\pol k{X_1,\cdots,X_n}}\leftrightarrow\set{X\subset\bbA^n_k}$\linebreak$\set{J\text{ radicaux}}\overset{\scriptscriptstyle\sim}{\leftrightarrow}\set{X\text{ algébriques}}$\linebreak$\set{J\text{ premiers}}\overset{\scriptscriptstyle\sim}{\leftrightarrow}\set{X\text{ algébriques irréductibles}}$
