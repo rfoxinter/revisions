@@ -1,0 +1,9 @@
+Théorie algébrique des nombres -- Groupes de classes
+Shuffle questions : True
+Q/R & R/Q : False
+\DeclareMathOperator{\oldcl}{Cl}\newcommand{\cl}[1]{\oldcl\l#1\r}\DeclareMathOperator{\oldnrm}{nrm}\newcommand\nrm[3]{\oldnrm_{#1/#2}\l#3\r}\newcommand\inrm[1]{\oldnrm\l#1\r}
+$\cl{\calO_K}$;;$I_K/\calP_K$\linebreak$I_K$ les idéaux fractionaires de $\calO_K$\linebreak$\calP_K$ les idéaux fractionaires principaux
+Propriétés algébriques de $\cl{\calO_K}$;;$\cl{\calO_K}$ est un groupe fini dont tout élément peut être représenté par un idéal\linebreak On note $h_K=\left|\cl{\calO_K}\right|$
+$\inrm I$;;$\left|\calO_K/I\right|$
+Propriétés de $\oldnrm$ sur les idéaux;;$\inrm{\l a\r}=\left|\nrm K\bbQ a\right|$\linebreak$\inrm{IJ}=\inrm I\inrm J$\linebreak Si $I\subset J$ alors $N\l I\r\leqslant N\l J\r$ et s'il y a égalité alors $I=J$\linebreak Il existe $G\in\bbR_+$ ne dépendant de $K$ telle que pour tout idéal non nul $I$, il existe $a\in I$ tel que $\left|\nrm K\bbQ a\right|\leqslant G\inrm I$
+Premier cas du théorème de Fermat;;Si $p\geqslant3$ est premier, $K=\bbQ\l\zeta_p\r$, si $p\nmid h_K$ alors l'équation $x^p+y^p=z^p$ n'admet pas de solution avec $p\nmid xyz$

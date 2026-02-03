@@ -1,0 +1,23 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\DeclareMathOperator{\oldcl}{Cl}\newcommand{\cl}[1]{\oldcl\l#1\r}\DeclareMathOperator{\oldnrm}{nrm}\newcommand\nrm[3]{\oldnrm_{#1/#2}\l#3\r}\newcommand\inrm[1]{\oldnrm\l#1\r}
+\hypersetup{pdftitle={Théorie algébrique des nombres -- Groupes de classes}}
+\title{Théorie algébrique des nombres\\\emph{Groupes de classes}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Propriétés de $\oldnrm$ sur les idéaux}{1/5}
+\slider{$\inrm{\l a\r}=\left|\nrm K\bbQ a\right|$\linebreak$\inrm{IJ}=\inrm I\inrm J$\linebreak Si $I\subset J$ alors $N\l I\r\leqslant N\l J\r$ et s'il y a égalité alors $I=J$\linebreak Il existe $G\in\bbR_+$ ne dépendant de $K$ telle que pour tout idéal non nul $I$, il existe $a\in I$ tel que $\left|\nrm K\bbQ a\right|\leqslant G\inrm I$}{1/5}
+\slideq{Premier cas du théorème de Fermat}{2/5}
+\slider{Si $p\geqslant3$ est premier, $K=\bbQ\l\zeta_p\r$, si $p\nmid h_K$ alors l'équation $x^p+y^p=z^p$ n'admet pas de solution avec $p\nmid xyz$}{2/5}
+\slideq{$\inrm I$}{3/5}
+\slider{$\left|\calO_K/I\right|$}{3/5}
+\slideq{Propriétés algébriques de $\cl{\calO_K}$}{4/5}
+\slider{$\cl{\calO_K}$ est un groupe fini dont tout élément peut être représenté par un idéal\linebreak On note $h_K=\left|\cl{\calO_K}\right|$}{4/5}
+\slideq{$\cl{\calO_K}$}{5/5}
+\slider{$I_K/\calP_K$\linebreak$I_K$ les idéaux fractionaires de $\calO_K$\linebreak$\calP_K$ les idéaux fractionaires principaux}{5/5}
+\end{document}

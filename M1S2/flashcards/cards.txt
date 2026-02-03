@@ -4,7 +4,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/VarietesAlgebriques
 20260130210259
 ../M1S2/flashcards/ProcessusStochastiques/ConvergenceEnLoiEtTheoremeCentralLimite
-20260131183926
+20260203101918
 ../M1S2/flashcards/ProcessusStochastiques/MouvementBrownien
 20260129202726
 ../M1S2/flashcards/SurfacesDeRiemann/FonctionsElliptiques
@@ -19,6 +19,10 @@ https://rfoxinter.github.io/revisions/flashcards/
 20260113080340
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/EntiersAlgebriques
 20260124075458
+../M1S2/flashcards/TheorieAlgebriqueDesNombres/GeometrieDesNombres
+20260203103821
+../M1S2/flashcards/TheorieAlgebriqueDesNombres/GroupesDeClasses
+20260203103706
 ../M1S2/flashcards/TheorieSpectrale/OperateursAutoadjoints
 20260129205343
 ../M1S2/flashcards/TheorieSpectrale/OperateursCompacts

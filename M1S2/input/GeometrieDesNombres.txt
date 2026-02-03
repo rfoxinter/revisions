@@ -1,0 +1,8 @@
+Théorie algébrique des nombres -- Géométrie des nombres
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage[nopar]{bigoperators}\DeclareMathOperator{\oldvol}{vol}\newcommand{\vol}[1]{\oldvol\l#1\r}
+Réseau de $\bbR^n$;;Sous-groupe de $\bbR^n$ de la forme $\bigoplus{i=1}n{\bbZ l_i}$ avec $\l l_1,\cdots,l_n\r$ une base de $\bbR^n$
+$H\leqslant\bbR^n$ est discret;;Pour toute partie bornée $B$ de $\bbR^n$, $H\cap B$ est fini\linebreak Il existe $r>0$ tel que $H\cap B\l 0,r\r$ est fini
+CNS pour que $\operatorname{im}\l f\r$ soit un réseau\linebreak$f\!:\!\bbZ^n\hookrightarrow\bbZ^n$ une application $\bbZ$-linéaire;;L'image de $f$ est un sous-groupe discret\linebreak L'image de la base canonique est une $\bbR$-base de $\bbR^n$
+$\vol\varLambda$ pour $\varLambda$ un réseau de $\bbR$;;$\left|\det\l M\r\right|$ pour $M$ la matrice des $l_i$ où $\varLambda=\bigoplus{i=1}n{\bbZ l_i}$
