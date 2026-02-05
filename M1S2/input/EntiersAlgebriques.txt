@@ -5,4 +5,4 @@ Q/R & R/Q : False
 Base entière de $K$;;Base de $\calO_K$ comme $\bbZ$-module
 Discriminant de $K$;;Discriminant d'une base entière de $K$
 CS pour avoir une base entière;;$\disc{\alpha_1,\cdots,\alpha_d}$ est sans facteur carré
-Porpriété de $x\in\calO_K$ tel que, pour tout plongement $\sigma$ de $K$ dans $\bbC$, on ait $\left|\sigma\l x\r\right|\leqslant1$;;$x$ est une racine de l'unité
+Lemme de Kronecker;;Si $x\in\calO_K$ est tel que, pour tout plongement $\sigma$ de $K$ dans $\bbC$, on ait $\left|\sigma\l x\r\right|\leqslant1$ alors $x$ est une racine de l'unité

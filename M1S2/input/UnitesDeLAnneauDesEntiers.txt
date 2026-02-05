@@ -1,0 +1,5 @@
+Théorie algébrique des nombres -- Unités de l'anneau des entiers
+Shuffle questions : True
+Q/R & R/Q : False
+
+Théorème des unités de Dirichlet;;Le groupe $\mu_K=\set{x\in\calO_K,\exists n\in\bbN^*,x^n=1}$ est fini et $\calO_K/\mu_K\cong\bbZ^{r_1+r_2-1}$\linebreak$r_1$ le nombre de plongements réels $K\hookrightarrow\bbR$\linebreak$r_2$ le nombre de plongements complexes conjugués $K\hookrightarrow\bbC$

@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage[nopar]{bigoperators}\DeclareMathOperator{\oldvol}{vol}\newcommand{\vol}[1]{\oldvol\l#1\r}
+\usepackage[nopar]{bigoperators}\DeclareMathOperator{\oldvol}{vol}\newcommand{\vol}[1]{\oldvol\l#1\r}\DeclareMathOperator{\oldnrm}{nrm}\newcommand\nrm[3]{\oldnrm_{#1/#2}\l#3\r}\newcommand\inrm[1]{\oldnrm\l#1\r}\usepackage{dsft}
 \hypersetup{pdftitle={Théorie algébrique des nombres -- Géométrie des nombres}}
 \title{Théorie algébrique des nombres\\\emph{Géométrie des nombres}}
 \author{}
@@ -10,12 +10,18 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Réseau de $\bbR^n$}{1/4}
-\slider{Sous-groupe de $\bbR^n$ de la forme $\bigoplus{i=1}n{\bbZ l_i}$ avec $\l l_1,\cdots,l_n\r$ une base de $\bbR^n$}{1/4}
-\slideq{$\vol\varLambda$ pour $\varLambda$ un réseau de $\bbR$}{2/4}
-\slider{$\left|\det\l M\r\right|$ pour $M$ la matrice des $l_i$ où $\varLambda=\bigoplus{i=1}n{\bbZ l_i}$}{2/4}
-\slideq{CNS pour que $\operatorname{im}\l f\r$ soit un réseau\linebreak$f\!:\!\bbZ^n\hookrightarrow\bbZ^n$ une application $\bbZ$-linéaire}{3/4}
-\slider{L'image de $f$ est un sous-groupe discret\linebreak L'image de la base canonique est une $\bbR$-base de $\bbR^n$}{3/4}
-\slideq{$H\leqslant\bbR^n$ est discret}{4/4}
-\slider{Pour toute partie bornée $B$ de $\bbR^n$, $H\cap B$ est fini\linebreak Il existe $r>0$ tel que $H\cap B\l 0,r\r$ est fini}{4/4}
+\slideq{CNS pour que $\operatorname{im}\l f\r$ soit un réseau\linebreak$f\!:\!\bbZ^n\hookrightarrow\bbZ^n$ une application $\bbZ$-linéaire}{1/7}
+\slider{L'image de $f$ est un sous-groupe discret\linebreak L'image de la base canonique est une $\bbR$-base de $\bbR^n$}{1/7}
+\slideq{$\vol\varLambda$ pour $\varLambda$ un réseau de $\bbR$}{2/7}
+\slider{$\left|\det\l M\r\right|$ pour $M$ la matrice des $l_i$ où $\varLambda=\bigoplus{i=1}n{\bbZ l_i}$}{2/7}
+\slideq{Propriétés de $\oldnrm$ sur les éléments d'un idéal}{3/7}
+\slider{Il existe $G\in\bbR_+$ ne dépendant de $K$ telle que pour tout idéal non nul $I$, il existe $a\in I$ tel que $\left|\nrm K\bbQ a\right|\leqslant G\inrm I$\linebreak On peut prendre $G=\frac{d!}{d^d}\l\frac4\rmpi\r^{r_2}\sqrt{\left|\operatorname{disc}\l K\r\right|}$\linebreak$d=\lc K{:}\bbQ\rc$ et $r_2$ le nombre de plongements complexes conjugués $K\hookrightarrow\bbC$}{3/7}
+\slideq{Théorème de Minkowski}{4/7}
+\slider{Si $\varLambda\subset\bbR^n$ est un réseau et $C\subset\bbR^n$ est convexe et symétrique par rapport à $0$ avec $\vol C>2^n\vol\varLambda$ alors $C\cap\varLambda\neq\set0$\linebreak Si de plus $C$ est compact, alors le résultat reste vrai sous l'hypothèse $\vol C\geqslant2^n\vol\varLambda$}{4/7}
+\slideq{$\vol{\iota\l\calO_K\r}$}{5/7}
+\slider{$\frac{1}{2^{r_2}}\sqrt{\left|\operatorname{disc}\l K\r\right|}$\linebreak$r_2$ le nombre de plongements complexes conjugués $K\hookrightarrow\bbC$}{5/7}
+\slideq{$H\leqslant\bbR^n$ est discret}{6/7}
+\slider{Pour toute partie bornée $B$ de $\bbR^n$, $H\cap B$ est fini\linebreak Il existe $r>0$ tel que $H\cap B\l 0,r\r$ est fini}{6/7}
+\slideq{Réseau de $\bbR^n$}{7/7}
+\slider{Sous-groupe de $\bbR^n$ de la forme $\bigoplus{i=1}n{\bbZ l_i}$ avec $\l l_1,\cdots,l_n\r$ une base de $\bbR^n$}{7/7}
 \end{document}
