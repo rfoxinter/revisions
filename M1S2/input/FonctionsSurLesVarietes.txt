@@ -1,0 +1,18 @@
+Introduction à la géométrie algébrique -- Fonctions sur les variétés
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage[nopar]{bigoperators}\usepackage{polynomes,al}\newcommand{\corresp}[8]{\begin{array}[t]{@{}r@{}c@{}l@{}}#1&{}\longleftrightarrow{}&#2\\#4&{}\overset{\scriptscriptstyle#3}{\longmapsto}{}&#5\\#7&{}\overset{\scriptscriptstyle#6}{\longmapsfrom}{}&#8\end{array}}\DeclareMathOperator{\olddom}{dom}\newcommand{\dom}[1]{\olddom\l#1\r}\newcommand{\dashto}{\mathrel{-\mkern-6mu{\to}\mkern-22.5mu{\text{\color{white}\boldmath${\cdot}{\cdot}{\cdot}$}}\mkern1mu\phantom{.}}}
+$\pol kV$\linebreak$V\subset\bbA_\bbk^n$ un ensemble algébrique;;$\pol k{X_1,\cdots,X_n}/I\l V\r$
+$f$ est une fonction polynomiale sur $V$;;$f$ est la restriction à $V$ d'une application polynomiale $F\in\pol k{X_1,\cdots,X_n}$
+Correspondances induites par $I$ et $V$ pour les fonctions polynomiales;;$\corresp{\set{J\leqslant\pol kV}}{\set{X\subset V}}V{I}{\set{\substack{\textstyle P\in V,\\\textstyle\forall f\in I,\\\textstyle f\l P\r=0}}}I{\set{\substack{\textstyle f\in\pol kV,\\\textstyle\forall P\in X,\\\textstyle f\l P\r=0}}}{X}$
+CNS topologiques pour qu'un ensemble algébrique $V$ soit irréductible;;Pour tous $U_1$ et $U_2$ ouverts non vides de $V$, $U_1\cap U_2\neq\varnothing$\linebreak Tout ouvert de $V$ est dense
+Propriétés de $f^*$ pour $f\!:\!V\to W$;;Si $f$ est une application polynomiale alors $\appl f{\pol kW}{\pol kV}g{g\circ f}$ est un morphisme de $\bbk$-algèbres\linebreak Tout morphisme de $\bbk$-algèbres $\varPhi\!:\!\pol kW\to\pol kV$ est de la forme $\varPhi=f^*$ pour $f\!:\!V\to W$ polynomiale\linebreak$\l g\circ f\r^*=f^*\circ g^*$
+$f\!:\!V\to W$ polynomiale est un isomorphisme;;Il existe une fonction polynomiale $g\!:\!W\to V$ telle que $g\circ f=\id_V$ et $f\circ g=\id_W$
+Variété affine sur un corps $\bbk$;;Ensemble $V$ avec un anneau $\pol kV$ de fonction de $V$ dans $\bbk$ tels que $\pol kV$ est une $\bbk$-algèbre de type fini et, pour un choix de base $\l x_1,\cdots,x_n\r$ de $\pol kV$ sur $\bbk$, $\nappl{V}{\bbA_\bbk^n}{P}{\l x_1\l P\r,\cdots,x_n\l P\r\r}$ plonge $V$ dans un ensemble algébrique irréductible\linebreak Les variétés sont définies à isomorphisme près
+Corps de fonctions sur une variété affine;;$\fr kV=\operatorname{Frac}\l\pol kV\r$
+$f\in\fr kV$ est régulière en $P\in V$;;Il existe une représentation $f=\frac gh$ avec $h\l P\r\neq0$
+Domaine de définition de $f\in\fr kV$\linebreak$\dom f$;;$\set{P\in V,\exists f=\frac gh,h\l P\r\neq0}$
+Anneau local de $V$ en $P$\linebreak$\calO_{V,P}$;;$\set{f\in\pol kV,P\in\dom f}$\linebreak$\pol kV\lc\set{h^{-1},h\l P\r\neq0}\rc$
+Propriétés de $\dom f$;;$\dom f$ est ouvert dense pour la topologie de Zariski\linebreak Si $\bbk$ est algébriquement clos, alors $\dom f=V$ si et seulement si $f\in\pol kV$
+Fonction rationnelle $f\!:\!V\dashto\bbA_\bbk^n$\linebreak$V$ une variété affine;;Application partielle définie par $f=\l f_1,\cdots,f_n\r$, $f_i\in\fr kV$\linebreak$\dom f=\bigcap{i=1}n{\dom{f_i}}$\linebreak $f$ est régulière en $P$ si $P\in\dom f$
+Application rationnelle entre variétés affines $f\!:\!V\dashto W$;;Fonction rationnelle $f\!:\!V\dashto\bbA_\bbk^n$ telle que $f\l\dom f\r\subset W$

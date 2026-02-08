@@ -1,0 +1,8 @@
+Théorie spectrale -- Opérateurs de Hilbert-Schmidt
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{topologie}\usepackage[nopar]{bigoperators,analyse}
+$\nrm[2]T$\linebreak$T\in\calB\l H,K\r$;;$\l\sum{i\in I}{}{\nrm{Te_i}^2}\r^{\frac12}$\linebreak$\l e_i\r_{i\in I}$ une base hilbertienne de $H$
+$T\in\calB\l H,K\r$ est Hilbert-Schmidt\linebreak$T\in\calS_2\l H,K\r$;;$\nrm[2]T<+\infty$
+Propriétés de $\nrm[2]\cdot$ et de $\calS_2\l H,K\r$;;$\nrm[2]\cdot$ est indépendant de la base\linebreak$\nrm[2]T=\nrm[2]{T^*}$ pour $T\in\calB\l H,K\r$\linebreak$\nrm T\leqslant\nrm[2]T$ pour $T\in\calB\l H,K\r$\linebreak$\l\calS_2\l H,K\r,\nrm[2]\cdot\r$ est un Hilbert\linebreak$\calR\l H,K\r\subset\calS_2\l H,K\r\subset\calK\l H,K\r$\linebreak$\nrm[2]{ST}\leqslant\nrm T\nrm[2]S$ et $\nrm[2]{ST}\leqslant\nrm[2]T\nrm S$, donc $\calS_2\l H,K\r\vartriangleleft\calB\l H,K\r$
+Propriétés des opérateurs à noyaux $\operatorname{L}^2$ sur $\operatorname{L}^2$;;Soient $\l X,\mu\r$ et $\l Y,\nu\r$ deux espaces mesurés $\sigma$-finis et $N\in\operatorname{L}^2\l X\times Y,\mu\otimes\nu,H\r$, alors $Kf\!:\!x\mapsto\int[y][Y][][\nu]{N\l x,y\r f\l y\r}$ est défini $\mu$-presque partout, $K\in\calS_2\l\operatorname{L}^2\l Y,\nu\r,\operatorname{L}^2\l X,\mu\r\r$ et $\nrm[2]K=\nrm[\operatorname{L}^2]N$

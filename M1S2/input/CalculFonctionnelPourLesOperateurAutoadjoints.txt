@@ -1,0 +1,5 @@
+Théorie spectrale -- Calcul fonctionnel pour les opérateur autoadjoints
+Shuffle questions : True
+Q/R & R/Q : False
+
+Propriétés spectrales de $P\l T\r$ pour $T\in\calB\l H\r$ autoadjoint;;$P\l T\r$ est inversible si et seulement $P$ ne s'annule par sur $\sigma\l T\r$\linebreak$\sigma\l P\l T\r\r=P\l\sigma\l T\r\r$
