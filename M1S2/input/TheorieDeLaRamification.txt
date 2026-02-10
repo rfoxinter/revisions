@@ -1,7 +1,7 @@
 Surfaces de Riemann -- Théorie de la ramification
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{analysecomplexe,equivalents}\newcommand{\ram}[2]{e_{#1}\l#2\r}%,analyse,polynomes,structures,usuelles}\usepackage[nopar]{bigoperators}\let\div\fdiv\let\Lambda\varLambda
+\usepackage{analysecomplexe,equivalents,polynomes,al}\usepackage[nopar]{bigoperators}\newcommand{\ram}[2]{e_{#1}\l#2\r}\DeclareMathOperator{\oldpr}{Pr}\newcommand{\pr}[1]{\oldpr\l#1\r}
 Indice de ramification de $f$ en $P$;;Si $f$ est non constante, $\ram fP$ est l'unique entier $e\ge1$ tel que $\equiveq[z\to0]{\phi'\circ f\circ\phi^{-1}\l z\r}{\lambda z^e}$ pour $\lambda\in\bbC^*$ où $\phi$ et $\phi'$ sont des cartes de $X$ et $Y$ centrées en $P$ et $f\l P\r$
 $f$ est ramifiée en $P$;;$\ram fP\geqslant2$
 Points de ramification de $f$\linebreak Points de branchements de $f$;;$R\l f\r=\set{P\in X,\ram fP\geqslant 2}$\linebreak$B\l f\r=f\l R\l f\r\r$
@@ -9,3 +9,15 @@ Théorème de la forme normale locale;;Si $f\!:\!X\to Y$ est une application hol
 Lien entre ordre d'annulation et indice de ramification;;Si $f\in\calM\l X\r$ est holomorphe, $\widehat f\!:\!X\to\bbP^1\l\bbC\r$ associée et $f$ non constante au voisinage de $P$, alors si $f$ a un zéro en $P$, $\ram{\widehat f}P=\ord[P]f$, si $f$ a un pôle en $P$ alors $\ram{\widehat f}P=-\ord[P]f$ et si $f$ est holomorphe en $P$ alors $\ram{\widehat f}P=\ord[P]{f-f\l P\r}$
 Propriétés topologiques de $R\l f\r$;;Si $X$ est une surface de Riemann connexe et $f\!:\!X\to Y$ est une application holomorphe non constante alors $R\l f\r$ est une partie discrète et fermée de $X$\linebreak Si $X$ est de plus compacte alors $R\l f\r$ est fini (et donc $B\l f\r$ aussi)
 Propriétés de morphisme de l'indice de ramification;;Si $f\!:\!X\to Y$ et $g\!:\!Y\to Z$ sont holomorphes avec $f$ non constante au voisinage de $P$ et $g$ non constante au voisinage de $f\l P\r$ alors $\ram{g\circ f}P=\ram gP\ram fP$
+Degré topologique de $f\!:\!X\to Y$ holomorphe non constante entre surfaces de Riemann compactes connexes;;$\deg f=\sum{P\in f^{-1}\l\set Q\r}{}{\ram fP}$\linebreak C'est une quantité indépendante de $Q\in Y$\linebreak\null\linebreak On a également un degré pour des fonction holomorphes propres (l'image réciproque de tout compact est un compact)
+$f^*$;;Si $f\!:\!X\to Y$ est holomorphe non constante entre surfaces de Riemann compactes connexes alors on a un morphisme de corps $\appl{f^*}{\calM\l Y\r}{\calM\l X\r}g{g\circ f}$\linebreak L'extension ainsi définie est de degré $\deg f$
+Multiplicativité du degré;;Si $f\!:\!X\to Y$ et $g\!:\!Y\to Z$ sont holomorphes non constantes entre surfaces de Riemann connexes alors $\deg{g\circ f}=\deg g\deg f$
+$\Div X$ pour $X$ une surface de Riemann compacte connexe;;$\bigoplus{P\in X}{}{\bbZ\lc P\rc}$
+$\ord[P]D$ pour $D\in\Div X$;;$n_P$ pour $D=\sum{P\in X}{}{n_P\lc P\rc}$
+$\deg D$ pour $D\in\Div X$;;$\sum{P\in X}{}{n_P}$ pour $D=\sum{P\in X}{}{n_P\lc P\rc}$
+$\operatorname{supp}\l D\r$ pour $D\in\Div X$;;$\set{ P\in X,n_P\neq0}$ pour $D=\sum{P\in X}{}{n_P\lc P\rc}$
+Propriétés de $\olddeg$ et $\oldord_P$ sur $\Div X$;;Ce sont des morphismes de groupes
+Diviseur effectif;;$D\in\bigoplus{P\in X}{}{\bbN\lc P\rc}$\linebreak Cela définit une relation d'ordre partiel sur $\Div X$
+$\fdiv f$ pour $f\in\calM\l X\r^\times$ avec $X$ une surface de Riemann compacte connexe;;$\sum{P\in X}{}{\ord[P]f\lc P\rc}\in\Div X$
+Propriétés de morphisme de $\oldfdiv$;;C'est un morphisme de groupes $\calM\l X\r^\times\to\Div X$
+$\Pr X$;;$\set{\fdiv f,f\in\calM\l X\r^\times}$ avec $X$ une surface de Riemann compacte connexe\linebreak C'est un sous-groupe de $\Div X$
