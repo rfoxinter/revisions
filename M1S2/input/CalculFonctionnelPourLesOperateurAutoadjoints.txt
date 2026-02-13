@@ -1,5 +1,10 @@
 Théorie spectrale -- Calcul fonctionnel pour les opérateur autoadjoints
 Shuffle questions : True
 Q/R & R/Q : False
-
-Propriétés spectrales de $P\l T\r$ pour $T\in\calB\l H\r$ autoadjoint;;$P\l T\r$ est inversible si et seulement $P$ ne s'annule par sur $\sigma\l T\r$\linebreak$\sigma\l P\l T\r\r=P\l\sigma\l T\r\r$
+\usepackage{topologie}\usepackage{usuelles}\togglebornelimits\usepackage{polynomes}
+Propriétés spectrales de $P\l T\r$ pour $T\in\calB\l H\r$ autoadjoint;;$P\l T\r$ est inversible si et seulement $P$ ne s'annule par sur $\sigma\l T\r$\linebreak$\sigma\l P\l T\r\r=P\l\sigma\l T\r\r$\linebreak$\nrm{P\l t\r}=\max[\lambda\in\sigma\l T\r]{\vala{P\l\lambda\r}}$
+$P\l T\r^*$ pour $P\in\pol CX$;;$\overline P\l T^*\r$
+Représentation de $\calC\l X,\bbK\r$ pour $X$ un espace compact;;Morphisme de $\bbK$-algèbres $\pi\!:\!\calC\l X,\bbK\r\to\calB\l H\r$ avec $H$ un espace de Hilbert
+$*$-représentation;;Représentation $\pi$ telle que, pour tout $f\in\calC\l X,\bbK\r$, $\pi\l\overline f\r=\pi\l f\r^*$
+Propriétés d'une $*$-représentation $\pi$;;$\nrm{\pi\l f\r}\leqslant\anrm f$\linebreak$\pi$ est continue (car contractante)\linebreak$\sigma\l\pi\l f\r\r\subset f\l X\r$\linebreak$\sigma\l\pi\l f\r\r=f\l X\r$ si et seulement si $\pi$ est une isométrie
+Théorème du calcul fonctionnel continu;;Soit $H$ un espace de Hilbert et $T\in\calB\l H\r$ un opérateur autoadjoint, alors il existe une unique $*$-représentation $\pi_T\!:\!\calC\l\sigma\l T\r,\bbK\r\to\calB\l H\r$ telle que $\pi\l\operatorname{id}_{\sigma\l T\r}\r=T$\linebreak On note $f\l T\r=\pi_T\l f\r$\linebreak$\nrm{f\l T\r}=\anrm f$ et $\sigma\l f\l T\r\r=f\l\sigma\l T\r\r$

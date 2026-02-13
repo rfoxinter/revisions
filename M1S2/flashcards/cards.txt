@@ -10,11 +10,13 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/ProcessusStochastiques/MouvementBrownien
 20260129202726
 ../M1S2/flashcards/ProcessusStochastiques/ProprietesDuMouvementBrownien
-20260208134930
+20260213190348
 ../M1S2/flashcards/SurfacesDeRiemann/FonctionsElliptiques
 20260129210303
+../M1S2/flashcards/SurfacesDeRiemann/FormesDifferentielles
+20260213184549
 ../M1S2/flashcards/SurfacesDeRiemann/TheorieDeLaRamification
-20260210183719
+20260213183706
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/AnneauxDEntiersDesCorpsDeNombres
 20260127190609
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/AnneauxDeDedekind
@@ -30,7 +32,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/UnitesDeLAnneauDesEntiers
 20260205203225
 ../M1S2/flashcards/TheorieSpectrale/CalculFonctionnelPourLesOperateurAutoadjoints
-20260208141503
+20260213195825
 ../M1S2/flashcards/TheorieSpectrale/OperateursAutoadjoints
 20260129205343
 ../M1S2/flashcards/TheorieSpectrale/OperateursCompacts

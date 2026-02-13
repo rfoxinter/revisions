@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-
+\usepackage{topologie}\usepackage{usuelles}\togglebornelimits\usepackage{polynomes}
 \hypersetup{pdftitle={Théorie spectrale -- Calcul fonctionnel pour les opérateur autoadjoints}}
 \title{Théorie spectrale\\\emph{Calcul fonctionnel pour les opérateur autoadjoints}}
 \author{}
@@ -10,6 +10,16 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Propriétés spectrales de $P\l T\r$ pour $T\in\calB\l H\r$ autoadjoint}{1/1}
-\slider{$P\l T\r$ est inversible si et seulement $P$ ne s'annule par sur $\sigma\l T\r$\linebreak$\sigma\l P\l T\r\r=P\l\sigma\l T\r\r$}{1/1}
+\slideq{Théorème du calcul fonctionnel continu}{1/6}
+\slider{Soit $H$ un espace de Hilbert et $T\in\calB\l H\r$ un opérateur autoadjoint, alors il existe une unique $*$-représentation $\pi_T\!:\!\calC\l\sigma\l T\r,\bbK\r\to\calB\l H\r$ telle que $\pi\l\operatorname{id}_{\sigma\l T\r}\r=T$\linebreak On note $f\l T\r=\pi_T\l f\r$\linebreak$\nrm{f\l T\r}=\anrm f$ et $\sigma\l f\l T\r\r=f\l\sigma\l T\r\r$}{1/6}
+\slideq{Propriétés d'une $*$-représentation $\pi$}{2/6}
+\slider{$\nrm{\pi\l f\r}\leqslant\anrm f$\linebreak$\pi$ est continue (car contractante)\linebreak$\sigma\l\pi\l f\r\r\subset f\l X\r$\linebreak$\sigma\l\pi\l f\r\r=f\l X\r$ si et seulement si $\pi$ est une isométrie}{2/6}
+\slideq{$*$-représentation}{3/6}
+\slider{Représentation $\pi$ telle que, pour tout $f\in\calC\l X,\bbK\r$, $\pi\l\overline f\r=\pi\l f\r^*$}{3/6}
+\slideq{$P\l T\r^*$ pour $P\in\pol CX$}{4/6}
+\slider{$\overline P\l T^*\r$}{4/6}
+\slideq{Propriétés spectrales de $P\l T\r$ pour $T\in\calB\l H\r$ autoadjoint}{5/6}
+\slider{$P\l T\r$ est inversible si et seulement $P$ ne s'annule par sur $\sigma\l T\r$\linebreak$\sigma\l P\l T\r\r=P\l\sigma\l T\r\r$\linebreak$\nrm{P\l t\r}=\max[\lambda\in\sigma\l T\r]{\vala{P\l\lambda\r}}$}{5/6}
+\slideq{Représentation de $\calC\l X,\bbK\r$ pour $X$ un espace compact}{6/6}
+\slider{Morphisme de $\bbK$-algèbres $\pi\!:\!\calC\l X,\bbK\r\to\calB\l H\r$ avec $H$ un espace de Hilbert}{6/6}
 \end{document}

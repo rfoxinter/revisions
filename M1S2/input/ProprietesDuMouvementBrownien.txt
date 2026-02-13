@@ -1,7 +1,7 @@
 Processus stochastiques -- Propriétés du mouvement brownien
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{probas,footnotes}\usepackage[nopar]{bigoperators}\usepackage{usuelles}\def\none{\ensuremath{\emptyset}}\def\ssn{sous/sur/\none}
+\usepackage{probas,footnotes,dsft}\usepackage[nopar]{bigoperators}\usepackage{usuelles}\def\none{\ensuremath{\emptyset}}\def\ssn{sous/sur/\none}
 Propriété de Markov faible;;$\l B_{t+s}-B_s\r_{t\geqslant0}$ est un (pré)mouvement brownien indépendant de $\l B_t\r_{0\leqslant t\leqslant s}$
 Loi du $0$-$1$ de Blumenthal;;Si $\calF_t=\sigma\l\set{B_s,0\leqslant s\leqslant t}\r$ et $\calF_0^+=\bigcap{t>0}{}{\calF_t}$ alors $\calF_0^+$ est triviale
 Propriétés locales du mouvement brownien en $0$;;$\forall\epsilon>0$, $\inf[s<\epsilon]{B_s}<0<\sup[s<\epsilon]{B_s}$ p.s.\linebreak$\limi[t\to+\infty]{B_t}=-\infty$ et $\lims[t\to+\infty]{B_t}=+\infty$ p.s.\linebreak$\forall a\in\bbR$, $\set{t,B_t=a}$ est non borné et $T_a=\inf{\set{t\geqslant0,B_t=a}}$ est fini p.s.\linebreak$B_t$ est monotone sur aucun intervalle p.s.
@@ -13,3 +13,8 @@ Propriétés de $\calF_T$;;Si $S\leqslant T$ alors $\calF_S\subset\calF_T$\lineb
 Temps d'arrêt lié à l'entrée dans un sous-ensemble d'un espace métrique $E$;;Si $\l X_t\r$ est un processus adapté à trajectoires continues dans $E$ et $F\subset E$ est fermé alors $T=\inf{\set{t\geqslant0,X_t\in F}}$ est un temps d'arrêt
 Inégalité maximale de Doob;;Si $\l M_t\r_{t\geqslant0}$ est une martingale à trajectoires continues et $a\geqslant0$ alors $a\p{\sup[0\leqslant t\leqslant t_0]{\left|M_t\right|}}\leqslant\esp{\left|M_{t_0}\right|}$
 CNS pour que $\l M_t\r_{t\geqslant0}$ soit une martingale fermée\footnote{$M_t=\esp{X\sq\calF_t}$};;$\l M_t\r_{t\geqslant0}$ est uniformément intégrable\footnote{$\forall\epsilon>0,\exists\delta>0,\forall X,\p A\leqslant\delta\Rightarrow\esp{X\mathbb1_A}\leqslant\epsilon$}
+Lien entre $M_S$ et $M_T$ pour $M$ une martingale et $S\leqslant T$ deux temps d'arrêt;;Si $M$ est uniformément intégrable alors $M_S$ et $M_T$ sont dans $\operatorname L^1$ et $M_S=\esp{M_T\sq\calF_S}$\linebreak Si $T$ est borné alors $M_S$ et $M_T$ sont dans $\operatorname L^1$ et $M_S=\esp{M_T\sq\calF_S}$
+Théorème d'arrêt des martingale;;Si $\l M_t\r_{t\geqslant0}$ est une martingale et $T$ est un temps d'arrêt alors $\l M_{t\wedge T}\r_{t\in T}$ est une martingale et si de plus $\l M_t\r_{t\geqslant0}$ est uniformément intégrable alors $\l M_{t\wedge T}\r_{t\in T}$ est uniformément intégrable et $M_{t\wedge T}=\esp{M_T\sq\calF_t}$
+Théorème de Markov fort;;Soit $T$ un temps d'arrêt presque sûrement fini, si $\l B\r$ est un mouvement brownien et $B_t^{\l T\r}=\l B_{t+T}-B_T\r\mathbb1_{T<+\infty}$, alors sous la propabilité conditionnelle $\p{\bullet\sq T<+\infty}$, $\l B_t^{\l T\r}\r$ est un mouvement brownien indépendant de $T$
+Principe de réflexion;;Si $\l B\r$ est un mouvement brownien et $S_t=\sup[s\in\lc0,t\rc]{B_s}$ alors pour tout $0\leqslant b\leqslant a$, $\p{S_t\geqslant a,B_t\leqslant b}=\p{B_t\geqslant2a-b}$\linebreak En particulier $S_t\overset{\scriptscriptstyle\calL}=\left|B_t\right|$\linebreak On a également $T_a\overset{\scriptscriptstyle\calL}=\frac{a^2}{B_1^2}$ et a pour densité $\frac{a}{2\rmpi t^2}\exp{-\frac{a^2}{2t}}\mathbb1_{t\geqslant0}$
+Théorème de Wald;;Soit $\l B_t\r_{t\geqslant0}$ un mouvement brownien et $T$ un temps d'arrêt $\operatorname L^1$, alors $\esp{B_T}=0$ et $\esp{B_T^2}=\esp T$

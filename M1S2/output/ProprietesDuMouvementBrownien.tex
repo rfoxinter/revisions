@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{probas,footnotes}\usepackage[nopar]{bigoperators}\usepackage{usuelles}\def\none{\ensuremath{\emptyset}}\def\ssn{sous/sur/\none}
+\usepackage{probas,footnotes,dsft}\usepackage[nopar]{bigoperators}\usepackage{usuelles}\def\none{\ensuremath{\emptyset}}\def\ssn{sous/sur/\none}
 \hypersetup{pdftitle={Processus stochastiques -- Propriétés du mouvement brownien}}
 \title{Processus stochastiques\\\emph{Propriétés du mouvement brownien}}
 \author{}
@@ -10,26 +10,36 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$\l X_t\r_{t\geqslant0}$ est une \ssn-martingale pour la filtration $\l\calF_t\r_{t\geqslant0}$}{1/11}
-\slider{$\l X_t\r$ est un processus à trajectoires continues, $X_t\in\operatorname L^1$ pour tout $t$ et $X_t$ est $\calF_t$-mesurable et si $0\leqslant s\leqslant t$ alors $\esp{X_t\sq\calF_s}\mathbin{{\geqslant}\text{/}{\leqslant}\text{/}{=}}X_s$}{1/11}
-\slideq{Propriétés de $\calF_T$}{2/11}
-\slider{Si $S\leqslant T$ alors $\calF_S\subset\calF_T$\linebreak Si $T=t$ alors $\calF_T=\calF_t$\linebreak$\calF_S\cap\calF_T=\calF_{S\wedge T}$ (et $S\wedge T$ est un temps d'arrêt)\linebreak Si $\l X_t\r$ est un processus adapté à trajectoires continues alors $\l X_T\mathbb1_{T<+\infty}\r$ est $\calF_T$-mesurable}{2/11}
-\slideq{Loi du $0$-$1$ de Blumenthal}{3/11}
-\slider{Si $\calF_t=\sigma\l\set{B_s,0\leqslant s\leqslant t}\r$ et $\calF_0^+=\bigcap{t>0}{}{\calF_t}$ alors $\calF_0^+$ est triviale}{3/11}
-\slideq{$\l\calF_t\r_{t\geqslant0}\in\calP\l\calF\r^{\bbR_+}$ est une filtration}{4/11}
-\slider{Pour tout $t$, $\calF_t$ est une tribu\linebreak Si $t\leqslant t'$ alors $\calF_t\subset\calF_{t'}$}{4/11}
-\slideq{Temps d'arrêt lié à l'entrée dans un sous-ensemble d'un espace métrique $E$}{5/11}
-\slider{Si $\l X_t\r$ est un processus adapté à trajectoires continues dans $E$ et $F\subset E$ est fermé alors $T=\inf{\set{t\geqslant0,X_t\in F}}$ est un temps d'arrêt}{5/11}
-\slideq{Temps d'arrêt}{6/11}
-\slider{$T\!:\!\varOmega\to\overline{\bbR_+}$ mesurable telle que, pour tout $t\in\bbR_+$, $\set{T\leqslant t}\in\calF_t$}{6/11}
-\slideq{$\calF_T$ pour $T$ un temps d'arrêt}{7/11}
-\slider{$\set{A\in\calF,\forall t\in\bbR_+,A\cap\set{T\leqslant t}\in\calF_t}$}{7/11}
-\slideq{Propriété de Markov faible}{8/11}
-\slider{$\l B_{t+s}-B_s\r_{t\geqslant0}$ est un (pré)mouvement brownien indépendant de $\l B_t\r_{0\leqslant t\leqslant s}$}{8/11}
-\slideq{Propriétés locales du mouvement brownien en $0$}{9/11}
-\slider{$\forall\epsilon>0$, $\inf[s<\epsilon]{B_s}<0<\sup[s<\epsilon]{B_s}$ p.s.\linebreak$\limi[t\to+\infty]{B_t}=-\infty$ et $\lims[t\to+\infty]{B_t}=+\infty$ p.s.\linebreak$\forall a\in\bbR$, $\set{t,B_t=a}$ est non borné et $T_a=\inf{\set{t\geqslant0,B_t=a}}$ est fini p.s.\linebreak$B_t$ est monotone sur aucun intervalle p.s.}{9/11}
-\slideq{CNS pour que $\l M_t\r_{t\geqslant0}$ soit une martingale fermée\footnote{$M_t=\esp{X\sq\calF_t}$}}{10/11}
-\slider{$\l M_t\r_{t\geqslant0}$ est uniformément intégrable\footnote{$\forall\epsilon>0,\exists\delta>0,\forall X,\p A\leqslant\delta\Rightarrow\esp{X\mathbb1_A}\leqslant\epsilon$}}{10/11}
-\slideq{Inégalité maximale de Doob}{11/11}
-\slider{Si $\l M_t\r_{t\geqslant0}$ est une martingale à trajectoires continues et $a\geqslant0$ alors $a\p{\sup[0\leqslant t\leqslant t_0]{\left|M_t\right|}}\leqslant\esp{\left|M_{t_0}\right|}$}{11/11}
+\slideq{Théorème de Markov fort}{1/16}
+\slider{Soit $T$ un temps d'arrêt presque sûrement fini, si $\l B\r$ est un mouvement brownien et $B_t^{\l T\r}=\l B_{t+T}-B_T\r\mathbb1_{T<+\infty}$, alors sous la propabilité conditionnelle $\p{\bullet\sq T<+\infty}$, $\l B_t^{\l T\r}\r$ est un mouvement brownien indépendant de $T$}{1/16}
+\slideq{Propriétés de $\calF_T$}{2/16}
+\slider{Si $S\leqslant T$ alors $\calF_S\subset\calF_T$\linebreak Si $T=t$ alors $\calF_T=\calF_t$\linebreak$\calF_S\cap\calF_T=\calF_{S\wedge T}$ (et $S\wedge T$ est un temps d'arrêt)\linebreak Si $\l X_t\r$ est un processus adapté à trajectoires continues alors $\l X_T\mathbb1_{T<+\infty}\r$ est $\calF_T$-mesurable}{2/16}
+\slideq{$\l\calF_t\r_{t\geqslant0}\in\calP\l\calF\r^{\bbR_+}$ est une filtration}{3/16}
+\slider{Pour tout $t$, $\calF_t$ est une tribu\linebreak Si $t\leqslant t'$ alors $\calF_t\subset\calF_{t'}$}{3/16}
+\slideq{Inégalité maximale de Doob}{4/16}
+\slider{Si $\l M_t\r_{t\geqslant0}$ est une martingale à trajectoires continues et $a\geqslant0$ alors $a\p{\sup[0\leqslant t\leqslant t_0]{\left|M_t\right|}}\leqslant\esp{\left|M_{t_0}\right|}$}{4/16}
+\slideq{Propriétés locales du mouvement brownien en $0$}{5/16}
+\slider{$\forall\epsilon>0$, $\inf[s<\epsilon]{B_s}<0<\sup[s<\epsilon]{B_s}$ p.s.\linebreak$\limi[t\to+\infty]{B_t}=-\infty$ et $\lims[t\to+\infty]{B_t}=+\infty$ p.s.\linebreak$\forall a\in\bbR$, $\set{t,B_t=a}$ est non borné et $T_a=\inf{\set{t\geqslant0,B_t=a}}$ est fini p.s.\linebreak$B_t$ est monotone sur aucun intervalle p.s.}{5/16}
+\slideq{$\calF_T$ pour $T$ un temps d'arrêt}{6/16}
+\slider{$\set{A\in\calF,\forall t\in\bbR_+,A\cap\set{T\leqslant t}\in\calF_t}$}{6/16}
+\slideq{Principe de réflexion}{7/16}
+\slider{Si $\l B\r$ est un mouvement brownien et $S_t=\sup[s\in\lc0,t\rc]{B_s}$ alors pour tout $0\leqslant b\leqslant a$, $\p{S_t\geqslant a,B_t\leqslant b}=\p{B_t\geqslant2a-b}$\linebreak En particulier $S_t\overset{\scriptscriptstyle\calL}=\left|B_t\right|$\linebreak On a également $T_a\overset{\scriptscriptstyle\calL}=\frac{a^2}{B_1^2}$ et a pour densité $\frac{a}{2\rmpi t^2}\exp{-\frac{a^2}{2t}}\mathbb1_{t\geqslant0}$}{7/16}
+\slideq{Théorème d'arrêt des martingale}{8/16}
+\slider{Si $\l M_t\r_{t\geqslant0}$ est une martingale et $T$ est un temps d'arrêt alors $\l M_{t\wedge T}\r_{t\in T}$ est une martingale et si de plus $\l M_t\r_{t\geqslant0}$ est uniformément intégrable alors $\l M_{t\wedge T}\r_{t\in T}$ est uniformément intégrable et $M_{t\wedge T}=\esp{M_T\sq\calF_t}$}{8/16}
+\slideq{Loi du $0$-$1$ de Blumenthal}{9/16}
+\slider{Si $\calF_t=\sigma\l\set{B_s,0\leqslant s\leqslant t}\r$ et $\calF_0^+=\bigcap{t>0}{}{\calF_t}$ alors $\calF_0^+$ est triviale}{9/16}
+\slideq{Propriété de Markov faible}{10/16}
+\slider{$\l B_{t+s}-B_s\r_{t\geqslant0}$ est un (pré)mouvement brownien indépendant de $\l B_t\r_{0\leqslant t\leqslant s}$}{10/16}
+\slideq{Lien entre $M_S$ et $M_T$ pour $M$ une martingale et $S\leqslant T$ deux temps d'arrêt}{11/16}
+\slider{Si $M$ est uniformément intégrable alors $M_S$ et $M_T$ sont dans $\operatorname L^1$ et $M_S=\esp{M_T\sq\calF_S}$\linebreak Si $T$ est borné alors $M_S$ et $M_T$ sont dans $\operatorname L^1$ et $M_S=\esp{M_T\sq\calF_S}$}{11/16}
+\slideq{$\l X_t\r_{t\geqslant0}$ est une \ssn-martingale pour la filtration $\l\calF_t\r_{t\geqslant0}$}{12/16}
+\slider{$\l X_t\r$ est un processus à trajectoires continues, $X_t\in\operatorname L^1$ pour tout $t$ et $X_t$ est $\calF_t$-mesurable et si $0\leqslant s\leqslant t$ alors $\esp{X_t\sq\calF_s}\mathbin{{\geqslant}\text{/}{\leqslant}\text{/}{=}}X_s$}{12/16}
+\slideq{Théorème de Wald}{13/16}
+\slider{Soit $\l B_t\r_{t\geqslant0}$ un mouvement brownien et $T$ un temps d'arrêt $\operatorname L^1$, alors $\esp{B_T}=0$ et $\esp{B_T^2}=\esp T$}{13/16}
+\slideq{Temps d'arrêt lié à l'entrée dans un sous-ensemble d'un espace métrique $E$}{14/16}
+\slider{Si $\l X_t\r$ est un processus adapté à trajectoires continues dans $E$ et $F\subset E$ est fermé alors $T=\inf{\set{t\geqslant0,X_t\in F}}$ est un temps d'arrêt}{14/16}
+\slideq{Temps d'arrêt}{15/16}
+\slider{$T\!:\!\varOmega\to\overline{\bbR_+}$ mesurable telle que, pour tout $t\in\bbR_+$, $\set{T\leqslant t}\in\calF_t$}{15/16}
+\slideq{CNS pour que $\l M_t\r_{t\geqslant0}$ soit une martingale fermée\footnote{$M_t=\esp{X\sq\calF_t}$}}{16/16}
+\slider{$\l M_t\r_{t\geqslant0}$ est uniformément intégrable\footnote{$\forall\epsilon>0,\exists\delta>0,\forall X,\p A\leqslant\delta\Rightarrow\esp{X\mathbb1_A}\leqslant\epsilon$}}{16/16}
 \end{document}

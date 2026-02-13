@@ -1,0 +1,23 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{geometrie,complexes}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldA}{A}\newcommand{\A}[3]{\oldA^{#1}_{#2}\l#3\r}
+\hypersetup{pdftitle={Surfaces de Riemann -- Formes différentielles}}
+\title{Surfaces de Riemann\\\emph{Formes différentielles}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Décomposition de formes linéaires complexes}{1/5}
+\slider{Tout $\omega\in\A k\bbC X$ se décompose de manière unique en $\omega=\alpha+\ii\beta$ avec $\alpha,\beta\in\A k\bbR X$}{1/5}
+\slideq{Différentielle extérieure sur $\A k\bbC X$}{2/5}
+\slider{$\dd\!:\!\A k\bbR X\to\A{k+1}\bbR X$ s'étend par $\bbC$-linéarité en $\appl{\dd}{\A k\bbC X}{\A{k+1}\bbC X}{\alpha+\ii\beta}{\dd\alpha+\ii\intd\beta}$}{2/5}
+\slideq{Conjugaison de formes différentielles}{3/5}
+\slider{On dispose d'une conjugaison complexe sur $\A k\bbC X$ définie par $\bar{\alpha+\ii\beta}=\alpha-\ii\beta$\linebreak$\A k\bbR X=\set{\omega\in\A k\bbC X,\omega=\bar\omega}$}{3/5}
+\slideq{Espace tangent à une surface de Riemann $X$ en $P$}{4/5}
+\slider{$\tg_PX$ peut être naturellement muni d'une structure de $\bbC$-ev (de dimension $1$) via $\gamma\mapsto\l\phi\circ\gamma\r'\l0\r\in\bbC$}{4/5}
+\slideq{Formes différentielles complexes de degré $k$}{5/5}
+\slider{$\A k\bbC X=\A k\bbR X\otimes_\bbR\bbC$\linebreak$\A k\bbR X$ les formes différentielles sur $X$ vue comme variété différentielle}{5/5}
+\end{document}

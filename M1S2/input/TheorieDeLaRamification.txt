@@ -21,3 +21,9 @@ Diviseur effectif;;$D\in\bigoplus{P\in X}{}{\bbN\lc P\rc}$\linebreak Cela défin
 $\fdiv f$ pour $f\in\calM\l X\r^\times$ avec $X$ une surface de Riemann compacte connexe;;$\sum{P\in X}{}{\ord[P]f\lc P\rc}\in\Div X$
 Propriétés de morphisme de $\oldfdiv$;;C'est un morphisme de groupes $\calM\l X\r^\times\to\Div X$
 $\Pr X$;;$\set{\fdiv f,f\in\calM\l X\r^\times}$ avec $X$ une surface de Riemann compacte connexe\linebreak C'est un sous-groupe de $\Div X$
+Diviseurs de degré $0$ de $X$ compacte connexe;;$\Div[0]X=\ker{\olddeg}$
+Groupe de Picard de $X$ compacte connexe;;$\pic[0]X=\Div[0]X/\Pr X$
+Théorème d'Abel-Jacobi;;Soit $X$ une surface de Riemann compacte connexe, alors in existe $g\geqslant0$ (appelé genre de $X$) et un réseau $\varLambda$ de $\bbC^g$ tel que $\pic[0]X\cong\bbC^g/\varLambda$
+Espace de Riemann-Roch associé au diviseur $D$;;$\calL\l D\r=\set{f\in\calM\l X\r^\times,\fdiv f\geqslant-D}\cup\set0$\linebreak C'est un $\bbC$-espace vectoriel
+Propriétés sur la dimension de $\calL\l D\r$;;$\calL\l D\r$ est de dimension finie\linebreak Si $D$ est effectif alors $\dim{\calL\l D\r}\leqslant1+\deg D$\linebreak Si $D=D'+\lc P\rc$ avec $D'$ effectif alors $\dim{\calL\l D'\r}\leqslant\dim{\calL\l D\r}\leqslant\dim{\calL\l D'\r}+1$
+Théorème de Riemann-Roch\linebreak Version simple;;Si $X$ est compacte connexe de genre $g$, alors pour tout $D\in\Div X$ tel que $\deg D\geqslant2g-2$, alors $\dim{\calL\l D\r}=\deg D+1-g$\linebreak En particulier, pour tout $P\in X$, il existe une fonction méromorphe ayant un pôle en $P$ et holomorphe sur $X\setminus\set P$
