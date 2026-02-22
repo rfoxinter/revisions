@@ -32,6 +32,6 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S1/flashcards/ProbabilitesAvancees/ChainesDeMarkov
 20251213084217
 ../M1S1/flashcards/ProbabilitesAvancees/EsperanceConditionnelle
-20250927100339
+20260222113533
 ../M1S1/flashcards/ProbabilitesAvancees/MartingalesATempsDiscret
 20251206073302

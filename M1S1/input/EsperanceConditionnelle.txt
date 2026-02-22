@@ -1,7 +1,7 @@
 Probabilités avancées -- Espérance conditionnelle
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{probas,analyse,usuelles}\def\ind#1{\mathbb 1_{#1}}\toggleanalysepar
+\usepackage{probas,analyse,usuelles}\usepackage[nopar]{bigoperators}\def\ind#1{\mathbb 1_{#1}}\toggleanalysepar
 $\esp{X\sq\mathcal G}$ $X$ une variable aléatoire intégrable et $\mathcal G$ une sous-tribu de $\mathcal F$;;L'unique variable aléatoire intégrable et $\mathcal G$-mesurable $Y$ telle que, pour tout $A\in\mathcal G$, $\esp{X\ind A}=\esp{Y\ind A}$
 $\esp{aX+bY\sq\mathcal G}$;;$a\esp{X\sq\mathcal G}+b\esp{Y\sq\mathcal G}$
 Positivité de $\esp{{\cdot}\sq\mathcal G}$;;Si $X\geqslant Y$ $\mathbb P$-presque partout alors $\esp{X\sq\mathcal G}\geqslant\esp{Y\sq\mathcal G}$
