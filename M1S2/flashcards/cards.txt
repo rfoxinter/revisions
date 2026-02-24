@@ -23,6 +23,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20260127184750
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/CorpsDeNombres
 20260113080340
+../M1S2/flashcards/TheorieAlgebriqueDesNombres/CorpsFinisEtResidusQuadratiques
+20260224204826
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/EntiersAlgebriques
 20260205203320
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/GeometrieDesNombres
@@ -30,7 +32,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/GroupesDeClasses
 20260203103706
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/UnitesDeLAnneauDesEntiers
-20260205203225
+20260224202131
 ../M1S2/flashcards/TheorieSpectrale/CalculFonctionnelPourLesOperateurAutoadjoints
 20260213195825
 ../M1S2/flashcards/TheorieSpectrale/OperateursAutoadjoints

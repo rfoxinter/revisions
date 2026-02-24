@@ -1,0 +1,21 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{arithmetique}\let\legendre\dlegendre\usepackage[nopar]{bigoperators}\usepackage{usuelles}
+\hypersetup{pdftitle={Théorie algébrique des nombres -- Corps finis et résidus quadratiques}}
+\title{Théorie algébrique des nombres\\\emph{Corps finis et résidus quadratiques}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{$\legendre ap\bmod p$}{1/4}
+\slider{$\cgr{\legendre ap}{a^{\frac{p-1}2}}p$}{1/4}
+\slideq{Inégalité de Pólya--Vinogradov}{2/4}
+\slider{Pour tout $a\in\bbZ$, $n\geqslant1$ et $p$ premier impair, $\left|\sum{j=a}{a+n}{\legendre jp}\right|\leqslant\sqrt p\ln p$}{2/4}
+\slideq{$\legendre{ab}p$}{3/4}
+\slider{$\legendre ap\legendre bp$}{3/4}
+\slideq{Loi de réciprocité quadratique}{4/4}
+\slider{$\legendre pq=\legendre qp\l-1\r^{\frac{p-1}2\times\frac{q-1}2}$\linebreak$\legendre2p=\l-1\r^{\frac{p^2-1}8}$}{4/4}
+\end{document}

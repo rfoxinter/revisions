@@ -1,5 +1,8 @@
 Théorie algébrique des nombres -- Unités de l'anneau des entiers
 Shuffle questions : True
 Q/R & R/Q : False
-
+\DeclareMathOperator{\oldvol}{vol}\newcommand{\vol}[1]{\oldvol\l#1\r}
 Théorème des unités de Dirichlet;;Le groupe $\mu_K=\set{x\in\calO_K,\exists n\in\bbN^*,x^n=1}$ est fini et $\calO_K/\mu_K\cong\bbZ^{r_1+r_2-1}$\linebreak$r_1$ le nombre de plongements réels $K\hookrightarrow\bbR$\linebreak$r_2$ le nombre de plongements complexes conjugués $K\hookrightarrow\bbC$
+Famille fondamentale d'unités pour $\calO_K$;;Famille $\l u_1,\cdots,u_{r_1+r_2-1}\r$ de $\calO_K^\times$ qui forme une base de $\calO_K^\times/\mu_K$
+Régulateur de $K$\linebreak$R_K$;;Valeur absolue d'un mineur de taille $r_1+r_2-1$ de la matrice des $\operatorname{Log}{u_i}$ où $\l u_1,\cdots,u_{r_1+r_2-1}\r$ est une famille fondamentale d'unités et $\operatorname{Log}\l u_i\r=\l\sigma_1\l u_i\r,\cdots,\sigma_{r_1+r_2}\l u_i\r\r$ avec $\sigma_j$ les plongements réels et complexes non conjugués
+$\vol{\operatorname{Log}\l\calO_K^\times\r}$;;$\sqrt{r_1+r_2}R_K$

@@ -1,0 +1,8 @@
+Théorie algébrique des nombres -- Corps finis et résidus quadratiques
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{arithmetique}\let\legendre\dlegendre\usepackage[nopar]{bigoperators}\usepackage{usuelles}
+$\legendre ap\bmod p$;;$\cgr{\legendre ap}{a^{\frac{p-1}2}}p$
+$\legendre{ab}p$;;$\legendre ap\legendre bp$
+Loi de réciprocité quadratique;;$\legendre pq=\legendre qp\l-1\r^{\frac{p-1}2\times\frac{q-1}2}$\linebreak$\legendre2p=\l-1\r^{\frac{p^2-1}8}$
+Inégalité de Pólya--Vinogradov;;Pour tout $a\in\bbZ$, $n\geqslant1$ et $p$ premier impair, $\left|\sum{j=a}{a+n}{\legendre jp}\right|\leqslant\sqrt p\ln p$
