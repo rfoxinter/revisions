@@ -16,3 +16,8 @@ Anneau local de $V$ en $P$\linebreak$\calO_{V,P}$;;$\set{f\in\pol kV,P\in\dom f}
 Propriétés de $\dom f$;;$\dom f$ est ouvert dense pour la topologie de Zariski\linebreak Si $\bbk$ est algébriquement clos, alors $\dom f=V$ si et seulement si $f\in\pol kV$
 Fonction rationnelle $f\!:\!V\dashto\bbA_\bbk^n$\linebreak$V$ une variété affine;;Application partielle définie par $f=\l f_1,\cdots,f_n\r$, $f_i\in\fr kV$\linebreak$\dom f=\bigcap{i=1}n{\dom{f_i}}$\linebreak $f$ est régulière en $P$ si $P\in\dom f$
 Application rationnelle entre variétés affines $f\!:\!V\dashto W$;;Fonction rationnelle $f\!:\!V\dashto\bbA_\bbk^n$ telle que $f\l\dom f\r\subset W$
+$f\!:\!V\dashto W$ est dominante;;$f\l\dom f\r$ est dense dans $W$ pour la topologie de Zariski
+Propriétés de $f^*$ pour $f\!:\!V\dashto W$;;Si $f$ est une application polynomiale alors $\appl f{\fr kW}{\fr kV}g{g\circ f}$ est un $\bbk$-morphisme de corps\linebreak Tout morphisme de $\bbk$-corps $\varPhi\!:\!\fr kW\to\fr kV$ est de la forme $\varPhi=f^*$ pour $f\!:\!V\dashto W$ rationnelle\linebreak$\l g\circ f\r^*=f^*\circ g^*$
+Morphisme $f\!:\!U\to W$;;Application rationnelle $f\!:\!V\dashto W$ avec $U$ un ouvert de $V$ une variété affine tel que $U\subset\dom f$
+$f\!:\!V\dashto W$ rationnelle est un isomorphisme;;Il existe une fonction rationnelle $g\!:\!W\dashto V$ telle que $g\circ f=\id_V$ et $f\circ g=\id_W$
+Ouvert standard de $V$;;$V_f=V\setminus V\l f\r$ pour $f\in\pol kV$\linebreak $V_f$ est isomorphe à une variété affine et $\pol k{V_f}=\pol kV\lc f^{-1}\rc$

@@ -2,7 +2,9 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/Coniques
 20260124083515
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/FonctionsSurLesVarietes
-20260208152358
+20260301120543
+../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/GeometrieProjectiveEtBirationnelle
+20260301123535
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/VarietesAlgebriques
 20260130210259
 ../M1S2/flashcards/ProcessusStochastiques/ConvergenceEnLoiEtTheoremeCentralLimite
@@ -10,7 +12,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/ProcessusStochastiques/MouvementBrownien
 20260129202726
 ../M1S2/flashcards/ProcessusStochastiques/ProprietesDuMouvementBrownien
-20260213190348
+20260301113502
 ../M1S2/flashcards/SurfacesDeRiemann/FonctionsElliptiques
 20260129210303
 ../M1S2/flashcards/SurfacesDeRiemann/FormesDifferentielles
@@ -34,7 +36,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/UnitesDeLAnneauDesEntiers
 20260224202131
 ../M1S2/flashcards/TheorieSpectrale/CalculFonctionnelPourLesOperateurAutoadjoints
-20260213195825
+20260301115426
 ../M1S2/flashcards/TheorieSpectrale/OperateursAutoadjoints
 20260129205343
 ../M1S2/flashcards/TheorieSpectrale/OperateursCompacts

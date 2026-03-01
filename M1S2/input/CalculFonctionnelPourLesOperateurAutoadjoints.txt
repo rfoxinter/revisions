@@ -1,10 +1,16 @@
 Théorie spectrale -- Calcul fonctionnel pour les opérateur autoadjoints
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{topologie}\usepackage{usuelles}\togglebornelimits\usepackage{polynomes}
+\usepackage{topologie}\usepackage{usuelles,structures}\togglebornelimits\usepackage{polynomes}\usepackage{footnotes}\let\id\relax\DeclareMathOperator{\id}{id}
 Propriétés spectrales de $P\l T\r$ pour $T\in\calB\l H\r$ autoadjoint;;$P\l T\r$ est inversible si et seulement $P$ ne s'annule par sur $\sigma\l T\r$\linebreak$\sigma\l P\l T\r\r=P\l\sigma\l T\r\r$\linebreak$\nrm{P\l t\r}=\max[\lambda\in\sigma\l T\r]{\vala{P\l\lambda\r}}$
 $P\l T\r^*$ pour $P\in\pol CX$;;$\overline P\l T^*\r$
 Représentation de $\calC\l X,\bbK\r$ pour $X$ un espace compact;;Morphisme de $\bbK$-algèbres $\pi\!:\!\calC\l X,\bbK\r\to\calB\l H\r$ avec $H$ un espace de Hilbert
 $*$-représentation;;Représentation $\pi$ telle que, pour tout $f\in\calC\l X,\bbK\r$, $\pi\l\overline f\r=\pi\l f\r^*$
 Propriétés d'une $*$-représentation $\pi$;;$\nrm{\pi\l f\r}\leqslant\anrm f$\linebreak$\pi$ est continue (car contractante)\linebreak$\sigma\l\pi\l f\r\r\subset f\l X\r$\linebreak$\sigma\l\pi\l f\r\r=f\l X\r$ si et seulement si $\pi$ est une isométrie
-Théorème du calcul fonctionnel continu;;Soit $H$ un espace de Hilbert et $T\in\calB\l H\r$ un opérateur autoadjoint, alors il existe une unique $*$-représentation $\pi_T\!:\!\calC\l\sigma\l T\r,\bbK\r\to\calB\l H\r$ telle que $\pi\l\operatorname{id}_{\sigma\l T\r}\r=T$\linebreak On note $f\l T\r=\pi_T\l f\r$\linebreak$\nrm{f\l T\r}=\anrm f$ et $\sigma\l f\l T\r\r=f\l\sigma\l T\r\r$
+Théorème du calcul fonctionnel continu;;Soit $H$ un espace de Hilbert et $T\in\calB\l H\r$ un opérateur autoadjoint, alors il existe une unique $*$-représentation $\pi_T\!:\!\calC\l\sigma\l T\r,\bbK\r\to\calB\l H\r$ telle que $\pi\l\id_{\sigma\l T\r}\r=T$\linebreak On note $f\l T\r=\pi_T\l f\r$\linebreak$\nrm{f\l T\r}=\anrm f$ et $\sigma\l f\l T\r\r=f\l\sigma\l T\r\r$
+Racine carrée d'un opérateur $T$ borné autoadjoint positif;;Il existe un unique $S$ autoadjoint borné positif tel que $S^2=T$\linebreak Cet opérateur commute à $T$
+Décomposition polaire d'un opérateur borné autoadjoint;;Si $T\in\calB\l H\r$ est autoadjoint, il existe un unique couple d'opérateurs $\l V,R\r$ avec $R$ positif, $\ker R=\ker V=\ker T=\ker{\vala T}$ et $V_{|\ker V^\perp}$ est une isométrie\linebreak De plus, on a $R=\vala T=\sqrt{T^*T}$
+Propriétés des points isolés de $\sigma\l T\r$ pour $T$ borné autoadjoint;;$\lambda$ est valeur propre et $\lambda\notin\sigma\l T_{\ker{T-\lambda\id}^\perp}\r$
+$\xi$ est cyclique pour $\pi$ une $*$-représentation;;$\set{\pi\l f\r\cdot\xi,f\in\calC\l X\r}$ est dense dans $H$
+Conséquence du théorème de Riesz pour les mesures sur les $*$-représentations;;Soit $\pi\!:\!\calC\l X\r\to\calB\l H\r$ avec $X$ un espace compact et qui admet un vecteur cyclique $\xi$, alors il existe une unique mesure finie $\mu$ et une unique isométrie $U\!:\!\operatorname L^2\l X,\mu\r\to H$ telle que $U1_X=\xi$ et $\pi\l f\r U=UM_f$ avec $M_f$ l'opérateur de multiplication par $f$
+Théorème spectral;;Si $T=T^*\in\calB\l H\r$ et $\xi\in H$ est $T$-cyclique\footnote{$\la\set{T^n\xi,n\in\bbN}\ra$ est dense dans $H$}, alors il existe une unique mesure finie $\mu$ sur $\sigma\l T\r$ un unique unitaire $U\!:\!\operatorname L^2\l\sigma\l T\r,\mu\r\to H$ tel que $U1_{\sigma\l T\r}=\xi$ et $U^*TU$ est l'opérateur de multiplication par $\id_{\sigma\l T\r}$

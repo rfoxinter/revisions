@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{topologie}\usepackage{usuelles}\togglebornelimits\usepackage{polynomes}
+\usepackage{topologie}\usepackage{usuelles,structures}\togglebornelimits\usepackage{polynomes}\usepackage{footnotes}\let\id\relax\DeclareMathOperator{\id}{id}
 \hypersetup{pdftitle={Théorie spectrale -- Calcul fonctionnel pour les opérateur autoadjoints}}
 \title{Théorie spectrale\\\emph{Calcul fonctionnel pour les opérateur autoadjoints}}
 \author{}
@@ -10,16 +10,28 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Théorème du calcul fonctionnel continu}{1/6}
-\slider{Soit $H$ un espace de Hilbert et $T\in\calB\l H\r$ un opérateur autoadjoint, alors il existe une unique $*$-représentation $\pi_T\!:\!\calC\l\sigma\l T\r,\bbK\r\to\calB\l H\r$ telle que $\pi\l\operatorname{id}_{\sigma\l T\r}\r=T$\linebreak On note $f\l T\r=\pi_T\l f\r$\linebreak$\nrm{f\l T\r}=\anrm f$ et $\sigma\l f\l T\r\r=f\l\sigma\l T\r\r$}{1/6}
-\slideq{Propriétés d'une $*$-représentation $\pi$}{2/6}
-\slider{$\nrm{\pi\l f\r}\leqslant\anrm f$\linebreak$\pi$ est continue (car contractante)\linebreak$\sigma\l\pi\l f\r\r\subset f\l X\r$\linebreak$\sigma\l\pi\l f\r\r=f\l X\r$ si et seulement si $\pi$ est une isométrie}{2/6}
-\slideq{$*$-représentation}{3/6}
-\slider{Représentation $\pi$ telle que, pour tout $f\in\calC\l X,\bbK\r$, $\pi\l\overline f\r=\pi\l f\r^*$}{3/6}
-\slideq{$P\l T\r^*$ pour $P\in\pol CX$}{4/6}
-\slider{$\overline P\l T^*\r$}{4/6}
-\slideq{Propriétés spectrales de $P\l T\r$ pour $T\in\calB\l H\r$ autoadjoint}{5/6}
-\slider{$P\l T\r$ est inversible si et seulement $P$ ne s'annule par sur $\sigma\l T\r$\linebreak$\sigma\l P\l T\r\r=P\l\sigma\l T\r\r$\linebreak$\nrm{P\l t\r}=\max[\lambda\in\sigma\l T\r]{\vala{P\l\lambda\r}}$}{5/6}
-\slideq{Représentation de $\calC\l X,\bbK\r$ pour $X$ un espace compact}{6/6}
-\slider{Morphisme de $\bbK$-algèbres $\pi\!:\!\calC\l X,\bbK\r\to\calB\l H\r$ avec $H$ un espace de Hilbert}{6/6}
+\slideq{Représentation de $\calC\l X,\bbK\r$ pour $X$ un espace compact}{1/12}
+\slider{Morphisme de $\bbK$-algèbres $\pi\!:\!\calC\l X,\bbK\r\to\calB\l H\r$ avec $H$ un espace de Hilbert}{1/12}
+\slideq{Conséquence du théorème de Riesz pour les mesures sur les $*$-représentations}{2/12}
+\slider{Soit $\pi\!:\!\calC\l X\r\to\calB\l H\r$ avec $X$ un espace compact et qui admet un vecteur cyclique $\xi$, alors il existe une unique mesure finie $\mu$ et une unique isométrie $U\!:\!\operatorname L^2\l X,\mu\r\to H$ telle que $U1_X=\xi$ et $\pi\l f\r U=UM_f$ avec $M_f$ l'opérateur de multiplication par $f$}{2/12}
+\slideq{Théorème spectral}{3/12}
+\slider{Si $T=T^*\in\calB\l H\r$ et $\xi\in H$ est $T$-cyclique\footnote{$\la\set{T^n\xi,n\in\bbN}\ra$ est dense dans $H$}, alors il existe une unique mesure finie $\mu$ sur $\sigma\l T\r$ un unique unitaire $U\!:\!\operatorname L^2\l\sigma\l T\r,\mu\r\to H$ tel que $U1_{\sigma\l T\r}=\xi$ et $U^*TU$ est l'opérateur de multiplication par $\id_{\sigma\l T\r}$}{3/12}
+\slideq{$\xi$ est cyclique pour $\pi$ une $*$-représentation}{4/12}
+\slider{$\set{\pi\l f\r\cdot\xi,f\in\calC\l X\r}$ est dense dans $H$}{4/12}
+\slideq{$*$-représentation}{5/12}
+\slider{Représentation $\pi$ telle que, pour tout $f\in\calC\l X,\bbK\r$, $\pi\l\overline f\r=\pi\l f\r^*$}{5/12}
+\slideq{$P\l T\r^*$ pour $P\in\pol CX$}{6/12}
+\slider{$\overline P\l T^*\r$}{6/12}
+\slideq{Propriétés d'une $*$-représentation $\pi$}{7/12}
+\slider{$\nrm{\pi\l f\r}\leqslant\anrm f$\linebreak$\pi$ est continue (car contractante)\linebreak$\sigma\l\pi\l f\r\r\subset f\l X\r$\linebreak$\sigma\l\pi\l f\r\r=f\l X\r$ si et seulement si $\pi$ est une isométrie}{7/12}
+\slideq{Théorème du calcul fonctionnel continu}{8/12}
+\slider{Soit $H$ un espace de Hilbert et $T\in\calB\l H\r$ un opérateur autoadjoint, alors il existe une unique $*$-représentation $\pi_T\!:\!\calC\l\sigma\l T\r,\bbK\r\to\calB\l H\r$ telle que $\pi\l\id_{\sigma\l T\r}\r=T$\linebreak On note $f\l T\r=\pi_T\l f\r$\linebreak$\nrm{f\l T\r}=\anrm f$ et $\sigma\l f\l T\r\r=f\l\sigma\l T\r\r$}{8/12}
+\slideq{Propriétés des points isolés de $\sigma\l T\r$ pour $T$ borné autoadjoint}{9/12}
+\slider{$\lambda$ est valeur propre et $\lambda\notin\sigma\l T_{\ker{T-\lambda\id}^\perp}\r$}{9/12}
+\slideq{Racine carrée d'un opérateur $T$ borné autoadjoint positif}{10/12}
+\slider{Il existe un unique $S$ autoadjoint borné positif tel que $S^2=T$\linebreak Cet opérateur commute à $T$}{10/12}
+\slideq{Décomposition polaire d'un opérateur borné autoadjoint}{11/12}
+\slider{Si $T\in\calB\l H\r$ est autoadjoint, il existe un unique couple d'opérateurs $\l V,R\r$ avec $R$ positif, $\ker R=\ker V=\ker T=\ker{\vala T}$ et $V_{|\ker V^\perp}$ est une isométrie\linebreak De plus, on a $R=\vala T=\sqrt{T^*T}$}{11/12}
+\slideq{Propriétés spectrales de $P\l T\r$ pour $T\in\calB\l H\r$ autoadjoint}{12/12}
+\slider{$P\l T\r$ est inversible si et seulement $P$ ne s'annule par sur $\sigma\l T\r$\linebreak$\sigma\l P\l T\r\r=P\l\sigma\l T\r\r$\linebreak$\nrm{P\l t\r}=\max[\lambda\in\sigma\l T\r]{\vala{P\l\lambda\r}}$}{12/12}
 \end{document}
