@@ -29,6 +29,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20260224204826
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/EntiersAlgebriques
 20260205203320
+../M1S2/flashcards/TheorieAlgebriqueDesNombres/FormesQuadratiquesBinaires
+20260303091010
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/GeometrieDesNombres
 20260205203057
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/GroupesDeClasses

@@ -1,0 +1,24 @@
+Théorie algébrique des nombres -- Formes quadratiques binaires
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{polynomes,arithmetique,arrows,al,matrices}\DeclareMathOperator{\olddisc}{disc}\newcommand{\disc}[1]{\olddisc\l#1\r}
+Forme quadratique binaire;;$q\in\pol Z{X,Y}$ homogène de degré $2$\linebreak$\l a,b,c\r=aX^2+bXY+cY^2$
+Forme quadratique binaire primitive;;$q=\l a,b,c\r$ avec $a\wedge b\wedge c=1$
+$\disc q$\linebreak$q=\l a,b,c\r$;;$D=b^2-4ac$
+CNS pour que $D$ soit le discriminant d'une forme quadratique binaire;;$\cgr D04$ ou $\cgr D14$
+Forme principale de détermiant $D$;;$q_D=\l1,0,\frac{-D}4\r$ si $\cgr D04$\linebreak$q_D=\l1,1,\frac{1-D}4\r$ si $\cgr D14$
+$q$ représente (primitivement) $n$;;Il existe $\l x,y\r\in\bbZ^2\setminus\set{\l0,0\r}$ ($x\wedge y=1$) tel que $q\l x,y\r=n$
+CNS pour que $q$ représente $0$;;$D$ est un carré
+CNS pour que $D\leqslant0$;;$q$ est de signe constant
+$M_q$\linebreak$q=\l a,b,c\r$;;$\crampedtmatrix({2a\&b\\b\&2c\\})$\linebreak$q\l x,y\r=\frac12\crampedtmatrix({x\\y\\})^\top M_q\crampedtmatrix({x\\y\\})$
+Action $\matgl2\bbZ\acts\calQ$;;$q\circ P\l x,y\r=q(P(x,y))$\linebreak$M_{q\circ P}=P^\top M_qP$\linebreak L'action préserve le discriminant, les formes primitives, les entiers (primitivement) représentés et le signe (si $D\leqslant0$)
+$q\sim q'$;;$\exists P\in\matgl2\bbZ,q'=q\circ P$
+$q\sim^+ q'$;;$\exists P\in\sl[2]\bbZ,q'=q\circ P$
+CNS sur la classe de $q$ pour qu'elle représente primitivement $n\in\bbZ$;;Il existe $b$ tel que $-\left|n\right|<b\leqslant\left|n\right|$ et $c\in\bbZ$ tels que $q\sim^+\l n,b,c\r$
+CNS sur $\disc q$ pour que $q$ représente $1$;;$q\sim^+q_{\disc q}$ la forme principale de détermiant $\disc q$
+CNS sur $\disc q$ pour que $q$ représente primitivement $n$;;$\cgr{\disc q}0{4n}$
+Condition pour que $p$ soit représentée par $q$ de discriminant $D$ et propriétés de ces formes quadratique;;Si $D$ est un carré modulo $4p$, il existe une forme quadratique binaire représentant $p$\linebreak Elle est unique à équivalence près par l'acion de $\matgl2\bbZ$
+Théorème de Lagrange;;Si $D\neq0$, il n'existe qu'un nombre fini de classes de $\calQ\l D\r$ par l'action de $\sl[2]\bbZ$
+$q\in\calQ$ est positive;;$q\l x,y\r\geqslant0$ pour tout $\l x,y\r\in\bbZ^2$
+La forme positive $q=\l a,b,c\r$ est réduite;;$-a<b\leqslant a\leqslant c$ avec $b\geqslant0$ si $a=c$
+Théorème de Gauss;;Si $D<0$, toute forme quadratique binaire positive est proprement équivalente à une unique forme réduite

@@ -14,3 +14,5 @@
     \edef\mulen{\convertto{1pt}{1em}pt}%
     \mathrel{\begin{tikzpicture}[baseline=-.85ex]\draw[-{>[length=.25em,width=1.25*\the\myhh]},line cap=round,line width=.085ex,smooth] (0,1/9em) to[out=50,in=130] ($(\the\myww,-.005)+(-\mulen,0)$);\end{tikzpicture}}%
 }
+
+\newcommand{\dashto}{\mathrel{-\mkern-6mu{\to}\mkern-22.5mu{\text{\color{white}\boldmath${\cdot}{\cdot}{\cdot}$}}\mkern1mu\phantom{.}}}
