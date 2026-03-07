@@ -1,0 +1,21 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{probas}
+\hypersetup{pdftitle={Processus stochastiques -- Processus de Poisson}}
+\title{Processus stochastiques\\\emph{Processus de Poisson}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Loi de $N_t$ pour un processus de Poisson d'intensité $\lambda$}{1/4}
+\slider{$N_t\sim\poiss{\lambda t}$}{1/4}
+\slideq{Propriété de Markov faible pour les processus de Poisson}{2/4}
+\slider{Si $\l N_t\r$ est un processus de Poisson d'intensité $\lambda$, alors $\l N_{t+s}-N_t\r_{s\geqslant0}$ est un processus de Poisson d'intensité $\lambda$ indépendant de $\l N_s\r_{0\leqslant s\leqslant t}$\linebreak En particulier, conditionnellement à $N_t=m$, $N_{t+s}=m+\mathcal{PP}\l\lambda\r$ avec le processus indépendant de $\calF_t$ la filtration canonique}{2/4}
+\slideq{Processus de Poisson d'intensité $\lambda\in\bbR_+^*$}{3/4}
+\slider{$\l N_t\r_{t\geqslant0}$ un processus aléatoire tel que pour tout $\omega\in\varOmega$, $t\mapsto N_t\l\omega\r$ est càdlàg à valeurs dans $\bbN$, $N_0=0$, $N_t-N_{t^-}\in\set{0,1}$ et les temps entre deux sauts consécutifs sont des variables exponentielles indépendantes de paramètre $\lambda$}{3/4}
+\slideq{Propriétés de la limite de $\frac{N_t}t$}{4/4}
+\slider{$\frac{N_t}t\xrightarrow[t\to+\infty]{\text{p.s.}}\lambda$\linebreak$\sqrt t\l\frac{N_t}t-\lambda\r\xrightarrow[t\to+\infty]{\calL}\normal0\lambda$}{4/4}
+\end{document}
