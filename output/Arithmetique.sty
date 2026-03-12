@@ -10,11 +10,11 @@
   \kern.5\p@}\hfil
   \kern-#2\p@
   }}
-\def\@legendre#1#2#3#4#5{\mathopen{}\left(\kern-1.5pt
+\def\@legendre#1#2#3#4#5{\mathopen{}\left(
   \sbox\z@{$\genfrac{}{}{0pt}{#1}{#3#4}{#3#5}$}%
   \dimen@=\wd\z@
   \kern-\p@\vcenter{\box0}\kern-\dimen@\vcenter{\legendre@dash\dimen@{#2}}\kern-\p@
-  \kern-1.5pt\right)\mathclose{}}
+  \right)\mathclose{}}
 \newcommand\legendre[2]{\mathchoice
   {\@legendre{0}{1}{}{#1}{#2}}
   %{\@legendre{1}{.5}{\vphantom{1}}{#1}{#2}}

@@ -18,7 +18,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/SurfacesDeRiemann/FonctionsElliptiques
 20260129210303
 ../M1S2/flashcards/SurfacesDeRiemann/FormesDifferentielles
-20260213184549
+20260312183358
 ../M1S2/flashcards/SurfacesDeRiemann/TheorieDeLaRamification
 20260213183706
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/AnneauxDEntiersDesCorpsDeNombres
@@ -28,7 +28,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/CorpsDeNombres
 20260113080340
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/CorpsFinisEtResidusQuadratiques
-20260224204826
+20260312183624
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/EntiersAlgebriques
 20260205203320
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/FormesQuadratiquesBinaires
