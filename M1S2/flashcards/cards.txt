@@ -4,7 +4,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/FonctionsSurLesVarietes
 20260301120543
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/GeometrieProjectiveEtBirationnelle
-20260301123535
+20260313212725
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/VarietesAlgebriques
 20260130210259
 ../M1S2/flashcards/ProcessusStochastiques/ConvergenceEnLoiEtTheoremeCentralLimite
@@ -40,7 +40,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/UnitesDeLAnneauDesEntiers
 20260224202131
 ../M1S2/flashcards/TheorieSpectrale/CalculFonctionnelPourLesOperateurAutoadjoints
-20260301115426
+20260313213042
 ../M1S2/flashcards/TheorieSpectrale/OperateursAutoadjoints
 20260129205343
 ../M1S2/flashcards/TheorieSpectrale/OperateursCompacts
