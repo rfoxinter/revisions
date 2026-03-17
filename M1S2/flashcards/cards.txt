@@ -32,7 +32,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/EntiersAlgebriques
 20260205203320
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/FormesQuadratiquesBinaires
-20260303091010
+20260317111213
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/GeometrieDesNombres
 20260205203057
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/GroupesDeClasses
