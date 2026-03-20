@@ -1,0 +1,6 @@
+Théorie spectrale -- Spectre dans une algèbre quelconque
+Shuffle questions : True
+Q/R & R/Q : False
+
+Spectre de $a\in A$ avec $A$ une $\bbK$-algèbre;;$\sigma_A\l a\r=\set{\lambda\in\bbK,a-\lambda\in A^\times}$
+Lien entre $\sigma\l ab\r$ et $\sigma\l ba\r$;;$\sigma\l ab\r\setminus\set0=\sigma\l ba\r\setminus\set0$

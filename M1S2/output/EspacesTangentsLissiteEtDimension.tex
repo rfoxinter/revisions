@@ -1,0 +1,35 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage[nopar]{bigoperators}\usepackage{analyse}\usepackage{geometrie}\usepackage{polynomes}\usepackage{al}
+\hypersetup{pdftitle={Introduction à la géométrie algébrique -- Espaces tangents, lissité et dimension}}
+\title{Introduction à la géométrie algébrique\\\emph{Espaces tangents, lissité et dimension}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Propriétés topologiques de $V_\text{ns}=\set{P\in V,P\text{ n'est pas singulier}}$}{1/11}
+\slider{C'est un ouvert dense de $V$ pour la topologie de Zariski}{1/11}
+\slideq{Lien entre $\operatorname{\bbT}_PV$ et $\tg_PV_{\l i\r}$ pour $V\subset\bbP^n_\bbK$ définie par $f$}{2/11}
+\slider{Si $X_i$ intervient dans $f$ alors $\operatorname{\bbT}_PV$ est la fermeture pour la topologie de Zariski de $\tg_PV_{\l i\r}$ vu dans la carte affine $\l X_i\neq0\r$}{2/11}
+\slideq{Invariance de $\olddim$}{3/11}
+\slider{Si deux variétés affines $V$ et $W$ sont en relation birationnelle alors $\dim V=\dim W$}{3/11}
+\slideq{$\tg_PV$ pour $P\in V\subset\bbA^n_\bbk$ une sous-variété}{4/11}
+\slider{$\bigcap{i\in I\l V\r}{}{\l f_P^{\l1\r}=0\r}\subset\bbA^n_\bbk$}{4/11}
+\slideq{$\operatorname{\bbT}_PV$ pour $V\subset\bbP^n_\bbk$ une variété projective définie par $f$ homogène}{5/11}
+\slider{$\l\sum{i=0}n{\pder[][X_i]fPX_i}=0\r$}{5/11}
+\slideq{$P\in V\subset\bbA^n_\bbk$ est non-singulier (ou lisse) pour $f$\linebreak$P\in V\subset\bbA^n_\bbk$ est singulier pour $f$}{6/11}
+\slider{$\exists i,\pder[][X_i]fP=0$\linebreak$\forall i,\pder[][X_i]fP=0$}{6/11}
+\slideq{Lien entre $\tg_PV$ et $\fr kV$}{7/11}
+\slider{$\dim{\tg_PV}=\operatorname{deg\,tr}_\bbk\l\fr kV\r$}{7/11}
+\slideq{$P\in V$ est non-singulier dans $V$\linebreak$P\in V$ est singulier dans $V$}{8/11}
+\slider{$\dim{\tg_PV}=\dim V$\linebreak$\dim{\tg_PV}>\dim V$}{8/11}
+\slideq{Dimension d'une variété irréductible}{9/11}
+\slider{$r\in\llb0,n\rrb$ tel qu'il existe un ouvert dense $V_0\subset V$ tel que $\dim{\tg_PV}=r$ pour tout $P\in V_0$ (et on a alors que pour tout $P\in V$, $\dim{\tg_PV}\geqslant r$)}{9/11}
+\slideq{Une variété $V$ est non-singulière}{10/11}
+\slider{Tout $P\in V$ est non-singulier}{10/11}
+\slideq{$f_P^{\l1\r}$ pour $f\in\pol k{X_1,\cdots,X_n}$}{11/11}
+\slider{$\sum{i=1}n{\pder[][X_i]fP\l X_i-a_i\r}$}{11/11}
+\end{document}

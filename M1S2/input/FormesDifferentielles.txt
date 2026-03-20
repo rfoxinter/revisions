@@ -1,7 +1,7 @@
 Surfaces de Riemann -- Formes différentielles
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage[nopar]{bigoperators}\usepackage{geometrie,complexes}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldA}{A}\newcommand{\A}[3]{\oldA^{#1}_{#2}\l#3\r}\def\barOmega{\bar\Omega\vphantom{\Omega}}
+\usepackage[nopar]{bigoperators}\usepackage{geometrie,complexes}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldA}{A}\newcommand{\A}[3]{\oldA^{#1}_{#2}\l#3\r}\def\barOmega{\bar\Omega\vphantom{\Omega}}\usepackage{topologie,structures,al,analysecomplexe}
 Espace tangent à une surface de Riemann $X$ en $P$;;$\tg_PX$ peut être naturellement muni d'une structure de $\bbC$-ev (de dimension $1$) via $\gamma\mapsto\l\phi\circ\gamma\r'\l0\r\in\bbC$
 Formes différentielles complexes de degré $k$;;$\A k\bbC X=\A k\bbR X\otimes_\bbR\bbC$\linebreak$\A k\bbR X$ les formes différentielles sur $X$ vue comme variété différentielle
 Décomposition de formes linéaires complexes;;Tout $\omega\in\A k\bbC X$ se décompose de manière unique en $\omega=\alpha+\ii\beta$ avec $\alpha,\beta\in\A k\bbR X$
@@ -17,3 +17,20 @@ Propriétés de $\int[][\cdot]{\bullet}$;;\toggleanalysedisplay$\omega\mapsto\in
 Formule d'adjonction;;$\int[][\gamma]{f^*\omega}=\int[][f\circ\gamma]\omega$ pour $f\!:\!X\to Y$ holomorphe
 Invariance par homotopie de $\int[][\cdot]\omega$;;Si $\omega\in\A1\bbC U$ est fermée et $\varGamma$ est une homotopie de chemins à extrémités fixées ou de lacets entre $\gamma_1$ et $\gamma_2$ sur $U$ alors $\int[][\gamma_1]\omega=\int[][\gamma_2]\omega$\linebreak C'est en particulier vrai pour les formes différentielles holomorphes
 $\int[][\gamma]\omega$ pour $\omega\in\A1\bbC U$ exacte;;$f\l\gamma\l b\r\r-f\l\gamma\l a\r\r$ si $\omega=\dd f$ avec $f\in\calC^\infty\l U,\bbC\r$
+Produit scalaire hermitien sur $\Omega^1\l X\r$;;$\appl{\psc\cdot\cdot}{\l\Omega^1\l X\r\r^2}{\bbC}{\l\omega,\nu\r}{\int[][X]{\omega\wedge\bar\nu}}$
+$\omega\in\A1\bbC X$ est de type $\l1,0\r$\linebreak$\omega\in\A1\bbC X$ est de type $\l0,1\r$;;Pour toute carte complexe de $X$ $\phi\!:\!U\to V\subopn\bbC$, $\phi_*\omega=\alpha\dd z$ avec $\alpha\in\calC^\infty\l X,\bbC\r$\linebreak Pour toute carte complexe de $X$ $\phi\!:\!U\to V\subopn\bbC$, $\phi_*\omega=\beta\dd\bar z$ avec $\beta\in\calC^\infty\l X,\bbC\r$
+Applications $\partial$ et $\bar\partial$;;$\appl\partial{\calC^\infty\l X,\bbC\r}{\A{1,0}{}X}f{\l\dd f\r^{1,0}}$\linebreak$\appl{\bar\partial}{\calC^\infty\l X,\bbC\r}{\A{0,1}{}X}f{\l\dd f\r^{0,1}}$
+CNS pour que $\omega\in\A{1,0}{}X$ soit holomorphe;;$\omega$ est fermée ($\dd\omega=0$)
+Applications $\partial\bar\partial$;;$\appl{\partial\bar\partial}{\calC^\infty\l X,\bbC\r}{\A2\bbC X}f{\dd\l\bar\partial f\r}$
+$f\in\calC^\infty\l X,\bbC\r$;;$\partial\bar\partial f=0$
+$\im{\partial\bar\partial}$;;$\set{\alpha\in\A2\bbC X,\int[][X]\alpha=0}$
+Cohomologie de de Rham de $X$;;$H^1_\text{dR}\l X,\bbR\r=\frac{\ker{{\dd}\!:\!\A1\bbR X\to\A2\bbR X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbR\r\to\A1\bbR X}}$\linebreak$H^1_\text{dR}\l X,\bbC\r=\frac{\ker{{\dd}\!:\!\A1\bbC X\to\A2\bbC X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbC\r\to\A1\bbC X}}$
+Décomposition de Hodge;;$X$ une surface de Riemann compacte conexe\linebreak$\nappl{\Omega^1\l X\r\oplus\barOmega^1\l X\r}{H^1_\text{dR}\l X,\bbC\r}{\l\omega,\nu\r}{\lc\omega+\nu\rc}$ est un isomorphisme d'espaces vectoriels\linebreak En particulier, $\dim{H^1_\text{dR}\l X,\bbC\r}=2g$ pour $g$ le genre de $X$
+$\omega\in\Omega^1\l U\setminus\set P\r$ est méromorphe en $P$;;$\phi_*\omega=f\l z\r\dd z$ est méromorphe en $0$ pour $\phi$ une carte centrée en $P$
+$\omega\in\Omega^1\l U\setminus\set P\r$ a une singularité essentielle en $P$;;$\phi_*\omega=f\l z\r\dd z$ a une singularité essentielle en $0$ pour $\phi$ une carte centrée en $P$
+$\Omega^1\l\calM\l X\r\r$;;Formes différentielles méromorphes\linebreak C'est l'ensemble des $\l S,\omega\r$ pour $S\subset X$ une partie discrète et fermée et $\omega\in\Omega^1\l X\setminus S\r$
+$\ord[P]{f\omega}$ pour $f\in\calM\l X\r$ et $\omega\in\Omega^1\l\calM\l X\r\r$;;$\ord[P]{f\omega}=\ord[P]{f}+\ord[P]{\omega}$
+Propriété de $\set{P\in X,\ord[P]\omega\neq0}$;;C'est une partie discrète et fermée de $X$
+$\ord[P]{\omega+\omega'}$ pour $\omega,\omega'\in\Omega^1\l\calM\l X\r\r$;;$\ord[P]{\omega+\omega'}\geqslant\ord[P]\omega+\ord[P]{\omega'}$
+$\fdiv\omega$ pour $X$ compacte connexe et $\omega\in\Omega^1\l\calM\l X\r\r$;;$\sum{P\in X}{}{\ord[P]\omega\lc P\rc}\in\Div X$
+Genre d'une surface de Riemann compacte connexe;;$\dim{\Omega^1\l X\r}$

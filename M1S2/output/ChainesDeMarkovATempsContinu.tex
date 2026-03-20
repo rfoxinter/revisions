@@ -1,0 +1,19 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{probas}\usepackage[nopar]{bigoperators}\usepackage{complexes,usuelles}
+\hypersetup{pdftitle={Processus stochastiques -- Chaînes de Markov à temps continu}}
+\title{Processus stochastiques\\\emph{Chaînes de Markov à temps continu}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Chaîne de Markov à temps continu associée à un noyau $P$ et $\lambda\!:\!E\to\bbR_+$}{1/3}
+\slider{$\l X_t\r_{t\in\lc0,T_\infty\right[}=\l Z_{N_t}\r$ avec $\l Z_n\r$ une chaîne de Markov sur un ensemble au plus dénombrable $E$ de noyau $P$, $\l E_n^z\r_{n\in\bbN,z\in E}$ des variables exponentielles indépendantes d'intensité $\lambda\l z\r$, $T_0=0$ et $T_n=E_1^{Z_0}+\cdots+E_n^{z_{n+1}}$, $N_t=\sup{u\in\bbN,T_u\leqslant t}\in\bar\bbN$ et $T_\infty=\sum{n=0}{+\infty}{E_{n+1}^{z_n}}$}{1/3}
+\slideq{Poissonisation d'une chaîne de Markov}{2/3}
+\slider{$\l Z_{N_t}\r_{t\geqslant0}$ pour $\l Z_n\r_{n\in\bbN}$ une chaîne de Markov sur un ensemble au plus dénombrable $E$ et $\l N_t\r_{t\geqslant0}$ un processus de Poisson d'intensité $\lambda$ indépendant de la chaîne de Markov\linebreak$\p{Z_{N_t}=y\sq Z_0=x}=\e^{-\lambda t}\sum{n=0}{+\infty}{\frac{\l\lambda t\r^n}{n!}Q^n\l x,y\r}$ pour $Q$ le noyau de la chaîne de Markov}{2/3}
+\slideq{Processus de Poisson composé}{3/3}
+\slider{$\l Z_{N_t}\r_{t\geqslant0}$ pour $\l Z_n\r_{n\in\bbN}$ une marche aléatoire sur un groupe $G$ et $\l N_t\r_{t\geqslant0}$ un processus de Poisson d'intensité $\lambda$ indépendant de la marche aléatoire\linebreak$\p{Z_{N_t}=y\sq Z_0=x}=\e^{-\lambda t}\sum{n=0}{+\infty}{\frac{\l\lambda t\r^n}{n!}Q^n\l0,yx^{-1}\r}$ pour $Q$ le noyau de la marche aléatoire}{3/3}
+\end{document}

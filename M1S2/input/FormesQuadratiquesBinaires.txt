@@ -22,5 +22,5 @@ Théorème de Lagrange;;Si $D\neq0$, il n'existe qu'un nombre fini de classes de
 $q\in\calQ$ est positive;;$q\l x,y\r\geqslant0$ pour tout $\l x,y\r\in\bbZ^2$
 La forme positive $q=\l a,b,c\r$ est réduite;;$-a<b\leqslant a\leqslant c$ avec $b\geqslant0$ si $a=c$
 Théorème de Gauss;;Si $D<0$, toute forme quadratique binaire positive est proprement équivalente à une unique forme réduite
-Base directe de $I\leqslant O_K$, $K=\fr Q{\sqrt d}$;;$\l u,v\r=P\l1,\alpha\r$ avec $P\in\matgl[+]2\bbQ$ et $\alpha=\sqrt d$ si $\cgr d24$ ou $\cgr d34$ et $\alpha=\frac{1+\sqrt d}{2}$ si $\cgr d14$
+Base directe de $I\leqslant\calO_K$, $K=\fr Q{\sqrt d}$;;$\l u,v\r=P\l1,\alpha\r$ avec $P\in\matgl[+]2\bbQ$ et $\alpha=\sqrt d$ si $\cgr d24$ ou $\cgr d34$ et $\alpha=\frac{1+\sqrt d}{2}$ si $\cgr d14$
 Lien entre $\operatorname{Cl}\l\calO_K\r$ et $\operatorname{Cl}\l D\r$ pour $K=\fr Q{\sqrt d}$ avec $d<0$;;$I\mapsto\l\l x,y\r\mapsto\frac{\operatorname{nrm}_{K/\bbQ}\l xu+yv\r}{N\l I\r}\r$ pour $\l u,v\r$ une base directe de $I$\linebreak $q\mapsto\bbZ a\oplus\bbZ  a\tau$ pour $\tau=\frac{b\pm\sqrt D}{2a}$ choisi tel que $\l a,a\tau\r$ soit directe\linebreak Ces deux applications sont deux bijections réciproques

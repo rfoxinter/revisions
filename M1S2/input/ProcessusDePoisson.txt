@@ -1,8 +1,11 @@
 Processus stochastiques -- Processus de Poisson
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{probas}
+\usepackage{probas}\usepackage[nopar]{bigoperators}\usepackage{usuelles}
 Processus de Poisson d'intensité $\lambda\in\bbR_+^*$;;$\l N_t\r_{t\geqslant0}$ un processus aléatoire tel que pour tout $\omega\in\varOmega$, $t\mapsto N_t\l\omega\r$ est càdlàg à valeurs dans $\bbN$, $N_0=0$, $N_t-N_{t^-}\in\set{0,1}$ et les temps entre deux sauts consécutifs sont des variables exponentielles indépendantes de paramètre $\lambda$
 Loi de $N_t$ pour un processus de Poisson d'intensité $\lambda$;;$N_t\sim\poiss{\lambda t}$
 Propriétés de la limite de $\frac{N_t}t$;;$\frac{N_t}t\xrightarrow[t\to+\infty]{\text{p.s.}}\lambda$\linebreak$\sqrt t\l\frac{N_t}t-\lambda\r\xrightarrow[t\to+\infty]{\calL}\normal0\lambda$
 Propriété de Markov faible pour les processus de Poisson;;Si $\l N_t\r$ est un processus de Poisson d'intensité $\lambda$, alors $\l N_{t+s}-N_t\r_{s\geqslant0}$ est un processus de Poisson d'intensité $\lambda$ indépendant de $\l N_s\r_{0\leqslant s\leqslant t}$\linebreak En particulier, conditionnellement à $N_t=m$, $N_{t+s}=m+\mathcal{PP}\l\lambda\r$ avec le processus indépendant de $\calF_t$ la filtration canonique
+Propriété de Markov forte pour les processus de Poisson;;Si $\l N_t\r$ est un processus de Poisson d'intensité $\lambda$ et $T$ un temps d'arrêt pour la filtration associée, alors $\l N_{T+s}-N_T\r_{s\geqslant0}$ est un processus de Poisson d'intensité $\lambda$ indépendant de $\calF_T$\linebreak En particulier, conditionnellement à $N_T=m$, $N_{T+s}=m+\mathcal{PP}\l\lambda\r$ avec le processus indépendant de $\calF_T$
+CNS pour qu'iun processus càdlàg soit un processus de Poisson d'intensité $\lambda$;;Ses incréments $\l N_{t_1},N_{t_2}-N_{t_1},\cdots,N_{t_n}-N_{t_{n-1}}\r$ sont indépendants et de même loi, $N_0=0$ et $N_t\sim\poiss{\lambda t}$
+Propriété de superposition;;{\togglebigopdisplay\togglebigoplimits Si $\l N_t^{\l i\r}\r$ sont des processus de Poisson d'intensité $\lambda_i$ indépendants alors $\sum{i=1}k{N^{\l i\r}}$ est un processus de Poisson d'intensité $\sum{i=1}k{\lambda_i}$\linebreak Si on note $T_1^{\l i\r}=\inf{\set{t\geqslant0,N_t^{\l i\r}=1}}$, $T_1=\inf{\set{t\geqslant0,N_t=1}}$ et $I\in\llb1,k\rrb$ tel que $T_1=T_1^{\l i\r}$ alors $T_1\indep I$ et $\p{I=i}=\frac{\lambda_i}{\sum{i=1}k{\lambda_i}}$}

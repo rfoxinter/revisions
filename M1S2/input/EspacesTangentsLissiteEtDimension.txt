@@ -1,0 +1,15 @@
+Introduction à la géométrie algébrique -- Espaces tangents, lissité et dimension
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage[nopar]{bigoperators}\usepackage{analyse}\usepackage{geometrie}\usepackage{polynomes}\usepackage{al}
+$P\in V\subset\bbA^n_\bbk$ est non-singulier (ou lisse) pour $f$\linebreak$P\in V\subset\bbA^n_\bbk$ est singulier pour $f$;;$\exists i,\pder[][X_i]fP=0$\linebreak$\forall i,\pder[][X_i]fP=0$
+Propriétés topologiques de $V_\text{ns}=\set{P\in V,P\text{ n'est pas singulier}}$;;C'est un ouvert dense de $V$ pour la topologie de Zariski
+$f_P^{\l1\r}$ pour $f\in\pol k{X_1,\cdots,X_n}$;;$\sum{i=1}n{\pder[][X_i]fP\l X_i-a_i\r}$
+$\tg_PV$ pour $P\in V\subset\bbA^n_\bbk$ une sous-variété;;$\bigcap{i\in I\l V\r}{}{\l f_P^{\l1\r}=0\r}\subset\bbA^n_\bbk$
+Dimension d'une variété irréductible;;$r\in\llb0,n\rrb$ tel qu'il existe un ouvert dense $V_0\subset V$ tel que $\dim{\tg_PV}=r$ pour tout $P\in V_0$ (et on a alors que pour tout $P\in V$, $\dim{\tg_PV}\geqslant r$)
+$P\in V$ est non-singulier dans $V$\linebreak$P\in V$ est singulier dans $V$;;$\dim{\tg_PV}=\dim V$\linebreak$\dim{\tg_PV}>\dim V$
+Une variété $V$ est non-singulière;;Tout $P\in V$ est non-singulier
+Invariance de $\olddim$;;Si deux variétés affines $V$ et $W$ sont en relation birationnelle alors $\dim V=\dim W$
+Lien entre $\tg_PV$ et $\fr kV$;;$\dim{\tg_PV}=\operatorname{deg\,tr}_\bbk\l\fr kV\r$
+$\operatorname{\bbT}_PV$ pour $V\subset\bbP^n_\bbk$ une variété projective définie par $f$ homogène;;$\l\sum{i=0}n{\pder[][X_i]fPX_i}=0\r$
+Lien entre $\operatorname{\bbT}_PV$ et $\tg_PV_{\l i\r}$ pour $V\subset\bbP^n_\bbK$ définie par $f$;;Si $X_i$ intervient dans $f$ alors $\operatorname{\bbT}_PV$ est la fermeture pour la topologie de Zariski de $\tg_PV_{\l i\r}$ vu dans la carte affine $\l X_i\neq0\r$
