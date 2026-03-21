@@ -17,7 +17,7 @@ Propriétés de $\int[][\cdot]{\bullet}$;;\toggleanalysedisplay$\omega\mapsto\in
 Formule d'adjonction;;$\int[][\gamma]{f^*\omega}=\int[][f\circ\gamma]\omega$ pour $f\!:\!X\to Y$ holomorphe
 Invariance par homotopie de $\int[][\cdot]\omega$;;Si $\omega\in\A1\bbC U$ est fermée et $\varGamma$ est une homotopie de chemins à extrémités fixées ou de lacets entre $\gamma_1$ et $\gamma_2$ sur $U$ alors $\int[][\gamma_1]\omega=\int[][\gamma_2]\omega$\linebreak C'est en particulier vrai pour les formes différentielles holomorphes
 $\int[][\gamma]\omega$ pour $\omega\in\A1\bbC U$ exacte;;$f\l\gamma\l b\r\r-f\l\gamma\l a\r\r$ si $\omega=\dd f$ avec $f\in\calC^\infty\l U,\bbC\r$
-Produit scalaire hermitien sur $\Omega^1\l X\r$;;$\appl{\psc\cdot\cdot}{\l\Omega^1\l X\r\r^2}{\bbC}{\l\omega,\nu\r}{\int[][X]{\omega\wedge\bar\nu}}$
+Produit scalaire hermitien sur $\Omega^1\l X\r$;;$\appl{\psc\cdot\cdot}{\l\Omega^1\l X\r\r^2}{\bbC}{\l\omega,\nu\r}{\frac\ii2\int[][X]{\omega\wedge\bar\nu}}$
 $\omega\in\A1\bbC X$ est de type $\l1,0\r$\linebreak$\omega\in\A1\bbC X$ est de type $\l0,1\r$;;Pour toute carte complexe de $X$ $\phi\!:\!U\to V\subopn\bbC$, $\phi_*\omega=\alpha\dd z$ avec $\alpha\in\calC^\infty\l X,\bbC\r$\linebreak Pour toute carte complexe de $X$ $\phi\!:\!U\to V\subopn\bbC$, $\phi_*\omega=\beta\dd\bar z$ avec $\beta\in\calC^\infty\l X,\bbC\r$
 Applications $\partial$ et $\bar\partial$;;$\appl\partial{\calC^\infty\l X,\bbC\r}{\A{1,0}{}X}f{\l\dd f\r^{1,0}}$\linebreak$\appl{\bar\partial}{\calC^\infty\l X,\bbC\r}{\A{0,1}{}X}f{\l\dd f\r^{0,1}}$
 CNS pour que $\omega\in\A{1,0}{}X$ soit holomorphe;;$\omega$ est fermée ($\dd\omega=0$)
