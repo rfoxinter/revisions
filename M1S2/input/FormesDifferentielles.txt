@@ -21,7 +21,7 @@ Produit scalaire hermitien sur $\Omega^1\l X\r$;;$\appl{\psc\cdot\cdot}{\l\Omega
 $\omega\in\A1\bbC X$ est de type $\l1,0\r$\linebreak$\omega\in\A1\bbC X$ est de type $\l0,1\r$;;Pour toute carte complexe de $X$ $\phi\!:\!U\to V\subopn\bbC$, $\phi_*\omega=\alpha\intd z$ avec $\alpha\in\calC^\infty\l X,\bbC\r$\linebreak Pour toute carte complexe de $X$ $\phi\!:\!U\to V\subopn\bbC$, $\phi_*\omega=\beta\intd\bar z$ avec $\beta\in\calC^\infty\l X,\bbC\r$
 Applications $\partial$ et $\bar\partial$;;$\appl\partial{\calC^\infty\l X,\bbC\r}{\A{1,0}{}X}f{\l\dd f\r^{1,0}}$\linebreak$\appl{\bar\partial}{\calC^\infty\l X,\bbC\r}{\A{0,1}{}X}f{\l\dd f\r^{0,1}}$
 CNS pour que $\omega\in\A{1,0}{}X$ soit holomorphe;;$\omega$ est fermée ($\dd\omega=0$)
-Applications $\partial\bar\partial$;;$\appl{\partial\bar\partial}{\calC^\infty\l X,\bbC\r}{\A2\bbC X}f{\dd\l\bar\partial f\r}$
+Application $\partial\bar\partial$;;$\appl{\partial\bar\partial}{\calC^\infty\l X,\bbC\r}{\A2\bbC X}f{\dd\l\bar\partial f\r}$
 $f\in\calC^\infty\l X,\bbC\r$;;$\partial\bar\partial f=0$
 $\im{\partial\bar\partial}$;;$\set{\alpha\in\A2\bbC X,\int[][X]\alpha=0}$
 Cohomologie de de Rham de $X$;;$H^1_\text{dR}\l X,\bbR\r=\frac{\ker{{\dd}\!:\!\A1\bbR X\to\A2\bbR X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbR\r\to\A1\bbR X}}$\linebreak$H^1_\text{dR}\l X,\bbC\r=\frac{\ker{{\dd}\!:\!\A1\bbC X\to\A2\bbC X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbC\r\to\A1\bbC X}}$
