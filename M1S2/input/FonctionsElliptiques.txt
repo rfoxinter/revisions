@@ -38,4 +38,4 @@ Fonction méromorphe sur $X$;;Donnée de $S\subset X$ fermée et discrète, ains
 Ensemble en bijection avec $\calM\l X\r$ pour $X$ connexe;;$\calM\l X\r$ est en bijection avec les applications holomorphes $X\to\bbP^1\l\bbC\r$ via $f\mapsto\widehat f$ avec $\widehat f$ qui vaut la limite de $f$ au voisinage des singularités illusoires et $\widehat f\l P\r=\infty$ aux pôles de $f$
 Structure de $\calM\l X\r$;;Si $X$ est connexe, $\calM\l X\r$ est un corps contenant $\bbC$
 Propriétés des fonctions méromorphes sur une surface de Riemann connexe compacte;;Il existe une fonction méromorphe $f$ non constante sur $X$, et pour toute telle fonction $f$, $\calM\l X\r/\bbC\l f\r$ est finie
-Propriétés de $\ord[P]\cdot$;;$\ord[P]f=0$ si et seulement si $f\equiv0$ pour $X$ connexe\linebreak$\ord[P]{fg}=\ord[P]f+\ord[P]g$\linebreak$\ord[P]{f+g}\geqslant\min{\ord[P]f\ord[P]g}$
+Propriétés de $\ord[P]\cdot$;;$\ord[P]f=0$ si et seulement si $f\equiv0$ pour $X$ connexe\linebreak$\ord[P]{fg}=\ord[P]f+\ord[P]g$\linebreak$\ord[P]{f+g}\geqslant\min{\ord[P]f,\ord[P]g}$
