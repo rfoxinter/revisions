@@ -1,0 +1,29 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{galois,polynomes,structures}\usepackage[nopar]{bigoperators}
+\hypersetup{pdftitle={Théorie algébrique des nombres -- Groupes de Galois}}
+\title{Théorie algébrique des nombres\\\emph{Groupes de Galois}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{Groupe de décomposition de $\frakq/\frakp$, structure et cardinal}{1/8}
+\slider{$D_\frakq=\set{g\in\gal\bbL\bbK,g\l\frakq\r=\frakq}$\linebreak$\left|D_\frakq\right|=e\l\frakq/\frakp\r f\l\frakq/\frakp\r$\linebreak On a un isomorphisme $D_\frakq\cong\gal{\calO_L/\frakq}{\calO_K/\frakp}\cong\bbZ/f\l\frakq/\frakp\r\bbZ$}{1/8}
+\slideq{Transitivité des indices de ramification et d'inertie}{2/8}
+\slider{Si $\bbM/\bbL/\bbK$ est une extension de corps, $\frakp\subset\frakq\subset\frakr$ des idéaux premiers alors $e\l\frakr/\frakp\r=e\l\frakr/\frakq\r e\l\frakq/\frakp\r$ et $f\l\frakr/\frakp\r=f\l\frakr/\frakq\r f\l\frakq/\frakp\r$\linebreak De plus, $\sum{\frakq/\frakp}{}{e\l\frakq/\frakp\r f\l\frakq/\frakp\r}=\edeg\bbL\bbK$}{2/8}
+\slideq{Groupe d'inertie de $\frakq$}{3/8}
+\slider{$I_\frakq=\ker{D_\frakq\to\gal{\calO_L/\frakq}{\calO_K/\frakp}}$}{3/8}
+\slideq{Propriétés de l'action de $\gal\bbL\bbK$ sur les idéaux premiers de $\calO_L$ au dessus d'un premier $\frakp$ de $\calO_K$}{4/8}
+\slider{L'action est transitive}{4/8}
+\slideq{Théorème de Kronecker-Weber\linebreak Cas particulier des extensions quadratiques}{5/8}
+\slider{Toute extension abélienne de $\bbQ$ est contenue dans une extension cyclotomique\linebreak Dans le cas des extensions quadratiques, on a $\fr Q{\sqrt d}\subset\fr Q{\zeta_{4d}}$}{5/8}
+\slideq{Frobenius de $\frakq$}{6/8}
+\slider{Si $I_\frakq=\set1$ (ie $e\l\frakq/\frakp\r=1$), le Frobenius de $\frakq$ est l'antécédent de $x\mapsto x^{\left|\calO_K/\frakp\right|}$ le Frobenuis dans $\gal{\calO_L/\frakq}{\calO_K/\frakp}$\linebreak On le note $\l\frakq,\bbL/\bbK\r$}{6/8}
+\slideq{Propriété de la décomposition de $\frakp\calO_L$}{7/8}
+\slider{$\frakp\calO_L=\frakq_1^e\cdot\frakq_r^e$ et $f=\edeg{\calO_L/\frakq_i}{\calO_K/\frakp}$ est constant}{7/8}
+\slideq{$\l g\l\frakq\r,\bbL/\bbK\r$\linebreak $D_{g\l\frakq\r}$\linebreak$I_{g\l\frakq\r}$}{8/8}
+\slider{g$\l\frakq,\bbL/\bbK\r g^{-1}$\linebreak$gD_\frakq g^{-1}$\linebreak$gI_\frakq g^{-1}$}{8/8}
+\end{document}

@@ -10,48 +10,48 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Lien entre $M_S$ et $M_T$ pour $M$ une martingale et $S\leqslant T$ deux temps d'arrêt}{1/22}
-\slider{Si $M$ est uniformément intégrable alors $M_S$ et $M_T$ sont dans $\operatorname L^1$ et $M_S=\esp{M_T\sq\calF_S}$\linebreak Si $T$ est borné alors $M_S$ et $M_T$ sont dans $\operatorname L^1$ et $M_S=\esp{M_T\sq\calF_S}$}{1/22}
-\slideq{Loi de $B_{T_{\partial B\l0,r\r}}$}{2/22}
-\slider{$B_{T_{\partial B\l0,r\r}}$ suit la mesure de Haar sur la sphère}{2/22}
-\slideq{$\l\calF_t\r_{t\geqslant0}\in\calP\l\calF\r^{\bbR_+}$ est une filtration}{3/22}
-\slider{Pour tout $t$, $\calF_t$ est une tribu\linebreak Si $t\leqslant t'$ alors $\calF_t\subset\calF_{t'}$}{3/22}
-\slideq{Processus brownien dans $\bbR^d$}{4/22}
-\slider{$B\in\calC\l\bbR_+,\bbR^d\r$ tel que $B^{\l i\r}$ est brownien pour tout $i$ et les $\l B_t^{\l i\r}\r_{i}$ sont mutuellement indépendants}{4/22}
-\slideq{$\calF_T$ pour $T$ un temps d'arrêt}{5/22}
-\slider{$\set{A\in\calF,\forall t\in\bbR_+,A\cap\set{T\leqslant t}\in\calF_t}$}{5/22}
-\slideq{Théorème de Wald}{6/22}
-\slider{Soit $\l B_t\r_{t\geqslant0}$ un mouvement brownien et $T$ un temps d'arrêt $\operatorname L^1$, alors $\esp{B_T}=0$ et $\esp{B_T^2}=\esp T$}{6/22}
-\slideq{$\l X_t\r_{t\geqslant0}$ est une \ssn-martingale pour la filtration $\l\calF_t\r_{t\geqslant0}$}{7/22}
-\slider{$\l X_t\r$ est un processus à trajectoires continues, $X_t\in\operatorname L^1$ pour tout $t$ et $X_t$ est $\calF_t$-mesurable et si $0\leqslant s\leqslant t$ alors $\esp{X_t\sq\calF_s}\mathbin{{\geqslant}\text{/}{\leqslant}\text{/}{=}}X_s$}{7/22}
-\slideq{Temps d'arrêt lié à l'entrée dans un sous-ensemble d'un espace métrique $E$}{8/22}
-\slider{Si $\l X_t\r$ est un processus adapté à trajectoires continues dans $E$ et $F\subset E$ est fermé alors $T=\inf{\set{t\geqslant0,X_t\in F}}$ est un temps d'arrêt}{8/22}
-\slideq{Propriété de Markov faible}{9/22}
-\slider{$\l B_{t+s}-B_s\r_{t\geqslant0}$ est un (pré)mouvement brownien indépendant de $\l B_t\r_{0\leqslant t\leqslant s}$}{9/22}
-\slideq{Propriétés de $\calF_T$}{10/22}
-\slider{Si $S\leqslant T$ alors $\calF_S\subset\calF_T$\linebreak Si $T=t$ alors $\calF_T=\calF_t$\linebreak$\calF_S\cap\calF_T=\calF_{S\wedge T}$ (et $S\wedge T$ est un temps d'arrêt)\linebreak Si $\l X_t\r$ est un processus adapté à trajectoires continues alors $\l X_T\mathbb1_{T<+\infty}\r$ est $\calF_T$-mesurable}{10/22}
-\slideq{Théorème d'arrêt des martingale}{11/22}
-\slider{Si $\l M_t\r_{t\geqslant0}$ est une martingale et $T$ est un temps d'arrêt alors $\l M_{t\wedge T}\r_{t\in T}$ est une martingale et si de plus $\l M_t\r_{t\geqslant0}$ est uniformément intégrable alors $\l M_{t\wedge T}\r_{t\in T}$ est uniformément intégrable et $M_{t\wedge T}=\esp{M_T\sq\calF_t}$}{11/22}
-\slideq{Invariance du brownien sur $\bbR^d$}{12/22}
-\slider{Le mouvement brownien sur $\bbR^d$ est invariant par l'action de $\operatorname O_n\l\bbR\r$}{12/22}
-\slideq{Propriétés locales du mouvement brownien en $0$}{13/22}
-\slider{$\forall\epsilon>0$, $\inf[s<\epsilon]{B_s}<0<\sup[s<\epsilon]{B_s}$ p.s.\linebreak$\limi[t\to+\infty]{B_t}=-\infty$ et $\lims[t\to+\infty]{B_t}=+\infty$ p.s.\linebreak$\forall a\in\bbR$, $\set{t,B_t=a}$ est non borné et $T_a=\inf{\set{t\geqslant0,B_t=a}}$ est fini p.s.\linebreak$B_t$ est monotone sur aucun intervalle p.s.}{13/22}
-\slideq{Inégalité maximale de Doob}{14/22}
-\slider{Si $\l M_t\r_{t\geqslant0}$ est une martingale à trajectoires continues et $a\geqslant0$ alors $a\p{\sup[0\leqslant t\leqslant t_0]{\left|M_t\right|}}\leqslant\esp{\left|M_{t_0}\right|}$}{14/22}
-\slideq{CNS pour que $\l M_t\r_{t\geqslant0}$ soit une martingale fermée\footnote{$M_t=\esp{X\sq\calF_t}$}}{15/22}
-\slider{$\l M_t\r_{t\geqslant0}$ est uniformément intégrable\footnote{$\forall\epsilon>0,\exists\delta>0,\forall X,\p A\leqslant\delta\Rightarrow\esp{X\mathbb1_A}\leqslant\epsilon$}}{15/22}
-\slideq{Propriétés de récurrence et de transience du mouvement brownien en dimension $d$}{16/22}
-\slider{Si $d=1$, le mouvement brownien visite tout point à des temps arbitrairement grands\linebreak Si $d=2$, pour $x\neq y$, $\p[\!\!x]{T_y<+\infty}=0$ mais presque sûrement le brownien visite tout voisinage de $y$ à des temps arbitrairement grands\linebreak Si $d\geqslant3$, presque sûrement, $\left|B_t\right|\xrightarrow[t\to+\infty]{}+\infty$ et pour tout $x\neq y$, $\p[\!\!x]{T_y<+\infty}=0$}{16/22}
-\slideq{Solution au problème de Dirichlet sur un domaine $D$ via le mouvement brownien}{17/22}
-\slider{Le problème de Dirichlet <<~$\exists h\in\calC^0\l D,\bbR\r$ harmonique telle que $h_{|\partial D}=g\in\calC^0\l\partial D,\bbR\r$~>> admet une unique solution donnée par $h\!:\!x\mapsto\esp[x]{g\l B_{T_{\partial D}}\r}$}{17/22}
-\slideq{Principe de réflexion}{18/22}
-\slider{Si $\l B\r$ est un mouvement brownien et $S_t=\sup[s\in\lc0,t\rc]{B_s}$ alors pour tout $0\leqslant b\leqslant a$, $\p{S_t\geqslant a,B_t\leqslant b}=\p{B_t\geqslant2a-b}$\linebreak En particulier $S_t\overset{\scriptscriptstyle\calL}=\left|B_t\right|$\linebreak On a également $T_a\overset{\scriptscriptstyle\calL}=\frac{a^2}{B_1^2}$ et a pour densité $\frac{a}{2\rmpi t^2}\exp{-\frac{a^2}{2t}}\mathbb1_{t\geqslant0}$}{18/22}
-\slideq{Un domaine (ouvert connexe) $D$ vérifie la condition de cône}{19/22}
-\slider{$\forall x\in\partial D$, $\exists\overrightarrow u\in\bbR^d$, $\exists\alpha>0$, $\exists r>0$, $\set{y,\frac{\overrightarrow{xy}\cdot\overrightarrow u}{\nrm{\overrightarrow{xy}}\nrm{\overrightarrow u}}>1-\alpha}\cap B\l x,r\r\subset D^\complement$}{19/22}
-\slideq{Temps d'arrêt}{20/22}
-\slider{$T\!:\!\varOmega\to\overline{\bbR_+}$ mesurable telle que, pour tout $t\in\bbR_+$, $\set{T\leqslant t}\in\calF_t$}{20/22}
-\slideq{Loi du $0$-$1$ de Blumenthal}{21/22}
-\slider{Si $\calF_t=\sigma\l\set{B_s,0\leqslant s\leqslant t}\r$ et $\calF_0^+=\bigcap{t>0}{}{\calF_t}$ alors $\calF_0^+$ est triviale}{21/22}
-\slideq{Théorème de Markov fort}{22/22}
-\slider{Soit $T$ un temps d'arrêt presque sûrement fini, si $\l B\r$ est un mouvement brownien et $B_t^{\l T\r}=\l B_{t+T}-B_T\r\mathbb1_{T<+\infty}$, alors sous la propabilité conditionnelle $\p{\bullet\sq T<+\infty}$, $\l B_t^{\l T\r}\r$ est un mouvement brownien indépendant de $T$}{22/22}
+\slideq{$\calF_T$ pour $T$ un temps d'arrêt}{1/22}
+\slider{$\set{A\in\calF,\forall t\in\bbR_+,A\cap\set{T\leqslant t}\in\calF_t}$}{1/22}
+\slideq{Invariance du brownien sur $\bbR^d$}{2/22}
+\slider{Le mouvement brownien sur $\bbR^d$ est invariant par l'action de $\operatorname O_n\l\bbR\r$}{2/22}
+\slideq{Théorème de Markov fort}{3/22}
+\slider{Soit $T$ un temps d'arrêt presque sûrement fini, si $\l B\r$ est un mouvement brownien et $B_t^{\l T\r}=\l B_{t+T}-B_T\r\mathbb1_{T<+\infty}$, alors sous la propabilité conditionnelle $\p{\bullet\sq T<+\infty}$, $\l B_t^{\l T\r}\r$ est un mouvement brownien indépendant de $T$}{3/22}
+\slideq{Temps d'arrêt}{4/22}
+\slider{$T\!:\!\varOmega\to\overline{\bbR_+}$ mesurable telle que, pour tout $t\in\bbR_+$, $\set{T\leqslant t}\in\calF_t$}{4/22}
+\slideq{Propriétés de récurrence et de transience du mouvement brownien en dimension $d$}{5/22}
+\slider{Si $d=1$, le mouvement brownien visite tout point à des temps arbitrairement grands\linebreak Si $d=2$, pour $x\neq y$, $\p[\!\!x]{T_y<+\infty}=0$ mais presque sûrement le brownien visite tout voisinage de $y$ à des temps arbitrairement grands\linebreak Si $d\geqslant3$, presque sûrement, $\left|B_t\right|\xrightarrow[t\to+\infty]{}+\infty$ et pour tout $x\neq y$, $\p[\!\!x]{T_y<+\infty}=0$}{5/22}
+\slideq{Lien entre $M_S$ et $M_T$ pour $M$ une martingale et $S\leqslant T$ deux temps d'arrêt}{6/22}
+\slider{Si $M$ est uniformément intégrable alors $M_S$ et $M_T$ sont dans $\operatorname L^1$ et $M_S=\esp{M_T\sq\calF_S}$\linebreak Si $T$ est borné alors $M_S$ et $M_T$ sont dans $\operatorname L^1$ et $M_S=\esp{M_T\sq\calF_S}$}{6/22}
+\slideq{Processus brownien dans $\bbR^d$}{7/22}
+\slider{$B\in\calC\l\bbR_+,\bbR^d\r$ tel que $B^{\l i\r}$ est brownien pour tout $i$ et les $\l B_t^{\l i\r}\r_{i}$ sont mutuellement indépendants}{7/22}
+\slideq{CNS pour que $\l M_t\r_{t\geqslant0}$ soit une martingale fermée\footnote{$M_t=\esp{X\sq\calF_t}$}}{8/22}
+\slider{$\l M_t\r_{t\geqslant0}$ est uniformément intégrable\footnote{$\forall\epsilon>0,\exists\delta>0,\forall X,\p A\leqslant\delta\Rightarrow\esp{X\mathbb1_A}\leqslant\epsilon$}}{8/22}
+\slideq{Inégalité maximale de Doob}{9/22}
+\slider{Si $\l M_t\r_{t\geqslant0}$ est une martingale à trajectoires continues et $a\geqslant0$ alors $a\p{\sup[0\leqslant t\leqslant t_0]{\left|M_t\right|}}\leqslant\esp{\left|M_{t_0}\right|}$}{9/22}
+\slideq{Temps d'arrêt lié à l'entrée dans un sous-ensemble d'un espace métrique $E$}{10/22}
+\slider{Si $\l X_t\r$ est un processus adapté à trajectoires continues dans $E$ et $F\subset E$ est fermé alors $T=\inf{\set{t\geqslant0,X_t\in F}}$ est un temps d'arrêt}{10/22}
+\slideq{Propriétés locales du mouvement brownien en $0$}{11/22}
+\slider{$\forall\epsilon>0$, $\inf[s<\epsilon]{B_s}<0<\sup[s<\epsilon]{B_s}$ p.s.\linebreak$\limi[t\to+\infty]{B_t}=-\infty$ et $\lims[t\to+\infty]{B_t}=+\infty$ p.s.\linebreak$\forall a\in\bbR$, $\set{t,B_t=a}$ est non borné et $T_a=\inf{\set{t\geqslant0,B_t=a}}$ est fini p.s.\linebreak$B_t$ est monotone sur aucun intervalle p.s.}{11/22}
+\slideq{Loi du $0$-$1$ de Blumenthal}{12/22}
+\slider{Si $\calF_t=\sigma\l\set{B_s,0\leqslant s\leqslant t}\r$ et $\calF_0^+=\bigcap{t>0}{}{\calF_t}$ alors $\calF_0^+$ est triviale}{12/22}
+\slideq{Loi de $B_{T_{\partial B\l0,r\r}}$}{13/22}
+\slider{$B_{T_{\partial B\l0,r\r}}$ suit la mesure de Haar sur la sphère}{13/22}
+\slideq{$\l X_t\r_{t\geqslant0}$ est une \ssn-martingale pour la filtration $\l\calF_t\r_{t\geqslant0}$}{14/22}
+\slider{$\l X_t\r$ est un processus à trajectoires continues, $X_t\in\operatorname L^1$ pour tout $t$ et $X_t$ est $\calF_t$-mesurable et si $0\leqslant s\leqslant t$ alors $\esp{X_t\sq\calF_s}\mathbin{{\geqslant}\text{/}{\leqslant}\text{/}{=}}X_s$}{14/22}
+\slideq{Un domaine (ouvert connexe) $D$ vérifie la condition de cône}{15/22}
+\slider{$\forall x\in\partial D$, $\exists\overrightarrow u\in\bbR^d$, $\exists\alpha>0$, $\exists r>0$, $\set{y,\frac{\overrightarrow{xy}\cdot\overrightarrow u}{\nrm{\overrightarrow{xy}}\nrm{\overrightarrow u}}>1-\alpha}\cap B\l x,r\r\subset D^\complement$}{15/22}
+\slideq{Théorème d'arrêt des martingale}{16/22}
+\slider{Si $\l M_t\r_{t\geqslant0}$ est une martingale et $T$ est un temps d'arrêt alors $\l M_{t\wedge T}\r_{t\in T}$ est une martingale et si de plus $\l M_t\r_{t\geqslant0}$ est uniformément intégrable alors $\l M_{t\wedge T}\r_{t\in T}$ est uniformément intégrable et $M_{t\wedge T}=\esp{M_T\sq\calF_t}$}{16/22}
+\slideq{Principe de réflexion}{17/22}
+\slider{Si $\l B\r$ est un mouvement brownien et $S_t=\sup[s\in\lc0,t\rc]{B_s}$ alors pour tout $0\leqslant b\leqslant a$, $\p{S_t\geqslant a,B_t\leqslant b}=\p{B_t\geqslant2a-b}$\linebreak En particulier $S_t\overset{\scriptscriptstyle\calL}=\left|B_t\right|$\linebreak On a également $T_a\overset{\scriptscriptstyle\calL}=\frac{a^2}{B_1^2}$ et a pour densité $\frac{a}{\sqrt{2\rmpi t^3}}\exp{-\frac{a^2}{2t}}\mathbb1_{t\geqslant0}$}{17/22}
+\slideq{Solution au problème de Dirichlet sur un domaine $D$ via le mouvement brownien}{18/22}
+\slider{Le problème de Dirichlet <<~$\exists h\in\calC^0\l D,\bbR\r$ harmonique telle que $h_{|\partial D}=g\in\calC^0\l\partial D,\bbR\r$~>> admet une unique solution\linebreak Si elle existe, la solution est donnée par $h\!:\!x\mapsto\esp[x]{g\l B_{T_{\partial D}}\r}$\linebreak Si $D$ vérifie la condition de cône alors la solution existe}{18/22}
+\slideq{Propriétés de $\calF_T$}{19/22}
+\slider{Si $S\leqslant T$ alors $\calF_S\subset\calF_T$\linebreak Si $T=t$ alors $\calF_T=\calF_t$\linebreak$\calF_S\cap\calF_T=\calF_{S\wedge T}$ (et $S\wedge T$ est un temps d'arrêt)\linebreak Si $\l X_t\r$ est un processus adapté à trajectoires continues alors $\l X_T\mathbb1_{T<+\infty}\r$ est $\calF_T$-mesurable}{19/22}
+\slideq{$\l\calF_t\r_{t\geqslant0}\in\calP\l\calF\r^{\bbR_+}$ est une filtration}{20/22}
+\slider{Pour tout $t$, $\calF_t$ est une tribu\linebreak Si $t\leqslant t'$ alors $\calF_t\subset\calF_{t'}$}{20/22}
+\slideq{Propriété de Markov faible}{21/22}
+\slider{$\l B_{t+s}-B_s\r_{t\geqslant0}$ est un (pré)mouvement brownien indépendant de $\l B_t\r_{0\leqslant t\leqslant s}$}{21/22}
+\slideq{Théorème de Wald}{22/22}
+\slider{Soit $\l B_t\r_{t\geqslant0}$ un mouvement brownien et $T$ un temps d'arrêt $\operatorname L^1$, alors $\esp{B_T}=0$ et $\esp{B_T^2}=\esp T$}{22/22}
 \end{document}

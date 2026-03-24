@@ -26,45 +26,45 @@ text.f5 {font-family:cmr12;font-size:11.955168px}
 <text class='f2' x='152.076913' y='-63.060687'>⊆<tspan x='154.069472' y='-64.218592'>◦</tspan></text>
 <text class='f0' x='164.696232' y='-63.060687' transform='matrix(.865 0 0 1 22.23396 0)'>C</text>
 <text class='f4' x='173.227776' y='-63.060687' transform='matrix(1.000001 0 0 1 -.000091 0)'>,</text>
-<text class='f3' x='-25.722313' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>ϕ</text>
-<text class='f1' x='-18.053945' y='-46.821596' transform='matrix(1.000001 0 0 1 -.000091 0)'>∗</text>
-<text class='f3' x='-13.32163' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>ω</text>
-<text class='f5' x='-2.282601' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>=</text>
-<text class='f3' x='10.14288' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>α</text>
-<text class='f5' x='17.664604' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>d</text>
-<text class='f3' x='24.167927' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>z</text>
-<text class='f4' x='34.039614' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>a<tspan x='39.566146'>v</tspan><tspan x='45.417765'>ec</tspan></text>
-<text class='f3' x='59.721745' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>α</text>
-<text class='f2' x='70.564299' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>∈<tspan x='81.855267'>C</tspan></text>
-<text class='f1' x='88.847425' y='-52.953296' transform='matrix(1.000001 0 0 1 -.000091 0)'>∞</text>
-<text class='f5' x='97.813923' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>(</text>
-<text class='f3' x='102.366249' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>X<tspan x='112.371024'>,</tspan></text>
-<text class='f0' x='117.615183' y='-48.614859' transform='matrix(.865 0 0 1 15.877943 0)'>C</text>
-<text class='f5' x='126.146727' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000155 0)'>)</text>
-<text class='f4' x='-71.501872' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000155 0)'>P<tspan x='-63.864326'>our</tspan><tspan x='-43.058551'>toute</tspan><tspan x='-12.500049'>carte</tspan><tspan x='16.758084'>complexe</tspan><tspan x='67.797262'>de</tspan></text>
-<text class='f3' x='83.401611' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000155 0)'>X<tspan x='97.9578'>ϕ</tspan></text>
-<text class='f5' x='106.9545' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000155 0)'>:</text>
-<text class='f3' x='111.534493' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000155 0)'>U</text>
-<text class='f2' x='124.054373' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000155 0)'>→</text>
-<text class='f3' x='139.330405' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000155 0)'>V</text>
-<text class='f2' x='152.076913' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000155 0)'>⊆<tspan x='154.069472' y='-35.326936'>◦</tspan></text>
+<text class='f3' x='-26.718561' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>ϕ</text>
+<text class='f1' x='-19.050193' y='-46.821596' transform='matrix(1.000001 0 0 1 -.000091 0)'>∗</text>
+<text class='f3' x='-14.317879' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>ω</text>
+<text class='f5' x='-3.27885' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>=</text>
+<text class='f3' x='9.146631' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>α</text>
+<text class='f5' x='18.660853' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>d</text>
+<text class='f3' x='25.164175' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>z</text>
+<text class='f4' x='35.035863' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>a<tspan x='40.562395'>v</tspan><tspan x='46.414014'>ec</tspan></text>
+<text class='f3' x='60.717994' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>α</text>
+<text class='f2' x='71.560547' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>∈<tspan x='82.851515'>C</tspan></text>
+<text class='f1' x='89.843674' y='-52.953296' transform='matrix(1.000001 0 0 1 -.000091 0)'>∞</text>
+<text class='f5' x='98.810172' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>(</text>
+<text class='f3' x='103.362497' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000091 0)'>X<tspan x='113.367273'>,</tspan></text>
+<text class='f0' x='118.611432' y='-48.614859' transform='matrix(.865 0 0 1 16.012403 0)'>C</text>
+<text class='f5' x='127.142976' y='-48.614859' transform='matrix(1.000001 0 0 1 -.000156 0)'>)</text>
+<text class='f4' x='-71.501872' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000156 0)'>P<tspan x='-63.864326'>our</tspan><tspan x='-43.058551'>toute</tspan><tspan x='-12.500049'>carte</tspan><tspan x='16.758084'>complexe</tspan><tspan x='67.797262'>de</tspan></text>
+<text class='f3' x='83.401611' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000156 0)'>X<tspan x='97.9578'>ϕ</tspan></text>
+<text class='f5' x='106.9545' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000156 0)'>:</text>
+<text class='f3' x='111.534493' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000156 0)'>U</text>
+<text class='f2' x='124.054373' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000156 0)'>→</text>
+<text class='f3' x='139.330405' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000156 0)'>V</text>
+<text class='f2' x='152.076913' y='-34.169031' transform='matrix(1.000001 0 0 1 -.000156 0)'>⊆<tspan x='154.069472' y='-35.326936'>◦</tspan></text>
 <text class='f0' x='164.696232' y='-34.169031' transform='matrix(.865001 0 0 1 22.233829 0)'>C</text>
 <text class='f4' x='173.227776' y='-34.169031' transform='matrix(1.000002 0 0 1 -.000246 0)'>,</text>
-<text class='f3' x='-25.471863' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>ϕ</text>
-<text class='f1' x='-17.803495' y='-17.92994' transform='matrix(1.000002 0 0 1 -.000246 0)'>∗</text>
-<text class='f3' x='-13.07118' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>ω</text>
-<text class='f5' x='-2.032151' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>=</text>
-<text class='f3' x='10.393329' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>β</text>
-<text class='f5' x='17.6646' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>d</text>
-<rect x='24.167923' y='-26.783321' height='.478187' width='5.970606' transform='matrix(1.000002 0 0 1 -.000246 0)'/>
-<text class='f3' x='24.167923' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>z</text>
-<text class='f4' x='34.039611' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>a<tspan x='39.566143'>v</tspan><tspan x='45.417761'>ec</tspan></text>
-<text class='f3' x='59.721741' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>β</text>
-<text class='f2' x='70.313842' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>∈<tspan x='81.60481'>C</tspan></text>
-<text class='f1' x='88.596968' y='-24.06164' transform='matrix(1.000002 0 0 1 -.000246 0)'>∞</text>
-<text class='f5' x='97.563466' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>(</text>
-<text class='f3' x='102.115792' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>X<tspan x='112.120567'>,</tspan></text>
-<text class='f0' x='117.364726' y='-19.723203' transform='matrix(.865001 0 0 1 15.844055 0)'>C</text>
-<text class='f5' x='125.89627' y='-19.723203' transform='matrix(1.000002 0 0 1 -.00031 0)'>)</text>
+<text class='f3' x='-26.468112' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>ϕ</text>
+<text class='f1' x='-18.799744' y='-17.92994' transform='matrix(1.000002 0 0 1 -.000246 0)'>∗</text>
+<text class='f3' x='-14.067429' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>ω</text>
+<text class='f5' x='-3.0284' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>=</text>
+<text class='f3' x='9.397081' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>β</text>
+<text class='f5' x='18.660849' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>d</text>
+<rect x='25.164172' y='-26.783321' height='.478187' width='5.970606' transform='matrix(1.000002 0 0 1 -.000246 0)'/>
+<text class='f3' x='25.164172' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>z</text>
+<text class='f4' x='35.035859' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>a<tspan x='40.562391'>v</tspan><tspan x='46.41401'>ec</tspan></text>
+<text class='f3' x='60.71799' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>β</text>
+<text class='f2' x='71.31009' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>∈<tspan x='82.601058'>C</tspan></text>
+<text class='f1' x='89.593217' y='-24.06164' transform='matrix(1.000002 0 0 1 -.000246 0)'>∞</text>
+<text class='f5' x='98.559715' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>(</text>
+<text class='f3' x='103.11204' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000246 0)'>X<tspan x='113.116816'>,</tspan></text>
+<text class='f0' x='118.360975' y='-19.723203' transform='matrix(.865001 0 0 1 15.978515 0)'>C</text>
+<text class='f5' x='126.892519' y='-19.723203' transform='matrix(1.000002 0 0 1 -.000312 0)'>)</text>
 </g>
 </svg>
