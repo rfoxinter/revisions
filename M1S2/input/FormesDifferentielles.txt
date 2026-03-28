@@ -1,7 +1,7 @@
 Surfaces de Riemann -- Formes différentielles
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage[nopar]{bigoperators}\usepackage{geometrie,complexes}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldA}{A}\newcommand{\A}[3]{\oldA^{#1}_{#2}\l#3\r}\def\barOmega{\bar\Omega\vphantom{\Omega}}\usepackage{topologie,structures,al,analysecomplexe}
+\usepackage[nopar]{bigoperators}\usepackage{geometrie,complexes}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldA}{A}\newcommand{\A}[3]{\oldA^{#1}_{#2}\l#3\r}\def\barOmega{\bar\Omega\vphantom{\Omega}}\usepackage{topologie,structures,al,analysecomplexe,dsft}
 Espace tangent à une surface de Riemann $X$ en $P$;;$\tg_PX$ peut être naturellement muni d'une structure de $\bbC$-ev (de dimension $1$) via $\gamma\mapsto\l\phi\circ\gamma\r'\l0\r\in\bbC$
 Formes différentielles complexes de degré $k$;;$\A k\bbC X=\A k\bbR X\otimes_\bbR\bbC$\linebreak$\A k\bbR X$ les formes différentielles sur $X$ vue comme variété différentielle
 Décomposition de formes linéaires complexes;;Tout $\omega\in\A k\bbC X$ se décompose de manière unique en $\omega=\alpha+\ii\beta$ avec $\alpha,\beta\in\A k\bbR X$
@@ -33,4 +33,15 @@ $\ord[P]{f\omega}$ pour $f\in\calM\l X\r$ et $\omega\in\Omega^1\l\calM\l X\r\r$;
 Propriété de $\set{P\in X,\ord[P]\omega\neq0}$;;C'est une partie discrète et fermée de $X$
 $\ord[P]{\omega+\omega'}$ pour $\omega,\omega'\in\Omega^1\l\calM\l X\r\r$;;$\ord[P]{\omega+\omega'}\geqslant\ord[P]\omega+\ord[P]{\omega'}$
 $\fdiv\omega$ pour $X$ compacte connexe et $\omega\in\Omega^1\l\calM\l X\r\r$;;$\sum{P\in X}{}{\ord[P]\omega\lc P\rc}\in\Div X$
-Genre d'une surface de Riemann compacte connexe;;$\dim{\Omega^1\l X\r}$
+Genre d'une surface de Riemann compacte connexe;;$g\l X\r=\dim{\Omega^1\l X\r}$
+Lien entre $\calO\l X\r$, $\calM\l X\r$, $\Omega^1\l X\r$ et $\Omega^1\l\calM\l X\r\r$;;$\dd\l\calO\l X\r\r\subset\Omega^1\l X\r$\linebreak$\dd\l\calM\l X\r\r\subset\Omega^1\l\calM\l X\r\r$\linebreak Les inclusions peuvent être strictes
+$\res P\omega$;;Coefficient en $z^{-1}$ du développement en série de Laurent de $f$ où $\phi_*\omega=f\l z\r\intd z$
+Lien entre $\int[][\gamma]\omega$ et $\res P\omega$ pour $U$ simplement connexe et $\gamma$ un lacet de $U\setminus\set P$;;$\int[][\gamma]\omega=2\ii\rmpi I\l0;\phi\circ\gamma\r\res P\omega$
+Domaine $D$ d'une surface de Riemann;;Sous-vareiété de $X$ de dimension $2$ à bord telle que $\partial D$ peut être paramétré par des chemins dans $X$: en tout point de $\partial D$, on se donne $\vec n\in\tg_PX$ sortant de $D$ et $\vec t\in\tg_P\l\partial D\r\subset\tg_PX$ tel que $\l\vec n,\vec t\r$ soit directe
+Théorème des résidus pour les formes différentielles;;Si $X$ est une surface de Riemann compacte et $D$ un domaine de $X$ avec $\partial D$ muni de l'orientation canonique, si $\omega$ est une forme différentielle sur un voisinage ouvert de $D$ dont les pôles $P_1,\cdots,P_n$ sont contenus dans $\mathring D$, alors $\int[][\partial D]\omega=2\ii\rmpi\sum{j=1}n{\res{P_i}\omega}$
+Diviseur canonique sur $X$;;Diviseur de la forme $K_X=\fdiv\omega$ pour $\omega\in\Omega^1\l\calM\l X\r\r$
+Théorème de Riemann-Roch;;Si $X$ est une surface de Riemann compacte connexe de genre $g$, alors pour tout $D\in\Div X$, $l\l D\r-l\l K_X-D\r=\deg D+1-g$
+$\deg{K_X}$;;$2g-2$
+Théorème de Riemann-Roch faible;;Si $\deg D>2g-2$ alors $l\l D\r=\deg D+1-g$
+Théorème d'algébrisation;;Toute surface de Riemann compacte connexe est algébrique: il existe un plongement holomorphe $\phi\!:\!X\hookrightarrow\bbP^N\l\bbC\r$ avec $N\geqslant 2$ et $\phi\l X\r$ un fermé algébrique\linebreak On peut même prendre $N=3$
+Théorème de Riemann-Hurwitz;;Si $X$ et $Y$ sont dzeux surfaces de Riemann compactes connexes et $\phi\!:\!X\to Y$ est holomorphe non constante alors $2g\l X\r-2=\deg\phi\l2g\l Y\r-2\r+\sum{P\in X}{}{\l e_\phi\l P\r-1\r}$
