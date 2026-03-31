@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{galois,polynomes,structures}\usepackage[nopar]{bigoperators}
+\usepackage{galois,polynomes,structures,arithmetique}\usepackage[nopar]{bigoperators}
 \hypersetup{pdftitle={Théorie algébrique des nombres -- Groupes de Galois}}
 \title{Théorie algébrique des nombres\\\emph{Groupes de Galois}}
 \author{}
@@ -10,20 +10,32 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Groupe de décomposition de $\frakq/\frakp$, structure et cardinal}{1/8}
-\slider{$D_\frakq=\set{g\in\gal\bbL\bbK,g\l\frakq\r=\frakq}$\linebreak$\left|D_\frakq\right|=e\l\frakq/\frakp\r f\l\frakq/\frakp\r$\linebreak On a un isomorphisme $D_\frakq\cong\gal{\calO_L/\frakq}{\calO_K/\frakp}\cong\bbZ/f\l\frakq/\frakp\r\bbZ$}{1/8}
-\slideq{Transitivité des indices de ramification et d'inertie}{2/8}
-\slider{Si $\bbM/\bbL/\bbK$ est une extension de corps, $\frakp\subset\frakq\subset\frakr$ des idéaux premiers alors $e\l\frakr/\frakp\r=e\l\frakr/\frakq\r e\l\frakq/\frakp\r$ et $f\l\frakr/\frakp\r=f\l\frakr/\frakq\r f\l\frakq/\frakp\r$\linebreak De plus, $\sum{\frakq/\frakp}{}{e\l\frakq/\frakp\r f\l\frakq/\frakp\r}=\edeg\bbL\bbK$}{2/8}
-\slideq{Groupe d'inertie de $\frakq$}{3/8}
-\slider{$I_\frakq=\ker{D_\frakq\to\gal{\calO_L/\frakq}{\calO_K/\frakp}}$}{3/8}
-\slideq{Propriétés de l'action de $\gal\bbL\bbK$ sur les idéaux premiers de $\calO_L$ au dessus d'un premier $\frakp$ de $\calO_K$}{4/8}
-\slider{L'action est transitive}{4/8}
-\slideq{Théorème de Kronecker-Weber\linebreak Cas particulier des extensions quadratiques}{5/8}
-\slider{Toute extension abélienne de $\bbQ$ est contenue dans une extension cyclotomique\linebreak Dans le cas des extensions quadratiques, on a $\fr Q{\sqrt d}\subset\fr Q{\zeta_{4d}}$}{5/8}
-\slideq{Frobenius de $\frakq$}{6/8}
-\slider{Si $I_\frakq=\set1$ (ie $e\l\frakq/\frakp\r=1$), le Frobenius de $\frakq$ est l'antécédent de $x\mapsto x^{\left|\calO_K/\frakp\right|}$ le Frobenuis dans $\gal{\calO_L/\frakq}{\calO_K/\frakp}$\linebreak On le note $\l\frakq,\bbL/\bbK\r$}{6/8}
-\slideq{Propriété de la décomposition de $\frakp\calO_L$}{7/8}
-\slider{$\frakp\calO_L=\frakq_1^e\cdot\frakq_r^e$ et $f=\edeg{\calO_L/\frakq_i}{\calO_K/\frakp}$ est constant}{7/8}
-\slideq{$\l g\l\frakq\r,\bbL/\bbK\r$\linebreak $D_{g\l\frakq\r}$\linebreak$I_{g\l\frakq\r}$}{8/8}
-\slider{g$\l\frakq,\bbL/\bbK\r g^{-1}$\linebreak$gD_\frakq g^{-1}$\linebreak$gI_\frakq g^{-1}$}{8/8}
+\slideq{$\chi\l\l a,\fr Q{\zeta_n}/\bbQ\r\r$}{1/14}
+\slider{$\cgr{\chi\l\l a,\fr Q{\zeta_n}/\bbQ\r\r}an$}{1/14}
+\slideq{Caractère cyclotomique}{2/14}
+\slider{$\chi\!:\!\gal{\fr Q{\zeta_n}}\bbQ\to\l\bbZ/n\bbZ\r^\times$ défini par $\sigma\l\zeta_n\r=\zeta_n^{\chi\l\sigma\r}$}{2/14}
+\slideq{Groupe de décomposition de $\frakq/\frakp$, structure et cardinal}{3/14}
+\slider{$D_\frakq=\set{g\in\gal\bbL\bbK,g\l\frakq\r=\frakq}$\linebreak$\left|D_\frakq\right|=e\l\frakq/\frakp\r f\l\frakq/\frakp\r$\linebreak On a un isomorphisme $D_\frakq\cong\gal{\calO_L/\frakq}{\calO_K/\frakp}\cong\bbZ/f\l\frakq/\frakp\r\bbZ$}{3/14}
+\slideq{Propriétés de l'action de $\gal\bbL\bbK$ sur les idéaux premiers de $\calO_L$ au dessus d'un premier $\frakp$ de $\calO_K$}{4/14}
+\slider{L'action est transitive}{4/14}
+\slideq{Lien entre $\l p,L/K\r$ et $\l p,L/\bbQ\r$ pour $L/K/\bbQ$}{5/14}
+\slider{$\l p,L/K\r=\l p,L/\bbQ\r^{f\l K/\bbQ\r}$}{5/14}
+\slideq{$\l g\l\frakq\r,\bbL/\bbK\r$\linebreak $D_{g\l\frakq\r}$\linebreak$I_{g\l\frakq\r}$}{6/14}
+\slider{g$\l\frakq,\bbL/\bbK\r g^{-1}$\linebreak$gD_\frakq g^{-1}$\linebreak$gI_\frakq g^{-1}$}{6/14}
+\slideq{Transitivité des indices de ramification et d'inertie}{7/14}
+\slider{Si $\bbM/\bbL/\bbK$ est une extension de corps, $\frakp\subset\frakq\subset\frakr$ des idéaux premiers alors $e\l\frakr/\frakp\r=e\l\frakr/\frakq\r e\l\frakq/\frakp\r$ et $f\l\frakr/\frakp\r=f\l\frakr/\frakq\r f\l\frakq/\frakp\r$\linebreak De plus, $\sum{\frakq/\frakp}{}{e\l\frakq/\frakp\r f\l\frakq/\frakp\r}=\edeg\bbL\bbK$}{7/14}
+\slideq{Lien entre $\l p,K/\bbQ\r$ et $\l p,L/\bbQ\r$ pour $L/K/\bbQ$}{8/14}
+\slider{$\l p,K/\bbQ\r=\l p,L/\bbQ\r$}{8/14}
+\slideq{Groupe d'inertie de $\frakq$}{9/14}
+\slider{$I_\frakq=\ker{D_\frakq\to\gal{\calO_L/\frakq}{\calO_K/\frakp}}$}{9/14}
+\slideq{Propriétés de morphisme de l'endomorphisme de Frobenius}{10/14}
+\slider{$\l\bbZ/n\bbZ\r^\times\to\gal{\fr Q{\zeta_n}}\bbQ$, $\bar a\mapsto\l a,\fr Q{\zeta_n}/\bbQ\r$ est un morphisme de groupes\linebreak Ce morphisme est la rédiproque du caractère cyclotomique}{10/14}
+\slideq{Théorème de Kronecker-Weber\linebreak Cas particulier des extensions quadratiques}{11/14}
+\slider{Toute extension abélienne de $\bbQ$ est contenue dans une extension cyclotomique\linebreak Dans le cas des extensions quadratiques, on a $\fr Q{\sqrt d}\subset\fr Q{\zeta_{4d}}$}{11/14}
+\slideq{CNS pour que $p$ soit totalement décomposé dans $\pol Z{\zeta_n}$}{12/14}
+\slider{$p\nmid n$}{12/14}
+\slideq{Frobenius de $\frakq$}{13/14}
+\slider{Si $I_\frakq=\set1$ (ie $e\l\frakq/\frakp\r=1$), le Frobenius de $\frakq$ est l'antécédent de $x\mapsto x^{\left|\calO_K/\frakp\right|}$ le Frobenuis dans $\gal{\calO_L/\frakq}{\calO_K/\frakp}$\linebreak On le note $\l\frakq,\bbL/\bbK\r$}{13/14}
+\slideq{Propriété de la décomposition de $\frakp\calO_L$}{14/14}
+\slider{$\frakp\calO_L=\frakq_1^e\cdot\frakq_r^e$ et $f=\edeg{\calO_L/\frakq_i}{\calO_K/\frakp}$ est constant}{14/14}
 \end{document}

@@ -1,0 +1,6 @@
+Théorie algébrique des nombres -- Fonction zêta de Dedekind
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage[nopar]{bigoperators}\DeclareMathOperator{\oldcl}{Cl}\newcommand{\cl}[1]{\oldcl\l#1\r}\DeclareMathOperator{\oldnrm}{nrm}\newcommand\inrm[1]{\oldnrm\l#1\r}\DeclareMathOperator{\olddisc}{disc}\newcommand{\disc}[1]{\olddisc\l#1\r}\usepackage{complexes,galois,dsft}
+$\zeta_K\l s\r$;;$\sum{\substack{I\le\calO_K\\I\neq\set0}}{}{\frac1{\inrm I^s}}$
+Théorème de Hecke sur la convergence de la fonction zêta;;La série $\zeta_K$ converge pour $\Re s>1$ et $\zeta_K$ se prolonge en une fonction méromorphe sur $\set{\Re s>1-\oldfrac1{\edeg K\bbQ}}$ avec un unique pôle simple en $s=1$, de résidu $\kappa=\oldfrac{2^{r_1}\l2\rmpi\r^{r_2}h_KR_K}{\omega_K\sqrt{\left|\disc K\right|}}$ où $r_1$ et $r_2$ sont le nombre de plongements réels et complexes conjugués, $h_K=\left|\cl{\calO_K}\right|$, $R_K$ le régulateur de $\calO_K$ et $\omega_K=\left|\mu_K\right|$
