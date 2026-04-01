@@ -36,7 +36,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/EntiersAlgebriques
 20260205203320
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/FonctionZetaDeDedekind
-20260331072735
+20260401165601
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/FormesQuadratiquesBinaires
 20260320171533
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/GeometrieDesNombres
@@ -60,4 +60,6 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieSpectrale/SpectreDUnOperateur
 20260118104652
 ../M1S2/flashcards/TheorieSpectrale/SpectreDansUneAlgebreQuelconque
-20260328180253
+20260401170029
+../M1S2/flashcards/TheorieSpectrale/TheorieDeGelfand
+20260401170951

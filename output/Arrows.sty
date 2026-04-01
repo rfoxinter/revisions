@@ -16,3 +16,15 @@
 }
 
 \newcommand{\dashto}{\mathrel{-\mkern-6mu{\to}\mkern-22.5mu{\text{\color{white}\boldmath${\cdot}{\cdot}{\cdot}$}}\mkern1mu\phantom{.}}}
+
+\newsavebox\ttobox
+\newsavebox\relskipbok
+\newlength\ttolength
+\newlength\relskiplength
+\newcommand{\doublehead}{
+    \savebox\ttobox{$\to$}
+    \savebox\relskipbok{${}\mathrel{\null}$}
+    \settowidth{\ttolength}{\ttobox}
+    \settowidth{\relskiplength}{\relskipbok}{}
+    \kern-\relskiplength\kern-.6\ttolength{\usebox{\ttobox}}\mkern2mu\kern.6\ttolength\kern-\relskiplength{}\mathrel{}
+}

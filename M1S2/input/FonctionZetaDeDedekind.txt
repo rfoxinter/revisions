@@ -1,6 +1,22 @@
 Théorie algébrique des nombres -- Fonction zêta de Dedekind
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage[nopar]{bigoperators}\DeclareMathOperator{\oldcl}{Cl}\newcommand{\cl}[1]{\oldcl\l#1\r}\DeclareMathOperator{\oldnrm}{nrm}\newcommand\inrm[1]{\oldnrm\l#1\r}\DeclareMathOperator{\olddisc}{disc}\newcommand{\disc}[1]{\olddisc\l#1\r}\usepackage{complexes,galois,dsft}
+\usepackage[nopar]{bigoperators}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldcl}{Cl}\newcommand{\cl}[1]{\oldcl\l#1\r}\DeclareMathOperator{\oldnrm}{nrm}\newcommand\inrm[1]{\oldnrm\l#1\r}\DeclareMathOperator{\olddisc}{disc}\newcommand{\disc}[1]{\olddisc\l#1\r}\usepackage{complexes,galois,dsft,equivalents,arrows,arithmetique,polynomes}
 $\zeta_K\l s\r$;;$\sum{\substack{I\le\calO_K\\I\neq\set0}}{}{\frac1{\inrm I^s}}$
 Théorème de Hecke sur la convergence de la fonction zêta;;La série $\zeta_K$ converge pour $\Re s>1$ et $\zeta_K$ se prolonge en une fonction méromorphe sur $\set{\Re s>1-\oldfrac1{\edeg K\bbQ}}$ avec un unique pôle simple en $s=1$, de résidu $\kappa=\oldfrac{2^{r_1}\l2\rmpi\r^{r_2}h_KR_K}{\omega_K\sqrt{\left|\disc K\right|}}$ où $r_1$ et $r_2$ sont le nombre de plongements réels et complexes conjugués, $h_K=\left|\cl{\calO_K}\right|$, $R_K$ le régulateur de $\calO_K$ et $\omega_K=\left|\mu_K\right|$
+Lemme d'analyse complexe sur la convergence de séries $\serie{\frac{a_n}{n^s}}$;;Si $\l a_n\r$ est une suite de nombres complexes telle que $\sum{k\le t}{}{a_k}=\equivO[t\to+\infty]{t^r}$ pour un $r\in\bbR$ fixé, alors $\sum{n=1}{+\infty}{\frac{a_n}{n^z}}$ converge pour $\Re s>r$ et y définit une fonction holomorphe
+Produit eulérien de la fonction zêta de Dirichlet;;$\zeta_K\l s\r=\prod{\frakp\le\calO_K}{}{\frac1{1-\inrm\frakp^{-s}}}$ pour $\Re s>1$
+Caractère de Dirichlet modulo $n$;;Morphisme de groupes $\l\bbZ/n\bbZ\r^\times\to\bbC^\times$
+Conducteur d'un caractère de Dirichlet modulo $n$;;Plus petit $m\mid n$ tel que $\chi$ provient d'un caractère modulo $m$
+Caractère primitif modulo $n$;;Caractère modulo $n$ de conducteur $n$
+$\sum{i\bmod n}{}{\chi\l i\r}$;;$0$ si $\chi$ est non trivial\linebreak$\phi\l n\r$ si $\chi$ est trivial
+Convergence de $\serie{\frac{\chi\l n\r}{n^s}}$;;La série converge pour $\Re s>0$ si $\chi$ n'est pas le caractère trivial et y définit une fonction holomorphe
+$L\l s,\chi\r$;;$\sum{n\in\bbN^*}{}{\frac{\chi\l n\r}{n^s}}$
+Produit eulérien de $L\l s,\chi\r$;;$\prod{p\text{ premier}}{}{\frac1{1-\chi\l p\r p^{-s}}}$ pour $\Re s>1$
+Somme de Gauss $G\l m,\chi\r$ pour $\chi$ de conducteur $f$;;$\sum{a\bmod f}{}{\chi\l a\r\zeta_f^{am}}$
+Propriétés calculatoires des somme de Gauss;;$G\l m,\chi\r=\bar{\chi\l m\r}G\l1,\chi\r$\linebreak$G\l1,\chi\r G\l1,\bar\chi\r=\bar{\chi\l-1\r}f$
+Caractère de Dirichlet quadratique;;Caractère de Dirichlet à valeurs réelles
+$\chi_K$ pour $K$ un corps de nombres quadratique\linebreak$D=\left|\disc K\right|$;;$\chi_K$ est l'unique caractère de Dirichlet quadratique de conducteur $D$ tel que $\chi\l-1\r=\operatorname{sgn}\l D\r$ et tel que $\chi_K$ soit la compositon $\l\bbZ/D\bbZ\r^\times\cong\gal{\fr Q{\zeta_{\left|D\right|}}}\bbQ\to\doublehead\gal K\bbQ\cong\set{\pm1}$
+Définition explicite de $\chi_K$ pour $K=\fr Q{\sqrt d}$\linebreak$d=\pm p_1\cdots p_r$ avec $p_1<\cdots<p_r$;;Si $\cgr d14$, $\chi_K=\chi_{p_1}\cdots\chi_{p_r}$\linebreak Si $\cgr d34$, $\chi_K=\chi_4\chi_{p_1}\cdots\chi_{p_r}$\linebreak Si $\cgr d24$, $\chi_K=\chi_8^\pm\chi_{p_2}\cdots\chi_{p_r}$
+Valeur de $\chi_K\l p\r$ pour $K$ un corps quadratique et $p$ premier;;$\chi\l p\r=0$ si $p$ est ramifié dans $K$\linebreak$\chi\l p\r=1$ si $p$ est décomposé dans $K$\linebreak$\chi\l p\r=-1$ si $p$ est inerte dans $K$
+Lien entre $\zeta_K$ et $L\l\cdot,\chi_K\r$;;$\zeta_K\l s\r=\zeta\l s\r L\l s,\chi_K\r$\linebreak Cette formule s'étend par analyticité à $\Re s>0$

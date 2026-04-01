@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage[nopar]{bigoperators}\DeclareMathOperator{\oldcl}{Cl}\newcommand{\cl}[1]{\oldcl\l#1\r}\DeclareMathOperator{\oldnrm}{nrm}\newcommand\inrm[1]{\oldnrm\l#1\r}\DeclareMathOperator{\olddisc}{disc}\newcommand{\disc}[1]{\olddisc\l#1\r}\usepackage{complexes,galois,dsft}
+\usepackage[nopar]{bigoperators}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldcl}{Cl}\newcommand{\cl}[1]{\oldcl\l#1\r}\DeclareMathOperator{\oldnrm}{nrm}\newcommand\inrm[1]{\oldnrm\l#1\r}\DeclareMathOperator{\olddisc}{disc}\newcommand{\disc}[1]{\olddisc\l#1\r}\usepackage{complexes,galois,dsft,equivalents,arrows,arithmetique,polynomes}
 \hypersetup{pdftitle={Théorie algébrique des nombres -- Fonction zêta de Dedekind}}
 \title{Théorie algébrique des nombres\\\emph{Fonction zêta de Dedekind}}
 \author{}
@@ -10,8 +10,40 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{$\zeta_K\l s\r$}{1/2}
-\slider{$\sum{\substack{I\le\calO_K\\I\neq\set0}}{}{\frac1{\inrm I^s}}$}{1/2}
-\slideq{Théorème de Hecke sur la convergence de la fonction zêta}{2/2}
-\slider{La série $\zeta_K$ converge pour $\Re s>1$ et $\zeta_K$ se prolonge en une fonction méromorphe sur $\set{\Re s>1-\oldfrac1{\edeg K\bbQ}}$ avec un unique pôle simple en $s=1$, de résidu $\kappa=\oldfrac{2^{r_1}\l2\rmpi\r^{r_2}h_KR_K}{\omega_K\sqrt{\left|\disc K\right|}}$ où $r_1$ et $r_2$ sont le nombre de plongements réels et complexes conjugués, $h_K=\left|\cl{\calO_K}\right|$, $R_K$ le régulateur de $\calO_K$ et $\omega_K=\left|\mu_K\right|$}{2/2}
+\slideq{Propriétés calculatoires des somme de Gauss}{1/18}
+\slider{$G\l m,\chi\r=\bar{\chi\l m\r}G\l1,\chi\r$\linebreak$G\l1,\chi\r G\l1,\bar\chi\r=\bar{\chi\l-1\r}f$}{1/18}
+\slideq{Conducteur d'un caractère de Dirichlet modulo $n$}{2/18}
+\slider{Plus petit $m\mid n$ tel que $\chi$ provient d'un caractère modulo $m$}{2/18}
+\slideq{$\zeta_K\l s\r$}{3/18}
+\slider{$\sum{\substack{I\le\calO_K\\I\neq\set0}}{}{\frac1{\inrm I^s}}$}{3/18}
+\slideq{$\sum{i\bmod n}{}{\chi\l i\r}$}{4/18}
+\slider{$0$ si $\chi$ est non trivial\linebreak$\phi\l n\r$ si $\chi$ est trivial}{4/18}
+\slideq{Caractère de Dirichlet modulo $n$}{5/18}
+\slider{Morphisme de groupes $\l\bbZ/n\bbZ\r^\times\to\bbC^\times$}{5/18}
+\slideq{Lemme d'analyse complexe sur la convergence de séries $\serie{\frac{a_n}{n^s}}$}{6/18}
+\slider{Si $\l a_n\r$ est une suite de nombres complexes telle que $\sum{k\le t}{}{a_k}=\equivO[t\to+\infty]{t^r}$ pour un $r\in\bbR$ fixé, alors $\sum{n=1}{+\infty}{\frac{a_n}{n^z}}$ converge pour $\Re s>r$ et y définit une fonction holomorphe}{6/18}
+\slideq{Valeur de $\chi_K\l p\r$ pour $K$ un corps quadratique et $p$ premier}{7/18}
+\slider{$\chi\l p\r=0$ si $p$ est ramifié dans $K$\linebreak$\chi\l p\r=1$ si $p$ est décomposé dans $K$\linebreak$\chi\l p\r=-1$ si $p$ est inerte dans $K$}{7/18}
+\slideq{Caractère primitif modulo $n$}{8/18}
+\slider{Caractère modulo $n$ de conducteur $n$}{8/18}
+\slideq{$L\l s,\chi\r$}{9/18}
+\slider{$\sum{n\in\bbN^*}{}{\frac{\chi\l n\r}{n^s}}$}{9/18}
+\slideq{Définition explicite de $\chi_K$ pour $K=\fr Q{\sqrt d}$\linebreak$d=\pm p_1\cdots p_r$ avec $p_1<\cdots<p_r$}{10/18}
+\slider{Si $\cgr d14$, $\chi_K=\chi_{p_1}\cdots\chi_{p_r}$\linebreak Si $\cgr d34$, $\chi_K=\chi_4\chi_{p_1}\cdots\chi_{p_r}$\linebreak Si $\cgr d24$, $\chi_K=\chi_8^\pm\chi_{p_2}\cdots\chi_{p_r}$}{10/18}
+\slideq{Caractère de Dirichlet quadratique}{11/18}
+\slider{Caractère de Dirichlet à valeurs réelles}{11/18}
+\slideq{Théorème de Hecke sur la convergence de la fonction zêta}{12/18}
+\slider{La série $\zeta_K$ converge pour $\Re s>1$ et $\zeta_K$ se prolonge en une fonction méromorphe sur $\set{\Re s>1-\oldfrac1{\edeg K\bbQ}}$ avec un unique pôle simple en $s=1$, de résidu $\kappa=\oldfrac{2^{r_1}\l2\rmpi\r^{r_2}h_KR_K}{\omega_K\sqrt{\left|\disc K\right|}}$ où $r_1$ et $r_2$ sont le nombre de plongements réels et complexes conjugués, $h_K=\left|\cl{\calO_K}\right|$, $R_K$ le régulateur de $\calO_K$ et $\omega_K=\left|\mu_K\right|$}{12/18}
+\slideq{Convergence de $\serie{\frac{\chi\l n\r}{n^s}}$}{13/18}
+\slider{La série converge pour $\Re s>0$ si $\chi$ n'est pas le caractère trivial et y définit une fonction holomorphe}{13/18}
+\slideq{Somme de Gauss $G\l m,\chi\r$ pour $\chi$ de conducteur $f$}{14/18}
+\slider{$\sum{a\bmod f}{}{\chi\l a\r\zeta_f^{am}}$}{14/18}
+\slideq{Produit eulérien de $L\l s,\chi\r$}{15/18}
+\slider{$\prod{p\text{ premier}}{}{\frac1{1-\chi\l p\r p^{-s}}}$ pour $\Re s>1$}{15/18}
+\slideq{Lien entre $\zeta_K$ et $L\l\cdot,\chi_K\r$}{16/18}
+\slider{$\zeta_K\l s\r=\zeta\l s\r L\l s,\chi_K\r$\linebreak Cette formule s'étend par analyticité à $\Re s>0$}{16/18}
+\slideq{Produit eulérien de la fonction zêta de Dirichlet}{17/18}
+\slider{$\zeta_K\l s\r=\prod{\frakp\le\calO_K}{}{\frac1{1-\inrm\frakp^{-s}}}$ pour $\Re s>1$}{17/18}
+\slideq{$\chi_K$ pour $K$ un corps de nombres quadratique\linebreak$D=\left|\disc K\right|$}{18/18}
+\slider{$\chi_K$ est l'unique caractère de Dirichlet quadratique de conducteur $D$ tel que $\chi\l-1\r=\operatorname{sgn}\l D\r$ et tel que $\chi_K$ soit la compositon $\l\bbZ/D\bbZ\r^\times\cong\gal{\fr Q{\zeta_{\left|D\right|}}}\bbQ\to\doublehead\gal K\bbQ\cong\set{\pm1}$}{18/18}
 \end{document}

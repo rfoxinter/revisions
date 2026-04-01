@@ -1,0 +1,15 @@
+Théorie spectrale -- Théorie de Gelfand
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{polynomes,al,usuelles,topologie}
+Propriétés topologiques de $A^\times$ pour $A$ une algèbre de Banach;;$A^\times$ est un ouvert et est un groupe topologique
+Propriétés topologiques de $\sigma\l a\r$ pour $a\in A$ une algèbre de Banach;;C'est un compact non vide contenu dans la boule de rayon $\left\|a\right\|$
+Résolvante de $a$;;$\appl{R_a}{\bbC\setminus\sigma\l a\r}{A^\times}{\lambda}{\l a-\lambda\r^{-1}}$\linebreak C'est une application holomorphe et $R_a'=R_a^2$
+Rayon spectral;;$r_A\l a\r=\max[\lambda\in\sigma_A\l a\r]{\left|\lambda\right|}$
+Théorème de Gelfand-Mazur;;Soit $A$ une algèbre de Banach, alors pour tout $a\in A$, $r\l a\r=\lim[n\to+\infty]{\left\|a^n\right\|^\oldfrac1n}=\inf[n\to+\infty]{\left\|a^n\right\|^\oldfrac1n}$
+Spectre de Gelfand d'une $\bbC$-algèbre $A$;;$\sigma\l A\r$ est l'ensemble des morphsimes d'algèbres $A\to\bbC$
+Topologie sur $\sigma\l A\r$;;Topologie de la convergence simple\linebreak Restriction de la topologie faible-$*$ de $A'$
+Propriétés topologiques de $\sigma\l A\r$;;C'est un espace compact
+Propriété de $\appl{\delta}{X}{\sigma\l\calC\l X\r\r}{x}{\delta_x=\l f\mapsto f\l x\r\r}$ pour $X$ compact;;C'est un homéomorphisme
+Propriétés des éléments de $\sigma\l A\r$;;Tout $\omega\in\sigma\l A\r$ vérifie:\linebreak$\omega\l a\r\in\sigma\l a\r$\linebreak$\nnrm\omega=1$\linebreak$\omega$ est une forme linéaire continue
+Propriétés de $A/I$ pour $A$ une algèbre de Banach et $I$ un idéal fermé de $A$;;$A/I$ muni de la norme quotient $\nrm{\pi\l a\r}=\inf[x\in I]{\nrm{a-x}}$ est une algèbre de Banach
