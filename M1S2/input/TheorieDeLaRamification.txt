@@ -1,7 +1,7 @@
 Surfaces de Riemann -- Théorie de la ramification
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{analysecomplexe,equivalents,polynomes,al}\usepackage[nopar]{bigoperators}\newcommand{\ram}[2]{e_{#1}\l#2\r}\DeclareMathOperator{\oldpr}{Pr}\newcommand{\pr}[1]{\oldpr\l#1\r}
+\usepackage{analysecomplexe,equivalents,polynomes,al}\usepackage[nopar]{bigoperators}\newcommand{\ram}[2]{e_{#1}\l#2\r}\DeclareMathOperator{\oldpr}{Pr}\newcommand{\pr}[1]{\oldpr\l#1\r}\let\Pr\pr
 Indice de ramification de $f$ en $P$;;Si $f$ est non constante, $\ram fP$ est l'unique entier $e\ge1$ tel que $\equiveq[z\to0]{\phi'\circ f\circ\phi^{-1}\l z\r}{\lambda z^e}$ pour $\lambda\in\bbC^*$ où $\phi$ et $\phi'$ sont des cartes de $X$ et $Y$ centrées en $P$ et $f\l P\r$
 $f$ est ramifiée en $P$;;$\ram fP\geqslant2$
 Points de ramification de $f$\linebreak Points de branchements de $f$;;$R\l f\r=\set{P\in X,\ram fP\geqslant 2}$\linebreak$B\l f\r=f\l R\l f\r\r$
@@ -21,7 +21,7 @@ Diviseur effectif;;$D\in\bigoplus{P\in X}{}{\bbN\lc P\rc}$\linebreak Cela défin
 $\fdiv f$ pour $f\in\calM\l X\r^\times$ avec $X$ une surface de Riemann compacte connexe;;$\sum{P\in X}{}{\ord[P]f\lc P\rc}\in\Div X$
 Propriétés de morphisme de $\oldfdiv$;;C'est un morphisme de groupes $\calM\l X\r^\times\to\Div X$
 $\Pr X$;;$\set{\fdiv f,f\in\calM\l X\r^\times}$ avec $X$ une surface de Riemann compacte connexe\linebreak C'est un sous-groupe de $\Div X$
-Diviseurs de degré $0$ de $X$ compacte connexe;;$\Div[0]X=\ker{\olddeg}$
+Diviseurs de degré $0$ de $X$ compacte connexe;;$\Div[0]X=\ker\l\olddeg\r$
 Groupe de Picard de $X$ compacte connexe;;$\pic[0]X=\Div[0]X/\Pr X$
 Théorème d'Abel-Jacobi;;Soit $X$ une surface de Riemann compacte connexe, alors in existe $g\geqslant0$ (appelé genre de $X$) et un réseau $\varLambda$ de $\bbC^g$ tel que $\pic[0]X\cong\bbC^g/\varLambda$
 Espace de Riemann-Roch associé au diviseur $D$;;$\calL\l D\r=\set{f\in\calM\l X\r^\times,\fdiv f\geqslant-D}\cup\set0$\linebreak C'est un $\bbC$-espace vectoriel

@@ -45,3 +45,5 @@ $\deg{K_X}$;;$2g-2$
 Théorème de Riemann-Roch faible;;Si $\deg D>2g-2$ alors $l\l D\r=\deg D+1-g$
 Théorème d'algébrisation;;Toute surface de Riemann compacte connexe est algébrique: il existe un plongement holomorphe $\phi\!:\!X\hookrightarrow\bbP^N\l\bbC\r$ avec $N\geqslant 2$ et $\phi\l X\r$ un fermé algébrique\linebreak On peut même prendre $N=3$
 Théorème de Riemann-Hurwitz;;Si $X$ et $Y$ sont dzeux surfaces de Riemann compactes connexes et $\phi\!:\!X\to Y$ est holomorphe non constante alors $2g\l X\r-2=\deg\phi\l2g\l Y\r-2\r+\sum{P\in X}{}{\l e_\phi\l P\r-1\r}$
+$\jac X$;;$\Omega^1\l X\r^*/\im\alpha$\linebreak$\appl\alpha{\Pi_1\l X;P_0\r}{\Omega^1\l X\r^*}{\lc\gamma\rc}{\omega\mapsto\int[][\gamma]\omega}$
+Théorème d'Abel-Jacobi;;L'application $\nappl{\pic[0]X}{\jac X}{\lc\sum{}{}{n_P\lc P\rc}\rc}{\lc\omega\mapsto\sum{}{}{\int[][P_0][P]\omega}\rc}$ est un isomorphisme indépendant du point $P_0$

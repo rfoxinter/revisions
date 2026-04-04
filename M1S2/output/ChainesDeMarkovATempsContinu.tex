@@ -10,18 +10,36 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Convergence d'une somme de variables aléatoires exponentielles indépendantes}{1/7}
-\slider{Si $E_n\sim\expon{\lambda_n}$ alors $\p{\sum{i=0}{+\infty}{E_i}=+\infty}=\mathbb1_{\togglebigopdisplay\sum{k=0}{+\infty}{\frac1{\lambda_k}}}$}{1/7}
-\slideq{Critère de non explosion}{2/7}
-\slider{{\togglebigopdisplay Pour tout $\theta\ge0$, $\esp{\e^{-\theta T_\infty}}=\esp{\prod{k=0}{+\infty}{\l1+\frac\theta{\lambda\l Z_k\r}\r^{-1}}}$\linebreak$\p{T_\infty=+\infty}=\p{\sum{k=0}{+\infty}{\frac1{\lambda\l Z_k\r}}=+\infty}$\linebreak Dans le cas particulier où $\lambda$ est borné, ou si la loi de $Z_0$ ne charge pas les états transients, alors $T_\infty=+\infty$ p.s.}}{2/7}
-\slideq{Propriétés de $\l S_n\r$\linebreak$S_0=0$, $S_{n+1}=\inf{\set{T_\infty>t>S_n,X_t\neq X_{S_n}}}$}{3/7}
-\slider{$\l S_n\r$ est strictement croissante et $S_n\to T_\infty$\linebreak Conditionnellement à $S_n<+\infty$ et $X_{S_n}=x$ (ou $\calF_{S_n}$), si $Q\l x,x\r=0$ alors $S_{n+1}=+\infty$ et $x$ est absorbant, et si $Q\l x,x\r\neq0$, alors $S_{n+1}<+\infty$ p.s., $S_{n+1}-S_n\indep X_{S_{n+1}}$, et conditionellemet à $X_{S_n}=x$, $S_{n+1}-S_n\sim\expon{-Q\l x,x\r}$ et $\p{X_{S_{n+1}}=y\sq X_{S_n}=x}=\oldfrac{-Q\l x,y\r}{Q\l x,x\r}$}{3/7}
-\slideq{Générateur d'une chaîne de Markov}{4/7}
-\slider{$\appl{Q}{E\times E}{\bbR}{\l x,y\r}{\tcase{\lambda\l x\r P\l x,y\r\&\text{si }x\neq y\\\lambda\l x\r\l1-P\l x,x\r\r\&\text{si }x=y\\}}$}{4/7}
-\slideq{Processus de Poisson composé}{5/7}
-\slider{$\l Z_{N_t}\r_{t\geqslant0}$ pour $\l Z_n\r_{n\in\bbN}$ une marche aléatoire sur un groupe $G$ et $\l N_t\r_{t\geqslant0}$ un processus de Poisson d'intensité $\lambda$ indépendant de la marche aléatoire\linebreak$\p{Z_{N_t}=y\sq Z_0=x}=\e^{-\lambda t}\sum{n=0}{+\infty}{\frac{\l\lambda t\r^n}{n!}P^n\l0,yx^{-1}\r}$ pour $P$ le noyau de la marche aléatoire}{5/7}
-\slideq{Chaîne de Markov à temps continu associée à un noyau $P$ et $\lambda\!:\!E\to\bbR_+$}{6/7}
-\slider{$\l X_t\r_{t\in\lc0,T_\infty\right[}=\l Z_{N_t}\r$ avec $\l Z_n\r$ une chaîne de Markov sur un ensemble au plus dénombrable $E$ de noyau $P$, $\l E_n^z\r_{n\in\bbN,z\in E}$ des variables exponentielles indépendantes d'intensité $\lambda\l z\r$, $T_0=0$ et $T_n=E_1^{Z_0}+\cdots+E_n^{z_{n+1}}$, $N_t=\sup{u\in\bbN,T_u\leqslant t}\in\bar\bbN$ et $T_\infty=\sum{n=0}{+\infty}{E_{n+1}^{z_n}}$}{6/7}
-\slideq{Poissonisation d'une chaîne de Markov}{7/7}
-\slider{$\l Z_{N_t}\r_{t\geqslant0}$ pour $\l Z_n\r_{n\in\bbN}$ une chaîne de Markov sur un ensemble au plus dénombrable $E$ et $\l N_t\r_{t\geqslant0}$ un processus de Poisson d'intensité $\lambda$ indépendant de la chaîne de Markov\linebreak$\p{Z_{N_t}=y\sq Z_0=x}=\e^{-\lambda t}\sum{n=0}{+\infty}{\frac{\l\lambda t\r^n}{n!}P^n\l x,y\r}$ pour $P$ le noyau de la chaîne de Markov}{7/7}
+\slideq{Équation de Kolmogorov backward}{1/16}
+\slider{Si $X$ est un processus càdlàg à valeurs dans $E$, alors $X$ est une chaîne de Markov à temps continu associée à $Q$ si et seulement si pour tout $n\in\bbN$, tous $0\leqslant t_0\leqslant\cdots\leqslant t_{n+1}$ et tous $x_0,\cdots,x_n\in E$, $\p{X_{t_{n+1}}=y\sq X_n=x_n,\cdots,X_0=x_0}=p_{x_n,x_{n+1}}\l t_{n+1}-t_n\r$ où $\l p_{x,y}\r_{x,y}=P$ est la solution minimale de $P\l0\r=I_n$ et $P'\l t\r=P\l t\r Q$}{1/16}
+\slideq{Propriétés de $\l S_n\r$\linebreak$S_0=0$, $S_{n+1}=\inf{\set{T_\infty>t>S_n,X_t\neq X_{S_n}}}$}{2/16}
+\slider{$\l S_n\r$ est strictement croissante et $S_n\to T_\infty$\linebreak Conditionnellement à $S_n<+\infty$ et $X_{S_n}=x$ (ou $\calF_{S_n}$), si $Q\l x,x\r=0$ alors $S_{n+1}=+\infty$ et $x$ est absorbant, et si $Q\l x,x\r\neq0$, alors $S_{n+1}<+\infty$ p.s., $S_{n+1}-S_n\indep X_{S_{n+1}}$, et conditionnellemet à $X_{S_n}=x$, $S_{n+1}-S_n\sim\expon{-Q\l x,x\r}$ et $\p{X_{S_{n+1}}=y\sq X_{S_n}=x}=\oldfrac{-Q\l x,y\r}{Q\l x,x\r}$}{2/16}
+\slideq{Critère de non explosion}{3/16}
+\slider{{\togglebigopdisplay Pour tout $\theta\ge0$, $\esp{\e^{-\theta T_\infty}}=\esp{\prod{k=0}{+\infty}{\l1+\frac\theta{\lambda\l Z_k\r}\r^{-1}}}$\linebreak$\p{T_\infty=+\infty}=\p{\sum{k=0}{+\infty}{\frac1{\lambda\l Z_k\r}}=+\infty}$\linebreak Dans le cas particulier où $\lambda$ est borné, ou si la loi de $Z_0$ ne charge pas les états transients, alors $T_\infty=+\infty$ p.s.}}{3/16}
+\slideq{Générateur d'une chaîne de Markov}{4/16}
+\slider{$\appl{Q}{E\times E}{\bbR}{\l x,y\r}{\tcase{\lambda\l x\r P\l x,y\r\&\text{si }x\neq y\\\lambda\l x\r\l1-P\l x,x\r\r\&\text{si }x=y\\}}$}{4/16}
+\slideq{Lien entre la récurrence de $x$ dans $X$ est une chaîne de Markov discrète extraite}{5/16}
+\slider{Pour $h>0$, $x$ est récurrent pour $\l X_t\r_t$ si et seulement si $x$ est récurrent pour $\l X_{hn}\r_n$}{5/16}
+\slideq{Processus de Poisson composé}{6/16}
+\slider{$\l Z_{N_t}\r_{t\geqslant0}$ pour $\l Z_n\r_{n\in\bbN}$ une marche aléatoire sur un groupe $G$ et $\l N_t\r_{t\geqslant0}$ un processus de Poisson d'intensité $\lambda$ indépendant de la marche aléatoire\linebreak$\p{Z_{N_t}=y\sq Z_0=x}=\e^{-\lambda t}\sum{n=0}{+\infty}{\frac{\l\lambda t\r^n}{n!}P^n\l0,yx^{-1}\r}$ pour $P$ le noyau de la marche aléatoire}{6/16}
+\slideq{Propriété de Markov faible}{7/16}
+\slider{Pour tout $t\geqslant0$, conditionnellement à $\calF_t$, $\l X_{t+s}\r_{s\geqslant0}$ est une chaîne de Markov de matrice $Q$ et commençant en $X_t$}{7/16}
+\slideq{$x\in E$ est récurrent\linebreak $x\in E$ est transient}{8/16}
+\slider{$x$ est récurrent si $\set{t\geqslant0,X_t=x}$ est non borné\linebreak$x$ est transient sinon}{8/16}
+\slideq{Propriétés de $Z_x=\esp[x]{\e^{-\theta T_\infty}}$}{9/16}
+\slider{Pour tout $x\in E$ et tout $\theta>0$, $\left|Z_x\right|\leqslant1$ et $\theta Z=QZ$\linebreak Si $Z'$ vérifie ces deux conditions alors $Z'\leqslant Z$ terme à terme}{9/16}
+\slideq{Lien entre $Q$, $T_\cdot$ et la récurrence}{10/16}
+\slider{Si $Q\l x,x\r=0$ ou $\p[\!\!x]{T_x<+\infty}=1$ alors $x$ est récurrent et $\int[t][0][+\infty]{P_t\l x,x\r}=+\infty$}{10/16}
+\slideq{CNS de non explosion sur les vecteurs propres de $Q$}{11/16}
+\slider{$T_\infty=+\infty$ ss'il existe $\theta>0$ tel que, pour tout $v\in\bbR^E$ avec $\left|v_x\right|\leqslant1$ pour tout $x\in E$ et $Qv=\theta v$, alors $v=0$}{11/16}
+\slideq{Poissonisation d'une chaîne de Markov}{12/16}
+\slider{$\l Z_{N_t}\r_{t\geqslant0}$ pour $\l Z_n\r_{n\in\bbN}$ une chaîne de Markov sur un ensemble au plus dénombrable $E$ et $\l N_t\r_{t\geqslant0}$ un processus de Poisson d'intensité $\lambda$ indépendant de la chaîne de Markov\linebreak$\p{Z_{N_t}=y\sq Z_0=x}=\e^{-\lambda t}\sum{n=0}{+\infty}{\frac{\l\lambda t\r^n}{n!}P^n\l x,y\r}$ pour $P$ le noyau de la chaîne de Markov}{12/16}
+\slideq{Convergence d'une somme de variables aléatoires exponentielles indépendantes}{13/16}
+\slider{Si $E_n\sim\expon{\lambda_n}$ alors $\p{\sum{i=0}{+\infty}{E_i}=+\infty}=\mathbb1_{\togglebigopdisplay\sum{k=0}{+\infty}{\frac1{\lambda_k}}}$}{13/16}
+\slideq{Propriété de Markov forte}{14/16}
+\slider{Pour tout temps d'arrêt $T$ pour la filtration canonique, conditionnellement à $\calF_T$, $\l X_{T+s}\r_{s\geqslant0}$ est une chaîne de Markov de matrice $Q$ et commençant en $X_T$}{14/16}
+\slideq{Équation de Kolmogorov backward}{15/16}
+\slider{Si $X$ est un processus càdlàg à valeurs dans $E$, alors $X$ est une chaîne de Markov à temps continu associée à $Q$ si et seulement si pour tout $n\in\bbN$, tous $0\leqslant t_0\leqslant\cdots\leqslant t_{n+1}$ et tous $x_0,\cdots,x_n\in E$, $\p{X_{t_{n+1}}=y\sq X_n=x_n,\cdots,X_0=x_0}=p_{x_n,x_{n+1}}\l t_{n+1}-t_n\r$ où $\l p_{x,y}\r_{x,y}=P$ est la solution minimale de $P\l0\r=I_n$ et $P'\l t\r=QP\l t\r$}{15/16}
+\slideq{Chaîne de Markov à temps continu associée à un noyau $P$ et $\lambda\!:\!E\to\bbR_+$}{16/16}
+\slider{$\l X_t\r_{t\in\lc0,T_\infty\right[}=\l Z_{N_t}\r$ avec $\l Z_n\r$ une chaîne de Markov sur un ensemble au plus dénombrable $E$ de noyau $P$, $\l E_n^z\r_{n\in\bbN,z\in E}$ des variables exponentielles indépendantes d'intensité $\lambda\l z\r$, $T_0=0$ et $T_n=E_1^{Z_0}+\cdots+E_n^{z_{n+1}}$, $N_t=\sup{u\in\bbN,T_u\leqslant t}\in\bar\bbN$ et $T_\infty=\sum{n=0}{+\infty}{E_{n+1}^{z_n}}$}{16/16}
 \end{document}
