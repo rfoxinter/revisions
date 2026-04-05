@@ -1,7 +1,7 @@
 Surfaces de Riemann -- Formes différentielles
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage[nopar]{bigoperators}\usepackage{geometrie,complexes}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldA}{A}\newcommand{\A}[3]{\oldA^{#1}_{#2}\l#3\r}\def\barOmega{\bar\Omega\vphantom{\Omega}}\usepackage{topologie,structures,al,analysecomplexe,dsft}
+\usepackage[nopar]{bigoperators}\usepackage{geometrie,complexes}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldA}{A}\newcommand{\A}[3]{\oldA^{#1}_{#2}\l#3\r}\def\barOmega{\bar\Omega\vphantom{\Omega}}\usepackage{topologie,structures,al,analysecomplexe,dsft}\let\olddeg\deg\def\deg#1{\olddeg\l#1\r}
 Espace tangent à une surface de Riemann $X$ en $P$;;$\tg_PX$ peut être naturellement muni d'une structure de $\bbC$-ev (de dimension $1$) via $\gamma\mapsto\l\phi\circ\gamma\r'\l0\r\in\bbC$
 Formes différentielles complexes de degré $k$;;$\A k\bbC X=\A k\bbR X\otimes_\bbR\bbC$\linebreak$\A k\bbR X$ les formes différentielles sur $X$ vue comme variété différentielle
 Décomposition de formes linéaires complexes;;Tout $\omega\in\A k\bbC X$ se décompose de manière unique en $\omega=\alpha+\ii\beta$ avec $\alpha,\beta\in\A k\bbR X$
@@ -24,8 +24,8 @@ CNS pour que $\omega\in\A{1,0}{}X$ soit holomorphe;;$\omega$ est fermée ($\dd\o
 Application $\partial\bar\partial$;;$\appl{\partial\bar\partial}{\calC^\infty\l X,\bbC\r}{\A2\bbC X}f{\dd\l\bar\partial f\r}$
 $f\in\calC^\infty\l X,\bbC\r$;;$\partial\bar\partial f=0$
 $\im{\partial\bar\partial}$;;$\set{\alpha\in\A2\bbC X,\int[][X]\alpha=0}$
-Cohomologie de de Rham de $X$;;$H^1_\text{dR}\l X,\bbR\r=\frac{\ker{{\dd}\!:\!\A1\bbR X\to\A2\bbR X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbR\r\to\A1\bbR X}}$\linebreak$H^1_\text{dR}\l X,\bbC\r=\frac{\ker{{\dd}\!:\!\A1\bbC X\to\A2\bbC X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbC\r\to\A1\bbC X}}$
-Décomposition de Hodge;;$X$ une surface de Riemann compacte conexe\linebreak$\nappl{\Omega^1\l X\r\oplus\barOmega^1\l X\r}{H^1_\text{dR}\l X,\bbC\r}{\l\omega,\nu\r}{\lc\omega+\nu\rc}$ est un isomorphisme d'espaces vectoriels\linebreak En particulier, $\dim{H^1_\text{dR}\l X,\bbC\r}=2g$ pour $g$ le genre de $X$
+Cohomologie de de Rham de $X$;;$\operatorname H^1_\text{dR}\l X,\bbR\r=\frac{\ker{{\dd}\!:\!\A1\bbR X\to\A2\bbR X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbR\r\to\A1\bbR X}}$\linebreak$\operatorname H^1_\text{dR}\l X,\bbC\r=\frac{\ker{{\dd}\!:\!\A1\bbC X\to\A2\bbC X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbC\r\to\A1\bbC X}}$
+Décomposition de Hodge;;$X$ une surface de Riemann compacte conexe\linebreak$\nappl{\Omega^1\l X\r\oplus\barOmega^1\l X\r}{\operatorname H^1_\text{dR}\l X,\bbC\r}{\l\omega,\nu\r}{\lc\omega+\nu\rc}$ est un isomorphisme d'espaces vectoriels\linebreak En particulier, $\dim{\operatorname H^1_\text{dR}\l X,\bbC\r}=2g$ pour $g$ le genre de $X$
 $\omega\in\Omega^1\l U\setminus\set P\r$ est méromorphe en $P$;;$\phi_*\omega=f\l z\r\intd z$ est méromorphe en $0$ pour $\phi$ une carte centrée en $P$
 $\omega\in\Omega^1\l U\setminus\set P\r$ a une singularité essentielle en $P$;;$\phi_*\omega=f\l z\r\intd z$ a une singularité essentielle en $0$ pour $\phi$ une carte centrée en $P$
 $\Omega^1\l\calM\l X\r\r$;;Formes différentielles méromorphes\linebreak C'est l'ensemble des $\l S,\omega\r$ pour $S\subset X$ une partie discrète et fermée et $\omega\in\Omega^1\l X\setminus S\r$

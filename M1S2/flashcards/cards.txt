@@ -22,7 +22,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/SurfacesDeRiemann/FonctionsElliptiques
 20260324201806
 ../M1S2/flashcards/SurfacesDeRiemann/FormesDifferentielles
-20260404170433
+20260405182624
 ../M1S2/flashcards/SurfacesDeRiemann/QuotientsDeSurfacesDeRiemann
 20260404171018
 ../M1S2/flashcards/SurfacesDeRiemann/TheorieDeLaRamification

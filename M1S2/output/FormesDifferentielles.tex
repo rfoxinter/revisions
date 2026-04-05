@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage[nopar]{bigoperators}\usepackage{geometrie,complexes}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldA}{A}\newcommand{\A}[3]{\oldA^{#1}_{#2}\l#3\r}\def\barOmega{\bar\Omega\vphantom{\Omega}}\usepackage{topologie,structures,al,analysecomplexe,dsft}
+\usepackage[nopar]{bigoperators}\usepackage{geometrie,complexes}\usepackage[nopar]{analyse}\DeclareMathOperator{\oldA}{A}\newcommand{\A}[3]{\oldA^{#1}_{#2}\l#3\r}\def\barOmega{\bar\Omega\vphantom{\Omega}}\usepackage{topologie,structures,al,analysecomplexe,dsft}\let\olddeg\deg\def\deg#1{\olddeg\l#1\r}
 \hypersetup{pdftitle={Surfaces de Riemann -- Formes différentielles}}
 \title{Surfaces de Riemann\\\emph{Formes différentielles}}
 \author{}
@@ -10,94 +10,94 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Lien entre $\int[][\gamma]\omega$ et $\res P\omega$ pour $U$ simplement connexe et $\gamma$ un lacet de $U\setminus\set P$}{1/45}
-\slider{$\int[][\gamma]\omega=2\ii\rmpi I\l0;\phi\circ\gamma\r\res P\omega$}{1/45}
-\slideq{$\deg{K_X}$}{2/45}
-\slider{$2g-2$}{2/45}
-\slideq{Théorème d'Abel-Jacobi}{3/45}
-\slider{L'application $\nappl{\pic[0]X}{\jac X}{\lc\sum{}{}{n_P\lc P\rc}\rc}{\lc\omega\mapsto\sum{}{}{\int[][P_0][P]\omega}\rc}$ est un isomorphisme indépendant du point $P_0$}{3/45}
-\slideq{Décomposition de formes linéaires complexes}{4/45}
-\slider{Tout $\omega\in\A k\bbC X$ se décompose de manière unique en $\omega=\alpha+\ii\beta$ avec $\alpha,\beta\in\A k\bbR X$}{4/45}
-\slideq{Théorème d'algébrisation}{5/45}
-\slider{Toute surface de Riemann compacte connexe est algébrique: il existe un plongement holomorphe $\phi\!:\!X\hookrightarrow\bbP^N\l\bbC\r$ avec $N\geqslant 2$ et $\phi\l X\r$ un fermé algébrique\linebreak On peut même prendre $N=3$}{5/45}
-\slideq{$\omega\in\A1\bbC X$ est holomorphe\linebreak$\omega\in\A1\bbC X$ est anti-holomorphe}{6/45}
-\slider{$\omega=f\l z\r\intd z$ avec $f$ holomorphe\linebreak$\omega=\bar{f\l z\r}\intd\bar z$ avec $f$ holomorphe}{6/45}
-\slideq{Application $\partial\bar\partial$}{7/45}
-\slider{$\appl{\partial\bar\partial}{\calC^\infty\l X,\bbC\r}{\A2\bbC X}f{\dd\l\bar\partial f\r}$}{7/45}
-\slideq{Genre d'une surface de Riemann compacte connexe}{8/45}
-\slider{$g\l X\r=\dim{\Omega^1\l X\r}$}{8/45}
-\slideq{Propriété de $\set{P\in X,\ord[P]\omega\neq0}$}{9/45}
-\slider{C'est une partie discrète et fermée de $X$}{9/45}
-\slideq{Théorème des résidus pour les formes différentielles}{10/45}
-\slider{Si $X$ est une surface de Riemann compacte et $D$ un domaine de $X$ avec $\partial D$ muni de l'orientation canonique, si $\omega$ est une forme différentielle sur un voisinage ouvert de $D$ dont les pôles $P_1,\cdots,P_n$ sont contenus dans $\mathring D$, alors $\int[][\partial D]\omega=2\ii\rmpi\sum{j=1}n{\res{P_i}\omega}$}{10/45}
-\slideq{Lien entre $\calO\l X\r$, $\calM\l X\r$, $\Omega^1\l X\r$ et $\Omega^1\l\calM\l X\r\r$}{11/45}
-\slider{$\dd\l\calO\l X\r\r\subset\Omega^1\l X\r$\linebreak$\dd\l\calM\l X\r\r\subset\Omega^1\l\calM\l X\r\r$\linebreak Les inclusions peuvent être strictes}{11/45}
-\slideq{$\ord[P]{f\omega}$ pour $f\in\calM\l X\r$ et $\omega\in\Omega^1\l\calM\l X\r\r$}{12/45}
-\slider{$\ord[P]{f\omega}=\ord[P]{f}+\ord[P]{\omega}$}{12/45}
-\slideq{$\dd z$\linebreak$\dd\bar z$}{13/45}
-\slider{$\dd x+\ii\intd y$\linebreak$\dd x-\ii\intd y$}{13/45}
-\slideq{Domaine $D$ d'une surface de Riemann}{14/45}
-\slider{Sous-vareiété de $X$ de dimension $2$ à bord telle que $\partial D$ peut être paramétré par des chemins dans $X$: en tout point de $\partial D$, on se donne $\vec n\in\tg_PX$ sortant de $D$ et $\vec t\in\tg_P\l\partial D\r\subset\tg_PX$ tel que $\l\vec n,\vec t\r$ soit directe}{14/45}
-\slideq{$\im{\partial\bar\partial}$}{15/45}
-\slider{$\set{\alpha\in\A2\bbC X,\int[][X]\alpha=0}$}{15/45}
-\slideq{Théorème de Riemann-Roch faible}{16/45}
-\slider{Si $\deg D>2g-2$ alors $l\l D\r=\deg D+1-g$}{16/45}
-\slideq{$\omega\in\Omega^1\l U\setminus\set P\r$ a une singularité essentielle en $P$}{17/45}
-\slider{$\phi_*\omega=f\l z\r\intd z$ a une singularité essentielle en $0$ pour $\phi$ une carte centrée en $P$}{17/45}
-\slideq{Théorème de Riemann-Roch}{18/45}
-\slider{Si $X$ est une surface de Riemann compacte connexe de genre $g$, alors pour tout $D\in\Div X$, $l\l D\r-l\l K_X-D\r=\deg D+1-g$}{18/45}
+\slideq{Théorème de Riemann-Roch}{1/45}
+\slider{Si $X$ est une surface de Riemann compacte connexe de genre $g$, alors pour tout $D\in\Div X$, $l\l D\r-l\l K_X-D\r=\deg D+1-g$}{1/45}
+\slideq{Chemin sur une surface de Riemann $X$\linebreak Lacet sur une surface de Riemann $X$}{2/45}
+\slider{Application continue $\gamma\!:\!\lc a,b\rc\to X$ continue et $\calC^\infty$ par morceaux\linebreak Chemin $\gamma$ sur $X$ vérifiant $\gamma\l a\r=\gamma\l b\r$}{2/45}
+\slideq{$\omega\in\Omega^1\l U\setminus\set P\r$ a une singularité essentielle en $P$}{3/45}
+\slider{$\phi_*\omega=f\l z\r\intd z$ a une singularité essentielle en $0$ pour $\phi$ une carte centrée en $P$}{3/45}
+\slideq{Différentielle extérieure sur $\A k\bbC X$}{4/45}
+\slider{$\dd\!:\!\A k\bbR X\to\A{k+1}\bbR X$ s'étend par $\bbC$-linéarité en $\appl{\dd}{\A k\bbC X}{\A{k+1}\bbC X}{\alpha+\ii\beta}{\dd\alpha+\ii\intd\beta}$}{4/45}
+\slideq{$\Omega^1\l X\r$\linebreak$\barOmega^1\l X\r$}{5/45}
+\slider{$\set{\omega\in\A1\bbC x\text{ holomorphe}}$\linebreak$\set{\omega\in\A1\bbC x\text{ anti-holomorphe}}$\linebreak Ce sont des $\bbC$-ev de dimension finie}{5/45}
+\slideq{$\Omega^1\l\calM\l X\r\r$}{6/45}
+\slider{Formes différentielles méromorphes\linebreak C'est l'ensemble des $\l S,\omega\r$ pour $S\subset X$ une partie discrète et fermée et $\omega\in\Omega^1\l X\setminus S\r$}{6/45}
+\slideq{Conjugaison de formes différentielles}{7/45}
+\slider{On dispose d'une conjugaison complexe sur $\A k\bbC X$ définie par $\bar{\alpha+\ii\beta}=\alpha-\ii\beta$\linebreak$\A k\bbR X=\set{\omega\in\A k\bbC X,\omega=\bar\omega}$}{7/45}
+\slideq{Espace tangent à une surface de Riemann $X$ en $P$}{8/45}
+\slider{$\tg_PX$ peut être naturellement muni d'une structure de $\bbC$-ev (de dimension $1$) via $\gamma\mapsto\l\phi\circ\gamma\r'\l0\r\in\bbC$}{8/45}
+\slideq{$\int[][\gamma]\omega$ pour $\omega\in\A1\bbC U$ exacte}{9/45}
+\slider{$f\l\gamma\l b\r\r-f\l\gamma\l a\r\r$ si $\omega=\dd f$ avec $f\in\calC^\infty\l U,\bbC\r$}{9/45}
+\slideq{Décomposition de formes linéaires complexes}{10/45}
+\slider{Tout $\omega\in\A k\bbC X$ se décompose de manière unique en $\omega=\alpha+\ii\beta$ avec $\alpha,\beta\in\A k\bbR X$}{10/45}
+\slideq{Diviseur canonique sur $X$}{11/45}
+\slider{Diviseur de la forme $K_X=\fdiv\omega$ pour $\omega\in\Omega^1\l\calM\l X\r\r$}{11/45}
+\slideq{Théorème des résidus pour les formes différentielles}{12/45}
+\slider{Si $X$ est une surface de Riemann compacte et $D$ un domaine de $X$ avec $\partial D$ muni de l'orientation canonique, si $\omega$ est une forme différentielle sur un voisinage ouvert de $D$ dont les pôles $P_1,\cdots,P_n$ sont contenus dans $\mathring D$, alors $\int[][\partial D]\omega=2\ii\rmpi\sum{j=1}n{\res{P_i}\omega}$}{12/45}
+\slideq{$\deg{K_X}$}{13/45}
+\slider{$2g-2$}{13/45}
+\slideq{Propriétés de $\int[][\cdot]{\bullet}$}{14/45}
+\slider{\toggleanalysedisplay$\omega\mapsto\int[][\gamma]\omega$ est $\bbC$-linéaire\linebreak$\int[][\gamma_2\cdot\gamma_1]\omega=\int[][\gamma_1]\omega+\int[][\gamma_2]\omega$\linebreak Pour $\phi\!:\!\lc a,b\rc\to\lc a',b'\rc$ $\calC^\infty$ et strictement croissante, $\int[][\gamma]\omega=\int[][\gamma\circ\phi]\omega$\linebreak$\int[][t\mapsto\gamma\l a+b-t\r]\omega=-\int[][\gamma]\omega$\linebreak$\bar{\int[][\gamma]\omega}=\int[][\gamma]{\bar\omega}$\toggleanalysedisplay}{14/45}
+\slideq{Théorème d'algébrisation}{15/45}
+\slider{Toute surface de Riemann compacte connexe est algébrique: il existe un plongement holomorphe $\phi\!:\!X\hookrightarrow\bbP^N\l\bbC\r$ avec $N\geqslant 2$ et $\phi\l X\r$ un fermé algébrique\linebreak On peut même prendre $N=3$}{15/45}
+\slideq{$\ord[P]{f\omega}$ pour $f\in\calM\l X\r$ et $\omega\in\Omega^1\l\calM\l X\r\r$}{16/45}
+\slider{$\ord[P]{f\omega}=\ord[P]{f}+\ord[P]{\omega}$}{16/45}
+\slideq{Formule d'adjonction}{17/45}
+\slider{$\int[][\gamma]{f^*\omega}=\int[][f\circ\gamma]\omega$ pour $f\!:\!X\to Y$ holomorphe}{17/45}
+\slideq{Propriétés des formes différentielles (anti-)holomorphe}{18/45}
+\slider{Les formes différentielles (anti-)holomorphes sont fermées}{18/45}
 \slideq{$\jac X$}{19/45}
 \slider{$\Omega^1\l X\r^*/\im\alpha$\linebreak$\appl\alpha{\Pi_1\l X;P_0\r}{\Omega^1\l X\r^*}{\lc\gamma\rc}{\omega\mapsto\int[][\gamma]\omega}$}{19/45}
-\slideq{$\int[][\gamma]\omega$}{20/45}
-\slider{$\sum{i=0}{n-1}{\int[t][t_i][{{t_{i+1}}}]{h_i\l t\r}}$\linebreak$a=t_0<\cdots<t_n=b$ une subdivision de $\lc a,b\rc$ sur lesquels $\gamma$ est $\calC^\infty$ et ${\gamma_{|\lc t_i,t_{i+1}\rc}}^*\omega=h_i\l t\r\dd t$}{20/45}
+\slideq{$\fdiv\omega$ pour $X$ compacte connexe et $\omega\in\Omega^1\l\calM\l X\r\r$}{20/45}
+\slider{$\sum{P\in X}{}{\ord[P]\omega\lc P\rc}\in\Div X$}{20/45}
 \slideq{$\ord[P]{\omega+\omega'}$ pour $\omega,\omega'\in\Omega^1\l\calM\l X\r\r$}{21/45}
 \slider{$\ord[P]{\omega+\omega'}\geqslant\ord[P]\omega+\ord[P]{\omega'}$}{21/45}
-\slideq{$\int[][\gamma]\omega$ pour $\omega\in\A1\bbC U$ exacte}{22/45}
-\slider{$f\l\gamma\l b\r\r-f\l\gamma\l a\r\r$ si $\omega=\dd f$ avec $f\in\calC^\infty\l U,\bbC\r$}{22/45}
-\slideq{$\fdiv\omega$ pour $X$ compacte connexe et $\omega\in\Omega^1\l\calM\l X\r\r$}{23/45}
-\slider{$\sum{P\in X}{}{\ord[P]\omega\lc P\rc}\in\Div X$}{23/45}
-\slideq{CNS pour que $\omega\in\A{1,0}{}X$ soit holomorphe}{24/45}
-\slider{$\omega$ est fermée ($\dd\omega=0$)}{24/45}
-\slideq{$\Omega^1\l X\r$\linebreak$\barOmega^1\l X\r$}{25/45}
-\slider{$\set{\omega\in\A1\bbC x\text{ holomorphe}}$\linebreak$\set{\omega\in\A1\bbC x\text{ anti-holomorphe}}$\linebreak Ce sont des $\bbC$-ev de dimension finie}{25/45}
-\slideq{Conjugaison de formes différentielles}{26/45}
-\slider{On dispose d'une conjugaison complexe sur $\A k\bbC X$ définie par $\bar{\alpha+\ii\beta}=\alpha-\ii\beta$\linebreak$\A k\bbR X=\set{\omega\in\A k\bbC X,\omega=\bar\omega}$}{26/45}
-\slideq{Invariance par homotopie de $\int[][\cdot]\omega$}{27/45}
-\slider{Si $\omega\in\A1\bbC U$ est fermée et $\varGamma$ est une homotopie de chemins à extrémités fixées ou de lacets entre $\gamma_1$ et $\gamma_2$ sur $U$ alors $\int[][\gamma_1]\omega=\int[][\gamma_2]\omega$\linebreak C'est en particulier vrai pour les formes différentielles holomorphes}{27/45}
-\slideq{Produit scalaire hermitien sur $\Omega^1\l X\r$}{28/45}
-\slider{$\appl{\psc\cdot\cdot}{\l\Omega^1\l X\r\r^2}{\bbC}{\l\omega,\nu\r}{\frac\ii2\int[][X]{\omega\wedge\bar\nu}}$}{28/45}
-\slideq{Diviseur canonique sur $X$}{29/45}
-\slider{Diviseur de la forme $K_X=\fdiv\omega$ pour $\omega\in\Omega^1\l\calM\l X\r\r$}{29/45}
-\slideq{Théorème de Riemann-Hurwitz}{30/45}
-\slider{Si $X$ et $Y$ sont dzeux surfaces de Riemann compactes connexes et $\phi\!:\!X\to Y$ est holomorphe non constante alors $2g\l X\r-2=\deg\phi\l2g\l Y\r-2\r+\sum{P\in X}{}{\l e_\phi\l P\r-1\r}$}{30/45}
-\slideq{Cohomologie de de Rham de $X$}{31/45}
-\slider{$H^1_\text{dR}\l X,\bbR\r=\frac{\ker{{\dd}\!:\!\A1\bbR X\to\A2\bbR X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbR\r\to\A1\bbR X}}$\linebreak$H^1_\text{dR}\l X,\bbC\r=\frac{\ker{{\dd}\!:\!\A1\bbC X\to\A2\bbC X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbC\r\to\A1\bbC X}}$}{31/45}
+\slideq{Théorème d'Abel-Jacobi}{22/45}
+\slider{L'application $\nappl{\pic[0]X}{\jac X}{\lc\sum{}{}{n_P\lc P\rc}\rc}{\lc\omega\mapsto\sum{}{}{\int[][P_0][P]\omega}\rc}$ est un isomorphisme indépendant du point $P_0$}{22/45}
+\slideq{$f\in\calC^\infty\l X,\bbC\r$}{23/45}
+\slider{$\partial\bar\partial f=0$}{23/45}
+\slideq{Théorème de Riemann-Hurwitz}{24/45}
+\slider{Si $X$ et $Y$ sont dzeux surfaces de Riemann compactes connexes et $\phi\!:\!X\to Y$ est holomorphe non constante alors $2g\l X\r-2=\deg\phi\l2g\l Y\r-2\r+\sum{P\in X}{}{\l e_\phi\l P\r-1\r}$}{24/45}
+\slideq{$\omega\in\Omega^1\l U\setminus\set P\r$ est méromorphe en $P$}{25/45}
+\slider{$\phi_*\omega=f\l z\r\intd z$ est méromorphe en $0$ pour $\phi$ une carte centrée en $P$}{25/45}
+\slideq{$\omega\in\A1\bbC X$ est holomorphe\linebreak$\omega\in\A1\bbC X$ est anti-holomorphe}{26/45}
+\slider{$\omega=f\l z\r\intd z$ avec $f$ holomorphe\linebreak$\omega=\bar{f\l z\r}\intd\bar z$ avec $f$ holomorphe}{26/45}
+\slideq{Cohomologie de de Rham de $X$}{27/45}
+\slider{$\operatorname H^1_\text{dR}\l X,\bbR\r=\frac{\ker{{\dd}\!:\!\A1\bbR X\to\A2\bbR X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbR\r\to\A1\bbR X}}$\linebreak$\operatorname H^1_\text{dR}\l X,\bbC\r=\frac{\ker{{\dd}\!:\!\A1\bbC X\to\A2\bbC X}}{\im{{\dd}\!:\!\calC^\infty\l X,\bbC\r\to\A1\bbC X}}$}{27/45}
+\slideq{Lien entre $\int[][\gamma]\omega$ et $\res P\omega$ pour $U$ simplement connexe et $\gamma$ un lacet de $U\setminus\set P$}{28/45}
+\slider{$\int[][\gamma]\omega=2\ii\rmpi I\l0;\phi\circ\gamma\r\res P\omega$}{28/45}
+\slideq{Domaine $D$ d'une surface de Riemann}{29/45}
+\slider{Sous-vareiété de $X$ de dimension $2$ à bord telle que $\partial D$ peut être paramétré par des chemins dans $X$: en tout point de $\partial D$, on se donne $\vec n\in\tg_PX$ sortant de $D$ et $\vec t\in\tg_P\l\partial D\r\subset\tg_PX$ tel que $\l\vec n,\vec t\r$ soit directe}{29/45}
+\slideq{Lien entre $\calO\l X\r$, $\calM\l X\r$, $\Omega^1\l X\r$ et $\Omega^1\l\calM\l X\r\r$}{30/45}
+\slider{$\dd\l\calO\l X\r\r\subset\Omega^1\l X\r$\linebreak$\dd\l\calM\l X\r\r\subset\Omega^1\l\calM\l X\r\r$\linebreak Les inclusions peuvent être strictes}{30/45}
+\slideq{Genre d'une surface de Riemann compacte connexe}{31/45}
+\slider{$g\l X\r=\dim{\Omega^1\l X\r}$}{31/45}
 \slideq{Formes différentielles complexes de degré $k$}{32/45}
 \slider{$\A k\bbC X=\A k\bbR X\otimes_\bbR\bbC$\linebreak$\A k\bbR X$ les formes différentielles sur $X$ vue comme variété différentielle}{32/45}
-\slideq{$\omega\in\A1\bbC X$ est de type $\l1,0\r$\linebreak$\omega\in\A1\bbC X$ est de type $\l0,1\r$}{33/45}
-\slider{Pour toute carte complexe de $X$ $\phi\!:\!U\to V\subopn\bbC$, $\phi_*\omega=\alpha\intd z$ avec $\alpha\in\calC^\infty\l X,\bbC\r$\linebreak Pour toute carte complexe de $X$ $\phi\!:\!U\to V\subopn\bbC$, $\phi_*\omega=\beta\intd\bar z$ avec $\beta\in\calC^\infty\l X,\bbC\r$}{33/45}
-\slideq{$f\in\calC^\infty\l X,\bbC\r$}{34/45}
-\slider{$\partial\bar\partial f=0$}{34/45}
-\slideq{Décomposition de Hodge}{35/45}
-\slider{$X$ une surface de Riemann compacte conexe\linebreak$\nappl{\Omega^1\l X\r\oplus\barOmega^1\l X\r}{H^1_\text{dR}\l X,\bbC\r}{\l\omega,\nu\r}{\lc\omega+\nu\rc}$ est un isomorphisme d'espaces vectoriels\linebreak En particulier, $\dim{H^1_\text{dR}\l X,\bbC\r}=2g$ pour $g$ le genre de $X$}{35/45}
-\slideq{Propriétés des formes différentielles (anti-)holomorphe}{36/45}
-\slider{Les formes différentielles (anti-)holomorphes sont fermées}{36/45}
-\slideq{$\res P\omega$}{37/45}
-\slider{Coefficient en $z^{-1}$ du développement en série de Laurent de $f$ où $\phi_*\omega=f\l z\r\intd z$}{37/45}
-\slideq{Applications $\partial$ et $\bar\partial$}{38/45}
-\slider{$\appl\partial{\calC^\infty\l X,\bbC\r}{\A{1,0}{}X}f{\l\dd f\r^{1,0}}$\linebreak$\appl{\bar\partial}{\calC^\infty\l X,\bbC\r}{\A{0,1}{}X}f{\l\dd f\r^{0,1}}$}{38/45}
-\slideq{Propriétés de $\int[][\cdot]{\bullet}$}{39/45}
-\slider{\toggleanalysedisplay$\omega\mapsto\int[][\gamma]\omega$ est $\bbC$-linéaire\linebreak$\int[][\gamma_2\cdot\gamma_1]\omega=\int[][\gamma_1]\omega+\int[][\gamma_2]\omega$\linebreak Pour $\phi\!:\!\lc a,b\rc\to\lc a',b'\rc$ $\calC^\infty$ et strictement croissante, $\int[][\gamma]\omega=\int[][\gamma\circ\phi]\omega$\linebreak$\int[][t\mapsto\gamma\l a+b-t\r]\omega=-\int[][\gamma]\omega$\linebreak$\bar{\int[][\gamma]\omega}=\int[][\gamma]{\bar\omega}$\toggleanalysedisplay}{39/45}
-\slideq{$\Omega^1\l\calM\l X\r\r$}{40/45}
-\slider{Formes différentielles méromorphes\linebreak C'est l'ensemble des $\l S,\omega\r$ pour $S\subset X$ une partie discrète et fermée et $\omega\in\Omega^1\l X\setminus S\r$}{40/45}
-\slideq{$\omega\in\Omega^1\l U\setminus\set P\r$ est méromorphe en $P$}{41/45}
-\slider{$\phi_*\omega=f\l z\r\intd z$ est méromorphe en $0$ pour $\phi$ une carte centrée en $P$}{41/45}
-\slideq{Formule d'adjonction}{42/45}
-\slider{$\int[][\gamma]{f^*\omega}=\int[][f\circ\gamma]\omega$ pour $f\!:\!X\to Y$ holomorphe}{42/45}
-\slideq{Chemin sur une surface de Riemann $X$\linebreak Lacet sur une surface de Riemann $X$}{43/45}
-\slider{Application continue $\gamma\!:\!\lc a,b\rc\to X$ continue et $\calC^\infty$ par morceaux\linebreak Chemin $\gamma$ sur $X$ vérifiant $\gamma\l a\r=\gamma\l b\r$}{43/45}
-\slideq{Différentielle extérieure sur $\A k\bbC X$}{44/45}
-\slider{$\dd\!:\!\A k\bbR X\to\A{k+1}\bbR X$ s'étend par $\bbC$-linéarité en $\appl{\dd}{\A k\bbC X}{\A{k+1}\bbC X}{\alpha+\ii\beta}{\dd\alpha+\ii\intd\beta}$}{44/45}
-\slideq{Espace tangent à une surface de Riemann $X$ en $P$}{45/45}
-\slider{$\tg_PX$ peut être naturellement muni d'une structure de $\bbC$-ev (de dimension $1$) via $\gamma\mapsto\l\phi\circ\gamma\r'\l0\r\in\bbC$}{45/45}
+\slideq{Applications $\partial$ et $\bar\partial$}{33/45}
+\slider{$\appl\partial{\calC^\infty\l X,\bbC\r}{\A{1,0}{}X}f{\l\dd f\r^{1,0}}$\linebreak$\appl{\bar\partial}{\calC^\infty\l X,\bbC\r}{\A{0,1}{}X}f{\l\dd f\r^{0,1}}$}{33/45}
+\slideq{$\res P\omega$}{34/45}
+\slider{Coefficient en $z^{-1}$ du développement en série de Laurent de $f$ où $\phi_*\omega=f\l z\r\intd z$}{34/45}
+\slideq{Invariance par homotopie de $\int[][\cdot]\omega$}{35/45}
+\slider{Si $\omega\in\A1\bbC U$ est fermée et $\varGamma$ est une homotopie de chemins à extrémités fixées ou de lacets entre $\gamma_1$ et $\gamma_2$ sur $U$ alors $\int[][\gamma_1]\omega=\int[][\gamma_2]\omega$\linebreak C'est en particulier vrai pour les formes différentielles holomorphes}{35/45}
+\slideq{$\dd z$\linebreak$\dd\bar z$}{36/45}
+\slider{$\dd x+\ii\intd y$\linebreak$\dd x-\ii\intd y$}{36/45}
+\slideq{Décomposition de Hodge}{37/45}
+\slider{$X$ une surface de Riemann compacte conexe\linebreak$\nappl{\Omega^1\l X\r\oplus\barOmega^1\l X\r}{\operatorname H^1_\text{dR}\l X,\bbC\r}{\l\omega,\nu\r}{\lc\omega+\nu\rc}$ est un isomorphisme d'espaces vectoriels\linebreak En particulier, $\dim{\operatorname H^1_\text{dR}\l X,\bbC\r}=2g$ pour $g$ le genre de $X$}{37/45}
+\slideq{Produit scalaire hermitien sur $\Omega^1\l X\r$}{38/45}
+\slider{$\appl{\psc\cdot\cdot}{\l\Omega^1\l X\r\r^2}{\bbC}{\l\omega,\nu\r}{\frac\ii2\int[][X]{\omega\wedge\bar\nu}}$}{38/45}
+\slideq{$\int[][\gamma]\omega$}{39/45}
+\slider{$\sum{i=0}{n-1}{\int[t][t_i][{{t_{i+1}}}]{h_i\l t\r}}$\linebreak$a=t_0<\cdots<t_n=b$ une subdivision de $\lc a,b\rc$ sur lesquels $\gamma$ est $\calC^\infty$ et ${\gamma_{|\lc t_i,t_{i+1}\rc}}^*\omega=h_i\l t\r\dd t$}{39/45}
+\slideq{Application $\partial\bar\partial$}{40/45}
+\slider{$\appl{\partial\bar\partial}{\calC^\infty\l X,\bbC\r}{\A2\bbC X}f{\dd\l\bar\partial f\r}$}{40/45}
+\slideq{CNS pour que $\omega\in\A{1,0}{}X$ soit holomorphe}{41/45}
+\slider{$\omega$ est fermée ($\dd\omega=0$)}{41/45}
+\slideq{$\omega\in\A1\bbC X$ est de type $\l1,0\r$\linebreak$\omega\in\A1\bbC X$ est de type $\l0,1\r$}{42/45}
+\slider{Pour toute carte complexe de $X$ $\phi\!:\!U\to V\subopn\bbC$, $\phi_*\omega=\alpha\intd z$ avec $\alpha\in\calC^\infty\l X,\bbC\r$\linebreak Pour toute carte complexe de $X$ $\phi\!:\!U\to V\subopn\bbC$, $\phi_*\omega=\beta\intd\bar z$ avec $\beta\in\calC^\infty\l X,\bbC\r$}{42/45}
+\slideq{$\im{\partial\bar\partial}$}{43/45}
+\slider{$\set{\alpha\in\A2\bbC X,\int[][X]\alpha=0}$}{43/45}
+\slideq{Propriété de $\set{P\in X,\ord[P]\omega\neq0}$}{44/45}
+\slider{C'est une partie discrète et fermée de $X$}{44/45}
+\slideq{Théorème de Riemann-Roch faible}{45/45}
+\slider{Si $\deg D>2g-2$ alors $l\l D\r=\deg D+1-g$}{45/45}
 \end{document}

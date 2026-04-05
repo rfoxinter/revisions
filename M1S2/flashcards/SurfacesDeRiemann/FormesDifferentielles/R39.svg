@@ -26,21 +26,21 @@ text.f4 {font-family:cmr12;font-size:11.955168px}
 <text class='f2' x='146.802564' y='-48.822272'>X</text>
 <text class='f4' x='157.457671' y='-48.822272'>)</text>
 <text class='f3' x='162.009986' y='-48.822272'>,</text>
-<text class='f2' x='-21.697656' y='-34.376444'></text>
-<text class='f4' x='-16.78555' y='-34.376444'>(</text>
-<text class='f2' x='-12.233224' y='-34.376444'>D</text>
-<text class='f4' x='-2.188749' y='-34.376444'>)</text>
-<text class='f0' x='5.020237' y='-34.376444'>−</text>
-<text class='f2' x='16.975397' y='-34.376444'></text>
-<text class='f4' x='21.887503' y='-34.376444'>(</text>
-<text class='f2' x='26.439829' y='-34.376444'>K</text>
-<text class='f1' x='36.398943' y='-32.583181'>X</text>
-<text class='f0' x='47.140659' y='-34.376444'>−</text>
-<text class='f2' x='59.095819' y='-34.376444'>D</text>
-<text class='f4' x='69.140294' y='-34.376444'>)<tspan x='77.013438'>=</tspan><tspan x='89.438919'>deg</tspan></text>
-<text class='f2' x='109.15297' y='-34.376444'>D</text>
-<text class='f4' x='121.854109' y='-34.376444'>+<tspan x='133.615424'>1</tspan></text>
-<text class='f0' x='142.125078' y='-34.376444'>−</text>
-<text class='f2' x='154.080238' y='-34.376444'>g</text>
+<text class='f2' x='-25.253733' y='-34.376444'></text>
+<text class='f4' x='-20.341627' y='-34.376444'>(</text>
+<text class='f2' x='-15.789301' y='-34.376444'>D</text>
+<text class='f4' x='-5.744826' y='-34.376444'>)</text>
+<text class='f0' x='1.46416' y='-34.376444'>−</text>
+<text class='f2' x='13.41932' y='-34.376444'></text>
+<text class='f4' x='18.331427' y='-34.376444'>(</text>
+<text class='f2' x='22.883752' y='-34.376444'>K</text>
+<text class='f1' x='32.842866' y='-32.583181'>X</text>
+<text class='f0' x='43.584582' y='-34.376444'>−</text>
+<text class='f2' x='55.539742' y='-34.376444'>D</text>
+<text class='f4' x='65.584217' y='-34.376444'>)<tspan x='73.457361'>=</tspan><tspan x='85.882842'>deg</tspan><tspan x='103.604396'>(</tspan></text>
+<text class='f2' x='108.156722' y='-34.376444'>D</text>
+<text class='f4' x='118.201197' y='-34.376444'>)<tspan x='125.410182'>+</tspan><tspan x='137.171497'>1</tspan></text>
+<text class='f0' x='145.681151' y='-34.376444'>−</text>
+<text class='f2' x='157.636311' y='-34.376444'>g</text>
 </g>
 </svg>
