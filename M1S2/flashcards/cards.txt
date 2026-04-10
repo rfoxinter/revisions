@@ -24,7 +24,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/SurfacesDeRiemann/FormesDifferentielles
 20260405182624
 ../M1S2/flashcards/SurfacesDeRiemann/QuotientsDeSurfacesDeRiemann
-20260404171018
+20260410072640
 ../M1S2/flashcards/SurfacesDeRiemann/TheorieDeLaRamification
 20260404165157
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/AnneauxDEntiersDesCorpsDeNombres

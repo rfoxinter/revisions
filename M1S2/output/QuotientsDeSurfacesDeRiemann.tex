@@ -1,7 +1,7 @@
 \documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
 \usepackage{preambule}
 \setbeamercolor{structure}{fg=black}
-\usepackage{arrows}
+\usepackage{arrows}\usepackage[nopar]{bigoperators}
 \hypersetup{pdftitle={Surfaces de Riemann -- Quotients de surfaces de Riemann}}
 \title{Surfaces de Riemann\\\emph{Quotients de surfaces de Riemann}}
 \author{}
@@ -10,10 +10,26 @@
 \begin{frame}
     \titlepage
 \end{frame}
-\slideq{Propriétés de $\operatorname{stab}\l P\r$ et $\set{P\in X,\operatorname{stab}\l P\r\neq\set1}$ pour $G\acts X$ groupe discret qui agit fidèlement, holomorphiquement et proprement sur $X$ connexe}{1/3}
-\slider{$\operatorname{stab}\l P\r$ est un sous-groupe fini cyclique de $G$\linebreak$\set{P\in X,\operatorname{stab}\l P\r\neq\set1}$ est une partie fermée et discrète de $X$}{1/3}
-\slideq{Une action $G\acts X$ continue avec $G$ discret et $X$ séparé est propre}{2/3}
-\slider{Pour tout $K\subset X$ compact, $\set{g\in G,g\cdot K\cap K\neq\varnothing}$ est fini}{2/3}
-\slideq{Théorème de passage au quotient de surfaces de Riemann}{3/3}
-\slider{Si $G$ est un groupe discret qui agit de manière holomorphe sur $X$ et de manière propre, alors il existe une unique structure de surface de Riemann sur $X/G$ telle que $\pi\!:\!X\to X/G$ est holomorphe, pour tout $V\subopn X/G$ et toute $f\!:\!V\to\bbC$, $f$ est holomorphe ssi $f\circ\pi\!:\!\pi^{-1}\l V\r\to\bbC$ est holomorphe, et si pour toute surface de Riemann $Y$ et $f\!:\!X\to Y$ holomorphe et $G$-invariante, il existe une unique $\overline f\!:\!X/G\to Y$ holomorphe telle que $f=\overline f\circ\pi$}{3/3}
+\slideq{Propriétés sur les voisinages de $P\in X$ permettant de définir les cartes de $X/G$}{1/11}
+\slider{Si $P\in X$ et $G_P=\operatorname{stab}\l P\r$, il existe un voisinage ouvert $U$ de $P$ dans $X$ tel que $U$ est stable par $G_P$, pour tout $g\in G\setminus G_P$, $gU\cap U=\varnothing$, $U/G_P\to X/G$ est un homéomorphisme sur son image qui est ouverte et pour tout $P'\in U$, $P'\neq P$, on a $G_{P'}=\set1$\linebreak On peut de plus choisir $U$ contenu dans n'importe quel voisinage de $P$}{1/11}
+\slideq{Propriétés de l'application $\pi\!:\!X\to X/G$}{2/11}
+\slider{$\pi$ est holomorphe\linebreak Pour tout $P\in X$, $e_P\l\pi\r=\left|\operatorname{stab}\l P\r\right|$, donc $\pi$ est ramifiée aux points ayant un stabilisateur non trivial\linebreak$\pi$ est de degré $\left|G\right|$ et pour tout $Q\in X$, $\sum{P\in\pi^{-1}\l Q\r}{}{e_\pi\l P\r}=\left|G\right|$}{2/11}
+\slideq{$G\acts X$ est continue}{3/11}
+\slider{$\l g,x\r\mapsto g\cdot x$ est continue}{3/11}
+\slideq{$G\acts X$ est propre}{4/11}
+\slider{$\l\l g,x\r\mapsto\l g\cdot x,x\r\r^{-1}\l K\r$ est compact pour $K\subset X\times X$ compact}{4/11}
+\slideq{Une action $G\acts X$ continue avec $G$ discret et $X$ séparé est propre}{5/11}
+\slider{Pour tout $K\subset X$ compact, $\set{g\in G,g\cdot K\cap K\neq\varnothing}$ est fini}{5/11}
+\slideq{Théorème de Hurwitz sur le cardinal de $\operatorname{Aut}\l X\r$}{6/11}
+\slider{Si $X$ est une surface de Riemann compacte de genre $g\ge2$, alors $\operatorname{Aut}\l X\r$ est fini, de cardinal majoré par $84\l g-1\r$}{6/11}
+\slideq{Théorème de linéarisation de l'action}{7/11}
+\slider{Soient $P\in X$, $m=\left|\operatorname{stab}\l P\r\right|$ et $w$ une coordonnée locale en $\pi\l P\r\in X/G$, elors il existe un unique isomoephisme de groupes $\lambda\!:\!\operatorname{stab}\l P\r\to\bbU_n$ et une coordonnée locale $z$ en $P$ telle que, pour tout $g\in\operatorname{stab}\l P\r$, $g\l z\r=\lambda\l g\r z$ au voisinage de $0$, et $\pi$ est donnée par $w=z^m$ au voisinage de $0$, de plus $\lambda$ est canonique et ne dépend pas du choix des coordonnées locales}{7/11}
+\slideq{$G\acts X$ est libre}{8/11}
+\slider{$\forall g\neq1$, $\l x\mapsto g\cdot x\r$ n'a pas de point fixe}{8/11}
+\slideq{$G\acts X$ est fidèle}{9/11}
+\slider{$G\to\frakS_X$ est injectif}{9/11}
+\slideq{Théorème de passage au quotient de surfaces de Riemann}{10/11}
+\slider{Si $G$ est un groupe discret qui agit de manière holomorphe sur $X$ et de manière propre, alors il existe une unique structure de surface de Riemann sur $X/G$ telle que $\pi\!:\!X\to X/G$ est holomorphe, pour tout $V\subopn X/G$ et toute $f\!:\!V\to\bbC$, $f$ est holomorphe ssi $f\circ\pi\!:\!\pi^{-1}\l V\r\to\bbC$ est holomorphe, et si pour toute surface de Riemann $Y$ et $f\!:\!X\to Y$ holomorphe et $G$-invariante, il existe une unique $\overline f\!:\!X/G\to Y$ holomorphe telle que $f=\overline f\circ\pi$}{10/11}
+\slideq{Propriétés de $\operatorname{stab}\l P\r$ et $\set{P\in X,\operatorname{stab}\l P\r\neq\set1}$ pour $G\acts X$ groupe discret qui agit fidèlement, holomorphiquement et proprement sur $X$ connexe}{11/11}
+\slider{$\operatorname{stab}\l P\r$ est un sous-groupe fini cyclique de $G$\linebreak$\set{P\in X,\operatorname{stab}\l P\r\neq\set1}$ est une partie fermée et discrète de $X$}{11/11}
 \end{document}
