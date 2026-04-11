@@ -1,0 +1,15 @@
+Théorie spectrale -- Transformée de Gelfand
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{polynomes,al,usuelles,topologie,structures}
+Spectre de Gelfand d'une $\bbC$-algèbre $A$;;$\sigma\l A\r$ est l'ensemble des morphsimes d'algèbres $A\to\bbC$
+Topologie sur $\sigma\l A\r$;;Topologie de la convergence simple\linebreak Restriction de la topologie faible-$*$ de $A'$
+Propriétés topologiques de $\sigma\l A\r$;;C'est un espace compact
+Propriété de $\appl{\delta}{X}{\sigma\l\calC\l X\r\r}{x}{\delta_x=\l f\mapsto f\l x\r\r}$ pour $X$ compact;;C'est un homéomorphisme
+Propriétés des éléments de $\sigma\l A\r$;;Tout $\omega\in\sigma\l A\r$ vérifie:\linebreak$\omega\l a\r\in\sigma\l a\r$\linebreak$\nnrm\omega=1$\linebreak$\omega$ est une forme linéaire continue
+Propriétés de $A/I$ pour $A$ une algèbre de Banach et $I$ un idéal fermé de $A$;;$A/I$ muni de la norme quotient $\nrm{\pi\l a\r}=\inf[x\in I]{\nrm{a-x}}$ est une algèbre de Banach
+Propriété des idéaux maximaux des algèbres de Banach;;Les idéaux maximaux des algèbres de Banach sont fermés
+Théorème de Gelfand;;Toute algèbre de Banach qui est aussi un corps est isomorphe à $\bbC$\linebreak Toute $\bbR$-algèbre de Banach qui est aussi un corps est isomorphe à $\bbR$, $\bbC$ ou $\bbH$
+Correspondance des idéaux maximaux d'une algèbre de Banach;;Si $A$ est commutative, pour tout idéal maximal $I$ de $A$, il existe un unique $\omega\in\sigma\l A\r$ tel que $\ker\omega=I$
+Transformée de Gelfand de $A$;;$\appl{\varPhi_A}{A}{\calC\l\sigma\l A\r\r}{x}{\l\omega\mapsto\omega\l x\r\r}$\linebreak C'est un morphisme d'algèbres
+Propriétés de la transformée de Gelfand;;$\nnrm{\varPhi_A}\leqslant1$\linebreak$\sigma_A\l a\r=\sigma\l\varPhi_A\l a\r\r$\linebreak$\nrm{\varPhi_A\l a\r}=r\l a\r$

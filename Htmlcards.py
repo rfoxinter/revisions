@@ -69,6 +69,8 @@ def latexparse(s0:str) -> str:
         for (subs, tag, cont) in extracted:
             if tag == "textit":
                 s0 = s0.replace(subs, "<span style='font-style: italic; font-size: inherit'>" + cont + "</span>")
+            if tag == "textup":
+                s0 = s0.replace(subs, "<span style='font-style: normal; font-size: inherit'>" + cont + "</span>")
             elif tag == "textbf":
                 s0 = s0.replace(subs, "<span style='font-decoration: bold; font-size: inherit'>" + cont + "</span>")
             elif tag == "textsuperscript":

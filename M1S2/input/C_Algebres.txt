@@ -1,0 +1,8 @@
+ttleThéorie spectrale -- C_-algèbres!!ttleThéorie spectrale -- \textit{C}\addkern{1pt}\textsuperscript{\textup{*}}-algèbres
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{complexes,topologie}\def\addkern#1{\kern#1}
+$C^*$-algèbre;;Algèbre de Banach munie d'une involution $\cdot^*\!:\!A\to A$ qui est antilinéaire ($\l\lambda x+\mu y\r^*=\bar\lambda x^*+\bar\mu y^*$), antimultiplicative ($\l xy\r^*=y^*x^*$) et telle que $\nrm{x^*x}=\nrm x^2$
+Propriété du spectre de $x$ autoadjoint dans une $C^*$-algèbre;;$\sigma_A\l X\r\subset\bbR$
+$\omega\l x^*\r$ pour $\omega\in\sigma\l A\r$;;$\bar{\omega\l x\r}$
+Lien entre $\sigma_B$ et $\sigma_A$ si $B$ est une sous-$C^*$-algèbre de $A$;;$\sigma_A\l x\r=\sigma_B\l x\r$ pour tout $x\in B$ car $B^\times=B\cap A^\times$

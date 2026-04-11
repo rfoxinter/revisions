@@ -49,6 +49,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20260331071553
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/UnitesDeLAnneauDesEntiers
 20260224202131
+../M1S2/flashcards/TheorieSpectrale/C_Algebres
+20260411083024
 ../M1S2/flashcards/TheorieSpectrale/CalculFonctionnelPourLesOperateurAutoadjoints
 20260320185221
 ../M1S2/flashcards/TheorieSpectrale/OperateursAutoadjoints
@@ -64,4 +66,6 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieSpectrale/SpectreDansUneAlgebreQuelconque
 20260401170029
 ../M1S2/flashcards/TheorieSpectrale/TheorieDeGelfand
-20260401170951
+20260411081018
+../M1S2/flashcards/TheorieSpectrale/TransformeeDeGelfand
+20260411081444
