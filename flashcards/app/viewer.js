@@ -50,7 +50,7 @@ async function loadFile(src, file) {
                 viewed = false;
                 nth = 0;
 
-                document.title = title.replace('&ndash;', '-').replace('<i>', '').replace('</i>', '');
+                document.title = title.replace('&ndash;', '-').replace(/<\/?[a-z]+.*?>/g, '');
                 ques = copyArray(n);
 
                 if (sh_quest) {shuffleArray(ques);}
