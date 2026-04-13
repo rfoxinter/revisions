@@ -44,7 +44,7 @@ async function loadBook(src, file) {
                     tbl.appendChild(tr);
                 }
 
-                document.title = title.replace('&ndash;', '-').replace('<i>', '').replace('</i>', '');
+                document.title = title.replace('&ndash;', '-').replace(/<\/?[a-z]+.*?>/g, '');
 
                 document.getElementById('book_title').innerHTML = title;
             }
