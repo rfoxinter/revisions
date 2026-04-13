@@ -1,0 +1,15 @@
+Introduction à la géométrie algébrique -- Théorie des faisceaux
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al,structures}\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}}
+Préfaisceau de groupes abéliens d'un espace topologique $X$;;Donnée de groupes abéliens, appelés sections, $\calF\l U\r$ pour tout $U\subopn X$ et d'applications de restriction $p_{U,V}\!:\!\calF\l U\r\to\calF\l V\r$ pour tout $V\subopn U\subopn X$ tels que $\calF\l\varnothing\r=\set0$, $P_{U,U}=\id$ et $p_{U,W}=p_{V,W}\circ p_{U,V}$ pour tout $W\subopn V\subopn U\subopn X$
+Faisceau de groupes abaliens sur un expace topologique $X$;;Préfaisceau $\calF$ sur $X$ tel que si $\l V_i\r$ est un recouvrement ouvert de $U\subopn X$, alors si $s\in\calF\l U\r$ est tel que $s_{|V_i}=0$ pour tout $i$ alors $s=0$, et s'il existe $s_i\in\calF\l V_i\r$ tels que ${s_i}_{|V_i\cap V_j}={s_j}_{|V_i\cap V_j}$ alors il existe (un unique) $s\in\calF\l U\r$ tel que $s_{|V_i}=s_i$
+Fibre d'un préfaisceau en $P\in X$;;$\calF_P=\varinjlim\limits_{\substack{U\subopn X\\P\in U}}\l\calF\l U\r\r$
+Morphisme de (pré)faisceaux $\varphi\!:\!\calF\to\calG$;;Donnée de morphismes de groupes abéliens $\phi\l U\r\!:\!\calF\l U\r\to\calG\l U\r$ pour tout $U\subopn X$ tel que, si $V\subopn U$, alors $p_{U,V}\circ\varphi\l U\r=\varphi\l V\r\circ p_{U,V}$\linebreak\begin{tikzcd}[ampersand replacement=\&, row sep=small]\calF\l U\r\ar[r,"\varphi\l U\r"']\ar[d,"p_{U,V}"]\&\calG\l U\r\ar[d,"p_{U,V}"']\\\calF\l V\r\ar[r,"\varphi\l V\r"]\&\calG\l V\r\end{tikzcd}
+Isomorphisme de (pré)faisceaux;;Morphisme de (pré)faisceaux admettant un inverse à droite et à gauche
+CNS sur les fibres pour avoir un isomorphisme;;$\varphi\!:\!\calF\to\calG$ est un isomorphisme de (pré)faisceaux si et seulement si, pour tout $P\in X$, $\varphi_P\!:\!\calF_P\to\calG_P$ est un isomorphisme
+Noyau d'un (pré)faisceau;;Faisceau $\ker\varphi$ défini par $\ker\varphi\l U\r=\ker{\varphi\l U\r}$
+Conoyau d'un (pré)faisceau;;Faisceau $\coker\varphi$ associé au préfaisceau défini par $\coker\varphi\l U\r=\coker{\varphi\l U\r}$
+Image d'un (pré)faisceau;;Faisceau $\im\varphi$ associé au préfaisceau défini par $\im\varphi\l U\r=\im{\varphi\l U\r}$
+Sous-faisceau $\calF'$ de $\calF$;;Données de sous-groupes de $\calF\l U\r$ pour tout $U\subset X$ et dont les applications de restriction sont celles induites par $\calF$
+(Pré)faisceau image directe de $\calF$ par $f$;;Si $f\!:\!X\to Y$ est une application continue et $\calF$ un (pré)faisceau sur $X$, $f_*\calF$ est le (pré)faisceau sur $Y$ défini par $V\mapsto\calF\l f^{-1}\l V\r\r$

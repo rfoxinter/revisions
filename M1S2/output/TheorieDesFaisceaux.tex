@@ -1,0 +1,35 @@
+\documentclass[14pt,usepdftitle=false,aspectratio=169]{beamer}
+\usepackage{preambule}
+\setbeamercolor{structure}{fg=black}
+\usepackage{al,structures}\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}}
+\hypersetup{pdftitle={Introduction à la géométrie algébrique -- Théorie des faisceaux}}
+\title{Introduction à la géométrie algébrique\\\emph{Théorie des faisceaux}}
+\author{}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\slideq{(Pré)faisceau image directe de $\calF$ par $f$}{1/11}
+\slider{Si $f\!:\!X\to Y$ est une application continue et $\calF$ un (pré)faisceau sur $X$, $f_*\calF$ est le (pré)faisceau sur $Y$ défini par $V\mapsto\calF\l f^{-1}\l V\r\r$}{1/11}
+\slideq{Fibre d'un préfaisceau en $P\in X$}{2/11}
+\slider{$\calF_P=\varinjlim\limits_{\substack{U\subopn X\\P\in U}}\l\calF\l U\r\r$}{2/11}
+\slideq{Isomorphisme de (pré)faisceaux}{3/11}
+\slider{Morphisme de (pré)faisceaux admettant un inverse à droite et à gauche}{3/11}
+\slideq{CNS sur les fibres pour avoir un isomorphisme}{4/11}
+\slider{$\varphi\!:\!\calF\to\calG$ est un isomorphisme de (pré)faisceaux si et seulement si, pour tout $P\in X$, $\varphi_P\!:\!\calF_P\to\calG_P$ est un isomorphisme}{4/11}
+\slideq{Préfaisceau de groupes abéliens d'un espace topologique $X$}{5/11}
+\slider{Donnée de groupes abéliens, appelés sections, $\calF\l U\r$ pour tout $U\subopn X$ et d'applications de restriction $p_{U,V}\!:\!\calF\l U\r\to\calF\l V\r$ pour tout $V\subopn U\subopn X$ tels que $\calF\l\varnothing\r=\set0$, $P_{U,U}=\id$ et $p_{U,W}=p_{V,W}\circ p_{U,V}$ pour tout $W\subopn V\subopn U\subopn X$}{5/11}
+\slideq{Faisceau de groupes abaliens sur un expace topologique $X$}{6/11}
+\slider{Préfaisceau $\calF$ sur $X$ tel que si $\l V_i\r$ est un recouvrement ouvert de $U\subopn X$, alors si $s\in\calF\l U\r$ est tel que $s_{|V_i}=0$ pour tout $i$ alors $s=0$, et s'il existe $s_i\in\calF\l V_i\r$ tels que ${s_i}_{|V_i\cap V_j}={s_j}_{|V_i\cap V_j}$ alors il existe (un unique) $s\in\calF\l U\r$ tel que $s_{|V_i}=s_i$}{6/11}
+\slideq{Morphisme de (pré)faisceaux $\varphi\!:\!\calF\to\calG$}{7/11}
+\slider{Donnée de morphismes de groupes abéliens $\phi\l U\r\!:\!\calF\l U\r\to\calG\l U\r$ pour tout $U\subopn X$ tel que, si $V\subopn U$, alors $p_{U,V}\circ\varphi\l U\r=\varphi\l V\r\circ p_{U,V}$\linebreak\begin{tikzcd}[ampersand replacement=\&, row sep=small]\calF\l U\r\ar[r,"\varphi\l U\r"']\ar[d,"p_{U,V}"]\&\calG\l U\r\ar[d,"p_{U,V}"']\\\calF\l V\r\ar[r,"\varphi\l V\r"]\&\calG\l V\r\end{tikzcd}}{7/11}
+\slideq{Noyau d'un (pré)faisceau}{8/11}
+\slider{Faisceau $\ker\varphi$ défini par $\ker\varphi\l U\r=\ker{\varphi\l U\r}$}{8/11}
+\slideq{Image d'un (pré)faisceau}{9/11}
+\slider{Faisceau $\im\varphi$ associé au préfaisceau défini par $\im\varphi\l U\r=\im{\varphi\l U\r}$}{9/11}
+\slideq{Conoyau d'un (pré)faisceau}{10/11}
+\slider{Faisceau $\coker\varphi$ associé au préfaisceau défini par $\coker\varphi\l U\r=\coker{\varphi\l U\r}$}{10/11}
+\slideq{Sous-faisceau $\calF'$ de $\calF$}{11/11}
+\slider{Données de sous-groupes de $\calF\l U\r$ pour tout $U\subset X$ et dont les applications de restriction sont celles induites par $\calF$}{11/11}
+\end{document}

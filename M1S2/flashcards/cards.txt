@@ -7,6 +7,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20260301120543
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/GeometrieProjectiveEtBirationnelle
 20260320174707
+../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/TheorieDesFaisceaux
+20260413081554
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/VarietesAlgebriques
 20260130210259
 ../M1S2/flashcards/ProcessusStochastiques/ChainesDeMarkovATempsContinu
