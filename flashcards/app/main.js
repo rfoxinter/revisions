@@ -622,7 +622,7 @@ async function set_config_card(_url, _name, card_number, card_name) {
         }
         replace_css_rule(_url + "_elem", close?"none":"block");
         if (group_folder) {
-            group_per_folder(_url, _name, card_name, card_number);
+            group_per_folder(_url, _name, card_name, card_number, orig_name);
         }
     } catch {}
 }
@@ -635,16 +635,16 @@ Element.prototype.insertChildAtIndex = function(child, index) {
         this.insertBefore(child, this.children[index]);
     }
 }
-function group_per_folder(_url, _name, name, card_number) {
+function group_per_folder(_url, _name, name, card_number, orig_name) {
     let urldiv = document.getElementsByClassName(_url)[0];
     let title = name.split(" &ndash; ");
     if (title.length == 1) {
         var folder = "root";
-        var card_name = title[0];
+        var card_name = orig_name?title[0]:_name;
     } else {
         var folder_name = title[0];
         var folder = title[0].replaceAll(" ", "_");
-        var card_name = title[1].replace("<i>","").replace("</i>","");
+        var card_name = orig_name?title[1].replace("<i>","").replace("</i>",""):_name;
     }
     var first_number = first_of_folder.get((_url, folder));
     if (document.getElementsByClassName("["+_url+","+folder+"]").length === 0) {
