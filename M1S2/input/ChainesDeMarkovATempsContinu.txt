@@ -18,3 +18,10 @@ Propriété de Markov forte;;Pour tout temps d'arrêt $T$ pour la filtration can
 $x\in E$ est récurrent\linebreak $x\in E$ est transient;;$x$ est récurrent si $\set{t\geqslant0,X_t=x}$ est non borné\linebreak$x$ est transient sinon
 Lien entre $Q$, $T_\cdot$ et la récurrence;;Si $Q\l x,x\r=0$ ou $\p[\!\!x]{T_x<+\infty}=1$ alors $x$ est récurrent et $\int[t][0][+\infty]{P_t\l x,x\r}=+\infty$
 Lien entre la récurrence de $x$ dans $X$ est une chaîne de Markov discrète extraite;;Pour $h>0$, $x$ est récurrent pour $\l X_t\r_t$ si et seulement si $x$ est récurrent pour $\l X_{hn}\r_n$
+Fonction de Green de $X$, et lien avec celle sur $Z$;;$G\l x,y\r=\esp[x]{\int[t][0][+\infty]{\mathbb1_{X_t=y}}}$\linebreak$G\l x,y\r=\frac1{\lambda\l y\r}G_Z\l x,y\r$
+$\mu$ est une mesure invariante pour $X$;;$\mu$ est non nulle et $\mu Q=0$
+Théorème d'existence de mesures invariantes;;Si $X$ admet un état récurrent, alors il existe une mesure invariante\linebreak Si $X$ est irréductible récurrente, toutes les mesures sont proportionnelles
+Mesure invariante en $x$ récurrent;;$\mu^x\l y\r=\esp[x]{\int[s][0][{{T_x^+}}]{\mathbb1_{X_s=y}}}$\linebreak$\mu^x$ est une mesure invariante de masse totale $\esp[x]{T_x^+}$
+CNS pour avoir une mesure invariante pour une chaîne irréductible récurrente;;$\mu Q=0$ ssi $\mu P_s=\mu$
+Théorème de convergence de $P_t$ pour une chaîne de Markov;;Si $X$ est une chaîne de Markov irréductible récurrente positive, et $\pi$ est la mesure de probabilités invariante alors pour tout $x,y\in E$, $P_t\l x,y\r\xrightarrow[t\to+\infty]{}\pi\l y\r$\linebreak En particulier, $\p[\nu]{X_t=y}\xrightarrow[t\to+\infty]{}\pi\l y\r$
+Théorème ergodique;;Si $X$ est une chaîne de Markov irréductible récurrente positive de mesure de probabilités $\pi$, alors $\frac1t\int[s][0][t]{\mathbb1_{X_s=x}}\xrightarrow[t\to+\infty]{}\mu\l x\r$ p.s. pour tout $x$\linebreak Si $f\!:\!E\to\bbR$ est positive bornée $\frac1t\int[s][0][t]{f\l X_s\r}\xrightarrow[t\to+\infty]{}\sum{x\in E}{}{\mu\l x\r f\l x\r}$ p.s.

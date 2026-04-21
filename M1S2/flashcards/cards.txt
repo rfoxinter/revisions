@@ -12,7 +12,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/VarietesAlgebriques
 20260130210259
 ../M1S2/flashcards/ProcessusStochastiques/ChainesDeMarkovATempsContinu
-20260404173133
+20260421133051
 ../M1S2/flashcards/ProcessusStochastiques/ConvergenceEnLoiEtTheoremeCentralLimite
 20260203101918
 ../M1S2/flashcards/ProcessusStochastiques/MouvementBrownien
@@ -40,7 +40,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/EntiersAlgebriques
 20260205203320
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/FonctionZetaDeDedekind
-20260401165601
+20260421131343
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/FormesQuadratiquesBinaires
 20260320171533
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/GeometrieDesNombres
