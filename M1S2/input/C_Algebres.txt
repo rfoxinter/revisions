@@ -6,3 +6,8 @@ $C^*$-algèbre;;Algèbre de Banach munie d'une involution $\cdot^*\!:\!A\to A$ q
 Propriété du spectre de $x$ autoadjoint dans une $C^*$-algèbre;;$\sigma_A\l X\r\subset\bbR$
 $\omega\l x^*\r$ pour $\omega\in\sigma\l A\r$;;$\bar{\omega\l x\r}$
 Lien entre $\sigma_B$ et $\sigma_A$ si $B$ est une sous-$C^*$-algèbre de $A$;;$\sigma_A\l x\r=\sigma_B\l x\r$ pour tout $x\in B$ car $B^\times=B\cap A^\times$
+Lien entre $\rho\l x\r$ et $\nrm x$;;Si $x$ est normal alors $\rho\l x\r=\nrm x$\linebreak Pour $x$ quelconque, $\nrm x=\rho\l x^*x\r^\oldfrac12$
+Propriété de la transformée de Gelfand sur une $C^*$-algèbre;;$\varPhi_A\!:\!A\to\calC\l\sigma\l A\r\r$, est un isomorphisme surjective de $C^*$-algèbres
+Calcul fonctionnel continu sur une $C^*$-algèbre $A$;;Si $x\in A$ est normal et $B=\overline{\operatorname{Vect}\l\l x^*\r^mx^n,\l m,n\r\in\bbN^2\r}$, alors on a un unique morphisme de $*$-algèbres $\pi\!:\!\calC\l\sigma\l x\r\r\to A$ tel que $\pi\l\operatorname{id}_{\sigma\l x\r}\r=x$\linebreak De plus $\pi$ est isométrique: $\sigma\l\pi\l f\r\r=f\l\sigma\l x\r\r$ pour tout $f\in\calC\l\sigma\l x\r\r$\linebreak$\pi$ est donné par $f\mapsto\varPhi_B^{-1}\l f\circ\varPhi_B\l x\r\r$
+CNS pour que $\sigma\l x\r\subset\bbR_+$ pour $x$ autoadjoint;;Il existe $y\in A$ autoadjoint tel que $x=y^2$
+Calcul fonctionnel en plusieurs variables;;Si $\l x_1,\cdots,x_n\r$ est une famille d'éléments de $A$ tels que $x_ix_j=x_jx_i$ et $x_i^*x_j=x_jx_i^*$ pour tout $\l i,j\r\in\llb1,n\rrb^2$ alors il existe un unique morphisme de $*$-algèbres $\pi\!:\!\calC\l\sigma\l x_1\r\times\cdots\times\sigma\l x_n\r\r\to A$ tel que $\pi\l\operatorname{proj}_i\r=x_i$

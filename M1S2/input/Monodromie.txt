@@ -1,0 +1,7 @@
+Surfaces de Riemann -- Monodromie
+Shuffle questions : True
+Q/R & R/Q : False
+\usepackage{al}
+Prolongement analytique de $u$ le long d'un chemin $\gamma$;;Famille d'applications holomorphes $\l u_t\!:\!U_t\to\bbC\r_{t\in\lc0,1\rc}$ avec $U_t$ un voisinage de $\gamma\l t\r$ et telle que, pour tout $t_0\in\lc0,1\rc$, il existe $\delta>0$ tel que, pour tout $t\in\left]t_0-\delta,t_0+\delta\right[$, $u_t$ et $u_{t_0}$ coïncident sur $U_t\cap U_{t_0}$
+Représentation de monodromie;;Morphisme $\rho\!:\!\Pi_1\l\bbC\setminus S,y_0\r\to\gl{V_0}$ où $V_0$ est l'espace vectoriel des solutions holomorphes d'une équation différentielle homogène
+Représentation de monodromie d'un revêtement $f\!:\!X\to Y$ holomorphe;;Application $\rho_f\!:\!\Pi_1\l Y\setminus B\l f\r,y_0\r\to\frakS_{\operatorname{deg}\l f\r}$ définie par $\rho_f\l\gamma\r\l i\r=j$ où si $f^{-1}\l y_0\r=\set{x_1,\cdots,x_d}$, alors le relèvement de $\gamma$ partant en $x_i$ se termine en $x_j$

@@ -8,7 +8,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/GeometrieProjectiveEtBirationnelle
 20260320174707
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/TheorieDesFaisceaux
-20260413081554
+20260425084508
 ../M1S2/flashcards/IntroductionALaGeometrieAlgebrique/VarietesAlgebriques
 20260130210259
 ../M1S2/flashcards/ProcessusStochastiques/ChainesDeMarkovATempsContinu
@@ -25,6 +25,8 @@ https://rfoxinter.github.io/revisions/flashcards/
 20260324201806
 ../M1S2/flashcards/SurfacesDeRiemann/FormesDifferentielles
 20260405182624
+../M1S2/flashcards/SurfacesDeRiemann/Monodromie
+20260424214629
 ../M1S2/flashcards/SurfacesDeRiemann/QuotientsDeSurfacesDeRiemann
 20260410072640
 ../M1S2/flashcards/SurfacesDeRiemann/TheorieDeLaRamification
@@ -52,7 +54,7 @@ https://rfoxinter.github.io/revisions/flashcards/
 ../M1S2/flashcards/TheorieAlgebriqueDesNombres/UnitesDeLAnneauDesEntiers
 20260224202131
 ../M1S2/flashcards/TheorieSpectrale/C_Algebres
-20260411083024
+20260424205812
 ../M1S2/flashcards/TheorieSpectrale/CalculFonctionnelPourLesOperateurAutoadjoints
 20260320185221
 ../M1S2/flashcards/TheorieSpectrale/OperateursAutoadjoints

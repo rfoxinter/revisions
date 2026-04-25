@@ -1,7 +1,7 @@
 Introduction à la géométrie algébrique -- Théorie des faisceaux
 Shuffle questions : True
 Q/R & R/Q : False
-\usepackage{al,structures}\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}}
+\usepackage[nopar]{bigoperators}\usepackage{al,structures}\usepackage{tikz-cd}\tikzcdset{every arrow/.append style={line cap=round}}\DeclareMathOperator{\oldspec}{spec}\newcommand{\spec}[1]{\oldspec\l#1\r}
 Préfaisceau de groupes abéliens d'un espace topologique $X$;;Donnée de groupes abéliens, appelés sections, $\calF\l U\r$ pour tout $U\subopn X$ et d'applications de restriction $p_{U,V}\!:\!\calF\l U\r\to\calF\l V\r$ pour tout $V\subopn U\subopn X$ tels que $\calF\l\varnothing\r=\set0$, $P_{U,U}=\id$ et $p_{U,W}=p_{V,W}\circ p_{U,V}$ pour tout $W\subopn V\subopn U\subopn X$
 Faisceau de groupes abaliens sur un expace topologique $X$;;Préfaisceau $\calF$ sur $X$ tel que si $\l V_i\r$ est un recouvrement ouvert de $U\subopn X$, alors si $s\in\calF\l U\r$ est tel que $s_{|V_i}=0$ pour tout $i$ alors $s=0$, et s'il existe $s_i\in\calF\l V_i\r$ tels que ${s_i}_{|V_i\cap V_j}={s_j}_{|V_i\cap V_j}$ alors il existe (un unique) $s\in\calF\l U\r$ tel que $s_{|V_i}=s_i$
 Fibre d'un préfaisceau en $P\in X$;;$\calF_P=\varinjlim\limits_{\substack{U\subopn X\\P\in U}}\l\calF\l U\r\r$
@@ -13,3 +13,16 @@ Conoyau d'un (pré)faisceau;;Faisceau $\coker\varphi$ associé au préfaisceau d
 Image d'un (pré)faisceau;;Faisceau $\im\varphi$ associé au préfaisceau défini par $\im\varphi\l U\r=\im{\varphi\l U\r}$
 Sous-faisceau $\calF'$ de $\calF$;;Données de sous-groupes de $\calF\l U\r$ pour tout $U\subset X$ et dont les applications de restriction sont celles induites par $\calF$
 (Pré)faisceau image directe de $\calF$ par $f$;;Si $f\!:\!X\to Y$ est une application continue et $\calF$ un (pré)faisceau sur $X$, $f_*\calF$ est le (pré)faisceau sur $Y$ défini par $V\mapsto\calF\l f^{-1}\l V\r\r$
+Faisceau image réciproque;;Si $f\!:\!X\to Y$ est continue et $\calG$ est un faisceau sur $Y$, on note $f^{-1}\calG$ le faisceau sur $X$ associé au préfaisceau dont les sections sont données par $\varGamma\l U,f^{-1}\calG\r=\varinjlim\limits_{f\l U\r\subopn V}\l\calG\l V\r\r$
+Espace annelé;;$\l X,\calA\r$ avec $X$ un espace topologique et $\calA$ un faisceau en anneaux sur $X$
+Morphisme d'espaces annelés;;$\l f,f^\#\r$ avec $f\!:\!X\to Y$ continue et $f^\#\!:\!\calA_Y\to\calA_X$ un morphisme d'anneaux
+Espace localement annelé;;Espace annelé tel que, pour tout $P\in X$, $\calA_P$ est un anneau local
+Morphisme d'espaces localement annelés;;Morphisme d'espaces annelés tel que, pour tout $P\in X$, $f^\#_P\!:\!\calA_{Y,f\l P\r}\to\calA_{X,P}$ préserve l'anneau local
+$V\l\fraka\r$ pour $\fraka\le A$;;$\set{\frakp\in\spec A,\fraka\subset\frakp}$
+Propriétés de $V$ sur les idéaux de $A$;;$V\l\fraka\frakb\r=V\l\fraka\r\cup V\l\frakb\r$\linebreak$V\l\sum{i\in I}{}{\fraka_i}\r=\bigcap{i\in I}{}{V\l\fraka_i\r}$\linebreak$V\l\fraka\r\subset V\l\frakb\r$ ssi $\sqrt\fraka\supseteq\sqrt\frakb$
+Propriétés topoologiques de $\spec A$ pour la topologie induite par $V$;;$\spec A$ est quasi-compact
+Propriétés de $D\l f\r=\spec A\setminus V\l\l f\r\r$;;$D\l fg\r=D\l f\r\cap D\l g\r$\linebreak$D\l f\r=\varnothing$ ssi $f$ est nilpotent\linebreak$D\l f\r=D\l g\r$ ssi $\sqrt{\l f\r}=\sqrt{\l g\r}$
+Propriétés des fibres de $\l\spec A,\calO_{\spec A}\r$;;$\forall\frakp\in\spec A$, $\calO_{\spec A,\frakp}\cong A_\frakp$\linebreak$\forall f\in A$, $\calO\l D\l f\r\r=\varGamma\l D\l f\r,\calO_{\spec A}\r\cong A_f$\linebreak$\varGamma\l\spec A,\calO_{\spec A}\r\cong A$
+Propriétés des faisceaux $\l\spec A,\calO_{\spec A}\r$;;Ce sont des espaces localement annelés\linebreak Un morphisme d'anneaux $\phi\!:\!A\to B$ induit un morphisme naturel $\l f,f^\#\r\!:\!\l\spec B,\calO_{\spec B}\r\to\l\spec A,\calO_{\spec A}\r$\linebreak Réciproquement, si $A$ et $B$ sont deux anneaux, tout morphisme d'espaces localement annelés $\spec B\to\spec A$ induit un morphisme d'anneaux qui vérifie la propriété précédente
+Schéma affine;;Espace localement annulé $\l X,\calO_X\r$ isomorphe à $\spec A$ pour un certain anneau commutatif $A$
+Schéma;;Espace localement annelé $\l X,\calO_X\r$ tel que, pour tout $p\in X$ et $p\in U\subopn X$, $\l U,{\calO_X}_{|U}\r$ soit un schéma affine
