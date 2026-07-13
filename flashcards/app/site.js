@@ -107,21 +107,27 @@ async function sync_all(url, message = true) {
     } else {if (message) {window.alert('Impossible de rafraîchir le fichier');}}
 }
 
-function delete_all(url, message = true) {
-    if (url == "") {return;}
+async function delete_all(url, message = true, root = true) {
+    if (url == "" || (root && !window.confirm("Supprimer toutes les fiches de la source"))) {return;}
     let url_div = document.getElementsByClassName(url)[0];
+    if (root) {var root_url = url;}
+    if (url_div === undefined) {return;}
     for (let child = 0; child < url_div.children.length; child++) {
         const element = url_div.children[child];
         if (element.tagName == "DIV") {
-            delete_all(element.className);
+            delete_all(element.className, message, false);
         } else if (element.tagName == "P") {
             try {
-                delete_card(url, element.id, message);
+                const _id = element.id.replace('[','').replace(']','').split(',');
+                console.log(_id[0], _id[1])
+                await delete_card(_id[0], _id[1], message);
             } catch {}
         }
     }
-    delete_config(url);
-    document.getElementById("down_cards_container").removeChild(url_div)
+    await delete_config(root_url);
+    if (root) {document.getElementById("down_cards_container").removeChild(url_div);}
+    refresh();
+    list_cards();
 }
 
 async function sync_file(ls0, url, name) {

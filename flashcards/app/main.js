@@ -330,7 +330,6 @@ function delete_card(_url, _name, _confirm = true) {
 
 function delete_config(_url) {
     return new Promise(function(resolve, reject) {
-        delsv(false, [_url, _name]);
         var open = indexedDB.open("flcrddb");
         open.onsuccess = function(event) {
             var db = event.target.result;
