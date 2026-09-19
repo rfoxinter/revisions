@@ -56,6 +56,96 @@
         .material-symbols-rounded {
             display: block !important;
         }
+
+        /* ---------- Buttons ---------- */
+        .flashcard-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1;
+            padding: 0.75rem 1.5rem;
+            border: 1.5px solid transparent;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            text-align: center;
+            user-select: none;
+            -webkit-appearance: none;
+            transition: background-color 0.2s ease,
+                        box-shadow 0.2s ease,
+                        border-color 0.2s ease,
+                        transform 0.1s ease;
+        }
+
+        .flashcard-btn:active:not(:disabled) { transform: translateY(1px); }
+
+        .flashcard-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* --- Neutral (flip) — light grey, same treatment as the others --- */
+        .flashcard-btn--neutral {
+            background-color: rgba(96, 108, 113, 0.1);
+            color: #4d585c;
+            border-color: rgba(96, 108, 113, 0.32);
+        }
+        .flashcard-btn--neutral:hover:not(:disabled) {
+            background-color: rgba(96, 108, 113, 0.18);
+            border-color: rgba(96, 108, 113, 0.55);
+        }
+        .flashcard-btn--neutral:focus-visible {
+            outline: 2px solid #606c71;
+            outline-offset: 2px;
+        }
+
+        /* --- Secondary (correct) --- */
+        .flashcard-btn--secondary {
+            background-color: rgba(21, 153, 87, 0.1);
+            color: #0f7a45;
+            border-color: rgba(21, 153, 87, 0.32);
+        }
+        .flashcard-btn--secondary:hover:not(:disabled) {
+            background-color: rgba(21, 153, 87, 0.18);
+            border-color: rgba(21, 153, 87, 0.55);
+        }
+        .flashcard-btn--secondary:focus-visible {
+            outline: 2px solid #159957;
+            outline-offset: 2px;
+        }
+
+        /* --- Danger (incorrect) --- */
+        .flashcard-btn--danger {
+            background-color: rgba(217, 83, 79, 0.1);
+            color: #b93a31;
+            border-color: rgba(217, 83, 79, 0.32);
+        }
+        .flashcard-btn--danger:hover:not(:disabled) {
+            background-color: rgba(217, 83, 79, 0.18);
+            border-color: rgba(217, 83, 79, 0.55);
+        }
+        .flashcard-btn--danger:focus-visible {
+            outline: 2px solid #c0392b;
+            outline-offset: 2px;
+        }
+
+        /* ---------- Layout ---------- */
+        .flip-row {
+            margin: 0 0 1.25rem;
+            text-align: center;
+        }
+        .flip-row .flashcard-btn { min-width: 12rem; }
+
+        .action-row {
+            display: flex;
+            justify-content: center;
+            gap: 0.85rem;
+            flex-wrap: wrap;
+        }
+        .action-row .flashcard-btn { min-width: 11rem; min-height: 46px; }
     </style>
 </head>
 <body onload="document.getElementById('incor').disabled = true;document.getElementById('corr').disabled = true;document.getElementById('flip').disabled = true;document.getElementById('down-button').setAttribute('onclick', 'download()');">
@@ -75,12 +165,20 @@
         <p style='text-align: center; margin-bottom: 0.5rem;'>
             <span id='card_nb'></span><span id='card_total'></span>
         </p>
-        <p style='text-align: center;'>
+        <p class="flip-row">
+            <button id="flip" onclick='reverse_card()' class="flashcard-btn flashcard-btn--neutral" type="button">Voir la réponse</button>
+        </p>
+
+        <div class="action-row">
+            <button id="incor" onclick='new_card(false)' class="flashcard-btn flashcard-btn--danger" disabled>Réponse incorrecte</button>
+            <button id="corr" onclick='new_card(true)' class="flashcard-btn flashcard-btn--secondary" disabled>Réponse correcte</button>
+        </div>
+        <!-- <p style='text-align: center;'>
             <button id='flip' onclick='reverse_card()' type='button'>Voir la réponse</button>
         </p>
         <p>
             <button id='incor' onclick='new_card(false)' style='position: relative; left: 15vw; color: #EC7063;' type='button' disabled>Réponse incorrecte</button><button id='corr' onclick='new_card(true)' style='position: relative; left: calc(100% - 65vw); color: #159957;' type='button' disabled>Réponse correcte</button>
-        </p>
+        </p> -->
     </main>
     <footer class='site-footer'></footer>
     <script>
