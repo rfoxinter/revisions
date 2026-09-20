@@ -159,6 +159,256 @@
     </header>
     <main class='main-content'>
         <div style="display: flex; justify-content: center;">
+            <div style='text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem; transform: rotateY(0deg); transition: transform 0.3s cubic-bezier(0.4, 0.15, 0.2, 1); transform-style: preserve-3d; width: min(100%, 800px);' id='flashcards-container'>
+                <span style='display: flex; align-items: center; justify-content: center; height: 100%; position: absolute; inset: 0; flex-direction: column; gap: 0.75rem; padding: 2.5rem 2rem; text-align: center; background: #fff; border: 1px solid #e6e9ec; border-radius: 0.75rem; box-shadow: 0 4px 24px rgba(21, 87, 153, 0.07); backface-visibility: hidden; -webkit-backface-visibility: hidden;'>
+                    <iframe id='flashcard-front' style='scale: 2.5; max-width: 40%; border: 0;'></iframe>
+                </span>
+                <span style='display: flex; align-items: center; justify-content: center; height: 100%; inset: 0; flex-direction: column; gap: 0.75rem; padding: 2.5rem 2rem; text-align: center; background: #fff; border: 1px solid #e6e9ec; border-radius: 0.75rem; box-shadow: 0 4px 24px rgba(21, 87, 153, 0.07); backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);'>
+                    <iframe id='flashcard-back' style='scale: 2.5; max-width: 40%; border: 0;'></iframe>
+                </span>
+            </div>
+        </div>
+        <p style='text-align: center; margin-bottom: 0.5rem;'>
+            <span id='card_nb'></span><span id='card_total'></span>
+        </p>
+        <p class="flip-row">
+            <button id="flip" onclick='reverse_card()' class="flashcard-btn flashcard-btn--neutral" type="button">Voir la réponse</button>
+        </p>
+
+        <div class="action-row">
+            <button id="incor" onclick='new_card(false)' class="flashcard-btn flashcard-btn--danger" disabled>Réponse incorrecte</button>
+            <button id="corr" onclick='new_card(true)' class="flashcard-btn flashcard-btn--secondary" disabled>Réponse correcte</button>
+        </div>
+        <!-- <p style='text-align: center;'>
+            <button id='flip' onclick='reverse_card()' type='button'>Voir la réponse</button>
+        </p>
+        <p>
+            <button id='incor' onclick='new_card(false)' style='position: relative; left: 15vw; color: #EC7063;' type='button' disabled>Réponse incorrecte</button><button id='corr' onclick='new_card(true)' style='position: relative; left: calc(100% - 65vw); color: #159957;' type='button' disabled>Réponse correcte</button>
+        </p> -->
+    </main>
+    <footer class='site-footer'></footer>
+    <script>
+        document.getElementById('open').addEventListener('change', function() {
+            fl = new FileReader();
+            if (document.getElementById('open').value != '') {
+                fl.onload = function(){
+                    try {
+                        let start = unescape("%3C%21DOCTYPE%20html%3E%3Chtml%20style%3D%22height%3A%20100%25%3B%22%3E%3Chead%20style%3D%22height%3A%20100%25%3B%22%3E%3Cmeta%20charset%3D%22utf-8%22%3E%3Cstyle%3Esvg%20%7Bmax-width%3A%20100%25%3B%20max-height%3A%20100%25%20%21important%3Bfill%3A%20%23606c71%3Bwidth%3A%20unset%20%21important%3Bvertical-align%3A%20middle%3B%20scale%3A%202.5%3B%7Dpath%3Ais%28%3Anot%28%5Bfill%5D%29%2C%5Bfill%3Dnone%5D%29%3Ais%28%3Anot%28%5Bstroke%5D%29%2C%5Bstroke%3D%22%23000%22%5D%29%20%7Bstroke%3A%20%23606c71%3B%7Dpath%3Ais%28%3Anot%28%5Bstroke%5D%29%2C%5Bstroke%3Dnone%5D%29%3Ais%28%3Anot%28%5Bfill%5D%29%2C%5Bfill%3D%22%23000%22%5D%29%20%7Bfill%3A%20%23606c71%3B%7D*%20%7B-webkit-user-select%3A%20none%3B%20-ms-user-select%3A%20none%3B%20user-select%3A%20none%3B%7Dbody%20%7Bmargin%3A%200pt%3B%7D%20@media%20print%20%7Bsvg%20%7Bfill%3A%20%23000000%20%21important%3B%7Dpath%3Anot%28%5Bstroke%5D%2C%5Bfill%5D%29%20%7Bstroke%3A%20%23000000%20%21important%3B%7D%20%23flashcard%20%7Bscale%3A%201%20%21important%3B%7D%20%23flashcards_container%20%7Bheight%3A%20calc%28max%2825vh%2C150px%29%29%20%21important%3B%7D%7D%3C/style%3E%3Cscript%3Edocument.addEventListener%28%22contextmenu%22%2C%20%28event%29%20%3D%3E%20%7Bevent.preventDefault%28%29%3B%7D%29%3B%3C/script%3E%3C/head%3E%3Cbody%20style%3D%22height%3A%20100%25%3B%22%3E%3Cdiv%20style%3D%22text-align%3A%20center%3B%20margin-bottom%3A%200rem%3B%20white-space%3A%20unset%3B%20height%3A%20100%25%3B%22%3E%3Cspan%20style%3D%22display%3A%20flex%3B%20align-items%3A%20center%3B%20justify-content%3A%20center%3B%20height%3A%20100%25%3B%22%3E%3Cdiv%20style%3D%22height%3A%2040%25%3B%20max-width%3A%2040%25%3B%20display%3A%20flex%3B%20align-items%3A%20center%3B%22%3E");
+                        let end = unescape("%3C/div%3E%3C/span%3E%3C/div%3E%3C/body%3E%3C/html%3E");
+
+                        fl = deflate(fl.result).split('\n');
+                        title = fl[0];
+                        sh_quest = parseInt(fl[1]);
+                        sh_qr = parseInt(fl[2]);
+                        n = fl[3].replace(']', '').replace('[', '').split(',').map(x => parseInt(x));
+                        fst = fl[4].replace(']', '').replace('[', '').split(',').map(x => parseInt(x));
+                        arr = new Array(2*n.length);
+                        for (let i = 0; i < 2*n.length; ++i) {
+                            arr[i] = decodeURIComponent(fl[5+i]);
+                        }
+                        filedate = parseInt(fl[5+2*n.length]);
+                        filename = fl[8+2*n.length];
+                        syncurl = fl[7+2*n.length];
+                        
+                        if (fl[6+2*n.length] != btoa(title)) {
+                            throw new Error('Fichier corrompu')
+                        }
+                        document.getElementById('up-button').innerHTML = 'close';
+                        document.getElementById('up-button').setAttribute('onclick', '_close()');
+
+                        q = true;
+                        viewed = false;
+                        nth = 0;
+
+                        document.title = title.replace('&ndash;', '-').replace('<i>', '').replace('</i>', '');
+                        ques = copyArray(n);
+
+                        if (sh_quest) {shuffleArray(ques);}
+
+                        document.getElementById('flip').disabled = false;
+                        document.getElementById('title').innerHTML = title;
+                        document.getElementById('flashcard-front').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[0]-2])) + end).replaceAll('=', '');
+                        document.getElementById('flashcard-back').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[0]-1])) + end).replaceAll('=', '');
+                        // document.getElementById('flashcard-front').src = arr[2*ques[0]-2];
+                        document.getElementById('down-button').style.display = 'block';
+                        document.getElementById('down-button').innerHTML = 'sync';
+                        document.getElementById('down-button').setAttribute('onclick', 'sync()');
+                        document.getElementById('card_nb').innerHTML = nth + 1;
+                        document.getElementById('card_total').innerHTML = '/' + ques.length;
+
+                        document.getElementById('open').value = '';
+                    } catch(error) {
+                        document.getElementById('title').innerHTML = 'Erreur';
+                        document.getElementById('flashcard-front').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent("<p style='color: #606c71;'>" + 'Le fichier n&CloseCurlyQuote;est pas compatible' + "</p>")) + end);
+                    }
+                }
+            }
+            fl.readAsText(this.files[0]);
+        })
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='description' content='Révisions'>
+    <link rel='icon' href='https://rfoxinter.github.io/favicon.ico' />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Révisions</title>
+    <meta name='theme-color' content='#157878'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0&display=swap'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/main.css'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/normalize.css'>
+    <link rel='stylesheet' type='text/css' href='https://rfoxinter.github.io/style.css'>
+    <script type="text/javascript" src="huffman.js"></script>
+    <link rel="preload" as="script" href="main.js">
+    <script type="text/javascript" src="main.js"></script>
+    <style>
+        svg {
+            max-width: 100%;
+            max-height: calc(max(20vh, 120px)) !important;
+            fill: #606c71;
+            width: unset !important;
+            vertical-align: middle;
+        }
+        path:is(:not([fill]),[fill=none]):is(:not([stroke]),[stroke="#000"]) {
+            stroke: #606c71;
+        }
+        path:is(:not([stroke]),[stroke=none]):is(:not([fill]),[fill="#000"]) {
+            fill: #606c71;
+        }
+        button {
+            display: inline-block;
+            width: 25vw;
+            min-height: 40px;
+        }
+        ptr {
+            cursor: pointer;
+        }
+        #down-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: calc(min(20px,20vw));
+            margin-top: calc(min(20px,2vh));
+            margin-bottom: calc(min(20px,2vh));
+        }
+        #up-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: calc(min(20px,20vw));
+            margin-top: calc(min(20px,2vh));
+            margin-bottom: calc(min(20px,2vh));
+        }
+        .material-symbols-rounded {
+            display: block !important;
+        }
+
+        /* ---------- Buttons ---------- */
+        .flashcard-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1;
+            padding: 0.75rem 1.5rem;
+            border: 1.5px solid transparent;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            text-align: center;
+            user-select: none;
+            -webkit-appearance: none;
+            appearance: none;
+            transition: background-color 0.2s ease,
+                        box-shadow 0.2s ease,
+                        border-color 0.2s ease,
+                        transform 0.1s ease;
+        }
+
+        .flashcard-btn:active:not(:disabled) { transform: translateY(1px); }
+
+        .flashcard-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* --- Neutral (flip) — light grey, same treatment as the others --- */
+        .flashcard-btn--neutral {
+            background-color: rgba(96, 108, 113, 0.1);
+            color: #4d585c;
+            border-color: rgba(96, 108, 113, 0.32);
+        }
+        .flashcard-btn--neutral:hover:not(:disabled) {
+            background-color: rgba(96, 108, 113, 0.18);
+            border-color: rgba(96, 108, 113, 0.55);
+        }
+        .flashcard-btn--neutral:focus-visible {
+            outline: 2px solid #606c71;
+            outline-offset: 2px;
+        }
+
+        /* --- Secondary (correct) --- */
+        .flashcard-btn--secondary {
+            background-color: rgba(21, 153, 87, 0.1);
+            color: #0f7a45;
+            border-color: rgba(21, 153, 87, 0.32);
+        }
+        .flashcard-btn--secondary:hover:not(:disabled) {
+            background-color: rgba(21, 153, 87, 0.18);
+            border-color: rgba(21, 153, 87, 0.55);
+        }
+        .flashcard-btn--secondary:focus-visible {
+            outline: 2px solid #159957;
+            outline-offset: 2px;
+        }
+
+        /* --- Danger (incorrect) --- */
+        .flashcard-btn--danger {
+            background-color: rgba(217, 83, 79, 0.1);
+            color: #b93a31;
+            border-color: rgba(217, 83, 79, 0.32);
+        }
+        .flashcard-btn--danger:hover:not(:disabled) {
+            background-color: rgba(217, 83, 79, 0.18);
+            border-color: rgba(217, 83, 79, 0.55);
+        }
+        .flashcard-btn--danger:focus-visible {
+            outline: 2px solid #c0392b;
+            outline-offset: 2px;
+        }
+
+        /* ---------- Layout ---------- */
+        .flip-row {
+            margin: 0 0 1.25rem;
+            text-align: center;
+        }
+        .flip-row .flashcard-btn { min-width: 12rem; }
+
+        .action-row {
+            display: flex;
+            justify-content: center;
+            gap: 0.85rem;
+            flex-wrap: wrap;
+        }
+        .action-row .flashcard-btn { min-width: 11rem; min-height: 46px; }
+    </style>
+</head>
+<body onload="document.getElementById('incor').disabled = true;document.getElementById('corr').disabled = true;document.getElementById('flip').disabled = true;document.getElementById('down-button').setAttribute('onclick', 'download()');">
+    <div id='overlay'></div>
+    <header class='page-header'>
+        <h1 id='title'>&nbsp;</h1>
+        <input type='file' id='open' accept='.txt' hidden>
+        <span class='menu-icon material-symbols-rounded'><ptr id='up-button' style='display: block;' onclick='document.getElementById("open").click()'>upload</ptr></span>
+        <span class='menu-icon material-symbols-rounded'><ptr id='down-button' style='display: none;' onclick='download()'>download</ptr></span>
+    </header>
+    <main class='main-content'>
+        <div style="display: flex; justify-content: center;">
             <div style='text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem; transform: rotateY(0deg); transition: transform 0.6s cubic-bezier(0.4, 0.15, 0.2, 1); transform-style: preserve-3d; width: min(100%, 800px);' id='flashcards-container'>
                 <span style='display: flex; align-items: center; justify-content: center; height: 100%; position: absolute; inset: 0; flex-direction: column; gap: 0.75rem; padding: 2.5rem 2rem; text-align: center; background: #fff; border: 1px solid #e6e9ec; border-radius: 0.75rem; box-shadow: 0 4px 24px rgba(21, 87, 153, 0.07); backface-visibility: hidden; -webkit-backface-visibility: hidden;'>
                     <iframe id='flashcard-front' style='scale: 2.5; max-width: 40%; border: 0;'></iframe>
