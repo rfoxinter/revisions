@@ -128,6 +128,7 @@ async function resume_loading(file) {
     document.getElementById('up-button').style.display = 'none';
     document.getElementById('title').innerHTML = title;
     document.getElementById('flashcard-front').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[0]-2])) + end).replaceAll('=', '');
+    document.getElementById('flashcard-back').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[0]-1])) + end).replaceAll('=', '');
     document.getElementById('card_nb').innerHTML = nth + 1;
     document.getElementById('card_total').innerHTML = '/' + ques.length;
     document.getElementById('flip').disabled = false;
@@ -218,7 +219,7 @@ function new_card(corr) {
             if (sh_qr && !fst[ques[nth]-1]) {shuffleArray(qr);}
             reverse_card();
             document.getElementById('flashcard-front').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[nth]-2+qr[Number(q)]])) + end).replaceAll('=', '');
-            document.getElementById('flashcard-back').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[nth]-2+qr[Number(q)]])) + end).replaceAll('=', '');
+            document.getElementById('flashcard-back').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[nth]-2+qr[Number(!q)]])) + end).replaceAll('=', '');
         } else {
             ques = copyArray(n);
             shuffleArray(ques);
@@ -230,7 +231,7 @@ function new_card(corr) {
             if (sh_qr && !fst[ques[nth]-1]) {shuffleArray(qr);}
             reverse_card();
             document.getElementById('flashcard-front').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[nth]-2+qr[Number(q)]])) + end).replaceAll('=', '');
-            document.getElementById('flashcard-back').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[nth]-2+qr[Number(q)]])) + end).replaceAll('=', '');
+            document.getElementById('flashcard-back').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[nth]-2+qr[Number(!q)]])) + end).replaceAll('=', '');
         }
         document.getElementById('card_nb').innerHTML = nth + 1;
         document.getElementById('card_total').innerHTML = '/' + ques.length;
@@ -243,7 +244,7 @@ function new_card(corr) {
         if (sh_qr && !fst[ques[nth]-1]) {shuffleArray(qr);}
         reverse_card();
         document.getElementById('flashcard-front').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[nth]-2+qr[Number(q)]])) + end).replaceAll('=', '');
-        document.getElementById('flashcard-back').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[nth]-2+qr[Number(q)]])) + end).replaceAll('=', '');
+        document.getElementById('flashcard-back').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[nth]-2+qr[Number(!q)]])) + end).replaceAll('=', '');
         document.getElementById('card_nb').innerHTML = nth + 1;
     }
 }

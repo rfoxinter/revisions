@@ -228,6 +228,7 @@
                         document.getElementById('flip').disabled = false;
                         document.getElementById('title').innerHTML = title;
                         document.getElementById('flashcard-front').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[0]-2])) + end).replaceAll('=', '');
+                        document.getElementById('flashcard-back').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[0]-1])) + end).replaceAll('=', '');
                         // document.getElementById('flashcard-front').innerHTML = arr[2*ques[0]-2];
                         document.getElementById('down-button').style.display = 'block';
                         document.getElementById('down-button').innerHTML = 'sync';
