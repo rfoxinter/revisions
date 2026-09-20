@@ -73,6 +73,7 @@
             text-align: center;
             user-select: none;
             -webkit-appearance: none;
+            appearance: none;
             transition: background-color 0.2s ease,
                         box-shadow 0.2s ease,
                         border-color 0.2s ease,
@@ -163,7 +164,7 @@
                     <iframe id='flashcard-front' style='scale: 2.5; max-width: 40%; border: 0;'></iframe>
                 </span>
                 <span style='display: flex; align-items: center; justify-content: center; height: 100%; inset: 0; flex-direction: column; gap: 0.75rem; padding: 2.5rem 2rem; text-align: center; background: #fff; border: 1px solid #e6e9ec; border-radius: 0.75rem; box-shadow: 0 4px 24px rgba(21, 87, 153, 0.07); backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);'>
-                    <iframe id='flashcard-ntck' style='scale: 2.5; max-width: 40%; border: 0;'></iframe>
+                    <iframe id='flashcard-back' style='scale: 2.5; max-width: 40%; border: 0;'></iframe>
                 </span>
             </div>
         </div>
@@ -192,9 +193,9 @@
             if (document.getElementById('open').value != '') {
                 fl.onload = function(){
                     try {
-                        let start = '<!DOCTYPE html><html style="height: 100%;"><head style="height: 100%;"><meta charset="utf-8"><style>svg {max-width: 100%; max-height: 100% !important;fill: #606c71;width: unset !important;vertical-align: middle; scale: 2.5;}path:is(:not([fill]),[fill=none]):is(:not([stroke]),[stroke="#000"]) {stroke: #606c71;}path:is(:not([stroke]),[stroke=none]):is(:not([fill]),[fill="#000"]) {fill: #606c71;}* {-webkit-user-select: none; -ms-user-select: none; user-select: none;}body {margin: 0pt;} @media print {svg {fill: #000000 !important;}path:not([stroke],[fill]) {stroke: #000000 !important;} #flashcard {scale: 1 !important;} #flashcards_container {height: calc(max(25vh,150px)) !important;}}</style><script>document.addEventListener("contextmenu", (event) => {event.preventDefault();});</script></head><body style="height: 100%;"><div style="text-align: center; margin-bottom: 0rem; white-space: unset; height: 100%;"><span style="display: flex; align-items: center; justify-content: center; height: 100%;"><div style="height: 40%; max-width: 40%; display: flex; align-items: center;">';
-                        let end = '</div></span></div></body></html>';
-                        
+                        let start = unescape("%3C%21DOCTYPE%20html%3E%3Chtml%20style%3D%22height%3A%20100%25%3B%22%3E%3Chead%20style%3D%22height%3A%20100%25%3B%22%3E%3Cmeta%20charset%3D%22utf-8%22%3E%3Cstyle%3Esvg%20%7Bmax-width%3A%20100%25%3B%20max-height%3A%20100%25%20%21important%3Bfill%3A%20%23606c71%3Bwidth%3A%20unset%20%21important%3Bvertical-align%3A%20middle%3B%20scale%3A%202.5%3B%7Dpath%3Ais%28%3Anot%28%5Bfill%5D%29%2C%5Bfill%3Dnone%5D%29%3Ais%28%3Anot%28%5Bstroke%5D%29%2C%5Bstroke%3D%22%23000%22%5D%29%20%7Bstroke%3A%20%23606c71%3B%7Dpath%3Ais%28%3Anot%28%5Bstroke%5D%29%2C%5Bstroke%3Dnone%5D%29%3Ais%28%3Anot%28%5Bfill%5D%29%2C%5Bfill%3D%22%23000%22%5D%29%20%7Bfill%3A%20%23606c71%3B%7D*%20%7B-webkit-user-select%3A%20none%3B%20-ms-user-select%3A%20none%3B%20user-select%3A%20none%3B%7Dbody%20%7Bmargin%3A%200pt%3B%7D%20@media%20print%20%7Bsvg%20%7Bfill%3A%20%23000000%20%21important%3B%7Dpath%3Anot%28%5Bstroke%5D%2C%5Bfill%5D%29%20%7Bstroke%3A%20%23000000%20%21important%3B%7D%20%23flashcard%20%7Bscale%3A%201%20%21important%3B%7D%20%23flashcards_container%20%7Bheight%3A%20calc%28max%2825vh%2C150px%29%29%20%21important%3B%7D%7D%3C/style%3E%3Cscript%3Edocument.addEventListener%28%22contextmenu%22%2C%20%28event%29%20%3D%3E%20%7Bevent.preventDefault%28%29%3B%7D%29%3B%3C/script%3E%3C/head%3E%3Cbody%20style%3D%22height%3A%20100%25%3B%22%3E%3Cdiv%20style%3D%22text-align%3A%20center%3B%20margin-bottom%3A%200rem%3B%20white-space%3A%20unset%3B%20height%3A%20100%25%3B%22%3E%3Cspan%20style%3D%22display%3A%20flex%3B%20align-items%3A%20center%3B%20justify-content%3A%20center%3B%20height%3A%20100%25%3B%22%3E%3Cdiv%20style%3D%22height%3A%2040%25%3B%20max-width%3A%2040%25%3B%20display%3A%20flex%3B%20align-items%3A%20center%3B%22%3E");
+                        let end = unescape("%3C/div%3E%3C/span%3E%3C/div%3E%3C/body%3E%3C/html%3E");
+
                         fl = deflate(fl.result).split('\n');
                         title = fl[0];
                         sh_quest = parseInt(fl[1]);
