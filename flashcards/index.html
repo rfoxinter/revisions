@@ -157,11 +157,14 @@
         <span class='menu-icon material-symbols-rounded'><ptr id='down-button' style='display: none;' onclick='download()'>download</ptr></span>
     </header>
     <main class='main-content'>
-        <p style='text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem;'>
-            <span style='display: flex; align-items: center; justify-content: center; height: 100%;'>
-                <span id='flashcard' style='scale: 2.5; max-width: 40%;'></span>
+        <div style='text-align: center; height: calc(max(50vh,300px)); margin-bottom: 0.5rem; transform: rotateY(180deg); transition: transform 0.6s cubic-bezier(0.4, 0.15, 0.2, 1); transform-style: preserve-3d;' id='flashcards-container'>
+            <span style='display: flex; align-items: center; justify-content: center; height: 100%; position: absolute; inset: 0; flex-direction: column; gap: 0.75rem; padding: 2.5rem 2rem; text-align: center; background: #fff; border: 1px solid #e6e9ec; border-radius: 0.75rem; box-shadow: 0 4px 24px rgba(21, 87, 153, 0.07); backface-visibility: hidden; -webkit-backface-visibility: hidden;'>
+                <iframe id='flashcard-front' style='scale: 2.5; max-width: 40%; border: 0;'></iframe>
             </span>
-        </p>
+            <span style='display: flex; align-items: center; justify-content: center; height: 100%; inset: 0; flex-direction: column; gap: 0.75rem; padding: 2.5rem 2rem; text-align: center; background: #fff; border: 1px solid #e6e9ec; border-radius: 0.75rem; box-shadow: 0 4px 24px rgba(21, 87, 153, 0.07); backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);'>
+                <iframe id='flashcard-ntck' style='scale: 2.5; max-width: 40%; border: 0;'></iframe>
+            </span>
+        </div>
         <p style='text-align: center; margin-bottom: 0.5rem;'>
             <span id='card_nb'></span><span id='card_total'></span>
         </p>
