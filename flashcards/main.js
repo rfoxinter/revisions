@@ -99,12 +99,12 @@ async function fill_svg(file) {
         if (document.readyState !== "loading") {
             document.getElementById('up-button').style.display = 'none';
             document.getElementById('title').innerHTML = 'Erreur';
-            document.getElementById('flashcard').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
+            document.getElementById('flashcard-front').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
         } else {
             document.addEventListener("DOMContentLoaded", (event) => {
                 document.getElementById('up-button').style.display = 'none';
                 document.getElementById('title').innerHTML = 'Erreur';
-                document.getElementById('flashcard').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
+                document.getElementById('flashcard-front').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
             });
         }
     }
@@ -112,12 +112,12 @@ async function fill_svg(file) {
         if (document.readyState !== "loading") {
             document.getElementById('up-button').style.display = 'none';
             document.getElementById('title').innerHTML = 'Erreur ' + res;
-            document.getElementById('flashcard').innerHTML = 'Fichier introuvable';
+            document.getElementById('flashcard-front').innerHTML = 'Fichier introuvable';
         } else {
             document.addEventListener("DOMContentLoaded", (event) => {
                 document.getElementById('up-button').style.display = 'none';
                 document.getElementById('title').innerHTML = 'Erreur ' + res;
-                document.getElementById('flashcard').innerHTML = 'Fichier introuvable';
+                document.getElementById('flashcard-front').innerHTML = 'Fichier introuvable';
             });
         }
     }
@@ -125,7 +125,7 @@ async function fill_svg(file) {
 async function resume_loading(file) {
     document.getElementById('up-button').style.display = 'none';
     document.getElementById('title').innerHTML = title;
-    document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
+    document.getElementById('flashcard-front').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[0]-2])) + end).replaceAll('=', '');
     document.getElementById('card_nb').innerHTML = nth + 1;
     document.getElementById('card_total').innerHTML = '/' + ques.length;
     document.getElementById('flip').disabled = false;
@@ -151,7 +151,7 @@ async function fill_card(file) {
     if (res == 200) {
         document.getElementById('flip').disabled = false;
         document.getElementById('title').innerHTML = title;
-        document.getElementById('flashcard').innerHTML = arr[2*ques[0]-2];
+        document.getElementById('flashcard-front').src = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent(arr[2*ques[0]-2])) + end).replaceAll('=', '');
         document.getElementById('down-button').style.display = 'block';
         document.getElementById('down-button').innerHTML = 'sync';
         document.getElementById('down-button').setAttribute('onclick', 'sync()');
@@ -266,7 +266,7 @@ function download() {
 function _close() {
     document.title = 'Révisions';
     document.getElementById('title').innerHTML = '&nbsp;';
-    document.getElementById('flashcard').innerHTML = '';
+    document.getElementById('flashcard-front').innerHTML = '';
     document.getElementById('incor').disabled = true;
     document.getElementById('corr').disabled = true;
     document.getElementById('flip').disabled = true;
