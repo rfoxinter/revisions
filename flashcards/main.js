@@ -101,12 +101,12 @@ async function fill_svg(file) {
         if (document.readyState !== "loading") {
             document.getElementById('up-button').style.display = 'none';
             document.getElementById('title').innerHTML = 'Erreur';
-            document.getElementById('flashcard-front').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
+            document.getElementById('flashcard-front').innerHTML = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent("<p style='color: #606c71;'>" + 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations' + "</p>")) + end);
         } else {
             document.addEventListener("DOMContentLoaded", (event) => {
                 document.getElementById('up-button').style.display = 'none';
                 document.getElementById('title').innerHTML = 'Erreur';
-                document.getElementById('flashcard-front').innerHTML = 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations';
+                document.getElementById('flashcard-front').innerHTML = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent("<p style='color: #606c71;'>" + 'Impossible de charger le fichier</br>Regarder le terminal (F12 puis &OpenCurlyQuote;Console&CloseCurlyQuote;) pour plus d\'informations' + "</p>")) + end);
             });
         }
     }
@@ -114,12 +114,12 @@ async function fill_svg(file) {
         if (document.readyState !== "loading") {
             document.getElementById('up-button').style.display = 'none';
             document.getElementById('title').innerHTML = 'Erreur ' + res;
-            document.getElementById('flashcard-front').innerHTML = 'Fichier introuvable';
+            document.getElementById('flashcard-front').innerHTML = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent("<p style='color: #606c71;'>" + 'Fichier introuvable' + "</p>")) + end);
         } else {
             document.addEventListener("DOMContentLoaded", (event) => {
                 document.getElementById('up-button').style.display = 'none';
                 document.getElementById('title').innerHTML = 'Erreur ' + res;
-                document.getElementById('flashcard-front').innerHTML = 'Fichier introuvable';
+                document.getElementById('flashcard-front').innerHTML = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent("<p style='color: #606c71;'>" + 'Fichier introuvable' + "</p>")) + end);
             });
         }
     }
@@ -196,7 +196,7 @@ function new_card(corr) {
     if (nth + 1 == ques.length) {
         if (!corr) {wrong.push(ques[nth]);}
         nth += 1;
-        document.getElementById('flashcard-front').innerHTML = 'Terminé';
+        document.getElementById('flashcard-front').innerHTML = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent("<p style='color: #606c71;'>" + 'Terminé' + "</p>")) + end);
         document.getElementById('flip').disabled = true;
         if (wrong.length > 0) {document.getElementById('incor').disabled = false;} else {document.getElementById('incor').disabled = true;}
         document.getElementById('corr').disabled = false;
@@ -269,7 +269,7 @@ function download() {
 function _close() {
     document.title = 'Révisions';
     document.getElementById('title').innerHTML = '&nbsp;';
-    document.getElementById('flashcard-front').innerHTML = '';
+    document.getElementById('flashcard-front').innerHTML = 'data:text/html;base64,' + btoa(start + unescape(encodeURIComponent("<p style='color: #606c71;'>" + '' + "</p>")) + end);
     document.getElementById('incor').disabled = true;
     document.getElementById('corr').disabled = true;
     document.getElementById('flip').disabled = true;
