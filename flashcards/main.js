@@ -15,6 +15,8 @@ var title; var sh_quest; var sh_qr; var n; var ques; var fst; var q; var viewed;
 const params = new URLSearchParams(document.location.search.substring(1));
 var file = params.get('file');
 var card = params.get('card');
+let start = '<!DOCTYPE html><html style="height: 100%;"><head style="height: 100%;"><meta charset="utf-8"><style>svg {max-width: 100%; max-height: 100% !important;fill: #606c71;width: unset !important;vertical-align: middle; scale: 2.5;}path:is(:not([fill]),[fill=none]):is(:not([stroke]),[stroke="#000"]) {stroke: #606c71;}path:is(:not([stroke]),[stroke=none]):is(:not([fill]),[fill="#000"]) {fill: #606c71;}* {-webkit-user-select: none; -ms-user-select: none; user-select: none;}body {margin: 0pt;} @media print {svg {fill: #000000 !important;}path:not([stroke],[fill]) {stroke: #000000 !important;} #flashcard {scale: 1 !important;} #flashcards_container {height: calc(max(25vh,150px)) !important;}}</style><script>document.addEventListener("contextmenu", (event) => {event.preventDefault();});</script></head><body style="height: 100%;"><div style="text-align: center; margin-bottom: 0rem; white-space: unset; height: 100%;"><span style="display: flex; align-items: center; justify-content: center; height: 100%;"><div style="height: 40%; max-width: 40%; display: flex; align-items: center;">';
+let end = '</div></span></div></body></html>';
 async function loadModule(file) {
     var response;
     try {
